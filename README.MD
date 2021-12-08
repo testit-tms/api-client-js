@@ -12,7 +12,7 @@ npm install testit-api-client
 
 ## Configuration
 
-To use client you need to provide configuration to `testit-adapter-cucumber`:
+To use client you need to provide configuration to `Client`:
 ```ts
 const client = new Client({
   url: 'http://example.com',
