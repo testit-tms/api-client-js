@@ -17,6 +17,7 @@ export interface IClient {
   createAutotest(autotest: AutotestPost): Promise<Autotest>;
   updateAutotest(autotest: AutotestPut): Promise<void>;
   linkToWorkItem(autotestId: string, workItem: WorkItemId): Promise<void>;
+  getTestRun(testRunId: string): TestRunGet;
   createTestRun(testRun: TestRunPost): Promise<TestRunGet>;
   startTestRun(testRunId: string): Promise<void>;
   loadTestRunResults(
