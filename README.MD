@@ -8,19 +8,12 @@
 | Test IT | API Client |
 |---------|------------|
 | 3.9     | 2.0        |
+| 3.5     | 1.0        |
 
-## Installation & Usage
-
-### npm install
+## Installation
 
 ```shell
 npm install testit-api-client
-```
-
-Finally, you need to build the module:
-
-```shell
-npm run build
 ```
 
 ## Getting Started
