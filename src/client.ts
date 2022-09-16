@@ -53,7 +53,7 @@ export class Client implements IClient {
     try {
       await axios.get(new URL('version.json', this.config.url).toString());
     } catch (err) {
-      throw new Error('Cannot connect to TestIt');
+      throw new Error('Cannot connect to TMS');
     }
   }
 
@@ -143,29 +143,29 @@ export class Client implements IClient {
   private readCliConfig(): Partial<ClientConfig> {
     const args = minimist(process.argv.slice(2));
     let config = {};
-    if (args['testitConfig']) {
-      config = this.readConfigFile(args['testitConfig']);
+    if (args['tmsConfigFile']) {
+      config = this.readConfigFile(args['tmsConfigFile']);
     }
     return Client.mergeConfig(config, {
-      url: args['testitUrl'],
-      privateToken: args['testitPrivateToken'],
-      projectId: args['testitProjectId'],
-      configurationId: args['testitConfigurationId'],
-      testRunId: args['testitTestRunId'],
+      url: args['tmsUrl'],
+      privateToken: args['tmsPrivateToken'],
+      projectId: args['tmsProjectId'],
+      configurationId: args['tmsConfigurationId'],
+      testRunId: args['tmsTestRunId'],
     });
   }
 
   private readEnvConfig(): Partial<ClientConfig> {
     let config = {};
-    if (process.env['TESTIT_CONFIG_FILE']) {
-      config = this.readConfigFile(process.env['TESTIT_CONFIG_FILE']);
+    if (process.env['TMS_CONFIG_FILE']) {
+      config = this.readConfigFile(process.env['TMS_CONFIG_FILE']);
     }
     return Client.mergeConfig(config, {
-      url: process.env['TESTIT_URL'],
-      privateToken: process.env['TESTIT_PRIVATE_TOKEN'],
-      projectId: process.env['TESTIT_PROJECT_ID'],
-      configurationId: process.env['TESTIT_CONFIGURATION_ID'],
-      testRunId: process.env['TESTIT_TEST_RUN_ID'],
+      url: process.env['TMS_URL'],
+      privateToken: process.env['TMS_PRIVATE_TOKEN'],
+      projectId: process.env['TMS_PROJECT_ID'],
+      configurationId: process.env['TMS_CONFIGURATION_ID'],
+      testRunId: process.env['TMS_TEST_RUN_ID'],
     });
   }
 
