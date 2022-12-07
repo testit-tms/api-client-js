@@ -7,8 +7,8 @@
 
 | Test IT | API Client |
 |---------|------------|
-| 3.5     | 1.0        |
-| 3.9     | 2.0        |
+| 3.4     | 1.0        |
+| 3.5     | 2.0        |
 
 ## Installation
 
@@ -20,23 +20,22 @@ npm install testit-api-client
 
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
-```javascript
-var testit_api_client = require('testit-api-client');
+```typescript
+import {
+    TestRunsApi,
+    Configuration,
+} from 'testit-api-client';
 
-var defaultClient = testit_api_client.ApiClient.instance;
-var PrivateToken = defaultClient.authentications['PrivateToken'];
-PrivateToken.apiKey = "Your private token"
+const clientConfig = new Configuration();
+clientConfig.apiKey = "PrivateToken " + "Your private token";
+const testRunsApi = new TestRunsApi(clientConfig, "Your TMS address");
 
-var api = new testit_api_client.AttachmentsApi()
-var id = "Attachment's guid in the TMS";
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
+const response = testRunsApi.createEmpty(
+  {
+    'projectId': "Project's guid in the TMS",
+    'name': "Test run name"
   }
-};
-api.apiV2AttachmentsIdDelete(id, callback);
+);
 
 ```
 
