@@ -1,11 +1,11 @@
-# TestGear TMS API client for JavaScript
-![TestGear](https://raw.githubusercontent.com/testgear-tms/api-client-js/main/images/banner.png)
+# Test IT TMS API client for JavaScript
+![Test IT](https://raw.githubusercontent.com/testit-tms/api-client-js/master/images/banner.png)
 
 # Getting Started
 
 ## Installation
 ```
-npm install testgear-api-client
+npm install testit-api-client
 ```
 
 # Usage
@@ -23,7 +23,7 @@ const client = new Client({
 });
 ```
 
-After configuration is done you can access different clients from `Client` object and then use methods to control TestGear.
+After configuration is done you can access different clients from `Client` object and then use methods to control Test IT.
 
 ## Examples
 ```ts
@@ -40,12 +40,12 @@ await client.completeTestRun(testRunId);
 
 You can help to develop the project. Any contributions are **greatly appreciated**.
 
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/testgear-tms/api-client-js/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/testit-tms/api-client-js/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/testgear-tms/api-client-js/blob/master/CODE_OF_CONDUCT.md) before posting your first idea as well.
+* Please also read through the [Code Of Conduct](https://github.com/testit-tms/api-client-js/blob/master/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 # License
 
-Distributed under the Apache-2.0 License. See [LICENSE](https://github.com/testgear-tms/api-client-js/blob/master/LICENSE.md) for more information.
+Distributed under the Apache-2.0 License. See [LICENSE](https://github.com/testit-tms/api-client-js/blob/master/LICENSE.md) for more information.
 
