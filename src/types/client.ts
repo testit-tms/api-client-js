@@ -5,7 +5,7 @@ import {
   AutotestPut,
   AutotestQuery,
   AutotestResultsForTestRun,
-  // ClientConfig,
+  ClientConfig,
   TestRunGet,
   TestRunPost,
   WorkItemId,
@@ -26,6 +26,6 @@ export interface IClient {
     results: AutotestResultsForTestRun[]
   ): Promise<string[]>;
   completeTestRun(testRunId: string): Promise<void>;
-  // getConfig(): ClientConfig;
+  getConfig(): ClientConfig;
   loadAttachment(fileName: string): Promise<Attachment>;
 }
