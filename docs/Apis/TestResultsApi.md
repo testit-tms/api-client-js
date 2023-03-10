@@ -36,7 +36,11 @@ Get test result by ID aggregated with previous results
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -62,7 +66,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -87,7 +95,11 @@ Get test result attachments meta-information
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -112,7 +124,11 @@ Get test result by ID
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -138,7 +154,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -168,7 +188,11 @@ Search for test results
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -193,7 +217,11 @@ Search for test results and extract statistics
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -221,7 +249,11 @@ Upload and link attachment to TestResult
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -249,7 +281,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -282,7 +318,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -310,7 +350,11 @@ Get Metadata of TestResult&#39;s attachment
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -337,7 +381,11 @@ Get all attachments of TestResult
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 

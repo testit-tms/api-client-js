@@ -35,7 +35,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -63,7 +67,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -90,7 +98,11 @@ Delete CustomAttributeTemplate
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -117,7 +129,11 @@ Get CustomAttributeTemplate by ID
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -144,7 +160,11 @@ Get CustomAttributeTemplate by name
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -171,7 +191,11 @@ Create CustomAttributeTemplate
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -196,7 +220,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -228,7 +256,11 @@ Search CustomAttributeTemplates
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 

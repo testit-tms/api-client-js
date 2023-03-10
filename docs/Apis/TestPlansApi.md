@@ -51,7 +51,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -79,7 +83,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -106,7 +114,11 @@ Get analytics by TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -132,7 +144,11 @@ Distribute test points between the users
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -159,7 +175,11 @@ Get TestPlan configurations
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -188,7 +208,11 @@ Export TestPoints from TestPlan in xls format
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -219,7 +243,11 @@ Export TestResults history from TestPlan in xls format
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -251,7 +279,11 @@ Get TestPlan history
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -281,7 +313,11 @@ Get Links of TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -314,7 +350,11 @@ Get TestPoints with last result from TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -342,7 +382,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -378,7 +422,11 @@ Get TestRuns of TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -411,7 +459,11 @@ Search TestRuns of TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -436,7 +488,11 @@ Get last modification date of test plan&#39;s test results
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -463,7 +519,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -491,7 +551,11 @@ Get TestPlans short models by Project identifiers
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -518,7 +582,11 @@ Clone TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -545,7 +613,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -572,7 +644,11 @@ Create TestPlan
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -599,7 +675,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -626,7 +706,11 @@ Get TestPlan by Id
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -653,7 +737,11 @@ Get TestSuites Tree By Id
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -680,7 +768,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -707,7 +799,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -734,7 +830,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -761,7 +861,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 

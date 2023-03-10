@@ -50,7 +50,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -83,7 +87,11 @@ Get test results history for autotest
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -110,7 +118,11 @@ Get identifiers of changed linked work items
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -138,7 +150,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -168,7 +184,11 @@ Search for autotests
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -191,11 +211,19 @@ Create autotest
 
 ### Return type
 
-[**AutoTestModel**](../Models/AutoTestModel.md)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -214,7 +242,11 @@ Create multiple autotests
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **AutoTestPostModel** | [**List**](../Models/AutoTestPostModel.md)|  | [optional] |
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP headerdel.md)|  | [optional] |
 
 ### Return type
 
@@ -222,7 +254,11 @@ Create multiple autotests
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -237,7 +273,11 @@ Delete autotest
 
     &lt;br&gt;Use case  &lt;br&gt;User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  &lt;br&gt;System finds the autotest by the identifier  &lt;br&gt;System deletes autotest and returns no content response
 
-### Parameters
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -249,7 +289,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -261,7 +305,11 @@ null (empty response body)
 > deleteAutoTestLinkFromWorkItem(id, workItemId)
 
 Unlink autotest from work item
+#### Bearer or PrivateToken
 
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
     &lt;br&gt;Use case  &lt;br&gt;User sets autotest internal (guid format) or global (integer format) identifier  &lt;br&gt;[Optional] User sets workitem internal (guid format) or global (integer format) identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System finds the autotest by the autotest identifier  &lt;br&gt;              [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.                &lt;br&gt;[Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  &lt;br&gt;System returns no content response
 
 ### Parameters
@@ -277,7 +325,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -306,7 +358,11 @@ null (empty response body)
 | **isDeleted** | **Boolean**| OBSOLETE: Use &#x60;deleted&#x60; instead | [optional] [default to null] |
 | **deleted** | **Boolean**| Is autotest deleted | [optional] [default to null] |
 | **labels** | [**List**](../Models/String.md)| Include only autotests with provided labels | [optional] [default to null] |
-| **stabilityMinimal** | **Integer**| OBSOLETE: Use &#x60;minStability&#x60; instead | [optional] [default to null] |
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP headerStability&#x60; instead | [optional] [default to null] |
 | **minStability** | **Integer**| Minimum stability value of autotest | [optional] [default to null] |
 | **stabilityMaximal** | **Integer**| OBSOLETE: Use &#x60;maxStability&#x60; instead | [optional] [default to null] |
 | **maxStability** | **Integer**| Maximum stability value of autotest | [optional] [default to null] |
@@ -326,10 +382,18 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
+#### Bearer or PrivateToken
 
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
@@ -352,8 +416,16 @@ Get average autotest duration
 [**AutoTestAverageDurationModel**](../Models/AutoTestAverageDurationModel.md)
 
 ### Authorization
+#### Bearer or PrivateToken
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -375,12 +447,20 @@ Get autotest by internal or global ID
 | **id** | **String**| Autotest internal (UUID) or global (integer) identifier | [default to null] |
 
 ### Return type
+#### Bearer or PrivateToken
 
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 [**AutoTestModel**](../Models/AutoTestModel.md)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -398,7 +478,11 @@ Get autotest chronology
 ### Parameters
 
 |Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header-|
 | **id** | **String**| Autotest internal (UUID) or global (integer) identifier | [default to null] |
 
 ### Return type
@@ -407,7 +491,11 @@ Get autotest chronology
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -433,8 +521,16 @@ Get completed tests runs for autotests
 [**List**](../Models/TestRunShortModel.md)
 
 ### Authorization
+#### Bearer or PrivateToken
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -458,7 +554,11 @@ Get completed tests runs for autotests
 | **testPlanIds** | [**List**](../Models/UUID.md)| Identifiers of test plans which contain test results | [optional] [default to null] |
 | **userIds** | [**List**](../Models/UUID.md)| Identifiers of users who set test results | [optional] [default to null] |
 | **outcomes** | [**List**](../Models/String.md)| List of outcomes of test results | [optional] [default to null] |
-| **isAutomated** | **Boolean**| OBSOLETE: Use &#x60;Automated&#x60; instead | [optional] [default to null] |
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP headerd&#x60; instead | [optional] [default to null] |
 | **automated** | **Boolean**| If result must consist of only manual/automated test results | [optional] [default to null] |
 | **testRunIds** | [**List**](../Models/UUID.md)| Identifiers of test runs which contain test results | [optional] [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
@@ -473,7 +573,11 @@ Get completed tests runs for autotests
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -502,7 +606,11 @@ Get work items linked to autotest
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -530,7 +638,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -557,7 +669,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -584,7 +700,11 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 

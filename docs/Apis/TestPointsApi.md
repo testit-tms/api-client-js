@@ -28,7 +28,11 @@ Get all test runs which use test point
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -53,7 +57,11 @@ Get work item represented by test point
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -83,7 +91,11 @@ Search for test points and extract IDs only
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
@@ -113,7 +125,11 @@ Search for test points
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+#### Bearer or PrivateToken
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
 
 ### HTTP request headers
 
