@@ -63,5 +63,6 @@ jobs:
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependecies
         run: npm install
+      - run: npm install -g tcs
       - name: Build application
         run: npm run build
