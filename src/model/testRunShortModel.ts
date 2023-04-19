@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { TestRunState } from './testRunState';
 
 export class TestRunShortModel {
-    'stateName'?: TestRunState;
+    'stateName': TestRunState;
     'projectId'?: string;
     'testPlanId'?: string | null;
     'name'?: string | null;
@@ -72,5 +72,3 @@ export class TestRunShortModel {
     }
 }
 
-export namespace TestRunShortModel {
-}

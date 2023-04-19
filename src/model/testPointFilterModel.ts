@@ -18,6 +18,10 @@ import { WorkItemPriorityModel } from './workItemPriorityModel';
 
 export class TestPointFilterModel {
     /**
+    * Specifies a test point test plan IDS to search for
+    */
+    'testPlanIds'?: Set<string> | null;
+    /**
     * Specifies a test point test suite IDs to search for
     */
     'testSuiteIds'?: Set<string> | null;
@@ -76,6 +80,11 @@ export class TestPointFilterModel {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "testPlanIds",
+            "baseName": "testPlanIds",
+            "type": "Set<string>"
+        },
         {
             "name": "testSuiteIds",
             "baseName": "testSuiteIds",

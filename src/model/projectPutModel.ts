@@ -25,6 +25,10 @@ export class ProjectPutModel {
     * Name of the project
     */
     'name': string;
+    /**
+    * Indicates if the project is marked as favorite
+    */
+    'isFavorite'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -43,6 +47,11 @@ export class ProjectPutModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "isFavorite",
+            "baseName": "isFavorite",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

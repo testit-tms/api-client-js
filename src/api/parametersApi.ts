@@ -15,6 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ParameterFilterModel } from '../model/parameterFilterModel';
 import { ParameterGroupModel } from '../model/parameterGroupModel';
 import { ParameterModel } from '../model/parameterModel';
 import { ParameterPostModel } from '../model/parameterPostModel';
@@ -527,6 +528,98 @@ export class ParametersApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<string>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary Search for parameters
+     * @param skip Amount of items to be skipped (offset)
+     * @param take Amount of items to be taken (limit)
+     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param searchField Property name for searching
+     * @param searchValue Value for searching
+     * @param parameterFilterModel 
+     */
+    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+        const localVarPath = this.basePath + '/api/v2/parameters/search';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (skip !== undefined) {
+            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
+        }
+
+        if (take !== undefined) {
+            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
+        }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
+        }
+
+        if (searchField !== undefined) {
+            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
+        }
+
+        if (searchValue !== undefined) {
+            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(parameterFilterModel, "ParameterFilterModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<ParameterModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

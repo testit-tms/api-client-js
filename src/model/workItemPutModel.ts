@@ -24,7 +24,7 @@ export class WorkItemPutModel {
     'attachments': Array<AttachmentPutModel>;
     'iterations'?: Array<IterationPutModel> | null;
     'autoTests'?: Array<AutoTestIdModel> | null;
-    'id'?: string;
+    'id': string;
     'sectionId'?: string;
     'description'?: string | null;
     'state': WorkItemStates;
@@ -127,5 +127,3 @@ export class WorkItemPutModel {
     }
 }
 
-export namespace WorkItemPutModel {
-}

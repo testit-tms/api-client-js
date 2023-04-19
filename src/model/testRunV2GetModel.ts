@@ -17,7 +17,7 @@ import { TestRunState } from './testRunState';
 export class TestRunV2GetModel {
     'startedOn'?: Date | null;
     'completedOn'?: Date | null;
-    'stateName'?: TestRunState;
+    'stateName': TestRunState;
     /**
     * This property is used to link test run with project
     */
@@ -124,5 +124,3 @@ export class TestRunV2GetModel {
     }
 }
 
-export namespace TestRunV2GetModel {
-}

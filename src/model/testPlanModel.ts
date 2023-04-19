@@ -15,7 +15,7 @@ import { TagShortModel } from './tagShortModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
 
 export class TestPlanModel {
-    'status'?: TestPlanStatusModel;
+    'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
     */
@@ -172,5 +172,3 @@ export class TestPlanModel {
     }
 }
 
-export namespace TestPlanModel {
-}

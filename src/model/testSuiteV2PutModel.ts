@@ -16,6 +16,7 @@ export class TestSuiteV2PutModel {
     'id': string;
     'parentId'?: string | null;
     'name': string;
+    'isDeleted'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +35,11 @@ export class TestSuiteV2PutModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "isDeleted",
+            "baseName": "isDeleted",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

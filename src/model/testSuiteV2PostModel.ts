@@ -11,11 +11,14 @@
  */
 
 import { RequestFile } from './models';
+import { TestSuiteType } from './testSuiteType';
 
 export class TestSuiteV2PostModel {
     'parentId'?: string | null;
     'testPlanId': string;
     'name': string;
+    'type'?: TestSuiteType;
+    'saveStructure'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +37,16 @@ export class TestSuiteV2PostModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "TestSuiteType"
+        },
+        {
+            "name": "saveStructure",
+            "baseName": "saveStructure",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

@@ -36,5 +36,3 @@ export class AutotestResultReasonSubGetModel {
     }
 }
 
-export namespace AutotestResultReasonSubGetModel {
-}

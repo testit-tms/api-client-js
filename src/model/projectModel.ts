@@ -15,6 +15,22 @@ import { CustomAttributeModel } from './customAttributeModel';
 
 export class ProjectModel {
     /**
+    * Unique ID of the project
+    */
+    'id'?: string;
+    /**
+    * Description of the project
+    */
+    'description'?: string | null;
+    /**
+    * Name of the project
+    */
+    'name'?: string | null;
+    /**
+    * Indicates if the project is marked as favorite
+    */
+    'isFavorite'?: boolean;
+    /**
     * Collection of the project attributes
     */
     'attributesScheme'?: Array<CustomAttributeModel> | null;
@@ -39,10 +55,6 @@ export class ProjectModel {
     */
     'autoTestsCount'?: number | null;
     /**
-    * Indicates if the project is marked as favorite
-    */
-    'isFavorite'?: boolean;
-    /**
     * Indicates if the project is deleted
     */
     'isDeleted'?: boolean;
@@ -66,22 +78,30 @@ export class ProjectModel {
     * Global ID of the project
     */
     'globalId'?: number;
-    /**
-    * Unique ID of the project
-    */
-    'id': string;
-    /**
-    * Description of the project
-    */
-    'description'?: string | null;
-    /**
-    * Name of the project
-    */
-    'name': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "isFavorite",
+            "baseName": "isFavorite",
+            "type": "boolean"
+        },
         {
             "name": "attributesScheme",
             "baseName": "attributesScheme",
@@ -113,11 +133,6 @@ export class ProjectModel {
             "type": "number"
         },
         {
-            "name": "isFavorite",
-            "baseName": "isFavorite",
-            "type": "boolean"
-        },
-        {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
@@ -146,21 +161,6 @@ export class ProjectModel {
             "name": "globalId",
             "baseName": "globalId",
             "type": "number"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

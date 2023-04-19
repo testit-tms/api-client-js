@@ -47,7 +47,7 @@ export class TestRunShortGetModel {
     * Is the test run is deleted
     */
     'isDeleted'?: boolean;
-    'state'?: TestRunState;
+    'state': TestRunState;
     /**
     * Date when the test run was started
     */
@@ -56,7 +56,7 @@ export class TestRunShortGetModel {
     * Number of autotests run in the test run
     */
     'autotestsCount'?: number;
-    'statistics'?: TestResultsStatisticsGetModel;
+    'statistics': TestResultsStatisticsGetModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -127,5 +127,3 @@ export class TestRunShortGetModel {
     }
 }
 
-export namespace TestRunShortGetModel {
-}

@@ -69,5 +69,3 @@ export class LinkPutModel {
     }
 }
 
-export namespace LinkPutModel {
-}

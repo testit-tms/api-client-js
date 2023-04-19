@@ -12,12 +12,14 @@
 
 import { RequestFile } from './models';
 import { SharedStepResultModel } from './sharedStepResultModel';
+import { StepCommentModel } from './stepCommentModel';
 
 export class StepResultModel {
     'stepId'?: string;
     'outcome'?: string | null;
     'sharedStepVersionId'?: string | null;
     'sharedStepResults'?: Array<SharedStepResultModel> | null;
+    'comment'?: StepCommentModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -41,6 +43,11 @@ export class StepResultModel {
             "name": "sharedStepResults",
             "baseName": "sharedStepResults",
             "type": "Array<SharedStepResultModel>"
+        },
+        {
+            "name": "comment",
+            "baseName": "comment",
+            "type": "StepCommentModel"
         }    ];
 
     static getAttributeTypeMap() {

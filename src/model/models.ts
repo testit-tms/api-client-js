@@ -1,5 +1,6 @@
 import localVarRequest from 'request';
 
+export * from './apiV2AttachmentsPostRequest';
 export * from './attachmentChangeViewModel';
 export * from './attachmentChangeViewModelArrayWorkItemChangedFieldViewModel';
 export * from './attachmentModel';
@@ -28,6 +29,10 @@ export * from './autotestSelectModel';
 export * from './autotestsExtractionModel';
 export * from './autotestsSelectModel';
 export * from './availableTestResultOutcome';
+export * from './backgroundJobAttachmentModel';
+export * from './backgroundJobModel';
+export * from './backgroundJobState';
+export * from './backgroundJobType';
 export * from './booleanNullableTestPlanChangedFieldViewModel';
 export * from './booleanTestPlanChangedFieldViewModel';
 export * from './booleanWorkItemChangedFieldViewModel';
@@ -50,8 +55,8 @@ export * from './customAttributeTemplatePutModel';
 export * from './customAttributeTemplateSearchQueryModel';
 export * from './customAttributeTestPlanProjectRelationPutModel';
 export * from './customAttributeTypesEnum';
-export * from './dateRangeModel';
 export * from './dateTimeRangeSelectorModel';
+export * from './deletionState';
 export * from './externalLinkModel';
 export * from './failureCategoryModel';
 export * from './failureClassModel';
@@ -82,6 +87,8 @@ export * from './noContentResult';
 export * from './notificationModel';
 export * from './notificationQueryFilterModel';
 export * from './notificationTypeModel';
+export * from './operation';
+export * from './parameterFilterModel';
 export * from './parameterGroupModel';
 export * from './parameterIterationModel';
 export * from './parameterModel';
@@ -100,6 +107,7 @@ export * from './projectModel';
 export * from './projectPostModel';
 export * from './projectPutModel';
 export * from './projectShortestModel';
+export * from './projectTestPlansFilterModel';
 export * from './projectsFilterModel';
 export * from './publicTestPointModel';
 export * from './publicTestRunModel';
@@ -140,7 +148,6 @@ export * from './testPlanLink';
 export * from './testPlanModel';
 export * from './testPlanPostModel';
 export * from './testPlanPutModel';
-export * from './testPlanSearchQueryModel';
 export * from './testPlanShortModel';
 export * from './testPlanStatusModel';
 export * from './testPlanWithAnalyticModel';
@@ -152,11 +159,13 @@ export * from './testPointChangeViewModelTestPlanChangedFieldViewModel';
 export * from './testPointFilterModel';
 export * from './testPointPutModel';
 export * from './testPointResultModel';
+export * from './testPointSelectModel';
 export * from './testPointSelector';
 export * from './testPointShortGetModel';
 export * from './testPointShortModel';
 export * from './testPointStatus';
 export * from './testPointWithLastResultModel';
+export * from './testPointsExtractionModel';
 export * from './testResultChangeViewModel';
 export * from './testResultChangeViewModelTestPlanChangedFieldViewModel';
 export * from './testResultChronologyModel';
@@ -193,6 +202,7 @@ export * from './testRunV2PostShortModel';
 export * from './testRunV2PutModel';
 export * from './testSuiteChangeViewModel';
 export * from './testSuiteChangeViewModelTestPlanChangedFieldViewModel';
+export * from './testSuiteType';
 export * from './testSuiteV2GetModel';
 export * from './testSuiteV2PostModel';
 export * from './testSuiteV2PutModel';
@@ -248,6 +258,7 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { ApiV2AttachmentsPostRequest } from './apiV2AttachmentsPostRequest';
 import { AttachmentChangeViewModel } from './attachmentChangeViewModel';
 import { AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel } from './attachmentChangeViewModelArrayWorkItemChangedFieldViewModel';
 import { AttachmentModel } from './attachmentModel';
@@ -276,6 +287,10 @@ import { AutotestSelectModel } from './autotestSelectModel';
 import { AutotestsExtractionModel } from './autotestsExtractionModel';
 import { AutotestsSelectModel } from './autotestsSelectModel';
 import { AvailableTestResultOutcome } from './availableTestResultOutcome';
+import { BackgroundJobAttachmentModel } from './backgroundJobAttachmentModel';
+import { BackgroundJobModel } from './backgroundJobModel';
+import { BackgroundJobState } from './backgroundJobState';
+import { BackgroundJobType } from './backgroundJobType';
 import { BooleanNullableTestPlanChangedFieldViewModel } from './booleanNullableTestPlanChangedFieldViewModel';
 import { BooleanTestPlanChangedFieldViewModel } from './booleanTestPlanChangedFieldViewModel';
 import { BooleanWorkItemChangedFieldViewModel } from './booleanWorkItemChangedFieldViewModel';
@@ -298,8 +313,8 @@ import { CustomAttributeTemplatePutModel } from './customAttributeTemplatePutMod
 import { CustomAttributeTemplateSearchQueryModel } from './customAttributeTemplateSearchQueryModel';
 import { CustomAttributeTestPlanProjectRelationPutModel } from './customAttributeTestPlanProjectRelationPutModel';
 import { CustomAttributeTypesEnum } from './customAttributeTypesEnum';
-import { DateRangeModel } from './dateRangeModel';
 import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { DeletionState } from './deletionState';
 import { ExternalLinkModel } from './externalLinkModel';
 import { FailureCategoryModel } from './failureCategoryModel';
 import { FailureClassModel } from './failureClassModel';
@@ -330,6 +345,8 @@ import { NoContentResult } from './noContentResult';
 import { NotificationModel } from './notificationModel';
 import { NotificationQueryFilterModel } from './notificationQueryFilterModel';
 import { NotificationTypeModel } from './notificationTypeModel';
+import { Operation } from './operation';
+import { ParameterFilterModel } from './parameterFilterModel';
 import { ParameterGroupModel } from './parameterGroupModel';
 import { ParameterIterationModel } from './parameterIterationModel';
 import { ParameterModel } from './parameterModel';
@@ -348,6 +365,7 @@ import { ProjectModel } from './projectModel';
 import { ProjectPostModel } from './projectPostModel';
 import { ProjectPutModel } from './projectPutModel';
 import { ProjectShortestModel } from './projectShortestModel';
+import { ProjectTestPlansFilterModel } from './projectTestPlansFilterModel';
 import { ProjectsFilterModel } from './projectsFilterModel';
 import { PublicTestPointModel } from './publicTestPointModel';
 import { PublicTestRunModel } from './publicTestRunModel';
@@ -388,7 +406,6 @@ import { TestPlanLink } from './testPlanLink';
 import { TestPlanModel } from './testPlanModel';
 import { TestPlanPostModel } from './testPlanPostModel';
 import { TestPlanPutModel } from './testPlanPutModel';
-import { TestPlanSearchQueryModel } from './testPlanSearchQueryModel';
 import { TestPlanShortModel } from './testPlanShortModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
 import { TestPlanWithAnalyticModel } from './testPlanWithAnalyticModel';
@@ -400,11 +417,13 @@ import { TestPointChangeViewModelTestPlanChangedFieldViewModel } from './testPoi
 import { TestPointFilterModel } from './testPointFilterModel';
 import { TestPointPutModel } from './testPointPutModel';
 import { TestPointResultModel } from './testPointResultModel';
+import { TestPointSelectModel } from './testPointSelectModel';
 import { TestPointSelector } from './testPointSelector';
 import { TestPointShortGetModel } from './testPointShortGetModel';
 import { TestPointShortModel } from './testPointShortModel';
 import { TestPointStatus } from './testPointStatus';
 import { TestPointWithLastResultModel } from './testPointWithLastResultModel';
+import { TestPointsExtractionModel } from './testPointsExtractionModel';
 import { TestResultChangeViewModel } from './testResultChangeViewModel';
 import { TestResultChangeViewModelTestPlanChangedFieldViewModel } from './testResultChangeViewModelTestPlanChangedFieldViewModel';
 import { TestResultChronologyModel } from './testResultChronologyModel';
@@ -441,6 +460,7 @@ import { TestRunV2PostShortModel } from './testRunV2PostShortModel';
 import { TestRunV2PutModel } from './testRunV2PutModel';
 import { TestSuiteChangeViewModel } from './testSuiteChangeViewModel';
 import { TestSuiteChangeViewModelTestPlanChangedFieldViewModel } from './testSuiteChangeViewModelTestPlanChangedFieldViewModel';
+import { TestSuiteType } from './testSuiteType';
 import { TestSuiteV2GetModel } from './testSuiteV2GetModel';
 import { TestSuiteV2PostModel } from './testSuiteV2PostModel';
 import { TestSuiteV2PutModel } from './testSuiteV2PutModel';
@@ -498,7 +518,10 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "AutotestResultOutcome": AutotestResultOutcome,
         "AvailableTestResultOutcome": AvailableTestResultOutcome,
+        "BackgroundJobState": BackgroundJobState,
+        "BackgroundJobType": BackgroundJobType,
         "CustomAttributeTypesEnum": CustomAttributeTypesEnum,
+        "DeletionState": DeletionState,
         "FailureCategoryModel": FailureCategoryModel,
         "ImageResizeType": ImageResizeType,
         "LinkType": LinkType,
@@ -508,6 +531,7 @@ let enumsMap: {[index: string]: any} = {
         "TestPointStatus": TestPointStatus,
         "TestResultOutcome": TestResultOutcome,
         "TestRunState": TestRunState,
+        "TestSuiteType": TestSuiteType,
         "WebHookEventType": WebHookEventType,
         "WebHookEventTypeModel": WebHookEventTypeModel,
         "WorkItemEntityTypes": WorkItemEntityTypes,
@@ -516,6 +540,7 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
+    "ApiV2AttachmentsPostRequest": ApiV2AttachmentsPostRequest,
     "AttachmentChangeViewModel": AttachmentChangeViewModel,
     "AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel": AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel,
     "AttachmentModel": AttachmentModel,
@@ -542,6 +567,8 @@ let typeMap: {[index: string]: any} = {
     "AutotestSelectModel": AutotestSelectModel,
     "AutotestsExtractionModel": AutotestsExtractionModel,
     "AutotestsSelectModel": AutotestsSelectModel,
+    "BackgroundJobAttachmentModel": BackgroundJobAttachmentModel,
+    "BackgroundJobModel": BackgroundJobModel,
     "BooleanNullableTestPlanChangedFieldViewModel": BooleanNullableTestPlanChangedFieldViewModel,
     "BooleanTestPlanChangedFieldViewModel": BooleanTestPlanChangedFieldViewModel,
     "BooleanWorkItemChangedFieldViewModel": BooleanWorkItemChangedFieldViewModel,
@@ -563,7 +590,6 @@ let typeMap: {[index: string]: any} = {
     "CustomAttributeTemplatePutModel": CustomAttributeTemplatePutModel,
     "CustomAttributeTemplateSearchQueryModel": CustomAttributeTemplateSearchQueryModel,
     "CustomAttributeTestPlanProjectRelationPutModel": CustomAttributeTestPlanProjectRelationPutModel,
-    "DateRangeModel": DateRangeModel,
     "DateTimeRangeSelectorModel": DateTimeRangeSelectorModel,
     "ExternalLinkModel": ExternalLinkModel,
     "FailureClassModel": FailureClassModel,
@@ -591,6 +617,8 @@ let typeMap: {[index: string]: any} = {
     "NoContentResult": NoContentResult,
     "NotificationModel": NotificationModel,
     "NotificationQueryFilterModel": NotificationQueryFilterModel,
+    "Operation": Operation,
+    "ParameterFilterModel": ParameterFilterModel,
     "ParameterGroupModel": ParameterGroupModel,
     "ParameterIterationModel": ParameterIterationModel,
     "ParameterModel": ParameterModel,
@@ -609,6 +637,7 @@ let typeMap: {[index: string]: any} = {
     "ProjectPostModel": ProjectPostModel,
     "ProjectPutModel": ProjectPutModel,
     "ProjectShortestModel": ProjectShortestModel,
+    "ProjectTestPlansFilterModel": ProjectTestPlansFilterModel,
     "ProjectsFilterModel": ProjectsFilterModel,
     "PublicTestPointModel": PublicTestPointModel,
     "PublicTestRunModel": PublicTestRunModel,
@@ -648,7 +677,6 @@ let typeMap: {[index: string]: any} = {
     "TestPlanModel": TestPlanModel,
     "TestPlanPostModel": TestPlanPostModel,
     "TestPlanPutModel": TestPlanPutModel,
-    "TestPlanSearchQueryModel": TestPlanSearchQueryModel,
     "TestPlanShortModel": TestPlanShortModel,
     "TestPlanWithAnalyticModel": TestPlanWithAnalyticModel,
     "TestPlanWithTestSuiteTreeModel": TestPlanWithTestSuiteTreeModel,
@@ -659,10 +687,12 @@ let typeMap: {[index: string]: any} = {
     "TestPointFilterModel": TestPointFilterModel,
     "TestPointPutModel": TestPointPutModel,
     "TestPointResultModel": TestPointResultModel,
+    "TestPointSelectModel": TestPointSelectModel,
     "TestPointSelector": TestPointSelector,
     "TestPointShortGetModel": TestPointShortGetModel,
     "TestPointShortModel": TestPointShortModel,
     "TestPointWithLastResultModel": TestPointWithLastResultModel,
+    "TestPointsExtractionModel": TestPointsExtractionModel,
     "TestResultChangeViewModel": TestResultChangeViewModel,
     "TestResultChangeViewModelTestPlanChangedFieldViewModel": TestResultChangeViewModelTestPlanChangedFieldViewModel,
     "TestResultChronologyModel": TestResultChronologyModel,

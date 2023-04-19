@@ -20,7 +20,7 @@ export class TestRunFillByWorkItemsPostModel {
     /**
     * Specifies the work item GUIDs, from which test points are created. You can specify several GUIDs.
     */
-    'workitemIds': Array<string>;
+    'workItemIds': Array<string>;
     /**
     * Specifies the GUID of the project, in which a test run will be created.
     */
@@ -51,8 +51,8 @@ export class TestRunFillByWorkItemsPostModel {
             "type": "Array<string>"
         },
         {
-            "name": "workitemIds",
-            "baseName": "workitemIds",
+            "name": "workItemIds",
+            "baseName": "workItemIds",
             "type": "Array<string>"
         },
         {

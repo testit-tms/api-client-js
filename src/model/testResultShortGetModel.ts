@@ -41,7 +41,7 @@ export class TestResultShortGetModel {
     * Name of configuration which test result uses
     */
     'configurationName'?: string | null;
-    'outcome'?: TestResultOutcome;
+    'outcome': TestResultOutcome;
     /**
     * Collection of result reasons which test result have
     */
@@ -141,5 +141,3 @@ export class TestResultShortGetModel {
     }
 }
 
-export namespace TestResultShortGetModel {
-}

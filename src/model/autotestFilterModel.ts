@@ -167,5 +167,3 @@ export class AutotestFilterModel {
     }
 }
 
-export namespace AutotestFilterModel {
-}

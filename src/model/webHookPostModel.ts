@@ -145,5 +145,3 @@ export class WebHookPostModel {
     }
 }
 
-export namespace WebHookPostModel {
-}

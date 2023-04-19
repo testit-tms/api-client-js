@@ -16,7 +16,7 @@ import { FailureClassRegexModel } from './failureClassRegexModel';
 
 export class FailureClassModel {
     'name'?: string | null;
-    'failureCategory'?: FailureCategoryModel;
+    'failureCategory': FailureCategoryModel;
     'createdDate'?: Date;
     'modifiedDate'?: Date | null;
     'createdById'?: string;
@@ -85,5 +85,3 @@ export class FailureClassModel {
     }
 }
 
-export namespace FailureClassModel {
-}

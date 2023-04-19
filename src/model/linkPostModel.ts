@@ -63,5 +63,3 @@ export class LinkPostModel {
     }
 }
 
-export namespace LinkPostModel {
-}
