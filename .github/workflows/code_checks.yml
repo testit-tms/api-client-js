@@ -48,7 +48,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        node-version: [14,16,18]
+        node-version: [18]
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
@@ -63,6 +63,6 @@ jobs:
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependecies
         run: npm install
-      - run: npm install -g tcs
+      - run: npm install -g typescript
       - name: Build application
         run: npm run build
