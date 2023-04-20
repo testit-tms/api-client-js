@@ -4,46 +4,48 @@ on:
   pull_request
 
 jobs:
-  # test:
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest, macos-latest]
-  #       node-version: [18]
-  #   steps:
-  #     - name: Get repository code
-  #       uses: actions/checkout@v3
-  #     - name: Cache deps
-  #       uses: actions/cache@v3
-  #       with:
-  #         path: ~/.npm
-  #         key: node-modules-${{ hashFiles('**/package-lock.json') }}
-  #     - name: Install dependecies
-  #       run: npm install
-      # - name: Test application
-      #   run: npm run test
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18]
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependecies
+        run: npm install
+      - run: npm install --package-lock
+      - name: Test application
+        run: npm run test
 
-  # lint:
-  #   runs-on: ${{ matrix.os }}
-  #   strategy:
-  #     matrix:
-  #       os: [ubuntu-latest, windows-latest, macos-latest]
-  #       node-version: [18]
-  #   steps:
-  #     - name: Get repository code
-  #       uses: actions/checkout@v3
-  #     - name: Cache deps
-  #       uses: actions/cache@v3
-  #       with:
-  #         path: ~/.npm
-  #         key: node-modules-${{ hashFiles('**/package-lock.json') }}
-  #     - name: Install dependecies
-  #       run: npm install
-      # - name: Lint application ${{ matrix.package }}
-      #   run: npm run lint
+  lint:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18]
+    steps:
+      - name: Get repository code
+        uses: actions/checkout@v3
+      - name: Cache deps
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Install dependecies
+        run: npm install
+      - run: npm install --package-lock
+      - name: Lint application ${{ matrix.package }}
+        run: npm run lint
 
   build:
-    # needs: [lint, test]
+    needs: [lint, test]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
