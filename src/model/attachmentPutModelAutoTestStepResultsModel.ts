@@ -112,5 +112,3 @@ export class AttachmentPutModelAutoTestStepResultsModel {
     }
 }
 
-export namespace AttachmentPutModelAutoTestStepResultsModel {
-}

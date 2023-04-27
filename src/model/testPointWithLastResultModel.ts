@@ -36,7 +36,7 @@ export class TestPointWithLastResultModel {
     'attributes'?: { [key: string]: any; } | null;
     'tagNames'?: Array<string> | null;
     'duration'?: number;
-    'priority'?: WorkItemPriorityModel;
+    'priority': WorkItemPriorityModel;
     'testSuiteNameBreadCrumbs'?: Array<string> | null;
     'groupCount'?: number | null;
     'iteration'?: IterationModel;
@@ -170,5 +170,3 @@ export class TestPointWithLastResultModel {
     }
 }
 
-export namespace TestPointWithLastResultModel {
-}

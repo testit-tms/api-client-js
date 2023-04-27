@@ -69,5 +69,3 @@ export class LinkModel {
     }
 }
 
-export namespace LinkModel {
-}

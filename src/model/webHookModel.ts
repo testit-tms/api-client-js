@@ -19,7 +19,7 @@ export class WebHookModel {
     * Name of the webhook
     */
     'name'?: string | null;
-    'eventType'?: WebHookEventTypeModel;
+    'eventType': WebHookEventTypeModel;
     /**
     * Description of the webhook
     */
@@ -28,7 +28,7 @@ export class WebHookModel {
     * Url to which the webhook sends request
     */
     'url'?: string | null;
-    'requestType'?: RequestTypeModel;
+    'requestType': RequestTypeModel;
     /**
     * Indicates if the webhook sends body
     */
@@ -208,5 +208,3 @@ export class WebHookModel {
     }
 }
 
-export namespace WebHookModel {
-}

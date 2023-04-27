@@ -17,7 +17,7 @@ import { TestPointAnalyticResult } from './testPointAnalyticResult';
 
 export class TestPlanWithAnalyticModel {
     'analytic'?: TestPointAnalyticResult;
-    'status'?: TestPlanStatusModel;
+    'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
     */
@@ -179,5 +179,3 @@ export class TestPlanWithAnalyticModel {
     }
 }
 
-export namespace TestPlanWithAnalyticModel {
-}

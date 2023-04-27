@@ -140,5 +140,3 @@ export class WorkItemPostModel {
     }
 }
 
-export namespace WorkItemPostModel {
-}

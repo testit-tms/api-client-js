@@ -16,7 +16,7 @@ import { WebHookEventTypeModel } from './webHookEventTypeModel';
 
 export class WebHookLogModel {
     'webHookName'?: string | null;
-    'eventType'?: WebHookEventTypeModel;
+    'eventType': WebHookEventTypeModel;
     'webHookId'?: string;
     'requestBody'?: string | null;
     'requestMeta'?: string | null;
@@ -25,7 +25,7 @@ export class WebHookLogModel {
     'responseMeta'?: string | null;
     'projectId'?: string;
     'url'?: string | null;
-    'requestType'?: RequestTypeModel;
+    'requestType': RequestTypeModel;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
     'createdById'?: string;
@@ -133,5 +133,3 @@ export class WebHookLogModel {
     }
 }
 
-export namespace WebHookLogModel {
-}

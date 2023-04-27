@@ -17,7 +17,7 @@ import { TestSuiteWithChildrenModel } from './testSuiteWithChildrenModel';
 
 export class TestPlanWithTestSuiteTreeModel {
     'testSuites'?: Array<TestSuiteWithChildrenModel> | null;
-    'status'?: TestPlanStatusModel;
+    'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
     */
@@ -179,5 +179,3 @@ export class TestPlanWithTestSuiteTreeModel {
     }
 }
 
-export namespace TestPlanWithTestSuiteTreeModel {
-}

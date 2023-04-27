@@ -34,6 +34,10 @@ export class WorkItemShortModel {
     * This property links workitem with section
     */
     'sectionId': string;
+    /**
+    * Name of the section where work item is located
+    */
+    'sectionName': string;
     'isAutomated'?: boolean;
     'globalId'?: number;
     'duration'?: number;
@@ -79,6 +83,11 @@ export class WorkItemShortModel {
         {
             "name": "sectionId",
             "baseName": "sectionId",
+            "type": "string"
+        },
+        {
+            "name": "sectionName",
+            "baseName": "sectionName",
             "type": "string"
         },
         {
@@ -152,5 +161,3 @@ export class WorkItemShortModel {
     }
 }
 
-export namespace WorkItemShortModel {
-}

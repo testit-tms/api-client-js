@@ -61,6 +61,10 @@ export class TestPointShortGetModel {
     */
     'testSuiteId'?: string;
     /**
+    * Unique ID of work item the test point represents
+    */
+    'workItemId'?: string;
+    /**
     * Global ID of work item the test point represents
     */
     'workItemGlobalId'?: number;
@@ -68,8 +72,8 @@ export class TestPointShortGetModel {
     * Unique ID of work item version the test point represents
     */
     'workItemVersionId'?: string;
-    'status'?: TestPointStatus;
-    'priority'?: WorkItemPriorityModel;
+    'status': TestPointStatus;
+    'priority': WorkItemPriorityModel;
     /**
     * Indicates if the test point represents an autotest
     */
@@ -91,10 +95,14 @@ export class TestPointShortGetModel {
     */
     'sectionId'?: string;
     /**
+    * Name of section where work item the test point represents is located
+    */
+    'sectionName'?: string | null;
+    /**
     * Unique ID of the test point project
     */
     'projectId'?: string;
-    'lastTestResult'?: LastTestResultModel;
+    'lastTestResult': LastTestResultModel;
     /**
     * Unique ID of work item iteration the test point represents
     */
@@ -159,6 +167,11 @@ export class TestPointShortGetModel {
             "type": "string"
         },
         {
+            "name": "workItemId",
+            "baseName": "workItemId",
+            "type": "string"
+        },
+        {
             "name": "workItemGlobalId",
             "baseName": "workItemGlobalId",
             "type": "number"
@@ -204,6 +217,11 @@ export class TestPointShortGetModel {
             "type": "string"
         },
         {
+            "name": "sectionName",
+            "baseName": "sectionName",
+            "type": "string"
+        },
+        {
             "name": "projectId",
             "baseName": "projectId",
             "type": "string"
@@ -224,5 +242,3 @@ export class TestPointShortGetModel {
     }
 }
 
-export namespace TestPointShortGetModel {
-}

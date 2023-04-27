@@ -94,5 +94,3 @@ export class CustomAttributeModel {
     }
 }
 
-export namespace CustomAttributeModel {
-}

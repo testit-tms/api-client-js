@@ -17,17 +17,17 @@ export class AutotestResultHistoricalGetModel {
     'id'?: string;
     'createdDate'?: Date;
     'createdById'?: string;
-    'modifiedDate'?: Date | null;
-    'modifiedById'?: string | null;
     'testRunId'?: string;
     'testRunName'?: string | null;
+    'configurationId'?: string;
+    'outcome': AutotestResultOutcome;
+    'launchSource'?: string | null;
+    'modifiedDate'?: Date | null;
+    'modifiedById'?: string | null;
     'testPlanId'?: string | null;
     'testPlanGlobalId'?: number | null;
     'testPlanName'?: string | null;
-    'configurationId'?: string;
-    'outcome'?: AutotestResultOutcome;
     'duration'?: number | null;
-    'launchSource'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -48,16 +48,6 @@ export class AutotestResultHistoricalGetModel {
             "type": "string"
         },
         {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "Date"
-        },
-        {
-            "name": "modifiedById",
-            "baseName": "modifiedById",
-            "type": "string"
-        },
-        {
             "name": "testRunId",
             "baseName": "testRunId",
             "type": "string"
@@ -65,6 +55,31 @@ export class AutotestResultHistoricalGetModel {
         {
             "name": "testRunName",
             "baseName": "testRunName",
+            "type": "string"
+        },
+        {
+            "name": "configurationId",
+            "baseName": "configurationId",
+            "type": "string"
+        },
+        {
+            "name": "outcome",
+            "baseName": "outcome",
+            "type": "AutotestResultOutcome"
+        },
+        {
+            "name": "launchSource",
+            "baseName": "launchSource",
+            "type": "string"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "Date"
+        },
+        {
+            "name": "modifiedById",
+            "baseName": "modifiedById",
             "type": "string"
         },
         {
@@ -83,24 +98,9 @@ export class AutotestResultHistoricalGetModel {
             "type": "string"
         },
         {
-            "name": "configurationId",
-            "baseName": "configurationId",
-            "type": "string"
-        },
-        {
-            "name": "outcome",
-            "baseName": "outcome",
-            "type": "AutotestResultOutcome"
-        },
-        {
             "name": "duration",
             "baseName": "duration",
             "type": "number"
-        },
-        {
-            "name": "launchSource",
-            "baseName": "launchSource",
-            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
@@ -108,5 +108,3 @@ export class AutotestResultHistoricalGetModel {
     }
 }
 
-export namespace AutotestResultHistoricalGetModel {
-}

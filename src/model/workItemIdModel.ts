@@ -16,7 +16,7 @@ export class WorkItemIdModel {
     /**
     * Used for search WorkItem. Internal identifier has a Guid data format. Global identifier has an integer data format
     */
-    'id'?: string | null;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 

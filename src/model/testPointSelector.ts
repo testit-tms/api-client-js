@@ -20,7 +20,7 @@ export class TestPointSelector {
     /**
     * Specifies the work item GUIDs, from which test points are created. You can specify several GUIDs.
     */
-    'workitemIds': Array<string>;
+    'workItemIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -31,8 +31,8 @@ export class TestPointSelector {
             "type": "string"
         },
         {
-            "name": "workitemIds",
-            "baseName": "workitemIds",
+            "name": "workItemIds",
+            "baseName": "workItemIds",
             "type": "Array<string>"
         }    ];
 

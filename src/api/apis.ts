@@ -2,6 +2,8 @@ export * from './attachmentsApi';
 import { AttachmentsApi } from './attachmentsApi';
 export * from './autoTestsApi';
 import { AutoTestsApi } from './autoTestsApi';
+export * from './backgroundJobsApi';
+import { BackgroundJobsApi } from './backgroundJobsApi';
 export * from './configurationsApi';
 import { ConfigurationsApi } from './configurationsApi';
 export * from './customAttributeTemplatesApi';
@@ -47,4 +49,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AttachmentsApi, AutoTestsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectsApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];
+export const APIS = [AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectsApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];

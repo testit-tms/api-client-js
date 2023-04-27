@@ -169,5 +169,3 @@ export class AutoTestResultsForTestRunModel {
     }
 }
 
-export namespace AutoTestResultsForTestRunModel {
-}

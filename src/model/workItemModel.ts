@@ -48,7 +48,7 @@ export class WorkItemModel {
     'createdById'?: string;
     'modifiedById'?: string | null;
     'globalId'?: number;
-    'id'?: string;
+    'id': string;
     'sectionId'?: string;
     'description'?: string | null;
     'state': WorkItemStates;
@@ -221,5 +221,3 @@ export class WorkItemModel {
     }
 }
 
-export namespace WorkItemModel {
-}
