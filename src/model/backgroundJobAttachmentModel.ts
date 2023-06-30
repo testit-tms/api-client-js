@@ -14,8 +14,8 @@ import { RequestFile } from './models';
 
 export class BackgroundJobAttachmentModel {
     'id'?: string;
-    'name'?: string | null;
-    'type'?: string | null;
+    'name'?: string;
+    'type'?: string;
 
     static discriminator: string | undefined = undefined;
 

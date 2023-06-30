@@ -21,12 +21,12 @@ export class TestResultUpdateModel {
     'setupResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
     'teardownResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
     'durationInMs'?: number | null;
-    'stepComments'?: Array<TestResultStepCommentPutModel> | null;
-    'failureClassIds'?: Array<string> | null;
-    'outcome'?: string | null;
+    'stepComments'?: Array<TestResultStepCommentPutModel>;
+    'failureClassIds'?: Array<string>;
+    'outcome'?: string;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'stepResults'?: Array<StepResultModel> | null;
+    'stepResults'?: Array<StepResultModel>;
     'attachments'?: Array<AttachmentPutModel> | null;
 
     static discriminator: string | undefined = undefined;

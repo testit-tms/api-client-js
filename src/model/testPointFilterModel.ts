@@ -11,8 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
-import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
+import { TestPointFilterModelCreatedDate } from './testPointFilterModelCreatedDate';
+import { TestPointFilterModelDuration } from './testPointFilterModelDuration';
+import { TestPointFilterModelModifiedDate } from './testPointFilterModelModifiedDate';
+import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
+import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 
@@ -53,17 +56,17 @@ export class TestPointFilterModel {
     * Specifies a test point assigned user IDs to search for
     */
     'testerIds'?: Set<string> | null;
-    'duration'?: Int64RangeSelectorModel;
+    'duration'?: TestPointFilterModelDuration | null;
     /**
     * Specifies a test point work item section IDs to search for
     */
     'sectionIds'?: Set<string> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: TestPointFilterModelCreatedDate | null;
     /**
     * Specifies a test point creator IDs to search for
     */
     'createdByIds'?: Set<string> | null;
-    'modifiedDate'?: DateTimeRangeSelectorModel;
+    'modifiedDate'?: TestPointFilterModelModifiedDate | null;
     /**
     * Specifies a test point last editor IDs to search for
     */
@@ -76,6 +79,16 @@ export class TestPointFilterModel {
     * Specifies a test point attributes to search for
     */
     'attributes'?: { [key: string]: Set<string>; } | null;
+    'workItemCreatedDate'?: TestPointFilterModelWorkItemCreatedDate | null;
+    /**
+    * Specifies a work item creator IDs to search for
+    */
+    'workItemCreatedByIds'?: Set<string> | null;
+    'workItemModifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
+    /**
+    * Specifies a work item last editor IDs to search for
+    */
+    'workItemModifiedByIds'?: Set<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -128,7 +141,7 @@ export class TestPointFilterModel {
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "Int64RangeSelectorModel"
+            "type": "TestPointFilterModelDuration"
         },
         {
             "name": "sectionIds",
@@ -138,7 +151,7 @@ export class TestPointFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestPointFilterModelCreatedDate"
         },
         {
             "name": "createdByIds",
@@ -148,7 +161,7 @@ export class TestPointFilterModel {
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestPointFilterModelModifiedDate"
         },
         {
             "name": "modifiedByIds",
@@ -164,6 +177,26 @@ export class TestPointFilterModel {
             "name": "attributes",
             "baseName": "attributes",
             "type": "{ [key: string]: Set<string>; }"
+        },
+        {
+            "name": "workItemCreatedDate",
+            "baseName": "workItemCreatedDate",
+            "type": "TestPointFilterModelWorkItemCreatedDate"
+        },
+        {
+            "name": "workItemCreatedByIds",
+            "baseName": "workItemCreatedByIds",
+            "type": "Set<string>"
+        },
+        {
+            "name": "workItemModifiedDate",
+            "baseName": "workItemModifiedDate",
+            "type": "TestPointFilterModelWorkItemModifiedDate"
+        },
+        {
+            "name": "workItemModifiedByIds",
+            "baseName": "workItemModifiedByIds",
+            "type": "Set<string>"
         }    ];
 
     static getAttributeTypeMap() {

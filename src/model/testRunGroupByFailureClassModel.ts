@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class TestRunGroupByFailureClassModel {
-    'failureCategory'?: string | null;
+    'failureCategory'?: string;
     'value'?: number;
 
     static discriminator: string | undefined = undefined;

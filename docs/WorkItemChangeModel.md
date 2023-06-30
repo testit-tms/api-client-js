@@ -7,7 +7,7 @@
 | **workItemId** | **UUID** |  | [optional] [default to null] |
 | **oldVersionId** | **UUID** |  | [optional] [default to null] |
 | **newVersionId** | **UUID** |  | [optional] [default to null] |
-| **workItemChangedFields** | [**WorkItemChangedFieldsViewModel**](WorkItemChangedFieldsViewModel.md) |  | [optional] [default to null] |
+| **workItemChangedFields** | [**WorkItemChangeModel_workItemChangedFields**](WorkItemChangeModel_workItemChangedFields.md) |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |
 

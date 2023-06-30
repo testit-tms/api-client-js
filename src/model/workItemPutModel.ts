@@ -26,7 +26,7 @@ export class WorkItemPutModel {
     'autoTests'?: Array<AutoTestIdModel> | null;
     'id': string;
     'sectionId'?: string;
-    'description'?: string | null;
+    'description'?: string;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
     'steps': Array<StepPutModel>;
@@ -127,3 +127,5 @@ export class WorkItemPutModel {
     }
 }
 
+export namespace WorkItemPutModel {
+}

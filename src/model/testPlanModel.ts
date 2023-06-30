@@ -51,7 +51,7 @@ export class TestPlanModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; } | null;
+    'attributes'?: { [key: string]: any; };
 
     static discriminator: string | undefined = undefined;
 
@@ -172,3 +172,5 @@ export class TestPlanModel {
     }
 }
 
+export namespace TestPlanModel {
+}

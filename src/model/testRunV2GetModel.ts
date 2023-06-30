@@ -124,3 +124,5 @@ export class TestRunV2GetModel {
     }
 }
 
+export namespace TestRunV2GetModel {
+}

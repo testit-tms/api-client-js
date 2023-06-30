@@ -5,7 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [optional] [default to null] |
 | **testPlanId** | **UUID** |  | [optional] [default to null] |
-| **testPlanChangedFields** | [**TestPlanChangedFieldsViewModel**](TestPlanChangedFieldsViewModel.md) |  | [optional] [default to null] |
+| **testPlanChangedFields** | [**TestPlanChangeModel_testPlanChangedFields**](TestPlanChangeModel_testPlanChangedFields.md) |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |
 

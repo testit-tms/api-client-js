@@ -17,6 +17,7 @@ export class TestSuiteV2PutModel {
     'parentId'?: string | null;
     'name': string;
     'isDeleted'?: boolean;
+    'autoRefresh'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,6 +40,11 @@ export class TestSuiteV2PutModel {
         {
             "name": "isDeleted",
             "baseName": "isDeleted",
+            "type": "boolean"
+        },
+        {
+            "name": "autoRefresh",
+            "baseName": "autoRefresh",
             "type": "boolean"
         }    ];
 

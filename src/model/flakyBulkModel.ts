@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { AutotestSelectModel } from './autotestSelectModel';
+import { FlakyBulkModelAutotestSelect } from './flakyBulkModelAutotestSelect';
 
 export class FlakyBulkModel {
-    'autotestSelect'?: AutotestSelectModel;
+    'autotestSelect'?: FlakyBulkModelAutotestSelect;
     /**
     * Are autotests flaky
     */
@@ -26,7 +26,7 @@ export class FlakyBulkModel {
         {
             "name": "autotestSelect",
             "baseName": "autotestSelect",
-            "type": "AutotestSelectModel"
+            "type": "FlakyBulkModelAutotestSelect"
         },
         {
             "name": "value",

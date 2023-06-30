@@ -22,10 +22,10 @@ export class NotificationModel {
     'projectGlobalId'?: number | null;
     'projectName'?: string | null;
     'testPlanGlobalId'?: number;
-    'testPlanName'?: string | null;
+    'testPlanName'?: string;
     'workitemGlobalId'?: number | null;
-    'comment'?: string | null;
-    'workItemName'?: string | null;
+    'comment'?: string;
+    'workItemName'?: string;
     'attributeName'?: string | null;
     'createdById'?: string;
 
@@ -108,3 +108,5 @@ export class NotificationModel {
     }
 }
 
+export namespace NotificationModel {
+}

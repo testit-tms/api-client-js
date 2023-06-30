@@ -11,8 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
-import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
+import { TestSuiteWorkItemsSearchModelCreatedDate } from './testSuiteWorkItemsSearchModelCreatedDate';
+import { TestSuiteWorkItemsSearchModelDuration } from './testSuiteWorkItemsSearchModelDuration';
+import { TestSuiteWorkItemsSearchModelModifiedDate } from './testSuiteWorkItemsSearchModelModifiedDate';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -41,9 +42,9 @@ export class TestSuiteWorkItemsSearchModel {
     * Collection of states of work item
     */
     'states'?: Set<WorkItemStates> | null;
-    'duration'?: Int32RangeSelectorModel;
-    'createdDate'?: DateTimeRangeSelectorModel;
-    'modifiedDate'?: DateTimeRangeSelectorModel;
+    'duration'?: TestSuiteWorkItemsSearchModelDuration | null;
+    'createdDate'?: TestSuiteWorkItemsSearchModelCreatedDate | null;
+    'modifiedDate'?: TestSuiteWorkItemsSearchModelModifiedDate | null;
     /**
     * Collection of identifiers of users who created work item
     */
@@ -105,17 +106,17 @@ export class TestSuiteWorkItemsSearchModel {
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "Int32RangeSelectorModel"
+            "type": "TestSuiteWorkItemsSearchModelDuration"
         },
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestSuiteWorkItemsSearchModelCreatedDate"
         },
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestSuiteWorkItemsSearchModelModifiedDate"
         },
         {
             "name": "createdByIds",

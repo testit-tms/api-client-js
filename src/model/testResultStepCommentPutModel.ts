@@ -15,10 +15,10 @@ import { AttachmentPutModel } from './attachmentPutModel';
 
 export class TestResultStepCommentPutModel {
     'id'?: string;
-    'text'?: string | null;
+    'text'?: string;
     'stepId': string;
     'parentStepId'?: string | null;
-    'attachments'?: Array<AttachmentPutModel> | null;
+    'attachments'?: Array<AttachmentPutModel>;
 
     static discriminator: string | undefined = undefined;
 

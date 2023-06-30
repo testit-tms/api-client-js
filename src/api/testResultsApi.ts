@@ -15,13 +15,13 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2TestResultsIdPutRequest } from '../model/apiV2TestResultsIdPutRequest';
+import { ApiV2TestResultsSearchPostRequest } from '../model/apiV2TestResultsSearchPostRequest';
 import { AttachmentModel } from '../model/attachmentModel';
 import { ImageResizeType } from '../model/imageResizeType';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultModel } from '../model/testResultModel';
 import { TestResultShortGetModel } from '../model/testResultShortGetModel';
-import { TestResultUpdateModel } from '../model/testResultUpdateModel';
-import { TestResultsFilterModel } from '../model/testResultsFilterModel';
 import { TestResultsStatisticsGetModel } from '../model/testResultsStatisticsGetModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
@@ -395,9 +395,9 @@ export class TestResultsApi {
      * 
      * @summary Edit test result by ID
      * @param id Test result unique ID
-     * @param testResultUpdateModel 
+     * @param apiV2TestResultsIdPutRequest 
      */
-    public async apiV2TestResultsIdPut (id: string, testResultUpdateModel?: TestResultUpdateModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestResultsIdPut (id: string, apiV2TestResultsIdPutRequest?: ApiV2TestResultsIdPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -427,7 +427,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultUpdateModel, "TestResultUpdateModel")
+            body: ObjectSerializer.serialize(apiV2TestResultsIdPutRequest, "ApiV2TestResultsIdPutRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -472,9 +472,9 @@ export class TestResultsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testResultsFilterModel 
+     * @param apiV2TestResultsSearchPostRequest 
      */
-    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }> {
+    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestResultsSearchPostRequest?: ApiV2TestResultsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -518,7 +518,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
+            body: ObjectSerializer.serialize(apiV2TestResultsSearchPostRequest, "ApiV2TestResultsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -559,9 +559,9 @@ export class TestResultsApi {
     /**
      * 
      * @summary Search for test results and extract statistics
-     * @param testResultsFilterModel 
+     * @param apiV2TestResultsSearchPostRequest 
      */
-    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
+    public async apiV2TestResultsStatisticsFilterPost (apiV2TestResultsSearchPostRequest?: ApiV2TestResultsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/statistics/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -585,7 +585,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
+            body: ObjectSerializer.serialize(apiV2TestResultsSearchPostRequest, "ApiV2TestResultsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

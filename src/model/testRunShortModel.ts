@@ -72,3 +72,5 @@ export class TestRunShortModel {
     }
 }
 
+export namespace TestRunShortModel {
+}

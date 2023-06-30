@@ -17,7 +17,7 @@ import { NotificationTypeModel } from './notificationTypeModel';
 export class NotificationQueryFilterModel {
     'types'?: Set<NotificationTypeModel> | null;
     'isRead'?: boolean | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: DateTimeRangeSelectorModel | null;
 
     static discriminator: string | undefined = undefined;
 

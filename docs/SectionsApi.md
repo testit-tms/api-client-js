@@ -44,7 +44,7 @@ null (empty response body)
 
 <a name="createSection"></a>
 # **createSection**
-> SectionWithStepsModel createSection(SectionPostModel)
+> SectionWithStepsModel createSection(CreateSection\_request)
 
 Create section
 
@@ -54,7 +54,7 @@ Create section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **SectionPostModel** | [**SectionPostModel**](../Models/SectionPostModel.md)|  | [optional] |
+| **CreateSection\_request** | [**CreateSection_request**](../Models/CreateSection_request.md)|  | [optional] |
 
 ### Return type
 
@@ -109,7 +109,7 @@ Get section
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Section internal (UUID) identifier | [default to null] |
-| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to null] [enum: Any, Deleted, NotDeleted] |
+| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to NotDeleted] [enum: Any, Deleted, NotDeleted] |
 
 ### Return type
 
@@ -161,7 +161,7 @@ Get section work items
 
 <a name="move"></a>
 # **move**
-> move(SectionMoveModel)
+> move(Move\_request)
 
 Move section with all work items into another section
 
@@ -169,7 +169,7 @@ Move section with all work items into another section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **SectionMoveModel** | [**SectionMoveModel**](../Models/SectionMoveModel.md)|  | [optional] |
+| **Move\_request** | [**Move_request**](../Models/Move_request.md)|  | [optional] |
 
 ### Return type
 
@@ -186,7 +186,7 @@ null (empty response body)
 
 <a name="rename"></a>
 # **rename**
-> rename(SectionRenameModel)
+> rename(Rename\_request)
 
 Rename section
 
@@ -196,7 +196,7 @@ Rename section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **SectionRenameModel** | [**SectionRenameModel**](../Models/SectionRenameModel.md)|  | [optional] |
+| **Rename\_request** | [**Rename_request**](../Models/Rename_request.md)|  | [optional] |
 
 ### Return type
 
@@ -213,7 +213,7 @@ null (empty response body)
 
 <a name="updateSection"></a>
 # **updateSection**
-> updateSection(SectionPutModel)
+> updateSection(UpdateSection\_request)
 
 Update section
 
@@ -223,7 +223,7 @@ Update section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **SectionPutModel** | [**SectionPutModel**](../Models/SectionPutModel.md)|  | [optional] |
+| **UpdateSection\_request** | [**UpdateSection_request**](../Models/UpdateSection_request.md)|  | [optional] |
 
 ### Return type
 

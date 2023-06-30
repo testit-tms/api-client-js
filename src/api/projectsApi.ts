@@ -15,37 +15,38 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2ProjectsIdAttributesTemplatesSearchPostRequest } from '../model/apiV2ProjectsIdAttributesTemplatesSearchPostRequest';
+import { ApiV2ProjectsIdTestPlansDeleteBulkPostRequest } from '../model/apiV2ProjectsIdTestPlansDeleteBulkPostRequest';
+import { ApiV2ProjectsIdTestPlansSearchPostRequest } from '../model/apiV2ProjectsIdTestPlansSearchPostRequest';
+import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2ProjectsSearchPostRequest } from '../model/apiV2ProjectsSearchPostRequest';
 import { AutoTestNamespaceModel } from '../model/autoTestNamespaceModel';
 import { ConfigurationModel } from '../model/configurationModel';
+import { CreateProjectRequest } from '../model/createProjectRequest';
+import { CreateProjectsAttributeRequest } from '../model/createProjectsAttributeRequest';
 import { CustomAttributeGetModel } from '../model/customAttributeGetModel';
 import { CustomAttributeModel } from '../model/customAttributeModel';
-import { CustomAttributePostModel } from '../model/customAttributePostModel';
-import { CustomAttributePutModel } from '../model/customAttributePutModel';
-import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
 import { DeletionState } from '../model/deletionState';
+import { ExportProjectJsonRequest } from '../model/exportProjectJsonRequest';
+import { ExportProjectWithTestPlansJsonRequest } from '../model/exportProjectWithTestPlansJsonRequest';
 import { FailureClassModel } from '../model/failureClassModel';
 import { FilterModel } from '../model/filterModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
-import { ProjectAttributesFilterModel } from '../model/projectAttributesFilterModel';
 import { ProjectCustomAttributeTemplateGetModel } from '../model/projectCustomAttributeTemplateGetModel';
-import { ProjectCustomAttributesTemplatesFilterModel } from '../model/projectCustomAttributesTemplatesFilterModel';
-import { ProjectExportQueryModel } from '../model/projectExportQueryModel';
-import { ProjectExportWithTestPlansPostModel } from '../model/projectExportWithTestPlansPostModel';
 import { ProjectModel } from '../model/projectModel';
-import { ProjectPostModel } from '../model/projectPostModel';
-import { ProjectPutModel } from '../model/projectPutModel';
-import { ProjectTestPlansFilterModel } from '../model/projectTestPlansFilterModel';
-import { ProjectsFilterModel } from '../model/projectsFilterModel';
 import { PublicTestRunModel } from '../model/publicTestRunModel';
+import { SearchAttributesInProjectRequest } from '../model/searchAttributesInProjectRequest';
 import { SectionModel } from '../model/sectionModel';
 import { TagShortModel } from '../model/tagShortModel';
 import { TestPlanModel } from '../model/testPlanModel';
 import { TestPlanWithAnalyticModel } from '../model/testPlanWithAnalyticModel';
 import { TestRunModel } from '../model/testRunModel';
 import { TestRunV2GetModel } from '../model/testRunV2GetModel';
+import { UpdateCustomAttributeTestPlanProjectRelationsRequest } from '../model/updateCustomAttributeTestPlanProjectRelationsRequest';
+import { UpdateProjectRequest } from '../model/updateProjectRequest';
+import { UpdateProjectsAttributeRequest } from '../model/updateProjectsAttributeRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
-import { WorkItemSelectModel } from '../model/workItemSelectModel';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -125,9 +126,9 @@ export class ProjectsApi {
      * @summary Export project as JSON file
      * @param id Specifies the ID of the project you want to export.
      * @param includeAttachments Enables attachment export.
-     * @param projectExportQueryModel 
+     * @param exportProjectJsonRequest 
      */
-    public async _export (id: string, includeAttachments?: boolean, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
+    public async _export (id: string, includeAttachments?: boolean, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -161,7 +162,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             encoding: null,
-            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
+            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -356,9 +357,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param projectCustomAttributesTemplatesFilterModel 
+     * @param apiV2ProjectsIdAttributesTemplatesSearchPostRequest 
      */
-    public async apiV2ProjectsIdAttributesTemplatesSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectCustomAttributesTemplatesFilterModel?: ProjectCustomAttributesTemplatesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
+    public async apiV2ProjectsIdAttributesTemplatesSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsIdAttributesTemplatesSearchPostRequest?: ApiV2ProjectsIdAttributesTemplatesSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/attributes/templates/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -408,7 +409,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectCustomAttributesTemplatesFilterModel, "ProjectCustomAttributesTemplatesFilterModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdAttributesTemplatesSearchPostRequest, "ApiV2ProjectsIdAttributesTemplatesSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1006,9 +1007,9 @@ export class ProjectsApi {
      * 
      * @summary Delete multiple test plans
      * @param id Unique or global ID of the project
-     * @param projectTestPlansFilterModel 
+     * @param apiV2ProjectsIdTestPlansDeleteBulkPostRequest 
      */
-    public async apiV2ProjectsIdTestPlansDeleteBulkPost (id: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsIdTestPlansDeleteBulkPost (id: string, apiV2ProjectsIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/delete/bulk'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1038,7 +1039,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectTestPlansFilterModel, "ProjectTestPlansFilterModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsIdTestPlansDeleteBulkPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1157,11 +1158,84 @@ export class ProjectsApi {
     }
     /**
      * 
+     * @summary Permanently delete multiple archived test plans
+     * @param id Unique or global ID of the project
+     * @param apiV2ProjectsIdTestPlansDeleteBulkPostRequest 
+     */
+    public async apiV2ProjectsIdTestPlansPurgeBulkPost (id: string, apiV2ProjectsIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/purge/bulk'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling apiV2ProjectsIdTestPlansPurgeBulkPost.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(apiV2ProjectsIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsIdTestPlansDeleteBulkPostRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
      * @summary Restore multiple test plans
      * @param id Unique or global ID of the project
-     * @param projectTestPlansFilterModel 
+     * @param apiV2ProjectsIdTestPlansDeleteBulkPostRequest 
      */
-    public async apiV2ProjectsIdTestPlansRestoreBulkPost (id: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsIdTestPlansRestoreBulkPost (id: string, apiV2ProjectsIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/restore/bulk'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1191,7 +1265,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectTestPlansFilterModel, "ProjectTestPlansFilterModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsIdTestPlansDeleteBulkPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1238,9 +1312,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param projectTestPlansFilterModel 
+     * @param apiV2ProjectsIdTestPlansSearchPostRequest 
      */
-    public async apiV2ProjectsIdTestPlansSearchPost (id: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
+    public async apiV2ProjectsIdTestPlansSearchPost (id: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsIdTestPlansSearchPostRequest?: ApiV2ProjectsIdTestPlansSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1294,7 +1368,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectTestPlansFilterModel, "ProjectTestPlansFilterModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdTestPlansSearchPostRequest, "ApiV2ProjectsIdTestPlansSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1555,9 +1629,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param workItemSelectModel 
+     * @param apiV2ProjectsIdWorkItemsSearchPostRequest 
      */
-    public async apiV2ProjectsIdWorkItemsSearchIdPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsIdWorkItemsSearchIdPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/workItems/search/id'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1607,7 +1681,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1654,9 +1728,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param workItemSelectModel 
+     * @param apiV2ProjectsIdWorkItemsSearchPostRequest 
      */
-    public async apiV2ProjectsIdWorkItemsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2ProjectsIdWorkItemsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/workItems/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1706,7 +1780,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1900,9 +1974,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param projectsFilterModel 
+     * @param apiV2ProjectsSearchPostRequest 
      */
-    public async apiV2ProjectsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectsFilterModel?: ProjectsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }> {
+    public async apiV2ProjectsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsSearchPostRequest?: ApiV2ProjectsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1946,7 +2020,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectsFilterModel, "ProjectsFilterModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsSearchPostRequest, "ApiV2ProjectsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2358,9 +2432,9 @@ export class ProjectsApi {
     /**
      * <br>Use case  <br>User sets project parameters (listed in request example) and runs method execution  <br>System creates project  <br>System returns project model (example listed in response parameters)
      * @summary Create project
-     * @param projectPostModel 
+     * @param createProjectRequest 
      */
-    public async createProject (projectPostModel?: ProjectPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
+    public async createProject (createProjectRequest?: CreateProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2384,7 +2458,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectPostModel, "ProjectPostModel")
+            body: ObjectSerializer.serialize(createProjectRequest, "CreateProjectRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2426,9 +2500,9 @@ export class ProjectsApi {
      * <br>Use case  <br>User sets attribute parameters (listed in request example) and runs method execution  <br>System search project  <br>System creates attribute and relates it to the project  <br>System returns project attribute properties (example listed in response parameters)
      * @summary Create project attribute
      * @param id Project internal (UUID) or global (integer) identifier
-     * @param customAttributePostModel 
+     * @param createProjectsAttributeRequest 
      */
-    public async createProjectsAttribute (id: string, customAttributePostModel?: CustomAttributePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async createProjectsAttribute (id: string, createProjectsAttributeRequest?: CreateProjectsAttributeRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/attributes'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2458,7 +2532,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(customAttributePostModel, "CustomAttributePostModel")
+            body: ObjectSerializer.serialize(createProjectsAttributeRequest, "CreateProjectsAttributeRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2799,9 +2873,9 @@ export class ProjectsApi {
      * @summary Export project as JSON file in background job
      * @param id Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param projectExportQueryModel 
+     * @param exportProjectJsonRequest 
      */
-    public async exportProjectJson (id: string, timeZoneOffsetInMinutes?: number, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectJson (id: string, timeZoneOffsetInMinutes?: number, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export/json'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2832,7 +2906,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
+            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2875,9 +2949,9 @@ export class ProjectsApi {
      * @summary Export project as JSON file with test plans in background job
      * @param id Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param projectExportWithTestPlansPostModel 
+     * @param exportProjectWithTestPlansJsonRequest 
      */
-    public async exportProjectWithTestPlansJson (id: string, timeZoneOffsetInMinutes?: number, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectWithTestPlansJson (id: string, timeZoneOffsetInMinutes?: number, exportProjectWithTestPlansJsonRequest?: ExportProjectWithTestPlansJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export/testPlans/json'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2908,7 +2982,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
+            body: ObjectSerializer.serialize(exportProjectWithTestPlansJsonRequest, "ExportProjectWithTestPlansJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2951,9 +3025,9 @@ export class ProjectsApi {
      * @summary Export project as Zip file with test plans in background job
      * @param id Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param projectExportWithTestPlansPostModel 
+     * @param exportProjectWithTestPlansJsonRequest 
      */
-    public async exportProjectWithTestPlansZip (id: string, timeZoneOffsetInMinutes?: number, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectWithTestPlansZip (id: string, timeZoneOffsetInMinutes?: number, exportProjectWithTestPlansJsonRequest?: ExportProjectWithTestPlansJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export/testPlans/zip'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2984,7 +3058,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
+            body: ObjectSerializer.serialize(exportProjectWithTestPlansJsonRequest, "ExportProjectWithTestPlansJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -3027,9 +3101,9 @@ export class ProjectsApi {
      * @summary Export project as Zip file in background job
      * @param id Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param projectExportQueryModel 
+     * @param exportProjectJsonRequest 
      */
-    public async exportProjectZip (id: string, timeZoneOffsetInMinutes?: number, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectZip (id: string, timeZoneOffsetInMinutes?: number, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export/zip'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3060,7 +3134,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
+            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -3103,9 +3177,9 @@ export class ProjectsApi {
      * @summary Export project with test plans, test suites and test points as JSON file
      * @param id Specifies the ID of the project you want to export.
      * @param includeAttachments Enables attachment export.
-     * @param projectExportWithTestPlansPostModel 
+     * @param exportProjectWithTestPlansJsonRequest 
      */
-    public async exportWithTestPlansAndConfigurations (id: string, includeAttachments?: boolean, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
+    public async exportWithTestPlansAndConfigurations (id: string, includeAttachments?: boolean, exportProjectWithTestPlansJsonRequest?: ExportProjectWithTestPlansJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/export-by-testPlans'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -3139,7 +3213,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             encoding: null,
-            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
+            body: ObjectSerializer.serialize(exportProjectWithTestPlansJsonRequest, "ExportProjectWithTestPlansJsonRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -4301,9 +4375,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param projectAttributesFilterModel 
+     * @param searchAttributesInProjectRequest 
      */
-    public async searchAttributesInProject (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchAttributesInProject (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchAttributesInProjectRequest?: SearchAttributesInProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/attributes/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4353,7 +4427,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectAttributesFilterModel, "ProjectAttributesFilterModel")
+            body: ObjectSerializer.serialize(searchAttributesInProjectRequest, "SearchAttributesInProjectRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -4400,9 +4474,9 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param projectAttributesFilterModel 
+     * @param searchAttributesInProjectRequest 
      */
-    public async searchTestPlanAttributesInProject (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchTestPlanAttributesInProject (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchAttributesInProjectRequest?: SearchAttributesInProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/attributes/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4452,7 +4526,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectAttributesFilterModel, "ProjectAttributesFilterModel")
+            body: ObjectSerializer.serialize(searchAttributesInProjectRequest, "SearchAttributesInProjectRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -4494,9 +4568,9 @@ export class ProjectsApi {
      * <br>Use case  <br>User sets project internal or global identifier and attribute model  <br>User runs method execution  <br>System updates project and project attribute for test plan  <br>System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param id Project internal (UUID) or global (integer) identifier
-     * @param customAttributeTestPlanProjectRelationPutModel 
+     * @param updateCustomAttributeTestPlanProjectRelationsRequest 
      */
-    public async updateCustomAttributeTestPlanProjectRelations (id: string, customAttributeTestPlanProjectRelationPutModel?: CustomAttributeTestPlanProjectRelationPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateCustomAttributeTestPlanProjectRelations (id: string, updateCustomAttributeTestPlanProjectRelationsRequest?: UpdateCustomAttributeTestPlanProjectRelationsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/attribute'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4526,7 +4600,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(customAttributeTestPlanProjectRelationPutModel, "CustomAttributeTestPlanProjectRelationPutModel")
+            body: ObjectSerializer.serialize(updateCustomAttributeTestPlanProjectRelationsRequest, "UpdateCustomAttributeTestPlanProjectRelationsRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -4566,9 +4640,9 @@ export class ProjectsApi {
     /**
      * <br>Use case  <br>User sets project parameters (listed in request example) and runs method execution  <br>System updates project  <br>System returns updated project model (example listed in response parameters)
      * @summary Update project
-     * @param projectPutModel 
+     * @param updateProjectRequest 
      */
-    public async updateProject (projectPutModel?: ProjectPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateProject (updateProjectRequest?: UpdateProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -4592,7 +4666,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectPutModel, "ProjectPutModel")
+            body: ObjectSerializer.serialize(updateProjectRequest, "UpdateProjectRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -4633,9 +4707,9 @@ export class ProjectsApi {
      * 
      * @summary Edit attribute of the project
      * @param id Unique or global project ID
-     * @param customAttributePutModel 
+     * @param updateProjectsAttributeRequest 
      */
-    public async updateProjectsAttribute (id: string, customAttributePutModel?: CustomAttributePutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateProjectsAttribute (id: string, updateProjectsAttributeRequest?: UpdateProjectsAttributeRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/attributes'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -4665,7 +4739,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(customAttributePutModel, "CustomAttributePutModel")
+            body: ObjectSerializer.serialize(updateProjectsAttributeRequest, "UpdateProjectsAttributeRequest")
         };
 
         let authenticationPromise = Promise.resolve();

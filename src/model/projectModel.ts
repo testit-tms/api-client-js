@@ -25,7 +25,7 @@ export class ProjectModel {
     /**
     * Name of the project
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Indicates if the project is marked as favorite
     */

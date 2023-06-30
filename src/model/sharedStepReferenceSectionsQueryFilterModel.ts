@@ -11,7 +11,8 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { SharedStepReferenceSectionsQueryFilterModelCreatedDate } from './sharedStepReferenceSectionsQueryFilterModelCreatedDate';
+import { SharedStepReferenceSectionsQueryFilterModelModifiedDate } from './sharedStepReferenceSectionsQueryFilterModelModifiedDate';
 
 export class SharedStepReferenceSectionsQueryFilterModel {
     /**
@@ -26,8 +27,8 @@ export class SharedStepReferenceSectionsQueryFilterModel {
     * Collection of identifiers of users who applied last modification to work item
     */
     'modifiedByIds'?: Set<string> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
-    'modifiedDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: SharedStepReferenceSectionsQueryFilterModelCreatedDate | null;
+    'modifiedDate'?: SharedStepReferenceSectionsQueryFilterModelModifiedDate | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,12 +51,12 @@ export class SharedStepReferenceSectionsQueryFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "SharedStepReferenceSectionsQueryFilterModelCreatedDate"
         },
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "SharedStepReferenceSectionsQueryFilterModelModifiedDate"
         }    ];
 
     static getAttributeTypeMap() {

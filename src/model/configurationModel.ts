@@ -14,8 +14,6 @@ import { RequestFile } from './models';
 
 export class ConfigurationModel {
     'description'?: string | null;
-    'isActive'?: boolean;
-    'capabilities'?: { [key: string]: string; } | null;
     'parameters'?: { [key: string]: string; } | null;
     /**
     * This property is used to link configuration with project
@@ -44,16 +42,6 @@ export class ConfigurationModel {
             "name": "description",
             "baseName": "description",
             "type": "string"
-        },
-        {
-            "name": "isActive",
-            "baseName": "isActive",
-            "type": "boolean"
-        },
-        {
-            "name": "capabilities",
-            "baseName": "capabilities",
-            "type": "{ [key: string]: string; }"
         },
         {
             "name": "parameters",

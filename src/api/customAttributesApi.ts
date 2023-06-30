@@ -15,10 +15,10 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2CustomAttributesGlobalIdPutRequest } from '../model/apiV2CustomAttributesGlobalIdPutRequest';
+import { ApiV2CustomAttributesGlobalPostRequest } from '../model/apiV2CustomAttributesGlobalPostRequest';
+import { ApiV2CustomAttributesSearchPostRequest } from '../model/apiV2CustomAttributesSearchPostRequest';
 import { CustomAttributeModel } from '../model/customAttributeModel';
-import { CustomAttributeSearchQueryModel } from '../model/customAttributeSearchQueryModel';
-import { GlobalCustomAttributePostModel } from '../model/globalCustomAttributePostModel';
-import { GlobalCustomAttributeUpdateModel } from '../model/globalCustomAttributeUpdateModel';
 import { ProblemDetails } from '../model/problemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -168,9 +168,9 @@ export class CustomAttributesApi {
      * 
      * @summary Edit global attribute
      * @param id Unique ID of attribute
-     * @param globalCustomAttributeUpdateModel 
+     * @param apiV2CustomAttributesGlobalIdPutRequest 
      */
-    public async apiV2CustomAttributesGlobalIdPut (id: string, globalCustomAttributeUpdateModel?: GlobalCustomAttributeUpdateModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async apiV2CustomAttributesGlobalIdPut (id: string, apiV2CustomAttributesGlobalIdPutRequest?: ApiV2CustomAttributesGlobalIdPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/global/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -200,7 +200,7 @@ export class CustomAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(globalCustomAttributeUpdateModel, "GlobalCustomAttributeUpdateModel")
+            body: ObjectSerializer.serialize(apiV2CustomAttributesGlobalIdPutRequest, "ApiV2CustomAttributesGlobalIdPutRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -241,9 +241,9 @@ export class CustomAttributesApi {
     /**
      * 
      * @summary Create global attribute
-     * @param globalCustomAttributePostModel 
+     * @param apiV2CustomAttributesGlobalPostRequest 
      */
-    public async apiV2CustomAttributesGlobalPost (globalCustomAttributePostModel?: GlobalCustomAttributePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async apiV2CustomAttributesGlobalPost (apiV2CustomAttributesGlobalPostRequest?: ApiV2CustomAttributesGlobalPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/global';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -267,7 +267,7 @@ export class CustomAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(globalCustomAttributePostModel, "GlobalCustomAttributePostModel")
+            body: ObjectSerializer.serialize(apiV2CustomAttributesGlobalPostRequest, "ApiV2CustomAttributesGlobalPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -385,9 +385,9 @@ export class CustomAttributesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param customAttributeSearchQueryModel 
+     * @param apiV2CustomAttributesSearchPostRequest 
      */
-    public async apiV2CustomAttributesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeSearchQueryModel?: CustomAttributeSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
+    public async apiV2CustomAttributesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2CustomAttributesSearchPostRequest?: ApiV2CustomAttributesSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -431,7 +431,7 @@ export class CustomAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(customAttributeSearchQueryModel, "CustomAttributeSearchQueryModel")
+            body: ObjectSerializer.serialize(apiV2CustomAttributesSearchPostRequest, "ApiV2CustomAttributesSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

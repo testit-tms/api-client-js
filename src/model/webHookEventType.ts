@@ -14,5 +14,18 @@ import { RequestFile } from './models';
 
 export enum WebHookEventType {
     AutomatedTestRunCreated = <any> 'AutomatedTestRunCreated',
-    TestPlansStatusChanged = <any> 'TestPlansStatusChanged'
+    TestPlansStatusChanged = <any> 'TestPlansStatusChanged',
+    TestRunStopped = <any> 'TestRunStopped',
+    TestPointAssigned = <any> 'TestPointAssigned',
+    TestResultJiraIssueCreated = <any> 'TestResultJiraIssueCreated',
+    AutoTestFinished = <any> 'AutoTestFinished',
+    UserMentionedInComment = <any> 'UserMentionedInComment',
+    UserSelectedInWorkItemAttribute = <any> 'UserSelectedInWorkItemAttribute',
+    AllTestPointsFinished = <any> 'AllTestPointsFinished',
+    AllAutoTestsFinished = <any> 'AllAutoTestsFinished',
+    AutoTestChanged = <any> 'AutoTestChanged',
+    WorkItemAutoTestRelationChanged = <any> 'WorkItemAutoTestRelationChanged',
+    WorkItemAttributeChanged = <any> 'WorkItemAttributeChanged',
+    WorkItemChanged = <any> 'WorkItemChanged',
+    ConfigurationChanged = <any> 'ConfigurationChanged'
 }

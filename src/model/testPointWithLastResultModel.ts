@@ -23,7 +23,7 @@ export class TestPointWithLastResultModel {
     'workItemId'?: string;
     'configurationId'?: string | null;
     'testSuiteId'?: string;
-    'lastTestResult'?: LastTestResultModel;
+    'lastTestResult'?: LastTestResultModel | null;
     'status'?: string | null;
     'workItemGlobalId'?: number | null;
     'workItemEntityTypeName'?: string | null;
@@ -39,7 +39,7 @@ export class TestPointWithLastResultModel {
     'priority': WorkItemPriorityModel;
     'testSuiteNameBreadCrumbs'?: Array<string> | null;
     'groupCount'?: number | null;
-    'iteration'?: IterationModel;
+    'iteration'?: IterationModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -170,3 +170,5 @@ export class TestPointWithLastResultModel {
     }
 }
 
+export namespace TestPointWithLastResultModel {
+}

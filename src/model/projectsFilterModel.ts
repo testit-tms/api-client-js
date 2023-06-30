@@ -11,8 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
-import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
+import { ProjectsFilterModelAutotestsCount } from './projectsFilterModelAutotestsCount';
+import { ProjectsFilterModelChecklistsCount } from './projectsFilterModelChecklistsCount';
+import { ProjectsFilterModelCreatedDate } from './projectsFilterModelCreatedDate';
+import { ProjectsFilterModelSharedStepsCount } from './projectsFilterModelSharedStepsCount';
+import { ProjectsFilterModelTestCasesCount } from './projectsFilterModelTestCasesCount';
 
 export class ProjectsFilterModel {
     /**
@@ -27,15 +30,15 @@ export class ProjectsFilterModel {
     * Specifies a project deleted status to search for
     */
     'isDeleted'?: boolean | null;
-    'testCasesCount'?: Int32RangeSelectorModel;
-    'checklistsCount'?: Int32RangeSelectorModel;
-    'sharedStepsCount'?: Int32RangeSelectorModel;
-    'autotestsCount'?: Int32RangeSelectorModel;
+    'testCasesCount'?: ProjectsFilterModelTestCasesCount | null;
+    'checklistsCount'?: ProjectsFilterModelChecklistsCount | null;
+    'sharedStepsCount'?: ProjectsFilterModelSharedStepsCount | null;
+    'autotestsCount'?: ProjectsFilterModelAutotestsCount | null;
     /**
     * Specifies a project global IDs to search for
     */
     'globalIds'?: Set<number> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: ProjectsFilterModelCreatedDate | null;
     /**
     * Specifies an autotest creator IDs to search for
     */
@@ -62,22 +65,22 @@ export class ProjectsFilterModel {
         {
             "name": "testCasesCount",
             "baseName": "testCasesCount",
-            "type": "Int32RangeSelectorModel"
+            "type": "ProjectsFilterModelTestCasesCount"
         },
         {
             "name": "checklistsCount",
             "baseName": "checklistsCount",
-            "type": "Int32RangeSelectorModel"
+            "type": "ProjectsFilterModelChecklistsCount"
         },
         {
             "name": "sharedStepsCount",
             "baseName": "sharedStepsCount",
-            "type": "Int32RangeSelectorModel"
+            "type": "ProjectsFilterModelSharedStepsCount"
         },
         {
             "name": "autotestsCount",
             "baseName": "autotestsCount",
-            "type": "Int32RangeSelectorModel"
+            "type": "ProjectsFilterModelAutotestsCount"
         },
         {
             "name": "globalIds",
@@ -87,7 +90,7 @@ export class ProjectsFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "ProjectsFilterModelCreatedDate"
         },
         {
             "name": "createdByIds",

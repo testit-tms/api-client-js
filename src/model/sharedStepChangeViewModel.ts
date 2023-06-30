@@ -16,8 +16,8 @@ import { WorkItemStepChangeViewModel } from './workItemStepChangeViewModel';
 export class SharedStepChangeViewModel {
     'id'?: string;
     'globalId'?: number;
-    'name'?: string | null;
-    'steps'?: Array<WorkItemStepChangeViewModel> | null;
+    'name'?: string;
+    'steps'?: Array<WorkItemStepChangeViewModel>;
 
     static discriminator: string | undefined = undefined;
 

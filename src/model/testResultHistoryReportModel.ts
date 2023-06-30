@@ -57,7 +57,7 @@ export class TestResultHistoryReportModel {
     'workItemVersionId'?: string | null;
     'workItemVersionNumber'?: number | null;
     'launchSource'?: string | null;
-    'failureClassIds'?: Array<string> | null;
+    'failureClassIds'?: Array<string>;
     'parameters'?: { [key: string]: string; } | null;
 
     static discriminator: string | undefined = undefined;

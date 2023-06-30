@@ -17,7 +17,6 @@ All URIs are relative to *http://localhost*
 | [**deleteParameter**](ParametersApi.md#deleteParameter) | **DELETE** /api/v2/parameters/{id} | Delete parameter |
 | [**getAllParameters**](ParametersApi.md#getAllParameters) | **GET** /api/v2/parameters | Get all parameters |
 | [**getParameterById**](ParametersApi.md#getParameterById) | **GET** /api/v2/parameters/{id} | Get parameter by ID |
-| [**obsoleteDeleteByName**](ParametersApi.md#obsoleteDeleteByName) | **POST** /api/v2/parameters/deleteByName |  |
 | [**updateParameter**](ParametersApi.md#updateParameter) | **PUT** /api/v2/parameters | Update parameter |
 
 
@@ -188,7 +187,7 @@ This endpoint does not need any parameter.
 
 <a name="apiV2ParametersSearchPost"></a>
 # **apiV2ParametersSearchPost**
-> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterFilterModel)
+> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_parameters\_search\_post\_request)
 
 Search for parameters
 
@@ -201,7 +200,7 @@ Search for parameters
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ParameterFilterModel** | [**ParameterFilterModel**](../Models/ParameterFilterModel.md)|  | [optional] |
+| **\_api\_v2\_parameters\_search\_post\_request** | [**_api_v2_parameters_search_post_request**](../Models/_api_v2_parameters_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -218,7 +217,7 @@ Search for parameters
 
 <a name="createParameter"></a>
 # **createParameter**
-> ParameterModel createParameter(ParameterPostModel)
+> ParameterModel createParameter(CreateParameter\_request)
 
 Create parameter
 
@@ -228,7 +227,7 @@ Create parameter
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPostModel** | [**ParameterPostModel**](../Models/ParameterPostModel.md)|  | [optional] |
+| **CreateParameter\_request** | [**CreateParameter_request**](../Models/CreateParameter_request.md)|  | [optional] |
 
 ### Return type
 
@@ -383,34 +382,9 @@ Get parameter by ID
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="obsoleteDeleteByName"></a>
-# **obsoleteDeleteByName**
-> obsoleteDeleteByName(name)
-
-
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **name** | **String**|  | [optional] [default to null] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
 <a name="updateParameter"></a>
 # **updateParameter**
-> updateParameter(ParameterPutModel)
+> updateParameter(UpdateParameter\_request)
 
 Update parameter
 
@@ -420,7 +394,7 @@ Update parameter
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPutModel** | [**ParameterPutModel**](../Models/ParameterPutModel.md)|  | [optional] |
+| **UpdateParameter\_request** | [**UpdateParameter_request**](../Models/UpdateParameter_request.md)|  | [optional] |
 
 ### Return type
 

@@ -15,8 +15,8 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2TestPointsSearchPostRequest } from '../model/apiV2TestPointsSearchPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
-import { TestPointFilterModel } from '../model/testPointFilterModel';
 import { TestPointShortGetModel } from '../model/testPointShortGetModel';
 import { TestRunModel } from '../model/testRunModel';
 import { WorkItemModel } from '../model/workItemModel';
@@ -245,9 +245,9 @@ export class TestPointsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testPointFilterModel 
+     * @param apiV2TestPointsSearchPostRequest 
      */
-    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterModel?: TestPointFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestPointsSearchPostRequest?: ApiV2TestPointsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search/id';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -291,7 +291,7 @@ export class TestPointsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointFilterModel, "TestPointFilterModel")
+            body: ObjectSerializer.serialize(apiV2TestPointsSearchPostRequest, "ApiV2TestPointsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -337,9 +337,9 @@ export class TestPointsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testPointFilterModel 
+     * @param apiV2TestPointsSearchPostRequest 
      */
-    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterModel?: TestPointFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortGetModel>;  }> {
+    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestPointsSearchPostRequest?: ApiV2TestPointsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -383,7 +383,7 @@ export class TestPointsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointFilterModel, "TestPointFilterModel")
+            body: ObjectSerializer.serialize(apiV2TestPointsSearchPostRequest, "ApiV2TestPointsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

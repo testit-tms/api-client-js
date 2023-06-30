@@ -17,8 +17,8 @@ import { TestRunState } from './testRunState';
 export class TestRunSearchQueryModel {
     'name'?: string | null;
     'states'?: Set<TestRunState> | null;
-    'startedDate'?: DateTimeRangeSelectorModel;
-    'completedDate'?: DateTimeRangeSelectorModel;
+    'startedDate'?: DateTimeRangeSelectorModel | null;
+    'completedDate'?: DateTimeRangeSelectorModel | null;
     'createdByIds'?: Set<string> | null;
     'modifiedByIds'?: Set<string> | null;
 

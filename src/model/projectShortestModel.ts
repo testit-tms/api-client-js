@@ -28,7 +28,7 @@ export class ProjectShortestModel {
     /**
     * Name of project
     */
-    'name'?: string | null;
+    'name'?: string;
 
     static discriminator: string | undefined = undefined;
 

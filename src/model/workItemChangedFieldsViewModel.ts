@@ -11,39 +11,40 @@
  */
 
 import { RequestFile } from './models';
-import { AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel } from './attachmentChangeViewModelArrayWorkItemChangedFieldViewModel';
-import { AutoTestChangeViewModelArrayWorkItemChangedFieldViewModel } from './autoTestChangeViewModelArrayWorkItemChangedFieldViewModel';
-import { BooleanWorkItemChangedFieldViewModel } from './booleanWorkItemChangedFieldViewModel';
-import { GuidWorkItemChangedFieldViewModel } from './guidWorkItemChangedFieldViewModel';
-import { Int32WorkItemChangedFieldViewModel } from './int32WorkItemChangedFieldViewModel';
-import { Int64WorkItemChangedFieldViewModel } from './int64WorkItemChangedFieldViewModel';
-import { StringArrayWorkItemChangedFieldViewModel } from './stringArrayWorkItemChangedFieldViewModel';
-import { StringWorkItemChangedFieldViewModel } from './stringWorkItemChangedFieldViewModel';
+import { StringChangedFieldWithDiffsViewModel } from './stringChangedFieldWithDiffsViewModel';
 import { WorkItemChangedAttributeViewModel } from './workItemChangedAttributeViewModel';
-import { WorkItemLinkChangeViewModelArrayWorkItemChangedFieldViewModel } from './workItemLinkChangeViewModelArrayWorkItemChangedFieldViewModel';
-import { WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel } from './workItemStepChangeViewModelArrayWorkItemChangedFieldViewModel';
+import { WorkItemChangedFieldsViewModelAttachments } from './workItemChangedFieldsViewModelAttachments';
+import { WorkItemChangedFieldsViewModelAutoTests } from './workItemChangedFieldsViewModelAutoTests';
+import { WorkItemChangedFieldsViewModelDuration } from './workItemChangedFieldsViewModelDuration';
+import { WorkItemChangedFieldsViewModelGlobalId } from './workItemChangedFieldsViewModelGlobalId';
+import { WorkItemChangedFieldsViewModelIsDeleted } from './workItemChangedFieldsViewModelIsDeleted';
+import { WorkItemChangedFieldsViewModelLinks } from './workItemChangedFieldsViewModelLinks';
+import { WorkItemChangedFieldsViewModelProjectId } from './workItemChangedFieldsViewModelProjectId';
+import { WorkItemChangedFieldsViewModelState } from './workItemChangedFieldsViewModelState';
+import { WorkItemChangedFieldsViewModelSteps } from './workItemChangedFieldsViewModelSteps';
+import { WorkItemChangedFieldsViewModelTags } from './workItemChangedFieldsViewModelTags';
 
 export class WorkItemChangedFieldsViewModel {
-    'name'?: StringWorkItemChangedFieldViewModel;
-    'isDeleted'?: BooleanWorkItemChangedFieldViewModel;
-    'projectId'?: GuidWorkItemChangedFieldViewModel;
-    'isAutomated'?: BooleanWorkItemChangedFieldViewModel;
-    'sectionId'?: GuidWorkItemChangedFieldViewModel;
-    'description'?: StringWorkItemChangedFieldViewModel;
-    'state'?: StringWorkItemChangedFieldViewModel;
-    'priority'?: StringWorkItemChangedFieldViewModel;
-    'duration'?: Int32WorkItemChangedFieldViewModel;
-    'attributes'?: { [key: string]: WorkItemChangedAttributeViewModel; } | null;
-    'steps'?: WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'preconditionSteps'?: WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'postconditionSteps'?: WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'autoTests'?: AutoTestChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'attachments'?: AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'tags'?: StringArrayWorkItemChangedFieldViewModel;
-    'links'?: WorkItemLinkChangeViewModelArrayWorkItemChangedFieldViewModel;
-    'globalId'?: Int64WorkItemChangedFieldViewModel;
-    'versionNumber'?: Int32WorkItemChangedFieldViewModel;
-    'entityTypeName'?: StringWorkItemChangedFieldViewModel;
+    'name'?: StringChangedFieldWithDiffsViewModel | null;
+    'isDeleted'?: WorkItemChangedFieldsViewModelIsDeleted;
+    'projectId'?: WorkItemChangedFieldsViewModelProjectId;
+    'isAutomated'?: WorkItemChangedFieldsViewModelIsDeleted;
+    'sectionId'?: WorkItemChangedFieldsViewModelProjectId;
+    'description'?: StringChangedFieldWithDiffsViewModel | null;
+    'state'?: WorkItemChangedFieldsViewModelState;
+    'priority'?: WorkItemChangedFieldsViewModelState;
+    'duration'?: WorkItemChangedFieldsViewModelDuration;
+    'attributes'?: { [key: string]: WorkItemChangedAttributeViewModel; };
+    'steps'?: WorkItemChangedFieldsViewModelSteps;
+    'preconditionSteps'?: WorkItemChangedFieldsViewModelSteps;
+    'postconditionSteps'?: WorkItemChangedFieldsViewModelSteps;
+    'autoTests'?: WorkItemChangedFieldsViewModelAutoTests;
+    'attachments'?: WorkItemChangedFieldsViewModelAttachments;
+    'tags'?: WorkItemChangedFieldsViewModelTags;
+    'links'?: WorkItemChangedFieldsViewModelLinks;
+    'globalId'?: WorkItemChangedFieldsViewModelGlobalId;
+    'versionNumber'?: WorkItemChangedFieldsViewModelDuration;
+    'entityTypeName'?: WorkItemChangedFieldsViewModelState;
 
     static discriminator: string | undefined = undefined;
 
@@ -51,47 +52,47 @@ export class WorkItemChangedFieldsViewModel {
         {
             "name": "name",
             "baseName": "name",
-            "type": "StringWorkItemChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "isDeleted",
             "baseName": "isDeleted",
-            "type": "BooleanWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelIsDeleted"
         },
         {
             "name": "projectId",
             "baseName": "projectId",
-            "type": "GuidWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelProjectId"
         },
         {
             "name": "isAutomated",
             "baseName": "isAutomated",
-            "type": "BooleanWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelIsDeleted"
         },
         {
             "name": "sectionId",
             "baseName": "sectionId",
-            "type": "GuidWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelProjectId"
         },
         {
             "name": "description",
             "baseName": "description",
-            "type": "StringWorkItemChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "state",
             "baseName": "state",
-            "type": "StringWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelState"
         },
         {
             "name": "priority",
             "baseName": "priority",
-            "type": "StringWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelState"
         },
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "Int32WorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelDuration"
         },
         {
             "name": "attributes",
@@ -101,52 +102,52 @@ export class WorkItemChangedFieldsViewModel {
         {
             "name": "steps",
             "baseName": "steps",
-            "type": "WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelSteps"
         },
         {
             "name": "preconditionSteps",
             "baseName": "preconditionSteps",
-            "type": "WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelSteps"
         },
         {
             "name": "postconditionSteps",
             "baseName": "postconditionSteps",
-            "type": "WorkItemStepChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelSteps"
         },
         {
             "name": "autoTests",
             "baseName": "autoTests",
-            "type": "AutoTestChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelAutoTests"
         },
         {
             "name": "attachments",
             "baseName": "attachments",
-            "type": "AttachmentChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelAttachments"
         },
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "StringArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelTags"
         },
         {
             "name": "links",
             "baseName": "links",
-            "type": "WorkItemLinkChangeViewModelArrayWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelLinks"
         },
         {
             "name": "globalId",
             "baseName": "globalId",
-            "type": "Int64WorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelGlobalId"
         },
         {
             "name": "versionNumber",
             "baseName": "versionNumber",
-            "type": "Int32WorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelDuration"
         },
         {
             "name": "entityTypeName",
             "baseName": "entityTypeName",
-            "type": "StringWorkItemChangedFieldViewModel"
+            "type": "WorkItemChangedFieldsViewModelState"
         }    ];
 
     static getAttributeTypeMap() {

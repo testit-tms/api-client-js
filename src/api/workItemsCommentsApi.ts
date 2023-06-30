@@ -15,11 +15,11 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2WorkItemsCommentsPostRequest } from '../model/apiV2WorkItemsCommentsPostRequest';
+import { ApiV2WorkItemsCommentsPutRequest } from '../model/apiV2WorkItemsCommentsPutRequest';
 import { ProblemDetails } from '../model/problemDetails';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemCommentModel } from '../model/workItemCommentModel';
-import { WorkItemCommentPostModel } from '../model/workItemCommentPostModel';
-import { WorkItemCommentPutModel } from '../model/workItemCommentPutModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -96,7 +96,7 @@ export class WorkItemsCommentsApi {
     /**
      * <br>Use case  <br>User sets comment identifier  <br>User runs method execution  <br>System delete comment   <br>System returns success status code
      * @summary Delete WorkItem comment
-     * @param commentId 
+     * @param commentId Comment internal (guid format) identifier
      */
     public async apiV2WorkItemsCommentsCommentIdDelete (commentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments/{commentId}'
@@ -167,9 +167,9 @@ export class WorkItemsCommentsApi {
     /**
      * <br>Use case  <br>User sets comment properties (listed in request parameters)  <br>User runs method execution  <br>System creates comment   <br>System returns comment model (listed in response parameters)
      * @summary Create WorkItem comment
-     * @param workItemCommentPostModel 
+     * @param apiV2WorkItemsCommentsPostRequest 
      */
-    public async apiV2WorkItemsCommentsPost (workItemCommentPostModel?: WorkItemCommentPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemCommentModel;  }> {
+    public async apiV2WorkItemsCommentsPost (apiV2WorkItemsCommentsPostRequest?: ApiV2WorkItemsCommentsPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemCommentModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -193,7 +193,7 @@ export class WorkItemsCommentsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemCommentPostModel, "WorkItemCommentPostModel")
+            body: ObjectSerializer.serialize(apiV2WorkItemsCommentsPostRequest, "ApiV2WorkItemsCommentsPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -234,9 +234,9 @@ export class WorkItemsCommentsApi {
     /**
      * 
      * @summary Update work item comment
-     * @param workItemCommentPutModel 
+     * @param apiV2WorkItemsCommentsPutRequest 
      */
-    public async apiV2WorkItemsCommentsPut (workItemCommentPutModel?: WorkItemCommentPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsCommentsPut (apiV2WorkItemsCommentsPutRequest?: ApiV2WorkItemsCommentsPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -260,7 +260,7 @@ export class WorkItemsCommentsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemCommentPutModel, "WorkItemCommentPutModel")
+            body: ObjectSerializer.serialize(apiV2WorkItemsCommentsPutRequest, "ApiV2WorkItemsCommentsPutRequest")
         };
 
         let authenticationPromise = Promise.resolve();

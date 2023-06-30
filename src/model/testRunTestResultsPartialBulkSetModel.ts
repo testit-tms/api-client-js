@@ -12,10 +12,10 @@
 
 import { RequestFile } from './models';
 import { LinkPostModel } from './linkPostModel';
-import { TestRunTestResultsSelectModel } from './testRunTestResultsSelectModel';
+import { TestRunTestResultsPartialBulkSetModelSelector } from './testRunTestResultsPartialBulkSetModelSelector';
 
 export class TestRunTestResultsPartialBulkSetModel {
-    'selector'?: TestRunTestResultsSelectModel;
+    'selector'?: TestRunTestResultsPartialBulkSetModelSelector | null;
     /**
     * Unique IDs of result reasons to be assigned to test results
     */
@@ -39,7 +39,7 @@ export class TestRunTestResultsPartialBulkSetModel {
         {
             "name": "selector",
             "baseName": "selector",
-            "type": "TestRunTestResultsSelectModel"
+            "type": "TestRunTestResultsPartialBulkSetModelSelector"
         },
         {
             "name": "resultReasonIds",

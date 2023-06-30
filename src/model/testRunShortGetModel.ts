@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TestResultsStatisticsGetModel } from './testResultsStatisticsGetModel';
+import { TestRunShortGetModelStatistics } from './testRunShortGetModelStatistics';
 import { TestRunState } from './testRunState';
 
 export class TestRunShortGetModel {
@@ -22,7 +22,7 @@ export class TestRunShortGetModel {
     /**
     * Name of the test run
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Unique ID of project where test run is located
     */
@@ -56,7 +56,7 @@ export class TestRunShortGetModel {
     * Number of autotests run in the test run
     */
     'autotestsCount'?: number;
-    'statistics': TestResultsStatisticsGetModel;
+    'statistics': TestRunShortGetModelStatistics;
 
     static discriminator: string | undefined = undefined;
 
@@ -119,7 +119,7 @@ export class TestRunShortGetModel {
         {
             "name": "statistics",
             "baseName": "statistics",
-            "type": "TestResultsStatisticsGetModel"
+            "type": "TestRunShortGetModelStatistics"
         }    ];
 
     static getAttributeTypeMap() {
@@ -127,3 +127,5 @@ export class TestRunShortGetModel {
     }
 }
 
+export namespace TestRunShortGetModel {
+}

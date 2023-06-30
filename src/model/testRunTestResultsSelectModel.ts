@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { GuidExtractionModel } from './guidExtractionModel';
-import { TestResultsLocalFilterModel } from './testResultsLocalFilterModel';
+import { TestRunTestResultsSelectModelFilter } from './testRunTestResultsSelectModelFilter';
+import { TestRunTestResultsSelectModelTestResultIdsExtractionModel } from './testRunTestResultsSelectModelTestResultIdsExtractionModel';
 
 export class TestRunTestResultsSelectModel {
-    'filter'?: TestResultsLocalFilterModel;
-    'testResultIdsExtractionModel'?: GuidExtractionModel;
+    'filter'?: TestRunTestResultsSelectModelFilter | null;
+    'testResultIdsExtractionModel'?: TestRunTestResultsSelectModelTestResultIdsExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,12 +24,12 @@ export class TestRunTestResultsSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "TestResultsLocalFilterModel"
+            "type": "TestRunTestResultsSelectModelFilter"
         },
         {
             "name": "testResultIdsExtractionModel",
             "baseName": "testResultIdsExtractionModel",
-            "type": "GuidExtractionModel"
+            "type": "TestRunTestResultsSelectModelTestResultIdsExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

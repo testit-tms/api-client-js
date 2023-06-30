@@ -297,7 +297,7 @@ Set WorkItem as actual
 
 <a name="apiV2WorkItemsMovePost"></a>
 # **apiV2WorkItemsMovePost**
-> WorkItemShortModel apiV2WorkItemsMovePost(WorkItemMovePostModel)
+> WorkItemShortModel apiV2WorkItemsMovePost(\_api\_v2\_workItems\_move\_post\_request)
 
 Move WorkItem to another section
 
@@ -307,7 +307,7 @@ Move WorkItem to another section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WorkItemMovePostModel** | [**WorkItemMovePostModel**](../Models/WorkItemMovePostModel.md)|  | [optional] |
+| **\_api\_v2\_workItems\_move\_post\_request** | [**_api_v2_workItems_move_post_request**](../Models/_api_v2_workItems_move_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -324,7 +324,7 @@ Move WorkItem to another section
 
 <a name="apiV2WorkItemsSearchPost"></a>
 # **apiV2WorkItemsSearchPost**
-> List apiV2WorkItemsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
+> List apiV2WorkItemsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
 
 Search for work items
 
@@ -337,7 +337,7 @@ Search for work items
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -354,7 +354,7 @@ Search for work items
 
 <a name="apiV2WorkItemsSharedStepIdReferencesSectionsPost"></a>
 # **apiV2WorkItemsSharedStepIdReferencesSectionsPost**
-> List apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, Skip, Take, OrderBy, SearchField, SearchValue, SharedStepReferenceSectionsQueryFilterModel)
+> List apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_workItems\_\_sharedStepId\_\_references\_sections\_post\_request)
 
 Get SharedStep references in sections
 
@@ -370,7 +370,7 @@ Get SharedStep references in sections
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SharedStepReferenceSectionsQueryFilterModel** | [**SharedStepReferenceSectionsQueryFilterModel**](../Models/SharedStepReferenceSectionsQueryFilterModel.md)|  | [optional] |
+| **\_api\_v2\_workItems\_\_sharedStepId\_\_references\_sections\_post\_request** | [**_api_v2_workItems__sharedStepId__references_sections_post_request**](../Models/_api_v2_workItems__sharedStepId__references_sections_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -387,7 +387,7 @@ Get SharedStep references in sections
 
 <a name="apiV2WorkItemsSharedStepIdReferencesWorkItemsPost"></a>
 # **apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**
-> List apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, Skip, Take, OrderBy, SearchField, SearchValue, SharedStepReferencesQueryFilterModel)
+> List apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_workItems\_\_sharedStepId\_\_references\_workItems\_post\_request)
 
 Get SharedStep references in workitems
 
@@ -403,7 +403,7 @@ Get SharedStep references in workitems
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SharedStepReferencesQueryFilterModel** | [**SharedStepReferencesQueryFilterModel**](../Models/SharedStepReferencesQueryFilterModel.md)|  | [optional] |
+| **\_api\_v2\_workItems\_\_sharedStepId\_\_references\_workItems\_post\_request** | [**_api_v2_workItems__sharedStepId__references_workItems_post_request**](../Models/_api_v2_workItems__sharedStepId__references_workItems_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -447,7 +447,7 @@ Get SharedStep references
 
 <a name="createWorkItem"></a>
 # **createWorkItem**
-> WorkItemModel createWorkItem(WorkItemPostModel)
+> WorkItemModel createWorkItem(CreateWorkItem\_request)
 
 Create Test Case, Checklist or Shared Step
 
@@ -457,7 +457,7 @@ Create Test Case, Checklist or Shared Step
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WorkItemPostModel** | [**WorkItemPostModel**](../Models/WorkItemPostModel.md)|  | [optional] |
+| **CreateWorkItem\_request** | [**CreateWorkItem_request**](../Models/CreateWorkItem_request.md)|  | [optional] |
 
 ### Return type
 
@@ -717,7 +717,7 @@ null (empty response body)
 
 <a name="updateWorkItem"></a>
 # **updateWorkItem**
-> updateWorkItem(WorkItemPutModel)
+> updateWorkItem(UpdateWorkItem\_request)
 
 Update Test Case, Checklist or Shared Step
 
@@ -727,7 +727,7 @@ Update Test Case, Checklist or Shared Step
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WorkItemPutModel** | [**WorkItemPutModel**](../Models/WorkItemPutModel.md)|  | [optional] |
+| **UpdateWorkItem\_request** | [**UpdateWorkItem_request**](../Models/UpdateWorkItem_request.md)|  | [optional] |
 
 ### Return type
 

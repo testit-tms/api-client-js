@@ -11,6 +11,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2WebhooksPost**](WebhooksApi.md#apiV2WebhooksPost) | **POST** /api/v2/webhooks | Create webhook |
 | [**apiV2WebhooksSearchPost**](WebhooksApi.md#apiV2WebhooksSearchPost) | **POST** /api/v2/webhooks/search | Search for webhooks |
 | [**apiV2WebhooksSpecialVariablesGet**](WebhooksApi.md#apiV2WebhooksSpecialVariablesGet) | **GET** /api/v2/webhooks/specialVariables | Get special variables for webhook event type |
+| [**apiV2WebhooksTestPost**](WebhooksApi.md#apiV2WebhooksTestPost) | **POST** /api/v2/webhooks/test | Test webhook&#39;s url |
 
 
 <a name="apiV2WebhooksGet"></a>
@@ -90,7 +91,7 @@ Get webhook by ID
 
 <a name="apiV2WebhooksIdPut"></a>
 # **apiV2WebhooksIdPut**
-> WebHookModel apiV2WebhooksIdPut(id, WebHookPostModel)
+> WebHookModel apiV2WebhooksIdPut(id, \_api\_v2\_webhooks\_post\_request)
 
 Edit webhook by ID
 
@@ -99,7 +100,7 @@ Edit webhook by ID
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Webhook unique ID | [default to null] |
-| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
+| **\_api\_v2\_webhooks\_post\_request** | [**_api_v2_webhooks_post_request**](../Models/_api_v2_webhooks_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -116,7 +117,7 @@ Edit webhook by ID
 
 <a name="apiV2WebhooksPost"></a>
 # **apiV2WebhooksPost**
-> WebHookModel apiV2WebhooksPost(WebHookPostModel)
+> WebHookModel apiV2WebhooksPost(\_api\_v2\_webhooks\_post\_request)
 
 Create webhook
 
@@ -124,7 +125,7 @@ Create webhook
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
+| **\_api\_v2\_webhooks\_post\_request** | [**_api_v2_webhooks_post_request**](../Models/_api_v2_webhooks_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -141,7 +142,7 @@ Create webhook
 
 <a name="apiV2WebhooksSearchPost"></a>
 # **apiV2WebhooksSearchPost**
-> List apiV2WebhooksSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, SearchWebhooksQueryModel)
+> List apiV2WebhooksSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_webhooks\_search\_post\_request)
 
 Search for webhooks
 
@@ -154,7 +155,7 @@ Search for webhooks
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SearchWebhooksQueryModel** | [**SearchWebhooksQueryModel**](../Models/SearchWebhooksQueryModel.md)|  | [optional] |
+| **\_api\_v2\_webhooks\_search\_post\_request** | [**_api_v2_webhooks_search_post_request**](../Models/_api_v2_webhooks_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -179,7 +180,7 @@ Get special variables for webhook event type
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **eventType** | [**WebHookEventType**](../Models/.md)| Webhook event type | [optional] [default to null] [enum: AutomatedTestRunCreated, TestPlansStatusChanged] |
+| **eventType** | [**WebHookEventType**](../Models/.md)| Webhook event type | [optional] [default to null] [enum: AutomatedTestRunCreated, TestPlansStatusChanged, TestRunStopped, TestPointAssigned, TestResultJiraIssueCreated, AutoTestFinished, UserMentionedInComment, UserSelectedInWorkItemAttribute, AllTestPointsFinished, AllAutoTestsFinished, AutoTestChanged, WorkItemAutoTestRelationChanged, WorkItemAttributeChanged, WorkItemChanged, ConfigurationChanged] |
 
 ### Return type
 
@@ -192,5 +193,30 @@ Get special variables for webhook event type
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2WebhooksTestPost"></a>
+# **apiV2WebhooksTestPost**
+> RequestData apiV2WebhooksTestPost(\_api\_v2\_webhooks\_test\_post\_request)
+
+Test webhook&#39;s url
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_webhooks\_test\_post\_request** | [**_api_v2_webhooks_test_post_request**](../Models/_api_v2_webhooks_test_post_request.md)|  | [optional] |
+
+### Return type
+
+[**RequestData**](../Models/RequestData.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

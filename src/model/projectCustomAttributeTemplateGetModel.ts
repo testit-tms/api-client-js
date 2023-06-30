@@ -25,11 +25,11 @@ export class ProjectCustomAttributeTemplateGetModel {
     /**
     * Name of the custom attribute template
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Attributes of the template
     */
-    'customAttributeModels'?: Array<CustomAttributeModel> | null;
+    'customAttributeModels'?: Array<CustomAttributeModel>;
 
     static discriminator: string | undefined = undefined;
 

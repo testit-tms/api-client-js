@@ -15,25 +15,25 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2TestPlansIdExportTestPointsXlsxPostRequest } from '../model/apiV2TestPlansIdExportTestPointsXlsxPostRequest';
+import { ApiV2TestPlansIdTestPointsTesterUserIdPostRequest } from '../model/apiV2TestPlansIdTestPointsTesterUserIdPostRequest';
+import { ApiV2TestPlansIdTestRunsSearchPostRequest } from '../model/apiV2TestPlansIdTestRunsSearchPostRequest';
 import { ConfigurationModel } from '../model/configurationModel';
-import { GetXlsxTestPointsByTestPlanModel } from '../model/getXlsxTestPointsByTestPlanModel';
+import { CreateTestPlanRequest } from '../model/createTestPlanRequest';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestPlanChangeModel } from '../model/testPlanChangeModel';
 import { TestPlanLink } from '../model/testPlanLink';
 import { TestPlanModel } from '../model/testPlanModel';
-import { TestPlanPostModel } from '../model/testPlanPostModel';
-import { TestPlanPutModel } from '../model/testPlanPutModel';
 import { TestPlanShortModel } from '../model/testPlanShortModel';
 import { TestPlanWithTestSuiteTreeModel } from '../model/testPlanWithTestSuiteTreeModel';
 import { TestPointAnalyticResult } from '../model/testPointAnalyticResult';
-import { TestPointSelectModel } from '../model/testPointSelectModel';
 import { TestPointWithLastResultModel } from '../model/testPointWithLastResultModel';
 import { TestRunModel } from '../model/testRunModel';
-import { TestRunSearchQueryModel } from '../model/testRunSearchQueryModel';
 import { TestSuiteV2TreeModel } from '../model/testSuiteV2TreeModel';
+import { UpdateTestPlanRequest } from '../model/updateTestPlanRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
-import { WorkItemSelectModel } from '../model/workItemSelectModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -111,9 +111,9 @@ export class TestPlansApi {
      * 
      * @summary Add test-points to TestPlan with sections
      * @param id Test plan internal (guid format) or global (int  format) identifier
-     * @param workItemSelectModel Filter object to retrieve work items for test-suite\&#39;s project
+     * @param apiV2ProjectsIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsWithSections (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsWithSections (id: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/test-points/withSections'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -143,7 +143,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
+            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -479,9 +479,9 @@ export class TestPlansApi {
      * @summary Export TestPoints from TestPlan in xls format
      * @param id Test plan internal (guid format) or global (int  format) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param getXlsxTestPointsByTestPlanModel 
+     * @param apiV2TestPlansIdExportTestPointsXlsxPostRequest 
      */
-    public async apiV2TestPlansIdExportTestPointsXlsxPost (id: string, timeZoneOffsetInMinutes?: number, getXlsxTestPointsByTestPlanModel?: GetXlsxTestPointsByTestPlanModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
+    public async apiV2TestPlansIdExportTestPointsXlsxPost (id: string, timeZoneOffsetInMinutes?: number, apiV2TestPlansIdExportTestPointsXlsxPostRequest?: ApiV2TestPlansIdExportTestPointsXlsxPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/export/testPoints/xlsx'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -512,7 +512,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             encoding: null,
-            body: ObjectSerializer.serialize(getXlsxTestPointsByTestPlanModel, "GetXlsxTestPointsByTestPlanModel")
+            body: ObjectSerializer.serialize(apiV2TestPlansIdExportTestPointsXlsxPostRequest, "ApiV2TestPlansIdExportTestPointsXlsxPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1075,9 +1075,9 @@ export class TestPlansApi {
      * 
      * @summary Unassign users from multiple test points
      * @param id Unique or global ID of the test plan
-     * @param testPointSelectModel 
+     * @param apiV2TestPlansIdTestPointsTesterUserIdPostRequest 
      */
-    public async apiV2TestPlansIdTestPointsTesterDelete (id: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPlansIdTestPointsTesterDelete (id: string, apiV2TestPlansIdTestPointsTesterUserIdPostRequest?: ApiV2TestPlansIdTestPointsTesterUserIdPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/tester'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1107,7 +1107,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointSelectModel, "TestPointSelectModel")
+            body: ObjectSerializer.serialize(apiV2TestPlansIdTestPointsTesterUserIdPostRequest, "ApiV2TestPlansIdTestPointsTesterUserIdPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1150,9 +1150,9 @@ export class TestPlansApi {
      * @summary Assign user as a tester to multiple test points
      * @param id Unique or global ID of the test plan
      * @param userId Unique ID of the user
-     * @param testPointSelectModel 
+     * @param apiV2TestPlansIdTestPointsTesterUserIdPostRequest 
      */
-    public async apiV2TestPlansIdTestPointsTesterUserIdPost (id: string, userId: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPlansIdTestPointsTesterUserIdPost (id: string, userId: string, apiV2TestPlansIdTestPointsTesterUserIdPostRequest?: ApiV2TestPlansIdTestPointsTesterUserIdPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/tester/{userId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
@@ -1188,7 +1188,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointSelectModel, "TestPointSelectModel")
+            body: ObjectSerializer.serialize(apiV2TestPlansIdTestPointsTesterUserIdPostRequest, "ApiV2TestPlansIdTestPointsTesterUserIdPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1352,9 +1352,9 @@ export class TestPlansApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testRunSearchQueryModel 
+     * @param apiV2TestPlansIdTestRunsSearchPostRequest 
      */
-    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunSearchQueryModel?: TestRunSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
+    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestPlansIdTestRunsSearchPostRequest?: ApiV2TestPlansIdTestRunsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1404,7 +1404,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunSearchQueryModel, "TestRunSearchQueryModel")
+            body: ObjectSerializer.serialize(apiV2TestPlansIdTestRunsSearchPostRequest, "ApiV2TestPlansIdTestRunsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1803,9 +1803,9 @@ export class TestPlansApi {
     /**
      * <br>Use case  <br>User sets test plan properties (listed in request example)  <br>User runs method execution  <br>System creates test plan  <br>System returns test plan (listed in response example)
      * @summary Create TestPlan
-     * @param testPlanPostModel 
+     * @param createTestPlanRequest 
      */
-    public async createTestPlan (testPlanPostModel?: TestPlanPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
+    public async createTestPlan (createTestPlanRequest?: CreateTestPlanRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1829,7 +1829,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPlanPostModel, "TestPlanPostModel")
+            body: ObjectSerializer.serialize(createTestPlanRequest, "CreateTestPlanRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2154,6 +2154,77 @@ export class TestPlansApi {
         });
     }
     /**
+     * 
+     * @summary Permanently delete test plan from archive
+     * @param id Unique or global ID of the test plan
+     */
+    public async purgeTestPlan (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/api/v2/testPlans/{id}/purge'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling purgeTestPlan.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      * <br>Use case  <br>User sets test plan identifier  <br>User runs method execution  <br>System restores test plan  <br>System returns no content response
      * @summary Restore TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
@@ -2298,9 +2369,9 @@ export class TestPlansApi {
     /**
      * <br>Use case  <br>User sets test plan properties(listed in request example)  <br>User runs method execution  <br>System updates test plan  <br>System returns no content response
      * @summary Update TestPlan
-     * @param testPlanPutModel 
+     * @param updateTestPlanRequest 
      */
-    public async updateTestPlan (testPlanPutModel?: TestPlanPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateTestPlan (updateTestPlanRequest?: UpdateTestPlanRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2324,7 +2395,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPlanPutModel, "TestPlanPutModel")
+            body: ObjectSerializer.serialize(updateTestPlanRequest, "UpdateTestPlanRequest")
         };
 
         let authenticationPromise = Promise.resolve();

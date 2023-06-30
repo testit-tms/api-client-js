@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class ShortConfiguration {
     'id'?: string;
-    'name'?: string | null;
+    'name'?: string;
 
     static discriminator: string | undefined = undefined;
 

@@ -22,7 +22,7 @@ Delete WorkItem comment
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **commentId** | **UUID**|  | [default to null] |
+| **commentId** | **UUID**| Comment internal (guid format) identifier | [default to null] |
 
 ### Return type
 
@@ -39,7 +39,7 @@ null (empty response body)
 
 <a name="apiV2WorkItemsCommentsPost"></a>
 # **apiV2WorkItemsCommentsPost**
-> WorkItemCommentModel apiV2WorkItemsCommentsPost(WorkItemCommentPostModel)
+> WorkItemCommentModel apiV2WorkItemsCommentsPost(\_api\_v2\_workItems\_comments\_post\_request)
 
 Create WorkItem comment
 
@@ -49,7 +49,7 @@ Create WorkItem comment
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WorkItemCommentPostModel** | [**WorkItemCommentPostModel**](../Models/WorkItemCommentPostModel.md)|  | [optional] |
+| **\_api\_v2\_workItems\_comments\_post\_request** | [**_api_v2_workItems_comments_post_request**](../Models/_api_v2_workItems_comments_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Create WorkItem comment
 
 <a name="apiV2WorkItemsCommentsPut"></a>
 # **apiV2WorkItemsCommentsPut**
-> apiV2WorkItemsCommentsPut(WorkItemCommentPutModel)
+> apiV2WorkItemsCommentsPut(\_api\_v2\_workItems\_comments\_put\_request)
 
 Update work item comment
 
@@ -74,7 +74,7 @@ Update work item comment
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WorkItemCommentPutModel** | [**WorkItemCommentPutModel**](../Models/WorkItemCommentPutModel.md)|  | [optional] |
+| **\_api\_v2\_workItems\_comments\_put\_request** | [**_api_v2_workItems_comments_put_request**](../Models/_api_v2_workItems_comments_put_request.md)|  | [optional] |
 
 ### Return type
 

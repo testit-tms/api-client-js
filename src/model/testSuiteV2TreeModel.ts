@@ -18,12 +18,35 @@ export class TestSuiteV2TreeModel {
     * nested enumeration of children is allowed
     */
     'children'?: Array<TestSuiteV2TreeModel> | null;
+    /**
+    * Unique ID of the test suite
+    */
     'id'?: string;
+    /**
+    * Date of the last refresh of the test suite
+    */
+    'refreshDate'?: Date | null;
+    /**
+    * Unique ID of the parent test suite in hierarchy
+    */
     'parentId'?: string | null;
+    /**
+    * Unique ID of test plan to which the test suite belongs
+    */
     'testPlanId': string;
+    /**
+    * Name of the test suite
+    */
     'name': string;
-    'type'?: TestSuiteType;
+    'type'?: TestSuiteType | null;
+    /**
+    * Indicates if the test suite retains section tree structure
+    */
     'saveStructure'?: boolean | null;
+    /**
+    * Indicates if scheduled auto refresh is enabled for the test suite
+    */
+    'autoRefresh'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -37,6 +60,11 @@ export class TestSuiteV2TreeModel {
             "name": "id",
             "baseName": "id",
             "type": "string"
+        },
+        {
+            "name": "refreshDate",
+            "baseName": "refreshDate",
+            "type": "Date"
         },
         {
             "name": "parentId",
@@ -62,6 +90,11 @@ export class TestSuiteV2TreeModel {
             "name": "saveStructure",
             "baseName": "saveStructure",
             "type": "boolean"
+        },
+        {
+            "name": "autoRefresh",
+            "baseName": "autoRefresh",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
@@ -69,3 +102,5 @@ export class TestSuiteV2TreeModel {
     }
 }
 
+export namespace TestSuiteV2TreeModel {
+}

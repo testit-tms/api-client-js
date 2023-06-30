@@ -16,5 +16,6 @@ export enum BackgroundJobState {
     Enqueued = <any> 'Enqueued',
     InProgress = <any> 'InProgress',
     Completed = <any> 'Completed',
-    Failed = <any> 'Failed'
+    Failed = <any> 'Failed',
+    Canceled = <any> 'Canceled'
 }
