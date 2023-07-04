@@ -62,7 +62,7 @@ Get work item represented by test point
 
 <a name="apiV2TestPointsSearchIdPost"></a>
 # **apiV2TestPointsSearchIdPost**
-> List apiV2TestPointsSearchIdPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterModel)
+> List apiV2TestPointsSearchIdPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_testPoints\_search\_post\_request)
 
 Search for test points and extract IDs only
 
@@ -75,7 +75,7 @@ Search for test points and extract IDs only
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestPointFilterModel** | [**TestPointFilterModel**](../Models/TestPointFilterModel.md)|  | [optional] |
+| **\_api\_v2\_testPoints\_search\_post\_request** | [**_api_v2_testPoints_search_post_request**](../Models/_api_v2_testPoints_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -92,7 +92,7 @@ Search for test points and extract IDs only
 
 <a name="apiV2TestPointsSearchPost"></a>
 # **apiV2TestPointsSearchPost**
-> List apiV2TestPointsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterModel)
+> List apiV2TestPointsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_testPoints\_search\_post\_request)
 
 Search for test points
 
@@ -105,7 +105,7 @@ Search for test points
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestPointFilterModel** | [**TestPointFilterModel**](../Models/TestPointFilterModel.md)|  | [optional] |
+| **\_api\_v2\_testPoints\_search\_post\_request** | [**_api_v2_testPoints_search_post_request**](../Models/_api_v2_testPoints_search_post_request.md)|  | [optional] |
 
 ### Return type
 

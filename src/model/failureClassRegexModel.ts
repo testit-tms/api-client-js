@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class FailureClassRegexModel {
-    'regexText'?: string | null;
+    'regexText'?: string;
     'failureClassId'?: string | null;
     /**
     * Unique ID of the entity

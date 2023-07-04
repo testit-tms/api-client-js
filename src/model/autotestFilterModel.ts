@@ -11,9 +11,10 @@
  */
 
 import { RequestFile } from './models';
+import { AutotestFilterModelCreatedDate } from './autotestFilterModelCreatedDate';
+import { AutotestFilterModelModifiedDate } from './autotestFilterModelModifiedDate';
+import { AutotestFilterModelStabilityPercentage } from './autotestFilterModelStabilityPercentage';
 import { AutotestResultOutcome } from './autotestResultOutcome';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
-import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 
 export class AutotestFilterModel {
     /**
@@ -40,13 +41,13 @@ export class AutotestFilterModel {
     * Specifies an autotest unapproved changes status to search for
     */
     'mustBeApproved'?: boolean | null;
-    'stabilityPercentage'?: Int64RangeSelectorModel;
-    'createdDate'?: DateTimeRangeSelectorModel;
+    'stabilityPercentage'?: AutotestFilterModelStabilityPercentage | null;
+    'createdDate'?: AutotestFilterModelCreatedDate | null;
     /**
     * Specifies an autotest creator IDs to search for
     */
     'createdByIds'?: Set<string> | null;
-    'modifiedDate'?: DateTimeRangeSelectorModel;
+    'modifiedDate'?: AutotestFilterModelModifiedDate | null;
     /**
     * Specifies an autotest last editor IDs to search for
     */
@@ -71,7 +72,7 @@ export class AutotestFilterModel {
     * Specifies an autotest class name presence status to search for
     */
     'isEmptyClassName'?: boolean | null;
-    'lastTestResultOutcome'?: AutotestResultOutcome;
+    'lastTestResultOutcome'?: AutotestResultOutcome | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -109,12 +110,12 @@ export class AutotestFilterModel {
         {
             "name": "stabilityPercentage",
             "baseName": "stabilityPercentage",
-            "type": "Int64RangeSelectorModel"
+            "type": "AutotestFilterModelStabilityPercentage"
         },
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "AutotestFilterModelCreatedDate"
         },
         {
             "name": "createdByIds",
@@ -124,7 +125,7 @@ export class AutotestFilterModel {
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "AutotestFilterModelModifiedDate"
         },
         {
             "name": "modifiedByIds",
@@ -167,3 +168,5 @@ export class AutotestFilterModel {
     }
 }
 
+export namespace AutotestFilterModel {
+}

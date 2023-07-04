@@ -15,12 +15,14 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ParameterFilterModel } from '../model/parameterFilterModel';
+import { ApiV2ParametersSearchPostRequest } from '../model/apiV2ParametersSearchPostRequest';
+import { CreateParameterRequest } from '../model/createParameterRequest';
 import { ParameterGroupModel } from '../model/parameterGroupModel';
 import { ParameterModel } from '../model/parameterModel';
 import { ParameterPostModel } from '../model/parameterPostModel';
 import { ParameterPutModel } from '../model/parameterPutModel';
 import { ProblemDetails } from '../model/problemDetails';
+import { UpdateParameterRequest } from '../model/updateParameterRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -545,9 +547,9 @@ export class ParametersApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param parameterFilterModel 
+     * @param apiV2ParametersSearchPostRequest 
      */
-    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ParametersSearchPostRequest?: ApiV2ParametersSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -591,7 +593,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(parameterFilterModel, "ParameterFilterModel")
+            body: ObjectSerializer.serialize(apiV2ParametersSearchPostRequest, "ApiV2ParametersSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -632,9 +634,9 @@ export class ParametersApi {
     /**
      * <br>Use case  <br>User sets parameter model (listed in the request example)  <br>User runs method execution  <br>System creates parameter  <br>System returns parameter model
      * @summary Create parameter
-     * @param parameterPostModel 
+     * @param createParameterRequest 
      */
-    public async createParameter (parameterPostModel?: ParameterPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
+    public async createParameter (createParameterRequest?: CreateParameterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -658,7 +660,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(parameterPostModel, "ParameterPostModel")
+            body: ObjectSerializer.serialize(createParameterRequest, "CreateParameterRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1077,72 +1079,11 @@ export class ParametersApi {
         });
     }
     /**
-     * 
-     * @param name 
-     */
-    public async obsoleteDeleteByName (name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
-        const localVarPath = this.basePath + '/api/v2/parameters/deleteByName';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        let localVarFormParams: any = {};
-
-        if (name !== undefined) {
-            localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
      * <br>Use case  <br>User sets parameter updated properties(listed in the request example)  <br>User runs method execution  <br>System updated parameter using updated properties  <br>System returns no content response
      * @summary Update parameter
-     * @param parameterPutModel 
+     * @param updateParameterRequest 
      */
-    public async updateParameter (parameterPutModel?: ParameterPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateParameter (updateParameterRequest?: UpdateParameterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1166,7 +1107,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(parameterPutModel, "ParameterPutModel")
+            body: ObjectSerializer.serialize(updateParameterRequest, "UpdateParameterRequest")
         };
 
         let authenticationPromise = Promise.resolve();

@@ -11,9 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
-import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
+import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
+import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
+import { WorkItemFilterModelDuration } from './workItemFilterModelDuration';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -81,9 +82,9 @@ export class WorkItemFilterModel {
     * Collection of types of work item
     */
     'types'?: Set<WorkItemEntityTypes> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
-    'modifiedDate'?: DateTimeRangeSelectorModel;
-    'duration'?: Int32RangeSelectorModel;
+    'createdDate'?: TestPointFilterModelWorkItemCreatedDate | null;
+    'modifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
+    'duration'?: WorkItemFilterModelDuration | null;
     /**
     * Is result must consist of only manual/automated work items
     */
@@ -178,17 +179,17 @@ export class WorkItemFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestPointFilterModelWorkItemCreatedDate"
         },
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestPointFilterModelWorkItemModifiedDate"
         },
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "Int32RangeSelectorModel"
+            "type": "WorkItemFilterModelDuration"
         },
         {
             "name": "isAutomated",

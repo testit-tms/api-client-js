@@ -14,5 +14,6 @@ import { RequestFile } from './models';
 
 export enum TestSuiteType {
     Custom = <any> 'Custom',
-    Dynamic = <any> 'Dynamic'
+    Dynamic = <any> 'Dynamic',
+    Tree = <any> 'Tree'
 }

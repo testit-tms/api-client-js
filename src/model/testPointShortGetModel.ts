@@ -11,9 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { LastTestResultModel } from './lastTestResultModel';
+import { TestPointShortGetModelLastTestResult } from './testPointShortGetModelLastTestResult';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemState } from './workItemState';
 
 export class TestPointShortGetModel {
     /**
@@ -47,15 +48,15 @@ export class TestPointShortGetModel {
     /**
     * Collection of attributes of work item the test point represents
     */
-    'attributes'?: { [key: string]: any; } | null;
+    'attributes'?: { [key: string]: any; };
     /**
     * Collection of the test point tags
     */
-    'tags'?: Array<string> | null;
+    'tags'?: Array<string>;
     /**
     * Collection of the test point links
     */
-    'links'?: Array<string> | null;
+    'links'?: Array<string>;
     /**
     * Unique ID of test suite the test point assigned to
     */
@@ -81,7 +82,7 @@ export class TestPointShortGetModel {
     /**
     * Name of the test point
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Unique ID of the test point configuration
     */
@@ -102,11 +103,28 @@ export class TestPointShortGetModel {
     * Unique ID of the test point project
     */
     'projectId'?: string;
-    'lastTestResult': LastTestResultModel;
+    'lastTestResult': TestPointShortGetModelLastTestResult;
     /**
     * Unique ID of work item iteration the test point represents
     */
     'iterationId'?: string;
+    'workItemState'?: WorkItemState;
+    /**
+    * Unique ID of the work item creator
+    */
+    'workItemCreatedById'?: string;
+    /**
+    * Creation date of work item
+    */
+    'workItemCreatedDate'?: Date;
+    /**
+    * Unique ID of the work item last editor
+    */
+    'workItemModifiedById'?: string | null;
+    /**
+    * Modified date of work item
+    */
+    'workItemModifiedDate'?: Date | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -229,12 +247,37 @@ export class TestPointShortGetModel {
         {
             "name": "lastTestResult",
             "baseName": "lastTestResult",
-            "type": "LastTestResultModel"
+            "type": "TestPointShortGetModelLastTestResult"
         },
         {
             "name": "iterationId",
             "baseName": "iterationId",
             "type": "string"
+        },
+        {
+            "name": "workItemState",
+            "baseName": "workItemState",
+            "type": "WorkItemState"
+        },
+        {
+            "name": "workItemCreatedById",
+            "baseName": "workItemCreatedById",
+            "type": "string"
+        },
+        {
+            "name": "workItemCreatedDate",
+            "baseName": "workItemCreatedDate",
+            "type": "Date"
+        },
+        {
+            "name": "workItemModifiedById",
+            "baseName": "workItemModifiedById",
+            "type": "string"
+        },
+        {
+            "name": "workItemModifiedDate",
+            "baseName": "workItemModifiedDate",
+            "type": "Date"
         }    ];
 
     static getAttributeTypeMap() {
@@ -242,3 +285,5 @@ export class TestPointShortGetModel {
     }
 }
 
+export namespace TestPointShortGetModel {
+}

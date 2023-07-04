@@ -36,11 +36,11 @@ export class WebHookPostModel {
     /**
     * Collection of the webhook headers
     */
-    'headers'?: { [key: string]: string; } | null;
+    'headers'?: { [key: string]: string; };
     /**
     * Collection of the webhook query parameters
     */
-    '_queryParameters'?: { [key: string]: string; } | null;
+    '_queryParameters'?: { [key: string]: string; };
     /**
     * Indicates if the webhook is active
     */
@@ -145,3 +145,5 @@ export class WebHookPostModel {
     }
 }
 
+export namespace WebHookPostModel {
+}

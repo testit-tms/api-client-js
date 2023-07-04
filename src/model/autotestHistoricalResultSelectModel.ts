@@ -21,7 +21,7 @@ export class AutotestHistoricalResultSelectModel {
     'configurationIds'?: Set<string> | null;
     'launchSource'?: string | null;
     'userIds'?: Set<string> | null;
-    'duration'?: Int64RangeSelectorModel;
+    'duration'?: Int64RangeSelectorModel | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -24,7 +24,7 @@ export class TestResultShortGetModel {
     /**
     * Name of autotest represented by the test result
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Global ID of autotest represented by test result
     */
@@ -40,16 +40,16 @@ export class TestResultShortGetModel {
     /**
     * Name of configuration which test result uses
     */
-    'configurationName'?: string | null;
+    'configurationName'?: string;
     'outcome': TestResultOutcome;
     /**
     * Collection of result reasons which test result have
     */
-    'resultReasons'?: Array<AutotestResultReasonSubGetModel> | null;
+    'resultReasons'?: Array<AutotestResultReasonSubGetModel>;
     /**
     * Comment to test result
     */
-    'comment'?: string | null;
+    'comment'?: string;
     /**
     * Date when test result has been set
     */
@@ -61,11 +61,11 @@ export class TestResultShortGetModel {
     /**
     * Collection of links attached to test result
     */
-    'links'?: Array<LinkSubGetModel> | null;
+    'links'?: Array<LinkSubGetModel>;
     /**
     * Collection of files attached to test result
     */
-    'attachments'?: Array<AttachmentSubGetModel> | null;
+    'attachments'?: Array<AttachmentSubGetModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -141,3 +141,5 @@ export class TestResultShortGetModel {
     }
 }
 
+export namespace TestResultShortGetModel {
+}

@@ -12,14 +12,14 @@
 
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
-import { AutoTestModelV2GetModel } from './autoTestModelV2GetModel';
-import { ConfigurationModel } from './configurationModel';
+import { AutoTestRelatedToTestResult } from './autoTestRelatedToTestResult';
 import { LinkModel } from './linkModel';
-import { TestPointShortModel } from './testPointShortModel';
+import { TestPointRelatedToTestResult } from './testPointRelatedToTestResult';
+import { TestResultConfiguration } from './testResultConfiguration';
 
 export class TestResultV2GetModel {
-    'configuration'?: ConfigurationModel;
-    'autoTest'?: AutoTestModelV2GetModel;
+    'configuration'?: TestResultConfiguration | null;
+    'autoTest'?: AutoTestRelatedToTestResult | null;
     'id'?: string;
     'configurationId'?: string;
     'workItemVersionId'?: string;
@@ -31,12 +31,12 @@ export class TestResultV2GetModel {
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
     'testPointId'?: string | null;
-    'testPoint'?: TestPointShortModel;
+    'testPoint'?: TestPointRelatedToTestResult | null;
     'testRunId'?: string;
     /**
     * Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped
     */
-    'outcome'?: string | null;
+    'outcome'?: string;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
     'attachments'?: Array<AttachmentModel> | null;
@@ -49,12 +49,12 @@ export class TestResultV2GetModel {
         {
             "name": "configuration",
             "baseName": "configuration",
-            "type": "ConfigurationModel"
+            "type": "TestResultConfiguration"
         },
         {
             "name": "autoTest",
             "baseName": "autoTest",
-            "type": "AutoTestModelV2GetModel"
+            "type": "AutoTestRelatedToTestResult"
         },
         {
             "name": "id",
@@ -114,7 +114,7 @@ export class TestResultV2GetModel {
         {
             "name": "testPoint",
             "baseName": "testPoint",
-            "type": "TestPointShortModel"
+            "type": "TestPointRelatedToTestResult"
         },
         {
             "name": "testRunId",

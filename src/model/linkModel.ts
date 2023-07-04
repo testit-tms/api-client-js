@@ -27,7 +27,7 @@ export class LinkModel {
     * Link description.
     */
     'description'?: string | null;
-    'type'?: LinkType;
+    'type'?: LinkType | null;
     'hasInfo'?: boolean;
 
     static discriminator: string | undefined = undefined;
@@ -69,3 +69,5 @@ export class LinkModel {
     }
 }
 
+export namespace LinkModel {
+}

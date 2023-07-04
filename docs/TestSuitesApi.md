@@ -7,7 +7,9 @@ All URIs are relative to *http://localhost*
 | [**addTestPointsToTestSuite**](TestSuitesApi.md#addTestPointsToTestSuite) | **POST** /api/v2/testSuites/{id}/test-points | Add test-points to test suite |
 | [**apiV2TestSuitesIdPatch**](TestSuitesApi.md#apiV2TestSuitesIdPatch) | **PATCH** /api/v2/testSuites/{id} | Patch test suite |
 | [**apiV2TestSuitesIdRefreshPost**](TestSuitesApi.md#apiV2TestSuitesIdRefreshPost) | **POST** /api/v2/testSuites/{id}/refresh | Refresh test suite. Only dynamic test suites are supported by this method |
-| [**createTestSuite**](TestSuitesApi.md#createTestSuite) | **POST** /api/v2/testSuites | Create TestSuite |
+| [**apiV2TestSuitesIdWorkItemsPost**](TestSuitesApi.md#apiV2TestSuitesIdWorkItemsPost) | **POST** /api/v2/testSuites/{id}/workItems | Set work items for test suite |
+| [**apiV2TestSuitesPost**](TestSuitesApi.md#apiV2TestSuitesPost) | **POST** /api/v2/testSuites | Create test suite |
+| [**apiV2TestSuitesPut**](TestSuitesApi.md#apiV2TestSuitesPut) | **PUT** /api/v2/testSuites | Edit test suite |
 | [**deleteTestSuite**](TestSuitesApi.md#deleteTestSuite) | **DELETE** /api/v2/testSuites/{id} | Delete TestSuite |
 | [**getConfigurationsByTestSuiteId**](TestSuitesApi.md#getConfigurationsByTestSuiteId) | **GET** /api/v2/testSuites/{id}/configurations | Get Configurations By Id |
 | [**getTestPointsById**](TestSuitesApi.md#getTestPointsById) | **GET** /api/v2/testSuites/{id}/testPoints | Get TestPoints By Id |
@@ -16,13 +18,11 @@ All URIs are relative to *http://localhost*
 | [**getWorkItemsById**](TestSuitesApi.md#getWorkItemsById) | **GET** /api/v2/testSuites/{id}/workItems |  |
 | [**searchWorkItems**](TestSuitesApi.md#searchWorkItems) | **POST** /api/v2/testSuites/{id}/workItems/search | Search WorkItems |
 | [**setConfigurationsByTestSuiteId**](TestSuitesApi.md#setConfigurationsByTestSuiteId) | **POST** /api/v2/testSuites/{id}/configurations | Set Configurations By TestSuite Id |
-| [**setWorkItemsByTestSuiteId**](TestSuitesApi.md#setWorkItemsByTestSuiteId) | **POST** /api/v2/testSuites/{id}/workItems | Set WorkItems By TestSuite Id |
-| [**updateTestSuite**](TestSuitesApi.md#updateTestSuite) | **PUT** /api/v2/testSuites | Update TestSuite |
 
 
 <a name="addTestPointsToTestSuite"></a>
 # **addTestPointsToTestSuite**
-> addTestPointsToTestSuite(id, WorkItemSelectModel)
+> addTestPointsToTestSuite(id, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
 
 Add test-points to test suite
 
@@ -31,7 +31,7 @@ Add test-points to test suite
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test suite internal identifier | [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
 
@@ -99,23 +99,72 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="createTestSuite"></a>
-# **createTestSuite**
-> TestSuiteV2GetModel createTestSuite(TestSuiteV2PostModel)
+<a name="apiV2TestSuitesIdWorkItemsPost"></a>
+# **apiV2TestSuitesIdWorkItemsPost**
+> apiV2TestSuitesIdWorkItemsPost(id, request\_body)
 
-Create TestSuite
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets test suite model (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates test suite  &lt;br&gt;System returns test suite
+Set work items for test suite
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestSuiteV2PostModel** | [**TestSuiteV2PostModel**](../Models/TestSuiteV2PostModel.md)|  | [optional] |
+| **id** | **UUID**| Unique ID of the test suite | [default to null] |
+| **request\_body** | [**Set**](../Models/UUID.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2TestSuitesPost"></a>
+# **apiV2TestSuitesPost**
+> TestSuiteV2GetModel apiV2TestSuitesPost(\_api\_v2\_testSuites\_post\_request)
+
+Create test suite
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_testSuites\_post\_request** | [**_api_v2_testSuites_post_request**](../Models/_api_v2_testSuites_post_request.md)|  | [optional] |
 
 ### Return type
 
 [**TestSuiteV2GetModel**](../Models/TestSuiteV2GetModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2TestSuitesPut"></a>
+# **apiV2TestSuitesPut**
+> apiV2TestSuitesPut(\_api\_v2\_testSuites\_put\_request)
+
+Edit test suite
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_testSuites\_put\_request** | [**_api_v2_testSuites_put_request**](../Models/_api_v2_testSuites_put_request.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -295,7 +344,7 @@ Get TestSuite by Id
 
 <a name="searchWorkItems"></a>
 # **searchWorkItems**
-> List searchWorkItems(id, Skip, Take, OrderBy, SearchField, SearchValue, TestSuiteWorkItemsSearchModel)
+> List searchWorkItems(id, Skip, Take, OrderBy, SearchField, SearchValue, SearchWorkItems\_request)
 
 Search WorkItems
 
@@ -311,7 +360,7 @@ Search WorkItems
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestSuiteWorkItemsSearchModel** | [**TestSuiteWorkItemsSearchModel**](../Models/TestSuiteWorkItemsSearchModel.md)|  | [optional] |
+| **SearchWorkItems\_request** | [**SearchWorkItems_request**](../Models/SearchWorkItems_request.md)|  | [optional] |
 
 ### Return type
 
@@ -340,61 +389,6 @@ Set Configurations By TestSuite Id
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test suite internal (guid format) identifier\&quot; | [default to null] |
 | **request\_body** | [**Set**](../Models/UUID.md)| Collection of configuration identifiers\&quot; | [optional] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-<a name="setWorkItemsByTestSuiteId"></a>
-# **setWorkItemsByTestSuiteId**
-> setWorkItemsByTestSuiteId(id, request\_body)
-
-Set WorkItems By TestSuite Id
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets test suite identifier  &lt;br&gt;User sets collection of work items identifiers  &lt;br&gt;User runs method execution  &lt;br&gt;System search test suite by identifier  &lt;br&gt;System search test points related to the test suite  &lt;br&gt;System search work items  &lt;br&gt;System restores(if exist) or creates test points with listed work items  &lt;br&gt;System returns no content response
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test suite internal (guid format) identifier\&quot; | [default to null] |
-| **request\_body** | [**Set**](../Models/UUID.md)| Collection of work item identifiers\&quot; | [optional] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-<a name="updateTestSuite"></a>
-# **updateTestSuite**
-> updateTestSuite(TestSuiteV2PutModel)
-
-Update TestSuite
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets test suite model (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates test suite  &lt;br&gt;System returns test suite
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **TestSuiteV2PutModel** | [**TestSuiteV2PutModel**](../Models/TestSuiteV2PutModel.md)|  | [optional] |
 
 ### Return type
 

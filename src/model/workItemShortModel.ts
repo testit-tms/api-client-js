@@ -49,8 +49,8 @@ export class WorkItemShortModel {
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
     'isDeleted'?: boolean;
-    'tagNames'?: Array<string> | null;
-    'iterations'?: Array<IterationModel> | null;
+    'tagNames'?: Array<string>;
+    'iterations'?: Array<IterationModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -161,3 +161,5 @@ export class WorkItemShortModel {
     }
 }
 
+export namespace WorkItemShortModel {
+}

@@ -26,7 +26,7 @@ export class LinkPostModel {
     * Link description.
     */
     'description'?: string | null;
-    'type'?: LinkType;
+    'type'?: LinkType | null;
     'hasInfo'?: boolean;
 
     static discriminator: string | undefined = undefined;
@@ -63,3 +63,5 @@ export class LinkPostModel {
     }
 }
 
+export namespace LinkPostModel {
+}

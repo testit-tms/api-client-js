@@ -17,8 +17,8 @@ import { WorkItemPriorityModel } from './workItemPriorityModel';
 export class SharedStepReferenceModel {
     'id'?: string;
     'globalId'?: number;
-    'name'?: string | null;
-    'entityTypeName'?: string | null;
+    'name'?: string;
+    'entityTypeName'?: string;
     'hasThisSharedStepAsStep'?: boolean;
     'hasThisSharedStepAsPrecondition'?: boolean;
     'hasThisSharedStepAsPostcondition'?: boolean;
@@ -26,7 +26,7 @@ export class SharedStepReferenceModel {
     'modifiedById'?: string | null;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'state'?: string | null;
+    'state'?: string;
     'priority': WorkItemPriorityModel;
     'isDeleted'?: boolean;
     /**
@@ -136,3 +136,5 @@ export class SharedStepReferenceModel {
     }
 }
 
+export namespace SharedStepReferenceModel {
+}

@@ -14,7 +14,7 @@
 | **state** | [**TestRunState**](TestRunState.md) |  | [default to null] |
 | **startedDate** | **Date** | Date when the test run was started | [optional] [default to null] |
 | **autotestsCount** | **Integer** | Number of autotests run in the test run | [optional] [default to null] |
-| **statistics** | [**TestResultsStatisticsGetModel**](TestResultsStatisticsGetModel.md) |  | [default to null] |
+| **statistics** | [**TestRunShortGetModel_statistics**](TestRunShortGetModel_statistics.md) |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

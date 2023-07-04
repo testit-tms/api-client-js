@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**apiV2BackgroundJobsGet**](BackgroundJobsApi.md#apiV2BackgroundJobsGet) | **GET** /api/v2/backgroundJobs | Get current user background jobs |
+| [**apiV2BackgroundJobsIdCancelPost**](BackgroundJobsApi.md#apiV2BackgroundJobsIdCancelPost) | **POST** /api/v2/backgroundJobs/{id}/cancel | Cancel current user background job |
 
 
 <a name="apiV2BackgroundJobsGet"></a>
@@ -35,4 +36,29 @@ Get current user background jobs
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+<a name="apiV2BackgroundJobsIdCancelPost"></a>
+# **apiV2BackgroundJobsIdCancelPost**
+> apiV2BackgroundJobsIdCancelPost(id)
+
+Cancel current user background job
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 

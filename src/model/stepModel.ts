@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { SharedStepModel } from './sharedStepModel';
+import { SectionSharedStep } from './sectionSharedStep';
 
 export class StepModel {
-    'workItem'?: SharedStepModel;
+    'workItem'?: SectionSharedStep | null;
     'id'?: string;
     'action'?: string | null;
     'expected'?: string | null;
@@ -28,7 +28,7 @@ export class StepModel {
         {
             "name": "workItem",
             "baseName": "workItem",
-            "type": "SharedStepModel"
+            "type": "SectionSharedStep"
         },
         {
             "name": "id",

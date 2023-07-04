@@ -15,11 +15,13 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2WebhooksPostRequest } from '../model/apiV2WebhooksPostRequest';
+import { ApiV2WebhooksSearchPostRequest } from '../model/apiV2WebhooksSearchPostRequest';
+import { ApiV2WebhooksTestPostRequest } from '../model/apiV2WebhooksTestPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
-import { SearchWebhooksQueryModel } from '../model/searchWebhooksQueryModel';
+import { RequestData } from '../model/requestData';
 import { WebHookEventType } from '../model/webHookEventType';
 import { WebHookModel } from '../model/webHookModel';
-import { WebHookPostModel } from '../model/webHookPostModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -310,9 +312,9 @@ export class WebhooksApi {
      * 
      * @summary Edit webhook by ID
      * @param id Webhook unique ID
-     * @param webHookPostModel 
+     * @param apiV2WebhooksPostRequest 
      */
-    public async apiV2WebhooksIdPut (id: string, webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksIdPut (id: string, apiV2WebhooksPostRequest?: ApiV2WebhooksPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -342,7 +344,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(webHookPostModel, "WebHookPostModel")
+            body: ObjectSerializer.serialize(apiV2WebhooksPostRequest, "ApiV2WebhooksPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -383,9 +385,9 @@ export class WebhooksApi {
     /**
      * 
      * @summary Create webhook
-     * @param webHookPostModel 
+     * @param apiV2WebhooksPostRequest 
      */
-    public async apiV2WebhooksPost (webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksPost (apiV2WebhooksPostRequest?: ApiV2WebhooksPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -409,7 +411,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(webHookPostModel, "WebHookPostModel")
+            body: ObjectSerializer.serialize(apiV2WebhooksPostRequest, "ApiV2WebhooksPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -455,9 +457,9 @@ export class WebhooksApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param searchWebhooksQueryModel 
+     * @param apiV2WebhooksSearchPostRequest 
      */
-    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchWebhooksQueryModel?: SearchWebhooksQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
+    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2WebhooksSearchPostRequest?: ApiV2WebhooksSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -501,7 +503,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(searchWebhooksQueryModel, "SearchWebhooksQueryModel")
+            body: ObjectSerializer.serialize(apiV2WebhooksSearchPostRequest, "ApiV2WebhooksSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -600,6 +602,73 @@ export class WebhooksApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<string>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary Test webhook\'s url
+     * @param apiV2WebhooksTestPostRequest 
+     */
+    public async apiV2WebhooksTestPost (apiV2WebhooksTestPostRequest?: ApiV2WebhooksTestPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RequestData;  }> {
+        const localVarPath = this.basePath + '/api/v2/webhooks/test';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(apiV2WebhooksTestPostRequest, "ApiV2WebhooksTestPostRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: RequestData;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "RequestData");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

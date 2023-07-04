@@ -18,9 +18,9 @@
 | **states** | [**Set**](WorkItemStates.md) | Collection of states of work item | [optional] [default to null] |
 | **priorities** | [**Set**](WorkItemPriorityModel.md) | Collection of priorities of work item | [optional] [default to null] |
 | **types** | [**Set**](WorkItemEntityTypes.md) | Collection of types of work item | [optional] [default to null] |
-| **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **duration** | [**Int32RangeSelectorModel**](Int32RangeSelectorModel.md) |  | [optional] [default to null] |
+| **createdDate** | [**TestPointFilterModel_workItemCreatedDate**](TestPointFilterModel_workItemCreatedDate.md) |  | [optional] [default to null] |
+| **modifiedDate** | [**TestPointFilterModel_workItemModifiedDate**](TestPointFilterModel_workItemModifiedDate.md) |  | [optional] [default to null] |
+| **duration** | [**WorkItemFilterModel_duration**](WorkItemFilterModel_duration.md) |  | [optional] [default to null] |
 | **isAutomated** | **Boolean** | Is result must consist of only manual/automated work items | [optional] [default to null] |
 | **tags** | **Set** | Collection of tags | [optional] [default to null] |
 | **autoTestIds** | **Set** | Collection of identifiers of linked autotests | [optional] [default to null] |

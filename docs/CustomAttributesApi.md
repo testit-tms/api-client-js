@@ -38,7 +38,7 @@ null (empty response body)
 
 <a name="apiV2CustomAttributesGlobalIdPut"></a>
 # **apiV2CustomAttributesGlobalIdPut**
-> CustomAttributeModel apiV2CustomAttributesGlobalIdPut(id, GlobalCustomAttributeUpdateModel)
+> CustomAttributeModel apiV2CustomAttributesGlobalIdPut(id, \_api\_v2\_customAttributes\_global\_\_id\_\_put\_request)
 
 Edit global attribute
 
@@ -47,7 +47,7 @@ Edit global attribute
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Unique ID of attribute | [default to null] |
-| **GlobalCustomAttributeUpdateModel** | [**GlobalCustomAttributeUpdateModel**](../Models/GlobalCustomAttributeUpdateModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_global\_\_id\_\_put\_request** | [**_api_v2_customAttributes_global__id__put_request**](../Models/_api_v2_customAttributes_global__id__put_request.md)|  | [optional] |
 
 ### Return type
 
@@ -64,7 +64,7 @@ Edit global attribute
 
 <a name="apiV2CustomAttributesGlobalPost"></a>
 # **apiV2CustomAttributesGlobalPost**
-> CustomAttributeModel apiV2CustomAttributesGlobalPost(GlobalCustomAttributePostModel)
+> CustomAttributeModel apiV2CustomAttributesGlobalPost(\_api\_v2\_customAttributes\_global\_post\_request)
 
 Create global attribute
 
@@ -72,7 +72,7 @@ Create global attribute
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **GlobalCustomAttributePostModel** | [**GlobalCustomAttributePostModel**](../Models/GlobalCustomAttributePostModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_global\_post\_request** | [**_api_v2_customAttributes_global_post_request**](../Models/_api_v2_customAttributes_global_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -114,7 +114,7 @@ Get attribute
 
 <a name="apiV2CustomAttributesSearchPost"></a>
 # **apiV2CustomAttributesSearchPost**
-> List apiV2CustomAttributesSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, CustomAttributeSearchQueryModel)
+> List apiV2CustomAttributesSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_customAttributes\_search\_post\_request)
 
 Search for attributes
 
@@ -127,7 +127,7 @@ Search for attributes
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **CustomAttributeSearchQueryModel** | [**CustomAttributeSearchQueryModel**](../Models/CustomAttributeSearchQueryModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_search\_post\_request** | [**_api_v2_customAttributes_search_post_request**](../Models/_api_v2_customAttributes_search_post_request.md)|  | [optional] |
 
 ### Return type
 

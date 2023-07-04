@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **analytic** | [**TestPointAnalyticResult**](TestPointAnalyticResult.md) |  | [optional] [default to null] |
+| **analytic** | [**TestPlanWithAnalyticModel_analytic**](TestPlanWithAnalyticModel_analytic.md) |  | [optional] [default to null] |
 | **status** | [**TestPlanStatusModel**](TestPlanStatusModel.md) |  | [default to null] |
 | **startedOn** | **Date** | Set when test plan is starter (status changed to: In Progress) | [optional] [default to null] |
 | **completedOn** | **Date** | set when test plan status is completed (status changed to: Completed) | [optional] [default to null] |

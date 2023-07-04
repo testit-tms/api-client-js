@@ -15,8 +15,8 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { ApiV2NotificationsSearchPostRequest } from '../model/apiV2NotificationsSearchPostRequest';
 import { NotificationModel } from '../model/notificationModel';
-import { NotificationQueryFilterModel } from '../model/notificationQueryFilterModel';
 import { NotificationTypeModel } from '../model/notificationTypeModel';
 import { ProblemDetails } from '../model/problemDetails';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
@@ -401,9 +401,9 @@ export class NotificationsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param notificationQueryFilterModel 
+     * @param apiV2NotificationsSearchPostRequest 
      */
-    public async apiV2NotificationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, notificationQueryFilterModel?: NotificationQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
+    public async apiV2NotificationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2NotificationsSearchPostRequest?: ApiV2NotificationsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -447,7 +447,7 @@ export class NotificationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(notificationQueryFilterModel, "NotificationQueryFilterModel")
+            body: ObjectSerializer.serialize(apiV2NotificationsSearchPostRequest, "ApiV2NotificationsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

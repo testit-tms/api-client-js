@@ -15,13 +15,13 @@ import { ExternalLinkModel } from './externalLinkModel';
 import { LinkModel } from './linkModel';
 
 export class TestPlanLink {
-    'bugLink'?: LinkModel;
+    'bugLink'?: LinkModel | null;
     'workItemGlobalId'?: number | null;
     'workItemName'?: string | null;
     'configurationName'?: string | null;
     'createdById'?: string | null;
     'comment'?: string | null;
-    'info'?: ExternalLinkModel;
+    'info'?: ExternalLinkModel | null;
 
     static discriminator: string | undefined = undefined;
 

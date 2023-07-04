@@ -11,16 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { SharedStepChangeViewModel } from './sharedStepChangeViewModel';
+import { WorkItemStepChangeViewModelWorkItem } from './workItemStepChangeViewModelWorkItem';
 
 export class WorkItemStepChangeViewModel {
-    'action'?: string | null;
-    'expected'?: string | null;
-    'comments'?: string | null;
-    'testData'?: string | null;
+    'action'?: string;
+    'expected'?: string;
+    'comments'?: string;
+    'testData'?: string;
     'index'?: number;
     'workItemId'?: string | null;
-    'workItem'?: SharedStepChangeViewModel;
+    'workItem'?: WorkItemStepChangeViewModelWorkItem;
 
     static discriminator: string | undefined = undefined;
 
@@ -58,7 +58,7 @@ export class WorkItemStepChangeViewModel {
         {
             "name": "workItem",
             "baseName": "workItem",
-            "type": "SharedStepChangeViewModel"
+            "type": "WorkItemStepChangeViewModelWorkItem"
         }    ];
 
     static getAttributeTypeMap() {

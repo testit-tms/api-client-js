@@ -85,3 +85,5 @@ export class FailureClassModel {
     }
 }
 
+export namespace FailureClassModel {
+}

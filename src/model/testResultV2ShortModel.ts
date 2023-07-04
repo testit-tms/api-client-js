@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
 import { LinkModel } from './linkModel';
-import { TestPointShortModel } from './testPointShortModel';
+import { TestPointRelatedToTestResult } from './testPointRelatedToTestResult';
 
 export class TestResultV2ShortModel {
     'id'?: string;
@@ -27,12 +27,12 @@ export class TestResultV2ShortModel {
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
     'testPointId'?: string | null;
-    'testPoint'?: TestPointShortModel;
+    'testPoint'?: TestPointRelatedToTestResult | null;
     'testRunId'?: string;
     /**
     * Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped
     */
-    'outcome'?: string | null;
+    'outcome'?: string;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
     'attachments'?: Array<AttachmentModel> | null;
@@ -100,7 +100,7 @@ export class TestResultV2ShortModel {
         {
             "name": "testPoint",
             "baseName": "testPoint",
-            "type": "TestPointShortModel"
+            "type": "TestPointRelatedToTestResult"
         },
         {
             "name": "testRunId",

@@ -50,7 +50,7 @@ export class WorkItemModel {
     'globalId'?: number;
     'id': string;
     'sectionId'?: string;
-    'description'?: string | null;
+    'description'?: string;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
     'steps': Array<StepModel>;
@@ -221,3 +221,5 @@ export class WorkItemModel {
     }
 }
 
+export namespace WorkItemModel {
+}

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { TestRunFilterModelCreatedDate } from './testRunFilterModelCreatedDate';
 import { TestRunState } from './testRunState';
 
 export class TestRunFilterModel {
@@ -23,7 +23,7 @@ export class TestRunFilterModel {
     * Specifies a test run states to search for
     */
     'states'?: Set<TestRunState> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: TestRunFilterModelCreatedDate | null;
     /**
     * Specifies a test run last editor IDs to search for
     */
@@ -49,7 +49,7 @@ export class TestRunFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "DateTimeRangeSelectorModel"
+            "type": "TestRunFilterModelCreatedDate"
         },
         {
             "name": "modifiedByIds",

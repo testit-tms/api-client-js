@@ -22,7 +22,7 @@ export class CustomAttributeGetModel {
     /**
     * Collection of the attribute options
     */
-    'options'?: Array<CustomAttributeOptionModel> | null;
+    'options'?: Array<CustomAttributeOptionModel>;
     'type': CustomAttributeTypesEnum;
     /**
     * Indicates if the attribute is deleted
@@ -31,7 +31,7 @@ export class CustomAttributeGetModel {
     /**
     * Name of the attribute
     */
-    'name'?: string | null;
+    'name'?: string;
     /**
     * Indicates if the attribute is enabled
     */
@@ -94,3 +94,5 @@ export class CustomAttributeGetModel {
     }
 }
 
+export namespace CustomAttributeGetModel {
+}

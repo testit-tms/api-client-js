@@ -26,8 +26,13 @@
 | **sectionId** | **UUID** | Unique ID of section where work item the test point represents is located | [optional] [default to null] |
 | **sectionName** | **String** | Name of section where work item the test point represents is located | [optional] [default to null] |
 | **projectId** | **UUID** | Unique ID of the test point project | [optional] [default to null] |
-| **lastTestResult** | [**LastTestResultModel**](LastTestResultModel.md) |  | [default to null] |
+| **lastTestResult** | [**TestPointShortGetModel_lastTestResult**](TestPointShortGetModel_lastTestResult.md) |  | [default to null] |
 | **iterationId** | **UUID** | Unique ID of work item iteration the test point represents | [optional] [default to null] |
+| **workItemState** | [**WorkItemState**](WorkItemState.md) |  | [optional] [default to null] |
+| **workItemCreatedById** | **UUID** | Unique ID of the work item creator | [optional] [default to null] |
+| **workItemCreatedDate** | **Date** | Creation date of work item | [optional] [default to null] |
+| **workItemModifiedById** | **UUID** | Unique ID of the work item last editor | [optional] [default to null] |
+| **workItemModifiedDate** | **Date** | Modified date of work item | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

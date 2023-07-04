@@ -16,7 +16,7 @@
 | **isDisabled** | **Boolean** |  | [optional] [default to null] |
 | **providerId** | **UUID** |  | [optional] [default to null] |
 | **isActiveStatusByEntity** | **Boolean** |  | [optional] [default to null] |
-| **userRank** | [**UserRankModel**](UserRankModel.md) |  | [optional] [default to null] |
+| **userRank** | [**UserWithRankModel_userRank**](UserWithRankModel_userRank.md) |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

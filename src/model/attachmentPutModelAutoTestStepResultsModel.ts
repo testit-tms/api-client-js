@@ -39,7 +39,7 @@ export class AttachmentPutModelAutoTestStepResultsModel {
     * Expected or actual duration of the test run execution in milliseconds.
     */
     'duration'?: number | null;
-    'outcome'?: AvailableTestResultOutcome;
+    'outcome'?: AvailableTestResultOutcome | null;
     /**
     * Nested step results. The maximum nesting level is 15.
     */
@@ -112,3 +112,5 @@ export class AttachmentPutModelAutoTestStepResultsModel {
     }
 }
 
+export namespace AttachmentPutModelAutoTestStepResultsModel {
+}

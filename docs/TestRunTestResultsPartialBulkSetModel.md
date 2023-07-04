@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **selector** | [**TestRunTestResultsSelectModel**](TestRunTestResultsSelectModel.md) |  | [optional] [default to null] |
+| **selector** | [**TestRunTestResultsPartialBulkSetModel_selector**](TestRunTestResultsPartialBulkSetModel_selector.md) |  | [optional] [default to null] |
 | **resultReasonIds** | **Set** | Unique IDs of result reasons to be assigned to test results | [optional] [default to null] |
 | **links** | [**Set**](LinkPostModel.md) | Collection of links to be assigned to test results | [optional] [default to null] |
 | **comment** | **String** | Comment to be added to test results | [optional] [default to null] |

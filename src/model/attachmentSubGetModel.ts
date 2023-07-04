@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class AttachmentSubGetModel {
     'id'?: string;
-    'name'?: string | null;
+    'name'?: string;
 
     static discriminator: string | undefined = undefined;
 

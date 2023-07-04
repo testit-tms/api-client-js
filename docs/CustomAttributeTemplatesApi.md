@@ -153,7 +153,7 @@ Get CustomAttributeTemplate by name
 
 <a name="apiV2CustomAttributesTemplatesPost"></a>
 # **apiV2CustomAttributesTemplatesPost**
-> CustomAttributeTemplateModel apiV2CustomAttributesTemplatesPost(CustomAttributeTemplatePostModel)
+> CustomAttributeTemplateModel apiV2CustomAttributesTemplatesPost(\_api\_v2\_customAttributes\_templates\_post\_request)
 
 Create CustomAttributeTemplate
 
@@ -163,7 +163,7 @@ Create CustomAttributeTemplate
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CustomAttributeTemplatePostModel** | [**CustomAttributeTemplatePostModel**](../Models/CustomAttributeTemplatePostModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_templates\_post\_request** | [**_api_v2_customAttributes_templates_post_request**](../Models/_api_v2_customAttributes_templates_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -180,7 +180,7 @@ Create CustomAttributeTemplate
 
 <a name="apiV2CustomAttributesTemplatesPut"></a>
 # **apiV2CustomAttributesTemplatesPut**
-> apiV2CustomAttributesTemplatesPut(CustomAttributeTemplatePutModel)
+> apiV2CustomAttributesTemplatesPut(\_api\_v2\_customAttributes\_templates\_put\_request)
 
 Update custom attributes template
 
@@ -188,7 +188,7 @@ Update custom attributes template
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CustomAttributeTemplatePutModel** | [**CustomAttributeTemplatePutModel**](../Models/CustomAttributeTemplatePutModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_templates\_put\_request** | [**_api_v2_customAttributes_templates_put_request**](../Models/_api_v2_customAttributes_templates_put_request.md)|  | [optional] |
 
 ### Return type
 
@@ -205,7 +205,7 @@ null (empty response body)
 
 <a name="apiV2CustomAttributesTemplatesSearchPost"></a>
 # **apiV2CustomAttributesTemplatesSearchPost**
-> List apiV2CustomAttributesTemplatesSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, CustomAttributeTemplateSearchQueryModel)
+> List apiV2CustomAttributesTemplatesSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_customAttributes\_templates\_search\_post\_request)
 
 Search CustomAttributeTemplates
 
@@ -220,7 +220,7 @@ Search CustomAttributeTemplates
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **CustomAttributeTemplateSearchQueryModel** | [**CustomAttributeTemplateSearchQueryModel**](../Models/CustomAttributeTemplateSearchQueryModel.md)|  | [optional] |
+| **\_api\_v2\_customAttributes\_templates\_search\_post\_request** | [**_api_v2_customAttributes_templates_search_post_request**](../Models/_api_v2_customAttributes_templates_search_post_request.md)|  | [optional] |
 
 ### Return type
 

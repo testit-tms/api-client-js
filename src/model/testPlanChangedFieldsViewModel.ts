@@ -11,29 +11,30 @@
  */
 
 import { RequestFile } from './models';
-import { BooleanNullableTestPlanChangedFieldViewModel } from './booleanNullableTestPlanChangedFieldViewModel';
-import { BooleanTestPlanChangedFieldViewModel } from './booleanTestPlanChangedFieldViewModel';
+import { BooleanChangedFieldViewModel } from './booleanChangedFieldViewModel';
+import { BooleanNullableChangedFieldViewModel } from './booleanNullableChangedFieldViewModel';
 import { CustomAttributeChangeModel } from './customAttributeChangeModel';
-import { PeriodViewModelTestPlanChangedFieldViewModel } from './periodViewModelTestPlanChangedFieldViewModel';
-import { StringArrayTestPlanChangedFieldViewModel } from './stringArrayTestPlanChangedFieldViewModel';
-import { StringTestPlanChangedFieldViewModel } from './stringTestPlanChangedFieldViewModel';
-import { TestPointChangeViewModelTestPlanChangedFieldViewModel } from './testPointChangeViewModelTestPlanChangedFieldViewModel';
-import { TestResultChangeViewModelTestPlanChangedFieldViewModel } from './testResultChangeViewModelTestPlanChangedFieldViewModel';
-import { TestSuiteChangeViewModelTestPlanChangedFieldViewModel } from './testSuiteChangeViewModelTestPlanChangedFieldViewModel';
+import { PeriodViewModelChangedFieldViewModel } from './periodViewModelChangedFieldViewModel';
+import { StringArrayChangedFieldViewModel } from './stringArrayChangedFieldViewModel';
+import { StringChangedFieldViewModel } from './stringChangedFieldViewModel';
+import { StringChangedFieldWithDiffsViewModel } from './stringChangedFieldWithDiffsViewModel';
+import { TestPointChangeViewModelChangedFieldViewModel } from './testPointChangeViewModelChangedFieldViewModel';
+import { TestResultChangeViewModelChangedFieldViewModel } from './testResultChangeViewModelChangedFieldViewModel';
+import { TestSuiteChangeViewModelChangedFieldViewModel } from './testSuiteChangeViewModelChangedFieldViewModel';
 
 export class TestPlanChangedFieldsViewModel {
-    'name'?: StringTestPlanChangedFieldViewModel;
-    'description'?: StringTestPlanChangedFieldViewModel;
-    'productName'?: StringTestPlanChangedFieldViewModel;
-    'build'?: StringTestPlanChangedFieldViewModel;
-    'period'?: PeriodViewModelTestPlanChangedFieldViewModel;
-    'status'?: StringTestPlanChangedFieldViewModel;
-    'tags'?: StringArrayTestPlanChangedFieldViewModel;
-    'testSuite'?: TestSuiteChangeViewModelTestPlanChangedFieldViewModel;
-    'testPoints'?: TestPointChangeViewModelTestPlanChangedFieldViewModel;
-    'testResults'?: TestResultChangeViewModelTestPlanChangedFieldViewModel;
-    'locking'?: BooleanTestPlanChangedFieldViewModel;
-    'hasAutomaticDurationTimer'?: BooleanNullableTestPlanChangedFieldViewModel;
+    'name'?: StringChangedFieldWithDiffsViewModel | null;
+    'description'?: StringChangedFieldWithDiffsViewModel | null;
+    'productName'?: StringChangedFieldViewModel | null;
+    'build'?: StringChangedFieldViewModel | null;
+    'period'?: PeriodViewModelChangedFieldViewModel | null;
+    'status'?: StringChangedFieldViewModel | null;
+    'tags'?: StringArrayChangedFieldViewModel | null;
+    'testSuite'?: TestSuiteChangeViewModelChangedFieldViewModel | null;
+    'testPoints'?: TestPointChangeViewModelChangedFieldViewModel | null;
+    'testResults'?: TestResultChangeViewModelChangedFieldViewModel | null;
+    'locking'?: BooleanChangedFieldViewModel | null;
+    'hasAutomaticDurationTimer'?: BooleanNullableChangedFieldViewModel | null;
     'attributes'?: { [key: string]: CustomAttributeChangeModel; } | null;
 
     static discriminator: string | undefined = undefined;
@@ -42,62 +43,62 @@ export class TestPlanChangedFieldsViewModel {
         {
             "name": "name",
             "baseName": "name",
-            "type": "StringTestPlanChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "description",
             "baseName": "description",
-            "type": "StringTestPlanChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "productName",
             "baseName": "productName",
-            "type": "StringTestPlanChangedFieldViewModel"
+            "type": "StringChangedFieldViewModel"
         },
         {
             "name": "build",
             "baseName": "build",
-            "type": "StringTestPlanChangedFieldViewModel"
+            "type": "StringChangedFieldViewModel"
         },
         {
             "name": "period",
             "baseName": "period",
-            "type": "PeriodViewModelTestPlanChangedFieldViewModel"
+            "type": "PeriodViewModelChangedFieldViewModel"
         },
         {
             "name": "status",
             "baseName": "status",
-            "type": "StringTestPlanChangedFieldViewModel"
+            "type": "StringChangedFieldViewModel"
         },
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "StringArrayTestPlanChangedFieldViewModel"
+            "type": "StringArrayChangedFieldViewModel"
         },
         {
             "name": "testSuite",
             "baseName": "testSuite",
-            "type": "TestSuiteChangeViewModelTestPlanChangedFieldViewModel"
+            "type": "TestSuiteChangeViewModelChangedFieldViewModel"
         },
         {
             "name": "testPoints",
             "baseName": "testPoints",
-            "type": "TestPointChangeViewModelTestPlanChangedFieldViewModel"
+            "type": "TestPointChangeViewModelChangedFieldViewModel"
         },
         {
             "name": "testResults",
             "baseName": "testResults",
-            "type": "TestResultChangeViewModelTestPlanChangedFieldViewModel"
+            "type": "TestResultChangeViewModelChangedFieldViewModel"
         },
         {
             "name": "locking",
             "baseName": "locking",
-            "type": "BooleanTestPlanChangedFieldViewModel"
+            "type": "BooleanChangedFieldViewModel"
         },
         {
             "name": "hasAutomaticDurationTimer",
             "baseName": "hasAutomaticDurationTimer",
-            "type": "BooleanNullableTestPlanChangedFieldViewModel"
+            "type": "BooleanNullableChangedFieldViewModel"
         },
         {
             "name": "attributes",

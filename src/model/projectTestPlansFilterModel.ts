@@ -22,12 +22,12 @@ export class ProjectTestPlansFilterModel {
     'status'?: Set<TestPlanStatusModel> | null;
     'globalIds'?: Set<number> | null;
     'isLocked'?: boolean | null;
-    'lockedDate'?: DateTimeRangeSelectorModel;
+    'lockedDate'?: DateTimeRangeSelectorModel | null;
     'automaticDurationTimer'?: Set<boolean> | null;
     'createdByIds'?: Set<string> | null;
-    'createdDate'?: DateTimeRangeSelectorModel;
-    'startDate'?: DateTimeRangeSelectorModel;
-    'endDate'?: DateTimeRangeSelectorModel;
+    'createdDate'?: DateTimeRangeSelectorModel | null;
+    'startDate'?: DateTimeRangeSelectorModel | null;
+    'endDate'?: DateTimeRangeSelectorModel | null;
     'tagNames'?: Set<string> | null;
     'attributes'?: { [key: string]: Set<string>; } | null;
     'isDeleted'?: boolean | null;

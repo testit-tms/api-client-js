@@ -108,3 +108,5 @@ export class AutotestResultHistoricalGetModel {
     }
 }
 
+export namespace AutotestResultHistoricalGetModel {
+}

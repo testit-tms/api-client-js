@@ -9,10 +9,10 @@
 | **name** | **String** | Specifies an autotest name to search for | [optional] [default to null] |
 | **isFlaky** | **Boolean** | Specifies an autotest flaky status to search for | [optional] [default to null] |
 | **mustBeApproved** | **Boolean** | Specifies an autotest unapproved changes status to search for | [optional] [default to null] |
-| **stabilityPercentage** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) |  | [optional] [default to null] |
-| **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
+| **stabilityPercentage** | [**AutotestFilterModel_stabilityPercentage**](AutotestFilterModel_stabilityPercentage.md) |  | [optional] [default to null] |
+| **createdDate** | [**AutotestFilterModel_createdDate**](AutotestFilterModel_createdDate.md) |  | [optional] [default to null] |
 | **createdByIds** | **Set** | Specifies an autotest creator IDs to search for | [optional] [default to null] |
-| **modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
+| **modifiedDate** | [**AutotestFilterModel_modifiedDate**](AutotestFilterModel_modifiedDate.md) |  | [optional] [default to null] |
 | **modifiedByIds** | **Set** | Specifies an autotest last editor IDs to search for | [optional] [default to null] |
 | **isDeleted** | **Boolean** | Specifies an autotest deleted status to search for | [optional] [default to null] |
 | **namespace** | **String** | Specifies an autotest namespace to search for | [optional] [default to null] |

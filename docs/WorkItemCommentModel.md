@@ -5,7 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [optional] [default to null] |
 | **text** | **String** |  | [optional] [default to null] |
-| **user** | [**UserWithRankModel**](UserWithRankModel.md) |  | [optional] [default to null] |
+| **user** | [**WorkItemCommentModel_user**](WorkItemCommentModel_user.md) |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [optional] [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |

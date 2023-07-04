@@ -11,47 +11,25 @@
  */
 
 import { RequestFile } from './models';
+import { ConfigurationSelectModelExtractionModel } from './configurationSelectModelExtractionModel';
+import { ConfigurationSelectModelFilter } from './configurationSelectModelFilter';
 
 export class ConfigurationSelectModel {
-    /**
-    * Collection of identifiers of projects from which configurations will be taken
-    */
-    'projectIds'?: Set<string> | null;
-    /**
-    * Filter to search by name (case-insensitive, partial match)
-    */
-    'name'?: string | null;
-    /**
-    * Is configurations deleted or existing
-    */
-    'isDeleted'?: boolean | null;
-    /**
-    * Collection of global (integer) identifiers to filter configurations
-    */
-    'globalIds'?: Set<number> | null;
+    'filter'?: ConfigurationSelectModelFilter | null;
+    'extractionModel'?: ConfigurationSelectModelExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Set<string>"
+            "name": "filter",
+            "baseName": "filter",
+            "type": "ConfigurationSelectModelFilter"
         },
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "globalIds",
-            "baseName": "globalIds",
-            "type": "Set<number>"
+            "name": "extractionModel",
+            "baseName": "extractionModel",
+            "type": "ConfigurationSelectModelExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

@@ -15,6 +15,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsIdTestPlansAnalyticsGet**](ProjectsApi.md#apiV2ProjectsIdTestPlansAnalyticsGet) | **GET** /api/v2/projects/{id}/testPlans/analytics | Get TestPlans analytics |
 | [**apiV2ProjectsIdTestPlansDeleteBulkPost**](ProjectsApi.md#apiV2ProjectsIdTestPlansDeleteBulkPost) | **POST** /api/v2/projects/{id}/testPlans/delete/bulk | Delete multiple test plans |
 | [**apiV2ProjectsIdTestPlansNameExistsGet**](ProjectsApi.md#apiV2ProjectsIdTestPlansNameExistsGet) | **GET** /api/v2/projects/{id}/testPlans/{name}/exists | Checks if TestPlan exists with the specified name exists for the project |
+| [**apiV2ProjectsIdTestPlansPurgeBulkPost**](ProjectsApi.md#apiV2ProjectsIdTestPlansPurgeBulkPost) | **POST** /api/v2/projects/{id}/testPlans/purge/bulk | Permanently delete multiple archived test plans |
 | [**apiV2ProjectsIdTestPlansRestoreBulkPost**](ProjectsApi.md#apiV2ProjectsIdTestPlansRestoreBulkPost) | **POST** /api/v2/projects/{id}/testPlans/restore/bulk | Restore multiple test plans |
 | [**apiV2ProjectsIdTestPlansSearchPost**](ProjectsApi.md#apiV2ProjectsIdTestPlansSearchPost) | **POST** /api/v2/projects/{id}/testPlans/search | Get Project TestPlans with analytics |
 | [**apiV2ProjectsIdTestRunsActiveGet**](ProjectsApi.md#apiV2ProjectsIdTestRunsActiveGet) | **GET** /api/v2/projects/{id}/testRuns/active | Get active Project TestRuns |
@@ -92,7 +93,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsIdAttributesTemplatesSearchPost"></a>
 # **apiV2ProjectsIdAttributesTemplatesSearchPost**
-> List apiV2ProjectsIdAttributesTemplatesSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, ProjectCustomAttributesTemplatesFilterModel)
+> List apiV2ProjectsIdAttributesTemplatesSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_id\_\_attributes\_templates\_search\_post\_request)
 
 Search for custom attributes templates
 
@@ -106,7 +107,7 @@ Search for custom attributes templates
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectCustomAttributesTemplatesFilterModel** | [**ProjectCustomAttributesTemplatesFilterModel**](../Models/ProjectCustomAttributesTemplatesFilterModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_attributes\_templates\_search\_post\_request** | [**_api_v2_projects__id__attributes_templates_search_post_request**](../Models/_api_v2_projects__id__attributes_templates_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -321,7 +322,7 @@ Get TestPlans analytics
 
 <a name="apiV2ProjectsIdTestPlansDeleteBulkPost"></a>
 # **apiV2ProjectsIdTestPlansDeleteBulkPost**
-> List apiV2ProjectsIdTestPlansDeleteBulkPost(id, ProjectTestPlansFilterModel)
+> List apiV2ProjectsIdTestPlansDeleteBulkPost(id, \_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request)
 
 Delete multiple test plans
 
@@ -330,7 +331,7 @@ Delete multiple test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Unique or global ID of the project | [default to null] |
-| **ProjectTestPlansFilterModel** | [**ProjectTestPlansFilterModel**](../Models/ProjectTestPlansFilterModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__id__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__id__testPlans_delete_bulk_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -373,9 +374,35 @@ Checks if TestPlan exists with the specified name exists for the project
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+<a name="apiV2ProjectsIdTestPlansPurgeBulkPost"></a>
+# **apiV2ProjectsIdTestPlansPurgeBulkPost**
+> apiV2ProjectsIdTestPlansPurgeBulkPost(id, \_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request)
+
+Permanently delete multiple archived test plans
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the project | [default to null] |
+| **\_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__id__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__id__testPlans_delete_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2ProjectsIdTestPlansRestoreBulkPost"></a>
 # **apiV2ProjectsIdTestPlansRestoreBulkPost**
-> apiV2ProjectsIdTestPlansRestoreBulkPost(id, ProjectTestPlansFilterModel)
+> apiV2ProjectsIdTestPlansRestoreBulkPost(id, \_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request)
 
 Restore multiple test plans
 
@@ -384,7 +411,7 @@ Restore multiple test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Unique or global ID of the project | [default to null] |
-| **ProjectTestPlansFilterModel** | [**ProjectTestPlansFilterModel**](../Models/ProjectTestPlansFilterModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__id__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__id__testPlans_delete_bulk_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -401,7 +428,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsIdTestPlansSearchPost"></a>
 # **apiV2ProjectsIdTestPlansSearchPost**
-> List apiV2ProjectsIdTestPlansSearchPost(id, mustUpdateCache, Skip, Take, OrderBy, SearchField, SearchValue, ProjectTestPlansFilterModel)
+> List apiV2ProjectsIdTestPlansSearchPost(id, mustUpdateCache, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_id\_\_testPlans\_search\_post\_request)
 
 Get Project TestPlans with analytics
 
@@ -418,7 +445,7 @@ Get Project TestPlans with analytics
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectTestPlansFilterModel** | [**ProjectTestPlansFilterModel**](../Models/ProjectTestPlansFilterModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_testPlans\_search\_post\_request** | [**_api_v2_projects__id__testPlans_search_post_request**](../Models/_api_v2_projects__id__testPlans_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -503,7 +530,7 @@ Get Project TestRuns full models
 
 <a name="apiV2ProjectsIdWorkItemsSearchIdPost"></a>
 # **apiV2ProjectsIdWorkItemsSearchIdPost**
-> List apiV2ProjectsIdWorkItemsSearchIdPost(id, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
+> List apiV2ProjectsIdWorkItemsSearchIdPost(id, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
 
 Search for work items and extract IDs only
 
@@ -517,7 +544,7 @@ Search for work items and extract IDs only
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -534,7 +561,7 @@ Search for work items and extract IDs only
 
 <a name="apiV2ProjectsIdWorkItemsSearchPost"></a>
 # **apiV2ProjectsIdWorkItemsSearchPost**
-> List apiV2ProjectsIdWorkItemsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
+> List apiV2ProjectsIdWorkItemsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
 
 Search for work items
 
@@ -548,7 +575,7 @@ Search for work items
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -618,7 +645,7 @@ Get WorkItems Tags
 
 <a name="apiV2ProjectsSearchPost"></a>
 # **apiV2ProjectsSearchPost**
-> List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ProjectsFilterModel)
+> List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_search\_post\_request)
 
 Search for projects
 
@@ -631,7 +658,7 @@ Search for projects
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectsFilterModel** | [**ProjectsFilterModel**](../Models/ProjectsFilterModel.md)|  | [optional] |
+| **\_api\_v2\_projects\_search\_post\_request** | [**_api_v2_projects_search_post_request**](../Models/_api_v2_projects_search_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -778,7 +805,7 @@ null (empty response body)
 
 <a name="createProject"></a>
 # **createProject**
-> ProjectModel createProject(ProjectPostModel)
+> ProjectModel createProject(CreateProject\_request)
 
 Create project
 
@@ -788,7 +815,7 @@ Create project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ProjectPostModel** | [**ProjectPostModel**](../Models/ProjectPostModel.md)|  | [optional] |
+| **CreateProject\_request** | [**CreateProject_request**](../Models/CreateProject_request.md)|  | [optional] |
 
 ### Return type
 
@@ -805,7 +832,7 @@ Create project
 
 <a name="createProjectsAttribute"></a>
 # **createProjectsAttribute**
-> CustomAttributeModel createProjectsAttribute(id, CustomAttributePostModel)
+> CustomAttributeModel createProjectsAttribute(id, CreateProjectsAttribute\_request)
 
 Create project attribute
 
@@ -816,7 +843,7 @@ Create project attribute
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **CustomAttributePostModel** | [**CustomAttributePostModel**](../Models/CustomAttributePostModel.md)|  | [optional] |
+| **CreateProjectsAttribute\_request** | [**CreateProjectsAttribute_request**](../Models/CreateProjectsAttribute_request.md)|  | [optional] |
 
 ### Return type
 
@@ -943,7 +970,7 @@ null (empty response body)
 
 <a name="export"></a>
 # **export**
-> File export(id, includeAttachments, ProjectExportQueryModel)
+> File export(id, includeAttachments, ExportProjectJson\_request)
 
 Export project as JSON file
 
@@ -955,7 +982,7 @@ Export project as JSON file
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Specifies the ID of the project you want to export. | [default to null] |
 | **includeAttachments** | **Boolean**| Enables attachment export. | [optional] [default to false] |
-| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
+| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -972,7 +999,7 @@ Export project as JSON file
 
 <a name="exportProjectJson"></a>
 # **exportProjectJson**
-> UUID exportProjectJson(id, time-Zone-Offset-In-Minutes, ProjectExportQueryModel)
+> UUID exportProjectJson(id, time-Zone-Offset-In-Minutes, ExportProjectJson\_request)
 
 Export project as JSON file in background job
 
@@ -982,7 +1009,7 @@ Export project as JSON file in background job
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
+| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -999,7 +1026,7 @@ Export project as JSON file in background job
 
 <a name="exportProjectWithTestPlansJson"></a>
 # **exportProjectWithTestPlansJson**
-> UUID exportProjectWithTestPlansJson(id, time-Zone-Offset-In-Minutes, ProjectExportWithTestPlansPostModel)
+> UUID exportProjectWithTestPlansJson(id, time-Zone-Offset-In-Minutes, ExportProjectWithTestPlansJson\_request)
 
 Export project as JSON file with test plans in background job
 
@@ -1009,7 +1036,7 @@ Export project as JSON file with test plans in background job
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
+| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1026,7 +1053,7 @@ Export project as JSON file with test plans in background job
 
 <a name="exportProjectWithTestPlansZip"></a>
 # **exportProjectWithTestPlansZip**
-> UUID exportProjectWithTestPlansZip(id, time-Zone-Offset-In-Minutes, ProjectExportWithTestPlansPostModel)
+> UUID exportProjectWithTestPlansZip(id, time-Zone-Offset-In-Minutes, ExportProjectWithTestPlansJson\_request)
 
 Export project as Zip file with test plans in background job
 
@@ -1036,7 +1063,7 @@ Export project as Zip file with test plans in background job
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
+| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1053,7 +1080,7 @@ Export project as Zip file with test plans in background job
 
 <a name="exportProjectZip"></a>
 # **exportProjectZip**
-> UUID exportProjectZip(id, time-Zone-Offset-In-Minutes, ProjectExportQueryModel)
+> UUID exportProjectZip(id, time-Zone-Offset-In-Minutes, ExportProjectJson\_request)
 
 Export project as Zip file in background job
 
@@ -1063,7 +1090,7 @@ Export project as Zip file in background job
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
+| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1080,7 +1107,7 @@ Export project as Zip file in background job
 
 <a name="exportWithTestPlansAndConfigurations"></a>
 # **exportWithTestPlansAndConfigurations**
-> File exportWithTestPlansAndConfigurations(id, includeAttachments, ProjectExportWithTestPlansPostModel)
+> File exportWithTestPlansAndConfigurations(id, includeAttachments, ExportProjectWithTestPlansJson\_request)
 
 Export project with test plans, test suites and test points as JSON file
 
@@ -1092,7 +1119,7 @@ Export project with test plans, test suites and test points as JSON file
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Specifies the ID of the project you want to export. | [default to null] |
 | **includeAttachments** | **Boolean**| Enables attachment export. | [optional] [default to false] |
-| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
+| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1181,7 +1208,7 @@ Get project attributes
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to null] [enum: Any, Deleted, NotDeleted] |
+| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to NotDeleted] [enum: Any, Deleted, NotDeleted] |
 
 ### Return type
 
@@ -1524,7 +1551,7 @@ null (empty response body)
 
 <a name="searchAttributesInProject"></a>
 # **searchAttributesInProject**
-> List searchAttributesInProject(id, Skip, Take, OrderBy, SearchField, SearchValue, ProjectAttributesFilterModel)
+> List searchAttributesInProject(id, Skip, Take, OrderBy, SearchField, SearchValue, SearchAttributesInProject\_request)
 
 Search for attributes used in the project
 
@@ -1538,7 +1565,7 @@ Search for attributes used in the project
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectAttributesFilterModel** | [**ProjectAttributesFilterModel**](../Models/ProjectAttributesFilterModel.md)|  | [optional] |
+| **SearchAttributesInProject\_request** | [**SearchAttributesInProject_request**](../Models/SearchAttributesInProject_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1555,7 +1582,7 @@ Search for attributes used in the project
 
 <a name="searchTestPlanAttributesInProject"></a>
 # **searchTestPlanAttributesInProject**
-> List searchTestPlanAttributesInProject(id, Skip, Take, OrderBy, SearchField, SearchValue, ProjectAttributesFilterModel)
+> List searchTestPlanAttributesInProject(id, Skip, Take, OrderBy, SearchField, SearchValue, SearchAttributesInProject\_request)
 
 Search for attributes used in the project test plans
 
@@ -1569,7 +1596,7 @@ Search for attributes used in the project test plans
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectAttributesFilterModel** | [**ProjectAttributesFilterModel**](../Models/ProjectAttributesFilterModel.md)|  | [optional] |
+| **SearchAttributesInProject\_request** | [**SearchAttributesInProject_request**](../Models/SearchAttributesInProject_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1586,7 +1613,7 @@ Search for attributes used in the project test plans
 
 <a name="updateCustomAttributeTestPlanProjectRelations"></a>
 # **updateCustomAttributeTestPlanProjectRelations**
-> updateCustomAttributeTestPlanProjectRelations(id, CustomAttributeTestPlanProjectRelationPutModel)
+> updateCustomAttributeTestPlanProjectRelations(id, UpdateCustomAttributeTestPlanProjectRelations\_request)
 
 Update attribute of project&#39;s test plans
 
@@ -1597,7 +1624,7 @@ Update attribute of project&#39;s test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **CustomAttributeTestPlanProjectRelationPutModel** | [**CustomAttributeTestPlanProjectRelationPutModel**](../Models/CustomAttributeTestPlanProjectRelationPutModel.md)|  | [optional] |
+| **UpdateCustomAttributeTestPlanProjectRelations\_request** | [**UpdateCustomAttributeTestPlanProjectRelations_request**](../Models/UpdateCustomAttributeTestPlanProjectRelations_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1614,7 +1641,7 @@ null (empty response body)
 
 <a name="updateProject"></a>
 # **updateProject**
-> updateProject(ProjectPutModel)
+> updateProject(UpdateProject\_request)
 
 Update project
 
@@ -1624,7 +1651,7 @@ Update project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ProjectPutModel** | [**ProjectPutModel**](../Models/ProjectPutModel.md)|  | [optional] |
+| **UpdateProject\_request** | [**UpdateProject_request**](../Models/UpdateProject_request.md)|  | [optional] |
 
 ### Return type
 
@@ -1641,7 +1668,7 @@ null (empty response body)
 
 <a name="updateProjectsAttribute"></a>
 # **updateProjectsAttribute**
-> updateProjectsAttribute(id, CustomAttributePutModel)
+> updateProjectsAttribute(id, UpdateProjectsAttribute\_request)
 
 Edit attribute of the project
 
@@ -1650,7 +1677,7 @@ Edit attribute of the project
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Unique or global project ID | [default to null] |
-| **CustomAttributePutModel** | [**CustomAttributePutModel**](../Models/CustomAttributePutModel.md)|  | [optional] |
+| **UpdateProjectsAttribute\_request** | [**UpdateProjectsAttribute_request**](../Models/UpdateProjectsAttribute_request.md)|  | [optional] |
 
 ### Return type
 

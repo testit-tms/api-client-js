@@ -32,8 +32,8 @@ export class TestResultModel {
     'stoppedByUserId'?: string | null;
     'testPointId'?: string;
     'testRunId'?: string;
-    'testPoint'?: TestPointPutModel;
-    'autoTest'?: AutoTestModel;
+    'testPoint'?: TestPointPutModel | null;
+    'autoTest'?: AutoTestModel | null;
     'autoTestStepResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
     'setupResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
     'teardownResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
@@ -47,11 +47,11 @@ export class TestResultModel {
     'createdById'?: string;
     'modifiedById'?: string | null;
     'stepComments'?: Array<StepCommentModel> | null;
-    'failureClassIds'?: Array<string> | null;
-    'outcome'?: string | null;
+    'failureClassIds'?: Array<string>;
+    'outcome'?: string;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'stepResults'?: Array<StepResultModel> | null;
+    'stepResults'?: Array<StepResultModel>;
     'attachments'?: Array<AttachmentModel> | null;
 
     static discriminator: string | undefined = undefined;

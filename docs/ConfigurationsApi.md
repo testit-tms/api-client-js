@@ -5,16 +5,22 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**apiV2ConfigurationsCreateByParametersPost**](ConfigurationsApi.md#apiV2ConfigurationsCreateByParametersPost) | **POST** /api/v2/configurations/createByParameters | Create Configurations by parameters |
+| [**apiV2ConfigurationsDeleteBulkPost**](ConfigurationsApi.md#apiV2ConfigurationsDeleteBulkPost) | **POST** /api/v2/configurations/delete/bulk | Delete multiple configurations |
+| [**apiV2ConfigurationsIdDelete**](ConfigurationsApi.md#apiV2ConfigurationsIdDelete) | **DELETE** /api/v2/configurations/{id} | Delete configuration |
 | [**apiV2ConfigurationsIdPatch**](ConfigurationsApi.md#apiV2ConfigurationsIdPatch) | **PATCH** /api/v2/configurations/{id} | Patch configuration |
+| [**apiV2ConfigurationsIdPurgePost**](ConfigurationsApi.md#apiV2ConfigurationsIdPurgePost) | **POST** /api/v2/configurations/{id}/purge | Permanently delete configuration from archive |
+| [**apiV2ConfigurationsIdRestorePost**](ConfigurationsApi.md#apiV2ConfigurationsIdRestorePost) | **POST** /api/v2/configurations/{id}/restore | Restore configuration from the archive |
+| [**apiV2ConfigurationsPurgeBulkPost**](ConfigurationsApi.md#apiV2ConfigurationsPurgeBulkPost) | **POST** /api/v2/configurations/purge/bulk | Permanently delete multiple archived configurations |
+| [**apiV2ConfigurationsPut**](ConfigurationsApi.md#apiV2ConfigurationsPut) | **PUT** /api/v2/configurations | Edit configuration |
+| [**apiV2ConfigurationsRestoreBulkPost**](ConfigurationsApi.md#apiV2ConfigurationsRestoreBulkPost) | **POST** /api/v2/configurations/restore/bulk | Restore multiple configurations from the archive |
 | [**apiV2ConfigurationsSearchPost**](ConfigurationsApi.md#apiV2ConfigurationsSearchPost) | **POST** /api/v2/configurations/search | Search for configurations |
 | [**createConfiguration**](ConfigurationsApi.md#createConfiguration) | **POST** /api/v2/configurations | Create Configuration |
 | [**getConfigurationById**](ConfigurationsApi.md#getConfigurationById) | **GET** /api/v2/configurations/{id} | Get configuration by internal or global ID |
-| [**updateConfiguration**](ConfigurationsApi.md#updateConfiguration) | **PUT** /api/v2/configurations | Update Configuration |
 
 
 <a name="apiV2ConfigurationsCreateByParametersPost"></a>
 # **apiV2ConfigurationsCreateByParametersPost**
-> apiV2ConfigurationsCreateByParametersPost(ConfigurationByParametersModel)
+> apiV2ConfigurationsCreateByParametersPost(\_api\_v2\_configurations\_createByParameters\_post\_request)
 
 Create Configurations by parameters
 
@@ -24,7 +30,7 @@ Create Configurations by parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ConfigurationByParametersModel** | [**ConfigurationByParametersModel**](../Models/ConfigurationByParametersModel.md)|  | [optional] |
+| **\_api\_v2\_configurations\_createByParameters\_post\_request** | [**_api_v2_configurations_createByParameters_post_request**](../Models/_api_v2_configurations_createByParameters_post_request.md)|  | [optional] |
 
 ### Return type
 
@@ -37,6 +43,56 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsDeleteBulkPost"></a>
+# **apiV2ConfigurationsDeleteBulkPost**
+> Integer apiV2ConfigurationsDeleteBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+
+Delete multiple configurations
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+**Integer**
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsIdDelete"></a>
+# **apiV2ConfigurationsIdDelete**
+> apiV2ConfigurationsIdDelete(id)
+
+Delete configuration
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the configuration | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="apiV2ConfigurationsIdPatch"></a>
@@ -67,9 +123,134 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2ConfigurationsIdPurgePost"></a>
+# **apiV2ConfigurationsIdPurgePost**
+> apiV2ConfigurationsIdPurgePost(id)
+
+Permanently delete configuration from archive
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the configuration | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsIdRestorePost"></a>
+# **apiV2ConfigurationsIdRestorePost**
+> apiV2ConfigurationsIdRestorePost(id)
+
+Restore configuration from the archive
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the configuration | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsPurgeBulkPost"></a>
+# **apiV2ConfigurationsPurgeBulkPost**
+> apiV2ConfigurationsPurgeBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+
+Permanently delete multiple archived configurations
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsPut"></a>
+# **apiV2ConfigurationsPut**
+> apiV2ConfigurationsPut(\_api\_v2\_configurations\_put\_request)
+
+Edit configuration
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_configurations\_put\_request** | [**_api_v2_configurations_put_request**](../Models/_api_v2_configurations_put_request.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ConfigurationsRestoreBulkPost"></a>
+# **apiV2ConfigurationsRestoreBulkPost**
+> Integer apiV2ConfigurationsRestoreBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+
+Restore multiple configurations from the archive
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+**Integer**
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2ConfigurationsSearchPost"></a>
 # **apiV2ConfigurationsSearchPost**
-> List apiV2ConfigurationsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ConfigurationSelectModel)
+> List apiV2ConfigurationsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_configurations\_search\_post\_request)
 
 Search for configurations
 
@@ -82,7 +263,7 @@ Search for configurations
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ConfigurationSelectModel** | [**ConfigurationSelectModel**](../Models/ConfigurationSelectModel.md)| Model containing all the filters | [optional] |
+| **\_api\_v2\_configurations\_search\_post\_request** | [**_api_v2_configurations_search_post_request**](../Models/_api_v2_configurations_search_post_request.md)| Model containing all the filters | [optional] |
 
 ### Return type
 
@@ -99,7 +280,7 @@ Search for configurations
 
 <a name="createConfiguration"></a>
 # **createConfiguration**
-> ConfigurationModel createConfiguration(ConfigurationPostModel)
+> ConfigurationModel createConfiguration(CreateConfiguration\_request)
 
 Create Configuration
 
@@ -109,7 +290,7 @@ Create Configuration
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ConfigurationPostModel** | [**ConfigurationPostModel**](../Models/ConfigurationPostModel.md)|  | [optional] |
+| **CreateConfiguration\_request** | [**CreateConfiguration_request**](../Models/CreateConfiguration_request.md)|  | [optional] |
 
 ### Return type
 
@@ -149,32 +330,5 @@ Get configuration by internal or global ID
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-<a name="updateConfiguration"></a>
-# **updateConfiguration**
-> updateConfiguration(ConfigurationPutModel)
-
-Update Configuration
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets configuration updated properties(listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updated configuration using updated properties  &lt;br&gt;System returns no content response
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ConfigurationPutModel** | [**ConfigurationPutModel**](../Models/ConfigurationPutModel.md)|  | [optional] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 

@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class SharedStepReferenceSectionModel {
     'id'?: string;
-    'name'?: string | null;
+    'name'?: string;
     'hasThisSharedStepAsPrecondition'?: boolean;
     'hasThisSharedStepAsPostcondition'?: boolean;
     'createdById'?: string;

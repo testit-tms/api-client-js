@@ -17,7 +17,7 @@ import { BackgroundJobType } from './backgroundJobType';
 
 export class BackgroundJobModel {
     'id'?: string;
-    'jobId'?: string | null;
+    'jobId'?: string;
     'jobType'?: BackgroundJobType;
     'state'?: BackgroundJobState;
     'isDeleted'?: boolean;
@@ -86,3 +86,5 @@ export class BackgroundJobModel {
     }
 }
 
+export namespace BackgroundJobModel {
+}

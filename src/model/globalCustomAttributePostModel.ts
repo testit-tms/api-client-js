@@ -67,3 +67,5 @@ export class GlobalCustomAttributePostModel {
     }
 }
 
+export namespace GlobalCustomAttributePostModel {
+}
