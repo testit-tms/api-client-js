@@ -9,6 +9,8 @@
 | **name** | **String** | Specifies the name of the test run. | [optional] [default to null] |
 | **description** | **String** | Specifies the test run description. | [optional] [default to null] |
 | **launchSource** | **String** | Specifies the test run launch source. | [optional] [default to null] |
+| **attachments** | [**List**](AttachmentPutModel.md) | Collection of attachment ids to relate to the test run | [optional] [default to null] |
+| **links** | [**List**](LinkPostModel.md) | Collection of links to relate to the test run | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,7 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { TestRunFilterModelCreatedDate } from './testRunFilterModelCreatedDate';
+import { FailureCategoryModel } from './failureCategoryModel';
+import { TestResultOutcome } from './testResultOutcome';
+import { TestRunFilterModelAutoTestsCount } from './testRunFilterModelAutoTestsCount';
+import { TestRunFilterModelCompletedDate } from './testRunFilterModelCompletedDate';
+import { TestRunFilterModelStartedDate } from './testRunFilterModelStartedDate';
 import { TestRunState } from './testRunState';
 
 export class TestRunFilterModel {
@@ -20,10 +24,18 @@ export class TestRunFilterModel {
     */
     'projectIds'?: Set<string> | null;
     /**
+    * Specifies test run name
+    */
+    'name'?: string | null;
+    /**
     * Specifies a test run states to search for
     */
     'states'?: Set<TestRunState> | null;
-    'createdDate'?: TestRunFilterModelCreatedDate | null;
+    'startedDate'?: TestRunFilterModelStartedDate | null;
+    /**
+    * Specifies a test run creator IDs to search for
+    */
+    'createdByIds'?: Set<string> | null;
     /**
     * Specifies a test run last editor IDs to search for
     */
@@ -32,6 +44,16 @@ export class TestRunFilterModel {
     * Specifies a test run deleted status to search for
     */
     'isDeleted'?: boolean | null;
+    'autoTestsCount'?: TestRunFilterModelAutoTestsCount | null;
+    /**
+    * Specifies test results outcomes
+    */
+    'testResultsOutcome'?: Array<TestResultOutcome> | null;
+    /**
+    * Specifies failure categories
+    */
+    'failureCategory'?: Array<FailureCategoryModel> | null;
+    'completedDate'?: TestRunFilterModelCompletedDate | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -42,14 +64,24 @@ export class TestRunFilterModel {
             "type": "Set<string>"
         },
         {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
+        },
+        {
             "name": "states",
             "baseName": "states",
             "type": "Set<TestRunState>"
         },
         {
-            "name": "createdDate",
-            "baseName": "createdDate",
-            "type": "TestRunFilterModelCreatedDate"
+            "name": "startedDate",
+            "baseName": "startedDate",
+            "type": "TestRunFilterModelStartedDate"
+        },
+        {
+            "name": "createdByIds",
+            "baseName": "createdByIds",
+            "type": "Set<string>"
         },
         {
             "name": "modifiedByIds",
@@ -60,6 +92,26 @@ export class TestRunFilterModel {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
+        },
+        {
+            "name": "autoTestsCount",
+            "baseName": "autoTestsCount",
+            "type": "TestRunFilterModelAutoTestsCount"
+        },
+        {
+            "name": "testResultsOutcome",
+            "baseName": "testResultsOutcome",
+            "type": "Array<TestResultOutcome>"
+        },
+        {
+            "name": "failureCategory",
+            "baseName": "failureCategory",
+            "type": "Array<FailureCategoryModel>"
+        },
+        {
+            "name": "completedDate",
+            "baseName": "completedDate",
+            "type": "TestRunFilterModelCompletedDate"
         }    ];
 
     static getAttributeTypeMap() {

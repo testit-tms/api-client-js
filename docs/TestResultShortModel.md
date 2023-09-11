@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
 | **outcome** | **String** |  | [optional] [default to null] |
 | **traces** | **String** |  | [optional] [default to null] |
 | **failureType** | **String** |  | [optional] [default to null] |

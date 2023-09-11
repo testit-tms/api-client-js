@@ -11,6 +11,8 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentPutModel } from './attachmentPutModel';
+import { LinkPostModel } from './linkPostModel';
 
 export class CreateEmptyRequest {
     /**
@@ -20,6 +22,8 @@ export class CreateEmptyRequest {
     'name'?: string | null;
     'description'?: string | null;
     'launchSource'?: string | null;
+    'attachments'?: Array<AttachmentPutModel> | null;
+    'links'?: Array<LinkPostModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -43,6 +47,16 @@ export class CreateEmptyRequest {
             "name": "launchSource",
             "baseName": "launchSource",
             "type": "string"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentPutModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkPostModel>"
         }    ];
 
     static getAttributeTypeMap() {

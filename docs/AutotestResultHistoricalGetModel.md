@@ -3,12 +3,14 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
-| **createdDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [optional] [default to null] |
-| **testRunId** | **UUID** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
+| **createdDate** | **Date** |  | [default to null] |
+| **createdById** | **UUID** |  | [default to null] |
+| **createdByName** | **String** |  | [optional] [default to null] |
+| **testRunId** | **UUID** |  | [default to null] |
 | **testRunName** | **String** |  | [optional] [default to null] |
-| **configurationId** | **UUID** |  | [optional] [default to null] |
+| **configurationId** | **UUID** |  | [default to null] |
+| **configurationName** | **String** |  | [optional] [default to null] |
 | **outcome** | [**AutotestResultOutcome**](AutotestResultOutcome.md) |  | [default to null] |
 | **launchSource** | **String** |  | [optional] [default to null] |
 | **modifiedDate** | **Date** |  | [optional] [default to null] |

@@ -15,7 +15,7 @@ import { ParameterIterationModel } from './parameterIterationModel';
 
 export class IterationPutModel {
     'parameters': Array<ParameterIterationModel>;
-    'id'?: string;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 

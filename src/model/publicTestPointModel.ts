@@ -14,10 +14,10 @@ import { RequestFile } from './models';
 import { ParameterShortModel } from './parameterShortModel';
 
 export class PublicTestPointModel {
-    'configurationId'?: string;
-    'configurationGlobalId'?: number;
+    'configurationId': string;
+    'configurationGlobalId': number;
     'autoTestIds'?: Array<string> | null;
-    'iterationId'?: string;
+    'iterationId': string;
     'parameterModels'?: Array<ParameterShortModel> | null;
 
     static discriminator: string | undefined = undefined;

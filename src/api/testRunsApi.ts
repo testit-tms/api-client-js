@@ -18,6 +18,7 @@ import http from 'http';
 import { ApiV2TestRunsIdStatisticsFilterPostRequest } from '../model/apiV2TestRunsIdStatisticsFilterPostRequest';
 import { ApiV2TestRunsIdTestResultsBulkPutRequest } from '../model/apiV2TestRunsIdTestResultsBulkPutRequest';
 import { ApiV2TestRunsSearchPostRequest } from '../model/apiV2TestRunsSearchPostRequest';
+import { ApiV2TestRunsUpdateMultiplePostRequest } from '../model/apiV2TestRunsUpdateMultiplePostRequest';
 import { AutoTestResultsForTestRunModel } from '../model/autoTestResultsForTestRunModel';
 import { CreateAndFillByAutoTestsRequest } from '../model/createAndFillByAutoTestsRequest';
 import { CreateAndFillByConfigurationsRequest } from '../model/createAndFillByConfigurationsRequest';
@@ -477,6 +478,65 @@ export class TestRunsApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<TestRunShortGetModel>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary Update multiple test runs
+     * @param apiV2TestRunsUpdateMultiplePostRequest 
+     */
+    public async apiV2TestRunsUpdateMultiplePost (apiV2TestRunsUpdateMultiplePostRequest?: ApiV2TestRunsUpdateMultiplePostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/api/v2/testRuns/updateMultiple';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(apiV2TestRunsUpdateMultiplePostRequest, "ApiV2TestRunsUpdateMultiplePostRequest")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

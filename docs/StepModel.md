@@ -4,7 +4,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **workItem** | [**Section_shared_step**](Section_shared_step.md) |  | [optional] [default to null] |
-| **id** | **UUID** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
 | **action** | **String** |  | [optional] [default to null] |
 | **expected** | **String** |  | [optional] [default to null] |
 | **testData** | **String** |  | [optional] [default to null] |

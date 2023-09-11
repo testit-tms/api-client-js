@@ -21,15 +21,15 @@ export class TestRunTestResultsSelectModelFilter {
     /**
     * Specifies a test result configuration IDs to search for
     */
-    'configurationIds'?: Set<string> | null;
+    'configurationIds'?: Array<string> | null;
     /**
     * Specifies a test result outcomes to search for
     */
-    'outcomes'?: Set<TestResultOutcome> | null;
+    'outcomes'?: Array<TestResultOutcome> | null;
     /**
     * Specifies a test result failure categories to search for
     */
-    'failureCategories'?: Set<FailureCategoryModel> | null;
+    'failureCategories'?: Array<FailureCategoryModel> | null;
     /**
     * Specifies a test result namespace to search for
     */
@@ -45,17 +45,17 @@ export class TestRunTestResultsSelectModelFilter {
         {
             "name": "configurationIds",
             "baseName": "configurationIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "outcomes",
             "baseName": "outcomes",
-            "type": "Set<TestResultOutcome>"
+            "type": "Array<TestResultOutcome>"
         },
         {
             "name": "failureCategories",
             "baseName": "failureCategories",
-            "type": "Set<FailureCategoryModel>"
+            "type": "Array<FailureCategoryModel>"
         },
         {
             "name": "namespace",

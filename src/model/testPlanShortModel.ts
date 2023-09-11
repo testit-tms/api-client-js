@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class TestPlanShortModel {
-    'id'?: string;
-    'projectId'?: string;
-    'name'?: string;
+    'id': string;
+    'projectId': string;
+    'name'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

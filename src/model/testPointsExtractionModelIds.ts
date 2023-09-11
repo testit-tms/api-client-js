@@ -16,8 +16,8 @@ import { RequestFile } from './models';
 * Extraction parameters for test points
 */
 export class TestPointsExtractionModelIds {
-    'include'?: Set<string> | null;
-    'exclude'?: Set<string> | null;
+    'include'?: Array<string> | null;
+    'exclude'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,12 +25,12 @@ export class TestPointsExtractionModelIds {
         {
             "name": "include",
             "baseName": "include",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "exclude",
             "baseName": "exclude",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

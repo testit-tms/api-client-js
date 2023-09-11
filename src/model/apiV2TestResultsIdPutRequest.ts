@@ -15,43 +15,27 @@ import { AttachmentPutModel } from './attachmentPutModel';
 import { AttachmentPutModelAutoTestStepResultsModel } from './attachmentPutModelAutoTestStepResultsModel';
 import { LinkModel } from './linkModel';
 import { StepResultModel } from './stepResultModel';
+import { TestResultOutcome } from './testResultOutcome';
 import { TestResultStepCommentPutModel } from './testResultStepCommentPutModel';
 
 export class ApiV2TestResultsIdPutRequest {
-    'setupResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
-    'teardownResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
-    'durationInMs'?: number | null;
-    'stepComments'?: Array<TestResultStepCommentPutModel>;
-    'failureClassIds'?: Array<string>;
-    'outcome'?: string;
+    'failureClassIds'?: Array<string> | null;
+    'outcome'?: TestResultOutcome | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'stepResults'?: Array<StepResultModel>;
+    'stepResults'?: Array<StepResultModel> | null;
     'attachments'?: Array<AttachmentPutModel> | null;
+    'durationInMs'?: number | null;
+    'duration'?: number | null;
+    'stepComments'?: Array<TestResultStepCommentPutModel> | null;
+    'setupResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
+    'teardownResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
+    'message'?: string | null;
+    'trace'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "setupResults",
-            "baseName": "setupResults",
-            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
-        },
-        {
-            "name": "teardownResults",
-            "baseName": "teardownResults",
-            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
-        },
-        {
-            "name": "durationInMs",
-            "baseName": "durationInMs",
-            "type": "number"
-        },
-        {
-            "name": "stepComments",
-            "baseName": "stepComments",
-            "type": "Array<TestResultStepCommentPutModel>"
-        },
         {
             "name": "failureClassIds",
             "baseName": "failureClassIds",
@@ -60,7 +44,7 @@ export class ApiV2TestResultsIdPutRequest {
         {
             "name": "outcome",
             "baseName": "outcome",
-            "type": "string"
+            "type": "TestResultOutcome"
         },
         {
             "name": "comment",
@@ -81,6 +65,41 @@ export class ApiV2TestResultsIdPutRequest {
             "name": "attachments",
             "baseName": "attachments",
             "type": "Array<AttachmentPutModel>"
+        },
+        {
+            "name": "durationInMs",
+            "baseName": "durationInMs",
+            "type": "number"
+        },
+        {
+            "name": "duration",
+            "baseName": "duration",
+            "type": "number"
+        },
+        {
+            "name": "stepComments",
+            "baseName": "stepComments",
+            "type": "Array<TestResultStepCommentPutModel>"
+        },
+        {
+            "name": "setupResults",
+            "baseName": "setupResults",
+            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
+        },
+        {
+            "name": "teardownResults",
+            "baseName": "teardownResults",
+            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
+        },
+        {
+            "name": "message",
+            "baseName": "message",
+            "type": "string"
+        },
+        {
+            "name": "trace",
+            "baseName": "trace",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
@@ -88,3 +107,5 @@ export class ApiV2TestResultsIdPutRequest {
     }
 }
 
+export namespace ApiV2TestResultsIdPutRequest {
+}

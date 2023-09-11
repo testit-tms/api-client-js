@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class StepPutModel {
-    'id'?: string;
+    'id': string;
     'action'?: string | null;
     'expected'?: string | null;
     'testData'?: string | null;

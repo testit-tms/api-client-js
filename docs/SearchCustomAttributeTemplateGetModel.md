@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
+| **isDeleted** | **Boolean** |  | [default to null] |
 | **name** | **String** |  | [optional] [default to null] |
 | **projectShortestModels** | [**List**](ProjectShortestModel.md) |  | [optional] [default to null] |
 | **customAttributeModels** | [**List**](CustomAttributeModel.md) |  | [optional] [default to null] |

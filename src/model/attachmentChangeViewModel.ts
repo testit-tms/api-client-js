@@ -13,10 +13,10 @@
 import { RequestFile } from './models';
 
 export class AttachmentChangeViewModel {
-    'id'?: string;
+    'id': string;
     'name'?: string | null;
     'type'?: string | null;
-    'size'?: number;
+    'size': number;
 
     static discriminator: string | undefined = undefined;
 

@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **stepId** | **UUID** |  | [optional] [default to null] |
+| **stepId** | **UUID** |  | [default to null] |
 | **outcome** | **String** |  | [optional] [default to null] |
 | **sharedStepVersionId** | **UUID** |  | [optional] [default to null] |
 | **sharedStepResults** | [**List**](SharedStepResultModel.md) |  | [optional] [default to null] |

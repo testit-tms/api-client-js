@@ -17,7 +17,7 @@ export class ProjectModel {
     /**
     * Unique ID of the project
     */
-    'id'?: string;
+    'id': string;
     /**
     * Description of the project
     */
@@ -25,11 +25,11 @@ export class ProjectModel {
     /**
     * Name of the project
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Indicates if the project is marked as favorite
     */
-    'isFavorite'?: boolean;
+    'isFavorite': boolean;
     /**
     * Collection of the project attributes
     */
@@ -57,11 +57,11 @@ export class ProjectModel {
     /**
     * Indicates if the project is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Creation date of the project
     */
-    'createdDate'?: Date;
+    'createdDate': Date;
     /**
     * Last modification date of the project
     */
@@ -69,7 +69,7 @@ export class ProjectModel {
     /**
     * Unique ID of the project creator
     */
-    'createdById'?: string;
+    'createdById': string;
     /**
     * Unique ID of the project last editor
     */
@@ -77,7 +77,7 @@ export class ProjectModel {
     /**
     * Global ID of the project
     */
-    'globalId'?: number;
+    'globalId': number;
 
     static discriminator: string | undefined = undefined;
 

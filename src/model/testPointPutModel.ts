@@ -14,20 +14,20 @@ import { RequestFile } from './models';
 
 export class TestPointPutModel {
     'testerId'?: string | null;
-    'iterationId'?: string;
+    'iterationId': string;
     'workItemId'?: string | null;
     'configurationId'?: string | null;
-    'testSuiteId'?: string;
+    'testSuiteId': string;
     'status'?: string | null;
     'lastTestResultId'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

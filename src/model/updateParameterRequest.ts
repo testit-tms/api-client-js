@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class UpdateParameterRequest {
-    'id'?: string;
+    'id': string;
     'value': string;
     'name': string;
 

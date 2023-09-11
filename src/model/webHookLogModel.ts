@@ -15,29 +15,29 @@ import { RequestTypeModel } from './requestTypeModel';
 import { WebHookEventTypeModel } from './webHookEventTypeModel';
 
 export class WebHookLogModel {
-    'webHookName'?: string;
+    'webHookName'?: string | null;
     'eventType': WebHookEventTypeModel;
-    'webHookId'?: string;
+    'webHookId': string;
     'requestBody'?: string | null;
     'requestMeta'?: string | null;
-    'responseStatusCode'?: number;
+    'responseStatusCode': number;
     'responseBody'?: string | null;
     'responseMeta'?: string | null;
-    'projectId'?: string;
-    'url'?: string;
+    'projectId': string;
+    'url'?: string | null;
     'requestType': RequestTypeModel;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

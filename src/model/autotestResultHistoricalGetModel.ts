@@ -14,12 +14,14 @@ import { RequestFile } from './models';
 import { AutotestResultOutcome } from './autotestResultOutcome';
 
 export class AutotestResultHistoricalGetModel {
-    'id'?: string;
-    'createdDate'?: Date;
-    'createdById'?: string;
-    'testRunId'?: string;
+    'id': string;
+    'createdDate': Date;
+    'createdById': string;
+    'createdByName'?: string | null;
+    'testRunId': string;
     'testRunName'?: string | null;
-    'configurationId'?: string;
+    'configurationId': string;
+    'configurationName'?: string | null;
     'outcome': AutotestResultOutcome;
     'launchSource'?: string | null;
     'modifiedDate'?: Date | null;
@@ -48,6 +50,11 @@ export class AutotestResultHistoricalGetModel {
             "type": "string"
         },
         {
+            "name": "createdByName",
+            "baseName": "createdByName",
+            "type": "string"
+        },
+        {
             "name": "testRunId",
             "baseName": "testRunId",
             "type": "string"
@@ -60,6 +67,11 @@ export class AutotestResultHistoricalGetModel {
         {
             "name": "configurationId",
             "baseName": "configurationId",
+            "type": "string"
+        },
+        {
+            "name": "configurationName",
+            "baseName": "configurationName",
             "type": "string"
         },
         {

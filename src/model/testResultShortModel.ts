@@ -16,10 +16,10 @@ import { AutoTestShortModel } from './autoTestShortModel';
 import { TestPointPutModel } from './testPointPutModel';
 
 export class TestResultShortModel {
-    'id'?: string;
-    'outcome'?: string;
+    'id': string;
+    'outcome'?: string | null;
     'traces'?: string | null;
-    'failureType'?: string;
+    'failureType'?: string | null;
     'message'?: string | null;
     'testPoint'?: TestPointPutModel | null;
     'createdDate'?: Date | null;

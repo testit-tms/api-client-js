@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 import { AttachmentPutModel } from './attachmentPutModel';
 
 export class TestResultStepCommentPutModel {
-    'id'?: string;
-    'text'?: string;
+    'id': string;
+    'text'?: string | null;
     'stepId': string;
     'parentStepId'?: string | null;
-    'attachments'?: Array<AttachmentPutModel>;
+    'attachments'?: Array<AttachmentPutModel> | null;
 
     static discriminator: string | undefined = undefined;
 

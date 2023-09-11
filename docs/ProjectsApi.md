@@ -8,10 +8,13 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsIdAttributesTemplatesSearchPost**](ProjectsApi.md#apiV2ProjectsIdAttributesTemplatesSearchPost) | **POST** /api/v2/projects/{id}/attributes/templates/search | Search for custom attributes templates |
 | [**apiV2ProjectsIdAttributesTemplatesTemplateIdDelete**](ProjectsApi.md#apiV2ProjectsIdAttributesTemplatesTemplateIdDelete) | **DELETE** /api/v2/projects/{id}/attributes/templates/{templateId} | Delete CustomAttributeTemplate from Project |
 | [**apiV2ProjectsIdAttributesTemplatesTemplateIdPost**](ProjectsApi.md#apiV2ProjectsIdAttributesTemplatesTemplateIdPost) | **POST** /api/v2/projects/{id}/attributes/templates/{templateId} | Add CustomAttributeTemplate to Project |
-| [**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get Project FailureClasses |
+| [**apiV2ProjectsIdDelete**](ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project |
+| [**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes |
 | [**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite |
 | [**apiV2ProjectsIdFiltersGet**](ProjectsApi.md#apiV2ProjectsIdFiltersGet) | **GET** /api/v2/projects/{id}/filters | Get Project filters |
 | [**apiV2ProjectsIdPatch**](ProjectsApi.md#apiV2ProjectsIdPatch) | **PATCH** /api/v2/projects/{id} | Patch project |
+| [**apiV2ProjectsIdPurgePost**](ProjectsApi.md#apiV2ProjectsIdPurgePost) | **POST** /api/v2/projects/{id}/purge | Purge archived project |
+| [**apiV2ProjectsIdRestorePost**](ProjectsApi.md#apiV2ProjectsIdRestorePost) | **POST** /api/v2/projects/{id}/restore | Restore archived project |
 | [**apiV2ProjectsIdTestPlansAnalyticsGet**](ProjectsApi.md#apiV2ProjectsIdTestPlansAnalyticsGet) | **GET** /api/v2/projects/{id}/testPlans/analytics | Get TestPlans analytics |
 | [**apiV2ProjectsIdTestPlansDeleteBulkPost**](ProjectsApi.md#apiV2ProjectsIdTestPlansDeleteBulkPost) | **POST** /api/v2/projects/{id}/testPlans/delete/bulk | Delete multiple test plans |
 | [**apiV2ProjectsIdTestPlansNameExistsGet**](ProjectsApi.md#apiV2ProjectsIdTestPlansNameExistsGet) | **GET** /api/v2/projects/{id}/testPlans/{name}/exists | Checks if TestPlan exists with the specified name exists for the project |
@@ -24,6 +27,8 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsIdWorkItemsSearchPost**](ProjectsApi.md#apiV2ProjectsIdWorkItemsSearchPost) | **POST** /api/v2/projects/{id}/workItems/search | Search for work items |
 | [**apiV2ProjectsIdWorkItemsTagsGet**](ProjectsApi.md#apiV2ProjectsIdWorkItemsTagsGet) | **GET** /api/v2/projects/{id}/workItems/tags | Get WorkItems Tags |
 | [**apiV2ProjectsNameNameExistsGet**](ProjectsApi.md#apiV2ProjectsNameNameExistsGet) | **GET** /api/v2/projects/name/{name}/exists |  |
+| [**apiV2ProjectsPurgeBulkPost**](ProjectsApi.md#apiV2ProjectsPurgeBulkPost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects |
+| [**apiV2ProjectsRestoreBulkPost**](ProjectsApi.md#apiV2ProjectsRestoreBulkPost) | **POST** /api/v2/projects/restore/bulk | Restore multiple projects |
 | [**apiV2ProjectsSearchPost**](ProjectsApi.md#apiV2ProjectsSearchPost) | **POST** /api/v2/projects/search | Search for projects |
 | [**backgroundImportProject**](ProjectsApi.md#backgroundImportProject) | **POST** /api/v2/projects/import/json | Import project from JSON file in background job |
 | [**backgroundImportToExistingProject**](ProjectsApi.md#backgroundImportToExistingProject) | **POST** /api/v2/projects/{id}/import/json | Import project from JSON file into existing project in background job |
@@ -33,8 +38,7 @@ All URIs are relative to *http://localhost*
 | [**createProject**](ProjectsApi.md#createProject) | **POST** /api/v2/projects | Create project |
 | [**createProjectsAttribute**](ProjectsApi.md#createProjectsAttribute) | **POST** /api/v2/projects/{id}/attributes | Create project attribute |
 | [**deleteCustomAttributeTestPlanProjectRelations**](ProjectsApi.md#deleteCustomAttributeTestPlanProjectRelations) | **DELETE** /api/v2/projects/{id}/testPlans/attribute/{attributeId} | Delete attribute from project&#39;s test plans |
-| [**deleteProject**](ProjectsApi.md#deleteProject) | **DELETE** /api/v2/projects/{id} | Delete project |
-| [**deleteProjectAutoTests**](ProjectsApi.md#deleteProjectAutoTests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete project |
+| [**deleteProjectAutoTests**](ProjectsApi.md#deleteProjectAutoTests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete all autotests from project |
 | [**deleteProjectsAttribute**](ProjectsApi.md#deleteProjectsAttribute) | **DELETE** /api/v2/projects/{id}/attributes/{attributeId} | Delete project attribute |
 | [**export**](ProjectsApi.md#export) | **POST** /api/v2/projects/{id}/export | Export project as JSON file |
 | [**exportProjectJson**](ProjectsApi.md#exportProjectJson) | **POST** /api/v2/projects/{id}/export/json | Export project as JSON file in background job |
@@ -55,7 +59,6 @@ All URIs are relative to *http://localhost*
 | [**getWorkItemsByProjectId**](ProjectsApi.md#getWorkItemsByProjectId) | **GET** /api/v2/projects/{id}/workItems | Get project work items |
 | [**import**](ProjectsApi.md#import) | **POST** /api/v2/projects/import | Import project from JSON file |
 | [**importToExistingProject**](ProjectsApi.md#importToExistingProject) | **POST** /api/v2/projects/{id}/import | Import project from JSON file into existing project |
-| [**restoreProject**](ProjectsApi.md#restoreProject) | **POST** /api/v2/projects/{id}/restore | Restore project |
 | [**searchAttributesInProject**](ProjectsApi.md#searchAttributesInProject) | **POST** /api/v2/projects/{id}/attributes/search | Search for attributes used in the project |
 | [**searchTestPlanAttributesInProject**](ProjectsApi.md#searchTestPlanAttributesInProject) | **POST** /api/v2/projects/{id}/testPlans/attributes/search | Search for attributes used in the project test plans |
 | [**updateCustomAttributeTestPlanProjectRelations**](ProjectsApi.md#updateCustomAttributeTestPlanProjectRelations) | **PUT** /api/v2/projects/{id}/testPlans/attribute | Update attribute of project&#39;s test plans |
@@ -178,19 +181,42 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdFailureClassesGet"></a>
-# **apiV2ProjectsIdFailureClassesGet**
-> List apiV2ProjectsIdFailureClassesGet(id, isDeleted)
+<a name="apiV2ProjectsIdDelete"></a>
+# **apiV2ProjectsIdDelete**
+> apiV2ProjectsIdDelete(id)
 
-Get Project FailureClasses
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System returns project failre classes
+Archive project
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2ProjectsIdFailureClassesGet"></a>
+# **apiV2ProjectsIdFailureClassesGet**
+> List apiV2ProjectsIdFailureClassesGet(id, isDeleted)
+
+Get failure classes
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the project | [default to null] |
 | **isDeleted** | **Boolean**|  | [optional] [default to null] |
 
 ### Return type
@@ -284,6 +310,56 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ProjectsIdPurgePost"></a>
+# **apiV2ProjectsIdPurgePost**
+> apiV2ProjectsIdPurgePost(id)
+
+Purge archived project
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2ProjectsIdRestorePost"></a>
+# **apiV2ProjectsIdRestorePost**
+> apiV2ProjectsIdRestorePost(id)
+
+Restore archived project
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="apiV2ProjectsIdTestPlansAnalyticsGet"></a>
@@ -643,6 +719,56 @@ Get WorkItems Tags
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+<a name="apiV2ProjectsPurgeBulkPost"></a>
+# **apiV2ProjectsPurgeBulkPost**
+> Long apiV2ProjectsPurgeBulkPost(\_api\_v2\_projects\_restore\_bulk\_post\_request)
+
+Purge multiple projects
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_projects\_restore\_bulk\_post\_request** | [**_api_v2_projects_restore_bulk_post_request**](../Models/_api_v2_projects_restore_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+**Long**
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ProjectsRestoreBulkPost"></a>
+# **apiV2ProjectsRestoreBulkPost**
+> Long apiV2ProjectsRestoreBulkPost(\_api\_v2\_projects\_restore\_bulk\_post\_request)
+
+Restore multiple projects
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **\_api\_v2\_projects\_restore\_bulk\_post\_request** | [**_api_v2_projects_restore_bulk_post_request**](../Models/_api_v2_projects_restore_bulk_post_request.md)|  | [optional] |
+
+### Return type
+
+**Long**
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2ProjectsSearchPost"></a>
 # **apiV2ProjectsSearchPost**
 > List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_search\_post\_request)
@@ -886,46 +1012,17 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="deleteProject"></a>
-# **deleteProject**
-> deleteProject(id)
-
-Delete project
-
-    &lt;br&gt;Use case:  &lt;br&gt;1. User sets project internal or global identifier and runs method execution  &lt;br&gt;2. System searches and moves requested project to archive  &lt;br&gt;3. System responds with no content (204) result
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
 <a name="deleteProjectAutoTests"></a>
 # **deleteProjectAutoTests**
 > deleteProjectAutoTests(id)
 
-Delete project
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System delete all autotests from project  &lt;br&gt;System returns no content response
+Delete all autotests from project
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+| **id** | **String**| Unique or global ID of the project | [default to null] |
 
 ### Return type
 
@@ -1520,33 +1617,6 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: multipart/form-data
-- **Accept**: application/json
-
-<a name="restoreProject"></a>
-# **restoreProject**
-> restoreProject(id)
-
-Restore project
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and runs method execution  &lt;br&gt;System search and restores deleted project  &lt;br&gt;System returns no content response
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="searchAttributesInProject"></a>

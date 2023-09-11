@@ -14,15 +14,15 @@ import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
 
 export class StepCommentModel {
-    'id'?: string;
+    'id': string;
     'text'?: string | null;
     'stepId': string;
     'parentStepId'?: string | null;
     'attachments'?: Array<AttachmentModel> | null;
     'testResultId': string;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
 
     static discriminator: string | undefined = undefined;

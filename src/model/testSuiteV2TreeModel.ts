@@ -21,7 +21,7 @@ export class TestSuiteV2TreeModel {
     /**
     * Unique ID of the test suite
     */
-    'id'?: string;
+    'id': string;
     /**
     * Date of the last refresh of the test suite
     */

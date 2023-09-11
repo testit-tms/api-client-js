@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
 | **text** | **String** |  | [optional] [default to null] |
 | **stepId** | **UUID** |  | [default to null] |
 | **parentStepId** | **UUID** |  | [optional] [default to null] |

@@ -16,16 +16,16 @@ import { ConfigurationModel } from './configurationModel';
 import { PublicTestPointModel } from './publicTestPointModel';
 
 export class PublicTestRunModel {
-    'testRunId'?: string;
+    'testRunId': string;
     'testPlanId'?: string | null;
-    'testPlanGlobalId'?: number;
-    'name'?: string;
+    'testPlanGlobalId': number;
+    'name'?: string | null;
     'productName'?: string | null;
     'build'?: string | null;
-    'configurations'?: Array<ConfigurationModel>;
-    'autoTests'?: Array<AutoTestModel>;
-    'testPoints'?: Array<PublicTestPointModel>;
-    'status'?: string;
+    'configurations'?: Array<ConfigurationModel> | null;
+    'autoTests'?: Array<AutoTestModel> | null;
+    'testPoints'?: Array<PublicTestPointModel> | null;
+    'status'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

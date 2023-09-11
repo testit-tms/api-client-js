@@ -14,8 +14,8 @@ import { RequestFile } from './models';
 import { ParameterShortModel } from './parameterShortModel';
 
 export class IterationModel {
-    'id'?: string;
-    'parameters'?: Array<ParameterShortModel>;
+    'id': string;
+    'parameters'?: Array<ParameterShortModel> | null;
 
     static discriminator: string | undefined = undefined;
 

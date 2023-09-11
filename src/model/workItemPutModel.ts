@@ -25,14 +25,14 @@ export class WorkItemPutModel {
     'iterations'?: Array<IterationPutModel> | null;
     'autoTests'?: Array<AutoTestIdModel> | null;
     'id': string;
-    'sectionId'?: string;
-    'description'?: string;
+    'sectionId': string;
+    'description'?: string | null;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
     'steps': Array<StepPutModel>;
     'preconditionSteps': Array<StepPutModel>;
     'postconditionSteps': Array<StepPutModel>;
-    'duration'?: number;
+    'duration': number;
     'attributes': { [key: string]: any; };
     'tags': Array<TagShortModel>;
     'links': Array<LinkPutModel>;

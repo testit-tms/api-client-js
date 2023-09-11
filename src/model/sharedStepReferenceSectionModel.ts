@@ -13,15 +13,15 @@
 import { RequestFile } from './models';
 
 export class SharedStepReferenceSectionModel {
-    'id'?: string;
-    'name'?: string;
-    'hasThisSharedStepAsPrecondition'?: boolean;
-    'hasThisSharedStepAsPostcondition'?: boolean;
-    'createdById'?: string;
+    'id': string;
+    'name'?: string | null;
+    'hasThisSharedStepAsPrecondition': boolean;
+    'hasThisSharedStepAsPostcondition': boolean;
+    'createdById': string;
     'modifiedById'?: string | null;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

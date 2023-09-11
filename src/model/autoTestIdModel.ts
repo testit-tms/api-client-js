@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class AutoTestIdModel {
-    'id'?: string;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 

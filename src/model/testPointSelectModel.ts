@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { ApiV2TestPointsSearchPostRequest } from './apiV2TestPointsSearchPostRequest';
-import { TestPointSelectModelExtractionModel } from './testPointSelectModelExtractionModel';
+import { TestPointFilterModel } from './testPointFilterModel';
+import { TestPointsExtractionModel } from './testPointsExtractionModel';
 
 export class TestPointSelectModel {
-    'filter'?: ApiV2TestPointsSearchPostRequest;
-    'extractionModel'?: TestPointSelectModelExtractionModel;
+    'filter'?: TestPointFilterModel | null;
+    'extractionModel'?: TestPointsExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,12 +24,12 @@ export class TestPointSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "ApiV2TestPointsSearchPostRequest"
+            "type": "TestPointFilterModel"
         },
         {
             "name": "extractionModel",
             "baseName": "extractionModel",
-            "type": "TestPointSelectModelExtractionModel"
+            "type": "TestPointsExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

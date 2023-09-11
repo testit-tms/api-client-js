@@ -16,11 +16,11 @@ export class CustomAttributeOptionModel {
     /**
     * Unique ID of the attribute option
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the attributes option is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Value of the attribute option
     */
@@ -28,7 +28,7 @@ export class CustomAttributeOptionModel {
     /**
     * Indicates if the attribute option is used by default
     */
-    'isDefault'?: boolean;
+    'isDefault': boolean;
 
     static discriminator: string | undefined = undefined;
 

@@ -11,6 +11,8 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentModel } from './attachmentModel';
+import { LinkModel } from './linkModel';
 import { TestResultV2GetModel } from './testResultV2GetModel';
 import { TestRunState } from './testRunState';
 
@@ -21,17 +23,19 @@ export class TestRunV2GetModel {
     /**
     * This property is used to link test run with project
     */
-    'projectId'?: string;
+    'projectId': string;
     /**
     * This property is used to link test run with test plan
     */
     'testPlanId'?: string | null;
     'testResults'?: Array<TestResultV2GetModel> | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'createdByUserName'?: string | null;
+    'attachments'?: Array<AttachmentModel> | null;
+    'links'?: Array<LinkModel> | null;
     'id': string;
     'name': string;
     'description'?: string | null;
@@ -97,6 +101,16 @@ export class TestRunV2GetModel {
             "name": "createdByUserName",
             "baseName": "createdByUserName",
             "type": "string"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkModel>"
         },
         {
             "name": "id",

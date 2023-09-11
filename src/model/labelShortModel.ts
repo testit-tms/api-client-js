@@ -13,9 +13,12 @@
 import { RequestFile } from './models';
 
 export class LabelShortModel {
-    'globalId'?: number;
     /**
-    * Label name.
+    * Global ID of the label
+    */
+    'globalId': number;
+    /**
+    * Name of the label
     */
     'name': string;
 

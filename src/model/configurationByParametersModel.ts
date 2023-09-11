@@ -16,7 +16,7 @@ export class ConfigurationByParametersModel {
     /**
     * This property is used to link configuration with project
     */
-    'projectId'?: string;
+    'projectId': string;
     'parameterIds': Set<string>;
 
     static discriminator: string | undefined = undefined;

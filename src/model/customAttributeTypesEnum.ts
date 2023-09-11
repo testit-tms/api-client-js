@@ -17,5 +17,6 @@ export enum CustomAttributeTypesEnum {
     Datetime = <any> 'datetime',
     Options = <any> 'options',
     User = <any> 'user',
-    MultipleOptions = <any> 'multipleOptions'
+    MultipleOptions = <any> 'multipleOptions',
+    Checkbox = <any> 'checkbox'
 }

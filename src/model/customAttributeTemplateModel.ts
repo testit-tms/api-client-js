@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class CustomAttributeTemplateModel {
-    'id'?: string;
-    'isDeleted'?: boolean;
+    'id': string;
+    'isDeleted': boolean;
     /**
     * Custom attributes template name
     */

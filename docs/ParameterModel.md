@@ -3,13 +3,13 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **createdDate** | **Date** |  | [optional] [default to null] |
+| **createdDate** | **Date** |  | [default to null] |
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [optional] [default to null] |
+| **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [optional] [default to null] |
-| **parameterKeyId** | **UUID** |  | [optional] [default to null] |
-| **id** | **UUID** |  | [optional] [default to null] |
+| **isDeleted** | **Boolean** |  | [default to null] |
+| **parameterKeyId** | **UUID** |  | [default to null] |
+| **id** | **UUID** |  | [default to null] |
 | **value** | **String** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 

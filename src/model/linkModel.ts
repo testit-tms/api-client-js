@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { LinkType } from './linkType';
 
 export class LinkModel {
-    'id'?: string;
+    'id': string;
     /**
     * Link name.
     */
@@ -28,7 +28,7 @@ export class LinkModel {
     */
     'description'?: string | null;
     'type'?: LinkType | null;
-    'hasInfo'?: boolean;
+    'hasInfo': boolean;
 
     static discriminator: string | undefined = undefined;
 

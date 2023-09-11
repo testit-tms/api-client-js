@@ -13,8 +13,9 @@
 import { RequestFile } from './models';
 import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
 import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
+import { TestSuiteWorkItemsSearchModelDuration } from './testSuiteWorkItemsSearchModelDuration';
+import { TestSuiteWorkItemsSearchModelMedianDuration } from './testSuiteWorkItemsSearchModelMedianDuration';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
-import { WorkItemFilterModelDuration } from './workItemFilterModelDuration';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -84,7 +85,8 @@ export class WorkItemSelectModelFilter {
     'types'?: Set<WorkItemEntityTypes> | null;
     'createdDate'?: TestPointFilterModelWorkItemCreatedDate | null;
     'modifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
-    'duration'?: WorkItemFilterModelDuration | null;
+    'duration'?: TestSuiteWorkItemsSearchModelDuration | null;
+    'medianDuration'?: TestSuiteWorkItemsSearchModelMedianDuration | null;
     /**
     * Is result must consist of only manual/automated work items
     */
@@ -189,7 +191,12 @@ export class WorkItemSelectModelFilter {
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "WorkItemFilterModelDuration"
+            "type": "TestSuiteWorkItemsSearchModelDuration"
+        },
+        {
+            "name": "medianDuration",
+            "baseName": "medianDuration",
+            "type": "TestSuiteWorkItemsSearchModelMedianDuration"
         },
         {
             "name": "isAutomated",

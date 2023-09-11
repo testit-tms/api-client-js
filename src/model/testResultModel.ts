@@ -18,10 +18,11 @@ import { LinkModel } from './linkModel';
 import { StepCommentModel } from './stepCommentModel';
 import { StepResultModel } from './stepResultModel';
 import { TestPointPutModel } from './testPointPutModel';
+import { TestResultOutcome } from './testResultOutcome';
 
 export class TestResultModel {
     'autoTestId'?: string | null;
-    'configurationId'?: string;
+    'configurationId': string;
     'startedOn'?: Date | null;
     'completedOn'?: Date | null;
     'durationInMs'?: number | null;
@@ -30,28 +31,28 @@ export class TestResultModel {
     'message'?: string | null;
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
-    'testPointId'?: string;
-    'testRunId'?: string;
+    'testPointId': string;
+    'testRunId': string;
     'testPoint'?: TestPointPutModel | null;
     'autoTest'?: AutoTestModel | null;
     'autoTestStepResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
     'setupResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
     'teardownResults'?: Array<AttachmentModelAutoTestStepResultsModel> | null;
-    'workItemVersionId'?: string;
+    'workItemVersionId': string;
     'workItemVersionNumber'?: number | null;
     'parameters'?: { [key: string]: string; } | null;
     'properties'?: { [key: string]: string; } | null;
-    'id'?: string;
-    'createdDate'?: Date;
+    'id': string;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'stepComments'?: Array<StepCommentModel> | null;
-    'failureClassIds'?: Array<string>;
-    'outcome'?: string;
+    'failureClassIds'?: Array<string> | null;
+    'outcome'?: TestResultOutcome | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'stepResults'?: Array<StepResultModel>;
+    'stepResults'?: Array<StepResultModel> | null;
     'attachments'?: Array<AttachmentModel> | null;
 
     static discriminator: string | undefined = undefined;
@@ -200,7 +201,7 @@ export class TestResultModel {
         {
             "name": "outcome",
             "baseName": "outcome",
-            "type": "string"
+            "type": "TestResultOutcome"
         },
         {
             "name": "comment",
@@ -228,3 +229,5 @@ export class TestResultModel {
     }
 }
 
+export namespace TestResultModel {
+}

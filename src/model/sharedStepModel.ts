@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 import { StepModel } from './stepModel';
 
 export class SharedStepModel {
-    'versionId'?: string;
-    'globalId'?: number;
-    'name'?: string;
-    'steps'?: Array<StepModel>;
-    'isDeleted'?: boolean;
+    'versionId': string;
+    'globalId': number;
+    'name'?: string | null;
+    'steps'?: Array<StepModel> | null;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

@@ -16,11 +16,11 @@ export class WorkItemVersionModel {
     /**
     * used for versioning changes in workitem
     */
-    'versionId'?: string;
+    'versionId': string;
     /**
     * used for define chronology of workitem state in each version
     */
-    'versionNumber'?: number;
+    'versionNumber': number;
     'modifiedDate'?: Date | null;
     'modifiedById'?: string | null;
 

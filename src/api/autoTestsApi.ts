@@ -914,13 +914,14 @@ export class AutoTestsApi {
      * @param flaky Is autotest marked as \&quot;Flaky\&quot;
      * @param includeSteps If result must also include autotest steps
      * @param includeLabels If result must also include autotest labels
+     * @param externalKey External key of autotest
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getAllAutoTests (projectId?: string, externalId?: string, globalId?: number, namespace?: string, isNamespaceNull?: boolean, includeEmptyNamespaces?: boolean, className?: string, isClassnameNull?: boolean, includeEmptyClassNames?: boolean, isDeleted?: boolean, deleted?: boolean, labels?: Array<string>, stabilityMinimal?: number, minStability?: number, stabilityMaximal?: number, maxStability?: number, isFlaky?: boolean, flaky?: boolean, includeSteps?: boolean, includeLabels?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async getAllAutoTests (projectId?: string, externalId?: string, globalId?: number, namespace?: string, isNamespaceNull?: boolean, includeEmptyNamespaces?: boolean, className?: string, isClassnameNull?: boolean, includeEmptyClassNames?: boolean, isDeleted?: boolean, deleted?: boolean, labels?: Array<string>, stabilityMinimal?: number, minStability?: number, stabilityMaximal?: number, maxStability?: number, isFlaky?: boolean, flaky?: boolean, includeSteps?: boolean, includeLabels?: boolean, externalKey?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1011,6 +1012,10 @@ export class AutoTestsApi {
 
         if (includeLabels !== undefined) {
             localVarQueryParameters['includeLabels'] = ObjectSerializer.serialize(includeLabels, "boolean");
+        }
+
+        if (externalKey !== undefined) {
+            localVarQueryParameters['externalKey'] = ObjectSerializer.serialize(externalKey, "string");
         }
 
         if (skip !== undefined) {

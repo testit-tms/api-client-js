@@ -11,6 +11,8 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentPutModel } from './attachmentPutModel';
+import { LinkPostModel } from './linkPostModel';
 
 export class CreateAndFillByWorkItemsRequest {
     /**
@@ -41,6 +43,14 @@ export class CreateAndFillByWorkItemsRequest {
     * Specifies the test run launch source.
     */
     'launchSource'?: string | null;
+    /**
+    * Collection of attachment ids to relate to the test run
+    */
+    'attachments'?: Array<AttachmentPutModel> | null;
+    /**
+    * Collection of links to relate to the test run
+    */
+    'links'?: Array<LinkPostModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -79,6 +89,16 @@ export class CreateAndFillByWorkItemsRequest {
             "name": "launchSource",
             "baseName": "launchSource",
             "type": "string"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentPutModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkPostModel>"
         }    ];
 
     static getAttributeTypeMap() {

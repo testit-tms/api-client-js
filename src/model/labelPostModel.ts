@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class LabelPostModel {
     /**
-    * Label name.
+    * Name of the label
     */
     'name': string;
 

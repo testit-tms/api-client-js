@@ -13,12 +13,12 @@
 import { RequestFile } from './models';
 
 export class UserRankModel {
-    'score'?: number;
-    'workItemsCreated'?: number;
-    'passedTestPoints'?: number;
-    'failedTestPoints'?: number;
-    'skippedTestPoints'?: number;
-    'blockedTestPoints'?: number;
+    'score': number;
+    'workItemsCreated': number;
+    'passedTestPoints': number;
+    'failedTestPoints': number;
+    'skippedTestPoints': number;
+    'blockedTestPoints': number;
 
     static discriminator: string | undefined = undefined;
 

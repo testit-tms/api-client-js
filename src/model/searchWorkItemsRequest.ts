@@ -11,48 +11,47 @@
  */
 
 import { RequestFile } from './models';
-import { TestSuiteWorkItemsSearchModelCreatedDate } from './testSuiteWorkItemsSearchModelCreatedDate';
+import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
+import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
 import { TestSuiteWorkItemsSearchModelDuration } from './testSuiteWorkItemsSearchModelDuration';
-import { TestSuiteWorkItemsSearchModelModifiedDate } from './testSuiteWorkItemsSearchModelModifiedDate';
+import { TestSuiteWorkItemsSearchModelMedianDuration } from './testSuiteWorkItemsSearchModelMedianDuration';
+import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
 export class SearchWorkItemsRequest {
     /**
+    * Collection of tags
+    */
+    'tagNames'?: Set<string> | null;
+    /**
+    * Collection of types of work item  <br>Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    */
+    'entityTypes'?: Set<WorkItemEntityTypes> | null;
+    /**
+    * Name or identifier (UUID) of work item
+    */
+    'nameOrId'?: string | null;
+    /**
+    * Collection of identifiers of work items which need to be included in result regardless of filtering
+    */
+    'includeIds'?: Set<string> | null;
+    /**
+    * Collection of identifiers of work items which need to be excluded from result regardless of filtering
+    */
+    'excludeIds'?: Set<string> | null;
+    /**
     * Name of work item
     */
     'name'?: string | null;
     /**
+    * Specifies a work item unique IDs to search for
+    */
+    'ids'?: Set<string> | null;
+    /**
     * Collection of global (integer) identifiers
     */
     'globalIds'?: Set<number> | null;
-    /**
-    * Collection of section identifiers
-    */
-    'sectionIds'?: Set<string> | null;
-    /**
-    * Collection of priorities of work item
-    */
-    'priorities'?: Set<WorkItemPriorityModel> | null;
-    /**
-    * Is result must consist of only manual/automated work items
-    */
-    'isAutomated'?: boolean | null;
-    /**
-    * Collection of states of work item
-    */
-    'states'?: Set<WorkItemStates> | null;
-    'duration'?: TestSuiteWorkItemsSearchModelDuration | null;
-    'createdDate'?: TestSuiteWorkItemsSearchModelCreatedDate | null;
-    'modifiedDate'?: TestSuiteWorkItemsSearchModelModifiedDate | null;
-    /**
-    * Collection of identifiers of users who created work item
-    */
-    'createdByIds'?: Set<string> | null;
-    /**
-    * Collection of identifiers of users who applied last modification to work item
-    */
-    'modifiedByIds'?: Set<string> | null;
     /**
     * Custom attributes of work item
     */
@@ -62,71 +61,92 @@ export class SearchWorkItemsRequest {
     */
     'isDeleted'?: boolean | null;
     /**
+    * Collection of project identifiers
+    */
+    'projectIds'?: Set<string> | null;
+    /**
+    * Collection of section identifiers
+    */
+    'sectionIds'?: Set<string> | null;
+    /**
+    * Collection of identifiers of users who created work item
+    */
+    'createdByIds'?: Set<string> | null;
+    /**
+    * Collection of identifiers of users who applied last modification to work item
+    */
+    'modifiedByIds'?: Set<string> | null;
+    /**
+    * Collection of states of work item
+    */
+    'states'?: Set<WorkItemStates> | null;
+    /**
+    * Collection of priorities of work item
+    */
+    'priorities'?: Set<WorkItemPriorityModel> | null;
+    /**
+    * Collection of types of work item
+    */
+    'types'?: Set<WorkItemEntityTypes> | null;
+    'createdDate'?: TestPointFilterModelWorkItemCreatedDate | null;
+    'modifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
+    'duration'?: TestSuiteWorkItemsSearchModelDuration | null;
+    'medianDuration'?: TestSuiteWorkItemsSearchModelMedianDuration | null;
+    /**
+    * Is result must consist of only manual/automated work items
+    */
+    'isAutomated'?: boolean | null;
+    /**
     * Collection of tags
     */
-    'tagNames'?: Set<string> | null;
+    'tags'?: Set<string> | null;
     /**
-    * Collection of types of work item  <br>Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    * Collection of identifiers of linked autotests
     */
-    'entityTypes'?: Set<string> | null;
+    'autoTestIds'?: Set<string> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "tagNames",
+            "baseName": "tagNames",
+            "type": "Set<string>"
+        },
+        {
+            "name": "entityTypes",
+            "baseName": "entityTypes",
+            "type": "Set<WorkItemEntityTypes>"
+        },
+        {
+            "name": "nameOrId",
+            "baseName": "nameOrId",
+            "type": "string"
+        },
+        {
+            "name": "includeIds",
+            "baseName": "includeIds",
+            "type": "Set<string>"
+        },
+        {
+            "name": "excludeIds",
+            "baseName": "excludeIds",
+            "type": "Set<string>"
+        },
         {
             "name": "name",
             "baseName": "name",
             "type": "string"
         },
         {
+            "name": "ids",
+            "baseName": "ids",
+            "type": "Set<string>"
+        },
+        {
             "name": "globalIds",
             "baseName": "globalIds",
             "type": "Set<number>"
-        },
-        {
-            "name": "sectionIds",
-            "baseName": "sectionIds",
-            "type": "Set<string>"
-        },
-        {
-            "name": "priorities",
-            "baseName": "priorities",
-            "type": "Set<WorkItemPriorityModel>"
-        },
-        {
-            "name": "isAutomated",
-            "baseName": "isAutomated",
-            "type": "boolean"
-        },
-        {
-            "name": "states",
-            "baseName": "states",
-            "type": "Set<WorkItemStates>"
-        },
-        {
-            "name": "duration",
-            "baseName": "duration",
-            "type": "TestSuiteWorkItemsSearchModelDuration"
-        },
-        {
-            "name": "createdDate",
-            "baseName": "createdDate",
-            "type": "TestSuiteWorkItemsSearchModelCreatedDate"
-        },
-        {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "TestSuiteWorkItemsSearchModelModifiedDate"
-        },
-        {
-            "name": "createdByIds",
-            "baseName": "createdByIds",
-            "type": "Set<string>"
-        },
-        {
-            "name": "modifiedByIds",
-            "baseName": "modifiedByIds",
-            "type": "Set<string>"
         },
         {
             "name": "attributes",
@@ -139,13 +159,73 @@ export class SearchWorkItemsRequest {
             "type": "boolean"
         },
         {
-            "name": "tagNames",
-            "baseName": "tagNames",
+            "name": "projectIds",
+            "baseName": "projectIds",
             "type": "Set<string>"
         },
         {
-            "name": "entityTypes",
-            "baseName": "entityTypes",
+            "name": "sectionIds",
+            "baseName": "sectionIds",
+            "type": "Set<string>"
+        },
+        {
+            "name": "createdByIds",
+            "baseName": "createdByIds",
+            "type": "Set<string>"
+        },
+        {
+            "name": "modifiedByIds",
+            "baseName": "modifiedByIds",
+            "type": "Set<string>"
+        },
+        {
+            "name": "states",
+            "baseName": "states",
+            "type": "Set<WorkItemStates>"
+        },
+        {
+            "name": "priorities",
+            "baseName": "priorities",
+            "type": "Set<WorkItemPriorityModel>"
+        },
+        {
+            "name": "types",
+            "baseName": "types",
+            "type": "Set<WorkItemEntityTypes>"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "TestPointFilterModelWorkItemCreatedDate"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "TestPointFilterModelWorkItemModifiedDate"
+        },
+        {
+            "name": "duration",
+            "baseName": "duration",
+            "type": "TestSuiteWorkItemsSearchModelDuration"
+        },
+        {
+            "name": "medianDuration",
+            "baseName": "medianDuration",
+            "type": "TestSuiteWorkItemsSearchModelMedianDuration"
+        },
+        {
+            "name": "isAutomated",
+            "baseName": "isAutomated",
+            "type": "boolean"
+        },
+        {
+            "name": "tags",
+            "baseName": "tags",
+            "type": "Set<string>"
+        },
+        {
+            "name": "autoTestIds",
+            "baseName": "autoTestIds",
             "type": "Set<string>"
         }    ];
 

@@ -20,15 +20,15 @@ export class TestPointShortGetModel {
     /**
     * Unique ID of the test point
     */
-    'id'?: string;
+    'id': string;
     /**
     * Creation date of the test point
     */
-    'createdDate'?: Date;
+    'createdDate': Date;
     /**
     * Unique ID of the test point creator
     */
-    'createdById'?: string;
+    'createdById': string;
     /**
     * Last modification date of the test point
     */
@@ -48,53 +48,57 @@ export class TestPointShortGetModel {
     /**
     * Collection of attributes of work item the test point represents
     */
-    'attributes'?: { [key: string]: any; };
+    'attributes'?: { [key: string]: any; } | null;
     /**
     * Collection of the test point tags
     */
-    'tags'?: Array<string>;
+    'tags'?: Array<string> | null;
     /**
     * Collection of the test point links
     */
-    'links'?: Array<string>;
+    'links'?: Array<string> | null;
     /**
     * Unique ID of test suite the test point assigned to
     */
-    'testSuiteId'?: string;
+    'testSuiteId': string;
     /**
     * Unique ID of work item the test point represents
     */
-    'workItemId'?: string;
+    'workItemId': string;
     /**
     * Global ID of work item the test point represents
     */
-    'workItemGlobalId'?: number;
+    'workItemGlobalId': number;
     /**
     * Unique ID of work item version the test point represents
     */
-    'workItemVersionId'?: string;
+    'workItemVersionId': string;
+    /**
+    * Median duration of work item the test point represents
+    */
+    'workItemMedianDuration'?: number | null;
     'status': TestPointStatus;
     'priority': WorkItemPriorityModel;
     /**
     * Indicates if the test point represents an autotest
     */
-    'isAutomated'?: boolean;
+    'isAutomated': boolean;
     /**
     * Name of the test point
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Unique ID of the test point configuration
     */
-    'configurationId'?: string;
+    'configurationId': string;
     /**
     * Duration of the test point
     */
-    'duration'?: number;
+    'duration': number;
     /**
     * Unique ID of section where work item the test point represents is located
     */
-    'sectionId'?: string;
+    'sectionId': string;
     /**
     * Name of section where work item the test point represents is located
     */
@@ -102,21 +106,21 @@ export class TestPointShortGetModel {
     /**
     * Unique ID of the test point project
     */
-    'projectId'?: string;
+    'projectId': string;
     'lastTestResult': TestPointShortGetModelLastTestResult;
     /**
     * Unique ID of work item iteration the test point represents
     */
-    'iterationId'?: string;
-    'workItemState'?: WorkItemState;
+    'iterationId': string;
+    'workItemState': WorkItemState;
     /**
     * Unique ID of the work item creator
     */
-    'workItemCreatedById'?: string;
+    'workItemCreatedById': string;
     /**
     * Creation date of work item
     */
-    'workItemCreatedDate'?: Date;
+    'workItemCreatedDate': Date;
     /**
     * Unique ID of the work item last editor
     */
@@ -198,6 +202,11 @@ export class TestPointShortGetModel {
             "name": "workItemVersionId",
             "baseName": "workItemVersionId",
             "type": "string"
+        },
+        {
+            "name": "workItemMedianDuration",
+            "baseName": "workItemMedianDuration",
+            "type": "number"
         },
         {
             "name": "status",

@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class GuidChangedFieldViewModel {
-    'oldValue'?: string;
-    'newValue'?: string;
+    'oldValue': string;
+    'newValue': string;
 
     static discriminator: string | undefined = undefined;
 

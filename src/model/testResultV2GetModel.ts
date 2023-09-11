@@ -20,9 +20,9 @@ import { TestResultConfiguration } from './testResultConfiguration';
 export class TestResultV2GetModel {
     'configuration'?: TestResultConfiguration | null;
     'autoTest'?: AutoTestRelatedToTestResult | null;
-    'id'?: string;
-    'configurationId'?: string;
-    'workItemVersionId'?: string;
+    'id': string;
+    'configurationId': string;
+    'workItemVersionId': string;
     'autoTestId'?: string | null;
     'message'?: string | null;
     'traces'?: string | null;
@@ -32,11 +32,11 @@ export class TestResultV2GetModel {
     'stoppedByUserId'?: string | null;
     'testPointId'?: string | null;
     'testPoint'?: TestPointRelatedToTestResult | null;
-    'testRunId'?: string;
+    'testRunId': string;
     /**
     * Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped
     */
-    'outcome'?: string;
+    'outcome'?: string | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
     'attachments'?: Array<AttachmentModel> | null;

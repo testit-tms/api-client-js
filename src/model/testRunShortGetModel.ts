@@ -18,27 +18,28 @@ export class TestRunShortGetModel {
     /**
     * Unique ID of the test run
     */
-    'id'?: string;
+    'id': string;
     /**
     * Name of the test run
     */
-    'name'?: string;
-    /**
-    * Unique ID of project where test run is located
-    */
-    'projectId'?: string;
+    'name'?: string | null;
+    'state': TestRunState;
     /**
     * Date when the test run was created
     */
-    'createdDate'?: Date;
+    'createdDate': Date;
+    /**
+    * Date when the test run was started
+    */
+    'startedDate'?: Date | null;
+    /**
+    * Completion date of the test run
+    */
+    'completedDate'?: Date | null;
     /**
     * Unique ID of user who created the test run
     */
-    'createdById'?: string;
-    /**
-    * Date when the test run was modified last time
-    */
-    'modifiedDate'?: Date | null;
+    'createdById': string;
     /**
     * Unique ID of user who modified the test run last time
     */
@@ -46,17 +47,12 @@ export class TestRunShortGetModel {
     /**
     * Is the test run is deleted
     */
-    'isDeleted'?: boolean;
-    'state': TestRunState;
+    'isDeleted': boolean;
     /**
-    * Date when the test run was started
+    * Number of AutoTests run in the test run
     */
-    'startedDate'?: Date | null;
-    /**
-    * Number of autotests run in the test run
-    */
-    'autotestsCount'?: number;
-    'statistics': TestRunShortGetModelStatistics;
+    'autoTestsCount': number;
+    'statistics'?: TestRunShortGetModelStatistics | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -72,9 +68,9 @@ export class TestRunShortGetModel {
             "type": "string"
         },
         {
-            "name": "projectId",
-            "baseName": "projectId",
-            "type": "string"
+            "name": "state",
+            "baseName": "state",
+            "type": "TestRunState"
         },
         {
             "name": "createdDate",
@@ -82,14 +78,19 @@ export class TestRunShortGetModel {
             "type": "Date"
         },
         {
+            "name": "startedDate",
+            "baseName": "startedDate",
+            "type": "Date"
+        },
+        {
+            "name": "completedDate",
+            "baseName": "completedDate",
+            "type": "Date"
+        },
+        {
             "name": "createdById",
             "baseName": "createdById",
             "type": "string"
-        },
-        {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "Date"
         },
         {
             "name": "modifiedById",
@@ -102,18 +103,8 @@ export class TestRunShortGetModel {
             "type": "boolean"
         },
         {
-            "name": "state",
-            "baseName": "state",
-            "type": "TestRunState"
-        },
-        {
-            "name": "startedDate",
-            "baseName": "startedDate",
-            "type": "Date"
-        },
-        {
-            "name": "autotestsCount",
-            "baseName": "autotestsCount",
+            "name": "autoTestsCount",
+            "baseName": "autoTestsCount",
             "type": "number"
         },
         {

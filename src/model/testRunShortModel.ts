@@ -15,18 +15,18 @@ import { TestRunState } from './testRunState';
 
 export class TestRunShortModel {
     'stateName': TestRunState;
-    'projectId'?: string;
+    'projectId': string;
     'testPlanId'?: string | null;
     'name'?: string | null;
     'description'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

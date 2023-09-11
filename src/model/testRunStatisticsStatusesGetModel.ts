@@ -16,23 +16,23 @@ export class TestRunStatisticsStatusesGetModel {
     /**
     * Number of test results which is running currently
     */
-    'inProgress'?: number;
+    'inProgress': number;
     /**
     * Number of test results which successfully passed
     */
-    'passed'?: number;
+    'passed': number;
     /**
     * Number of test results which failed with an error
     */
-    'failed'?: number;
+    'failed': number;
     /**
     * Number of test results which did not run and were skipped
     */
-    'skipped'?: number;
+    'skipped': number;
     /**
     * Number of test results which cannot be launched
     */
-    'blocked'?: number;
+    'blocked': number;
 
     static discriminator: string | undefined = undefined;
 

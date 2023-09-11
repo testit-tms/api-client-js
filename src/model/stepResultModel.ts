@@ -15,8 +15,8 @@ import { SharedStepResultModel } from './sharedStepResultModel';
 import { StepCommentModel } from './stepCommentModel';
 
 export class StepResultModel {
-    'stepId'?: string;
-    'outcome'?: string;
+    'stepId': string;
+    'outcome'?: string | null;
     'sharedStepVersionId'?: string | null;
     'sharedStepResults'?: Array<SharedStepResultModel> | null;
     'comment'?: StepCommentModel | null;

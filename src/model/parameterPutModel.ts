@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class ParameterPutModel {
-    'id'?: string;
+    'id': string;
     'value': string;
     'name': string;
 

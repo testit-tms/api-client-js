@@ -14,20 +14,20 @@ import { RequestFile } from './models';
 import { NotificationTypeModel } from './notificationTypeModel';
 
 export class NotificationModel {
-    'id'?: string;
+    'id': string;
     'createdDate'?: Date | null;
-    'isRead'?: boolean;
-    'entityId'?: string;
+    'isRead': boolean;
+    'entityId': string;
     'notificationType': NotificationTypeModel;
     'projectGlobalId'?: number | null;
     'projectName'?: string | null;
-    'testPlanGlobalId'?: number;
-    'testPlanName'?: string;
+    'testPlanGlobalId': number;
+    'testPlanName'?: string | null;
     'workitemGlobalId'?: number | null;
-    'comment'?: string;
-    'workItemName'?: string;
+    'comment'?: string | null;
+    'workItemName'?: string | null;
     'attributeName'?: string | null;
-    'createdById'?: string;
+    'createdById': string;
 
     static discriminator: string | undefined = undefined;
 

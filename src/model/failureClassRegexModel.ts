@@ -13,16 +13,16 @@
 import { RequestFile } from './models';
 
 export class FailureClassRegexModel {
-    'regexText'?: string;
+    'regexText'?: string | null;
     'failureClassId'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

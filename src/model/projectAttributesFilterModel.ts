@@ -17,7 +17,7 @@ export class ProjectAttributesFilterModel {
     /**
     * Specifies an attribute name to search for
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Specifies an attribute mandatory status to search for
     */
@@ -29,7 +29,7 @@ export class ProjectAttributesFilterModel {
     /**
     * Specifies an attribute types to search for
     */
-    'types'?: Set<CustomAttributeTypesEnum>;
+    'types'?: Set<CustomAttributeTypesEnum> | null;
     /**
     * Specifies an attribute enabled status to search for
     */

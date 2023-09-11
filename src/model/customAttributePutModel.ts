@@ -18,7 +18,7 @@ export class CustomAttributePutModel {
     /**
     * Unique ID of the attribute
     */
-    'id'?: string;
+    'id': string;
     /**
     * Collection of the attribute options  <br />  Available for attributes of type `options` and `multiple options` only
     */
@@ -27,7 +27,7 @@ export class CustomAttributePutModel {
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Name of the attribute
     */
@@ -35,15 +35,15 @@ export class CustomAttributePutModel {
     /**
     * Indicates if the attribute is enabled
     */
-    'isEnabled'?: boolean;
+    'isEnabled': boolean;
     /**
     * Indicates if the attribute value is mandatory to specify
     */
-    'isRequired'?: boolean;
+    'isRequired': boolean;
     /**
     * Indicates if the attribute is available across all projects
     */
-    'isGlobal'?: boolean;
+    'isGlobal': boolean;
 
     static discriminator: string | undefined = undefined;
 

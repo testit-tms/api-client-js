@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class TestPlanGroupByStatus {
-    'status'?: string;
-    'value'?: number;
+    'status'?: string | null;
+    'value': number;
 
     static discriminator: string | undefined = undefined;
 

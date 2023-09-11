@@ -73,6 +73,10 @@ export class AutotestFilterModel {
     */
     'isEmptyClassName'?: boolean | null;
     'lastTestResultOutcome'?: AutotestResultOutcome | null;
+    /**
+    * Specifies an autotest external key to search for
+    */
+    'externalKey'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -161,6 +165,11 @@ export class AutotestFilterModel {
             "name": "lastTestResultOutcome",
             "baseName": "lastTestResultOutcome",
             "type": "AutotestResultOutcome"
+        },
+        {
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

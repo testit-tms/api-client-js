@@ -13,18 +13,18 @@
 import { RequestFile } from './models';
 
 export class GetXlsxTestPointsByTestPlanModel {
-    'includeName'?: boolean;
-    'includeSection'?: boolean;
-    'includePriority'?: boolean;
-    'includeAutomated'?: boolean;
-    'includeStatus'?: boolean;
-    'includeDuration'?: boolean;
-    'includeCreationDate'?: boolean;
-    'includeAuthor'?: boolean;
-    'includeModificationDate'?: boolean;
-    'includeModifiedBy'?: boolean;
-    'includeTags'?: boolean;
-    'includeIterations'?: boolean;
+    'includeName': boolean;
+    'includeSection': boolean;
+    'includePriority': boolean;
+    'includeAutomated': boolean;
+    'includeStatus': boolean;
+    'includeDuration': boolean;
+    'includeCreationDate': boolean;
+    'includeAuthor': boolean;
+    'includeModificationDate': boolean;
+    'includeModifiedBy': boolean;
+    'includeTags': boolean;
+    'includeIterations': boolean;
     'customAttributesIds'?: Array<string> | null;
     'configurationIds'?: Array<string> | null;
 

@@ -26,13 +26,13 @@ export class TestPlanModel {
     'completedOn'?: Date | null;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     /**
     * Used for search Test plan
     */
-    'globalId'?: number;
-    'isDeleted'?: boolean;
+    'globalId': number;
+    'isDeleted': boolean;
     'lockedDate'?: Date | null;
     'id': string;
     'lockedById'?: string | null;
@@ -51,7 +51,7 @@ export class TestPlanModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; };
+    'attributes'?: { [key: string]: any; } | null;
 
     static discriminator: string | undefined = undefined;
 

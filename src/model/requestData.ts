@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 
 export class RequestData {
     'uri'?: string | null;
-    'statusCode'?: number;
+    'statusCode': number;
     'requestBody'?: string | null;
-    'requestMeta'?: string;
-    'responseBody'?: string;
-    'responseMeta'?: string;
+    'requestMeta': string;
+    'responseBody': string;
+    'responseMeta': string;
 
     static discriminator: string | undefined = undefined;
 

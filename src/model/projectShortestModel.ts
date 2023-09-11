@@ -16,19 +16,19 @@ export class ProjectShortestModel {
     /**
     * Unique ID of project
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates whether the project is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Global ID of project
     */
-    'globalId'?: number;
+    'globalId': number;
     /**
     * Name of project
     */
-    'name'?: string;
+    'name'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

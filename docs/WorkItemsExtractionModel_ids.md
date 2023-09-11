@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **include** | **Set** |  | [optional] [default to null] |
-| **exclude** | **Set** |  | [optional] [default to null] |
+| **include** | **List** |  | [optional] [default to null] |
+| **exclude** | **List** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

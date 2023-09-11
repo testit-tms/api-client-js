@@ -14,41 +14,41 @@ import { RequestFile } from './models';
 import { AutoTestModel } from './autoTestModel';
 import { TestPlanModel } from './testPlanModel';
 import { TestResultModel } from './testResultModel';
-import { TestRunModelAnalytic } from './testRunModelAnalytic';
+import { TestRunAnalyticResultModel } from './testRunAnalyticResultModel';
 import { TestRunState } from './testRunState';
 
 export class TestRunModel {
     'autoTests'?: Array<AutoTestModel> | null;
-    'autoTestsCount'?: number;
+    'autoTestsCount': number;
     'testSuiteIds'?: Array<string> | null;
-    'isAutomated'?: boolean;
-    'analytic'?: TestRunModelAnalytic;
+    'isAutomated': boolean;
+    'analytic'?: TestRunAnalyticResultModel | null;
     'testResults'?: Array<TestResultModel> | null;
     'testPlan'?: TestPlanModel | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'createdByUserName'?: string | null;
     'startedDate'?: Date | null;
     'completedDate'?: Date | null;
-    'build'?: string;
-    'description'?: string;
+    'build'?: string | null;
+    'description'?: string | null;
     'stateName': TestRunState;
-    'projectId'?: string;
+    'projectId': string;
     'testPlanId'?: string | null;
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
-    'name'?: string;
-    'launchSource'?: string;
+    'name'?: string | null;
+    'launchSource'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -76,7 +76,7 @@ export class TestRunModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestRunModelAnalytic"
+            "type": "TestRunAnalyticResultModel"
         },
         {
             "name": "testResults",

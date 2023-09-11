@@ -3,18 +3,18 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **includeName** | **Boolean** |  | [optional] [default to null] |
-| **includeSection** | **Boolean** |  | [optional] [default to null] |
-| **includePriority** | **Boolean** |  | [optional] [default to null] |
-| **includeAutomated** | **Boolean** |  | [optional] [default to null] |
-| **includeStatus** | **Boolean** |  | [optional] [default to null] |
-| **includeDuration** | **Boolean** |  | [optional] [default to null] |
-| **includeCreationDate** | **Boolean** |  | [optional] [default to null] |
-| **includeAuthor** | **Boolean** |  | [optional] [default to null] |
-| **includeModificationDate** | **Boolean** |  | [optional] [default to null] |
-| **includeModifiedBy** | **Boolean** |  | [optional] [default to null] |
-| **includeTags** | **Boolean** |  | [optional] [default to null] |
-| **includeIterations** | **Boolean** |  | [optional] [default to null] |
+| **includeName** | **Boolean** |  | [default to null] |
+| **includeSection** | **Boolean** |  | [default to null] |
+| **includePriority** | **Boolean** |  | [default to null] |
+| **includeAutomated** | **Boolean** |  | [default to null] |
+| **includeStatus** | **Boolean** |  | [default to null] |
+| **includeDuration** | **Boolean** |  | [default to null] |
+| **includeCreationDate** | **Boolean** |  | [default to null] |
+| **includeAuthor** | **Boolean** |  | [default to null] |
+| **includeModificationDate** | **Boolean** |  | [default to null] |
+| **includeModifiedBy** | **Boolean** |  | [default to null] |
+| **includeTags** | **Boolean** |  | [default to null] |
+| **includeIterations** | **Boolean** |  | [default to null] |
 | **customAttributesIds** | **List** |  | [optional] [default to null] |
 | **configurationIds** | **List** |  | [optional] [default to null] |
 

@@ -20,6 +20,7 @@
 | **className** | **String** | Specifies an autotest class name to search for | [optional] [default to null] |
 | **isEmptyClassName** | **Boolean** | Specifies an autotest class name presence status to search for | [optional] [default to null] |
 | **lastTestResultOutcome** | [**AutotestResultOutcome**](AutotestResultOutcome.md) |  | [optional] [default to null] |
+| **externalKey** | **String** | Specifies an autotest external key to search for | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

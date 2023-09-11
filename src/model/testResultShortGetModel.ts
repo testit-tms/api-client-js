@@ -11,61 +11,63 @@
  */
 
 import { RequestFile } from './models';
-import { AttachmentSubGetModel } from './attachmentSubGetModel';
+import { AttachmentModel } from './attachmentModel';
 import { AutotestResultReasonSubGetModel } from './autotestResultReasonSubGetModel';
 import { LinkSubGetModel } from './linkSubGetModel';
-import { TestResultOutcome } from './testResultOutcome';
 
 export class TestResultShortGetModel {
     /**
-    * Unique ID of test result
+    * Unique ID of the test result
     */
-    'id'?: string;
+    'id': string;
     /**
     * Name of autotest represented by the test result
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
-    * Global ID of autotest represented by test result
+    * Global ID of autotest represented by the test result
     */
-    'autotestGlobalId'?: number;
+    'autotestGlobalId': number;
     /**
-    * Unique ID of test run where test result is located
+    * Unique ID of test run where the test result is located
     */
-    'testRunId'?: string;
+    'testRunId': string;
     /**
-    * Unique ID of configuration which test result uses
+    * Unique ID of configuration which the test result uses
     */
-    'configurationId'?: string;
+    'configurationId': string;
     /**
-    * Name of configuration which test result uses
+    * Name of configuration which the test result uses
     */
-    'configurationName'?: string;
-    'outcome': TestResultOutcome;
+    'configurationName'?: string | null;
     /**
-    * Collection of result reasons which test result have
+    * Outcome of the test result
     */
-    'resultReasons'?: Array<AutotestResultReasonSubGetModel>;
+    'outcome'?: string | null;
     /**
-    * Comment to test result
+    * Collection of result reasons which the test result have
     */
-    'comment'?: string;
+    'resultReasons'?: Array<AutotestResultReasonSubGetModel> | null;
     /**
-    * Date when test result has been set
+    * Comment to the test result
     */
-    'date'?: Date;
+    'comment'?: string | null;
+    /**
+    * Date when the test result has been set
+    */
+    'date': Date;
     /**
     * Time which it took to run the test
     */
     'duration'?: number | null;
     /**
-    * Collection of links attached to test result
+    * Collection of links attached to the test result
     */
-    'links'?: Array<LinkSubGetModel>;
+    'links'?: Array<LinkSubGetModel> | null;
     /**
-    * Collection of files attached to test result
+    * Collection of files attached to the test result
     */
-    'attachments'?: Array<AttachmentSubGetModel>;
+    'attachments'?: Array<AttachmentModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -103,7 +105,7 @@ export class TestResultShortGetModel {
         {
             "name": "outcome",
             "baseName": "outcome",
-            "type": "TestResultOutcome"
+            "type": "string"
         },
         {
             "name": "resultReasons",
@@ -133,7 +135,7 @@ export class TestResultShortGetModel {
         {
             "name": "attachments",
             "baseName": "attachments",
-            "type": "Array<AttachmentSubGetModel>"
+            "type": "Array<AttachmentModel>"
         }    ];
 
     static getAttributeTypeMap() {
@@ -141,5 +143,3 @@ export class TestResultShortGetModel {
     }
 }
 
-export namespace TestResultShortGetModel {
-}

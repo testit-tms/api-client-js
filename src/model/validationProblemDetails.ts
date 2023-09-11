@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class ValidationProblemDetails extends null<String, any> {
-    'errors'?: { [key: string]: Array<string>; };
+    'errors': { [key: string]: Array<string>; };
     'type'?: string | null;
     'title'?: string | null;
     'status'?: number | null;

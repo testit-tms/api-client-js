@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class BooleanChangedFieldViewModel {
-    'oldValue'?: boolean;
-    'newValue'?: boolean;
+    'oldValue': boolean;
+    'newValue': boolean;
 
     static discriminator: string | undefined = undefined;
 

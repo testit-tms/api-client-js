@@ -18,22 +18,22 @@ export class ConfigurationModel {
     /**
     * This property is used to link configuration with project
     */
-    'projectId'?: string;
-    'isDefault'?: boolean;
+    'projectId': string;
+    'isDefault': boolean;
     'name'?: string | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'globalId'?: number;
+    'globalId': number;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

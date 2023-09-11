@@ -19,15 +19,15 @@ export class AutotestsSelectModelIncludes {
     /**
     * If autotest steps will be included
     */
-    'includeSteps'?: boolean;
+    'includeSteps': boolean;
     /**
     * If autotest links will be included
     */
-    'includeLinks'?: boolean;
+    'includeLinks': boolean;
     /**
     * If autotest labels will be included
     */
-    'includeLabels'?: boolean;
+    'includeLabels': boolean;
 
     static discriminator: string | undefined = undefined;
 

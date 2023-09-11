@@ -14,10 +14,10 @@ import { RequestFile } from './models';
 import { ShortConfiguration } from './shortConfiguration';
 
 export class TestSuiteChangeViewModel {
-    'id'?: string;
-    'name'?: string;
+    'id': string;
+    'name'?: string | null;
     'configurations'?: Array<ShortConfiguration> | null;
-    'workItemCount'?: number;
+    'workItemCount': number;
 
     static discriminator: string | undefined = undefined;
 

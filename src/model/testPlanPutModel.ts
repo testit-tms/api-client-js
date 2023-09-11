@@ -31,7 +31,7 @@ export class TestPlanPutModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; };
+    'attributes'?: { [key: string]: any; } | null;
 
     static discriminator: string | undefined = undefined;
 

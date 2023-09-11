@@ -15,12 +15,12 @@ import { AttachmentModel } from './attachmentModel';
 import { LinkModel } from './linkModel';
 
 export class LastTestResultModel {
-    'id'?: string;
-    'testRunId'?: string;
+    'id': string;
+    'testRunId': string;
     'autoTestId'?: string | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'workItemVersionId'?: string;
+    'workItemVersionId': string;
     'attachments'?: Array<AttachmentModel> | null;
 
     static discriminator: string | undefined = undefined;

@@ -18,12 +18,12 @@ import { LinkModel } from './linkModel';
 * Model of the test point last test result
 */
 export class TestPointShortGetModelLastTestResult {
-    'id'?: string;
-    'testRunId'?: string;
+    'id': string;
+    'testRunId': string;
     'autoTestId'?: string | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
-    'workItemVersionId'?: string;
+    'workItemVersionId': string;
     'attachments'?: Array<AttachmentModel> | null;
 
     static discriminator: string | undefined = undefined;
