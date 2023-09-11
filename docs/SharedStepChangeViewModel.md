@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
-| **globalId** | **Long** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
+| **globalId** | **Long** |  | [default to null] |
 | **name** | **String** |  | [optional] [default to null] |
 | **steps** | [**List**](WorkItemStepChangeViewModel.md) |  | [optional] [default to null] |
 

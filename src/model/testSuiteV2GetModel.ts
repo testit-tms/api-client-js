@@ -17,7 +17,7 @@ export class TestSuiteV2GetModel {
     /**
     * Unique ID of the test suite
     */
-    'id'?: string;
+    'id': string;
     /**
     * Date of the last refresh of the test suite
     */

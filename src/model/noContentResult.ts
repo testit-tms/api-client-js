@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class NoContentResult {
-    'statusCode'?: number;
+    'statusCode': number;
 
     static discriminator: string | undefined = undefined;
 

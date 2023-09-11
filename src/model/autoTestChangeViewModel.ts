@@ -13,10 +13,10 @@
 import { RequestFile } from './models';
 
 export class AutoTestChangeViewModel {
-    'id'?: string;
-    'projectId'?: string;
-    'externalId'?: string;
-    'globalId'?: number;
+    'id': string;
+    'projectId': string;
+    'externalId'?: string | null;
+    'globalId': number;
 
     static discriminator: string | undefined = undefined;
 

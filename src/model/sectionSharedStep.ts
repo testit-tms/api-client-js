@@ -17,11 +17,11 @@ import { StepModel } from './stepModel';
 * Nested shared steps are allowed
 */
 export class SectionSharedStep {
-    'versionId'?: string;
-    'globalId'?: number;
-    'name'?: string;
-    'steps'?: Array<StepModel>;
-    'isDeleted'?: boolean;
+    'versionId': string;
+    'globalId': number;
+    'name'?: string | null;
+    'steps'?: Array<StepModel> | null;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

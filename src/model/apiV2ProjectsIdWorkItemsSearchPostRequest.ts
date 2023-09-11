@@ -18,8 +18,8 @@ import { WorkItemSelectModelFilter } from './workItemSelectModelFilter';
 * Model containing options to filter work items
 */
 export class ApiV2ProjectsIdWorkItemsSearchPostRequest {
-    'filter'?: WorkItemSelectModelFilter;
-    'extractionModel'?: WorkItemSelectModelExtractionModel;
+    'filter'?: WorkItemSelectModelFilter | null;
+    'extractionModel'?: WorkItemSelectModelExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 

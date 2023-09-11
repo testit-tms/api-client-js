@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class TestResultChangeViewModel {
-    'testPointCount'?: number;
+    'testPointCount': number;
 
     static discriminator: string | undefined = undefined;
 

@@ -15,11 +15,11 @@ import { RequestFile } from './models';
 export class SectionModel {
     'projectId'?: string | null;
     'parentId'?: string | null;
-    'isDeleted'?: boolean;
-    'id'?: string;
-    'createdDate'?: Date;
+    'isDeleted': boolean;
+    'id': string;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'name': string;
 

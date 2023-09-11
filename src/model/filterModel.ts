@@ -11,25 +11,25 @@
  */
 
 import { RequestFile } from './models';
-import { FilterModelData } from './filterModelData';
+import { WorkItemSearchQueryModel } from './workItemSearchQueryModel';
 
 export class FilterModel {
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'data'?: FilterModelData;
-    'projectId'?: string;
+    'data'?: WorkItemSearchQueryModel | null;
+    'projectId': string;
     'fieldsToShow'?: any | null;
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -57,7 +57,7 @@ export class FilterModel {
         {
             "name": "data",
             "baseName": "data",
-            "type": "FilterModelData"
+            "type": "WorkItemSearchQueryModel"
         },
         {
             "name": "projectId",

@@ -20,7 +20,7 @@ export class CustomAttributeOptionPostModel {
     /**
     * Indicates if the attribute option is used by default
     */
-    'isDefault'?: boolean;
+    'isDefault': boolean;
 
     static discriminator: string | undefined = undefined;
 

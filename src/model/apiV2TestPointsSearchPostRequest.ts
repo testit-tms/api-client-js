@@ -15,6 +15,7 @@ import { TestPointFilterModelCreatedDate } from './testPointFilterModelCreatedDa
 import { TestPointFilterModelDuration } from './testPointFilterModelDuration';
 import { TestPointFilterModelModifiedDate } from './testPointFilterModelModifiedDate';
 import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
+import { TestPointFilterModelWorkItemMedianDuration } from './testPointFilterModelWorkItemMedianDuration';
 import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
@@ -23,23 +24,24 @@ export class ApiV2TestPointsSearchPostRequest {
     /**
     * Specifies a test point test plan IDS to search for
     */
-    'testPlanIds'?: Set<string> | null;
+    'testPlanIds'?: Array<string> | null;
     /**
     * Specifies a test point test suite IDs to search for
     */
-    'testSuiteIds'?: Set<string> | null;
+    'testSuiteIds'?: Array<string> | null;
     /**
     * Specifies a test point work item global IDs to search for
     */
-    'workItemGlobalIds'?: Set<number> | null;
+    'workItemGlobalIds'?: Array<number> | null;
+    'workItemMedianDuration'?: TestPointFilterModelWorkItemMedianDuration | null;
     /**
     * Specifies a test point statuses to search for
     */
-    'statuses'?: Set<TestPointStatus> | null;
+    'statuses'?: Array<TestPointStatus> | null;
     /**
     * Specifies a test point priorities to search for
     */
-    'priorities'?: Set<WorkItemPriorityModel> | null;
+    'priorities'?: Array<WorkItemPriorityModel> | null;
     /**
     * Specifies a test point automation status to search for
     */
@@ -51,30 +53,30 @@ export class ApiV2TestPointsSearchPostRequest {
     /**
     * Specifies a test point configuration IDs to search for
     */
-    'configurationIds'?: Set<string> | null;
+    'configurationIds'?: Array<string> | null;
     /**
     * Specifies a test point assigned user IDs to search for
     */
-    'testerIds'?: Set<string> | null;
+    'testerIds'?: Array<string> | null;
     'duration'?: TestPointFilterModelDuration | null;
     /**
     * Specifies a test point work item section IDs to search for
     */
-    'sectionIds'?: Set<string> | null;
+    'sectionIds'?: Array<string> | null;
     'createdDate'?: TestPointFilterModelCreatedDate | null;
     /**
     * Specifies a test point creator IDs to search for
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
     'modifiedDate'?: TestPointFilterModelModifiedDate | null;
     /**
     * Specifies a test point last editor IDs to search for
     */
-    'modifiedByIds'?: Set<string> | null;
+    'modifiedByIds'?: Array<string> | null;
     /**
     * Specifies a test point tags to search for
     */
-    'tags'?: Set<string> | null;
+    'tags'?: Array<string> | null;
     /**
     * Specifies a test point attributes to search for
     */
@@ -83,12 +85,12 @@ export class ApiV2TestPointsSearchPostRequest {
     /**
     * Specifies a work item creator IDs to search for
     */
-    'workItemCreatedByIds'?: Set<string> | null;
+    'workItemCreatedByIds'?: Array<string> | null;
     'workItemModifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
     /**
     * Specifies a work item last editor IDs to search for
     */
-    'workItemModifiedByIds'?: Set<string> | null;
+    'workItemModifiedByIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -96,27 +98,32 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "testPlanIds",
             "baseName": "testPlanIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "testSuiteIds",
             "baseName": "testSuiteIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "workItemGlobalIds",
             "baseName": "workItemGlobalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
+        },
+        {
+            "name": "workItemMedianDuration",
+            "baseName": "workItemMedianDuration",
+            "type": "TestPointFilterModelWorkItemMedianDuration"
         },
         {
             "name": "statuses",
             "baseName": "statuses",
-            "type": "Set<TestPointStatus>"
+            "type": "Array<TestPointStatus>"
         },
         {
             "name": "priorities",
             "baseName": "priorities",
-            "type": "Set<WorkItemPriorityModel>"
+            "type": "Array<WorkItemPriorityModel>"
         },
         {
             "name": "isAutomated",
@@ -131,12 +138,12 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "configurationIds",
             "baseName": "configurationIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "testerIds",
             "baseName": "testerIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "duration",
@@ -146,7 +153,7 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "sectionIds",
             "baseName": "sectionIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "createdDate",
@@ -156,7 +163,7 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedDate",
@@ -166,12 +173,12 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "attributes",
@@ -186,7 +193,7 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "workItemCreatedByIds",
             "baseName": "workItemCreatedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "workItemModifiedDate",
@@ -196,7 +203,7 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "workItemModifiedByIds",
             "baseName": "workItemModifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

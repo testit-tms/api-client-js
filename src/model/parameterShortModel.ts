@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class ParameterShortModel {
-    'id'?: string;
-    'parameterKeyId'?: string;
+    'id': string;
+    'parameterKeyId': string;
     'value': string;
     'name': string;
 

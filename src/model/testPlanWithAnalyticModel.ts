@@ -13,10 +13,10 @@
 import { RequestFile } from './models';
 import { TagShortModel } from './tagShortModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
-import { TestPlanWithAnalyticModelAnalytic } from './testPlanWithAnalyticModelAnalytic';
+import { TestPointAnalyticResult } from './testPointAnalyticResult';
 
 export class TestPlanWithAnalyticModel {
-    'analytic'?: TestPlanWithAnalyticModelAnalytic;
+    'analytic'?: TestPointAnalyticResult | null;
     'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
@@ -28,13 +28,13 @@ export class TestPlanWithAnalyticModel {
     'completedOn'?: Date | null;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     /**
     * Used for search Test plan
     */
-    'globalId'?: number;
-    'isDeleted'?: boolean;
+    'globalId': number;
+    'isDeleted': boolean;
     'lockedDate'?: Date | null;
     'id': string;
     'lockedById'?: string | null;
@@ -53,7 +53,7 @@ export class TestPlanWithAnalyticModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; };
+    'attributes'?: { [key: string]: any; } | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -61,7 +61,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestPlanWithAnalyticModelAnalytic"
+            "type": "TestPointAnalyticResult"
         },
         {
             "name": "status",

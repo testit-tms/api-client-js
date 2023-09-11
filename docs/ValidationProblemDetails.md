@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **errors** | [**Map**](array.md) |  | [optional] [default to null] |
+| **errors** | [**Map**](array.md) |  | [default to null] |
 | **type** | **String** |  | [optional] [default to null] |
 | **title** | **String** |  | [optional] [default to null] |
 | **status** | **Integer** |  | [optional] [default to null] |

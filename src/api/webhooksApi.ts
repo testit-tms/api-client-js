@@ -22,6 +22,7 @@ import { ProblemDetails } from '../model/problemDetails';
 import { RequestData } from '../model/requestData';
 import { WebHookEventType } from '../model/webHookEventType';
 import { WebHookModel } from '../model/webHookModel';
+import { WebhookVariablesType } from '../model/webhookVariablesType';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -545,8 +546,9 @@ export class WebhooksApi {
      * 
      * @summary Get special variables for webhook event type
      * @param eventType Webhook event type
+     * @param variablesType 
      */
-    public async apiV2WebhooksSpecialVariablesGet (eventType?: WebHookEventType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2WebhooksSpecialVariablesGet (eventType?: WebHookEventType, variablesType?: WebhookVariablesType, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/specialVariables';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -561,6 +563,10 @@ export class WebhooksApi {
 
         if (eventType !== undefined) {
             localVarQueryParameters['eventType'] = ObjectSerializer.serialize(eventType, "WebHookEventType");
+        }
+
+        if (variablesType !== undefined) {
+            localVarQueryParameters['variablesType'] = ObjectSerializer.serialize(variablesType, "WebhookVariablesType");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

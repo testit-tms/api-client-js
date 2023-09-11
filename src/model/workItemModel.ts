@@ -25,15 +25,15 @@ export class WorkItemModel {
     /**
     * used for versioning changes in workitem
     */
-    'versionId'?: string;
+    'versionId': string;
     /**
     * used for getting a median duration of all autotests related to this workitem
     */
-    'medianDuration'?: number;
-    'isDeleted'?: boolean;
-    'projectId'?: string;
+    'medianDuration': number;
+    'isDeleted': boolean;
+    'projectId': string;
     'entityTypeName': WorkItemEntityTypes;
-    'isAutomated'?: boolean;
+    'isAutomated': boolean;
     'autoTests'?: Array<AutoTestModel> | null;
     'attachments'?: Array<AttachmentModel> | null;
     'sectionPreconditionSteps'?: Array<StepModel> | null;
@@ -41,22 +41,22 @@ export class WorkItemModel {
     /**
     * used for define chronology of workitem state in each version
     */
-    'versionNumber'?: number;
+    'versionNumber': number;
     'iterations'?: Array<IterationModel> | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'globalId'?: number;
+    'globalId': number;
     'id': string;
-    'sectionId'?: string;
-    'description'?: string;
+    'sectionId': string;
+    'description'?: string | null;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
     'steps': Array<StepModel>;
     'preconditionSteps': Array<StepModel>;
     'postconditionSteps': Array<StepModel>;
-    'duration'?: number;
+    'duration': number;
     'attributes': { [key: string]: any; };
     'tags': Array<TagShortModel>;
     'links': Array<LinkModel>;

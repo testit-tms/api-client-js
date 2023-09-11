@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class SharedStepResultModel {
-    'stepId'?: string;
-    'outcome'?: string;
+    'stepId': string;
+    'outcome'?: string | null;
 
     static discriminator: string | undefined = undefined;
 

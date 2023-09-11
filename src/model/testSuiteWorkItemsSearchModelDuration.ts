@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 /**
-* Duration range model
+* Specifies a work item duration range to search for
 */
 export class TestSuiteWorkItemsSearchModelDuration {
     'from'?: number | null;

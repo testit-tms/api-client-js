@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [optional] [default to null] |
+| **id** | **UUID** |  | [default to null] |
 | **value** | **String** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 

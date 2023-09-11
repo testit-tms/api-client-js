@@ -11,6 +11,8 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentPutModel } from './attachmentPutModel';
+import { LinkPutModel } from './linkPutModel';
 
 export class TestRunV2PutModel {
     'id': string;
@@ -20,6 +22,8 @@ export class TestRunV2PutModel {
     * Once launch source is specified it cannot be updated
     */
     'launchSource'?: string | null;
+    'attachments'?: Array<AttachmentPutModel> | null;
+    'links'?: Array<LinkPutModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -43,6 +47,16 @@ export class TestRunV2PutModel {
             "name": "launchSource",
             "baseName": "launchSource",
             "type": "string"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentPutModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkPutModel>"
         }    ];
 
     static getAttributeTypeMap() {

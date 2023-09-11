@@ -8,10 +8,10 @@
 | **completedOn** | **Date** | set when test plan status is completed (status changed to: Completed) | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [optional] [default to null] |
+| **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **globalId** | **Long** | Used for search Test plan | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [optional] [default to null] |
+| **globalId** | **Long** | Used for search Test plan | [default to null] |
+| **isDeleted** | **Boolean** |  | [default to null] |
 | **lockedDate** | **Date** |  | [optional] [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **lockedById** | **UUID** |  | [optional] [default to null] |

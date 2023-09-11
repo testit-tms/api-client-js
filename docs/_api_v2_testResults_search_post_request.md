@@ -3,10 +3,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **testRunIds** | **Set** | Specifies a test result test run IDs to search for | [optional] [default to null] |
-| **configurationIds** | **Set** | Specifies a test result configuration IDs to search for | [optional] [default to null] |
-| **outcomes** | [**Set**](TestResultOutcome.md) | Specifies a test result outcomes to search for | [optional] [default to null] |
-| **failureCategories** | [**Set**](FailureCategoryModel.md) | Specifies a test result failure categories to search for | [optional] [default to null] |
+| **testRunIds** | **List** | Specifies a test result test run IDs to search for | [optional] [default to null] |
+| **configurationIds** | **List** | Specifies a test result configuration IDs to search for | [optional] [default to null] |
+| **outcomes** | [**List**](TestResultOutcome.md) | Specifies a test result outcomes to search for | [optional] [default to null] |
+| **failureCategories** | [**List**](FailureCategoryModel.md) | Specifies a test result failure categories to search for | [optional] [default to null] |
 | **namespace** | **String** | Specifies a test result namespace to search for | [optional] [default to null] |
 | **className** | **String** | Specifies a test result class name to search for | [optional] [default to null] |
 

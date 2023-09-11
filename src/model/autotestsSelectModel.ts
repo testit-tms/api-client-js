@@ -15,8 +15,8 @@ import { AutotestsSelectModelFilter } from './autotestsSelectModelFilter';
 import { AutotestsSelectModelIncludes } from './autotestsSelectModelIncludes';
 
 export class AutotestsSelectModel {
-    'filter'?: AutotestsSelectModelFilter;
-    'includes'?: AutotestsSelectModelIncludes;
+    'filter'?: AutotestsSelectModelFilter | null;
+    'includes'?: AutotestsSelectModelIncludes | null;
 
     static discriminator: string | undefined = undefined;
 

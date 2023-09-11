@@ -3,12 +3,12 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **score** | **Integer** |  | [optional] [default to null] |
-| **workItemsCreated** | **Integer** |  | [optional] [default to null] |
-| **passedTestPoints** | **Integer** |  | [optional] [default to null] |
-| **failedTestPoints** | **Integer** |  | [optional] [default to null] |
-| **skippedTestPoints** | **Integer** |  | [optional] [default to null] |
-| **blockedTestPoints** | **Integer** |  | [optional] [default to null] |
+| **score** | **Integer** |  | [default to null] |
+| **workItemsCreated** | **Integer** |  | [default to null] |
+| **passedTestPoints** | **Integer** |  | [default to null] |
+| **failedTestPoints** | **Integer** |  | [default to null] |
+| **skippedTestPoints** | **Integer** |  | [default to null] |
+| **blockedTestPoints** | **Integer** |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

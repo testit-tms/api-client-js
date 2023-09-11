@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class WorkItemChangedAttributeViewModel {
-    'type'?: string;
-    'oldAttributeName'?: string;
-    'newAttributeName'?: string;
+    'type'?: string | null;
+    'oldAttributeName'?: string | null;
+    'newAttributeName'?: string | null;
     'oldValue'?: any | null;
     'newValue'?: any | null;
 

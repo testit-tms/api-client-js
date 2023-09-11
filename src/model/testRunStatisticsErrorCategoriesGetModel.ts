@@ -16,23 +16,23 @@ export class TestRunStatisticsErrorCategoriesGetModel {
     /**
     * Number of test results which outcomes were not analyzed
     */
-    'noAnalytics'?: number;
+    'noAnalytics': number;
     /**
     * Number of test results which outcomes were not caused by any defect
     */
-    'noDefect'?: number;
+    'noDefect': number;
     /**
     * Number of test results which outcomes were caused by some infrastructure defect
     */
-    'infrastructureDefect'?: number;
+    'infrastructureDefect': number;
     /**
     * Number of test results which outcomes were caused by some tested product defect
     */
-    'productDefect'?: number;
+    'productDefect': number;
     /**
     * Number of test results which outcomes were caused by test itself
     */
-    'testDefect'?: number;
+    'testDefect': number;
 
     static discriminator: string | undefined = undefined;
 

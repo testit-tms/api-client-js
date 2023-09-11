@@ -17,19 +17,19 @@ import { FailureClassRegexModel } from './failureClassRegexModel';
 export class FailureClassModel {
     'name'?: string | null;
     'failureCategory': FailureCategoryModel;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'failureClassRegexes'?: Array<FailureClassRegexModel> | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

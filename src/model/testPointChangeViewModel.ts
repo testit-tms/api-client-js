@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class TestPointChangeViewModel {
-    'userId'?: string;
+    'userId': string;
     'userName'?: string | null;
-    'testPointCount'?: number;
+    'testPointCount': number;
 
     static discriminator: string | undefined = undefined;
 

@@ -19,23 +19,23 @@ export class AutoTestModel {
     /**
     * Global ID of the autotest
     */
-    'globalId'?: number;
+    'globalId': number;
     /**
     * Indicates if the autotest is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Indicates if the autotest has unapproved changes from linked work items
     */
-    'mustBeApproved'?: boolean;
+    'mustBeApproved': boolean;
     /**
     * Unique ID of the autotest
     */
-    'id'?: string;
+    'id': string;
     /**
     * Creation date of the autotest
     */
-    'createdDate'?: Date;
+    'createdDate': Date;
     /**
     * Last modification date of the project
     */
@@ -43,7 +43,7 @@ export class AutoTestModel {
     /**
     * Unique ID of the project creator
     */
-    'createdById'?: string;
+    'createdById': string;
     /**
     * Unique ID of the project last editor
     */
@@ -120,6 +120,10 @@ export class AutoTestModel {
     * Indicates if the autotest is marked as flaky
     */
     'isFlaky'?: boolean | null;
+    /**
+    * External key of the autotest
+    */
+    'externalKey'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -253,6 +257,11 @@ export class AutoTestModel {
             "name": "isFlaky",
             "baseName": "isFlaky",
             "type": "boolean"
+        },
+        {
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

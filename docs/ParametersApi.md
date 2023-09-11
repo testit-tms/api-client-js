@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2ParametersKeyNameNameExistsGet**](ParametersApi.md#apiV2ParametersKeyNameNameExistsGet) | **GET** /api/v2/parameters/key/name/{name}/exists | Check existence parameter key in system |
 | [**apiV2ParametersKeyValuesGet**](ParametersApi.md#apiV2ParametersKeyValuesGet) | **GET** /api/v2/parameters/{key}/values | Get all parameter key values |
 | [**apiV2ParametersKeysGet**](ParametersApi.md#apiV2ParametersKeysGet) | **GET** /api/v2/parameters/keys | Get all parameter keys |
+| [**apiV2ParametersSearchGroupsPost**](ParametersApi.md#apiV2ParametersSearchGroupsPost) | **POST** /api/v2/parameters/search/groups | Search for parameters as group |
 | [**apiV2ParametersSearchPost**](ParametersApi.md#apiV2ParametersSearchPost) | **POST** /api/v2/parameters/search | Search for parameters |
 | [**createParameter**](ParametersApi.md#createParameter) | **POST** /api/v2/parameters | Create parameter |
 | [**deleteByName**](ParametersApi.md#deleteByName) | **DELETE** /api/v2/parameters/name/{name} | Delete parameter by name |
@@ -183,6 +184,36 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2ParametersSearchGroupsPost"></a>
+# **apiV2ParametersSearchGroupsPost**
+> List apiV2ParametersSearchGroupsPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_parameters\_search\_post\_request)
+
+Search for parameters as group
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
+| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
+| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
+| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
+| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+| **\_api\_v2\_parameters\_search\_post\_request** | [**_api_v2_parameters_search_post_request**](../Models/_api_v2_parameters_search_post_request.md)|  | [optional] |
+
+### Return type
+
+[**List**](../Models/ParameterGroupModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 <a name="apiV2ParametersSearchPost"></a>

@@ -12,45 +12,93 @@
 
 import { RequestFile } from './models';
 import { IterationModel } from './iterationModel';
+import { LinkShortModel } from './linkShortModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
 export class WorkItemShortModel {
-    'id'?: string;
     /**
-    * used for versioning changes in workitem
+    * Work Item internal unique identifier
     */
-    'versionId'?: string;
+    'id': string;
+    /**
+    * Work Item version identifier
+    */
+    'versionId': string;
+    /**
+    * Work Item name
+    */
     'name': string;
     /**
-    * Property can have one of these values: CheckLists, SharedSteps, TestCases
+    * Work Item type. Possible values: CheckLists, SharedSteps, TestCases
     */
     'entityTypeName': string;
     /**
-    * This property is used to link autotest with project
+    * Project unique identifier
     */
     'projectId': string;
     /**
-    * This property links workitem with section
+    * Identifier of Section where Work Item is located
     */
     'sectionId': string;
     /**
-    * Name of the section where work item is located
+    * Section name of Work Item
     */
     'sectionName': string;
-    'isAutomated'?: boolean;
-    'globalId'?: number;
-    'duration'?: number;
+    /**
+    * Boolean flag determining whether Work Item is automated
+    */
+    'isAutomated': boolean;
+    /**
+    * Work Item global identifier
+    */
+    'globalId': number;
+    /**
+    * Work Item duration
+    */
+    'duration': number;
+    /**
+    * Work Item median duration
+    */
+    'medianDuration'?: number | null;
+    /**
+    * Work Item attributes
+    */
     'attributes'?: { [key: string]: any; } | null;
-    'createdById'?: string;
+    /**
+    * Unique identifier of user who created Work Item
+    */
+    'createdById': string;
+    /**
+    * Unique identifier of user who applied the latest modification of Work Item
+    */
     'modifiedById'?: string | null;
+    /**
+    * Date and time of Work Item creation
+    */
     'createdDate'?: Date | null;
+    /**
+    * Date and time of the latest modification of Work Item
+    */
     'modifiedDate'?: Date | null;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
-    'isDeleted'?: boolean;
-    'tagNames'?: Array<string>;
-    'iterations'?: Array<IterationModel>;
+    /**
+    * Flag determining whether Work Item is deleted
+    */
+    'isDeleted': boolean;
+    /**
+    * Array of tag names of Work Item
+    */
+    'tagNames'?: Array<string> | null;
+    /**
+    * Set of iterations related to Work Item
+    */
+    'iterations'?: Array<IterationModel> | null;
+    /**
+    * Set of links related to Work Item
+    */
+    'links'?: Array<LinkShortModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -106,6 +154,11 @@ export class WorkItemShortModel {
             "type": "number"
         },
         {
+            "name": "medianDuration",
+            "baseName": "medianDuration",
+            "type": "number"
+        },
+        {
             "name": "attributes",
             "baseName": "attributes",
             "type": "{ [key: string]: any; }"
@@ -154,6 +207,11 @@ export class WorkItemShortModel {
             "name": "iterations",
             "baseName": "iterations",
             "type": "Array<IterationModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkShortModel>"
         }    ];
 
     static getAttributeTypeMap() {

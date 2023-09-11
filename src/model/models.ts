@@ -1,9 +1,11 @@
 import localVarRequest from 'request';
 
+export * from './actionUpdate';
 export * from './apiV2AttachmentsPostRequest';
 export * from './apiV2AutoTestsFlakyBulkPostRequest';
 export * from './apiV2AutoTestsIdTestResultsSearchPostRequest';
 export * from './apiV2AutoTestsSearchPostRequest';
+export * from './apiV2BackgroundJobsSearchPostRequest';
 export * from './apiV2ConfigurationsCreateByParametersPostRequest';
 export * from './apiV2ConfigurationsPurgeBulkPostRequest';
 export * from './apiV2ConfigurationsPutRequest';
@@ -20,7 +22,9 @@ export * from './apiV2ProjectsIdAttributesTemplatesSearchPostRequest';
 export * from './apiV2ProjectsIdTestPlansDeleteBulkPostRequest';
 export * from './apiV2ProjectsIdTestPlansSearchPostRequest';
 export * from './apiV2ProjectsIdWorkItemsSearchPostRequest';
+export * from './apiV2ProjectsRestoreBulkPostRequest';
 export * from './apiV2ProjectsSearchPostRequest';
+export * from './apiV2SearchGlobalSearchPostRequest';
 export * from './apiV2TestPlansIdExportTestPointsXlsxPostRequest';
 export * from './apiV2TestPlansIdTestPointsTesterUserIdPostRequest';
 export * from './apiV2TestPlansIdTestRunsSearchPostRequest';
@@ -30,6 +34,7 @@ export * from './apiV2TestResultsSearchPostRequest';
 export * from './apiV2TestRunsIdStatisticsFilterPostRequest';
 export * from './apiV2TestRunsIdTestResultsBulkPutRequest';
 export * from './apiV2TestRunsSearchPostRequest';
+export * from './apiV2TestRunsUpdateMultiplePostRequest';
 export * from './apiV2TestSuitesPostRequest';
 export * from './apiV2TestSuitesPutRequest';
 export * from './apiV2WebhooksPostRequest';
@@ -46,7 +51,6 @@ export * from './attachmentModel';
 export * from './attachmentModelAutoTestStepResultsModel';
 export * from './attachmentPutModel';
 export * from './attachmentPutModelAutoTestStepResultsModel';
-export * from './attachmentSubGetModel';
 export * from './autoTestAverageDurationModel';
 export * from './autoTestChangeViewModel';
 export * from './autoTestChangeViewModelArrayChangedFieldViewModel';
@@ -69,8 +73,6 @@ export * from './autotestResultHistoricalGetModel';
 export * from './autotestResultOutcome';
 export * from './autotestResultReasonSubGetModel';
 export * from './autotestSelectModel';
-export * from './autotestSelectModelExtractionModel';
-export * from './autotestSelectModelFilter';
 export * from './autotestsExtractionModel';
 export * from './autotestsExtractionModelIds';
 export * from './autotestsSelectModel';
@@ -78,7 +80,8 @@ export * from './autotestsSelectModelFilter';
 export * from './autotestsSelectModelIncludes';
 export * from './availableTestResultOutcome';
 export * from './backgroundJobAttachmentModel';
-export * from './backgroundJobModel';
+export * from './backgroundJobFilterModel';
+export * from './backgroundJobGetModel';
 export * from './backgroundJobState';
 export * from './backgroundJobType';
 export * from './booleanChangedFieldViewModel';
@@ -129,12 +132,13 @@ export * from './failureCategoryModel';
 export * from './failureClassModel';
 export * from './failureClassRegexModel';
 export * from './filterModel';
-export * from './filterModelData';
 export * from './flakyBulkModel';
-export * from './flakyBulkModelAutotestSelect';
 export * from './getXlsxTestPointsByTestPlanModel';
 export * from './globalCustomAttributePostModel';
 export * from './globalCustomAttributeUpdateModel';
+export * from './globalSearchItemResult';
+export * from './globalSearchRequest';
+export * from './globalSearchResponse';
 export * from './guidChangedFieldViewModel';
 export * from './guidExtractionModel';
 export * from './imageResizeType';
@@ -151,6 +155,7 @@ export * from './linkAutoTestToWorkItemRequest';
 export * from './linkModel';
 export * from './linkPostModel';
 export * from './linkPutModel';
+export * from './linkShortModel';
 export * from './linkSubGetModel';
 export * from './linkType';
 export * from './moveRequest';
@@ -174,9 +179,11 @@ export * from './projectCustomAttributeTemplateGetModel';
 export * from './projectCustomAttributesTemplatesFilterModel';
 export * from './projectExportQueryModel';
 export * from './projectExportWithTestPlansPostModel';
+export * from './projectExtractionModel';
 export * from './projectModel';
 export * from './projectPostModel';
 export * from './projectPutModel';
+export * from './projectSelectModel';
 export * from './projectShortestModel';
 export * from './projectTestPlansFilterModel';
 export * from './projectsFilterModel';
@@ -202,6 +209,8 @@ export * from './sectionPutModel';
 export * from './sectionRenameModel';
 export * from './sectionSharedStep';
 export * from './sectionWithStepsModel';
+export * from './setOfAttachmentIds';
+export * from './setOfLinks';
 export * from './sharedStepChangeViewModel';
 export * from './sharedStepModel';
 export * from './sharedStepReferenceModel';
@@ -221,7 +230,6 @@ export * from './stringChangedFieldViewModel';
 export * from './stringChangedFieldWithDiffsViewModel';
 export * from './tagShortModel';
 export * from './testPlanChangeModel';
-export * from './testPlanChangeModelTestPlanChangedFields';
 export * from './testPlanChangedFieldsViewModel';
 export * from './testPlanExtractionModel';
 export * from './testPlanGroupByStatus';
@@ -236,7 +244,6 @@ export * from './testPlanSelectModel';
 export * from './testPlanShortModel';
 export * from './testPlanStatusModel';
 export * from './testPlanWithAnalyticModel';
-export * from './testPlanWithAnalyticModelAnalytic';
 export * from './testPlanWithTestSuiteTreeModel';
 export * from './testPointAnalyticResult';
 export * from './testPointByTestSuiteModel';
@@ -247,12 +254,12 @@ export * from './testPointFilterModelCreatedDate';
 export * from './testPointFilterModelDuration';
 export * from './testPointFilterModelModifiedDate';
 export * from './testPointFilterModelWorkItemCreatedDate';
+export * from './testPointFilterModelWorkItemMedianDuration';
 export * from './testPointFilterModelWorkItemModifiedDate';
 export * from './testPointPutModel';
 export * from './testPointRelatedToTestResult';
 export * from './testPointResultModel';
 export * from './testPointSelectModel';
-export * from './testPointSelectModelExtractionModel';
 export * from './testPointSelector';
 export * from './testPointShortGetModel';
 export * from './testPointShortGetModelLastTestResult';
@@ -280,16 +287,22 @@ export * from './testResultsStatisticsGetModel';
 export * from './testResultsStatisticsGetModelFailureCategories';
 export * from './testResultsStatisticsGetModelStatuses';
 export * from './testRunAnalyticResultModel';
+export * from './testRunExtractionModel';
+export * from './testRunExtractionModelIds';
 export * from './testRunFillByAutoTestsPostModel';
 export * from './testRunFillByConfigurationsPostModel';
 export * from './testRunFillByWorkItemsPostModel';
 export * from './testRunFilterModel';
-export * from './testRunFilterModelCreatedDate';
+export * from './testRunFilterModelAutoTestsCount';
+export * from './testRunFilterModelCompletedDate';
+export * from './testRunFilterModelStartedDate';
 export * from './testRunGroupByFailureClassModel';
 export * from './testRunGroupByStatusModel';
 export * from './testRunModel';
-export * from './testRunModelAnalytic';
 export * from './testRunSearchQueryModel';
+export * from './testRunSelectModel';
+export * from './testRunSelectModelExtractionModel';
+export * from './testRunSelectionModel';
 export * from './testRunShortGetModel';
 export * from './testRunShortGetModelStatistics';
 export * from './testRunShortModel';
@@ -301,6 +314,7 @@ export * from './testRunTestResultsPartialBulkSetModelSelector';
 export * from './testRunTestResultsSelectModel';
 export * from './testRunTestResultsSelectModelFilter';
 export * from './testRunTestResultsSelectModelTestResultIdsExtractionModel';
+export * from './testRunUpdateMultipleModel';
 export * from './testRunV2GetModel';
 export * from './testRunV2PostShortModel';
 export * from './testRunV2PutModel';
@@ -313,12 +327,13 @@ export * from './testSuiteV2PutModel';
 export * from './testSuiteV2TreeModel';
 export * from './testSuiteWithChildrenModel';
 export * from './testSuiteWorkItemsSearchModel';
-export * from './testSuiteWorkItemsSearchModelCreatedDate';
 export * from './testSuiteWorkItemsSearchModelDuration';
-export * from './testSuiteWorkItemsSearchModelModifiedDate';
+export * from './testSuiteWorkItemsSearchModelMedianDuration';
+export * from './updateAttachmentShortModel';
 export * from './updateAutoTestRequest';
 export * from './updateCustomAttributeTestPlanProjectRelationsRequest';
 export * from './updateEmptyRequest';
+export * from './updateLinkShortModel';
 export * from './updateParameterRequest';
 export * from './updateProjectRequest';
 export * from './updateProjectsAttributeRequest';
@@ -327,7 +342,6 @@ export * from './updateTestPlanRequest';
 export * from './updateWorkItemRequest';
 export * from './userRankModel';
 export * from './userWithRankModel';
-export * from './userWithRankModelUserRank';
 export * from './validateAntiForgeryTokenAttribute';
 export * from './validationProblemDetails';
 export * from './webHookEventType';
@@ -336,27 +350,15 @@ export * from './webHookLogModel';
 export * from './webHookModel';
 export * from './webHookPostModel';
 export * from './webHookTestModel';
+export * from './webhookVariablesType';
 export * from './workItemChangeModel';
-export * from './workItemChangeModelWorkItemChangedFields';
 export * from './workItemChangedAttributeViewModel';
 export * from './workItemChangedFieldsViewModel';
-export * from './workItemChangedFieldsViewModelAttachments';
-export * from './workItemChangedFieldsViewModelAutoTests';
-export * from './workItemChangedFieldsViewModelDuration';
-export * from './workItemChangedFieldsViewModelGlobalId';
-export * from './workItemChangedFieldsViewModelIsDeleted';
-export * from './workItemChangedFieldsViewModelLinks';
-export * from './workItemChangedFieldsViewModelProjectId';
-export * from './workItemChangedFieldsViewModelState';
-export * from './workItemChangedFieldsViewModelSteps';
-export * from './workItemChangedFieldsViewModelTags';
 export * from './workItemCommentModel';
-export * from './workItemCommentModelUser';
 export * from './workItemCommentPostModel';
 export * from './workItemCommentPutModel';
 export * from './workItemEntityTypes';
 export * from './workItemFilterModel';
-export * from './workItemFilterModelDuration';
 export * from './workItemIdModel';
 export * from './workItemIdentifierModel';
 export * from './workItemLikeModel';
@@ -376,7 +378,6 @@ export * from './workItemState';
 export * from './workItemStates';
 export * from './workItemStepChangeViewModel';
 export * from './workItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel';
-export * from './workItemStepChangeViewModelWorkItem';
 export * from './workItemVersionModel';
 export * from './workItemsExtractionModel';
 export * from './workItemsExtractionModelIds';
@@ -395,10 +396,12 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { ActionUpdate } from './actionUpdate';
 import { ApiV2AttachmentsPostRequest } from './apiV2AttachmentsPostRequest';
 import { ApiV2AutoTestsFlakyBulkPostRequest } from './apiV2AutoTestsFlakyBulkPostRequest';
 import { ApiV2AutoTestsIdTestResultsSearchPostRequest } from './apiV2AutoTestsIdTestResultsSearchPostRequest';
 import { ApiV2AutoTestsSearchPostRequest } from './apiV2AutoTestsSearchPostRequest';
+import { ApiV2BackgroundJobsSearchPostRequest } from './apiV2BackgroundJobsSearchPostRequest';
 import { ApiV2ConfigurationsCreateByParametersPostRequest } from './apiV2ConfigurationsCreateByParametersPostRequest';
 import { ApiV2ConfigurationsPurgeBulkPostRequest } from './apiV2ConfigurationsPurgeBulkPostRequest';
 import { ApiV2ConfigurationsPutRequest } from './apiV2ConfigurationsPutRequest';
@@ -415,7 +418,9 @@ import { ApiV2ProjectsIdAttributesTemplatesSearchPostRequest } from './apiV2Proj
 import { ApiV2ProjectsIdTestPlansDeleteBulkPostRequest } from './apiV2ProjectsIdTestPlansDeleteBulkPostRequest';
 import { ApiV2ProjectsIdTestPlansSearchPostRequest } from './apiV2ProjectsIdTestPlansSearchPostRequest';
 import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from './apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2ProjectsRestoreBulkPostRequest } from './apiV2ProjectsRestoreBulkPostRequest';
 import { ApiV2ProjectsSearchPostRequest } from './apiV2ProjectsSearchPostRequest';
+import { ApiV2SearchGlobalSearchPostRequest } from './apiV2SearchGlobalSearchPostRequest';
 import { ApiV2TestPlansIdExportTestPointsXlsxPostRequest } from './apiV2TestPlansIdExportTestPointsXlsxPostRequest';
 import { ApiV2TestPlansIdTestPointsTesterUserIdPostRequest } from './apiV2TestPlansIdTestPointsTesterUserIdPostRequest';
 import { ApiV2TestPlansIdTestRunsSearchPostRequest } from './apiV2TestPlansIdTestRunsSearchPostRequest';
@@ -425,6 +430,7 @@ import { ApiV2TestResultsSearchPostRequest } from './apiV2TestResultsSearchPostR
 import { ApiV2TestRunsIdStatisticsFilterPostRequest } from './apiV2TestRunsIdStatisticsFilterPostRequest';
 import { ApiV2TestRunsIdTestResultsBulkPutRequest } from './apiV2TestRunsIdTestResultsBulkPutRequest';
 import { ApiV2TestRunsSearchPostRequest } from './apiV2TestRunsSearchPostRequest';
+import { ApiV2TestRunsUpdateMultiplePostRequest } from './apiV2TestRunsUpdateMultiplePostRequest';
 import { ApiV2TestSuitesPostRequest } from './apiV2TestSuitesPostRequest';
 import { ApiV2TestSuitesPutRequest } from './apiV2TestSuitesPutRequest';
 import { ApiV2WebhooksPostRequest } from './apiV2WebhooksPostRequest';
@@ -441,7 +447,6 @@ import { AttachmentModel } from './attachmentModel';
 import { AttachmentModelAutoTestStepResultsModel } from './attachmentModelAutoTestStepResultsModel';
 import { AttachmentPutModel } from './attachmentPutModel';
 import { AttachmentPutModelAutoTestStepResultsModel } from './attachmentPutModelAutoTestStepResultsModel';
-import { AttachmentSubGetModel } from './attachmentSubGetModel';
 import { AutoTestAverageDurationModel } from './autoTestAverageDurationModel';
 import { AutoTestChangeViewModel } from './autoTestChangeViewModel';
 import { AutoTestChangeViewModelArrayChangedFieldViewModel } from './autoTestChangeViewModelArrayChangedFieldViewModel';
@@ -464,8 +469,6 @@ import { AutotestResultHistoricalGetModel } from './autotestResultHistoricalGetM
 import { AutotestResultOutcome } from './autotestResultOutcome';
 import { AutotestResultReasonSubGetModel } from './autotestResultReasonSubGetModel';
 import { AutotestSelectModel } from './autotestSelectModel';
-import { AutotestSelectModelExtractionModel } from './autotestSelectModelExtractionModel';
-import { AutotestSelectModelFilter } from './autotestSelectModelFilter';
 import { AutotestsExtractionModel } from './autotestsExtractionModel';
 import { AutotestsExtractionModelIds } from './autotestsExtractionModelIds';
 import { AutotestsSelectModel } from './autotestsSelectModel';
@@ -473,7 +476,8 @@ import { AutotestsSelectModelFilter } from './autotestsSelectModelFilter';
 import { AutotestsSelectModelIncludes } from './autotestsSelectModelIncludes';
 import { AvailableTestResultOutcome } from './availableTestResultOutcome';
 import { BackgroundJobAttachmentModel } from './backgroundJobAttachmentModel';
-import { BackgroundJobModel } from './backgroundJobModel';
+import { BackgroundJobFilterModel } from './backgroundJobFilterModel';
+import { BackgroundJobGetModel } from './backgroundJobGetModel';
 import { BackgroundJobState } from './backgroundJobState';
 import { BackgroundJobType } from './backgroundJobType';
 import { BooleanChangedFieldViewModel } from './booleanChangedFieldViewModel';
@@ -524,12 +528,13 @@ import { FailureCategoryModel } from './failureCategoryModel';
 import { FailureClassModel } from './failureClassModel';
 import { FailureClassRegexModel } from './failureClassRegexModel';
 import { FilterModel } from './filterModel';
-import { FilterModelData } from './filterModelData';
 import { FlakyBulkModel } from './flakyBulkModel';
-import { FlakyBulkModelAutotestSelect } from './flakyBulkModelAutotestSelect';
 import { GetXlsxTestPointsByTestPlanModel } from './getXlsxTestPointsByTestPlanModel';
 import { GlobalCustomAttributePostModel } from './globalCustomAttributePostModel';
 import { GlobalCustomAttributeUpdateModel } from './globalCustomAttributeUpdateModel';
+import { GlobalSearchItemResult } from './globalSearchItemResult';
+import { GlobalSearchRequest } from './globalSearchRequest';
+import { GlobalSearchResponse } from './globalSearchResponse';
 import { GuidChangedFieldViewModel } from './guidChangedFieldViewModel';
 import { GuidExtractionModel } from './guidExtractionModel';
 import { ImageResizeType } from './imageResizeType';
@@ -546,6 +551,7 @@ import { LinkAutoTestToWorkItemRequest } from './linkAutoTestToWorkItemRequest';
 import { LinkModel } from './linkModel';
 import { LinkPostModel } from './linkPostModel';
 import { LinkPutModel } from './linkPutModel';
+import { LinkShortModel } from './linkShortModel';
 import { LinkSubGetModel } from './linkSubGetModel';
 import { LinkType } from './linkType';
 import { MoveRequest } from './moveRequest';
@@ -569,9 +575,11 @@ import { ProjectCustomAttributeTemplateGetModel } from './projectCustomAttribute
 import { ProjectCustomAttributesTemplatesFilterModel } from './projectCustomAttributesTemplatesFilterModel';
 import { ProjectExportQueryModel } from './projectExportQueryModel';
 import { ProjectExportWithTestPlansPostModel } from './projectExportWithTestPlansPostModel';
+import { ProjectExtractionModel } from './projectExtractionModel';
 import { ProjectModel } from './projectModel';
 import { ProjectPostModel } from './projectPostModel';
 import { ProjectPutModel } from './projectPutModel';
+import { ProjectSelectModel } from './projectSelectModel';
 import { ProjectShortestModel } from './projectShortestModel';
 import { ProjectTestPlansFilterModel } from './projectTestPlansFilterModel';
 import { ProjectsFilterModel } from './projectsFilterModel';
@@ -597,6 +605,8 @@ import { SectionPutModel } from './sectionPutModel';
 import { SectionRenameModel } from './sectionRenameModel';
 import { SectionSharedStep } from './sectionSharedStep';
 import { SectionWithStepsModel } from './sectionWithStepsModel';
+import { SetOfAttachmentIds } from './setOfAttachmentIds';
+import { SetOfLinks } from './setOfLinks';
 import { SharedStepChangeViewModel } from './sharedStepChangeViewModel';
 import { SharedStepModel } from './sharedStepModel';
 import { SharedStepReferenceModel } from './sharedStepReferenceModel';
@@ -616,7 +626,6 @@ import { StringChangedFieldViewModel } from './stringChangedFieldViewModel';
 import { StringChangedFieldWithDiffsViewModel } from './stringChangedFieldWithDiffsViewModel';
 import { TagShortModel } from './tagShortModel';
 import { TestPlanChangeModel } from './testPlanChangeModel';
-import { TestPlanChangeModelTestPlanChangedFields } from './testPlanChangeModelTestPlanChangedFields';
 import { TestPlanChangedFieldsViewModel } from './testPlanChangedFieldsViewModel';
 import { TestPlanExtractionModel } from './testPlanExtractionModel';
 import { TestPlanGroupByStatus } from './testPlanGroupByStatus';
@@ -631,7 +640,6 @@ import { TestPlanSelectModel } from './testPlanSelectModel';
 import { TestPlanShortModel } from './testPlanShortModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
 import { TestPlanWithAnalyticModel } from './testPlanWithAnalyticModel';
-import { TestPlanWithAnalyticModelAnalytic } from './testPlanWithAnalyticModelAnalytic';
 import { TestPlanWithTestSuiteTreeModel } from './testPlanWithTestSuiteTreeModel';
 import { TestPointAnalyticResult } from './testPointAnalyticResult';
 import { TestPointByTestSuiteModel } from './testPointByTestSuiteModel';
@@ -642,12 +650,12 @@ import { TestPointFilterModelCreatedDate } from './testPointFilterModelCreatedDa
 import { TestPointFilterModelDuration } from './testPointFilterModelDuration';
 import { TestPointFilterModelModifiedDate } from './testPointFilterModelModifiedDate';
 import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
+import { TestPointFilterModelWorkItemMedianDuration } from './testPointFilterModelWorkItemMedianDuration';
 import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
 import { TestPointPutModel } from './testPointPutModel';
 import { TestPointRelatedToTestResult } from './testPointRelatedToTestResult';
 import { TestPointResultModel } from './testPointResultModel';
 import { TestPointSelectModel } from './testPointSelectModel';
-import { TestPointSelectModelExtractionModel } from './testPointSelectModelExtractionModel';
 import { TestPointSelector } from './testPointSelector';
 import { TestPointShortGetModel } from './testPointShortGetModel';
 import { TestPointShortGetModelLastTestResult } from './testPointShortGetModelLastTestResult';
@@ -675,16 +683,22 @@ import { TestResultsStatisticsGetModel } from './testResultsStatisticsGetModel';
 import { TestResultsStatisticsGetModelFailureCategories } from './testResultsStatisticsGetModelFailureCategories';
 import { TestResultsStatisticsGetModelStatuses } from './testResultsStatisticsGetModelStatuses';
 import { TestRunAnalyticResultModel } from './testRunAnalyticResultModel';
+import { TestRunExtractionModel } from './testRunExtractionModel';
+import { TestRunExtractionModelIds } from './testRunExtractionModelIds';
 import { TestRunFillByAutoTestsPostModel } from './testRunFillByAutoTestsPostModel';
 import { TestRunFillByConfigurationsPostModel } from './testRunFillByConfigurationsPostModel';
 import { TestRunFillByWorkItemsPostModel } from './testRunFillByWorkItemsPostModel';
 import { TestRunFilterModel } from './testRunFilterModel';
-import { TestRunFilterModelCreatedDate } from './testRunFilterModelCreatedDate';
+import { TestRunFilterModelAutoTestsCount } from './testRunFilterModelAutoTestsCount';
+import { TestRunFilterModelCompletedDate } from './testRunFilterModelCompletedDate';
+import { TestRunFilterModelStartedDate } from './testRunFilterModelStartedDate';
 import { TestRunGroupByFailureClassModel } from './testRunGroupByFailureClassModel';
 import { TestRunGroupByStatusModel } from './testRunGroupByStatusModel';
 import { TestRunModel } from './testRunModel';
-import { TestRunModelAnalytic } from './testRunModelAnalytic';
 import { TestRunSearchQueryModel } from './testRunSearchQueryModel';
+import { TestRunSelectModel } from './testRunSelectModel';
+import { TestRunSelectModelExtractionModel } from './testRunSelectModelExtractionModel';
+import { TestRunSelectionModel } from './testRunSelectionModel';
 import { TestRunShortGetModel } from './testRunShortGetModel';
 import { TestRunShortGetModelStatistics } from './testRunShortGetModelStatistics';
 import { TestRunShortModel } from './testRunShortModel';
@@ -696,6 +710,7 @@ import { TestRunTestResultsPartialBulkSetModelSelector } from './testRunTestResu
 import { TestRunTestResultsSelectModel } from './testRunTestResultsSelectModel';
 import { TestRunTestResultsSelectModelFilter } from './testRunTestResultsSelectModelFilter';
 import { TestRunTestResultsSelectModelTestResultIdsExtractionModel } from './testRunTestResultsSelectModelTestResultIdsExtractionModel';
+import { TestRunUpdateMultipleModel } from './testRunUpdateMultipleModel';
 import { TestRunV2GetModel } from './testRunV2GetModel';
 import { TestRunV2PostShortModel } from './testRunV2PostShortModel';
 import { TestRunV2PutModel } from './testRunV2PutModel';
@@ -708,12 +723,13 @@ import { TestSuiteV2PutModel } from './testSuiteV2PutModel';
 import { TestSuiteV2TreeModel } from './testSuiteV2TreeModel';
 import { TestSuiteWithChildrenModel } from './testSuiteWithChildrenModel';
 import { TestSuiteWorkItemsSearchModel } from './testSuiteWorkItemsSearchModel';
-import { TestSuiteWorkItemsSearchModelCreatedDate } from './testSuiteWorkItemsSearchModelCreatedDate';
 import { TestSuiteWorkItemsSearchModelDuration } from './testSuiteWorkItemsSearchModelDuration';
-import { TestSuiteWorkItemsSearchModelModifiedDate } from './testSuiteWorkItemsSearchModelModifiedDate';
+import { TestSuiteWorkItemsSearchModelMedianDuration } from './testSuiteWorkItemsSearchModelMedianDuration';
+import { UpdateAttachmentShortModel } from './updateAttachmentShortModel';
 import { UpdateAutoTestRequest } from './updateAutoTestRequest';
 import { UpdateCustomAttributeTestPlanProjectRelationsRequest } from './updateCustomAttributeTestPlanProjectRelationsRequest';
 import { UpdateEmptyRequest } from './updateEmptyRequest';
+import { UpdateLinkShortModel } from './updateLinkShortModel';
 import { UpdateParameterRequest } from './updateParameterRequest';
 import { UpdateProjectRequest } from './updateProjectRequest';
 import { UpdateProjectsAttributeRequest } from './updateProjectsAttributeRequest';
@@ -722,7 +738,6 @@ import { UpdateTestPlanRequest } from './updateTestPlanRequest';
 import { UpdateWorkItemRequest } from './updateWorkItemRequest';
 import { UserRankModel } from './userRankModel';
 import { UserWithRankModel } from './userWithRankModel';
-import { UserWithRankModelUserRank } from './userWithRankModelUserRank';
 import { ValidateAntiForgeryTokenAttribute } from './validateAntiForgeryTokenAttribute';
 import { ValidationProblemDetails } from './validationProblemDetails';
 import { WebHookEventType } from './webHookEventType';
@@ -731,27 +746,15 @@ import { WebHookLogModel } from './webHookLogModel';
 import { WebHookModel } from './webHookModel';
 import { WebHookPostModel } from './webHookPostModel';
 import { WebHookTestModel } from './webHookTestModel';
+import { WebhookVariablesType } from './webhookVariablesType';
 import { WorkItemChangeModel } from './workItemChangeModel';
-import { WorkItemChangeModelWorkItemChangedFields } from './workItemChangeModelWorkItemChangedFields';
 import { WorkItemChangedAttributeViewModel } from './workItemChangedAttributeViewModel';
 import { WorkItemChangedFieldsViewModel } from './workItemChangedFieldsViewModel';
-import { WorkItemChangedFieldsViewModelAttachments } from './workItemChangedFieldsViewModelAttachments';
-import { WorkItemChangedFieldsViewModelAutoTests } from './workItemChangedFieldsViewModelAutoTests';
-import { WorkItemChangedFieldsViewModelDuration } from './workItemChangedFieldsViewModelDuration';
-import { WorkItemChangedFieldsViewModelGlobalId } from './workItemChangedFieldsViewModelGlobalId';
-import { WorkItemChangedFieldsViewModelIsDeleted } from './workItemChangedFieldsViewModelIsDeleted';
-import { WorkItemChangedFieldsViewModelLinks } from './workItemChangedFieldsViewModelLinks';
-import { WorkItemChangedFieldsViewModelProjectId } from './workItemChangedFieldsViewModelProjectId';
-import { WorkItemChangedFieldsViewModelState } from './workItemChangedFieldsViewModelState';
-import { WorkItemChangedFieldsViewModelSteps } from './workItemChangedFieldsViewModelSteps';
-import { WorkItemChangedFieldsViewModelTags } from './workItemChangedFieldsViewModelTags';
 import { WorkItemCommentModel } from './workItemCommentModel';
-import { WorkItemCommentModelUser } from './workItemCommentModelUser';
 import { WorkItemCommentPostModel } from './workItemCommentPostModel';
 import { WorkItemCommentPutModel } from './workItemCommentPutModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemFilterModel } from './workItemFilterModel';
-import { WorkItemFilterModelDuration } from './workItemFilterModelDuration';
 import { WorkItemIdModel } from './workItemIdModel';
 import { WorkItemIdentifierModel } from './workItemIdentifierModel';
 import { WorkItemLikeModel } from './workItemLikeModel';
@@ -771,7 +774,6 @@ import { WorkItemState } from './workItemState';
 import { WorkItemStates } from './workItemStates';
 import { WorkItemStepChangeViewModel } from './workItemStepChangeViewModel';
 import { WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel } from './workItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel';
-import { WorkItemStepChangeViewModelWorkItem } from './workItemStepChangeViewModelWorkItem';
 import { WorkItemVersionModel } from './workItemVersionModel';
 import { WorkItemsExtractionModel } from './workItemsExtractionModel';
 import { WorkItemsExtractionModelIds } from './workItemsExtractionModelIds';
@@ -790,6 +792,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "ActionUpdate": ActionUpdate,
         "AutotestResultOutcome": AutotestResultOutcome,
         "AvailableTestResultOutcome": AvailableTestResultOutcome,
         "BackgroundJobState": BackgroundJobState,
@@ -808,6 +811,7 @@ let enumsMap: {[index: string]: any} = {
         "TestSuiteType": TestSuiteType,
         "WebHookEventType": WebHookEventType,
         "WebHookEventTypeModel": WebHookEventTypeModel,
+        "WebhookVariablesType": WebhookVariablesType,
         "WorkItemEntityTypes": WorkItemEntityTypes,
         "WorkItemPriorityModel": WorkItemPriorityModel,
         "WorkItemState": WorkItemState,
@@ -819,6 +823,7 @@ let typeMap: {[index: string]: any} = {
     "ApiV2AutoTestsFlakyBulkPostRequest": ApiV2AutoTestsFlakyBulkPostRequest,
     "ApiV2AutoTestsIdTestResultsSearchPostRequest": ApiV2AutoTestsIdTestResultsSearchPostRequest,
     "ApiV2AutoTestsSearchPostRequest": ApiV2AutoTestsSearchPostRequest,
+    "ApiV2BackgroundJobsSearchPostRequest": ApiV2BackgroundJobsSearchPostRequest,
     "ApiV2ConfigurationsCreateByParametersPostRequest": ApiV2ConfigurationsCreateByParametersPostRequest,
     "ApiV2ConfigurationsPurgeBulkPostRequest": ApiV2ConfigurationsPurgeBulkPostRequest,
     "ApiV2ConfigurationsPutRequest": ApiV2ConfigurationsPutRequest,
@@ -835,7 +840,9 @@ let typeMap: {[index: string]: any} = {
     "ApiV2ProjectsIdTestPlansDeleteBulkPostRequest": ApiV2ProjectsIdTestPlansDeleteBulkPostRequest,
     "ApiV2ProjectsIdTestPlansSearchPostRequest": ApiV2ProjectsIdTestPlansSearchPostRequest,
     "ApiV2ProjectsIdWorkItemsSearchPostRequest": ApiV2ProjectsIdWorkItemsSearchPostRequest,
+    "ApiV2ProjectsRestoreBulkPostRequest": ApiV2ProjectsRestoreBulkPostRequest,
     "ApiV2ProjectsSearchPostRequest": ApiV2ProjectsSearchPostRequest,
+    "ApiV2SearchGlobalSearchPostRequest": ApiV2SearchGlobalSearchPostRequest,
     "ApiV2TestPlansIdExportTestPointsXlsxPostRequest": ApiV2TestPlansIdExportTestPointsXlsxPostRequest,
     "ApiV2TestPlansIdTestPointsTesterUserIdPostRequest": ApiV2TestPlansIdTestPointsTesterUserIdPostRequest,
     "ApiV2TestPlansIdTestRunsSearchPostRequest": ApiV2TestPlansIdTestRunsSearchPostRequest,
@@ -845,6 +852,7 @@ let typeMap: {[index: string]: any} = {
     "ApiV2TestRunsIdStatisticsFilterPostRequest": ApiV2TestRunsIdStatisticsFilterPostRequest,
     "ApiV2TestRunsIdTestResultsBulkPutRequest": ApiV2TestRunsIdTestResultsBulkPutRequest,
     "ApiV2TestRunsSearchPostRequest": ApiV2TestRunsSearchPostRequest,
+    "ApiV2TestRunsUpdateMultiplePostRequest": ApiV2TestRunsUpdateMultiplePostRequest,
     "ApiV2TestSuitesPostRequest": ApiV2TestSuitesPostRequest,
     "ApiV2TestSuitesPutRequest": ApiV2TestSuitesPutRequest,
     "ApiV2WebhooksPostRequest": ApiV2WebhooksPostRequest,
@@ -861,7 +869,6 @@ let typeMap: {[index: string]: any} = {
     "AttachmentModelAutoTestStepResultsModel": AttachmentModelAutoTestStepResultsModel,
     "AttachmentPutModel": AttachmentPutModel,
     "AttachmentPutModelAutoTestStepResultsModel": AttachmentPutModelAutoTestStepResultsModel,
-    "AttachmentSubGetModel": AttachmentSubGetModel,
     "AutoTestAverageDurationModel": AutoTestAverageDurationModel,
     "AutoTestChangeViewModel": AutoTestChangeViewModel,
     "AutoTestChangeViewModelArrayChangedFieldViewModel": AutoTestChangeViewModelArrayChangedFieldViewModel,
@@ -883,15 +890,14 @@ let typeMap: {[index: string]: any} = {
     "AutotestResultHistoricalGetModel": AutotestResultHistoricalGetModel,
     "AutotestResultReasonSubGetModel": AutotestResultReasonSubGetModel,
     "AutotestSelectModel": AutotestSelectModel,
-    "AutotestSelectModelExtractionModel": AutotestSelectModelExtractionModel,
-    "AutotestSelectModelFilter": AutotestSelectModelFilter,
     "AutotestsExtractionModel": AutotestsExtractionModel,
     "AutotestsExtractionModelIds": AutotestsExtractionModelIds,
     "AutotestsSelectModel": AutotestsSelectModel,
     "AutotestsSelectModelFilter": AutotestsSelectModelFilter,
     "AutotestsSelectModelIncludes": AutotestsSelectModelIncludes,
     "BackgroundJobAttachmentModel": BackgroundJobAttachmentModel,
-    "BackgroundJobModel": BackgroundJobModel,
+    "BackgroundJobFilterModel": BackgroundJobFilterModel,
+    "BackgroundJobGetModel": BackgroundJobGetModel,
     "BooleanChangedFieldViewModel": BooleanChangedFieldViewModel,
     "BooleanNullableChangedFieldViewModel": BooleanNullableChangedFieldViewModel,
     "ConfigurationByParametersModel": ConfigurationByParametersModel,
@@ -937,12 +943,13 @@ let typeMap: {[index: string]: any} = {
     "FailureClassModel": FailureClassModel,
     "FailureClassRegexModel": FailureClassRegexModel,
     "FilterModel": FilterModel,
-    "FilterModelData": FilterModelData,
     "FlakyBulkModel": FlakyBulkModel,
-    "FlakyBulkModelAutotestSelect": FlakyBulkModelAutotestSelect,
     "GetXlsxTestPointsByTestPlanModel": GetXlsxTestPointsByTestPlanModel,
     "GlobalCustomAttributePostModel": GlobalCustomAttributePostModel,
     "GlobalCustomAttributeUpdateModel": GlobalCustomAttributeUpdateModel,
+    "GlobalSearchItemResult": GlobalSearchItemResult,
+    "GlobalSearchRequest": GlobalSearchRequest,
+    "GlobalSearchResponse": GlobalSearchResponse,
     "GuidChangedFieldViewModel": GuidChangedFieldViewModel,
     "GuidExtractionModel": GuidExtractionModel,
     "Int32ChangedFieldViewModel": Int32ChangedFieldViewModel,
@@ -958,6 +965,7 @@ let typeMap: {[index: string]: any} = {
     "LinkModel": LinkModel,
     "LinkPostModel": LinkPostModel,
     "LinkPutModel": LinkPutModel,
+    "LinkShortModel": LinkShortModel,
     "LinkSubGetModel": LinkSubGetModel,
     "MoveRequest": MoveRequest,
     "NoContentResult": NoContentResult,
@@ -979,9 +987,11 @@ let typeMap: {[index: string]: any} = {
     "ProjectCustomAttributesTemplatesFilterModel": ProjectCustomAttributesTemplatesFilterModel,
     "ProjectExportQueryModel": ProjectExportQueryModel,
     "ProjectExportWithTestPlansPostModel": ProjectExportWithTestPlansPostModel,
+    "ProjectExtractionModel": ProjectExtractionModel,
     "ProjectModel": ProjectModel,
     "ProjectPostModel": ProjectPostModel,
     "ProjectPutModel": ProjectPutModel,
+    "ProjectSelectModel": ProjectSelectModel,
     "ProjectShortestModel": ProjectShortestModel,
     "ProjectTestPlansFilterModel": ProjectTestPlansFilterModel,
     "ProjectsFilterModel": ProjectsFilterModel,
@@ -1006,6 +1016,8 @@ let typeMap: {[index: string]: any} = {
     "SectionRenameModel": SectionRenameModel,
     "SectionSharedStep": SectionSharedStep,
     "SectionWithStepsModel": SectionWithStepsModel,
+    "SetOfAttachmentIds": SetOfAttachmentIds,
+    "SetOfLinks": SetOfLinks,
     "SharedStepChangeViewModel": SharedStepChangeViewModel,
     "SharedStepModel": SharedStepModel,
     "SharedStepReferenceModel": SharedStepReferenceModel,
@@ -1025,7 +1037,6 @@ let typeMap: {[index: string]: any} = {
     "StringChangedFieldWithDiffsViewModel": StringChangedFieldWithDiffsViewModel,
     "TagShortModel": TagShortModel,
     "TestPlanChangeModel": TestPlanChangeModel,
-    "TestPlanChangeModelTestPlanChangedFields": TestPlanChangeModelTestPlanChangedFields,
     "TestPlanChangedFieldsViewModel": TestPlanChangedFieldsViewModel,
     "TestPlanExtractionModel": TestPlanExtractionModel,
     "TestPlanGroupByStatus": TestPlanGroupByStatus,
@@ -1039,7 +1050,6 @@ let typeMap: {[index: string]: any} = {
     "TestPlanSelectModel": TestPlanSelectModel,
     "TestPlanShortModel": TestPlanShortModel,
     "TestPlanWithAnalyticModel": TestPlanWithAnalyticModel,
-    "TestPlanWithAnalyticModelAnalytic": TestPlanWithAnalyticModelAnalytic,
     "TestPlanWithTestSuiteTreeModel": TestPlanWithTestSuiteTreeModel,
     "TestPointAnalyticResult": TestPointAnalyticResult,
     "TestPointByTestSuiteModel": TestPointByTestSuiteModel,
@@ -1050,12 +1060,12 @@ let typeMap: {[index: string]: any} = {
     "TestPointFilterModelDuration": TestPointFilterModelDuration,
     "TestPointFilterModelModifiedDate": TestPointFilterModelModifiedDate,
     "TestPointFilterModelWorkItemCreatedDate": TestPointFilterModelWorkItemCreatedDate,
+    "TestPointFilterModelWorkItemMedianDuration": TestPointFilterModelWorkItemMedianDuration,
     "TestPointFilterModelWorkItemModifiedDate": TestPointFilterModelWorkItemModifiedDate,
     "TestPointPutModel": TestPointPutModel,
     "TestPointRelatedToTestResult": TestPointRelatedToTestResult,
     "TestPointResultModel": TestPointResultModel,
     "TestPointSelectModel": TestPointSelectModel,
-    "TestPointSelectModelExtractionModel": TestPointSelectModelExtractionModel,
     "TestPointSelector": TestPointSelector,
     "TestPointShortGetModel": TestPointShortGetModel,
     "TestPointShortGetModelLastTestResult": TestPointShortGetModelLastTestResult,
@@ -1081,16 +1091,22 @@ let typeMap: {[index: string]: any} = {
     "TestResultsStatisticsGetModelFailureCategories": TestResultsStatisticsGetModelFailureCategories,
     "TestResultsStatisticsGetModelStatuses": TestResultsStatisticsGetModelStatuses,
     "TestRunAnalyticResultModel": TestRunAnalyticResultModel,
+    "TestRunExtractionModel": TestRunExtractionModel,
+    "TestRunExtractionModelIds": TestRunExtractionModelIds,
     "TestRunFillByAutoTestsPostModel": TestRunFillByAutoTestsPostModel,
     "TestRunFillByConfigurationsPostModel": TestRunFillByConfigurationsPostModel,
     "TestRunFillByWorkItemsPostModel": TestRunFillByWorkItemsPostModel,
     "TestRunFilterModel": TestRunFilterModel,
-    "TestRunFilterModelCreatedDate": TestRunFilterModelCreatedDate,
+    "TestRunFilterModelAutoTestsCount": TestRunFilterModelAutoTestsCount,
+    "TestRunFilterModelCompletedDate": TestRunFilterModelCompletedDate,
+    "TestRunFilterModelStartedDate": TestRunFilterModelStartedDate,
     "TestRunGroupByFailureClassModel": TestRunGroupByFailureClassModel,
     "TestRunGroupByStatusModel": TestRunGroupByStatusModel,
     "TestRunModel": TestRunModel,
-    "TestRunModelAnalytic": TestRunModelAnalytic,
     "TestRunSearchQueryModel": TestRunSearchQueryModel,
+    "TestRunSelectModel": TestRunSelectModel,
+    "TestRunSelectModelExtractionModel": TestRunSelectModelExtractionModel,
+    "TestRunSelectionModel": TestRunSelectionModel,
     "TestRunShortGetModel": TestRunShortGetModel,
     "TestRunShortGetModelStatistics": TestRunShortGetModelStatistics,
     "TestRunShortModel": TestRunShortModel,
@@ -1101,6 +1117,7 @@ let typeMap: {[index: string]: any} = {
     "TestRunTestResultsSelectModel": TestRunTestResultsSelectModel,
     "TestRunTestResultsSelectModelFilter": TestRunTestResultsSelectModelFilter,
     "TestRunTestResultsSelectModelTestResultIdsExtractionModel": TestRunTestResultsSelectModelTestResultIdsExtractionModel,
+    "TestRunUpdateMultipleModel": TestRunUpdateMultipleModel,
     "TestRunV2GetModel": TestRunV2GetModel,
     "TestRunV2PostShortModel": TestRunV2PostShortModel,
     "TestRunV2PutModel": TestRunV2PutModel,
@@ -1112,12 +1129,13 @@ let typeMap: {[index: string]: any} = {
     "TestSuiteV2TreeModel": TestSuiteV2TreeModel,
     "TestSuiteWithChildrenModel": TestSuiteWithChildrenModel,
     "TestSuiteWorkItemsSearchModel": TestSuiteWorkItemsSearchModel,
-    "TestSuiteWorkItemsSearchModelCreatedDate": TestSuiteWorkItemsSearchModelCreatedDate,
     "TestSuiteWorkItemsSearchModelDuration": TestSuiteWorkItemsSearchModelDuration,
-    "TestSuiteWorkItemsSearchModelModifiedDate": TestSuiteWorkItemsSearchModelModifiedDate,
+    "TestSuiteWorkItemsSearchModelMedianDuration": TestSuiteWorkItemsSearchModelMedianDuration,
+    "UpdateAttachmentShortModel": UpdateAttachmentShortModel,
     "UpdateAutoTestRequest": UpdateAutoTestRequest,
     "UpdateCustomAttributeTestPlanProjectRelationsRequest": UpdateCustomAttributeTestPlanProjectRelationsRequest,
     "UpdateEmptyRequest": UpdateEmptyRequest,
+    "UpdateLinkShortModel": UpdateLinkShortModel,
     "UpdateParameterRequest": UpdateParameterRequest,
     "UpdateProjectRequest": UpdateProjectRequest,
     "UpdateProjectsAttributeRequest": UpdateProjectsAttributeRequest,
@@ -1126,7 +1144,6 @@ let typeMap: {[index: string]: any} = {
     "UpdateWorkItemRequest": UpdateWorkItemRequest,
     "UserRankModel": UserRankModel,
     "UserWithRankModel": UserWithRankModel,
-    "UserWithRankModelUserRank": UserWithRankModelUserRank,
     "ValidateAntiForgeryTokenAttribute": ValidateAntiForgeryTokenAttribute,
     "ValidationProblemDetails": ValidationProblemDetails,
     "WebHookLogModel": WebHookLogModel,
@@ -1134,25 +1151,12 @@ let typeMap: {[index: string]: any} = {
     "WebHookPostModel": WebHookPostModel,
     "WebHookTestModel": WebHookTestModel,
     "WorkItemChangeModel": WorkItemChangeModel,
-    "WorkItemChangeModelWorkItemChangedFields": WorkItemChangeModelWorkItemChangedFields,
     "WorkItemChangedAttributeViewModel": WorkItemChangedAttributeViewModel,
     "WorkItemChangedFieldsViewModel": WorkItemChangedFieldsViewModel,
-    "WorkItemChangedFieldsViewModelAttachments": WorkItemChangedFieldsViewModelAttachments,
-    "WorkItemChangedFieldsViewModelAutoTests": WorkItemChangedFieldsViewModelAutoTests,
-    "WorkItemChangedFieldsViewModelDuration": WorkItemChangedFieldsViewModelDuration,
-    "WorkItemChangedFieldsViewModelGlobalId": WorkItemChangedFieldsViewModelGlobalId,
-    "WorkItemChangedFieldsViewModelIsDeleted": WorkItemChangedFieldsViewModelIsDeleted,
-    "WorkItemChangedFieldsViewModelLinks": WorkItemChangedFieldsViewModelLinks,
-    "WorkItemChangedFieldsViewModelProjectId": WorkItemChangedFieldsViewModelProjectId,
-    "WorkItemChangedFieldsViewModelState": WorkItemChangedFieldsViewModelState,
-    "WorkItemChangedFieldsViewModelSteps": WorkItemChangedFieldsViewModelSteps,
-    "WorkItemChangedFieldsViewModelTags": WorkItemChangedFieldsViewModelTags,
     "WorkItemCommentModel": WorkItemCommentModel,
-    "WorkItemCommentModelUser": WorkItemCommentModelUser,
     "WorkItemCommentPostModel": WorkItemCommentPostModel,
     "WorkItemCommentPutModel": WorkItemCommentPutModel,
     "WorkItemFilterModel": WorkItemFilterModel,
-    "WorkItemFilterModelDuration": WorkItemFilterModelDuration,
     "WorkItemIdModel": WorkItemIdModel,
     "WorkItemIdentifierModel": WorkItemIdentifierModel,
     "WorkItemLikeModel": WorkItemLikeModel,
@@ -1169,7 +1173,6 @@ let typeMap: {[index: string]: any} = {
     "WorkItemShortModel": WorkItemShortModel,
     "WorkItemStepChangeViewModel": WorkItemStepChangeViewModel,
     "WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel": WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel,
-    "WorkItemStepChangeViewModelWorkItem": WorkItemStepChangeViewModelWorkItem,
     "WorkItemVersionModel": WorkItemVersionModel,
     "WorkItemsExtractionModel": WorkItemsExtractionModel,
     "WorkItemsExtractionModelIds": WorkItemsExtractionModelIds,

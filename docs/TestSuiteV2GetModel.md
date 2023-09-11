@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Unique ID of the test suite | [optional] [default to null] |
+| **id** | **UUID** | Unique ID of the test suite | [default to null] |
 | **refreshDate** | **Date** | Date of the last refresh of the test suite | [optional] [default to null] |
 | **parentId** | **UUID** | Unique ID of the parent test suite in hierarchy | [optional] [default to null] |
 | **testPlanId** | **UUID** | Unique ID of test plan to which the test suite belongs | [default to null] |

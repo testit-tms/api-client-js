@@ -16,5 +16,6 @@ export enum FailureCategoryModel {
     InfrastructureDefect = <any> 'InfrastructureDefect',
     ProductDefect = <any> 'ProductDefect',
     TestDefect = <any> 'TestDefect',
-    NoDefect = <any> 'NoDefect'
+    NoDefect = <any> 'NoDefect',
+    NoAnalytics = <any> 'NoAnalytics'
 }

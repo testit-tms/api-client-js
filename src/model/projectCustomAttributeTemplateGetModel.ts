@@ -17,19 +17,19 @@ export class ProjectCustomAttributeTemplateGetModel {
     /**
     * Unique ID of the custom attributes template
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the custom attribute template is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Name of the custom attribute template
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Attributes of the template
     */
-    'customAttributeModels'?: Array<CustomAttributeModel>;
+    'customAttributeModels'?: Array<CustomAttributeModel> | null;
 
     static discriminator: string | undefined = undefined;
 

@@ -16,16 +16,16 @@ export class TestSuiteWithChildrenModel {
     'children'?: Array<TestSuiteWithChildrenModel> | null;
     'testerId'?: string | null;
     'parentId'?: string | null;
-    'testPlanId'?: string;
-    'name'?: string;
+    'testPlanId': string;
+    'name'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

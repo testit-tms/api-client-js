@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class ParameterGroupModel {
-    'name'?: string;
-    'values'?: { [key: string]: string; };
-    'parameterKeyId'?: string;
+    'name'?: string | null;
+    'values'?: { [key: string]: string; } | null;
+    'parameterKeyId': string;
 
     static discriminator: string | undefined = undefined;
 

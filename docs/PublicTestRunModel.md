@@ -3,9 +3,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **testRunId** | **UUID** |  | [optional] [default to null] |
+| **testRunId** | **UUID** |  | [default to null] |
 | **testPlanId** | **UUID** |  | [optional] [default to null] |
-| **testPlanGlobalId** | **Long** |  | [optional] [default to null] |
+| **testPlanGlobalId** | **Long** |  | [default to null] |
 | **name** | **String** |  | [optional] [default to null] |
 | **productName** | **String** |  | [optional] [default to null] |
 | **build** | **String** |  | [optional] [default to null] |

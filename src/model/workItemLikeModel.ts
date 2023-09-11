@@ -13,19 +13,19 @@
 import { RequestFile } from './models';
 
 export class WorkItemLikeModel {
-    'workItemId'?: string;
-    'createdDate'?: Date;
+    'workItemId': string;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

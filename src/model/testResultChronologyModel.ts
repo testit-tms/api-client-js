@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class TestResultChronologyModel {
     'outcome'?: string | null;
-    'count'?: number;
+    'count': number;
 
     static discriminator: string | undefined = undefined;
 

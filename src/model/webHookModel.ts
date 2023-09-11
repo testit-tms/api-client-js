@@ -18,7 +18,7 @@ export class WebHookModel {
     /**
     * Name of the webhook
     */
-    'name'?: string;
+    'name'?: string | null;
     'eventType': WebHookEventTypeModel;
     /**
     * Description of the webhook
@@ -27,12 +27,12 @@ export class WebHookModel {
     /**
     * Url to which the webhook sends request
     */
-    'url'?: string;
+    'url'?: string | null;
     'requestType': RequestTypeModel;
     /**
     * Indicates if the webhook sends body
     */
-    'shouldSendBody'?: boolean;
+    'shouldSendBody': boolean;
     /**
     * Collection of headers which the webhook sends
     */
@@ -44,11 +44,11 @@ export class WebHookModel {
     /**
     * Indicates if the webhook is active
     */
-    'isEnabled'?: boolean;
+    'isEnabled': boolean;
     /**
     * Indicates if the webhook sends custom body
     */
-    'shouldSendCustomBody'?: boolean;
+    'shouldSendCustomBody': boolean;
     /**
     * Custom body of the webhook
     */
@@ -60,19 +60,19 @@ export class WebHookModel {
     /**
     * Indicates if the webhook injects parameters
     */
-    'shouldReplaceParameters'?: boolean;
+    'shouldReplaceParameters': boolean;
     /**
     * Indicates if the webhook escapes invalid characters in parameters
     */
-    'shouldEscapeParameters'?: boolean;
+    'shouldEscapeParameters': boolean;
     /**
     * Creation date of the webhook
     */
-    'createdDate'?: Date;
+    'createdDate': Date;
     /**
     * Unique ID of user who created the webhook
     */
-    'createdById'?: string;
+    'createdById': string;
     /**
     * Last modification date of the webhook
     */
@@ -84,15 +84,15 @@ export class WebHookModel {
     /**
     * Unique ID of project where the webhook is located
     */
-    'projectId'?: string;
+    'projectId': string;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class TestPlanGroupByTester {
     'userId'?: string | null;
-    'value'?: number;
+    'value': number;
 
     static discriminator: string | undefined = undefined;
 

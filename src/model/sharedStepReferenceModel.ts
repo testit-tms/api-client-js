@@ -15,26 +15,26 @@ import { TagShortModel } from './tagShortModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 
 export class SharedStepReferenceModel {
-    'id'?: string;
-    'globalId'?: number;
-    'name'?: string;
-    'entityTypeName'?: string;
-    'hasThisSharedStepAsStep'?: boolean;
-    'hasThisSharedStepAsPrecondition'?: boolean;
-    'hasThisSharedStepAsPostcondition'?: boolean;
-    'createdById'?: string;
+    'id': string;
+    'globalId': number;
+    'name'?: string | null;
+    'entityTypeName'?: string | null;
+    'hasThisSharedStepAsStep': boolean;
+    'hasThisSharedStepAsPrecondition': boolean;
+    'hasThisSharedStepAsPostcondition': boolean;
+    'createdById': string;
     'modifiedById'?: string | null;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'state'?: string;
+    'state'?: string | null;
     'priority': WorkItemPriorityModel;
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * used for versioning changes in workitem
     */
-    'versionId'?: string;
-    'isAutomated'?: boolean;
-    'sectionId'?: string;
+    'versionId': string;
+    'isAutomated': boolean;
+    'sectionId': string;
     'tags'?: Array<TagShortModel> | null;
 
     static discriminator: string | undefined = undefined;

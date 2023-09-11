@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class AttachmentPutModel {
     /**
-    * Specifies the GUID of the attachment.
+    * Unique ID of the attachment
     */
     'id': string;
 

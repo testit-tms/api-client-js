@@ -19,32 +19,32 @@ export class AutoTestModelV2GetModel {
     /**
     * This property is used to set autotest identifier from client system
     */
-    'externalId'?: string;
+    'externalId'?: string | null;
     'links'?: Array<LinkModel> | null;
     /**
     * This property is used to link autotest with project
     */
-    'projectId'?: string;
-    'name'?: string;
+    'projectId': string;
+    'name'?: string | null;
     'namespace'?: string | null;
     'classname'?: string | null;
     'steps'?: Array<AutoTestStepModel> | null;
     'setup'?: Array<AutoTestStepModel> | null;
     'teardown'?: Array<AutoTestStepModel> | null;
-    'globalId'?: number;
+    'globalId': number;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     'labels'?: Array<LabelShortModel> | null;
     /**
     * Unique ID of the entity
     */
-    'id'?: string;
+    'id': string;
     /**
     * Indicates if the entity is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 

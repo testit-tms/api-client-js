@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class Int32ChangedFieldViewModel {
-    'oldValue'?: number;
-    'newValue'?: number;
+    'oldValue': number;
+    'newValue': number;
 
     static discriminator: string | undefined = undefined;
 

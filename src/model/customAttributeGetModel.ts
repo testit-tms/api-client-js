@@ -18,32 +18,32 @@ export class CustomAttributeGetModel {
     /**
     * Unique ID of the attribute
     */
-    'id'?: string;
+    'id': string;
     /**
     * Collection of the attribute options
     */
-    'options'?: Array<CustomAttributeOptionModel>;
+    'options'?: Array<CustomAttributeOptionModel> | null;
     'type': CustomAttributeTypesEnum;
     /**
     * Indicates if the attribute is deleted
     */
-    'isDeleted'?: boolean;
+    'isDeleted': boolean;
     /**
     * Name of the attribute
     */
-    'name'?: string;
+    'name'?: string | null;
     /**
     * Indicates if the attribute is enabled
     */
-    'isEnabled'?: boolean;
+    'isEnabled': boolean;
     /**
     * Indicates if the attribute is mandatory to specify
     */
-    'isRequired'?: boolean;
+    'isRequired': boolean;
     /**
     * Indicates if the attribute is available across all projects
     */
-    'isGlobal'?: boolean;
+    'isGlobal': boolean;
 
     static discriminator: string | undefined = undefined;
 

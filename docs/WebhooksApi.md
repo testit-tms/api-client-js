@@ -172,7 +172,7 @@ Search for webhooks
 
 <a name="apiV2WebhooksSpecialVariablesGet"></a>
 # **apiV2WebhooksSpecialVariablesGet**
-> List apiV2WebhooksSpecialVariablesGet(eventType)
+> List apiV2WebhooksSpecialVariablesGet(eventType, variablesType)
 
 Get special variables for webhook event type
 
@@ -180,7 +180,8 @@ Get special variables for webhook event type
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **eventType** | [**WebHookEventType**](../Models/.md)| Webhook event type | [optional] [default to null] [enum: AutomatedTestRunCreated, TestPlansStatusChanged, TestRunStopped, TestPointAssigned, TestResultJiraIssueCreated, AutoTestFinished, UserMentionedInComment, UserSelectedInWorkItemAttribute, AllTestPointsFinished, AllAutoTestsFinished, AutoTestChanged, WorkItemAutoTestRelationChanged, WorkItemAttributeChanged, WorkItemChanged, ConfigurationChanged] |
+| **eventType** | [**WebHookEventType**](../Models/.md)| Webhook event type | [optional] [default to null] [enum: AutomatedTestRunCreated, TestPlansStatusChanged, TestRunStopped, TestPointAssigned, TestResultJiraIssueCreated, AutoTestFinished, UserMentionedInComment, UserSelectedInWorkItemAttribute, AllTestPointsFinished, AllAutoTestsFinished, AutoTestChanged, WorkItemAutoTestRelationChanged, WorkItemAttributeChanged, WorkItemChanged, ConfigurationChanged, ProjectChanged, TestPlanChanged] |
+| **variablesType** | [**WebhookVariablesType**](../Models/.md)|  | [optional] [default to VariablesForUrl] [enum: VariablesForUrl, VariablesForHeaders, VariablesForBody] |
 
 ### Return type
 

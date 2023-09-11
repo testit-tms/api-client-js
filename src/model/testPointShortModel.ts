@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class TestPointShortModel {
-    'testSuiteId'?: string;
-    'id'?: string;
+    'testSuiteId': string;
+    'id': string;
     'testerId'?: string | null;
     'workItemId'?: string | null;
     'configurationId'?: string | null;
@@ -23,7 +23,7 @@ export class TestPointShortModel {
     */
     'status'?: string | null;
     'lastTestResultId'?: string | null;
-    'iterationId'?: string;
+    'iterationId': string;
 
     static discriminator: string | undefined = undefined;
 

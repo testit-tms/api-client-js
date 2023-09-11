@@ -258,7 +258,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System return change history of WorkItem
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System return change history of WorkItem
      * @summary Get change history of WorkItem
      * @param id 
      * @param skip Amount of items to be skipped (offset)
@@ -783,7 +783,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System set WorkItem as actual
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System set WorkItem as actual
      * @summary Set WorkItem as actual
      * @param id 
      * @param versionId 
@@ -1121,7 +1121,7 @@ export class WorkItemsApi {
     }
     /**
      * <br>Use case  <br>User sets SharedStep identifier  <br>User runs method execution  <br>System return SharedStep references
-     * @summary Get SharedStep references in workitems
+     * @summary Get SharedStep references in work items
      * @param sharedStepId 
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
@@ -1291,7 +1291,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem properties (listed in request parameters)  <br>User runs method execution  <br>System creates workitem by identifier  <br>System returns workitem model (listed in response parameters)
+     * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System creates work item by identifier  <br>System returns work item model (listed in response parameters)
      * @summary Create Test Case, Checklist or Shared Step
      * @param createWorkItemRequest 
      */
@@ -1358,7 +1358,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System search workitem by identifier  <br>System search and delete all autotests, related to found workitem  <br>System returns no content response
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search and delete all autotests, related to found work item  <br>System returns no content response
      * @summary Delete all links AutoTests from WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1429,7 +1429,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System deletes workitem  <br>System returns no content response
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System deletes work item  <br>System returns no content response
      * @summary Delete Test Case, Checklist or Shared Step by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1500,7 +1500,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System search workitem by identifier  <br>System search all autotests, related to found workitem  <br>System returns list of found autotests
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search all autotests, related to found work item  <br>System returns list of found autotests
      * @summary Get all AutoTests linked to WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1573,7 +1573,7 @@ export class WorkItemsApi {
     }
     /**
      * 
-     * @summary Get iterations by workitem Id or GlobalId
+     * @summary Get iterations by work item Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      * @param versionId WorkItem version (guid format) identifier
      * @param versionNumber WorkItem version number (0 is the last version)\&quot;
@@ -1654,7 +1654,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>[Optional] User sets workitem version identifier  <br>[Optional] User sets workitem version number  <br>User runs method execution  <br>System search workitem by identifier  <br>[Optional] if User sets workitem version identifier, system search workitem version by identifier.  <br>[Optional] if user sets workitem version number, system search workitem version by number  <br>Otherwise, system search last workitem version  <br>System returns workitem 
+     * <br>Use case  <br>User sets work item identifier  <br>[Optional] User sets work item version identifier  <br>[Optional] User sets work item version number  <br>User runs method execution  <br>System search work item by identifier  <br>[Optional] if User sets work item version identifier, system search work item version by identifier.  <br>[Optional] if user sets work item version number, system search work item version by number  <br>Otherwise, system search last work item version  <br>System returns work item 
      * @summary Get Test Case, Checklist or Shared Step by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      * @param versionId WorkItem version (guid format) identifier\&quot;
@@ -1736,7 +1736,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>User runs method execution  <br>System search workitem by identifier  <br>System search test results of all autotests, related to found workitem  <br>System sort results by CompletedOn ascending, then by CreatedDate ascending  <br>System returns sorted collection of test results
+     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search test results of all autotests, related to found work item  <br>System sort results by CompletedOn ascending, then by CreatedDate ascending  <br>System returns sorted collection of test results
      * @summary Get WorkItem chronology by Id or GlobalId
      * @param id 
      */
@@ -1808,7 +1808,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem identifier  <br>[Optional] User sets workitem version identifier  <br>User runs method execution  <br>System search workitem by identifier  <br>                      [Optional] If User set workitem version identifier, System search workitem version by version identifier                      Otherwise, system search all version of workitem                    <br>System returns array of workitem version models (listed in response example)
+     * <br>Use case  <br>User sets work item identifier  <br>[Optional] User sets work item version identifier  <br>User runs method execution  <br>System search work item by identifier  <br>                      [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item                    <br>System returns array of work item version models (listed in response example)
      * @summary Get WorkItem versions
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      * @param workItemVersionId WorkItem version (guid format)  identifier\&quot;
@@ -2032,7 +2032,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets workitem properties (listed in request parameters)  <br>User runs method execution  <br>System updates workitem by identifier  <br>System returns updated workitem model (listed in response parameters)
+     * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System updates work item by identifier  <br>System returns updated work item model (listed in response parameters)
      * @summary Update Test Case, Checklist or Shared Step
      * @param updateWorkItemRequest 
      */

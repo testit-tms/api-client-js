@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Unique ID of the custom attributes template | [optional] [default to null] |
-| **isDeleted** | **Boolean** | Indicates if the custom attribute template is deleted | [optional] [default to null] |
+| **id** | **UUID** | Unique ID of the custom attributes template | [default to null] |
+| **isDeleted** | **Boolean** | Indicates if the custom attribute template is deleted | [default to null] |
 | **name** | **String** | Name of the custom attribute template | [optional] [default to null] |
 | **customAttributeModels** | [**List**](CustomAttributeModel.md) | Attributes of the template | [optional] [default to null] |
 

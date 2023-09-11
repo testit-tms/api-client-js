@@ -13,16 +13,40 @@
 import { RequestFile } from './models';
 
 export class AttachmentModel {
-    'fileId': string;
-    'type': string;
-    'size': number;
-    'createdDate'?: Date;
-    'modifiedDate'?: Date | null;
-    'createdById'?: string;
-    'modifiedById'?: string | null;
-    'name': string;
     /**
-    * Specifies the GUID of the attachment.
+    * Unique ID of the attachment file
+    */
+    'fileId'?: string | null;
+    /**
+    * MIME type of the attachment
+    */
+    'type'?: string | null;
+    /**
+    * Size in bytes of the attachment file
+    */
+    'size': number;
+    /**
+    * Creation date of the attachment
+    */
+    'createdDate': Date;
+    /**
+    * Last modification date of the attachment
+    */
+    'modifiedDate'?: Date | null;
+    /**
+    * Unique ID of the attachment creator
+    */
+    'createdById': string;
+    /**
+    * Unique ID of the attachment last editor
+    */
+    'modifiedById'?: string | null;
+    /**
+    * Name of the attachment file
+    */
+    'name'?: string | null;
+    /**
+    * Unique ID of the attachment
     */
     'id': string;
 

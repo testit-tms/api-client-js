@@ -15,7 +15,7 @@ import { SectionSharedStep } from './sectionSharedStep';
 
 export class StepModel {
     'workItem'?: SectionSharedStep | null;
-    'id'?: string;
+    'id': string;
     'action'?: string | null;
     'expected'?: string | null;
     'testData'?: string | null;

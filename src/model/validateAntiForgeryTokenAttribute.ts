@@ -13,9 +13,9 @@
 import { RequestFile } from './models';
 
 export class ValidateAntiForgeryTokenAttribute {
-    'order'?: number;
-    'isReusable'?: boolean;
-    'typeId'?: any | null;
+    'order': number;
+    'isReusable': boolean;
+    'typeId': any | null;
 
     static discriminator: string | undefined = undefined;
 

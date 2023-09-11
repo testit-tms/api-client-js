@@ -13,13 +13,13 @@
 import { RequestFile } from './models';
 
 export class ParameterModel {
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'isDeleted'?: boolean;
-    'parameterKeyId'?: string;
-    'id'?: string;
+    'isDeleted': boolean;
+    'parameterKeyId': string;
+    'id': string;
     'value': string;
     'name': string;
 

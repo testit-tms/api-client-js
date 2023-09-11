@@ -27,5 +27,7 @@ export enum WebHookEventTypeModel {
     WorkItemAutoTestRelationChanged = <any> 'WorkItemAutoTestRelationChanged',
     WorkItemAttributeChanged = <any> 'WorkItemAttributeChanged',
     WorkItemChanged = <any> 'WorkItemChanged',
-    ConfigurationChanged = <any> 'ConfigurationChanged'
+    ConfigurationChanged = <any> 'ConfigurationChanged',
+    ProjectChanged = <any> 'ProjectChanged',
+    TestPlanChanged = <any> 'TestPlanChanged'
 }

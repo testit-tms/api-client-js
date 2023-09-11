@@ -27,15 +27,15 @@ export class CreateProjectsAttributeRequest {
     /**
     * Indicates if the attribute is enabled
     */
-    'isEnabled'?: boolean;
+    'isEnabled': boolean;
     /**
     * Indicates if the attribute value is mandatory to specify
     */
-    'isRequired'?: boolean;
+    'isRequired': boolean;
     /**
     * Indicates if the attribute is available across all projects
     */
-    'isGlobal'?: boolean;
+    'isGlobal': boolean;
 
     static discriminator: string | undefined = undefined;
 

@@ -11,15 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { WorkItemCommentModelUser } from './workItemCommentModelUser';
+import { UserWithRankModel } from './userWithRankModel';
 
 export class WorkItemCommentModel {
-    'id'?: string;
-    'text'?: string;
-    'user'?: WorkItemCommentModelUser;
-    'createdById'?: string;
+    'id': string;
+    'text'?: string | null;
+    'user'?: UserWithRankModel | null;
+    'createdById': string;
     'modifiedById'?: string | null;
-    'createdDate'?: Date;
+    'createdDate': Date;
     'modifiedDate'?: Date | null;
 
     static discriminator: string | undefined = undefined;
@@ -38,7 +38,7 @@ export class WorkItemCommentModel {
         {
             "name": "user",
             "baseName": "user",
-            "type": "WorkItemCommentModelUser"
+            "type": "UserWithRankModel"
         },
         {
             "name": "createdById",

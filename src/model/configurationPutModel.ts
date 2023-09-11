@@ -20,7 +20,7 @@ export class ConfigurationPutModel {
     * This property is used to link configuration with project
     */
     'projectId': string;
-    'isDefault'?: boolean;
+    'isDefault': boolean;
     'name': string;
 
     static discriminator: string | undefined = undefined;

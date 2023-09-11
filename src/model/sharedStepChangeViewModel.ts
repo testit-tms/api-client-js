@@ -14,10 +14,10 @@ import { RequestFile } from './models';
 import { WorkItemStepChangeViewModel } from './workItemStepChangeViewModel';
 
 export class SharedStepChangeViewModel {
-    'id'?: string;
-    'globalId'?: number;
-    'name'?: string;
-    'steps'?: Array<WorkItemStepChangeViewModel>;
+    'id': string;
+    'globalId': number;
+    'name'?: string | null;
+    'steps'?: Array<WorkItemStepChangeViewModel> | null;
 
     static discriminator: string | undefined = undefined;
 

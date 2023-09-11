@@ -32,23 +32,23 @@ export class ApiV2WebhooksPostRequest {
     /**
     * Indicates if the webhook sends body
     */
-    'shouldSendBody'?: boolean;
+    'shouldSendBody': boolean;
     /**
     * Collection of the webhook headers
     */
-    'headers'?: { [key: string]: string; };
+    'headers'?: { [key: string]: string; } | null;
     /**
     * Collection of the webhook query parameters
     */
-    '_queryParameters'?: { [key: string]: string; };
+    '_queryParameters'?: { [key: string]: string; } | null;
     /**
     * Indicates if the webhook is active
     */
-    'isEnabled'?: boolean;
+    'isEnabled': boolean;
     /**
     * Indicates if the webhook sends custom body
     */
-    'shouldSendCustomBody'?: boolean;
+    'shouldSendCustomBody': boolean;
     /**
     * Custom body of the webhook
     */
@@ -56,11 +56,11 @@ export class ApiV2WebhooksPostRequest {
     /**
     * Indicates if the webhook injects parameters
     */
-    'shouldReplaceParameters'?: boolean;
+    'shouldReplaceParameters': boolean;
     /**
     * Indicates if the webhook escapes invalid characters in parameters
     */
-    'shouldEscapeParameters'?: boolean;
+    'shouldEscapeParameters': boolean;
     /**
     * Name of the webhook
     */

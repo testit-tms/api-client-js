@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class AutoTestAverageDurationModel {
-    'passedAverageDuration'?: number;
-    'failedAverageDuration'?: number;
+    'passedAverageDuration': number;
+    'failedAverageDuration': number;
 
     static discriminator: string | undefined = undefined;
 

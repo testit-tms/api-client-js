@@ -15,13 +15,13 @@ import { AttachmentModel } from './attachmentModel';
 import { LinkModel } from './linkModel';
 
 export class TestResultHistoryReportModel {
-    'id'?: string;
-    'createdDate'?: Date;
-    'modifiedDate'?: Date;
+    'id': string;
+    'createdDate': Date;
+    'modifiedDate': Date;
     /**
     * If test run was stopped, this property equals identifier of user who stopped it.Otherwise, the property equals identifier of user who created the test result
     */
-    'userId'?: string;
+    'userId': string;
     'testRunId'?: string | null;
     'testRunName'?: string | null;
     'createdByUserName'?: string | null;
@@ -32,7 +32,7 @@ export class TestResultHistoryReportModel {
     * If test point related to the test result has configuration, this property will be equal to the test point configuration name. Otherwise, this property will be equal to the test result configuration name
     */
     'configurationName'?: string | null;
-    'isAutomated'?: boolean;
+    'isAutomated': boolean;
     /**
     * If any test result related to the test run is linked with autotest and the run has an outcome, the outcome value equalsto the worst outcome of the last modified test result.Otherwise, the outcome equals to the outcome of first created test result in the test run
     */
@@ -48,7 +48,7 @@ export class TestResultHistoryReportModel {
     'startedOn'?: Date | null;
     'completedOn'?: Date | null;
     'duration'?: number | null;
-    'createdById'?: string;
+    'createdById': string;
     'modifiedById'?: string | null;
     /**
     * If any test result related to the test run is linked with autotest, attachments will be equal to the attachments of last modified test result.Otherwise, the attachments equals to the attachments of first created test result in the test run
@@ -57,7 +57,7 @@ export class TestResultHistoryReportModel {
     'workItemVersionId'?: string | null;
     'workItemVersionNumber'?: number | null;
     'launchSource'?: string | null;
-    'failureClassIds'?: Array<string>;
+    'failureClassIds'?: Array<string> | null;
     'parameters'?: { [key: string]: string; } | null;
 
     static discriminator: string | undefined = undefined;

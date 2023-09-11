@@ -73,6 +73,10 @@ export class AutoTestPutModel {
     * Indicates if the autotest is marked as flaky
     */
     'isFlaky'?: boolean | null;
+    /**
+    * External key of the autotest
+    */
+    'externalKey'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -151,6 +155,11 @@ export class AutoTestPutModel {
             "name": "isFlaky",
             "baseName": "isFlaky",
             "type": "boolean"
+        },
+        {
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

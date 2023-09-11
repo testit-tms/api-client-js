@@ -16,13 +16,13 @@ All URIs are relative to *http://localhost*
 | [**apiV2WorkItemsMovePost**](WorkItemsApi.md#apiV2WorkItemsMovePost) | **POST** /api/v2/workItems/move | Move WorkItem to another section |
 | [**apiV2WorkItemsSearchPost**](WorkItemsApi.md#apiV2WorkItemsSearchPost) | **POST** /api/v2/workItems/search | Search for work items |
 | [**apiV2WorkItemsSharedStepIdReferencesSectionsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesSectionsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/sections | Get SharedStep references in sections |
-| [**apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesWorkItemsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/workItems | Get SharedStep references in workitems |
+| [**apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesWorkItemsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/workItems | Get SharedStep references in work items |
 | [**apiV2WorkItemsSharedStepsSharedStepIdReferencesGet**](WorkItemsApi.md#apiV2WorkItemsSharedStepsSharedStepIdReferencesGet) | **GET** /api/v2/workItems/sharedSteps/{sharedStepId}/references | Get SharedStep references |
 | [**createWorkItem**](WorkItemsApi.md#createWorkItem) | **POST** /api/v2/workItems | Create Test Case, Checklist or Shared Step |
 | [**deleteAllWorkItemsFromAutoTest**](WorkItemsApi.md#deleteAllWorkItemsFromAutoTest) | **DELETE** /api/v2/workItems/{id}/autoTests | Delete all links AutoTests from WorkItem by Id or GlobalId |
 | [**deleteWorkItem**](WorkItemsApi.md#deleteWorkItem) | **DELETE** /api/v2/workItems/{id} | Delete Test Case, Checklist or Shared Step by Id or GlobalId |
 | [**getAutoTestsForWorkItem**](WorkItemsApi.md#getAutoTestsForWorkItem) | **GET** /api/v2/workItems/{id}/autoTests | Get all AutoTests linked to WorkItem by Id or GlobalId |
-| [**getIterations**](WorkItemsApi.md#getIterations) | **GET** /api/v2/workItems/{id}/iterations | Get iterations by workitem Id or GlobalId |
+| [**getIterations**](WorkItemsApi.md#getIterations) | **GET** /api/v2/workItems/{id}/iterations | Get iterations by work item Id or GlobalId |
 | [**getWorkItemById**](WorkItemsApi.md#getWorkItemById) | **GET** /api/v2/workItems/{id} | Get Test Case, Checklist or Shared Step by Id or GlobalId |
 | [**getWorkItemChronology**](WorkItemsApi.md#getWorkItemChronology) | **GET** /api/v2/workItems/{id}/chronology | Get WorkItem chronology by Id or GlobalId |
 | [**getWorkItemVersions**](WorkItemsApi.md#getWorkItemVersions) | **GET** /api/v2/workItems/{id}/versions | Get WorkItem versions |
@@ -92,7 +92,7 @@ Transform CheckList to TestCase
 
 Get change history of WorkItem
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System return change history of WorkItem
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System return change history of WorkItem
 
 ### Parameters
 
@@ -273,7 +273,7 @@ Get test results history of WorkItem
 
 Set WorkItem as actual
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System set WorkItem as actual
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System set WorkItem as actual
 
 ### Parameters
 
@@ -389,7 +389,7 @@ Get SharedStep references in sections
 # **apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**
 > List apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_workItems\_\_sharedStepId\_\_references\_workItems\_post\_request)
 
-Get SharedStep references in workitems
+Get SharedStep references in work items
 
     &lt;br&gt;Use case  &lt;br&gt;User sets SharedStep identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System return SharedStep references
 
@@ -451,7 +451,7 @@ Get SharedStep references
 
 Create Test Case, Checklist or Shared Step
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem properties (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates workitem by identifier  &lt;br&gt;System returns workitem model (listed in response parameters)
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item properties (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates work item by identifier  &lt;br&gt;System returns work item model (listed in response parameters)
 
 ### Parameters
 
@@ -478,7 +478,7 @@ Create Test Case, Checklist or Shared Step
 
 Delete all links AutoTests from WorkItem by Id or GlobalId
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search workitem by identifier  &lt;br&gt;System search and delete all autotests, related to found workitem  &lt;br&gt;System returns no content response
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search work item by identifier  &lt;br&gt;System search and delete all autotests, related to found work item  &lt;br&gt;System returns no content response
 
 ### Parameters
 
@@ -505,7 +505,7 @@ null (empty response body)
 
 Delete Test Case, Checklist or Shared Step by Id or GlobalId
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System deletes workitem  &lt;br&gt;System returns no content response
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System deletes work item  &lt;br&gt;System returns no content response
 
 ### Parameters
 
@@ -532,7 +532,7 @@ null (empty response body)
 
 Get all AutoTests linked to WorkItem by Id or GlobalId
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search workitem by identifier  &lt;br&gt;System search all autotests, related to found workitem  &lt;br&gt;System returns list of found autotests
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search work item by identifier  &lt;br&gt;System search all autotests, related to found work item  &lt;br&gt;System returns list of found autotests
 
 ### Parameters
 
@@ -557,7 +557,7 @@ Get all AutoTests linked to WorkItem by Id or GlobalId
 # **getIterations**
 > List getIterations(id, versionId, versionNumber)
 
-Get iterations by workitem Id or GlobalId
+Get iterations by work item Id or GlobalId
 
 ### Parameters
 
@@ -586,7 +586,7 @@ Get iterations by workitem Id or GlobalId
 
 Get Test Case, Checklist or Shared Step by Id or GlobalId
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;[Optional] User sets workitem version identifier  &lt;br&gt;[Optional] User sets workitem version number  &lt;br&gt;User runs method execution  &lt;br&gt;System search workitem by identifier  &lt;br&gt;[Optional] if User sets workitem version identifier, system search workitem version by identifier.  &lt;br&gt;[Optional] if user sets workitem version number, system search workitem version by number  &lt;br&gt;Otherwise, system search last workitem version  &lt;br&gt;System returns workitem 
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;[Optional] User sets work item version identifier  &lt;br&gt;[Optional] User sets work item version number  &lt;br&gt;User runs method execution  &lt;br&gt;System search work item by identifier  &lt;br&gt;[Optional] if User sets work item version identifier, system search work item version by identifier.  &lt;br&gt;[Optional] if user sets work item version number, system search work item version by number  &lt;br&gt;Otherwise, system search last work item version  &lt;br&gt;System returns work item 
 
 ### Parameters
 
@@ -615,7 +615,7 @@ Get Test Case, Checklist or Shared Step by Id or GlobalId
 
 Get WorkItem chronology by Id or GlobalId
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search workitem by identifier  &lt;br&gt;System search test results of all autotests, related to found workitem  &lt;br&gt;System sort results by CompletedOn ascending, then by CreatedDate ascending  &lt;br&gt;System returns sorted collection of test results
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search work item by identifier  &lt;br&gt;System search test results of all autotests, related to found work item  &lt;br&gt;System sort results by CompletedOn ascending, then by CreatedDate ascending  &lt;br&gt;System returns sorted collection of test results
 
 ### Parameters
 
@@ -642,7 +642,7 @@ Get WorkItem chronology by Id or GlobalId
 
 Get WorkItem versions
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem identifier  &lt;br&gt;[Optional] User sets workitem version identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search workitem by identifier  &lt;br&gt;                      [Optional] If User set workitem version identifier, System search workitem version by version identifier                      Otherwise, system search all version of workitem                    &lt;br&gt;System returns array of workitem version models (listed in response example)
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item identifier  &lt;br&gt;[Optional] User sets work item version identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search work item by identifier  &lt;br&gt;                      [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item                    &lt;br&gt;System returns array of work item version models (listed in response example)
 
 ### Parameters
 
@@ -721,7 +721,7 @@ null (empty response body)
 
 Update Test Case, Checklist or Shared Step
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets workitem properties (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates workitem by identifier  &lt;br&gt;System returns updated workitem model (listed in response parameters)
+    &lt;br&gt;Use case  &lt;br&gt;User sets work item properties (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates work item by identifier  &lt;br&gt;System returns updated work item model (listed in response parameters)
 
 ### Parameters
 
