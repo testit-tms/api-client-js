@@ -21,15 +21,15 @@ export class ApiV2CustomAttributesSearchPostRequest {
     /**
     * Unique IDs of projects where attribute is in use
     */
-    'projectIds'?: Set<string> | null;
+    'projectIds'?: Array<string> | null;
     /**
     * Unique IDs of attributes for search restriction
     */
-    'customAttributeIds'?: Set<string> | null;
+    'customAttributeIds'?: Array<string> | null;
     /**
     * Collection of attribute types
     */
-    'customAttributeTypes'?: Set<CustomAttributeTypesEnum> | null;
+    'customAttributeTypes'?: Array<CustomAttributeTypesEnum> | null;
     /**
     * Indicates whether the attribute is available across all projects
     */
@@ -50,17 +50,17 @@ export class ApiV2CustomAttributesSearchPostRequest {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "customAttributeIds",
             "baseName": "customAttributeIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "customAttributeTypes",
             "baseName": "customAttributeTypes",
-            "type": "Set<CustomAttributeTypesEnum>"
+            "type": "Array<CustomAttributeTypesEnum>"
         },
         {
             "name": "isGlobal",

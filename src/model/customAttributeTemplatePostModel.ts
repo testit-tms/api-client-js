@@ -16,7 +16,7 @@ export class CustomAttributeTemplatePostModel {
     /**
     * Collection of attribute IDs
     */
-    'customAttributeIds'?: Set<string> | null;
+    'customAttributeIds'?: Array<string> | null;
     /**
     * Custom attributes template name
     */
@@ -28,7 +28,7 @@ export class CustomAttributeTemplatePostModel {
         {
             "name": "customAttributeIds",
             "baseName": "customAttributeIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "name",

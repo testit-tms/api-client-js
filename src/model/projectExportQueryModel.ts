@@ -16,11 +16,11 @@ export class ProjectExportQueryModel {
     /**
     * Specifies the IDs of the sections you want to export.<br />  Use this parameter if you want to export certain parts of the project.<br />  In this parameter, \"<b>string</b>\" values are IDs of the test library sections.
     */
-    'sectionIds'?: Set<string> | null;
+    'sectionIds'?: Array<string> | null;
     /**
     * Specifies the work items you want to export from a project.<br />  Use this parameter if you want to export certain work items.<br />  In this parameter, \"<b>string</b>\" values are IDs of the work items.
     */
-    'workItemIds'?: Set<string> | null;
+    'workItemIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,12 +28,12 @@ export class ProjectExportQueryModel {
         {
             "name": "sectionIds",
             "baseName": "sectionIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "workItemIds",
             "baseName": "workItemIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

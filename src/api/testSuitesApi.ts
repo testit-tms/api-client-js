@@ -323,7 +323,7 @@ export class TestSuitesApi {
      * @param id Unique ID of the test suite
      * @param requestBody 
      */
-    public async apiV2TestSuitesIdWorkItemsPost (id: string, requestBody?: Set<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesIdWorkItemsPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -353,7 +353,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(requestBody, "Set<string>")
+            body: ObjectSerializer.serialize(requestBody, "Array<string>")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -987,7 +987,7 @@ export class TestSuitesApi {
      * @param id Test suite internal (guid format) identifier\&quot;
      * @param requestBody Collection of configuration identifiers\&quot;
      */
-    public async setConfigurationsByTestSuiteId (id: string, requestBody?: Set<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async setConfigurationsByTestSuiteId (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/configurations'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1017,7 +1017,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(requestBody, "Set<string>")
+            body: ObjectSerializer.serialize(requestBody, "Array<string>")
         };
 
         let authenticationPromise = Promise.resolve();

@@ -15,12 +15,12 @@ import { AutotestResultOutcome } from './autotestResultOutcome';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 
 export class ApiV2AutoTestsIdTestResultsSearchPostRequest {
-    'outcomes'?: Set<AutotestResultOutcome> | null;
-    'testPlanIds'?: Set<string> | null;
-    'testRunIds'?: Set<string> | null;
-    'configurationIds'?: Set<string> | null;
+    'outcomes'?: Array<AutotestResultOutcome> | null;
+    'testPlanIds'?: Array<string> | null;
+    'testRunIds'?: Array<string> | null;
+    'configurationIds'?: Array<string> | null;
     'launchSource'?: string | null;
-    'userIds'?: Set<string> | null;
+    'userIds'?: Array<string> | null;
     'duration'?: Int64RangeSelectorModel | null;
 
     static discriminator: string | undefined = undefined;
@@ -29,22 +29,22 @@ export class ApiV2AutoTestsIdTestResultsSearchPostRequest {
         {
             "name": "outcomes",
             "baseName": "outcomes",
-            "type": "Set<AutotestResultOutcome>"
+            "type": "Array<AutotestResultOutcome>"
         },
         {
             "name": "testPlanIds",
             "baseName": "testPlanIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "testRunIds",
             "baseName": "testRunIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "configurationIds",
             "baseName": "configurationIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "launchSource",
@@ -54,7 +54,7 @@ export class ApiV2AutoTestsIdTestResultsSearchPostRequest {
         {
             "name": "userIds",
             "baseName": "userIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "duration",

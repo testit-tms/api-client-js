@@ -19,7 +19,7 @@ export class AutoTestPostModel {
     /**
     * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
     */
-    'workItemIdsForLinkWithAutoTest'?: Set<string> | null;
+    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
     /**
     * Creates a test case linked to the autotest.
     */
@@ -87,7 +87,7 @@ export class AutoTestPostModel {
         {
             "name": "workItemIdsForLinkWithAutoTest",
             "baseName": "workItemIdsForLinkWithAutoTest",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "shouldCreateWorkItem",

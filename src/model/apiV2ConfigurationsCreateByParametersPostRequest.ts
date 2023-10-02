@@ -17,7 +17,7 @@ export class ApiV2ConfigurationsCreateByParametersPostRequest {
     * This property is used to link configuration with project
     */
     'projectId': string;
-    'parameterIds': Set<string>;
+    'parameterIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,7 +30,7 @@ export class ApiV2ConfigurationsCreateByParametersPostRequest {
         {
             "name": "parameterIds",
             "baseName": "parameterIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

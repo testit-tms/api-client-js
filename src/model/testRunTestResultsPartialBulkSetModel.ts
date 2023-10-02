@@ -19,11 +19,11 @@ export class TestRunTestResultsPartialBulkSetModel {
     /**
     * Unique IDs of result reasons to be assigned to test results
     */
-    'resultReasonIds'?: Set<string> | null;
+    'resultReasonIds'?: Array<string> | null;
     /**
     * Collection of links to be assigned to test results
     */
-    'links'?: Set<LinkPostModel> | null;
+    'links'?: Array<LinkPostModel> | null;
     /**
     * Comment to be added to test results
     */
@@ -31,7 +31,7 @@ export class TestRunTestResultsPartialBulkSetModel {
     /**
     * Unique IDs of files to be attached to test results
     */
-    'attachmentIds'?: Set<string> | null;
+    'attachmentIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -44,12 +44,12 @@ export class TestRunTestResultsPartialBulkSetModel {
         {
             "name": "resultReasonIds",
             "baseName": "resultReasonIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "links",
             "baseName": "links",
-            "type": "Set<LinkPostModel>"
+            "type": "Array<LinkPostModel>"
         },
         {
             "name": "comment",
@@ -59,7 +59,7 @@ export class TestRunTestResultsPartialBulkSetModel {
         {
             "name": "attachmentIds",
             "baseName": "attachmentIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

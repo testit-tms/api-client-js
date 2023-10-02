@@ -241,7 +241,7 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2ParametersGroupsGet (isDeleted?: boolean, parameterKeyIds?: Set<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
+    public async apiV2ParametersGroupsGet (isDeleted?: boolean, parameterKeyIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -259,7 +259,7 @@ export class ParametersApi {
         }
 
         if (parameterKeyIds !== undefined) {
-            localVarQueryParameters['parameterKeyIds'] = ObjectSerializer.serialize(parameterKeyIds, "Set<string>");
+            localVarQueryParameters['parameterKeyIds'] = ObjectSerializer.serialize(parameterKeyIds, "Array<string>");
         }
 
         if (skip !== undefined) {
@@ -1013,7 +1013,7 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getAllParameters (isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
+    public async getAllParameters (isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1082,13 +1082,13 @@ export class ParametersApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ParameterModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ParameterModel");
+                            body = ObjectSerializer.deserialize(body, "Array<ParameterModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

@@ -22,11 +22,11 @@ export class ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest {
     /**
     * Collection of identifiers of users who created work item
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
     /**
     * Collection of identifiers of users who applied last modification to work item
     */
-    'modifiedByIds'?: Set<string> | null;
+    'modifiedByIds'?: Array<string> | null;
     'createdDate'?: SharedStepReferenceSectionsQueryFilterModelCreatedDate | null;
     'modifiedDate'?: SharedStepReferenceSectionsQueryFilterModelModifiedDate | null;
 
@@ -41,12 +41,12 @@ export class ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "createdDate",

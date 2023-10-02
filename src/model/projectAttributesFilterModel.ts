@@ -29,7 +29,7 @@ export class ProjectAttributesFilterModel {
     /**
     * Specifies an attribute types to search for
     */
-    'types'?: Set<CustomAttributeTypesEnum> | null;
+    'types'?: Array<CustomAttributeTypesEnum> | null;
     /**
     * Specifies an attribute enabled status to search for
     */
@@ -56,7 +56,7 @@ export class ProjectAttributesFilterModel {
         {
             "name": "types",
             "baseName": "types",
-            "type": "Set<CustomAttributeTypesEnum>"
+            "type": "Array<CustomAttributeTypesEnum>"
         },
         {
             "name": "isEnabled",

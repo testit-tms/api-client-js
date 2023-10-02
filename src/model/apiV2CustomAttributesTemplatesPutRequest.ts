@@ -20,7 +20,7 @@ export class ApiV2CustomAttributesTemplatesPutRequest {
     /**
     * Collection of attribute IDs
     */
-    'customAttributeIds'?: Set<string> | null;
+    'customAttributeIds'?: Array<string> | null;
     /**
     * Custom attributes template name
     */
@@ -37,7 +37,7 @@ export class ApiV2CustomAttributesTemplatesPutRequest {
         {
             "name": "customAttributeIds",
             "baseName": "customAttributeIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "name",

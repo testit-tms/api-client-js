@@ -16,11 +16,11 @@ import { TestRunState } from './testRunState';
 
 export class ApiV2TestPlansIdTestRunsSearchPostRequest {
     'name'?: string | null;
-    'states'?: Set<TestRunState> | null;
+    'states'?: Array<TestRunState> | null;
     'startedDate'?: DateTimeRangeSelectorModel | null;
     'completedDate'?: DateTimeRangeSelectorModel | null;
-    'createdByIds'?: Set<string> | null;
-    'modifiedByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
+    'modifiedByIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -33,7 +33,7 @@ export class ApiV2TestPlansIdTestRunsSearchPostRequest {
         {
             "name": "states",
             "baseName": "states",
-            "type": "Set<TestRunState>"
+            "type": "Array<TestRunState>"
         },
         {
             "name": "startedDate",
@@ -48,12 +48,12 @@ export class ApiV2TestPlansIdTestRunsSearchPostRequest {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
