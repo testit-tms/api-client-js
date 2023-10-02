@@ -24,31 +24,31 @@ export class SharedStepReferencesQueryFilterModel {
     /**
     * Collection of global (integer) identifiers
     */
-    'globalIds'?: Set<number> | null;
+    'globalIds'?: Array<number> | null;
     /**
     * Collection of section identifiers
     */
-    'sectionIds'?: Set<string> | null;
+    'sectionIds'?: Array<string> | null;
     /**
     * Collection of identifiers of users who created work item
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
     /**
     * Collection of identifiers of users who applied last modification to work item
     */
-    'modifiedByIds'?: Set<string> | null;
+    'modifiedByIds'?: Array<string> | null;
     /**
     * Collection of states of work item
     */
-    'states'?: Set<WorkItemStates> | null;
+    'states'?: Array<WorkItemStates> | null;
     /**
     * Collection of priorities of work item
     */
-    'priorities'?: Set<WorkItemPriorityModel> | null;
+    'priorities'?: Array<WorkItemPriorityModel> | null;
     /**
     * Collection of types of work item  <br>Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
     */
-    'entityTypes'?: Set<string> | null;
+    'entityTypes'?: Array<string> | null;
     'createdDate'?: SharedStepReferenceSectionsQueryFilterModelCreatedDate | null;
     'modifiedDate'?: SharedStepReferenceSectionsQueryFilterModelModifiedDate | null;
     /**
@@ -58,7 +58,7 @@ export class SharedStepReferencesQueryFilterModel {
     /**
     * Collection of tags
     */
-    'tags'?: Set<string> | null;
+    'tags'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -71,37 +71,37 @@ export class SharedStepReferencesQueryFilterModel {
         {
             "name": "globalIds",
             "baseName": "globalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
         },
         {
             "name": "sectionIds",
             "baseName": "sectionIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "states",
             "baseName": "states",
-            "type": "Set<WorkItemStates>"
+            "type": "Array<WorkItemStates>"
         },
         {
             "name": "priorities",
             "baseName": "priorities",
-            "type": "Set<WorkItemPriorityModel>"
+            "type": "Array<WorkItemPriorityModel>"
         },
         {
             "name": "entityTypes",
             "baseName": "entityTypes",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "createdDate",
@@ -121,7 +121,7 @@ export class SharedStepReferencesQueryFilterModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

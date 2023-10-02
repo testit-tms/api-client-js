@@ -19,17 +19,17 @@ export class ApiV2ProjectsIdTestPlansSearchPostRequest {
     'description'?: string | null;
     'build'?: string | null;
     'productName'?: string | null;
-    'status'?: Set<TestPlanStatusModel> | null;
-    'globalIds'?: Set<number> | null;
+    'status'?: Array<TestPlanStatusModel> | null;
+    'globalIds'?: Array<number> | null;
     'isLocked'?: boolean | null;
     'lockedDate'?: DateTimeRangeSelectorModel | null;
-    'automaticDurationTimer'?: Set<boolean> | null;
-    'createdByIds'?: Set<string> | null;
+    'automaticDurationTimer'?: Array<boolean> | null;
+    'createdByIds'?: Array<string> | null;
     'createdDate'?: DateTimeRangeSelectorModel | null;
     'startDate'?: DateTimeRangeSelectorModel | null;
     'endDate'?: DateTimeRangeSelectorModel | null;
-    'tagNames'?: Set<string> | null;
-    'attributes'?: { [key: string]: Set<string>; } | null;
+    'tagNames'?: Array<string> | null;
+    'attributes'?: { [key: string]: Array<string>; } | null;
     'isDeleted'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
@@ -58,12 +58,12 @@ export class ApiV2ProjectsIdTestPlansSearchPostRequest {
         {
             "name": "status",
             "baseName": "status",
-            "type": "Set<TestPlanStatusModel>"
+            "type": "Array<TestPlanStatusModel>"
         },
         {
             "name": "globalIds",
             "baseName": "globalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
         },
         {
             "name": "isLocked",
@@ -78,12 +78,12 @@ export class ApiV2ProjectsIdTestPlansSearchPostRequest {
         {
             "name": "automaticDurationTimer",
             "baseName": "automaticDurationTimer",
-            "type": "Set<boolean>"
+            "type": "Array<boolean>"
         },
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "createdDate",
@@ -103,12 +103,12 @@ export class ApiV2ProjectsIdTestPlansSearchPostRequest {
         {
             "name": "tagNames",
             "baseName": "tagNames",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: Set<string>; }"
+            "type": "{ [key: string]: Array<string>; }"
         },
         {
             "name": "isDeleted",

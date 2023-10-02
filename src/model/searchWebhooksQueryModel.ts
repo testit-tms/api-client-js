@@ -22,15 +22,15 @@ export class SearchWebhooksQueryModel {
     /**
     * Specifies a webhook event types to search for
     */
-    'eventTypes'?: Set<WebHookEventTypeModel> | null;
+    'eventTypes'?: Array<WebHookEventTypeModel> | null;
     /**
     * Specifies a webhook methods to search for
     */
-    'methods'?: Set<RequestTypeModel> | null;
+    'methods'?: Array<RequestTypeModel> | null;
     /**
     * Specifies a webhook project IDs to search for
     */
-    'projectIds'?: Set<string> | null;
+    'projectIds'?: Array<string> | null;
     /**
     * Specifies a webhook deleted status to search for
     */
@@ -47,17 +47,17 @@ export class SearchWebhooksQueryModel {
         {
             "name": "eventTypes",
             "baseName": "eventTypes",
-            "type": "Set<WebHookEventTypeModel>"
+            "type": "Array<WebHookEventTypeModel>"
         },
         {
             "name": "methods",
             "baseName": "methods",
-            "type": "Set<RequestTypeModel>"
+            "type": "Array<RequestTypeModel>"
         },
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "isEnabled",

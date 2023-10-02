@@ -16,7 +16,7 @@ export class ProjectExportWithTestPlansPostModel {
     /**
     * Specifies the IDs of test plans to be exported with the project.<br />  In this parameter, \"<b>string</b>\" values are IDs of the test plans.<br />  To get the test plan IDs, use the `GET /api/v2/projects/{projectId}/testPlans` method.
     */
-    'testPlansIds'?: Set<string> | null;
+    'testPlansIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,7 +24,7 @@ export class ProjectExportWithTestPlansPostModel {
         {
             "name": "testPlansIds",
             "baseName": "testPlansIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

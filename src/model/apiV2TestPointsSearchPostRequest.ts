@@ -80,7 +80,7 @@ export class ApiV2TestPointsSearchPostRequest {
     /**
     * Specifies a test point attributes to search for
     */
-    'attributes'?: { [key: string]: Set<string>; } | null;
+    'attributes'?: { [key: string]: Array<string>; } | null;
     'workItemCreatedDate'?: TestPointFilterModelWorkItemCreatedDate | null;
     /**
     * Specifies a work item creator IDs to search for
@@ -183,7 +183,7 @@ export class ApiV2TestPointsSearchPostRequest {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: Set<string>; }"
+            "type": "{ [key: string]: Array<string>; }"
         },
         {
             "name": "workItemCreatedDate",

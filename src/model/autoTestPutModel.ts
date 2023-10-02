@@ -20,7 +20,7 @@ export class AutoTestPutModel {
     * Used for search autotest. If value equals Guid mask filled with zeros, search will be executed using ExternalId
     */
     'id'?: string;
-    'workItemIdsForLinkWithAutoTest'?: Set<string> | null;
+    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
     /**
     * External ID of the autotest
     */
@@ -89,7 +89,7 @@ export class AutoTestPutModel {
         {
             "name": "workItemIdsForLinkWithAutoTest",
             "baseName": "workItemIdsForLinkWithAutoTest",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "externalId",

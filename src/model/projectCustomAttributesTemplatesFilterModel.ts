@@ -24,7 +24,7 @@ export class ProjectCustomAttributesTemplatesFilterModel {
     /**
     * Collection of custom attributes types
     */
-    'customAttributeTypes'?: Set<CustomAttributeTypesEnum> | null;
+    'customAttributeTypes'?: Array<CustomAttributeTypesEnum> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -37,7 +37,7 @@ export class ProjectCustomAttributesTemplatesFilterModel {
         {
             "name": "customAttributeTypes",
             "baseName": "customAttributeTypes",
-            "type": "Set<CustomAttributeTypesEnum>"
+            "type": "Array<CustomAttributeTypesEnum>"
         }    ];
 
     static getAttributeTypeMap() {
