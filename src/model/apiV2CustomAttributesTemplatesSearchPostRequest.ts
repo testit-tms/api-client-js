@@ -15,8 +15,8 @@ import { CustomAttributeTypesEnum } from './customAttributeTypesEnum';
 
 export class ApiV2CustomAttributesTemplatesSearchPostRequest {
     'name'?: string | null;
-    'projectIds'?: Set<string> | null;
-    'customAttributeTypes'?: Set<CustomAttributeTypesEnum> | null;
+    'projectIds'?: Array<string> | null;
+    'customAttributeTypes'?: Array<CustomAttributeTypesEnum> | null;
     'isDeleted'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
@@ -30,12 +30,12 @@ export class ApiV2CustomAttributesTemplatesSearchPostRequest {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "customAttributeTypes",
             "baseName": "customAttributeTypes",
-            "type": "Set<CustomAttributeTypesEnum>"
+            "type": "Array<CustomAttributeTypesEnum>"
         },
         {
             "name": "isDeleted",

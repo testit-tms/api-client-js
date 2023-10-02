@@ -16,7 +16,7 @@ export class ConfigurationFilterModel {
     /**
     * Collection of identifiers of projects from which configurations will be taken
     */
-    'projectIds'?: Set<string> | null;
+    'projectIds'?: Array<string> | null;
     /**
     * Filter to search by name (case-insensitive, partial match)
     */
@@ -28,7 +28,7 @@ export class ConfigurationFilterModel {
     /**
     * Collection of global (integer) identifiers to filter configurations
     */
-    'globalIds'?: Set<number> | null;
+    'globalIds'?: Array<number> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -36,7 +36,7 @@ export class ConfigurationFilterModel {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "name",
@@ -51,7 +51,7 @@ export class ConfigurationFilterModel {
         {
             "name": "globalIds",
             "baseName": "globalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
         }    ];
 
     static getAttributeTypeMap() {

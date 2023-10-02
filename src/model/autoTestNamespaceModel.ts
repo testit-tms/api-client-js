@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class AutoTestNamespaceModel {
     'name'?: string | null;
-    'classes'?: Set<string> | null;
+    'classes'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,7 +27,7 @@ export class AutoTestNamespaceModel {
         {
             "name": "classes",
             "baseName": "classes",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

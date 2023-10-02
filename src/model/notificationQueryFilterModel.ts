@@ -15,7 +15,7 @@ import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { NotificationTypeModel } from './notificationTypeModel';
 
 export class NotificationQueryFilterModel {
-    'types'?: Set<NotificationTypeModel> | null;
+    'types'?: Array<NotificationTypeModel> | null;
     'isRead'?: boolean | null;
     'createdDate'?: DateTimeRangeSelectorModel | null;
 
@@ -25,7 +25,7 @@ export class NotificationQueryFilterModel {
         {
             "name": "types",
             "baseName": "types",
-            "type": "Set<NotificationTypeModel>"
+            "type": "Array<NotificationTypeModel>"
         },
         {
             "name": "isRead",

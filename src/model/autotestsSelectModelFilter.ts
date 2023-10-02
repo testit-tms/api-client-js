@@ -23,15 +23,15 @@ export class AutotestsSelectModelFilter {
     /**
     * Specifies an autotest projects IDs to search for
     */
-    'projectIds'?: Set<string> | null;
+    'projectIds'?: Array<string> | null;
     /**
     * Specifies an autotest external IDs to search for
     */
-    'externalIds'?: Set<string> | null;
+    'externalIds'?: Array<string> | null;
     /**
     * Specifies an autotest global IDs to search for
     */
-    'globalIds'?: Set<number> | null;
+    'globalIds'?: Array<number> | null;
     /**
     * Specifies an autotest name to search for
     */
@@ -49,12 +49,12 @@ export class AutotestsSelectModelFilter {
     /**
     * Specifies an autotest creator IDs to search for
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
     'modifiedDate'?: AutotestFilterModelModifiedDate | null;
     /**
     * Specifies an autotest last editor IDs to search for
     */
-    'modifiedByIds'?: Set<string> | null;
+    'modifiedByIds'?: Array<string> | null;
     /**
     * Specifies an autotest deleted status to search for
     */
@@ -87,17 +87,17 @@ export class AutotestsSelectModelFilter {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "externalIds",
             "baseName": "externalIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "globalIds",
             "baseName": "globalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
         },
         {
             "name": "name",
@@ -127,7 +127,7 @@ export class AutotestsSelectModelFilter {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedDate",
@@ -137,7 +137,7 @@ export class AutotestsSelectModelFilter {
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "isDeleted",

@@ -37,12 +37,12 @@ export class ProjectsFilterModel {
     /**
     * Specifies a project global IDs to search for
     */
-    'globalIds'?: Set<number> | null;
+    'globalIds'?: Array<number> | null;
     'createdDate'?: ProjectsFilterModelCreatedDate | null;
     /**
     * Specifies an autotest creator IDs to search for
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -85,7 +85,7 @@ export class ProjectsFilterModel {
         {
             "name": "globalIds",
             "baseName": "globalIds",
-            "type": "Set<number>"
+            "type": "Array<number>"
         },
         {
             "name": "createdDate",
@@ -95,7 +95,7 @@ export class ProjectsFilterModel {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

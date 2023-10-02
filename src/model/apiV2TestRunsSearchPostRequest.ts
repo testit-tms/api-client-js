@@ -22,7 +22,7 @@ export class ApiV2TestRunsSearchPostRequest {
     /**
     * Specifies a test run project IDs to search for
     */
-    'projectIds'?: Set<string> | null;
+    'projectIds'?: Array<string> | null;
     /**
     * Specifies test run name
     */
@@ -30,16 +30,16 @@ export class ApiV2TestRunsSearchPostRequest {
     /**
     * Specifies a test run states to search for
     */
-    'states'?: Set<TestRunState> | null;
+    'states'?: Array<TestRunState> | null;
     'startedDate'?: TestRunFilterModelStartedDate | null;
     /**
     * Specifies a test run creator IDs to search for
     */
-    'createdByIds'?: Set<string> | null;
+    'createdByIds'?: Array<string> | null;
     /**
     * Specifies a test run last editor IDs to search for
     */
-    'modifiedByIds'?: Set<string> | null;
+    'modifiedByIds'?: Array<string> | null;
     /**
     * Specifies a test run deleted status to search for
     */
@@ -61,7 +61,7 @@ export class ApiV2TestRunsSearchPostRequest {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "name",
@@ -71,7 +71,7 @@ export class ApiV2TestRunsSearchPostRequest {
         {
             "name": "states",
             "baseName": "states",
-            "type": "Set<TestRunState>"
+            "type": "Array<TestRunState>"
         },
         {
             "name": "startedDate",
@@ -81,12 +81,12 @@ export class ApiV2TestRunsSearchPostRequest {
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "modifiedByIds",
             "baseName": "modifiedByIds",
-            "type": "Set<string>"
+            "type": "Array<string>"
         },
         {
             "name": "isDeleted",

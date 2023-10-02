@@ -103,7 +103,7 @@ export class CustomAttributeTemplatesApi {
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
      */
-    public async apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost (id: string, requestBody?: Set<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}/customAttributes/exclude'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -133,7 +133,7 @@ export class CustomAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(requestBody, "Set<string>")
+            body: ObjectSerializer.serialize(requestBody, "Array<string>")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -176,7 +176,7 @@ export class CustomAttributeTemplatesApi {
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
      */
-    public async apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost (id: string, requestBody?: Set<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}/customAttributes/include'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -206,7 +206,7 @@ export class CustomAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(requestBody, "Set<string>")
+            body: ObjectSerializer.serialize(requestBody, "Array<string>")
         };
 
         let authenticationPromise = Promise.resolve();
