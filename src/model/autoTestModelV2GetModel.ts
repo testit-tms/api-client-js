@@ -19,13 +19,13 @@ export class AutoTestModelV2GetModel {
     /**
     * This property is used to set autotest identifier from client system
     */
-    'externalId'?: string | null;
+    'externalId': string;
     'links'?: Array<LinkModel> | null;
     /**
     * This property is used to link autotest with project
     */
     'projectId': string;
-    'name'?: string | null;
+    'name': string;
     'namespace'?: string | null;
     'classname'?: string | null;
     'steps'?: Array<AutoTestStepModel> | null;

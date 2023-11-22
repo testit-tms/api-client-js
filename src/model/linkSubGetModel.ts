@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class LinkSubGetModel {
-    'name'?: string | null;
-    'url'?: string | null;
+    'name': string;
+    'url': string;
 
     static discriminator: string | undefined = undefined;
 

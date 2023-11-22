@@ -36,6 +36,10 @@ export class WorkItemFilterModel {
     */
     'excludeIds'?: Array<string> | null;
     /**
+    * Collection of project identifiers
+    */
+    'projectIds'?: Array<string> | null;
+    /**
     * Name of work item
     */
     'name'?: string | null;
@@ -55,10 +59,6 @@ export class WorkItemFilterModel {
     * Is result must consist of only actual/deleted work items
     */
     'isDeleted'?: boolean | null;
-    /**
-    * Collection of project identifiers
-    */
-    'projectIds'?: Array<string> | null;
     /**
     * Collection of section identifiers
     */
@@ -119,6 +119,11 @@ export class WorkItemFilterModel {
             "type": "Array<string>"
         },
         {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
+        },
+        {
             "name": "name",
             "baseName": "name",
             "type": "string"
@@ -142,11 +147,6 @@ export class WorkItemFilterModel {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string>"
         },
         {
             "name": "sectionIds",

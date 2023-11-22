@@ -19,13 +19,13 @@ export class PublicTestRunModel {
     'testRunId': string;
     'testPlanId'?: string | null;
     'testPlanGlobalId': number;
-    'name'?: string | null;
+    'name': string;
     'productName'?: string | null;
     'build'?: string | null;
-    'configurations'?: Array<ConfigurationModel> | null;
-    'autoTests'?: Array<AutoTestModel> | null;
-    'testPoints'?: Array<PublicTestPointModel> | null;
-    'status'?: string | null;
+    'configurations': Array<ConfigurationModel>;
+    'autoTests': Array<AutoTestModel>;
+    'testPoints': Array<PublicTestPointModel>;
+    'status': string;
 
     static discriminator: string | undefined = undefined;
 

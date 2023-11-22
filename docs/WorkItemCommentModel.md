@@ -4,8 +4,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
-| **text** | **String** |  | [optional] [default to null] |
-| **user** | [**UserWithRankModel**](UserWithRankModel.md) |  | [optional] [default to null] |
+| **text** | **String** |  | [default to null] |
+| **user** | [**WorkItemCommentModel_user**](WorkItemCommentModel_user.md) |  | [default to null] |
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [default to null] |

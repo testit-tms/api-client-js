@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
 import { ApiV2TestSuitesPostRequest } from '../model/apiV2TestSuitesPostRequest';
 import { ApiV2TestSuitesPutRequest } from '../model/apiV2TestSuitesPutRequest';
 import { ConfigurationModel } from '../model/configurationModel';
@@ -104,9 +104,9 @@ export class TestSuitesApi {
      * 
      * @summary Add test-points to test suite
      * @param id Test suite internal identifier
-     * @param apiV2ProjectsIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
+     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsToTestSuite (id: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsToTestSuite (id: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/test-points'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -136,7 +136,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

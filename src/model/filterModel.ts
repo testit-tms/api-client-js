@@ -11,17 +11,17 @@
  */
 
 import { RequestFile } from './models';
-import { WorkItemSearchQueryModel } from './workItemSearchQueryModel';
+import { FilterModelData } from './filterModelData';
 
 export class FilterModel {
     'createdDate': Date;
     'modifiedDate'?: Date | null;
     'createdById': string;
     'modifiedById'?: string | null;
-    'data'?: WorkItemSearchQueryModel | null;
+    'data': FilterModelData;
     'projectId': string;
     'fieldsToShow'?: any | null;
-    'name'?: string | null;
+    'name': string;
     /**
     * Unique ID of the entity
     */
@@ -57,7 +57,7 @@ export class FilterModel {
         {
             "name": "data",
             "baseName": "data",
-            "type": "WorkItemSearchQueryModel"
+            "type": "FilterModelData"
         },
         {
             "name": "projectId",

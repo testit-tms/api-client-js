@@ -17,11 +17,11 @@ import { TestPlanGroupByTester } from './testPlanGroupByTester';
 import { TestPlanGroupByTesterAndStatus } from './testPlanGroupByTesterAndStatus';
 
 export class TestPointAnalyticResult {
-    'countGroupByStatus'?: Array<TestPlanGroupByStatus> | null;
-    'sumGroupByTester'?: Array<TestPlanGroupByTester> | null;
-    'countGroupByTester'?: Array<TestPlanGroupByTester> | null;
-    'countGroupByTestSuite'?: Array<TestPlanGroupByTestSuite> | null;
-    'countGroupByTesterAndStatus'?: Array<TestPlanGroupByTesterAndStatus> | null;
+    'countGroupByStatus': Array<TestPlanGroupByStatus>;
+    'sumGroupByTester': Array<TestPlanGroupByTester>;
+    'countGroupByTester': Array<TestPlanGroupByTester>;
+    'countGroupByTestSuite': Array<TestPlanGroupByTestSuite>;
+    'countGroupByTesterAndStatus': Array<TestPlanGroupByTesterAndStatus>;
 
     static discriminator: string | undefined = undefined;
 

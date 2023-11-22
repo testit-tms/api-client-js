@@ -11,15 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { TestRunFilterModel } from './testRunFilterModel';
+import { ApiV2TestRunsSearchPostRequest } from './apiV2TestRunsSearchPostRequest';
 import { TestRunSelectModelExtractionModel } from './testRunSelectModelExtractionModel';
 
 /**
 * Model containing options to filter test runs
 */
 export class TestRunSelectionModel {
-    'filter'?: TestRunFilterModel | null;
-    'extractionModel'?: TestRunSelectModelExtractionModel | null;
+    'filter': ApiV2TestRunsSearchPostRequest;
+    'extractionModel': TestRunSelectModelExtractionModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,7 +27,7 @@ export class TestRunSelectionModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "TestRunFilterModel"
+            "type": "ApiV2TestRunsSearchPostRequest"
         },
         {
             "name": "extractionModel",

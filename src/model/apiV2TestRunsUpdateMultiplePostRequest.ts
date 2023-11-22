@@ -18,8 +18,8 @@ import { TestRunSelectionModel } from './testRunSelectionModel';
 export class ApiV2TestRunsUpdateMultiplePostRequest {
     'selectModel': TestRunSelectionModel;
     'description'?: string | null;
-    'attachmentUpdateScheme'?: SetOfAttachmentIds | null;
-    'linkUpdateScheme'?: SetOfLinks | null;
+    'attachmentUpdateScheme': SetOfAttachmentIds;
+    'linkUpdateScheme': SetOfLinks;
 
     static discriminator: string | undefined = undefined;
 

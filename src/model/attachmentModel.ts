@@ -16,11 +16,11 @@ export class AttachmentModel {
     /**
     * Unique ID of the attachment file
     */
-    'fileId'?: string | null;
+    'fileId': string;
     /**
     * MIME type of the attachment
     */
-    'type'?: string | null;
+    'type': string;
     /**
     * Size in bytes of the attachment file
     */
@@ -44,7 +44,11 @@ export class AttachmentModel {
     /**
     * Name of the attachment file
     */
-    'name'?: string | null;
+    'name': string;
+    /**
+    * Indicates whether the attachment is temporary (may be automatically deleted)
+    */
+    'isTemp': boolean;
     /**
     * Unique ID of the attachment
     */
@@ -92,6 +96,11 @@ export class AttachmentModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "isTemp",
+            "baseName": "isTemp",
+            "type": "boolean"
         },
         {
             "name": "id",

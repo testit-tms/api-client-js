@@ -32,7 +32,7 @@ export class TestResultV2ShortModel {
     /**
     * Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped
     */
-    'outcome'?: string | null;
+    'outcome': string;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
     'attachments'?: Array<AttachmentModel> | null;

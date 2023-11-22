@@ -14,7 +14,13 @@ import { RequestFile } from './models';
 
 export class ParameterPutModel {
     'id': string;
+    /**
+    * Value of the parameter
+    */
     'value': string;
+    /**
+    * Key of the parameter
+    */
     'name': string;
 
     static discriminator: string | undefined = undefined;

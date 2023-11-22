@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **testSuites** | [**List**](TestSuiteWithChildrenModel.md) |  | [optional] [default to null] |
+| **testSuites** | [**List**](TestSuiteWithChildrenModel.md) |  | [default to null] |
 | **status** | [**TestPlanStatusModel**](TestPlanStatusModel.md) |  | [default to null] |
 | **startedOn** | **Date** | Set when test plan is starter (status changed to: In Progress) | [optional] [default to null] |
 | **completedOn** | **Date** | set when test plan status is completed (status changed to: Completed) | [optional] [default to null] |
@@ -25,7 +25,7 @@
 | **projectId** | **UUID** |  | [default to null] |
 | **productName** | **String** |  | [optional] [default to null] |
 | **hasAutomaticDurationTimer** | **Boolean** |  | [optional] [default to null] |
-| **attributes** | [**Map**](AnyType.md) |  | [optional] [default to null] |
+| **attributes** | [**Map**](AnyType.md) |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

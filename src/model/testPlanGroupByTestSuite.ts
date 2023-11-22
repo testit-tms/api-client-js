@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class TestPlanGroupByTestSuite {
     'testSuiteId': string;
-    'testSuiteName'?: string | null;
+    'testSuiteName': string;
     'value': number;
 
     static discriminator: string | undefined = undefined;

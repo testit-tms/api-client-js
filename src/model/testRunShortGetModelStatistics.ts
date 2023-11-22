@@ -18,8 +18,8 @@ import { TestResultsStatisticsGetModelStatuses } from './testResultsStatisticsGe
 * Statistics of the test run
 */
 export class TestRunShortGetModelStatistics {
-    'statuses'?: TestResultsStatisticsGetModelStatuses | null;
-    'failureCategories'?: TestResultsStatisticsGetModelFailureCategories | null;
+    'statuses': TestResultsStatisticsGetModelStatuses;
+    'failureCategories': TestResultsStatisticsGetModelFailureCategories;
 
     static discriminator: string | undefined = undefined;
 

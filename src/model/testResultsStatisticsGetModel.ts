@@ -15,8 +15,8 @@ import { TestResultsStatisticsGetModelFailureCategories } from './testResultsSta
 import { TestResultsStatisticsGetModelStatuses } from './testResultsStatisticsGetModelStatuses';
 
 export class TestResultsStatisticsGetModel {
-    'statuses'?: TestResultsStatisticsGetModelStatuses | null;
-    'failureCategories'?: TestResultsStatisticsGetModelFailureCategories | null;
+    'statuses': TestResultsStatisticsGetModelStatuses;
+    'failureCategories': TestResultsStatisticsGetModelFailureCategories;
 
     static discriminator: string | undefined = undefined;
 

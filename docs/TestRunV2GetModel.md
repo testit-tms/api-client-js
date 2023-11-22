@@ -14,8 +14,8 @@
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **createdByUserName** | **String** |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentModel.md) |  | [optional] [default to null] |
-| **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |
+| **attachments** | [**List**](AttachmentModel.md) |  | [default to null] |
+| **links** | [**List**](LinkModel.md) |  | [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |

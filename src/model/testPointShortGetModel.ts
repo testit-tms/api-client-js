@@ -48,15 +48,15 @@ export class TestPointShortGetModel {
     /**
     * Collection of attributes of work item the test point represents
     */
-    'attributes'?: { [key: string]: any; } | null;
+    'attributes': { [key: string]: any; };
     /**
     * Collection of the test point tags
     */
-    'tags'?: Array<string> | null;
+    'tags': Array<string>;
     /**
     * Collection of the test point links
     */
-    'links'?: Array<string> | null;
+    'links': Array<string>;
     /**
     * Unique ID of test suite the test point assigned to
     */
@@ -86,7 +86,7 @@ export class TestPointShortGetModel {
     /**
     * Name of the test point
     */
-    'name'?: string | null;
+    'name': string;
     /**
     * Unique ID of the test point configuration
     */

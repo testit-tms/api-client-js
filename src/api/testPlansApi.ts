@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
 import { ApiV2TestPlansIdExportTestPointsXlsxPostRequest } from '../model/apiV2TestPlansIdExportTestPointsXlsxPostRequest';
 import { ApiV2TestPlansIdTestPointsTesterUserIdPostRequest } from '../model/apiV2TestPlansIdTestPointsTesterUserIdPostRequest';
 import { ApiV2TestPlansIdTestRunsSearchPostRequest } from '../model/apiV2TestPlansIdTestRunsSearchPostRequest';
@@ -111,9 +111,9 @@ export class TestPlansApi {
      * 
      * @summary Add test-points to TestPlan with sections
      * @param id Test plan internal (guid format) or global (int  format) identifier
-     * @param apiV2ProjectsIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
+     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsWithSections (id: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsWithSections (id: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/test-points/withSections'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -143,7 +143,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

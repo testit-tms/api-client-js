@@ -17,9 +17,9 @@ import { ProjectShortestModel } from './projectShortestModel';
 export class SearchCustomAttributeTemplateGetModel {
     'id': string;
     'isDeleted': boolean;
-    'name'?: string | null;
-    'projectShortestModels'?: Array<ProjectShortestModel> | null;
-    'customAttributeModels'?: Array<CustomAttributeModel> | null;
+    'name': string;
+    'projectShortestModels': Array<ProjectShortestModel>;
+    'customAttributeModels': Array<CustomAttributeModel>;
 
     static discriminator: string | undefined = undefined;
 

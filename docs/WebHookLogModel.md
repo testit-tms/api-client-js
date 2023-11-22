@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **webHookName** | **String** |  | [optional] [default to null] |
+| **webHookName** | **String** |  | [default to null] |
 | **eventType** | [**WebHookEventTypeModel**](WebHookEventTypeModel.md) |  | [default to null] |
 | **webHookId** | **UUID** |  | [default to null] |
 | **requestBody** | **String** |  | [optional] [default to null] |
@@ -12,7 +12,7 @@
 | **responseBody** | **String** |  | [optional] [default to null] |
 | **responseMeta** | **String** |  | [optional] [default to null] |
 | **projectId** | **UUID** |  | [default to null] |
-| **url** | **String** |  | [optional] [default to null] |
+| **url** | **String** |  | [default to null] |
 | **requestType** | [**RequestTypeModel**](RequestTypeModel.md) |  | [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |
 | **modifiedDate** | **Date** |  | [optional] [default to null] |

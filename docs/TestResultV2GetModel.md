@@ -18,7 +18,7 @@
 | **testPointId** | **UUID** |  | [optional] [default to null] |
 | **testPoint** | [**Test_point_related_to_test_result**](Test_point_related_to_test_result.md) |  | [optional] [default to null] |
 | **testRunId** | **UUID** |  | [default to null] |
-| **outcome** | **String** | Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped | [optional] [default to null] |
+| **outcome** | **String** | Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped | [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |
 | **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |
 | **attachments** | [**List**](AttachmentModel.md) |  | [optional] [default to null] |

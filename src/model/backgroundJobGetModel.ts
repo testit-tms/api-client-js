@@ -22,6 +22,7 @@ export class BackgroundJobGetModel {
     'state': BackgroundJobState;
     'isDeleted': boolean;
     'progress': number;
+    'createdDate': Date;
     'startDate'?: Date | null;
     'endDate'?: Date | null;
     'error'?: string | null;
@@ -59,6 +60,11 @@ export class BackgroundJobGetModel {
             "name": "progress",
             "baseName": "progress",
             "type": "number"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "Date"
         },
         {
             "name": "startDate",

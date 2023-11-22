@@ -38,7 +38,7 @@ All URIs are relative to *http://localhost*
 
 <a name="addTestPointsWithSections"></a>
 # **addTestPointsWithSections**
-> addTestPointsWithSections(id, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
+> addTestPointsWithSections(id, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
 
 Add test-points to TestPlan with sections
 
@@ -47,7 +47,7 @@ Add test-points to TestPlan with sections
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
-| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
+| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
 

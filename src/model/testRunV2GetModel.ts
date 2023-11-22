@@ -34,8 +34,8 @@ export class TestRunV2GetModel {
     'createdById': string;
     'modifiedById'?: string | null;
     'createdByUserName'?: string | null;
-    'attachments'?: Array<AttachmentModel> | null;
-    'links'?: Array<LinkModel> | null;
+    'attachments': Array<AttachmentModel>;
+    'links': Array<LinkModel>;
     'id': string;
     'name': string;
     'description'?: string | null;

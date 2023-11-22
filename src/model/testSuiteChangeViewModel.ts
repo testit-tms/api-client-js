@@ -15,7 +15,7 @@ import { ShortConfiguration } from './shortConfiguration';
 
 export class TestSuiteChangeViewModel {
     'id': string;
-    'name'?: string | null;
+    'name': string;
     'configurations'?: Array<ShortConfiguration> | null;
     'workItemCount': number;
 

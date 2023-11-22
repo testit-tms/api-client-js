@@ -356,7 +356,7 @@ null (empty response body)
 
 <a name="getAllParameters"></a>
 # **getAllParameters**
-> ParameterModel getAllParameters(isDeleted, Skip, Take, OrderBy, SearchField, SearchValue)
+> List getAllParameters(isDeleted, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get all parameters
 
@@ -375,7 +375,7 @@ Get all parameters
 
 ### Return type
 
-[**ParameterModel**](../Models/ParameterModel.md)
+[**List**](../Models/ParameterModel.md)
 
 ### Authorization
 

@@ -27,7 +27,7 @@
 | **workItemVersionId** | **UUID** |  | [optional] [default to null] |
 | **workItemVersionNumber** | **Integer** |  | [optional] [default to null] |
 | **launchSource** | **String** |  | [optional] [default to null] |
-| **failureClassIds** | **List** |  | [optional] [default to null] |
+| **failureClassIds** | **List** |  | [default to null] |
 | **parameters** | **Map** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

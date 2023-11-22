@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { UserWithRankModel } from './userWithRankModel';
+import { WorkItemCommentModelUser } from './workItemCommentModelUser';
 
 export class WorkItemCommentModel {
     'id': string;
-    'text'?: string | null;
-    'user'?: UserWithRankModel | null;
+    'text': string;
+    'user': WorkItemCommentModelUser;
     'createdById': string;
     'modifiedById'?: string | null;
     'createdDate': Date;
@@ -38,7 +38,7 @@ export class WorkItemCommentModel {
         {
             "name": "user",
             "baseName": "user",
-            "type": "UserWithRankModel"
+            "type": "WorkItemCommentModelUser"
         },
         {
             "name": "createdById",

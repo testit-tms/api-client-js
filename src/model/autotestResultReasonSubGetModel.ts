@@ -15,7 +15,7 @@ import { FailureCategoryModel } from './failureCategoryModel';
 
 export class AutotestResultReasonSubGetModel {
     'failureCategory': FailureCategoryModel;
-    'name'?: string | null;
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 

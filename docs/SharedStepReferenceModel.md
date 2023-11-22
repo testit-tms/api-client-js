@@ -5,8 +5,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
 | **globalId** | **Long** |  | [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
-| **entityTypeName** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
+| **entityTypeName** | **String** |  | [default to null] |
 | **hasThisSharedStepAsStep** | **Boolean** |  | [default to null] |
 | **hasThisSharedStepAsPrecondition** | **Boolean** |  | [default to null] |
 | **hasThisSharedStepAsPostcondition** | **Boolean** |  | [default to null] |
@@ -14,7 +14,7 @@
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **state** | **String** |  | [optional] [default to null] |
+| **state** | **String** |  | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
 | **isDeleted** | **Boolean** |  | [default to null] |
 | **versionId** | **UUID** | used for versioning changes in workitem | [default to null] |

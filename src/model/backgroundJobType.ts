@@ -24,5 +24,7 @@ export enum BackgroundJobType {
     ImportZipProject = <any> 'ImportZipProject',
     ImportXlsxProject = <any> 'ImportXlsxProject',
     ImportTestRailXmlProject = <any> 'ImportTestRailXmlProject',
-    PurgeProject = <any> 'PurgeProject'
+    PurgeProject = <any> 'PurgeProject',
+    ExportProjects = <any> 'ExportProjects',
+    ImportProjects = <any> 'ImportProjects'
 }

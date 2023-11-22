@@ -9,6 +9,7 @@
 | **state** | [**BackgroundJobState**](BackgroundJobState.md) |  | [default to null] |
 | **isDeleted** | **Boolean** |  | [default to null] |
 | **progress** | **Long** |  | [default to null] |
+| **createdDate** | **Date** |  | [default to null] |
 | **startDate** | **Date** |  | [optional] [default to null] |
 | **endDate** | **Date** |  | [optional] [default to null] |
 | **error** | **String** |  | [optional] [default to null] |

@@ -21,7 +21,7 @@ All URIs are relative to *http://localhost*
 
 <a name="addTestPointsToTestSuite"></a>
 # **addTestPointsToTestSuite**
-> addTestPointsToTestSuite(id, \_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request)
+> addTestPointsToTestSuite(id, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
 
 Add test-points to test suite
 
@@ -30,7 +30,7 @@ Add test-points to test suite
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test suite internal identifier | [default to null] |
-| **\_api\_v2\_projects\_\_id\_\_workItems\_search\_post\_request** | [**_api_v2_projects__id__workItems_search_post_request**](../Models/_api_v2_projects__id__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
+| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
 

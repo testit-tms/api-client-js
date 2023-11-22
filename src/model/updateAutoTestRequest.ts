@@ -17,9 +17,9 @@ import { LinkPutModel } from './linkPutModel';
 
 export class UpdateAutoTestRequest {
     /**
-    * Used for search autotest. If value equals Guid mask filled with zeros, search will be executed using ExternalId
+    * Used for search autotest. If value is null or equals Guid mask filled with zeros, search will be executed using ExternalId
     */
-    'id'?: string;
+    'id'?: string | null;
     'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
     /**
     * External ID of the autotest

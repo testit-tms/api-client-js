@@ -4,7 +4,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
 | **hasThisSharedStepAsPrecondition** | **Boolean** |  | [default to null] |
 | **hasThisSharedStepAsPostcondition** | **Boolean** |  | [default to null] |
 | **createdById** | **UUID** |  | [default to null] |

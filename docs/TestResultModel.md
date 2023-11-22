@@ -30,7 +30,7 @@
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **stepComments** | [**List**](StepCommentModel.md) |  | [optional] [default to null] |
-| **failureClassIds** | **List** |  | [optional] [default to null] |
+| **failureClassIds** | **List** |  | [default to null] |
 | **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |
 | **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |

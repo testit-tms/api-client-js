@@ -16,7 +16,7 @@ import { TestPlanStatusModel } from './testPlanStatusModel';
 import { TestSuiteWithChildrenModel } from './testSuiteWithChildrenModel';
 
 export class TestPlanWithTestSuiteTreeModel {
-    'testSuites'?: Array<TestSuiteWithChildrenModel> | null;
+    'testSuites': Array<TestSuiteWithChildrenModel>;
     'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
@@ -53,7 +53,7 @@ export class TestPlanWithTestSuiteTreeModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; } | null;
+    'attributes': { [key: string]: any; };
 
     static discriminator: string | undefined = undefined;
 

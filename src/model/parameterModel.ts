@@ -20,7 +20,13 @@ export class ParameterModel {
     'isDeleted': boolean;
     'parameterKeyId': string;
     'id': string;
+    /**
+    * Value of the parameter
+    */
     'value': string;
+    /**
+    * Key of the parameter
+    */
     'name': string;
 
     static discriminator: string | undefined = undefined;

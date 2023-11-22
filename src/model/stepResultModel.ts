@@ -16,7 +16,7 @@ import { StepCommentModel } from './stepCommentModel';
 
 export class StepResultModel {
     'stepId': string;
-    'outcome'?: string | null;
+    'outcome': string;
     'sharedStepVersionId'?: string | null;
     'sharedStepResults'?: Array<SharedStepResultModel> | null;
     'comment'?: StepCommentModel | null;
