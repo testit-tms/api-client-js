@@ -48,7 +48,7 @@ export class TestResultModel {
     'createdById': string;
     'modifiedById'?: string | null;
     'stepComments'?: Array<StepCommentModel> | null;
-    'failureClassIds'?: Array<string> | null;
+    'failureClassIds': Array<string>;
     'outcome'?: TestResultOutcome | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;

@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { AutoTestModel } from './autoTestModel';
 import { TestPlanModel } from './testPlanModel';
 import { TestResultModel } from './testResultModel';
-import { TestRunAnalyticResultModel } from './testRunAnalyticResultModel';
+import { TestRunModelAnalytic } from './testRunModelAnalytic';
 import { TestRunState } from './testRunState';
 
 export class TestRunModel {
@@ -22,7 +22,7 @@ export class TestRunModel {
     'autoTestsCount': number;
     'testSuiteIds'?: Array<string> | null;
     'isAutomated': boolean;
-    'analytic'?: TestRunAnalyticResultModel | null;
+    'analytic': TestRunModelAnalytic;
     'testResults'?: Array<TestResultModel> | null;
     'testPlan'?: TestPlanModel | null;
     'createdDate': Date;
@@ -32,15 +32,15 @@ export class TestRunModel {
     'createdByUserName'?: string | null;
     'startedDate'?: Date | null;
     'completedDate'?: Date | null;
-    'build'?: string | null;
-    'description'?: string | null;
+    'build': string;
+    'description': string;
     'stateName': TestRunState;
     'projectId': string;
     'testPlanId'?: string | null;
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
-    'name'?: string | null;
-    'launchSource'?: string | null;
+    'name': string;
+    'launchSource': string;
     /**
     * Unique ID of the entity
     */
@@ -76,7 +76,7 @@ export class TestRunModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestRunAnalyticResultModel"
+            "type": "TestRunModelAnalytic"
         },
         {
             "name": "testResults",

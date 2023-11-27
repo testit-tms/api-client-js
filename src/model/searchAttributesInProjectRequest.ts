@@ -17,7 +17,7 @@ export class SearchAttributesInProjectRequest {
     /**
     * Specifies an attribute name to search for
     */
-    'name'?: string | null;
+    'name': string;
     /**
     * Specifies an attribute mandatory status to search for
     */
@@ -29,7 +29,7 @@ export class SearchAttributesInProjectRequest {
     /**
     * Specifies an attribute types to search for
     */
-    'types'?: Array<CustomAttributeTypesEnum> | null;
+    'types': Array<CustomAttributeTypesEnum>;
     /**
     * Specifies an attribute enabled status to search for
     */

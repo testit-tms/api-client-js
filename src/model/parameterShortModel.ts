@@ -15,7 +15,13 @@ import { RequestFile } from './models';
 export class ParameterShortModel {
     'id': string;
     'parameterKeyId': string;
+    /**
+    * Value of the parameter
+    */
     'value': string;
+    /**
+    * Key of the parameter
+    */
     'name': string;
 
     static discriminator: string | undefined = undefined;

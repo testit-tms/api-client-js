@@ -21,6 +21,10 @@ import { WorkItemStates } from './workItemStates';
 
 export class WorkItemSearchQueryModel {
     /**
+    * Collection of project identifiers
+    */
+    'projectIds'?: Array<string> | null;
+    /**
     * Name of work item
     */
     'name'?: string | null;
@@ -40,10 +44,6 @@ export class WorkItemSearchQueryModel {
     * Is result must consist of only actual/deleted work items
     */
     'isDeleted'?: boolean | null;
-    /**
-    * Collection of project identifiers
-    */
-    'projectIds'?: Array<string> | null;
     /**
     * Collection of section identifiers
     */
@@ -89,6 +89,11 @@ export class WorkItemSearchQueryModel {
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
+        },
+        {
             "name": "name",
             "baseName": "name",
             "type": "string"
@@ -112,11 +117,6 @@ export class WorkItemSearchQueryModel {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string>"
         },
         {
             "name": "sectionIds",

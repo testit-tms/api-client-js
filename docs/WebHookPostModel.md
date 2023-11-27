@@ -9,8 +9,8 @@
 | **url** | **String** | Request URL of the webhook | [default to null] |
 | **requestType** | [**RequestTypeModel**](RequestTypeModel.md) |  | [default to null] |
 | **shouldSendBody** | **Boolean** | Indicates if the webhook sends body | [default to null] |
-| **headers** | **Map** | Collection of the webhook headers | [optional] [default to null] |
-| **queryParameters** | **Map** | Collection of the webhook query parameters | [optional] [default to null] |
+| **headers** | **Map** | Collection of the webhook headers | [default to null] |
+| **queryParameters** | **Map** | Collection of the webhook query parameters | [default to null] |
 | **isEnabled** | **Boolean** | Indicates if the webhook is active | [default to null] |
 | **shouldSendCustomBody** | **Boolean** | Indicates if the webhook sends custom body | [default to null] |
 | **customBody** | **String** | Custom body of the webhook | [optional] [default to null] |

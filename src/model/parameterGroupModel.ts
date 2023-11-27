@@ -13,8 +13,8 @@
 import { RequestFile } from './models';
 
 export class ParameterGroupModel {
-    'name'?: string | null;
-    'values'?: { [key: string]: string; } | null;
+    'name': string;
+    'values': { [key: string]: string; };
     'parameterKeyId': string;
 
     static discriminator: string | undefined = undefined;

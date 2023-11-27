@@ -13,12 +13,12 @@
 import { RequestFile } from './models';
 
 export class WorkItemLinkChangeViewModel {
-    'description'?: string | null;
-    'url'?: string | null;
-    'title'?: string | null;
+    'description': string;
+    'url': string;
+    'title': string;
     'hasInfo': boolean;
     'id': string;
-    'type'?: string | null;
+    'type': string;
 
     static discriminator: string | undefined = undefined;
 

@@ -23,8 +23,8 @@
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
 | **isDeleted** | **Boolean** | Flag determining whether Work Item is deleted | [default to null] |
 | **tagNames** | **List** | Array of tag names of Work Item | [optional] [default to null] |
-| **iterations** | [**List**](IterationModel.md) | Set of iterations related to Work Item | [optional] [default to null] |
-| **links** | [**List**](LinkShortModel.md) | Set of links related to Work Item | [optional] [default to null] |
+| **iterations** | [**List**](IterationModel.md) | Set of iterations related to Work Item | [default to null] |
+| **links** | [**List**](LinkShortModel.md) | Set of links related to Work Item | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

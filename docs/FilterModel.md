@@ -7,10 +7,10 @@
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **data** | [**WorkItemSearchQueryModel**](WorkItemSearchQueryModel.md) |  | [optional] [default to null] |
+| **data** | [**FilterModel_data**](FilterModel_data.md) |  | [default to null] |
 | **projectId** | **UUID** |  | [default to null] |
 | **fieldsToShow** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |
 

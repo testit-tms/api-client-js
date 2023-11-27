@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2BackgroundJobsGet**](BackgroundJobsApi.md#apiV2BackgroundJobsGet) | **GET** /api/v2/backgroundJobs |  |
 | [**apiV2BackgroundJobsIdCancelPost**](BackgroundJobsApi.md#apiV2BackgroundJobsIdCancelPost) | **POST** /api/v2/backgroundJobs/{id}/cancel | Cancel current user background job |
 | [**apiV2BackgroundJobsIdGet**](BackgroundJobsApi.md#apiV2BackgroundJobsIdGet) | **GET** /api/v2/backgroundJobs/{id} | Get background job by ID |
+| [**apiV2BackgroundJobsIdStatusGet**](BackgroundJobsApi.md#apiV2BackgroundJobsIdStatusGet) | **GET** /api/v2/backgroundJobs/{id}/status | Get background job status by job ID |
 | [**apiV2BackgroundJobsSearchPost**](BackgroundJobsApi.md#apiV2BackgroundJobsSearchPost) | **POST** /api/v2/backgroundJobs/search | Search for user background jobs |
 
 
@@ -79,6 +80,31 @@ Get background job by ID
 ### Return type
 
 [**BackgroundJobGetModel**](../Models/BackgroundJobGetModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+<a name="apiV2BackgroundJobsIdStatusGet"></a>
+# **apiV2BackgroundJobsIdStatusGet**
+> BackgroundJobState apiV2BackgroundJobsIdStatusGet(id)
+
+Get background job status by job ID
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**| Unique ID of the background job | [default to null] |
+
+### Return type
+
+[**BackgroundJobState**](../Models/BackgroundJobState.md)
 
 ### Authorization
 

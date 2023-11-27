@@ -5,7 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** | Unique ID of the project | [default to null] |
 | **description** | **String** | Description of the project | [optional] [default to null] |
-| **name** | **String** | Name of the project | [optional] [default to null] |
+| **name** | **String** | Name of the project | [default to null] |
 | **isFavorite** | **Boolean** | Indicates if the project is marked as favorite | [default to null] |
 | **attributesScheme** | [**List**](CustomAttributeModel.md) | Collection of the project attributes | [optional] [default to null] |
 | **testPlansAttributesScheme** | [**List**](CustomAttributeModel.md) | Collection of the project test plans attributes | [optional] [default to null] |

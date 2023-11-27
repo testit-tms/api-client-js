@@ -13,11 +13,11 @@
 import { RequestFile } from './models';
 
 export class WorkItemChangedAttributeViewModel {
-    'type'?: string | null;
-    'oldAttributeName'?: string | null;
-    'newAttributeName'?: string | null;
-    'oldValue'?: any | null;
-    'newValue'?: any | null;
+    'type': string;
+    'oldAttributeName': string;
+    'newAttributeName': string;
+    'oldValue': any | null;
+    'newValue': any | null;
 
     static discriminator: string | undefined = undefined;
 

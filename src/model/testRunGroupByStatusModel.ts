@@ -13,7 +13,7 @@
 import { RequestFile } from './models';
 
 export class TestRunGroupByStatusModel {
-    'status'?: string | null;
+    'status': string;
     'value': number;
 
     static discriminator: string | undefined = undefined;

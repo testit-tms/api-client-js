@@ -7,7 +7,7 @@
 | **autoTestsCount** | **Integer** |  | [default to null] |
 | **testSuiteIds** | **List** |  | [optional] [default to null] |
 | **isAutomated** | **Boolean** |  | [default to null] |
-| **analytic** | [**TestRunAnalyticResultModel**](TestRunAnalyticResultModel.md) |  | [optional] [default to null] |
+| **analytic** | [**TestRunModel_analytic**](TestRunModel_analytic.md) |  | [default to null] |
 | **testResults** | [**List**](TestResultModel.md) |  | [optional] [default to null] |
 | **testPlan** | [**TestPlanModel**](TestPlanModel.md) |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [default to null] |
@@ -17,15 +17,15 @@
 | **createdByUserName** | **String** |  | [optional] [default to null] |
 | **startedDate** | **Date** |  | [optional] [default to null] |
 | **completedDate** | **Date** |  | [optional] [default to null] |
-| **build** | **String** |  | [optional] [default to null] |
-| **description** | **String** |  | [optional] [default to null] |
+| **build** | **String** |  | [default to null] |
+| **description** | **String** |  | [default to null] |
 | **stateName** | [**TestRunState**](TestRunState.md) |  | [default to null] |
 | **projectId** | **UUID** |  | [default to null] |
 | **testPlanId** | **UUID** |  | [optional] [default to null] |
 | **runByUserId** | **UUID** |  | [optional] [default to null] |
 | **stoppedByUserId** | **UUID** |  | [optional] [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
-| **launchSource** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
+| **launchSource** | **String** |  | [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |
 

@@ -15,7 +15,7 @@ import { RequestFile } from './models';
 export class AutoTestChangeViewModel {
     'id': string;
     'projectId': string;
-    'externalId'?: string | null;
+    'externalId': string;
     'globalId': number;
 
     static discriminator: string | undefined = undefined;

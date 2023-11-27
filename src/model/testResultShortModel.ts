@@ -17,9 +17,9 @@ import { TestPointPutModel } from './testPointPutModel';
 
 export class TestResultShortModel {
     'id': string;
-    'outcome'?: string | null;
+    'outcome': string;
     'traces'?: string | null;
-    'failureType'?: string | null;
+    'failureType': string;
     'message'?: string | null;
     'testPoint'?: TestPointPutModel | null;
     'createdDate'?: Date | null;

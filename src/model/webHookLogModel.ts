@@ -15,7 +15,7 @@ import { RequestTypeModel } from './requestTypeModel';
 import { WebHookEventTypeModel } from './webHookEventTypeModel';
 
 export class WebHookLogModel {
-    'webHookName'?: string | null;
+    'webHookName': string;
     'eventType': WebHookEventTypeModel;
     'webHookId': string;
     'requestBody'?: string | null;
@@ -24,7 +24,7 @@ export class WebHookLogModel {
     'responseBody'?: string | null;
     'responseMeta'?: string | null;
     'projectId': string;
-    'url'?: string | null;
+    'url': string;
     'requestType': RequestTypeModel;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;

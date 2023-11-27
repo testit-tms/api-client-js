@@ -7,7 +7,7 @@
 | **testerId** | **UUID** |  | [optional] [default to null] |
 | **parentId** | **UUID** |  | [optional] [default to null] |
 | **testPlanId** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |
 

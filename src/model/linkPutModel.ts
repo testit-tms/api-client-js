@@ -28,7 +28,7 @@ export class LinkPutModel {
     */
     'description'?: string | null;
     'type'?: LinkType | null;
-    'hasInfo'?: boolean | null;
+    'hasInfo': boolean;
 
     static discriminator: string | undefined = undefined;
 

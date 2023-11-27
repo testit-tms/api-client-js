@@ -4,9 +4,9 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
-| **outcome** | **String** |  | [optional] [default to null] |
+| **outcome** | **String** |  | [default to null] |
 | **traces** | **String** |  | [optional] [default to null] |
-| **failureType** | **String** |  | [optional] [default to null] |
+| **failureType** | **String** |  | [default to null] |
 | **message** | **String** |  | [optional] [default to null] |
 | **testPoint** | [**TestPointPutModel**](TestPointPutModel.md) |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [optional] [default to null] |

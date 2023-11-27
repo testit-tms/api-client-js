@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**apiV2ConfigurationsCreateByParametersPost**](ConfigurationsApi.md#apiV2ConfigurationsCreateByParametersPost) | **POST** /api/v2/configurations/createByParameters | Create Configurations by parameters |
+| [**apiV2ConfigurationsCreateByParametersPost**](ConfigurationsApi.md#apiV2ConfigurationsCreateByParametersPost) | **POST** /api/v2/configurations/createByParameters | Create configurations by parameters |
 | [**apiV2ConfigurationsDeleteBulkPost**](ConfigurationsApi.md#apiV2ConfigurationsDeleteBulkPost) | **POST** /api/v2/configurations/delete/bulk | Delete multiple configurations |
 | [**apiV2ConfigurationsIdDelete**](ConfigurationsApi.md#apiV2ConfigurationsIdDelete) | **DELETE** /api/v2/configurations/{id} | Delete configuration |
 | [**apiV2ConfigurationsIdPatch**](ConfigurationsApi.md#apiV2ConfigurationsIdPatch) | **PATCH** /api/v2/configurations/{id} | Patch configuration |
@@ -20,11 +20,9 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ConfigurationsCreateByParametersPost"></a>
 # **apiV2ConfigurationsCreateByParametersPost**
-> apiV2ConfigurationsCreateByParametersPost(\_api\_v2\_configurations\_createByParameters\_post\_request)
+> List apiV2ConfigurationsCreateByParametersPost(\_api\_v2\_configurations\_createByParameters\_post\_request)
 
-Create Configurations by parameters
-
-    &lt;br&gt;Use case  &lt;br&gt;User sets request model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates configurations  &lt;br&gt;System returns created configuration ids (listed in the response example)
+Create configurations by parameters
 
 ### Parameters
 
@@ -34,7 +32,7 @@ Create Configurations by parameters
 
 ### Return type
 
-null (empty response body)
+**List**
 
 ### Authorization
 

@@ -22,7 +22,7 @@ export class TestRunShortGetModel {
     /**
     * Name of the test run
     */
-    'name'?: string | null;
+    'name': string;
     'state': TestRunState;
     /**
     * Date when the test run was created
@@ -52,7 +52,7 @@ export class TestRunShortGetModel {
     * Number of AutoTests run in the test run
     */
     'autoTestsCount': number;
-    'statistics'?: TestRunShortGetModelStatistics | null;
+    'statistics': TestRunShortGetModelStatistics;
 
     static discriminator: string | undefined = undefined;
 

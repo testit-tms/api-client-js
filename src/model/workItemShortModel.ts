@@ -94,11 +94,11 @@ export class WorkItemShortModel {
     /**
     * Set of iterations related to Work Item
     */
-    'iterations'?: Array<IterationModel> | null;
+    'iterations': Array<IterationModel>;
     /**
     * Set of links related to Work Item
     */
-    'links'?: Array<LinkShortModel> | null;
+    'links': Array<LinkShortModel>;
 
     static discriminator: string | undefined = undefined;
 

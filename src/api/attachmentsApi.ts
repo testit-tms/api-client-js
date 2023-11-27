@@ -326,7 +326,7 @@ export class AttachmentsApi {
         });
     }
     /**
-     * File size is restricted to 1 GB (1 073 741 824 bytes)
+     * File size is restricted to 50 MB (52 428 800 bytes)
      * @summary Upload new attachment file
      * @param file 
      */

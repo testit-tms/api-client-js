@@ -15,9 +15,9 @@ import { RequestFile } from './models';
 export class AutoTestShortModel {
     'id': string;
     'globalId': number;
-    'externalId'?: string | null;
+    'externalId': string;
     'projectId': string;
-    'name'?: string | null;
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 

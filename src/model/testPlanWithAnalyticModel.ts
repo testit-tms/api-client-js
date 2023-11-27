@@ -13,10 +13,10 @@
 import { RequestFile } from './models';
 import { TagShortModel } from './tagShortModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
-import { TestPointAnalyticResult } from './testPointAnalyticResult';
+import { TestPlanWithAnalyticModelAnalytic } from './testPlanWithAnalyticModelAnalytic';
 
 export class TestPlanWithAnalyticModel {
-    'analytic'?: TestPointAnalyticResult | null;
+    'analytic': TestPlanWithAnalyticModelAnalytic;
     'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
@@ -53,7 +53,7 @@ export class TestPlanWithAnalyticModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes'?: { [key: string]: any; } | null;
+    'attributes': { [key: string]: any; };
 
     static discriminator: string | undefined = undefined;
 
@@ -61,7 +61,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestPointAnalyticResult"
+            "type": "TestPlanWithAnalyticModelAnalytic"
         },
         {
             "name": "status",

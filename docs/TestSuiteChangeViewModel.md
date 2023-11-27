@@ -4,7 +4,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
+| **name** | **String** |  | [default to null] |
 | **configurations** | [**List**](ShortConfiguration.md) |  | [optional] [default to null] |
 | **workItemCount** | **Long** |  | [default to null] |
 

@@ -98,11 +98,11 @@ export class ConfigurationsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets request model (listed in the request example)  <br>User runs method execution  <br>System creates configurations  <br>System returns created configuration ids (listed in the response example)
-     * @summary Create Configurations by parameters
+     * 
+     * @summary Create configurations by parameters
      * @param apiV2ConfigurationsCreateByParametersPostRequest 
      */
-    public async apiV2ConfigurationsCreateByParametersPost (apiV2ConfigurationsCreateByParametersPostRequest?: ApiV2ConfigurationsCreateByParametersPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ConfigurationsCreateByParametersPost (apiV2ConfigurationsCreateByParametersPostRequest?: ApiV2ConfigurationsCreateByParametersPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/createByParameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -148,12 +148,13 @@ export class ConfigurationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<string>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<string>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

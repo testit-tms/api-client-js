@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **regexText** | **String** |  | [optional] [default to null] |
+| **regexText** | **String** |  | [default to null] |
 | **failureClassId** | **UUID** |  | [optional] [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |

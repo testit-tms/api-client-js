@@ -14,8 +14,8 @@ import { RequestFile } from './models';
 
 export class LinkShortModel {
     'id': string;
-    'title'?: string | null;
-    'url'?: string | null;
+    'title': string;
+    'url': string;
 
     static discriminator: string | undefined = undefined;
 

@@ -17,11 +17,11 @@ export class AutotestResultHistoricalGetModel {
     'id': string;
     'createdDate': Date;
     'createdById': string;
-    'createdByName'?: string | null;
+    'createdByName': string;
     'testRunId': string;
     'testRunName'?: string | null;
     'configurationId': string;
-    'configurationName'?: string | null;
+    'configurationName': string;
     'outcome': AutotestResultOutcome;
     'launchSource'?: string | null;
     'modifiedDate'?: Date | null;

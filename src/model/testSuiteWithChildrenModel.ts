@@ -17,7 +17,7 @@ export class TestSuiteWithChildrenModel {
     'testerId'?: string | null;
     'parentId'?: string | null;
     'testPlanId': string;
-    'name'?: string | null;
+    'name': string;
     /**
     * Unique ID of the entity
     */

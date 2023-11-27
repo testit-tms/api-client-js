@@ -14,16 +14,38 @@ import { RequestFile } from './models';
 
 export class TestPointShortModel {
     'testSuiteId': string;
+    /**
+    * Test point unique internal identifier
+    */
     'id': string;
+    /**
+    * Tester who is responded for the test unique internal identifier
+    */
     'testerId'?: string | null;
+    /**
+    * Workitem to which test point relates unique identifier
+    */
     'workItemId'?: string | null;
+    /**
+    * Configuration to which test point relates unique identifier
+    */
     'configurationId'?: string | null;
     /**
-    * Applies one of these values: Blocked, NoResults, Failed, Passed
+    * Test point status  <br>Applies one of these values: Blocked, NoResults, Failed, Passed
     */
     'status'?: string | null;
+    /**
+    * Last test result unique identifier
+    */
     'lastTestResultId'?: string | null;
+    /**
+    * Iteration unique identifier
+    */
     'iterationId': string;
+    /**
+    * Median duration of work item the test point represents
+    */
+    'workItemMedianDuration'?: number | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -67,6 +89,11 @@ export class TestPointShortModel {
             "name": "iterationId",
             "baseName": "iterationId",
             "type": "string"
+        },
+        {
+            "name": "workItemMedianDuration",
+            "baseName": "workItemMedianDuration",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {

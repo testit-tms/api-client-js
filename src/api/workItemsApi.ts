@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsIdWorkItemsSearchPostRequest';
+import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
 import { ApiV2WorkItemsMovePostRequest } from '../model/apiV2WorkItemsMovePostRequest';
 import { ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest } from '../model/apiV2WorkItemsSharedStepIdReferencesSectionsPostRequest';
 import { ApiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest } from '../model/apiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest';
@@ -936,9 +936,9 @@ export class WorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsIdWorkItemsSearchPostRequest 
+     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest 
      */
-    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsIdWorkItemsSearchPostRequest?: ApiV2ProjectsIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -982,7 +982,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsIdWorkItemsSearchPostRequest, "ApiV2ProjectsIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
         };
 
         let authenticationPromise = Promise.resolve();

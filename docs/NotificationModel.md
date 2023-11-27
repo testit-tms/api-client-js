@@ -11,10 +11,10 @@
 | **projectGlobalId** | **Long** |  | [optional] [default to null] |
 | **projectName** | **String** |  | [optional] [default to null] |
 | **testPlanGlobalId** | **Long** |  | [default to null] |
-| **testPlanName** | **String** |  | [optional] [default to null] |
+| **testPlanName** | **String** |  | [default to null] |
 | **workitemGlobalId** | **Long** |  | [optional] [default to null] |
-| **comment** | **String** |  | [optional] [default to null] |
-| **workItemName** | **String** |  | [optional] [default to null] |
+| **comment** | **String** |  | [default to null] |
+| **workItemName** | **String** |  | [default to null] |
 | **attributeName** | **String** |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [default to null] |
 
