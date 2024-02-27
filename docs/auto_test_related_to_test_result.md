@@ -18,6 +18,7 @@
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **labels** | [**List**](LabelShortModel.md) |  | [optional] [default to null] |
+| **externalKey** | **String** |  | [optional] [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |
 

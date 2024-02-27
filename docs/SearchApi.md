@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2SearchGlobalSearchPost"></a>
 # **apiV2SearchGlobalSearchPost**
-> GlobalSearchResponse apiV2SearchGlobalSearchPost(\_api\_v2\_search\_globalSearch\_post\_request)
+> GlobalSearchResponse apiV2SearchGlobalSearchPost(GlobalSearchRequest)
 
 
 
@@ -17,7 +17,7 @@ All URIs are relative to *http://localhost*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_search\_globalSearch\_post\_request** | [**_api_v2_search_globalSearch_post_request**](../Models/_api_v2_search_globalSearch_post_request.md)|  | [optional] |
+| **GlobalSearchRequest** | [**GlobalSearchRequest**](../Models/GlobalSearchRequest.md)|  | [optional] |
 
 ### Return type
 

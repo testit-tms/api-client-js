@@ -14,7 +14,7 @@ All URIs are relative to *http://localhost*
 
 <a name="createProjectsAttribute"></a>
 # **createProjectsAttribute**
-> CustomAttributeModel createProjectsAttribute(projectId, CreateProjectsAttribute\_request)
+> CustomAttributeModel createProjectsAttribute(projectId, CustomAttributePostModel)
 
 Create project attribute
 
@@ -25,7 +25,7 @@ Create project attribute
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **CreateProjectsAttribute\_request** | [**CreateProjectsAttribute_request**](../Models/CreateProjectsAttribute_request.md)|  | [optional] |
+| **CustomAttributePostModel** | [**CustomAttributePostModel**](../Models/CustomAttributePostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -126,7 +126,7 @@ Get project attributes
 
 <a name="searchAttributesInProject"></a>
 # **searchAttributesInProject**
-> List searchAttributesInProject(projectId, Skip, Take, OrderBy, SearchField, SearchValue, SearchAttributesInProject\_request)
+> List searchAttributesInProject(projectId, Skip, Take, OrderBy, SearchField, SearchValue, ProjectAttributesFilterModel)
 
 Search for attributes used in the project
 
@@ -140,7 +140,7 @@ Search for attributes used in the project
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SearchAttributesInProject\_request** | [**SearchAttributesInProject_request**](../Models/SearchAttributesInProject_request.md)|  | [optional] |
+| **ProjectAttributesFilterModel** | [**ProjectAttributesFilterModel**](../Models/ProjectAttributesFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -157,7 +157,7 @@ Search for attributes used in the project
 
 <a name="updateProjectsAttribute"></a>
 # **updateProjectsAttribute**
-> updateProjectsAttribute(projectId, UpdateProjectsAttribute\_request)
+> updateProjectsAttribute(projectId, CustomAttributePutModel)
 
 Edit attribute of the project
 
@@ -166,7 +166,7 @@ Edit attribute of the project
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Unique or global project ID | [default to null] |
-| **UpdateProjectsAttribute\_request** | [**UpdateProjectsAttribute_request**](../Models/UpdateProjectsAttribute_request.md)|  | [optional] |
+| **CustomAttributePutModel** | [**CustomAttributePutModel**](../Models/CustomAttributePutModel.md)|  | [optional] |
 
 ### Return type
 

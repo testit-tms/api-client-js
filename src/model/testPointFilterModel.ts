@@ -35,6 +35,10 @@ export class TestPointFilterModel {
     'workItemGlobalIds'?: Array<number> | null;
     'workItemMedianDuration'?: TestPointFilterModelWorkItemMedianDuration | null;
     /**
+    * Specifies a test point work item is deleted flag to search for
+    */
+    'workItemIsDeleted'?: boolean | null;
+    /**
     * Specifies a test point statuses to search for
     */
     'statuses'?: Array<TestPointStatus> | null;
@@ -114,6 +118,11 @@ export class TestPointFilterModel {
             "name": "workItemMedianDuration",
             "baseName": "workItemMedianDuration",
             "type": "TestPointFilterModelWorkItemMedianDuration"
+        },
+        {
+            "name": "workItemIsDeleted",
+            "baseName": "workItemIsDeleted",
+            "type": "boolean"
         },
         {
             "name": "statuses",

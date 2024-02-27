@@ -65,7 +65,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsDemoPost"></a>
 # **apiV2ProjectsDemoPost**
-> ProjectModel apiV2ProjectsDemoPost(CreateProject\_request)
+> ProjectModel apiV2ProjectsDemoPost(ProjectPostModel)
 
 
 
@@ -73,7 +73,7 @@ null (empty response body)
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateProject\_request** | [**CreateProject_request**](../Models/CreateProject_request.md)|  | [optional] |
+| **ProjectPostModel** | [**ProjectPostModel**](../Models/ProjectPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -299,7 +299,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsIdTestPlansAttributePut"></a>
 # **apiV2ProjectsIdTestPlansAttributePut**
-> apiV2ProjectsIdTestPlansAttributePut(id, UpdateCustomAttributeTestPlanProjectRelations\_request)
+> apiV2ProjectsIdTestPlansAttributePut(id, CustomAttributeTestPlanProjectRelationPutModel)
 
 Update attribute of project&#39;s test plans
 
@@ -310,7 +310,7 @@ Update attribute of project&#39;s test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **UpdateCustomAttributeTestPlanProjectRelations\_request** | [**UpdateCustomAttributeTestPlanProjectRelations_request**](../Models/UpdateCustomAttributeTestPlanProjectRelations_request.md)|  | [optional] |
+| **CustomAttributeTestPlanProjectRelationPutModel** | [**CustomAttributeTestPlanProjectRelationPutModel**](../Models/CustomAttributeTestPlanProjectRelationPutModel.md)|  | [optional] |
 
 ### Return type
 
@@ -420,7 +420,7 @@ Get Project TestRuns full models
 
 <a name="apiV2ProjectsPurgeBulkPost"></a>
 # **apiV2ProjectsPurgeBulkPost**
-> Long apiV2ProjectsPurgeBulkPost(\_api\_v2\_projects\_restore\_bulk\_post\_request)
+> Long apiV2ProjectsPurgeBulkPost(ProjectSelectModel)
 
 Purge multiple projects
 
@@ -428,7 +428,7 @@ Purge multiple projects
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_projects\_restore\_bulk\_post\_request** | [**_api_v2_projects_restore_bulk_post_request**](../Models/_api_v2_projects_restore_bulk_post_request.md)|  | [optional] |
+| **ProjectSelectModel** | [**ProjectSelectModel**](../Models/ProjectSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -445,7 +445,7 @@ Purge multiple projects
 
 <a name="apiV2ProjectsRestoreBulkPost"></a>
 # **apiV2ProjectsRestoreBulkPost**
-> Long apiV2ProjectsRestoreBulkPost(\_api\_v2\_projects\_restore\_bulk\_post\_request)
+> Long apiV2ProjectsRestoreBulkPost(ProjectSelectModel)
 
 Restore multiple projects
 
@@ -453,7 +453,7 @@ Restore multiple projects
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_projects\_restore\_bulk\_post\_request** | [**_api_v2_projects_restore_bulk_post_request**](../Models/_api_v2_projects_restore_bulk_post_request.md)|  | [optional] |
+| **ProjectSelectModel** | [**ProjectSelectModel**](../Models/ProjectSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -470,7 +470,7 @@ Restore multiple projects
 
 <a name="apiV2ProjectsSearchPost"></a>
 # **apiV2ProjectsSearchPost**
-> List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_search\_post\_request)
+> List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ProjectsFilterModel)
 
 Search for projects
 
@@ -483,7 +483,7 @@ Search for projects
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_search\_post\_request** | [**_api_v2_projects_search_post_request**](../Models/_api_v2_projects_search_post_request.md)|  | [optional] |
+| **ProjectsFilterModel** | [**ProjectsFilterModel**](../Models/ProjectsFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -550,7 +550,7 @@ Import project from Zip file in background job
 
 <a name="createProject"></a>
 # **createProject**
-> ProjectModel createProject(CreateProject\_request)
+> ProjectModel createProject(ProjectPostModel)
 
 Create project
 
@@ -560,7 +560,7 @@ Create project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateProject\_request** | [**CreateProject_request**](../Models/CreateProject_request.md)|  | [optional] |
+| **ProjectPostModel** | [**ProjectPostModel**](../Models/ProjectPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -602,7 +602,7 @@ null (empty response body)
 
 <a name="exportWithTestPlansAndConfigurations"></a>
 # **exportWithTestPlansAndConfigurations**
-> File exportWithTestPlansAndConfigurations(id, includeAttachments, ExportProjectWithTestPlansJson\_request)
+> File exportWithTestPlansAndConfigurations(id, includeAttachments, ProjectExportWithTestPlansPostModel)
 
 Export project with test plans, test suites and test points as JSON file
 
@@ -614,7 +614,7 @@ Export project with test plans, test suites and test points as JSON file
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Specifies the ID of the project you want to export. | [default to null] |
 | **includeAttachments** | **Boolean**| Enables attachment export. | [optional] [default to false] |
-| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
+| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -813,7 +813,7 @@ null (empty response body)
 
 <a name="updateProject"></a>
 # **updateProject**
-> updateProject(UpdateProject\_request)
+> updateProject(ProjectPutModel)
 
 Update project
 
@@ -823,7 +823,7 @@ Update project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateProject\_request** | [**UpdateProject_request**](../Models/UpdateProject_request.md)|  | [optional] |
+| **ProjectPutModel** | [**ProjectPutModel**](../Models/ProjectPutModel.md)|  | [optional] |
 
 ### Return type
 

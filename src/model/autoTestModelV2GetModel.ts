@@ -37,6 +37,7 @@ export class AutoTestModelV2GetModel {
     'createdById': string;
     'modifiedById'?: string | null;
     'labels'?: Array<LabelShortModel> | null;
+    'externalKey'?: string | null;
     /**
     * Unique ID of the entity
     */
@@ -123,6 +124,11 @@ export class AutoTestModelV2GetModel {
             "name": "labels",
             "baseName": "labels",
             "type": "Array<LabelShortModel>"
+        },
+        {
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         },
         {
             "name": "id",

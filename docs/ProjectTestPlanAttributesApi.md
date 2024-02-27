@@ -96,7 +96,7 @@ Get project&#39;s test plan attributes
 
 <a name="searchTestPlanAttributesInProject"></a>
 # **searchTestPlanAttributesInProject**
-> List searchTestPlanAttributesInProject(projectId, Skip, Take, OrderBy, SearchField, SearchValue, SearchAttributesInProject\_request)
+> List searchTestPlanAttributesInProject(projectId, Skip, Take, OrderBy, SearchField, SearchValue, ProjectAttributesFilterModel)
 
 Search for attributes used in the project test plans
 
@@ -110,7 +110,7 @@ Search for attributes used in the project test plans
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SearchAttributesInProject\_request** | [**SearchAttributesInProject_request**](../Models/SearchAttributesInProject_request.md)|  | [optional] |
+| **ProjectAttributesFilterModel** | [**ProjectAttributesFilterModel**](../Models/ProjectAttributesFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -127,7 +127,7 @@ Search for attributes used in the project test plans
 
 <a name="updateCustomAttributeTestPlanProjectRelations"></a>
 # **updateCustomAttributeTestPlanProjectRelations**
-> updateCustomAttributeTestPlanProjectRelations(projectId, UpdateCustomAttributeTestPlanProjectRelations\_request)
+> updateCustomAttributeTestPlanProjectRelations(projectId, CustomAttributeTestPlanProjectRelationPutModel)
 
 Update attribute of project&#39;s test plans
 
@@ -138,7 +138,7 @@ Update attribute of project&#39;s test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **UpdateCustomAttributeTestPlanProjectRelations\_request** | [**UpdateCustomAttributeTestPlanProjectRelations_request**](../Models/UpdateCustomAttributeTestPlanProjectRelations_request.md)|  | [optional] |
+| **CustomAttributeTestPlanProjectRelationPutModel** | [**CustomAttributeTestPlanProjectRelationPutModel**](../Models/CustomAttributeTestPlanProjectRelationPutModel.md)|  | [optional] |
 
 ### Return type
 

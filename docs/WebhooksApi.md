@@ -91,7 +91,7 @@ Get webhook by ID
 
 <a name="apiV2WebhooksIdPut"></a>
 # **apiV2WebhooksIdPut**
-> WebHookModel apiV2WebhooksIdPut(id, \_api\_v2\_webhooks\_post\_request)
+> WebHookModel apiV2WebhooksIdPut(id, WebHookPostModel)
 
 Edit webhook by ID
 
@@ -100,7 +100,7 @@ Edit webhook by ID
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Webhook unique ID | [default to null] |
-| **\_api\_v2\_webhooks\_post\_request** | [**_api_v2_webhooks_post_request**](../Models/_api_v2_webhooks_post_request.md)|  | [optional] |
+| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -117,7 +117,7 @@ Edit webhook by ID
 
 <a name="apiV2WebhooksPost"></a>
 # **apiV2WebhooksPost**
-> WebHookModel apiV2WebhooksPost(\_api\_v2\_webhooks\_post\_request)
+> WebHookModel apiV2WebhooksPost(WebHookPostModel)
 
 Create webhook
 
@@ -125,7 +125,7 @@ Create webhook
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_webhooks\_post\_request** | [**_api_v2_webhooks_post_request**](../Models/_api_v2_webhooks_post_request.md)|  | [optional] |
+| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -142,7 +142,7 @@ Create webhook
 
 <a name="apiV2WebhooksSearchPost"></a>
 # **apiV2WebhooksSearchPost**
-> List apiV2WebhooksSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_webhooks\_search\_post\_request)
+> List apiV2WebhooksSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, SearchWebhooksQueryModel)
 
 Search for webhooks
 
@@ -155,7 +155,7 @@ Search for webhooks
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_webhooks\_search\_post\_request** | [**_api_v2_webhooks_search_post_request**](../Models/_api_v2_webhooks_search_post_request.md)|  | [optional] |
+| **SearchWebhooksQueryModel** | [**SearchWebhooksQueryModel**](../Models/SearchWebhooksQueryModel.md)|  | [optional] |
 
 ### Return type
 
@@ -198,7 +198,7 @@ Get special variables for webhook event type
 
 <a name="apiV2WebhooksTestPost"></a>
 # **apiV2WebhooksTestPost**
-> RequestData apiV2WebhooksTestPost(\_api\_v2\_webhooks\_test\_post\_request)
+> RequestData apiV2WebhooksTestPost(WebHookTestModel)
 
 Test webhook&#39;s url
 
@@ -206,7 +206,7 @@ Test webhook&#39;s url
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_webhooks\_test\_post\_request** | [**_api_v2_webhooks_test_post_request**](../Models/_api_v2_webhooks_test_post_request.md)|  | [optional] |
+| **WebHookTestModel** | [**WebHookTestModel**](../Models/WebHookTestModel.md)|  | [optional] |
 
 ### Return type
 

@@ -15,11 +15,11 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest';
-import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
-import { TagShortModel } from '../model/tagShortModel';
+import { TagModel } from '../model/tagModel';
+import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
+import { WorkItemSelectModel } from '../model/workItemSelectModel';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -103,9 +103,9 @@ export class ProjectWorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest 
+     * @param workItemGroupGetModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchGroupedPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemGroupModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchGroupedPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemGroupGetModel?: WorkItemGroupGetModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search/grouped'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -155,7 +155,7 @@ export class ProjectWorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchGroupedPostRequest")
+            body: ObjectSerializer.serialize(workItemGroupGetModel, "WorkItemGroupGetModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -202,9 +202,9 @@ export class ProjectWorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest 
+     * @param workItemSelectModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchIdPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchIdPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search/id'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -254,7 +254,7 @@ export class ProjectWorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -301,9 +301,9 @@ export class ProjectWorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest 
+     * @param workItemSelectModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -353,7 +353,7 @@ export class ProjectWorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -397,7 +397,7 @@ export class ProjectWorkItemsApi {
      * @param projectId Project internal (UUID) identifier
      * @param isDeleted 
      */
-    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/tags'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -452,13 +452,13 @@ export class ProjectWorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TagShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TagModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

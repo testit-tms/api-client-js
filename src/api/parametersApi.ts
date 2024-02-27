@@ -15,14 +15,12 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ParametersSearchPostRequest } from '../model/apiV2ParametersSearchPostRequest';
-import { CreateParameterRequest } from '../model/createParameterRequest';
+import { ParameterFilterModel } from '../model/parameterFilterModel';
 import { ParameterGroupModel } from '../model/parameterGroupModel';
 import { ParameterModel } from '../model/parameterModel';
 import { ParameterPostModel } from '../model/parameterPostModel';
 import { ParameterPutModel } from '../model/parameterPutModel';
 import { ProblemDetails } from '../model/problemDetails';
-import { UpdateParameterRequest } from '../model/updateParameterRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -547,9 +545,9 @@ export class ParametersApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ParametersSearchPostRequest 
+     * @param parameterFilterModel 
      */
-    public async apiV2ParametersSearchGroupsPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ParametersSearchPostRequest?: ApiV2ParametersSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
+    public async apiV2ParametersSearchGroupsPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -593,7 +591,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ParametersSearchPostRequest, "ApiV2ParametersSearchPostRequest")
+            body: ObjectSerializer.serialize(parameterFilterModel, "ParameterFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -639,9 +637,9 @@ export class ParametersApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ParametersSearchPostRequest 
+     * @param parameterFilterModel 
      */
-    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ParametersSearchPostRequest?: ApiV2ParametersSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -685,7 +683,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ParametersSearchPostRequest, "ApiV2ParametersSearchPostRequest")
+            body: ObjectSerializer.serialize(parameterFilterModel, "ParameterFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -726,9 +724,9 @@ export class ParametersApi {
     /**
      * <br>Use case  <br>User sets parameter model (listed in the request example)  <br>User runs method execution  <br>System creates parameter  <br>System returns parameter model
      * @summary Create parameter
-     * @param createParameterRequest 
+     * @param parameterPostModel 
      */
-    public async createParameter (createParameterRequest?: CreateParameterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
+    public async createParameter (parameterPostModel?: ParameterPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -752,7 +750,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createParameterRequest, "CreateParameterRequest")
+            body: ObjectSerializer.serialize(parameterPostModel, "ParameterPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1173,9 +1171,9 @@ export class ParametersApi {
     /**
      * <br>Use case  <br>User sets parameter updated properties(listed in the request example)  <br>User runs method execution  <br>System updated parameter using updated properties  <br>System returns no content response
      * @summary Update parameter
-     * @param updateParameterRequest 
+     * @param parameterPutModel 
      */
-    public async updateParameter (updateParameterRequest?: UpdateParameterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateParameter (parameterPutModel?: ParameterPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1199,7 +1197,7 @@ export class ParametersApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateParameterRequest, "UpdateParameterRequest")
+            body: ObjectSerializer.serialize(parameterPutModel, "ParameterPutModel")
         };
 
         let authenticationPromise = Promise.resolve();

@@ -30,7 +30,7 @@
 | **postconditionSteps** | [**List**](StepModel.md) |  | [default to null] |
 | **duration** | **Integer** |  | [default to null] |
 | **attributes** | [**Map**](AnyType.md) |  | [default to null] |
-| **tags** | [**List**](TagShortModel.md) |  | [default to null] |
+| **tags** | [**List**](TagPutModel.md) |  | [default to null] |
 | **links** | [**List**](LinkModel.md) |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 

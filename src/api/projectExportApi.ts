@@ -15,9 +15,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ExportProjectJsonRequest } from '../model/exportProjectJsonRequest';
-import { ExportProjectWithTestPlansJsonRequest } from '../model/exportProjectWithTestPlansJsonRequest';
 import { ProblemDetails } from '../model/problemDetails';
+import { ProjectExportQueryModel } from '../model/projectExportQueryModel';
+import { ProjectExportWithTestPlansPostModel } from '../model/projectExportWithTestPlansPostModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -96,9 +96,9 @@ export class ProjectExportApi {
      * @summary Export project as JSON file
      * @param projectId Specifies the ID of the project you want to export.
      * @param includeAttachments Enables attachment export.
-     * @param exportProjectJsonRequest 
+     * @param projectExportQueryModel 
      */
-    public async _export (projectId: string, includeAttachments?: boolean, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
+    public async _export (projectId: string, includeAttachments?: boolean, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/export'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -132,7 +132,7 @@ export class ProjectExportApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             encoding: null,
-            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
+            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -175,9 +175,9 @@ export class ProjectExportApi {
      * @summary Export project as JSON file in background job
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param exportProjectJsonRequest 
+     * @param projectExportQueryModel 
      */
-    public async exportProjectJson (projectId: string, timeZoneOffsetInMinutes?: number, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectJson (projectId: string, timeZoneOffsetInMinutes?: number, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/export/json'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -208,7 +208,7 @@ export class ProjectExportApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
+            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -251,9 +251,9 @@ export class ProjectExportApi {
      * @summary Export project as JSON file with test plans in background job
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param exportProjectWithTestPlansJsonRequest 
+     * @param projectExportWithTestPlansPostModel 
      */
-    public async exportProjectWithTestPlansJson (projectId: string, timeZoneOffsetInMinutes?: number, exportProjectWithTestPlansJsonRequest?: ExportProjectWithTestPlansJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectWithTestPlansJson (projectId: string, timeZoneOffsetInMinutes?: number, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/export/testPlans/json'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -284,7 +284,7 @@ export class ProjectExportApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(exportProjectWithTestPlansJsonRequest, "ExportProjectWithTestPlansJsonRequest")
+            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -327,9 +327,9 @@ export class ProjectExportApi {
      * @summary Export project as Zip file with test plans in background job
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param exportProjectWithTestPlansJsonRequest 
+     * @param projectExportWithTestPlansPostModel 
      */
-    public async exportProjectWithTestPlansZip (projectId: string, timeZoneOffsetInMinutes?: number, exportProjectWithTestPlansJsonRequest?: ExportProjectWithTestPlansJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectWithTestPlansZip (projectId: string, timeZoneOffsetInMinutes?: number, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/export/testPlans/zip'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -360,7 +360,7 @@ export class ProjectExportApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(exportProjectWithTestPlansJsonRequest, "ExportProjectWithTestPlansJsonRequest")
+            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -403,9 +403,9 @@ export class ProjectExportApi {
      * @summary Export project as Zip file in background job
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param timeZoneOffsetInMinutes 
-     * @param exportProjectJsonRequest 
+     * @param projectExportQueryModel 
      */
-    public async exportProjectZip (projectId: string, timeZoneOffsetInMinutes?: number, exportProjectJsonRequest?: ExportProjectJsonRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async exportProjectZip (projectId: string, timeZoneOffsetInMinutes?: number, projectExportQueryModel?: ProjectExportQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/export/zip'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -436,7 +436,7 @@ export class ProjectExportApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(exportProjectJsonRequest, "ExportProjectJsonRequest")
+            body: ObjectSerializer.serialize(projectExportQueryModel, "ProjectExportQueryModel")
         };
 
         let authenticationPromise = Promise.resolve();

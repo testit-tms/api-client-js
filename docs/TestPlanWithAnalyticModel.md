@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **analytic** | [**TestPlanWithAnalyticModel_analytic**](TestPlanWithAnalyticModel_analytic.md) |  | [default to null] |
+| **analytic** | [**TestPointAnalyticResult**](TestPointAnalyticResult.md) |  | [default to null] |
 | **status** | [**TestPlanStatusModel**](TestPlanStatusModel.md) |  | [default to null] |
 | **startedOn** | **Date** | Set when test plan is starter (status changed to: In Progress) | [optional] [default to null] |
 | **completedOn** | **Date** | set when test plan status is completed (status changed to: Completed) | [optional] [default to null] |
@@ -16,7 +16,7 @@
 | **lockedDate** | **Date** |  | [optional] [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **lockedById** | **UUID** |  | [optional] [default to null] |
-| **tags** | [**List**](TagShortModel.md) |  | [optional] [default to null] |
+| **tags** | [**List**](TagPostModel.md) |  | [optional] [default to null] |
 | **name** | **String** |  | [default to null] |
 | **startDate** | **Date** | Used for analytics | [optional] [default to null] |
 | **endDate** | **Date** | Used for analytics | [optional] [default to null] |

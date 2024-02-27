@@ -15,12 +15,12 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ConfigurationsCreateByParametersPostRequest } from '../model/apiV2ConfigurationsCreateByParametersPostRequest';
-import { ApiV2ConfigurationsPurgeBulkPostRequest } from '../model/apiV2ConfigurationsPurgeBulkPostRequest';
-import { ApiV2ConfigurationsPutRequest } from '../model/apiV2ConfigurationsPutRequest';
-import { ApiV2ConfigurationsSearchPostRequest } from '../model/apiV2ConfigurationsSearchPostRequest';
+import { ConfigurationByParametersModel } from '../model/configurationByParametersModel';
+import { ConfigurationFilterModel } from '../model/configurationFilterModel';
 import { ConfigurationModel } from '../model/configurationModel';
-import { CreateConfigurationRequest } from '../model/createConfigurationRequest';
+import { ConfigurationPostModel } from '../model/configurationPostModel';
+import { ConfigurationPutModel } from '../model/configurationPutModel';
+import { ConfigurationSelectModel } from '../model/configurationSelectModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
@@ -100,9 +100,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Create configurations by parameters
-     * @param apiV2ConfigurationsCreateByParametersPostRequest 
+     * @param configurationByParametersModel 
      */
-    public async apiV2ConfigurationsCreateByParametersPost (apiV2ConfigurationsCreateByParametersPostRequest?: ApiV2ConfigurationsCreateByParametersPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ConfigurationsCreateByParametersPost (configurationByParametersModel?: ConfigurationByParametersModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/createByParameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -126,7 +126,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsCreateByParametersPostRequest, "ApiV2ConfigurationsCreateByParametersPostRequest")
+            body: ObjectSerializer.serialize(configurationByParametersModel, "ConfigurationByParametersModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -167,9 +167,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Delete multiple configurations
-     * @param apiV2ConfigurationsPurgeBulkPostRequest 
+     * @param configurationSelectModel 
      */
-    public async apiV2ConfigurationsDeleteBulkPost (apiV2ConfigurationsPurgeBulkPostRequest?: ApiV2ConfigurationsPurgeBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2ConfigurationsDeleteBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/delete/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -193,7 +193,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsPurgeBulkPostRequest, "ApiV2ConfigurationsPurgeBulkPostRequest")
+            body: ObjectSerializer.serialize(configurationSelectModel, "ConfigurationSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -520,9 +520,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Permanently delete multiple archived configurations
-     * @param apiV2ConfigurationsPurgeBulkPostRequest 
+     * @param configurationSelectModel 
      */
-    public async apiV2ConfigurationsPurgeBulkPost (apiV2ConfigurationsPurgeBulkPostRequest?: ApiV2ConfigurationsPurgeBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ConfigurationsPurgeBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/purge/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -546,7 +546,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsPurgeBulkPostRequest, "ApiV2ConfigurationsPurgeBulkPostRequest")
+            body: ObjectSerializer.serialize(configurationSelectModel, "ConfigurationSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -586,9 +586,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Edit configuration
-     * @param apiV2ConfigurationsPutRequest 
+     * @param configurationPutModel 
      */
-    public async apiV2ConfigurationsPut (apiV2ConfigurationsPutRequest?: ApiV2ConfigurationsPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ConfigurationsPut (configurationPutModel?: ConfigurationPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -612,7 +612,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsPutRequest, "ApiV2ConfigurationsPutRequest")
+            body: ObjectSerializer.serialize(configurationPutModel, "ConfigurationPutModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -652,9 +652,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Restore multiple configurations from the archive
-     * @param apiV2ConfigurationsPurgeBulkPostRequest 
+     * @param configurationSelectModel 
      */
-    public async apiV2ConfigurationsRestoreBulkPost (apiV2ConfigurationsPurgeBulkPostRequest?: ApiV2ConfigurationsPurgeBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2ConfigurationsRestoreBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/restore/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -678,7 +678,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsPurgeBulkPostRequest, "ApiV2ConfigurationsPurgeBulkPostRequest")
+            body: ObjectSerializer.serialize(configurationSelectModel, "ConfigurationSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -724,9 +724,9 @@ export class ConfigurationsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ConfigurationsSearchPostRequest Model containing all the filters
+     * @param configurationFilterModel Model containing all the filters
      */
-    public async apiV2ConfigurationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ConfigurationsSearchPostRequest?: ApiV2ConfigurationsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
+    public async apiV2ConfigurationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, configurationFilterModel?: ConfigurationFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -770,7 +770,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ConfigurationsSearchPostRequest, "ApiV2ConfigurationsSearchPostRequest")
+            body: ObjectSerializer.serialize(configurationFilterModel, "ConfigurationFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -811,9 +811,9 @@ export class ConfigurationsApi {
     /**
      * <br>Use case  <br>User sets configuration model (listed in the request example)  <br>User runs method execution  <br>System creates configuration  <br>System returns created configuration (listed in the response example)
      * @summary Create Configuration
-     * @param createConfigurationRequest 
+     * @param configurationPostModel 
      */
-    public async createConfiguration (createConfigurationRequest?: CreateConfigurationRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConfigurationModel;  }> {
+    public async createConfiguration (configurationPostModel?: ConfigurationPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConfigurationModel;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -837,7 +837,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createConfigurationRequest, "CreateConfigurationRequest")
+            body: ObjectSerializer.serialize(configurationPostModel, "ConfigurationPostModel")
         };
 
         let authenticationPromise = Promise.resolve();

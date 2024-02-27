@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { TestPlanChangeModelTestPlanChangedFields } from './testPlanChangeModelTestPlanChangedFields';
+import { TestPlanChangedFieldsViewModel } from './testPlanChangedFieldsViewModel';
 
 export class TestPlanChangeModel {
     'id': string;
     'testPlanId': string;
-    'testPlanChangedFields': TestPlanChangeModelTestPlanChangedFields;
+    'testPlanChangedFields': TestPlanChangedFieldsViewModel;
     'createdById': string;
     'createdDate'?: Date | null;
 
@@ -36,7 +36,7 @@ export class TestPlanChangeModel {
         {
             "name": "testPlanChangedFields",
             "baseName": "testPlanChangedFields",
-            "type": "TestPlanChangeModelTestPlanChangedFields"
+            "type": "TestPlanChangedFieldsViewModel"
         },
         {
             "name": "createdById",

@@ -11,9 +11,11 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentModel } from './attachmentModel';
 import { StepModel } from './stepModel';
 
 export class SectionWithStepsModel {
+    'attachments'?: Array<AttachmentModel> | null;
     'preconditionSteps'?: Array<StepModel> | null;
     'postconditionSteps'?: Array<StepModel> | null;
     'projectId'?: string | null;
@@ -29,6 +31,11 @@ export class SectionWithStepsModel {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentModel>"
+        },
         {
             "name": "preconditionSteps",
             "baseName": "preconditionSteps",

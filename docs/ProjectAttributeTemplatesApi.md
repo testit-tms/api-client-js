@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ProjectsProjectIdAttributesTemplatesSearchPost"></a>
 # **apiV2ProjectsProjectIdAttributesTemplatesSearchPost**
-> List apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_projectId\_\_attributes\_templates\_search\_post\_request)
+> List apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, ProjectCustomAttributesTemplatesFilterModel)
 
 Search for custom attributes templates
 
@@ -25,7 +25,7 @@ Search for custom attributes templates
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_attributes\_templates\_search\_post\_request** | [**_api_v2_projects__projectId__attributes_templates_search_post_request**](../Models/_api_v2_projects__projectId__attributes_templates_search_post_request.md)|  | [optional] |
+| **ProjectCustomAttributesTemplatesFilterModel** | [**ProjectCustomAttributesTemplatesFilterModel**](../Models/ProjectCustomAttributesTemplatesFilterModel.md)|  | [optional] |
 
 ### Return type
 

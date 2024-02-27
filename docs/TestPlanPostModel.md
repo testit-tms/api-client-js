@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **tags** | [**List**](TagShortModel.md) |  | [optional] [default to null] |
+| **tags** | [**List**](TagPostModel.md) |  | [optional] [default to null] |
 | **name** | **String** |  | [default to null] |
 | **startDate** | **Date** | Used for analytics | [optional] [default to null] |
 | **endDate** | **Date** | Used for analytics | [optional] [default to null] |

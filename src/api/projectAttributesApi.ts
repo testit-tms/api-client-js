@@ -15,13 +15,13 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { CreateProjectsAttributeRequest } from '../model/createProjectsAttributeRequest';
 import { CustomAttributeGetModel } from '../model/customAttributeGetModel';
 import { CustomAttributeModel } from '../model/customAttributeModel';
+import { CustomAttributePostModel } from '../model/customAttributePostModel';
+import { CustomAttributePutModel } from '../model/customAttributePutModel';
 import { DeletionState } from '../model/deletionState';
 import { ProblemDetails } from '../model/problemDetails';
-import { SearchAttributesInProjectRequest } from '../model/searchAttributesInProjectRequest';
-import { UpdateProjectsAttributeRequest } from '../model/updateProjectsAttributeRequest';
+import { ProjectAttributesFilterModel } from '../model/projectAttributesFilterModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -99,9 +99,9 @@ export class ProjectAttributesApi {
      * <br>Use case  <br>User sets attribute parameters (listed in request example) and runs method execution  <br>System search project  <br>System creates attribute and relates it to the project  <br>System returns project attribute properties (example listed in response parameters)
      * @summary Create project attribute
      * @param projectId Project internal (UUID) or global (integer) identifier
-     * @param createProjectsAttributeRequest 
+     * @param customAttributePostModel 
      */
-    public async createProjectsAttribute (projectId: string, createProjectsAttributeRequest?: CreateProjectsAttributeRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async createProjectsAttribute (projectId: string, customAttributePostModel?: CustomAttributePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -131,7 +131,7 @@ export class ProjectAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createProjectsAttributeRequest, "CreateProjectsAttributeRequest")
+            body: ObjectSerializer.serialize(customAttributePostModel, "CustomAttributePostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -412,9 +412,9 @@ export class ProjectAttributesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param searchAttributesInProjectRequest 
+     * @param projectAttributesFilterModel 
      */
-    public async searchAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchAttributesInProjectRequest?: SearchAttributesInProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -464,7 +464,7 @@ export class ProjectAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(searchAttributesInProjectRequest, "SearchAttributesInProjectRequest")
+            body: ObjectSerializer.serialize(projectAttributesFilterModel, "ProjectAttributesFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -506,9 +506,9 @@ export class ProjectAttributesApi {
      * 
      * @summary Edit attribute of the project
      * @param projectId Unique or global project ID
-     * @param updateProjectsAttributeRequest 
+     * @param customAttributePutModel 
      */
-    public async updateProjectsAttribute (projectId: string, updateProjectsAttributeRequest?: UpdateProjectsAttributeRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateProjectsAttribute (projectId: string, customAttributePutModel?: CustomAttributePutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -538,7 +538,7 @@ export class ProjectAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateProjectsAttributeRequest, "UpdateProjectsAttributeRequest")
+            body: ObjectSerializer.serialize(customAttributePutModel, "CustomAttributePutModel")
         };
 
         let authenticationPromise = Promise.resolve();

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TestRunShortGetModelStatistics } from './testRunShortGetModelStatistics';
+import { TestResultsStatisticsGetModel } from './testResultsStatisticsGetModel';
 import { TestRunState } from './testRunState';
 
 export class TestRunShortGetModel {
@@ -52,7 +52,7 @@ export class TestRunShortGetModel {
     * Number of AutoTests run in the test run
     */
     'autoTestsCount': number;
-    'statistics': TestRunShortGetModelStatistics;
+    'statistics': TestResultsStatisticsGetModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -110,7 +110,7 @@ export class TestRunShortGetModel {
         {
             "name": "statistics",
             "baseName": "statistics",
-            "type": "TestRunShortGetModelStatistics"
+            "type": "TestResultsStatisticsGetModel"
         }    ];
 
     static getAttributeTypeMap() {

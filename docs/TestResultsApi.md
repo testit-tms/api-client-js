@@ -121,7 +121,7 @@ Get test result by ID
 
 <a name="apiV2TestResultsIdPut"></a>
 # **apiV2TestResultsIdPut**
-> apiV2TestResultsIdPut(id, \_api\_v2\_testResults\_\_id\_\_put\_request)
+> apiV2TestResultsIdPut(id, TestResultUpdateModel)
 
 Edit test result by ID
 
@@ -130,7 +130,7 @@ Edit test result by ID
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test result unique ID | [default to null] |
-| **\_api\_v2\_testResults\_\_id\_\_put\_request** | [**_api_v2_testResults__id__put_request**](../Models/_api_v2_testResults__id__put_request.md)|  | [optional] |
+| **TestResultUpdateModel** | [**TestResultUpdateModel**](../Models/TestResultUpdateModel.md)|  | [optional] |
 
 ### Return type
 
@@ -147,7 +147,7 @@ null (empty response body)
 
 <a name="apiV2TestResultsSearchPost"></a>
 # **apiV2TestResultsSearchPost**
-> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_testResults\_search\_post\_request)
+> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestResultsFilterModel)
 
 Search for test results
 
@@ -160,7 +160,7 @@ Search for test results
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_testResults\_search\_post\_request** | [**_api_v2_testResults_search_post_request**](../Models/_api_v2_testResults_search_post_request.md)|  | [optional] |
+| **TestResultsFilterModel** | [**TestResultsFilterModel**](../Models/TestResultsFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -177,7 +177,7 @@ Search for test results
 
 <a name="apiV2TestResultsStatisticsFilterPost"></a>
 # **apiV2TestResultsStatisticsFilterPost**
-> TestResultsStatisticsGetModel apiV2TestResultsStatisticsFilterPost(\_api\_v2\_testResults\_search\_post\_request)
+> TestResultsStatisticsGetModel apiV2TestResultsStatisticsFilterPost(TestResultsFilterModel)
 
 Search for test results and extract statistics
 
@@ -185,7 +185,7 @@ Search for test results and extract statistics
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_testResults\_search\_post\_request** | [**_api_v2_testResults_search_post_request**](../Models/_api_v2_testResults_search_post_request.md)|  | [optional] |
+| **TestResultsFilterModel** | [**TestResultsFilterModel**](../Models/TestResultsFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -258,7 +258,7 @@ null (empty response body)
 
 <a name="downloadAttachment"></a>
 # **downloadAttachment**
-> downloadAttachment(attachmentId, id, width, height, resizeType, backgroundColor, preview)
+> File downloadAttachment(attachmentId, id, width, height, resizeType, backgroundColor, preview)
 
 Get attachment of TestResult
 
@@ -278,7 +278,7 @@ Get attachment of TestResult
 
 ### Return type
 
-null (empty response body)
+**File**
 
 ### Authorization
 
@@ -287,7 +287,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/octet-stream, application/json
 
 <a name="getAttachment"></a>
 # **getAttachment**

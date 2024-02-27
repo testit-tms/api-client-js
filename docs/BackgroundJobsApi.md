@@ -117,7 +117,7 @@ Get background job status by job ID
 
 <a name="apiV2BackgroundJobsSearchPost"></a>
 # **apiV2BackgroundJobsSearchPost**
-> List apiV2BackgroundJobsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_backgroundJobs\_search\_post\_request)
+> List apiV2BackgroundJobsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, BackgroundJobFilterModel)
 
 Search for user background jobs
 
@@ -130,7 +130,7 @@ Search for user background jobs
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_backgroundJobs\_search\_post\_request** | [**_api_v2_backgroundJobs_search_post_request**](../Models/_api_v2_backgroundJobs_search_post_request.md)|  | [optional] |
+| **BackgroundJobFilterModel** | [**BackgroundJobFilterModel**](../Models/BackgroundJobFilterModel.md)|  | [optional] |
 
 ### Return type
 

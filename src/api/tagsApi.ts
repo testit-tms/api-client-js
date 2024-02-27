@@ -16,7 +16,10 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
-import { TagShortModel } from '../model/tagShortModel';
+import { TagModel } from '../model/tagModel';
+import { TagPostModel } from '../model/tagPostModel';
+import { TagPutModel } from '../model/tagPutModel';
+import { TagSelectModel } from '../model/tagSelectModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -92,10 +95,76 @@ export class TagsApi {
     }
 
     /**
+     * <br>Use case  <br>User sets collection of tags internal (guid format) identifiers  <br>System searches and deletes a collection of tags
+     * @summary Delete tags
+     * @param tagSelectModel 
+     */
+    public async apiV2TagsDelete (tagSelectModel?: TagSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/api/v2/tags';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'DELETE',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(tagSelectModel, "TagSelectModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      * <br>Use case  <br>User runs method execution  <br>System returns tags (listed in the response example)
      * @summary Get all Tags
      */
-    public async apiV2TagsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }> {
+    public async apiV2TagsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/tags';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -140,13 +209,313 @@ export class TagsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TagShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TagModel>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * <br>Use case  <br>User sets tag internal (guid format) identifier  <br>System search and delete tag
+     * @summary Delete tag
+     * @param id Tag internal (UUID) identifier
+     */
+    public async apiV2TagsIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+        const localVarPath = this.basePath + '/api/v2/tags/{id}'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling apiV2TagsIdDelete.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'DELETE',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * <br>Use case  <br>User sets tag model (listed in the request example)  <br>User runs method execution  <br>System creates tag  <br>System returns tag model (listed in the response example)
+     * @summary Create tag
+     * @param tagPostModel 
+     */
+    public async apiV2TagsPost (tagPostModel?: TagPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TagModel;  }> {
+        const localVarPath = this.basePath + '/api/v2/tags';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(tagPostModel, "TagPostModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: TagModel;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "TagModel");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * <br>Use case  <br>User sets tag ID and model (listed in the request example)  <br>User runs method execution  <br>System updates tag  <br>System returns tag model (listed in the response example)
+     * @summary Update tag
+     * @param id 
+     * @param tagPutModel 
+     */
+    public async apiV2TagsPut (id?: string, tagPutModel?: TagPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TagModel;  }> {
+        const localVarPath = this.basePath + '/api/v2/tags';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (id !== undefined) {
+            localVarQueryParameters['id'] = ObjectSerializer.serialize(id, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'PUT',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(tagPutModel, "TagPutModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: TagModel;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "TagModel");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * <br>Use case  <br>User runs method execution  <br>System returns collection of tags (listed in the response example)
+     * @summary Search tags
+     * @param skip Amount of items to be skipped (offset)
+     * @param take Amount of items to be taken (limit)
+     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param searchField Property name for searching
+     * @param searchValue Value for searching
+     */
+    public async apiV2TagsSearchGet (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
+        const localVarPath = this.basePath + '/api/v2/tags/search';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (skip !== undefined) {
+            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
+        }
+
+        if (take !== undefined) {
+            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
+        }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
+        }
+
+        if (searchField !== undefined) {
+            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
+        }
+
+        if (searchValue !== undefined) {
+            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<TagModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -165,7 +534,7 @@ export class TagsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TagsTestPlansTagsGet (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }> {
+    public async apiV2TagsTestPlansTagsGet (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/tags/testPlansTags';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -230,13 +599,13 @@ export class TagsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TagShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TagModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

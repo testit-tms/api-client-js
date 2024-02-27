@@ -15,6 +15,7 @@ import { FailureCategoryModel } from './failureCategoryModel';
 import { TestResultOutcome } from './testResultOutcome';
 import { TestRunFilterModelAutoTestsCount } from './testRunFilterModelAutoTestsCount';
 import { TestRunFilterModelCompletedDate } from './testRunFilterModelCompletedDate';
+import { TestRunFilterModelCreatedDate } from './testRunFilterModelCreatedDate';
 import { TestRunFilterModelStartedDate } from './testRunFilterModelStartedDate';
 import { TestRunState } from './testRunState';
 
@@ -31,6 +32,7 @@ export class TestRunFilterModel {
     * Specifies a test run states to search for
     */
     'states'?: Array<TestRunState> | null;
+    'createdDate'?: TestRunFilterModelCreatedDate | null;
     'startedDate'?: TestRunFilterModelStartedDate | null;
     /**
     * Specifies a test run creator IDs to search for
@@ -72,6 +74,11 @@ export class TestRunFilterModel {
             "name": "states",
             "baseName": "states",
             "type": "Array<TestRunState>"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "TestRunFilterModelCreatedDate"
         },
         {
             "name": "startedDate",

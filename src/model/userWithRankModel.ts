@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { UserWithRankModelUserRank } from './userWithRankModelUserRank';
+import { UserRankModel } from './userRankModel';
 
 export class UserWithRankModel {
     'id': string;
@@ -27,7 +27,7 @@ export class UserWithRankModel {
     'isDisabled': boolean;
     'providerId'?: string | null;
     'isActiveStatusByEntity': boolean;
-    'userRank': UserWithRankModelUserRank;
+    'userRank': UserRankModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -100,7 +100,7 @@ export class UserWithRankModel {
         {
             "name": "userRank",
             "baseName": "userRank",
-            "type": "UserWithRankModelUserRank"
+            "type": "UserRankModel"
         }    ];
 
     static getAttributeTypeMap() {

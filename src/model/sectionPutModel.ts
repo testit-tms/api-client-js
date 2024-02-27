@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { AttachmentPutModel } from './attachmentPutModel';
 import { StepPutModel } from './stepPutModel';
 
 export class SectionPutModel {
@@ -20,6 +21,7 @@ export class SectionPutModel {
     'parentId'?: string | null;
     'preconditionSteps'?: Array<StepPutModel> | null;
     'postconditionSteps'?: Array<StepPutModel> | null;
+    'attachments': Array<AttachmentPutModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -53,6 +55,11 @@ export class SectionPutModel {
             "name": "postconditionSteps",
             "baseName": "postconditionSteps",
             "type": "Array<StepPutModel>"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentPutModel>"
         }    ];
 
     static getAttributeTypeMap() {

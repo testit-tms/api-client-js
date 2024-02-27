@@ -15,23 +15,23 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
-import { ApiV2WorkItemsMovePostRequest } from '../model/apiV2WorkItemsMovePostRequest';
-import { ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest } from '../model/apiV2WorkItemsSharedStepIdReferencesSectionsPostRequest';
-import { ApiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest } from '../model/apiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest';
 import { AutoTestModel } from '../model/autoTestModel';
-import { CreateWorkItemRequest } from '../model/createWorkItemRequest';
 import { IterationModel } from '../model/iterationModel';
 import { ProblemDetails } from '../model/problemDetails';
 import { SharedStepReferenceModel } from '../model/sharedStepReferenceModel';
 import { SharedStepReferenceSectionModel } from '../model/sharedStepReferenceSectionModel';
+import { SharedStepReferenceSectionsQueryFilterModel } from '../model/sharedStepReferenceSectionsQueryFilterModel';
+import { SharedStepReferencesQueryFilterModel } from '../model/sharedStepReferencesQueryFilterModel';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
 import { TestResultHistoryReportModel } from '../model/testResultHistoryReportModel';
-import { UpdateWorkItemRequest } from '../model/updateWorkItemRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemChangeModel } from '../model/workItemChangeModel';
 import { WorkItemLikeModel } from '../model/workItemLikeModel';
 import { WorkItemModel } from '../model/workItemModel';
+import { WorkItemMovePostModel } from '../model/workItemMovePostModel';
+import { WorkItemPostModel } from '../model/workItemPostModel';
+import { WorkItemPutModel } from '../model/workItemPutModel';
+import { WorkItemSelectModel } from '../model/workItemSelectModel';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 import { WorkItemVersionModel } from '../model/workItemVersionModel';
 
@@ -864,9 +864,9 @@ export class WorkItemsApi {
     /**
      * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System move WorkItem to another section
      * @summary Move WorkItem to another section
-     * @param apiV2WorkItemsMovePostRequest 
+     * @param workItemMovePostModel 
      */
-    public async apiV2WorkItemsMovePost (apiV2WorkItemsMovePostRequest?: ApiV2WorkItemsMovePostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemShortModel;  }> {
+    public async apiV2WorkItemsMovePost (workItemMovePostModel?: WorkItemMovePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemShortModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/move';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -890,7 +890,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WorkItemsMovePostRequest, "ApiV2WorkItemsMovePostRequest")
+            body: ObjectSerializer.serialize(workItemMovePostModel, "WorkItemMovePostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -936,9 +936,9 @@ export class WorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest 
+     * @param workItemSelectModel 
      */
-    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -982,7 +982,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1029,9 +1029,9 @@ export class WorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2WorkItemsSharedStepIdReferencesSectionsPostRequest 
+     * @param sharedStepReferenceSectionsQueryFilterModel 
      */
-    public async apiV2WorkItemsSharedStepIdReferencesSectionsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2WorkItemsSharedStepIdReferencesSectionsPostRequest?: ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceSectionModel>;  }> {
+    public async apiV2WorkItemsSharedStepIdReferencesSectionsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferenceSectionsQueryFilterModel?: SharedStepReferenceSectionsQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceSectionModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{sharedStepId}/references/sections'
             .replace('{' + 'sharedStepId' + '}', encodeURIComponent(String(sharedStepId)));
         let localVarQueryParameters: any = {};
@@ -1081,7 +1081,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WorkItemsSharedStepIdReferencesSectionsPostRequest, "ApiV2WorkItemsSharedStepIdReferencesSectionsPostRequest")
+            body: ObjectSerializer.serialize(sharedStepReferenceSectionsQueryFilterModel, "SharedStepReferenceSectionsQueryFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1128,9 +1128,9 @@ export class WorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest 
+     * @param sharedStepReferencesQueryFilterModel 
      */
-    public async apiV2WorkItemsSharedStepIdReferencesWorkItemsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest?: ApiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
+    public async apiV2WorkItemsSharedStepIdReferencesWorkItemsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferencesQueryFilterModel?: SharedStepReferencesQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{sharedStepId}/references/workItems'
             .replace('{' + 'sharedStepId' + '}', encodeURIComponent(String(sharedStepId)));
         let localVarQueryParameters: any = {};
@@ -1180,7 +1180,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest, "ApiV2WorkItemsSharedStepIdReferencesWorkItemsPostRequest")
+            body: ObjectSerializer.serialize(sharedStepReferencesQueryFilterModel, "SharedStepReferencesQueryFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1293,9 +1293,9 @@ export class WorkItemsApi {
     /**
      * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System creates work item by identifier  <br>System returns work item model (listed in response parameters)
      * @summary Create Test Case, Checklist or Shared Step
-     * @param createWorkItemRequest 
+     * @param workItemPostModel 
      */
-    public async createWorkItem (createWorkItemRequest?: CreateWorkItemRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async createWorkItem (workItemPostModel?: WorkItemPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1319,7 +1319,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createWorkItemRequest, "CreateWorkItemRequest")
+            body: ObjectSerializer.serialize(workItemPostModel, "WorkItemPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2034,9 +2034,9 @@ export class WorkItemsApi {
     /**
      * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System updates work item by identifier  <br>System returns updated work item model (listed in response parameters)
      * @summary Update Test Case, Checklist or Shared Step
-     * @param updateWorkItemRequest 
+     * @param workItemPutModel 
      */
-    public async updateWorkItem (updateWorkItemRequest?: UpdateWorkItemRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateWorkItem (workItemPutModel?: WorkItemPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2060,7 +2060,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateWorkItemRequest, "UpdateWorkItemRequest")
+            body: ObjectSerializer.serialize(workItemPutModel, "WorkItemPutModel")
         };
 
         let authenticationPromise = Promise.resolve();

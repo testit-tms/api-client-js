@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { TagShortModel } from './tagShortModel';
+import { TagPostModel } from './tagPostModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
-import { TestPlanWithAnalyticModelAnalytic } from './testPlanWithAnalyticModelAnalytic';
+import { TestPointAnalyticResult } from './testPointAnalyticResult';
 
 export class TestPlanWithAnalyticModel {
-    'analytic': TestPlanWithAnalyticModelAnalytic;
+    'analytic': TestPointAnalyticResult;
     'status': TestPlanStatusModel;
     /**
     * Set when test plan is starter (status changed to: In Progress)
@@ -38,7 +38,7 @@ export class TestPlanWithAnalyticModel {
     'lockedDate'?: Date | null;
     'id': string;
     'lockedById'?: string | null;
-    'tags'?: Array<TagShortModel> | null;
+    'tags'?: Array<TagPostModel> | null;
     'name': string;
     /**
     * Used for analytics
@@ -53,7 +53,7 @@ export class TestPlanWithAnalyticModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes': { [key: string]: any; };
+    'attributes': { [key: string]: any | null; };
 
     static discriminator: string | undefined = undefined;
 
@@ -61,7 +61,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestPlanWithAnalyticModelAnalytic"
+            "type": "TestPointAnalyticResult"
         },
         {
             "name": "status",
@@ -126,7 +126,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagShortModel>"
+            "type": "Array<TagPostModel>"
         },
         {
             "name": "name",
@@ -171,7 +171,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: any; }"
+            "type": "{ [key: string]: any | null; }"
         }    ];
 
     static getAttributeTypeMap() {

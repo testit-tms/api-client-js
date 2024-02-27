@@ -48,7 +48,7 @@ Get TestPlans analytics
 
 <a name="apiV2ProjectsProjectIdTestPlansDeleteBulkPost"></a>
 # **apiV2ProjectsProjectIdTestPlansDeleteBulkPost**
-> List apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, \_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request)
+> List apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, TestPlanSelectModel)
 
 Delete multiple test plans
 
@@ -57,7 +57,7 @@ Delete multiple test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Unique or global ID of the project | [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__projectId__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__projectId__testPlans_delete_bulk_post_request.md)|  | [optional] |
+| **TestPlanSelectModel** | [**TestPlanSelectModel**](../Models/TestPlanSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -102,7 +102,7 @@ Checks if TestPlan exists with the specified name exists for the project
 
 <a name="apiV2ProjectsProjectIdTestPlansPurgeBulkPost"></a>
 # **apiV2ProjectsProjectIdTestPlansPurgeBulkPost**
-> apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, \_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request)
+> apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, TestPlanSelectModel)
 
 Permanently delete multiple archived test plans
 
@@ -111,7 +111,7 @@ Permanently delete multiple archived test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Unique or global ID of the project | [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__projectId__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__projectId__testPlans_delete_bulk_post_request.md)|  | [optional] |
+| **TestPlanSelectModel** | [**TestPlanSelectModel**](../Models/TestPlanSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -128,7 +128,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsProjectIdTestPlansRestoreBulkPost"></a>
 # **apiV2ProjectsProjectIdTestPlansRestoreBulkPost**
-> apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, \_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request)
+> apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, TestPlanSelectModel)
 
 Restore multiple test plans
 
@@ -137,7 +137,7 @@ Restore multiple test plans
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Unique or global ID of the project | [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_testPlans\_delete\_bulk\_post\_request** | [**_api_v2_projects__projectId__testPlans_delete_bulk_post_request**](../Models/_api_v2_projects__projectId__testPlans_delete_bulk_post_request.md)|  | [optional] |
+| **TestPlanSelectModel** | [**TestPlanSelectModel**](../Models/TestPlanSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -154,7 +154,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsProjectIdTestPlansSearchPost"></a>
 # **apiV2ProjectsProjectIdTestPlansSearchPost**
-> List apiV2ProjectsProjectIdTestPlansSearchPost(projectId, mustUpdateCache, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_projectId\_\_testPlans\_search\_post\_request)
+> List apiV2ProjectsProjectIdTestPlansSearchPost(projectId, mustUpdateCache, Skip, Take, OrderBy, SearchField, SearchValue, ProjectTestPlansFilterModel)
 
 Get Project TestPlans with analytics
 
@@ -171,7 +171,7 @@ Get Project TestPlans with analytics
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_testPlans\_search\_post\_request** | [**_api_v2_projects__projectId__testPlans_search_post_request**](../Models/_api_v2_projects__projectId__testPlans_search_post_request.md)|  | [optional] |
+| **ProjectTestPlansFilterModel** | [**ProjectTestPlansFilterModel**](../Models/ProjectTestPlansFilterModel.md)|  | [optional] |
 
 ### Return type
 

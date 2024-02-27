@@ -11,15 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { ApiV2TestRunsSearchPostRequest } from './apiV2TestRunsSearchPostRequest';
-import { TestRunSelectModelExtractionModel } from './testRunSelectModelExtractionModel';
+import { TestRunExtractionModel } from './testRunExtractionModel';
+import { TestRunFilterModel } from './testRunFilterModel';
 
 /**
 * Model containing options to filter test runs
 */
 export class TestRunSelectModel {
-    'filter': ApiV2TestRunsSearchPostRequest;
-    'extractionModel': TestRunSelectModelExtractionModel;
+    'filter': TestRunFilterModel;
+    'extractionModel': TestRunExtractionModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,12 +27,12 @@ export class TestRunSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "ApiV2TestRunsSearchPostRequest"
+            "type": "TestRunFilterModel"
         },
         {
             "name": "extractionModel",
             "baseName": "extractionModel",
-            "type": "TestRunSelectModelExtractionModel"
+            "type": "TestRunExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

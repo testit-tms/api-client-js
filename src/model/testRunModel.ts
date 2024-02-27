@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { AutoTestModel } from './autoTestModel';
 import { TestPlanModel } from './testPlanModel';
 import { TestResultModel } from './testResultModel';
-import { TestRunModelAnalytic } from './testRunModelAnalytic';
+import { TestRunAnalyticResultModel } from './testRunAnalyticResultModel';
 import { TestRunState } from './testRunState';
 
 export class TestRunModel {
@@ -22,7 +22,7 @@ export class TestRunModel {
     'autoTestsCount': number;
     'testSuiteIds'?: Array<string> | null;
     'isAutomated': boolean;
-    'analytic': TestRunModelAnalytic;
+    'analytic': TestRunAnalyticResultModel;
     'testResults'?: Array<TestResultModel> | null;
     'testPlan'?: TestPlanModel | null;
     'createdDate': Date;
@@ -76,7 +76,7 @@ export class TestRunModel {
         {
             "name": "analytic",
             "baseName": "analytic",
-            "type": "TestRunModelAnalytic"
+            "type": "TestRunAnalyticResultModel"
         },
         {
             "name": "testResults",

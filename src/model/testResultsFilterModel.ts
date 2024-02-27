@@ -13,12 +13,28 @@
 import { RequestFile } from './models';
 import { FailureCategoryModel } from './failureCategoryModel';
 import { TestResultOutcome } from './testResultOutcome';
+import { TestResultsFilterModelCreatedDate } from './testResultsFilterModelCreatedDate';
+import { TestResultsFilterModelDuration } from './testResultsFilterModelDuration';
 
 export class TestResultsFilterModel {
     /**
     * Specifies a test result test run IDs to search for
     */
     'testRunIds'?: Array<string> | null;
+    /**
+    * Specifies an autotest global IDs to search results for
+    */
+    'autoTestGlobalIds'?: Array<number> | null;
+    /**
+    * Specifies an autotest name to search results for
+    */
+    'name'?: string | null;
+    'createdDate'?: TestResultsFilterModelCreatedDate | null;
+    'duration'?: TestResultsFilterModelDuration | null;
+    /**
+    * Specifies result reasons for searching test results
+    */
+    'resultReasons'?: Array<string> | null;
     /**
     * Specifies a test result configuration IDs to search for
     */
@@ -46,6 +62,31 @@ export class TestResultsFilterModel {
         {
             "name": "testRunIds",
             "baseName": "testRunIds",
+            "type": "Array<string>"
+        },
+        {
+            "name": "autoTestGlobalIds",
+            "baseName": "autoTestGlobalIds",
+            "type": "Array<number>"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "TestResultsFilterModelCreatedDate"
+        },
+        {
+            "name": "duration",
+            "baseName": "duration",
+            "type": "TestResultsFilterModelDuration"
+        },
+        {
+            "name": "resultReasons",
+            "baseName": "resultReasons",
             "type": "Array<string>"
         },
         {

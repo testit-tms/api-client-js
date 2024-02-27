@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { FilterModelData } from './filterModelData';
+import { WorkItemSearchQueryModel } from './workItemSearchQueryModel';
 
 export class FilterModel {
     'createdDate': Date;
     'modifiedDate'?: Date | null;
     'createdById': string;
     'modifiedById'?: string | null;
-    'data': FilterModelData;
+    'data': WorkItemSearchQueryModel;
     'projectId': string;
     'fieldsToShow'?: any | null;
     'name': string;
@@ -57,7 +57,7 @@ export class FilterModel {
         {
             "name": "data",
             "baseName": "data",
-            "type": "FilterModelData"
+            "type": "WorkItemSearchQueryModel"
         },
         {
             "name": "projectId",

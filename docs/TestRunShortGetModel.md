@@ -13,7 +13,7 @@
 | **modifiedById** | **UUID** | Unique ID of user who modified the test run last time | [optional] [default to null] |
 | **isDeleted** | **Boolean** | Is the test run is deleted | [default to null] |
 | **autoTestsCount** | **Integer** | Number of AutoTests run in the test run | [default to null] |
-| **statistics** | [**TestRunShortGetModel_statistics**](TestRunShortGetModel_statistics.md) |  | [default to null] |
+| **statistics** | [**TestResultsStatisticsGetModel**](TestResultsStatisticsGetModel.md) |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

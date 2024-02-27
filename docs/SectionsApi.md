@@ -44,7 +44,7 @@ null (empty response body)
 
 <a name="createSection"></a>
 # **createSection**
-> SectionWithStepsModel createSection(CreateSection\_request)
+> SectionWithStepsModel createSection(SectionPostModel)
 
 Create section
 
@@ -54,7 +54,7 @@ Create section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateSection\_request** | [**CreateSection_request**](../Models/CreateSection_request.md)|  | [optional] |
+| **SectionPostModel** | [**SectionPostModel**](../Models/SectionPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -161,7 +161,7 @@ Get section work items
 
 <a name="move"></a>
 # **move**
-> move(Move\_request)
+> move(SectionMoveModel)
 
 Move section with all work items into another section
 
@@ -169,7 +169,7 @@ Move section with all work items into another section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **Move\_request** | [**Move_request**](../Models/Move_request.md)|  | [optional] |
+| **SectionMoveModel** | [**SectionMoveModel**](../Models/SectionMoveModel.md)|  | [optional] |
 
 ### Return type
 
@@ -186,7 +186,7 @@ null (empty response body)
 
 <a name="rename"></a>
 # **rename**
-> rename(Rename\_request)
+> rename(SectionRenameModel)
 
 Rename section
 
@@ -196,7 +196,7 @@ Rename section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **Rename\_request** | [**Rename_request**](../Models/Rename_request.md)|  | [optional] |
+| **SectionRenameModel** | [**SectionRenameModel**](../Models/SectionRenameModel.md)|  | [optional] |
 
 ### Return type
 
@@ -213,7 +213,7 @@ null (empty response body)
 
 <a name="updateSection"></a>
 # **updateSection**
-> updateSection(UpdateSection\_request)
+> updateSection(SectionPutModel)
 
 Update section
 
@@ -223,7 +223,7 @@ Update section
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateSection\_request** | [**UpdateSection_request**](../Models/UpdateSection_request.md)|  | [optional] |
+| **SectionPutModel** | [**SectionPutModel**](../Models/SectionPutModel.md)|  | [optional] |
 
 ### Return type
 

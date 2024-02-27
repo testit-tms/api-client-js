@@ -15,8 +15,8 @@ import { AttachmentPutModel } from './attachmentPutModel';
 import { AutoTestIdModel } from './autoTestIdModel';
 import { IterationPutModel } from './iterationPutModel';
 import { LinkPostModel } from './linkPostModel';
-import { StepPutModel } from './stepPutModel';
-import { TagShortModel } from './tagShortModel';
+import { StepPostModel } from './stepPostModel';
+import { TagPostModel } from './tagPostModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
@@ -26,15 +26,15 @@ export class WorkItemPostModel {
     'description'?: string | null;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
-    'steps': Array<StepPutModel>;
-    'preconditionSteps': Array<StepPutModel>;
-    'postconditionSteps': Array<StepPutModel>;
+    'steps': Array<StepPostModel>;
+    'preconditionSteps': Array<StepPostModel>;
+    'postconditionSteps': Array<StepPostModel>;
     /**
     * Must be 0 for shared steps and greater than 0 for the other types of work items
     */
     'duration': number;
     'attributes': { [key: string]: any; };
-    'tags': Array<TagShortModel>;
+    'tags': Array<TagPostModel>;
     'attachments'?: Array<AttachmentPutModel> | null;
     'iterations'?: Array<IterationPutModel> | null;
     'links': Array<LinkPostModel>;
@@ -72,17 +72,17 @@ export class WorkItemPostModel {
         {
             "name": "steps",
             "baseName": "steps",
-            "type": "Array<StepPutModel>"
+            "type": "Array<StepPostModel>"
         },
         {
             "name": "preconditionSteps",
             "baseName": "preconditionSteps",
-            "type": "Array<StepPutModel>"
+            "type": "Array<StepPostModel>"
         },
         {
             "name": "postconditionSteps",
             "baseName": "postconditionSteps",
-            "type": "Array<StepPutModel>"
+            "type": "Array<StepPostModel>"
         },
         {
             "name": "duration",
@@ -97,7 +97,7 @@ export class WorkItemPostModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagShortModel>"
+            "type": "Array<TagPostModel>"
         },
         {
             "name": "attachments",

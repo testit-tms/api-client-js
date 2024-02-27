@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { TagShortModel } from './tagShortModel';
+import { TagPostModel } from './tagPostModel';
 
 export class TestPlanPostModel {
-    'tags'?: Array<TagShortModel> | null;
+    'tags'?: Array<TagPostModel> | null;
     'name': string;
     /**
     * Used for analytics
@@ -29,7 +29,7 @@ export class TestPlanPostModel {
     'projectId': string;
     'productName'?: string | null;
     'hasAutomaticDurationTimer'?: boolean | null;
-    'attributes': { [key: string]: any; };
+    'attributes': { [key: string]: any | null; };
 
     static discriminator: string | undefined = undefined;
 
@@ -37,7 +37,7 @@ export class TestPlanPostModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagShortModel>"
+            "type": "Array<TagPostModel>"
         },
         {
             "name": "name",
@@ -82,7 +82,7 @@ export class TestPlanPostModel {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: any; }"
+            "type": "{ [key: string]: any | null; }"
         }    ];
 
     static getAttributeTypeMap() {

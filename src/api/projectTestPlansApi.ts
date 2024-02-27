@@ -15,9 +15,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest } from '../model/apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest';
-import { ApiV2ProjectsProjectIdTestPlansSearchPostRequest } from '../model/apiV2ProjectsProjectIdTestPlansSearchPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
+import { ProjectTestPlansFilterModel } from '../model/projectTestPlansFilterModel';
+import { TestPlanSelectModel } from '../model/testPlanSelectModel';
 import { TestPlanWithAnalyticModel } from '../model/testPlanWithAnalyticModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -203,9 +203,9 @@ export class ProjectTestPlansApi {
      * 
      * @summary Delete multiple test plans
      * @param projectId Unique or global ID of the project
-     * @param apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest 
+     * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansDeleteBulkPost (projectId: string, apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansDeleteBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/delete/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -235,7 +235,7 @@ export class ProjectTestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest")
+            body: ObjectSerializer.serialize(testPlanSelectModel, "TestPlanSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -356,9 +356,9 @@ export class ProjectTestPlansApi {
      * 
      * @summary Permanently delete multiple archived test plans
      * @param projectId Unique or global ID of the project
-     * @param apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest 
+     * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansPurgeBulkPost (projectId: string, apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdTestPlansPurgeBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/purge/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -388,7 +388,7 @@ export class ProjectTestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest")
+            body: ObjectSerializer.serialize(testPlanSelectModel, "TestPlanSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -429,9 +429,9 @@ export class ProjectTestPlansApi {
      * 
      * @summary Restore multiple test plans
      * @param projectId Unique or global ID of the project
-     * @param apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest 
+     * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest?: ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/restore/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -461,7 +461,7 @@ export class ProjectTestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest, "ApiV2ProjectsProjectIdTestPlansDeleteBulkPostRequest")
+            body: ObjectSerializer.serialize(testPlanSelectModel, "TestPlanSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -508,9 +508,9 @@ export class ProjectTestPlansApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdTestPlansSearchPostRequest 
+     * @param projectTestPlansFilterModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansSearchPost (projectId: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdTestPlansSearchPostRequest?: ApiV2ProjectsProjectIdTestPlansSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansSearchPost (projectId: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -564,7 +564,7 @@ export class ProjectTestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdTestPlansSearchPostRequest, "ApiV2ProjectsProjectIdTestPlansSearchPostRequest")
+            body: ObjectSerializer.serialize(projectTestPlansFilterModel, "ProjectTestPlansFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();

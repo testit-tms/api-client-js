@@ -6,6 +6,7 @@
 | **projectIds** | **Set** | Specifies a test run project IDs to search for | [optional] [default to null] |
 | **name** | **String** | Specifies test run name | [optional] [default to null] |
 | **states** | [**Set**](TestRunState.md) | Specifies a test run states to search for | [optional] [default to null] |
+| **createdDate** | [**TestRunFilterModel_createdDate**](TestRunFilterModel_createdDate.md) |  | [optional] [default to null] |
 | **startedDate** | [**TestRunFilterModel_startedDate**](TestRunFilterModel_startedDate.md) |  | [optional] [default to null] |
 | **createdByIds** | **Set** | Specifies a test run creator IDs to search for | [optional] [default to null] |
 | **modifiedByIds** | **Set** | Specifies a test run last editor IDs to search for | [optional] [default to null] |

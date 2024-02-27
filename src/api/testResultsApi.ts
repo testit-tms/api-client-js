@@ -15,13 +15,13 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2TestResultsIdPutRequest } from '../model/apiV2TestResultsIdPutRequest';
-import { ApiV2TestResultsSearchPostRequest } from '../model/apiV2TestResultsSearchPostRequest';
 import { AttachmentModel } from '../model/attachmentModel';
 import { ImageResizeType } from '../model/imageResizeType';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultModel } from '../model/testResultModel';
 import { TestResultShortGetModel } from '../model/testResultShortGetModel';
+import { TestResultUpdateModel } from '../model/testResultUpdateModel';
+import { TestResultsFilterModel } from '../model/testResultsFilterModel';
 import { TestResultsStatisticsGetModel } from '../model/testResultsStatisticsGetModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
@@ -395,9 +395,9 @@ export class TestResultsApi {
      * 
      * @summary Edit test result by ID
      * @param id Test result unique ID
-     * @param apiV2TestResultsIdPutRequest 
+     * @param testResultUpdateModel 
      */
-    public async apiV2TestResultsIdPut (id: string, apiV2TestResultsIdPutRequest?: ApiV2TestResultsIdPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestResultsIdPut (id: string, testResultUpdateModel?: TestResultUpdateModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -427,7 +427,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestResultsIdPutRequest, "ApiV2TestResultsIdPutRequest")
+            body: ObjectSerializer.serialize(testResultUpdateModel, "TestResultUpdateModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -472,9 +472,9 @@ export class TestResultsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2TestResultsSearchPostRequest 
+     * @param testResultsFilterModel 
      */
-    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestResultsSearchPostRequest?: ApiV2TestResultsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }> {
+    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -518,7 +518,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestResultsSearchPostRequest, "ApiV2TestResultsSearchPostRequest")
+            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -559,9 +559,9 @@ export class TestResultsApi {
     /**
      * 
      * @summary Search for test results and extract statistics
-     * @param apiV2TestResultsSearchPostRequest 
+     * @param testResultsFilterModel 
      */
-    public async apiV2TestResultsStatisticsFilterPost (apiV2TestResultsSearchPostRequest?: ApiV2TestResultsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
+    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/statistics/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -585,7 +585,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestResultsSearchPostRequest, "ApiV2TestResultsSearchPostRequest")
+            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -790,13 +790,13 @@ export class TestResultsApi {
      * @param backgroundColor Color of the background if the &#x60;resizeType&#x60; is &#x60;AddBackgroundStripes&#x60;
      * @param preview If image must be converted to a preview (lower quality, no animation)
      */
-    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}'
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
+        const produces = ['application/octet-stream', 'application/json'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -845,7 +845,7 @@ export class TestResultsApi {
             headers: localVarHeaderParams,
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
-            json: true,
+            encoding: null,
         };
 
         let authenticationPromise = Promise.resolve();
@@ -867,12 +867,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Buffer;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Buffer");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

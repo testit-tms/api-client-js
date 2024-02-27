@@ -38,7 +38,7 @@ All URIs are relative to *http://localhost*
 
 <a name="addTestPointsWithSections"></a>
 # **addTestPointsWithSections**
-> addTestPointsWithSections(id, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
+> addTestPointsWithSections(id, WorkItemSelectModel)
 
 Add test-points to TestPlan with sections
 
@@ -47,7 +47,7 @@ Add test-points to TestPlan with sections
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
+| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
 
@@ -172,7 +172,7 @@ Get TestPlan configurations
 
 <a name="apiV2TestPlansIdExportTestPointsXlsxPost"></a>
 # **apiV2TestPlansIdExportTestPointsXlsxPost**
-> File apiV2TestPlansIdExportTestPointsXlsxPost(id, time-Zone-Offset-In-Minutes, \_api\_v2\_testPlans\_\_id\_\_export\_testPoints\_xlsx\_post\_request)
+> File apiV2TestPlansIdExportTestPointsXlsxPost(id, time-Zone-Offset-In-Minutes, GetXlsxTestPointsByTestPlanModel)
 
 Export TestPoints from TestPlan in xls format
 
@@ -184,7 +184,7 @@ Export TestPoints from TestPlan in xls format
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **\_api\_v2\_testPlans\_\_id\_\_export\_testPoints\_xlsx\_post\_request** | [**_api_v2_testPlans__id__export_testPoints_xlsx_post_request**](../Models/_api_v2_testPlans__id__export_testPoints_xlsx_post_request.md)|  | [optional] |
+| **GetXlsxTestPointsByTestPlanModel** | [**GetXlsxTestPointsByTestPlanModel**](../Models/GetXlsxTestPointsByTestPlanModel.md)|  | [optional] |
 
 ### Return type
 
@@ -383,7 +383,7 @@ null (empty response body)
 
 <a name="apiV2TestPlansIdTestPointsTesterDelete"></a>
 # **apiV2TestPlansIdTestPointsTesterDelete**
-> List apiV2TestPlansIdTestPointsTesterDelete(id, \_api\_v2\_testPlans\_\_id\_\_testPoints\_tester\_\_userId\_\_post\_request)
+> List apiV2TestPlansIdTestPointsTesterDelete(id, TestPointSelectModel)
 
 Unassign users from multiple test points
 
@@ -392,7 +392,7 @@ Unassign users from multiple test points
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Unique or global ID of the test plan | [default to null] |
-| **\_api\_v2\_testPlans\_\_id\_\_testPoints\_tester\_\_userId\_\_post\_request** | [**_api_v2_testPlans__id__testPoints_tester__userId__post_request**](../Models/_api_v2_testPlans__id__testPoints_tester__userId__post_request.md)|  | [optional] |
+| **TestPointSelectModel** | [**TestPointSelectModel**](../Models/TestPointSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -409,7 +409,7 @@ Unassign users from multiple test points
 
 <a name="apiV2TestPlansIdTestPointsTesterUserIdPost"></a>
 # **apiV2TestPlansIdTestPointsTesterUserIdPost**
-> List apiV2TestPlansIdTestPointsTesterUserIdPost(id, userId, \_api\_v2\_testPlans\_\_id\_\_testPoints\_tester\_\_userId\_\_post\_request)
+> List apiV2TestPlansIdTestPointsTesterUserIdPost(id, userId, TestPointSelectModel)
 
 Assign user as a tester to multiple test points
 
@@ -419,7 +419,7 @@ Assign user as a tester to multiple test points
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Unique or global ID of the test plan | [default to null] |
 | **userId** | **UUID**| Unique ID of the user | [default to null] |
-| **\_api\_v2\_testPlans\_\_id\_\_testPoints\_tester\_\_userId\_\_post\_request** | [**_api_v2_testPlans__id__testPoints_tester__userId__post_request**](../Models/_api_v2_testPlans__id__testPoints_tester__userId__post_request.md)|  | [optional] |
+| **TestPointSelectModel** | [**TestPointSelectModel**](../Models/TestPointSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -472,7 +472,7 @@ Get TestRuns of TestPlan
 
 <a name="apiV2TestPlansIdTestRunsSearchPost"></a>
 # **apiV2TestPlansIdTestRunsSearchPost**
-> List apiV2TestPlansIdTestRunsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_testPlans\_\_id\_\_testRuns\_search\_post\_request)
+> List apiV2TestPlansIdTestRunsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, TestRunSearchQueryModel)
 
 Search TestRuns of TestPlan
 
@@ -488,7 +488,7 @@ Search TestRuns of TestPlan
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_testPlans\_\_id\_\_testRuns\_search\_post\_request** | [**_api_v2_testPlans__id__testRuns_search_post_request**](../Models/_api_v2_testPlans__id__testRuns_search_post_request.md)|  | [optional] |
+| **TestRunSearchQueryModel** | [**TestRunSearchQueryModel**](../Models/TestRunSearchQueryModel.md)|  | [optional] |
 
 ### Return type
 
@@ -639,7 +639,7 @@ null (empty response body)
 
 <a name="createTestPlan"></a>
 # **createTestPlan**
-> TestPlanModel createTestPlan(CreateTestPlan\_request)
+> TestPlanModel createTestPlan(TestPlanPostModel)
 
 Create TestPlan
 
@@ -649,7 +649,7 @@ Create TestPlan
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateTestPlan\_request** | [**CreateTestPlan_request**](../Models/CreateTestPlan_request.md)|  | [optional] |
+| **TestPlanPostModel** | [**TestPlanPostModel**](../Models/TestPlanPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -853,7 +853,7 @@ null (empty response body)
 
 <a name="updateTestPlan"></a>
 # **updateTestPlan**
-> updateTestPlan(UpdateTestPlan\_request)
+> updateTestPlan(TestPlanPutModel)
 
 Update TestPlan
 
@@ -863,7 +863,7 @@ Update TestPlan
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateTestPlan\_request** | [**UpdateTestPlan_request**](../Models/UpdateTestPlan_request.md)|  | [optional] |
+| **TestPlanPutModel** | [**TestPlanPutModel**](../Models/TestPlanPutModel.md)|  | [optional] |
 
 ### Return type
 

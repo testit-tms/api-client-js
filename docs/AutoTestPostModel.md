@@ -5,6 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **workItemIdsForLinkWithAutoTest** | **Set** | Specifies the IDs of work items to link your autotest to. You can specify several IDs. | [optional] [default to null] |
 | **shouldCreateWorkItem** | **Boolean** | Creates a test case linked to the autotest. | [optional] [default to null] |
+| **attributes** | [**Map**](AnyType.md) | Key value pair of custom work item attributes | [optional] [default to null] |
 | **externalId** | **String** | External ID of the autotest | [default to null] |
 | **links** | [**List**](LinkPostModel.md) | Collection of the autotest links | [optional] [default to null] |
 | **projectId** | **UUID** | Unique ID of the autotest project | [default to null] |

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TestPointShortGetModelLastTestResult } from './testPointShortGetModelLastTestResult';
+import { LastTestResultModel } from './lastTestResultModel';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemState } from './workItemState';
@@ -107,7 +107,7 @@ export class TestPointShortGetModel {
     * Unique ID of the test point project
     */
     'projectId': string;
-    'lastTestResult': TestPointShortGetModelLastTestResult;
+    'lastTestResult': LastTestResultModel;
     /**
     * Unique ID of work item iteration the test point represents
     */
@@ -256,7 +256,7 @@ export class TestPointShortGetModel {
         {
             "name": "lastTestResult",
             "baseName": "lastTestResult",
-            "type": "TestPointShortGetModelLastTestResult"
+            "type": "LastTestResultModel"
         },
         {
             "name": "iterationId",
