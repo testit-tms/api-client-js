@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ProjectsProjectIdWorkItemsSearchGroupedPost"></a>
 # **apiV2ProjectsProjectIdWorkItemsSearchGroupedPost**
-> List apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_grouped\_post\_request)
+> List apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemGroupGetModel)
 
 Search for work items and group results by attribute
 
@@ -27,7 +27,7 @@ Search for work items and group results by attribute
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_grouped\_post\_request** | [**_api_v2_projects__projectId__workItems_search_grouped_post_request**](../Models/_api_v2_projects__projectId__workItems_search_grouped_post_request.md)|  | [optional] |
+| **WorkItemGroupGetModel** | [**WorkItemGroupGetModel**](../Models/WorkItemGroupGetModel.md)|  | [optional] |
 
 ### Return type
 
@@ -44,7 +44,7 @@ Search for work items and group results by attribute
 
 <a name="apiV2ProjectsProjectIdWorkItemsSearchIdPost"></a>
 # **apiV2ProjectsProjectIdWorkItemsSearchIdPost**
-> List apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
+> List apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
 
 Search for work items and extract IDs only
 
@@ -58,7 +58,7 @@ Search for work items and extract IDs only
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)|  | [optional] |
+| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -75,7 +75,7 @@ Search for work items and extract IDs only
 
 <a name="apiV2ProjectsProjectIdWorkItemsSearchPost"></a>
 # **apiV2ProjectsProjectIdWorkItemsSearchPost**
-> List apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
+> List apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
 
 Search for work items
 
@@ -89,7 +89,7 @@ Search for work items
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)|  | [optional] |
+| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -121,7 +121,7 @@ Get WorkItems Tags
 
 ### Return type
 
-[**List**](../Models/TagShortModel.md)
+[**List**](../Models/TagModel.md)
 
 ### Authorization
 

@@ -14,6 +14,7 @@
 | 4.3     | 3.2        |
 | 4.4     | 3.3        |
 | 4.5     | 4.1        |
+| 4.6     | 4.2        |
 
 ## Installation
 
@@ -208,7 +209,12 @@ All URIs are relative to *http://localhost*
 *SectionsApi* | [**move**](docs/SectionsApi.md#move) | **POST** /api/v2/sections/move | Move section with all work items into another section |
 *SectionsApi* | [**rename**](docs/SectionsApi.md#rename) | **POST** /api/v2/sections/rename | Rename section |
 *SectionsApi* | [**updateSection**](docs/SectionsApi.md#updatesection) | **PUT** /api/v2/sections | Update section |
-| *TagsApi* | [**apiV2TagsGet**](docs/TagsApi.md#apiv2tagsget) | **GET** /api/v2/tags | Get all Tags |
+| *TagsApi* | [**apiV2TagsDelete**](docs/TagsApi.md#apiv2tagsdelete) | **DELETE** /api/v2/tags | Delete tags |
+*TagsApi* | [**apiV2TagsGet**](docs/TagsApi.md#apiv2tagsget) | **GET** /api/v2/tags | Get all Tags |
+*TagsApi* | [**apiV2TagsIdDelete**](docs/TagsApi.md#apiv2tagsiddelete) | **DELETE** /api/v2/tags/{id} | Delete tag |
+*TagsApi* | [**apiV2TagsPost**](docs/TagsApi.md#apiv2tagspost) | **POST** /api/v2/tags | Create tag |
+*TagsApi* | [**apiV2TagsPut**](docs/TagsApi.md#apiv2tagsput) | **PUT** /api/v2/tags | Update tag |
+*TagsApi* | [**apiV2TagsSearchGet**](docs/TagsApi.md#apiv2tagssearchget) | **GET** /api/v2/tags/search | Search tags |
 *TagsApi* | [**apiV2TagsTestPlansTagsGet**](docs/TagsApi.md#apiv2tagstestplanstagsget) | **GET** /api/v2/tags/testPlansTags | Get all Tags that are used in TestPlans |
 | *TestPlansApi* | [**addTestPointsWithSections**](docs/TestPlansApi.md#addtestpointswithsections) | **POST** /api/v2/testPlans/{id}/test-points/withSections | Add test-points to TestPlan with sections |
 *TestPlansApi* | [**addWorkItemsWithSections**](docs/TestPlansApi.md#addworkitemswithsections) | **POST** /api/v2/testPlans/{id}/workItems/withSections | Add WorkItems to TestPlan with Sections as TestSuites |

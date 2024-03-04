@@ -11,7 +11,6 @@
 | **createdById** | **UUID** | Unique ID of the attachment creator | [default to null] |
 | **modifiedById** | **UUID** | Unique ID of the attachment last editor | [optional] [default to null] |
 | **name** | **String** | Name of the attachment file | [default to null] |
-| **isTemp** | **Boolean** | Indicates whether the attachment is temporary (may be automatically deleted) | [default to null] |
 | **id** | **UUID** | Unique ID of the attachment | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

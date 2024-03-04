@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TagShortModel } from './tagShortModel';
+import { TagModel } from './tagModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 
 export class SharedStepReferenceModel {
@@ -35,7 +35,7 @@ export class SharedStepReferenceModel {
     'versionId': string;
     'isAutomated': boolean;
     'sectionId': string;
-    'tags'?: Array<TagShortModel> | null;
+    'tags'?: Array<TagModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -128,7 +128,7 @@ export class SharedStepReferenceModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagShortModel>"
+            "type": "Array<TagModel>"
         }    ];
 
     static getAttributeTypeMap() {

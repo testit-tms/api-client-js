@@ -24,7 +24,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2TestRunsIdStatisticsFilterPost"></a>
 # **apiV2TestRunsIdStatisticsFilterPost**
-> TestResultsStatisticsGetModel apiV2TestRunsIdStatisticsFilterPost(id, \_api\_v2\_testRuns\_\_id\_\_statistics\_filter\_post\_request)
+> TestResultsStatisticsGetModel apiV2TestRunsIdStatisticsFilterPost(id, TestResultsLocalFilterModel)
 
 Search for the test run test results and build statistics
 
@@ -33,7 +33,7 @@ Search for the test run test results and build statistics
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test run unique ID | [default to null] |
-| **\_api\_v2\_testRuns\_\_id\_\_statistics\_filter\_post\_request** | [**_api_v2_testRuns__id__statistics_filter_post_request**](../Models/_api_v2_testRuns__id__statistics_filter_post_request.md)|  | [optional] |
+| **TestResultsLocalFilterModel** | [**TestResultsLocalFilterModel**](../Models/TestResultsLocalFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -75,7 +75,7 @@ Get test results from the test run grouped by test points
 
 <a name="apiV2TestRunsIdTestResultsBulkPut"></a>
 # **apiV2TestRunsIdTestResultsBulkPut**
-> apiV2TestRunsIdTestResultsBulkPut(id, \_api\_v2\_testRuns\_\_id\_\_testResults\_bulk\_put\_request)
+> apiV2TestRunsIdTestResultsBulkPut(id, TestRunTestResultsPartialBulkSetModel)
 
 Partial edit of multiple test results in the test run
 
@@ -84,7 +84,7 @@ Partial edit of multiple test results in the test run
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test run unique ID | [default to null] |
-| **\_api\_v2\_testRuns\_\_id\_\_testResults\_bulk\_put\_request** | [**_api_v2_testRuns__id__testResults_bulk_put_request**](../Models/_api_v2_testRuns__id__testResults_bulk_put_request.md)|  | [optional] |
+| **TestRunTestResultsPartialBulkSetModel** | [**TestRunTestResultsPartialBulkSetModel**](../Models/TestRunTestResultsPartialBulkSetModel.md)|  | [optional] |
 
 ### Return type
 
@@ -126,7 +126,7 @@ Get modification date of last test result of the test run
 
 <a name="apiV2TestRunsSearchPost"></a>
 # **apiV2TestRunsSearchPost**
-> List apiV2TestRunsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_testRuns\_search\_post\_request)
+> List apiV2TestRunsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestRunFilterModel)
 
 Search for test runs
 
@@ -139,7 +139,7 @@ Search for test runs
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_testRuns\_search\_post\_request** | [**_api_v2_testRuns_search_post_request**](../Models/_api_v2_testRuns_search_post_request.md)|  | [optional] |
+| **TestRunFilterModel** | [**TestRunFilterModel**](../Models/TestRunFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -156,7 +156,7 @@ Search for test runs
 
 <a name="apiV2TestRunsUpdateMultiplePost"></a>
 # **apiV2TestRunsUpdateMultiplePost**
-> apiV2TestRunsUpdateMultiplePost(\_api\_v2\_testRuns\_updateMultiple\_post\_request)
+> apiV2TestRunsUpdateMultiplePost(TestRunUpdateMultipleModel)
 
 Update multiple test runs
 
@@ -164,7 +164,7 @@ Update multiple test runs
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_testRuns\_updateMultiple\_post\_request** | [**_api_v2_testRuns_updateMultiple_post_request**](../Models/_api_v2_testRuns_updateMultiple_post_request.md)|  | [optional] |
+| **TestRunUpdateMultipleModel** | [**TestRunUpdateMultipleModel**](../Models/TestRunUpdateMultipleModel.md)|  | [optional] |
 
 ### Return type
 
@@ -208,7 +208,7 @@ null (empty response body)
 
 <a name="createAndFillByAutoTests"></a>
 # **createAndFillByAutoTests**
-> TestRunV2GetModel createAndFillByAutoTests(CreateAndFillByAutoTests\_request)
+> TestRunV2GetModel createAndFillByAutoTests(TestRunFillByAutoTestsPostModel)
 
 Create test runs based on autotests and configurations
 
@@ -218,7 +218,7 @@ Create test runs based on autotests and configurations
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateAndFillByAutoTests\_request** | [**CreateAndFillByAutoTests_request**](../Models/CreateAndFillByAutoTests_request.md)|  | [optional] |
+| **TestRunFillByAutoTestsPostModel** | [**TestRunFillByAutoTestsPostModel**](../Models/TestRunFillByAutoTestsPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -235,7 +235,7 @@ Create test runs based on autotests and configurations
 
 <a name="createAndFillByConfigurations"></a>
 # **createAndFillByConfigurations**
-> TestRunV2GetModel createAndFillByConfigurations(CreateAndFillByConfigurations\_request)
+> TestRunV2GetModel createAndFillByConfigurations(TestRunFillByConfigurationsPostModel)
 
 Create test runs picking the needed test points
 
@@ -245,7 +245,7 @@ Create test runs picking the needed test points
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateAndFillByConfigurations\_request** | [**CreateAndFillByConfigurations_request**](../Models/CreateAndFillByConfigurations_request.md)|  | [optional] |
+| **TestRunFillByConfigurationsPostModel** | [**TestRunFillByConfigurationsPostModel**](../Models/TestRunFillByConfigurationsPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -262,7 +262,7 @@ Create test runs picking the needed test points
 
 <a name="createAndFillByWorkItems"></a>
 # **createAndFillByWorkItems**
-> TestRunV2GetModel createAndFillByWorkItems(CreateAndFillByWorkItems\_request)
+> TestRunV2GetModel createAndFillByWorkItems(TestRunFillByWorkItemsPostModel)
 
 Create test run based on configurations and work items
 
@@ -272,7 +272,7 @@ Create test run based on configurations and work items
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateAndFillByWorkItems\_request** | [**CreateAndFillByWorkItems_request**](../Models/CreateAndFillByWorkItems_request.md)|  | [optional] |
+| **TestRunFillByWorkItemsPostModel** | [**TestRunFillByWorkItemsPostModel**](../Models/TestRunFillByWorkItemsPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -289,7 +289,7 @@ Create test run based on configurations and work items
 
 <a name="createEmpty"></a>
 # **createEmpty**
-> TestRunV2GetModel createEmpty(CreateEmpty\_request)
+> TestRunV2GetModel createEmpty(TestRunV2PostShortModel)
 
 Create empty TestRun
 
@@ -299,7 +299,7 @@ Create empty TestRun
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateEmpty\_request** | [**CreateEmpty_request**](../Models/CreateEmpty_request.md)|  | [optional] |
+| **TestRunV2PostShortModel** | [**TestRunV2PostShortModel**](../Models/TestRunV2PostShortModel.md)|  | [optional] |
 
 ### Return type
 
@@ -425,7 +425,7 @@ null (empty response body)
 
 <a name="updateEmpty"></a>
 # **updateEmpty**
-> updateEmpty(UpdateEmpty\_request)
+> updateEmpty(TestRunV2PutModel)
 
 Update empty TestRun
 
@@ -435,7 +435,7 @@ Update empty TestRun
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateEmpty\_request** | [**UpdateEmpty_request**](../Models/UpdateEmpty_request.md)|  | [optional] |
+| **TestRunV2PutModel** | [**TestRunV2PutModel**](../Models/TestRunV2PutModel.md)|  | [optional] |
 
 ### Return type
 

@@ -20,7 +20,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ConfigurationsCreateByParametersPost"></a>
 # **apiV2ConfigurationsCreateByParametersPost**
-> List apiV2ConfigurationsCreateByParametersPost(\_api\_v2\_configurations\_createByParameters\_post\_request)
+> List apiV2ConfigurationsCreateByParametersPost(ConfigurationByParametersModel)
 
 Create configurations by parameters
 
@@ -28,7 +28,7 @@ Create configurations by parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_configurations\_createByParameters\_post\_request** | [**_api_v2_configurations_createByParameters_post_request**](../Models/_api_v2_configurations_createByParameters_post_request.md)|  | [optional] |
+| **ConfigurationByParametersModel** | [**ConfigurationByParametersModel**](../Models/ConfigurationByParametersModel.md)|  | [optional] |
 
 ### Return type
 
@@ -45,7 +45,7 @@ Create configurations by parameters
 
 <a name="apiV2ConfigurationsDeleteBulkPost"></a>
 # **apiV2ConfigurationsDeleteBulkPost**
-> Integer apiV2ConfigurationsDeleteBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+> Integer apiV2ConfigurationsDeleteBulkPost(ConfigurationSelectModel)
 
 Delete multiple configurations
 
@@ -53,7 +53,7 @@ Delete multiple configurations
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+| **ConfigurationSelectModel** | [**ConfigurationSelectModel**](../Models/ConfigurationSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -173,7 +173,7 @@ null (empty response body)
 
 <a name="apiV2ConfigurationsPurgeBulkPost"></a>
 # **apiV2ConfigurationsPurgeBulkPost**
-> apiV2ConfigurationsPurgeBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+> apiV2ConfigurationsPurgeBulkPost(ConfigurationSelectModel)
 
 Permanently delete multiple archived configurations
 
@@ -181,7 +181,7 @@ Permanently delete multiple archived configurations
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+| **ConfigurationSelectModel** | [**ConfigurationSelectModel**](../Models/ConfigurationSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -198,7 +198,7 @@ null (empty response body)
 
 <a name="apiV2ConfigurationsPut"></a>
 # **apiV2ConfigurationsPut**
-> apiV2ConfigurationsPut(\_api\_v2\_configurations\_put\_request)
+> apiV2ConfigurationsPut(ConfigurationPutModel)
 
 Edit configuration
 
@@ -206,7 +206,7 @@ Edit configuration
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_configurations\_put\_request** | [**_api_v2_configurations_put_request**](../Models/_api_v2_configurations_put_request.md)|  | [optional] |
+| **ConfigurationPutModel** | [**ConfigurationPutModel**](../Models/ConfigurationPutModel.md)|  | [optional] |
 
 ### Return type
 
@@ -223,7 +223,7 @@ null (empty response body)
 
 <a name="apiV2ConfigurationsRestoreBulkPost"></a>
 # **apiV2ConfigurationsRestoreBulkPost**
-> Integer apiV2ConfigurationsRestoreBulkPost(\_api\_v2\_configurations\_purge\_bulk\_post\_request)
+> Integer apiV2ConfigurationsRestoreBulkPost(ConfigurationSelectModel)
 
 Restore multiple configurations from the archive
 
@@ -231,7 +231,7 @@ Restore multiple configurations from the archive
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_configurations\_purge\_bulk\_post\_request** | [**_api_v2_configurations_purge_bulk_post_request**](../Models/_api_v2_configurations_purge_bulk_post_request.md)|  | [optional] |
+| **ConfigurationSelectModel** | [**ConfigurationSelectModel**](../Models/ConfigurationSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -248,7 +248,7 @@ Restore multiple configurations from the archive
 
 <a name="apiV2ConfigurationsSearchPost"></a>
 # **apiV2ConfigurationsSearchPost**
-> List apiV2ConfigurationsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_configurations\_search\_post\_request)
+> List apiV2ConfigurationsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ConfigurationFilterModel)
 
 Search for configurations
 
@@ -261,7 +261,7 @@ Search for configurations
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_configurations\_search\_post\_request** | [**_api_v2_configurations_search_post_request**](../Models/_api_v2_configurations_search_post_request.md)| Model containing all the filters | [optional] |
+| **ConfigurationFilterModel** | [**ConfigurationFilterModel**](../Models/ConfigurationFilterModel.md)| Model containing all the filters | [optional] |
 
 ### Return type
 
@@ -278,7 +278,7 @@ Search for configurations
 
 <a name="createConfiguration"></a>
 # **createConfiguration**
-> ConfigurationModel createConfiguration(CreateConfiguration\_request)
+> ConfigurationModel createConfiguration(ConfigurationPostModel)
 
 Create Configuration
 
@@ -288,7 +288,7 @@ Create Configuration
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateConfiguration\_request** | [**CreateConfiguration_request**](../Models/CreateConfiguration_request.md)|  | [optional] |
+| **ConfigurationPostModel** | [**ConfigurationPostModel**](../Models/ConfigurationPostModel.md)|  | [optional] |
 
 ### Return type
 

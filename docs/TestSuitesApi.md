@@ -21,7 +21,7 @@ All URIs are relative to *http://localhost*
 
 <a name="addTestPointsToTestSuite"></a>
 # **addTestPointsToTestSuite**
-> addTestPointsToTestSuite(id, \_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request)
+> addTestPointsToTestSuite(id, WorkItemSelectModel)
 
 Add test-points to test suite
 
@@ -30,7 +30,7 @@ Add test-points to test suite
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test suite internal identifier | [default to null] |
-| **\_api\_v2\_projects\_\_projectId\_\_workItems\_search\_post\_request** | [**_api_v2_projects__projectId__workItems_search_post_request**](../Models/_api_v2_projects__projectId__workItems_search_post_request.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
+| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
 
@@ -126,7 +126,7 @@ null (empty response body)
 
 <a name="apiV2TestSuitesPost"></a>
 # **apiV2TestSuitesPost**
-> TestSuiteV2GetModel apiV2TestSuitesPost(\_api\_v2\_testSuites\_post\_request)
+> TestSuiteV2GetModel apiV2TestSuitesPost(TestSuiteV2PostModel)
 
 Create test suite
 
@@ -134,7 +134,7 @@ Create test suite
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_testSuites\_post\_request** | [**_api_v2_testSuites_post_request**](../Models/_api_v2_testSuites_post_request.md)|  | [optional] |
+| **TestSuiteV2PostModel** | [**TestSuiteV2PostModel**](../Models/TestSuiteV2PostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -151,7 +151,7 @@ Create test suite
 
 <a name="apiV2TestSuitesPut"></a>
 # **apiV2TestSuitesPut**
-> apiV2TestSuitesPut(\_api\_v2\_testSuites\_put\_request)
+> apiV2TestSuitesPut(TestSuiteV2PutModel)
 
 Edit test suite
 
@@ -159,7 +159,7 @@ Edit test suite
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_testSuites\_put\_request** | [**_api_v2_testSuites_put_request**](../Models/_api_v2_testSuites_put_request.md)|  | [optional] |
+| **TestSuiteV2PutModel** | [**TestSuiteV2PutModel**](../Models/TestSuiteV2PutModel.md)|  | [optional] |
 
 ### Return type
 
@@ -311,7 +311,7 @@ Get TestSuite by Id
 
 <a name="searchWorkItems"></a>
 # **searchWorkItems**
-> List searchWorkItems(id, Skip, Take, OrderBy, SearchField, SearchValue, SearchWorkItems\_request)
+> List searchWorkItems(id, Skip, Take, OrderBy, SearchField, SearchValue, TestSuiteWorkItemsSearchModel)
 
 Search WorkItems
 
@@ -327,7 +327,7 @@ Search WorkItems
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SearchWorkItems\_request** | [**SearchWorkItems_request**](../Models/SearchWorkItems_request.md)|  | [optional] |
+| **TestSuiteWorkItemsSearchModel** | [**TestSuiteWorkItemsSearchModel**](../Models/TestSuiteWorkItemsSearchModel.md)|  | [optional] |
 
 ### Return type
 

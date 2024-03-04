@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 <a name="export"></a>
 # **export**
-> File export(projectId, includeAttachments, ExportProjectJson\_request)
+> File export(projectId, includeAttachments, ProjectExportQueryModel)
 
 Export project as JSON file
 
@@ -25,7 +25,7 @@ Export project as JSON file
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Specifies the ID of the project you want to export. | [default to null] |
 | **includeAttachments** | **Boolean**| Enables attachment export. | [optional] [default to false] |
-| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
+| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
 
 ### Return type
 
@@ -42,7 +42,7 @@ Export project as JSON file
 
 <a name="exportProjectJson"></a>
 # **exportProjectJson**
-> UUID exportProjectJson(projectId, time-Zone-Offset-In-Minutes, ExportProjectJson\_request)
+> UUID exportProjectJson(projectId, time-Zone-Offset-In-Minutes, ProjectExportQueryModel)
 
 Export project as JSON file in background job
 
@@ -52,7 +52,7 @@ Export project as JSON file in background job
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
+| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
 
 ### Return type
 
@@ -69,7 +69,7 @@ Export project as JSON file in background job
 
 <a name="exportProjectWithTestPlansJson"></a>
 # **exportProjectWithTestPlansJson**
-> UUID exportProjectWithTestPlansJson(projectId, time-Zone-Offset-In-Minutes, ExportProjectWithTestPlansJson\_request)
+> UUID exportProjectWithTestPlansJson(projectId, time-Zone-Offset-In-Minutes, ProjectExportWithTestPlansPostModel)
 
 Export project as JSON file with test plans in background job
 
@@ -79,7 +79,7 @@ Export project as JSON file with test plans in background job
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
+| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -96,7 +96,7 @@ Export project as JSON file with test plans in background job
 
 <a name="exportProjectWithTestPlansZip"></a>
 # **exportProjectWithTestPlansZip**
-> UUID exportProjectWithTestPlansZip(projectId, time-Zone-Offset-In-Minutes, ExportProjectWithTestPlansJson\_request)
+> UUID exportProjectWithTestPlansZip(projectId, time-Zone-Offset-In-Minutes, ProjectExportWithTestPlansPostModel)
 
 Export project as Zip file with test plans in background job
 
@@ -106,7 +106,7 @@ Export project as Zip file with test plans in background job
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ExportProjectWithTestPlansJson\_request** | [**ExportProjectWithTestPlansJson_request**](../Models/ExportProjectWithTestPlansJson_request.md)|  | [optional] |
+| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -123,7 +123,7 @@ Export project as Zip file with test plans in background job
 
 <a name="exportProjectZip"></a>
 # **exportProjectZip**
-> UUID exportProjectZip(projectId, time-Zone-Offset-In-Minutes, ExportProjectJson\_request)
+> UUID exportProjectZip(projectId, time-Zone-Offset-In-Minutes, ProjectExportQueryModel)
 
 Export project as Zip file in background job
 
@@ -133,7 +133,7 @@ Export project as Zip file in background job
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
-| **ExportProjectJson\_request** | [**ExportProjectJson_request**](../Models/ExportProjectJson_request.md)|  | [optional] |
+| **ProjectExportQueryModel** | [**ProjectExportQueryModel**](../Models/ProjectExportQueryModel.md)|  | [optional] |
 
 ### Return type
 

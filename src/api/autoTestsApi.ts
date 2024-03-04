@@ -15,23 +15,21 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2AutoTestsFlakyBulkPostRequest } from '../model/apiV2AutoTestsFlakyBulkPostRequest';
-import { ApiV2AutoTestsIdTestResultsSearchPostRequest } from '../model/apiV2AutoTestsIdTestResultsSearchPostRequest';
-import { ApiV2AutoTestsSearchPostRequest } from '../model/apiV2AutoTestsSearchPostRequest';
 import { AutoTestAverageDurationModel } from '../model/autoTestAverageDurationModel';
 import { AutoTestModel } from '../model/autoTestModel';
 import { AutoTestPostModel } from '../model/autoTestPostModel';
 import { AutoTestPutModel } from '../model/autoTestPutModel';
+import { AutotestHistoricalResultSelectModel } from '../model/autotestHistoricalResultSelectModel';
 import { AutotestResultHistoricalGetModel } from '../model/autotestResultHistoricalGetModel';
-import { CreateAutoTestRequest } from '../model/createAutoTestRequest';
-import { LinkAutoTestToWorkItemRequest } from '../model/linkAutoTestToWorkItemRequest';
+import { AutotestsSelectModel } from '../model/autotestsSelectModel';
+import { FlakyBulkModel } from '../model/flakyBulkModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
 import { TestResultHistoryReportModel } from '../model/testResultHistoryReportModel';
 import { TestRunShortModel } from '../model/testRunShortModel';
-import { UpdateAutoTestRequest } from '../model/updateAutoTestRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
+import { WorkItemIdModel } from '../model/workItemIdModel';
 import { WorkItemIdentifierModel } from '../model/workItemIdentifierModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -114,9 +112,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2AutoTestsFlakyBulkPostRequest 
+     * @param flakyBulkModel 
      */
-    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2AutoTestsFlakyBulkPostRequest?: ApiV2AutoTestsFlakyBulkPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, flakyBulkModel?: FlakyBulkModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/flaky/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -160,7 +158,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2AutoTestsFlakyBulkPostRequest, "ApiV2AutoTestsFlakyBulkPostRequest")
+            body: ObjectSerializer.serialize(flakyBulkModel, "FlakyBulkModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -279,9 +277,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2AutoTestsIdTestResultsSearchPostRequest 
+     * @param autotestHistoricalResultSelectModel 
      */
-    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2AutoTestsIdTestResultsSearchPostRequest?: ApiV2AutoTestsIdTestResultsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutotestResultHistoricalGetModel>;  }> {
+    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autotestHistoricalResultSelectModel?: AutotestHistoricalResultSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutotestResultHistoricalGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testResults/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -331,7 +329,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2AutoTestsIdTestResultsSearchPostRequest, "ApiV2AutoTestsIdTestResultsSearchPostRequest")
+            body: ObjectSerializer.serialize(autotestHistoricalResultSelectModel, "AutotestHistoricalResultSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -527,9 +525,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2AutoTestsSearchPostRequest 
+     * @param autotestsSelectModel 
      */
-    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2AutoTestsSearchPostRequest?: ApiV2AutoTestsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autotestsSelectModel?: AutotestsSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -573,7 +571,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2AutoTestsSearchPostRequest, "ApiV2AutoTestsSearchPostRequest")
+            body: ObjectSerializer.serialize(autotestsSelectModel, "AutotestsSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -614,9 +612,9 @@ export class AutoTestsApi {
     /**
      * <br>This method creates a new autotest.  <br>To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  <br>Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
      * @summary Create autotest
-     * @param createAutoTestRequest 
+     * @param autoTestPostModel 
      */
-    public async createAutoTest (createAutoTestRequest?: CreateAutoTestRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
+    public async createAutoTest (autoTestPostModel?: AutoTestPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -640,7 +638,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createAutoTestRequest, "CreateAutoTestRequest")
+            body: ObjectSerializer.serialize(autoTestPostModel, "AutoTestPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1601,9 +1599,9 @@ export class AutoTestsApi {
      * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User sets work item internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System finds the autotest by the autotest identifier  <br>System finds the work item by the work item identifier  <br>System relates the work item with the autotest and returns no content response
      * @summary Link autotest with work items
      * @param id Autotest internal (UUID) or global (integer) identifier
-     * @param linkAutoTestToWorkItemRequest 
+     * @param workItemIdModel 
      */
-    public async linkAutoTestToWorkItem (id: string, linkAutoTestToWorkItemRequest?: LinkAutoTestToWorkItemRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async linkAutoTestToWorkItem (id: string, workItemIdModel?: WorkItemIdModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1633,7 +1631,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(linkAutoTestToWorkItemRequest, "LinkAutoTestToWorkItemRequest")
+            body: ObjectSerializer.serialize(workItemIdModel, "WorkItemIdModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1673,9 +1671,9 @@ export class AutoTestsApi {
     /**
      * <br>Use case  <br>User sets autotest updated parameters values (listed in the example) and runs method execution  <br>System finds the autotest by the identifier  <br>System updates autotest parameters   <br>              [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)                <br>              [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)                <br>              [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)                <br>              [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)                <br>              [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)                <br>System updates autotest and returns no content response
      * @summary Update autotest
-     * @param updateAutoTestRequest 
+     * @param autoTestPutModel 
      */
-    public async updateAutoTest (updateAutoTestRequest?: UpdateAutoTestRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateAutoTest (autoTestPutModel?: AutoTestPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1699,7 +1697,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateAutoTestRequest, "UpdateAutoTestRequest")
+            body: ObjectSerializer.serialize(autoTestPutModel, "AutoTestPutModel")
         };
 
         let authenticationPromise = Promise.resolve();

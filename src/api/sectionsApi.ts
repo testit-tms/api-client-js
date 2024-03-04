@@ -15,14 +15,14 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { CreateSectionRequest } from '../model/createSectionRequest';
 import { DeletionState } from '../model/deletionState';
-import { MoveRequest } from '../model/moveRequest';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
-import { RenameRequest } from '../model/renameRequest';
+import { SectionMoveModel } from '../model/sectionMoveModel';
+import { SectionPostModel } from '../model/sectionPostModel';
+import { SectionPutModel } from '../model/sectionPutModel';
+import { SectionRenameModel } from '../model/sectionRenameModel';
 import { SectionWithStepsModel } from '../model/sectionWithStepsModel';
-import { UpdateSectionRequest } from '../model/updateSectionRequest';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 
@@ -174,9 +174,9 @@ export class SectionsApi {
     /**
      * <br>Use case  <br>User sets section properties (listed in request example)  <br>User runs method execution  <br>System creates section property values  <br>System returns section (listed in response example)
      * @summary Create section
-     * @param createSectionRequest 
+     * @param sectionPostModel 
      */
-    public async createSection (createSectionRequest?: CreateSectionRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
+    public async createSection (sectionPostModel?: SectionPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
         const localVarPath = this.basePath + '/api/v2/sections';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -200,7 +200,7 @@ export class SectionsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createSectionRequest, "CreateSectionRequest")
+            body: ObjectSerializer.serialize(sectionPostModel, "SectionPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -501,9 +501,9 @@ export class SectionsApi {
     /**
      * 
      * @summary Move section with all work items into another section
-     * @param moveRequest 
+     * @param sectionMoveModel 
      */
-    public async move (moveRequest?: MoveRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async move (sectionMoveModel?: SectionMoveModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/move';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -527,7 +527,7 @@ export class SectionsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(moveRequest, "MoveRequest")
+            body: ObjectSerializer.serialize(sectionMoveModel, "SectionMoveModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -567,9 +567,9 @@ export class SectionsApi {
     /**
      * <br>Use case  <br>User sets section identifier and new name (listed in request example)  <br>User runs method execution  <br>System search section by the identifier  <br>System updates section name using the new name  <br>System returns no content response
      * @summary Rename section
-     * @param renameRequest 
+     * @param sectionRenameModel 
      */
-    public async rename (renameRequest?: RenameRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async rename (sectionRenameModel?: SectionRenameModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/rename';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -593,7 +593,7 @@ export class SectionsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(renameRequest, "RenameRequest")
+            body: ObjectSerializer.serialize(sectionRenameModel, "SectionRenameModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -633,9 +633,9 @@ export class SectionsApi {
     /**
      * <br>Use case  <br>User sets section properties (listed in request example)  <br>User runs method execution  <br>System search section by the identifier  <br>System updates section using the property values  <br>System returns no content response
      * @summary Update section
-     * @param updateSectionRequest 
+     * @param sectionPutModel 
      */
-    public async updateSection (updateSectionRequest?: UpdateSectionRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateSection (sectionPutModel?: SectionPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -659,7 +659,7 @@ export class SectionsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateSectionRequest, "UpdateSectionRequest")
+            body: ObjectSerializer.serialize(sectionPutModel, "SectionPutModel")
         };
 
         let authenticationPromise = Promise.resolve();

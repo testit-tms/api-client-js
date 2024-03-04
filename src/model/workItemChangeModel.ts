@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { WorkItemChangeModelWorkItemChangedFields } from './workItemChangeModelWorkItemChangedFields';
+import { WorkItemChangedFieldsViewModel } from './workItemChangedFieldsViewModel';
 
 export class WorkItemChangeModel {
     'id': string;
     'workItemId': string;
     'oldVersionId': string;
     'newVersionId': string;
-    'workItemChangedFields': WorkItemChangeModelWorkItemChangedFields;
+    'workItemChangedFields': WorkItemChangedFieldsViewModel;
     'createdById': string;
     'createdDate'?: Date | null;
 
@@ -48,7 +48,7 @@ export class WorkItemChangeModel {
         {
             "name": "workItemChangedFields",
             "baseName": "workItemChangedFields",
-            "type": "WorkItemChangeModelWorkItemChangedFields"
+            "type": "WorkItemChangedFieldsViewModel"
         },
         {
             "name": "createdById",

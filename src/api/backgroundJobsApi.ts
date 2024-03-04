@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2BackgroundJobsSearchPostRequest } from '../model/apiV2BackgroundJobsSearchPostRequest';
+import { BackgroundJobFilterModel } from '../model/backgroundJobFilterModel';
 import { BackgroundJobGetModel } from '../model/backgroundJobGetModel';
 import { BackgroundJobState } from '../model/backgroundJobState';
 
@@ -396,9 +396,9 @@ export class BackgroundJobsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2BackgroundJobsSearchPostRequest 
+     * @param backgroundJobFilterModel 
      */
-    public async apiV2BackgroundJobsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2BackgroundJobsSearchPostRequest?: ApiV2BackgroundJobsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
+    public async apiV2BackgroundJobsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, backgroundJobFilterModel?: BackgroundJobFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -442,7 +442,7 @@ export class BackgroundJobsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2BackgroundJobsSearchPostRequest, "ApiV2BackgroundJobsSearchPostRequest")
+            body: ObjectSerializer.serialize(backgroundJobFilterModel, "BackgroundJobFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();

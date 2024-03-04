@@ -39,7 +39,7 @@ null (empty response body)
 
 <a name="apiV2WorkItemsCommentsPost"></a>
 # **apiV2WorkItemsCommentsPost**
-> WorkItemCommentModel apiV2WorkItemsCommentsPost(\_api\_v2\_workItems\_comments\_post\_request)
+> WorkItemCommentModel apiV2WorkItemsCommentsPost(WorkItemCommentPostModel)
 
 Create WorkItem comment
 
@@ -49,7 +49,7 @@ Create WorkItem comment
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_workItems\_comments\_post\_request** | [**_api_v2_workItems_comments_post_request**](../Models/_api_v2_workItems_comments_post_request.md)|  | [optional] |
+| **WorkItemCommentPostModel** | [**WorkItemCommentPostModel**](../Models/WorkItemCommentPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Create WorkItem comment
 
 <a name="apiV2WorkItemsCommentsPut"></a>
 # **apiV2WorkItemsCommentsPut**
-> apiV2WorkItemsCommentsPut(\_api\_v2\_workItems\_comments\_put\_request)
+> apiV2WorkItemsCommentsPut(WorkItemCommentPutModel)
 
 Update work item comment
 
@@ -74,7 +74,7 @@ Update work item comment
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **\_api\_v2\_workItems\_comments\_put\_request** | [**_api_v2_workItems_comments_put_request**](../Models/_api_v2_workItems_comments_put_request.md)|  | [optional] |
+| **WorkItemCommentPutModel** | [**WorkItemCommentPutModel**](../Models/WorkItemCommentPutModel.md)|  | [optional] |
 
 ### Return type
 

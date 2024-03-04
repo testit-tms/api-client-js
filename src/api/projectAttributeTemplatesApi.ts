@@ -15,9 +15,9 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest } from '../model/apiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
 import { ProjectCustomAttributeTemplateGetModel } from '../model/projectCustomAttributeTemplateGetModel';
+import { ProjectCustomAttributesTemplatesFilterModel } from '../model/projectCustomAttributesTemplatesFilterModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -100,9 +100,9 @@ export class ProjectAttributeTemplatesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest 
+     * @param projectCustomAttributesTemplatesFilterModel 
      */
-    public async apiV2ProjectsProjectIdAttributesTemplatesSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest?: ApiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
+    public async apiV2ProjectsProjectIdAttributesTemplatesSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectCustomAttributesTemplatesFilterModel?: ProjectCustomAttributesTemplatesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/templates/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -152,7 +152,7 @@ export class ProjectAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest, "ApiV2ProjectsProjectIdAttributesTemplatesSearchPostRequest")
+            body: ObjectSerializer.serialize(projectCustomAttributesTemplatesFilterModel, "ProjectCustomAttributesTemplatesFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();

@@ -3,6 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+| **attachments** | [**List**](AttachmentModel.md) |  | [optional] [default to null] |
 | **preconditionSteps** | [**List**](StepModel.md) |  | [optional] [default to null] |
 | **postconditionSteps** | [**List**](StepModel.md) |  | [optional] [default to null] |
 | **projectId** | **UUID** |  | [optional] [default to null] |

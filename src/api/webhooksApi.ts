@@ -15,13 +15,13 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2WebhooksPostRequest } from '../model/apiV2WebhooksPostRequest';
-import { ApiV2WebhooksSearchPostRequest } from '../model/apiV2WebhooksSearchPostRequest';
-import { ApiV2WebhooksTestPostRequest } from '../model/apiV2WebhooksTestPostRequest';
 import { ProblemDetails } from '../model/problemDetails';
 import { RequestData } from '../model/requestData';
+import { SearchWebhooksQueryModel } from '../model/searchWebhooksQueryModel';
 import { WebHookEventType } from '../model/webHookEventType';
 import { WebHookModel } from '../model/webHookModel';
+import { WebHookPostModel } from '../model/webHookPostModel';
+import { WebHookTestModel } from '../model/webHookTestModel';
 import { WebhookVariablesType } from '../model/webhookVariablesType';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -313,9 +313,9 @@ export class WebhooksApi {
      * 
      * @summary Edit webhook by ID
      * @param id Webhook unique ID
-     * @param apiV2WebhooksPostRequest 
+     * @param webHookPostModel 
      */
-    public async apiV2WebhooksIdPut (id: string, apiV2WebhooksPostRequest?: ApiV2WebhooksPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksIdPut (id: string, webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -345,7 +345,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WebhooksPostRequest, "ApiV2WebhooksPostRequest")
+            body: ObjectSerializer.serialize(webHookPostModel, "WebHookPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -386,9 +386,9 @@ export class WebhooksApi {
     /**
      * 
      * @summary Create webhook
-     * @param apiV2WebhooksPostRequest 
+     * @param webHookPostModel 
      */
-    public async apiV2WebhooksPost (apiV2WebhooksPostRequest?: ApiV2WebhooksPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksPost (webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -412,7 +412,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WebhooksPostRequest, "ApiV2WebhooksPostRequest")
+            body: ObjectSerializer.serialize(webHookPostModel, "WebHookPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -458,9 +458,9 @@ export class WebhooksApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2WebhooksSearchPostRequest 
+     * @param searchWebhooksQueryModel 
      */
-    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2WebhooksSearchPostRequest?: ApiV2WebhooksSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
+    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchWebhooksQueryModel?: SearchWebhooksQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -504,7 +504,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WebhooksSearchPostRequest, "ApiV2WebhooksSearchPostRequest")
+            body: ObjectSerializer.serialize(searchWebhooksQueryModel, "SearchWebhooksQueryModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -620,9 +620,9 @@ export class WebhooksApi {
     /**
      * 
      * @summary Test webhook\'s url
-     * @param apiV2WebhooksTestPostRequest 
+     * @param webHookTestModel 
      */
-    public async apiV2WebhooksTestPost (apiV2WebhooksTestPostRequest?: ApiV2WebhooksTestPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RequestData;  }> {
+    public async apiV2WebhooksTestPost (webHookTestModel?: WebHookTestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RequestData;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/test';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -646,7 +646,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2WebhooksTestPostRequest, "ApiV2WebhooksTestPostRequest")
+            body: ObjectSerializer.serialize(webHookTestModel, "WebHookTestModel")
         };
 
         let authenticationPromise = Promise.resolve();

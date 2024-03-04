@@ -17,9 +17,9 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CustomAttributeGetModel } from '../model/customAttributeGetModel';
 import { CustomAttributeModel } from '../model/customAttributeModel';
+import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
 import { ProblemDetails } from '../model/problemDetails';
-import { SearchAttributesInProjectRequest } from '../model/searchAttributesInProjectRequest';
-import { UpdateCustomAttributeTestPlanProjectRelationsRequest } from '../model/updateCustomAttributeTestPlanProjectRelationsRequest';
+import { ProjectAttributesFilterModel } from '../model/projectAttributesFilterModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -325,9 +325,9 @@ export class ProjectTestPlanAttributesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param searchAttributesInProjectRequest 
+     * @param projectAttributesFilterModel 
      */
-    public async searchTestPlanAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchAttributesInProjectRequest?: SearchAttributesInProjectRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchTestPlanAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -377,7 +377,7 @@ export class ProjectTestPlanAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(searchAttributesInProjectRequest, "SearchAttributesInProjectRequest")
+            body: ObjectSerializer.serialize(projectAttributesFilterModel, "ProjectAttributesFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -419,9 +419,9 @@ export class ProjectTestPlanAttributesApi {
      * <br>Use case  <br>User sets project internal or global identifier and attribute model  <br>User runs method execution  <br>System updates project and project attribute for test plan  <br>System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
-     * @param updateCustomAttributeTestPlanProjectRelationsRequest 
+     * @param customAttributeTestPlanProjectRelationPutModel 
      */
-    public async updateCustomAttributeTestPlanProjectRelations (projectId: string, updateCustomAttributeTestPlanProjectRelationsRequest?: UpdateCustomAttributeTestPlanProjectRelationsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateCustomAttributeTestPlanProjectRelations (projectId: string, customAttributeTestPlanProjectRelationPutModel?: CustomAttributeTestPlanProjectRelationPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -451,7 +451,7 @@ export class ProjectTestPlanAttributesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateCustomAttributeTestPlanProjectRelationsRequest, "UpdateCustomAttributeTestPlanProjectRelationsRequest")
+            body: ObjectSerializer.serialize(customAttributeTestPlanProjectRelationPutModel, "CustomAttributeTestPlanProjectRelationPutModel")
         };
 
         let authenticationPromise = Promise.resolve();

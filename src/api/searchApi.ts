@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2SearchGlobalSearchPostRequest } from '../model/apiV2SearchGlobalSearchPostRequest';
+import { GlobalSearchRequest } from '../model/globalSearchRequest';
 import { GlobalSearchResponse } from '../model/globalSearchResponse';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -92,9 +92,9 @@ export class SearchApi {
 
     /**
      * 
-     * @param apiV2SearchGlobalSearchPostRequest 
+     * @param globalSearchRequest 
      */
-    public async apiV2SearchGlobalSearchPost (apiV2SearchGlobalSearchPostRequest?: ApiV2SearchGlobalSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
+    public async apiV2SearchGlobalSearchPost (globalSearchRequest?: GlobalSearchRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/search/globalSearch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -118,7 +118,7 @@ export class SearchApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2SearchGlobalSearchPostRequest, "ApiV2SearchGlobalSearchPostRequest")
+            body: ObjectSerializer.serialize(globalSearchRequest, "GlobalSearchRequest")
         };
 
         let authenticationPromise = Promise.resolve();

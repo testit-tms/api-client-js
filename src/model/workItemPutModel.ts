@@ -16,7 +16,7 @@ import { AutoTestIdModel } from './autoTestIdModel';
 import { IterationPutModel } from './iterationPutModel';
 import { LinkPutModel } from './linkPutModel';
 import { StepPutModel } from './stepPutModel';
-import { TagShortModel } from './tagShortModel';
+import { TagPutModel } from './tagPutModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -34,7 +34,7 @@ export class WorkItemPutModel {
     'postconditionSteps': Array<StepPutModel>;
     'duration': number;
     'attributes': { [key: string]: any; };
-    'tags': Array<TagShortModel>;
+    'tags': Array<TagPutModel>;
     'links': Array<LinkPutModel>;
     'name': string;
 
@@ -109,7 +109,7 @@ export class WorkItemPutModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagShortModel>"
+            "type": "Array<TagPutModel>"
         },
         {
             "name": "links",

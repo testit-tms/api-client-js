@@ -15,10 +15,10 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2CustomAttributesTemplatesPostRequest } from '../model/apiV2CustomAttributesTemplatesPostRequest';
-import { ApiV2CustomAttributesTemplatesPutRequest } from '../model/apiV2CustomAttributesTemplatesPutRequest';
-import { ApiV2CustomAttributesTemplatesSearchPostRequest } from '../model/apiV2CustomAttributesTemplatesSearchPostRequest';
 import { CustomAttributeTemplateModel } from '../model/customAttributeTemplateModel';
+import { CustomAttributeTemplatePostModel } from '../model/customAttributeTemplatePostModel';
+import { CustomAttributeTemplatePutModel } from '../model/customAttributeTemplatePutModel';
+import { CustomAttributeTemplateSearchQueryModel } from '../model/customAttributeTemplateSearchQueryModel';
 import { NoContentResult } from '../model/noContentResult';
 import { ProblemDetails } from '../model/problemDetails';
 import { SearchCustomAttributeTemplateGetModel } from '../model/searchCustomAttributeTemplateGetModel';
@@ -462,9 +462,9 @@ export class CustomAttributeTemplatesApi {
     /**
      * <br>Use case  <br>User sets attribute template parameters (listed in request example)  <br>User runs method execution  <br>System creates attribute template  <br>System returns attribute template model (example listed in response parameters)
      * @summary Create CustomAttributeTemplate
-     * @param apiV2CustomAttributesTemplatesPostRequest 
+     * @param customAttributeTemplatePostModel 
      */
-    public async apiV2CustomAttributesTemplatesPost (apiV2CustomAttributesTemplatesPostRequest?: ApiV2CustomAttributesTemplatesPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
+    public async apiV2CustomAttributesTemplatesPost (customAttributeTemplatePostModel?: CustomAttributeTemplatePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -488,7 +488,7 @@ export class CustomAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2CustomAttributesTemplatesPostRequest, "ApiV2CustomAttributesTemplatesPostRequest")
+            body: ObjectSerializer.serialize(customAttributeTemplatePostModel, "CustomAttributeTemplatePostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -529,9 +529,9 @@ export class CustomAttributeTemplatesApi {
     /**
      * 
      * @summary Update custom attributes template
-     * @param apiV2CustomAttributesTemplatesPutRequest 
+     * @param customAttributeTemplatePutModel 
      */
-    public async apiV2CustomAttributesTemplatesPut (apiV2CustomAttributesTemplatesPutRequest?: ApiV2CustomAttributesTemplatesPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesPut (customAttributeTemplatePutModel?: CustomAttributeTemplatePutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -555,7 +555,7 @@ export class CustomAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2CustomAttributesTemplatesPutRequest, "ApiV2CustomAttributesTemplatesPutRequest")
+            body: ObjectSerializer.serialize(customAttributeTemplatePutModel, "CustomAttributeTemplatePutModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -600,9 +600,9 @@ export class CustomAttributeTemplatesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2CustomAttributesTemplatesSearchPostRequest 
+     * @param customAttributeTemplateSearchQueryModel 
      */
-    public async apiV2CustomAttributesTemplatesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2CustomAttributesTemplatesSearchPostRequest?: ApiV2CustomAttributesTemplatesSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SearchCustomAttributeTemplateGetModel>;  }> {
+    public async apiV2CustomAttributesTemplatesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeTemplateSearchQueryModel?: CustomAttributeTemplateSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SearchCustomAttributeTemplateGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -646,7 +646,7 @@ export class CustomAttributeTemplatesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2CustomAttributesTemplatesSearchPostRequest, "ApiV2CustomAttributesTemplatesSearchPostRequest")
+            body: ObjectSerializer.serialize(customAttributeTemplateSearchQueryModel, "CustomAttributeTemplateSearchQueryModel")
         };
 
         let authenticationPromise = Promise.resolve();

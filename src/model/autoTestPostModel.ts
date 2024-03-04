@@ -25,6 +25,10 @@ export class AutoTestPostModel {
     */
     'shouldCreateWorkItem'?: boolean | null;
     /**
+    * Key value pair of custom work item attributes
+    */
+    'attributes'?: { [key: string]: any | null; } | null;
+    /**
     * External ID of the autotest
     */
     'externalId': string;
@@ -93,6 +97,11 @@ export class AutoTestPostModel {
             "name": "shouldCreateWorkItem",
             "baseName": "shouldCreateWorkItem",
             "type": "boolean"
+        },
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "{ [key: string]: any | null; }"
         },
         {
             "name": "externalId",

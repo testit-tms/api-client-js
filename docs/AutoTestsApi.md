@@ -28,7 +28,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2AutoTestsFlakyBulkPost"></a>
 # **apiV2AutoTestsFlakyBulkPost**
-> apiV2AutoTestsFlakyBulkPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_autoTests\_flaky\_bulk\_post\_request)
+> apiV2AutoTestsFlakyBulkPost(Skip, Take, OrderBy, SearchField, SearchValue, FlakyBulkModel)
 
 Set \&quot;Flaky\&quot; status for multiple autotests
 
@@ -43,7 +43,7 @@ Set \&quot;Flaky\&quot; status for multiple autotests
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_autoTests\_flaky\_bulk\_post\_request** | [**_api_v2_autoTests_flaky_bulk_post_request**](../Models/_api_v2_autoTests_flaky_bulk_post_request.md)|  | [optional] |
+| **FlakyBulkModel** | [**FlakyBulkModel**](../Models/FlakyBulkModel.md)|  | [optional] |
 
 ### Return type
 
@@ -88,7 +88,7 @@ null (empty response body)
 
 <a name="apiV2AutoTestsIdTestResultsSearchPost"></a>
 # **apiV2AutoTestsIdTestResultsSearchPost**
-> List apiV2AutoTestsIdTestResultsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_autoTests\_\_id\_\_testResults\_search\_post\_request)
+> List apiV2AutoTestsIdTestResultsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, AutotestHistoricalResultSelectModel)
 
 Get test results history for autotest
 
@@ -104,7 +104,7 @@ Get test results history for autotest
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_autoTests\_\_id\_\_testResults\_search\_post\_request** | [**_api_v2_autoTests__id__testResults_search_post_request**](../Models/_api_v2_autoTests__id__testResults_search_post_request.md)|  | [optional] |
+| **AutotestHistoricalResultSelectModel** | [**AutotestHistoricalResultSelectModel**](../Models/AutotestHistoricalResultSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -176,7 +176,7 @@ null (empty response body)
 
 <a name="apiV2AutoTestsSearchPost"></a>
 # **apiV2AutoTestsSearchPost**
-> List apiV2AutoTestsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_autoTests\_search\_post\_request)
+> List apiV2AutoTestsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, AutotestsSelectModel)
 
 Search for autotests
 
@@ -189,7 +189,7 @@ Search for autotests
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_autoTests\_search\_post\_request** | [**_api_v2_autoTests_search_post_request**](../Models/_api_v2_autoTests_search_post_request.md)|  | [optional] |
+| **AutotestsSelectModel** | [**AutotestsSelectModel**](../Models/AutotestsSelectModel.md)|  | [optional] |
 
 ### Return type
 
@@ -206,7 +206,7 @@ Search for autotests
 
 <a name="createAutoTest"></a>
 # **createAutoTest**
-> AutoTestModel createAutoTest(CreateAutoTest\_request)
+> AutoTestModel createAutoTest(AutoTestPostModel)
 
 Create autotest
 
@@ -216,7 +216,7 @@ Create autotest
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateAutoTest\_request** | [**CreateAutoTest_request**](../Models/CreateAutoTest_request.md)|  | [optional] |
+| **AutoTestPostModel** | [**AutoTestPostModel**](../Models/AutoTestPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -541,7 +541,7 @@ Get work items linked to autotest
 
 <a name="linkAutoTestToWorkItem"></a>
 # **linkAutoTestToWorkItem**
-> linkAutoTestToWorkItem(id, LinkAutoTestToWorkItem\_request)
+> linkAutoTestToWorkItem(id, WorkItemIdModel)
 
 Link autotest with work items
 
@@ -552,7 +552,7 @@ Link autotest with work items
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Autotest internal (UUID) or global (integer) identifier | [default to null] |
-| **LinkAutoTestToWorkItem\_request** | [**LinkAutoTestToWorkItem_request**](../Models/LinkAutoTestToWorkItem_request.md)|  | [optional] |
+| **WorkItemIdModel** | [**WorkItemIdModel**](../Models/WorkItemIdModel.md)|  | [optional] |
 
 ### Return type
 
@@ -569,7 +569,7 @@ null (empty response body)
 
 <a name="updateAutoTest"></a>
 # **updateAutoTest**
-> updateAutoTest(UpdateAutoTest\_request)
+> updateAutoTest(AutoTestPutModel)
 
 Update autotest
 
@@ -579,7 +579,7 @@ Update autotest
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateAutoTest\_request** | [**UpdateAutoTest_request**](../Models/UpdateAutoTest_request.md)|  | [optional] |
+| **AutoTestPutModel** | [**AutoTestPutModel**](../Models/AutoTestPutModel.md)|  | [optional] |
 
 ### Return type
 

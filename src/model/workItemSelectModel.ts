@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
+import { WorkItemFilterModel } from './workItemFilterModel';
 import { WorkItemLocalSelectModelExtractionModel } from './workItemLocalSelectModelExtractionModel';
-import { WorkItemSelectModelFilter } from './workItemSelectModelFilter';
 
 /**
 * Model containing options to filter work items
 */
 export class WorkItemSelectModel {
-    'filter': WorkItemSelectModelFilter;
+    'filter': WorkItemFilterModel;
     'extractionModel'?: WorkItemLocalSelectModelExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
@@ -27,7 +27,7 @@ export class WorkItemSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "WorkItemSelectModelFilter"
+            "type": "WorkItemFilterModel"
         },
         {
             "name": "extractionModel",

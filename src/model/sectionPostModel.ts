@@ -11,14 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { StepPutModel } from './stepPutModel';
+import { AttachmentPutModel } from './attachmentPutModel';
+import { StepPostModel } from './stepPostModel';
 
 export class SectionPostModel {
     'name': string;
     'projectId': string;
     'parentId'?: string | null;
-    'preconditionSteps'?: Array<StepPutModel> | null;
-    'postconditionSteps'?: Array<StepPutModel> | null;
+    'preconditionSteps'?: Array<StepPostModel> | null;
+    'postconditionSteps'?: Array<StepPostModel> | null;
+    'attachments': Array<AttachmentPutModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -41,12 +43,17 @@ export class SectionPostModel {
         {
             "name": "preconditionSteps",
             "baseName": "preconditionSteps",
-            "type": "Array<StepPutModel>"
+            "type": "Array<StepPostModel>"
         },
         {
             "name": "postconditionSteps",
             "baseName": "postconditionSteps",
-            "type": "Array<StepPutModel>"
+            "type": "Array<StepPostModel>"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AttachmentPutModel>"
         }    ];
 
     static getAttributeTypeMap() {

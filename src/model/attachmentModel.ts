@@ -46,10 +46,6 @@ export class AttachmentModel {
     */
     'name': string;
     /**
-    * Indicates whether the attachment is temporary (may be automatically deleted)
-    */
-    'isTemp': boolean;
-    /**
     * Unique ID of the attachment
     */
     'id': string;
@@ -96,11 +92,6 @@ export class AttachmentModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
-        },
-        {
-            "name": "isTemp",
-            "baseName": "isTemp",
-            "type": "boolean"
         },
         {
             "name": "id",

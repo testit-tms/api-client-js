@@ -15,21 +15,21 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2TestRunsIdStatisticsFilterPostRequest } from '../model/apiV2TestRunsIdStatisticsFilterPostRequest';
-import { ApiV2TestRunsIdTestResultsBulkPutRequest } from '../model/apiV2TestRunsIdTestResultsBulkPutRequest';
-import { ApiV2TestRunsSearchPostRequest } from '../model/apiV2TestRunsSearchPostRequest';
-import { ApiV2TestRunsUpdateMultiplePostRequest } from '../model/apiV2TestRunsUpdateMultiplePostRequest';
 import { AutoTestResultsForTestRunModel } from '../model/autoTestResultsForTestRunModel';
-import { CreateAndFillByAutoTestsRequest } from '../model/createAndFillByAutoTestsRequest';
-import { CreateAndFillByConfigurationsRequest } from '../model/createAndFillByConfigurationsRequest';
-import { CreateAndFillByWorkItemsRequest } from '../model/createAndFillByWorkItemsRequest';
-import { CreateEmptyRequest } from '../model/createEmptyRequest';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestPointResultModel } from '../model/testPointResultModel';
+import { TestResultsLocalFilterModel } from '../model/testResultsLocalFilterModel';
 import { TestResultsStatisticsGetModel } from '../model/testResultsStatisticsGetModel';
+import { TestRunFillByAutoTestsPostModel } from '../model/testRunFillByAutoTestsPostModel';
+import { TestRunFillByConfigurationsPostModel } from '../model/testRunFillByConfigurationsPostModel';
+import { TestRunFillByWorkItemsPostModel } from '../model/testRunFillByWorkItemsPostModel';
+import { TestRunFilterModel } from '../model/testRunFilterModel';
 import { TestRunShortGetModel } from '../model/testRunShortGetModel';
+import { TestRunTestResultsPartialBulkSetModel } from '../model/testRunTestResultsPartialBulkSetModel';
+import { TestRunUpdateMultipleModel } from '../model/testRunUpdateMultipleModel';
 import { TestRunV2GetModel } from '../model/testRunV2GetModel';
-import { UpdateEmptyRequest } from '../model/updateEmptyRequest';
+import { TestRunV2PostShortModel } from '../model/testRunV2PostShortModel';
+import { TestRunV2PutModel } from '../model/testRunV2PutModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -108,9 +108,9 @@ export class TestRunsApi {
      * 
      * @summary Search for the test run test results and build statistics
      * @param id Test run unique ID
-     * @param apiV2TestRunsIdStatisticsFilterPostRequest 
+     * @param testResultsLocalFilterModel 
      */
-    public async apiV2TestRunsIdStatisticsFilterPost (id: string, apiV2TestRunsIdStatisticsFilterPostRequest?: ApiV2TestRunsIdStatisticsFilterPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
+    public async apiV2TestRunsIdStatisticsFilterPost (id: string, testResultsLocalFilterModel?: TestResultsLocalFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/statistics/filter'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -140,7 +140,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestRunsIdStatisticsFilterPostRequest, "ApiV2TestRunsIdStatisticsFilterPostRequest")
+            body: ObjectSerializer.serialize(testResultsLocalFilterModel, "TestResultsLocalFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -254,9 +254,9 @@ export class TestRunsApi {
      * 
      * @summary Partial edit of multiple test results in the test run
      * @param id Test run unique ID
-     * @param apiV2TestRunsIdTestResultsBulkPutRequest 
+     * @param testRunTestResultsPartialBulkSetModel 
      */
-    public async apiV2TestRunsIdTestResultsBulkPut (id: string, apiV2TestRunsIdTestResultsBulkPutRequest?: ApiV2TestRunsIdTestResultsBulkPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsIdTestResultsBulkPut (id: string, testRunTestResultsPartialBulkSetModel?: TestRunTestResultsPartialBulkSetModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testResults/bulk'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -286,7 +286,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestRunsIdTestResultsBulkPutRequest, "ApiV2TestRunsIdTestResultsBulkPutRequest")
+            body: ObjectSerializer.serialize(testRunTestResultsPartialBulkSetModel, "TestRunTestResultsPartialBulkSetModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -403,9 +403,9 @@ export class TestRunsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param apiV2TestRunsSearchPostRequest 
+     * @param testRunFilterModel 
      */
-    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, apiV2TestRunsSearchPostRequest?: ApiV2TestRunsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortGetModel>;  }> {
+    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunFilterModel?: TestRunFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -449,7 +449,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestRunsSearchPostRequest, "ApiV2TestRunsSearchPostRequest")
+            body: ObjectSerializer.serialize(testRunFilterModel, "TestRunFilterModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -490,9 +490,9 @@ export class TestRunsApi {
     /**
      * 
      * @summary Update multiple test runs
-     * @param apiV2TestRunsUpdateMultiplePostRequest 
+     * @param testRunUpdateMultipleModel 
      */
-    public async apiV2TestRunsUpdateMultiplePost (apiV2TestRunsUpdateMultiplePostRequest?: ApiV2TestRunsUpdateMultiplePostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsUpdateMultiplePost (testRunUpdateMultipleModel?: TestRunUpdateMultipleModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/updateMultiple';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -509,7 +509,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestRunsUpdateMultiplePostRequest, "ApiV2TestRunsUpdateMultiplePostRequest")
+            body: ObjectSerializer.serialize(testRunUpdateMultipleModel, "TestRunUpdateMultipleModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -620,9 +620,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @summary Create test runs based on autotests and configurations
-     * @param createAndFillByAutoTestsRequest 
+     * @param testRunFillByAutoTestsPostModel 
      */
-    public async createAndFillByAutoTests (createAndFillByAutoTestsRequest?: CreateAndFillByAutoTestsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByAutoTests (testRunFillByAutoTestsPostModel?: TestRunFillByAutoTestsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byAutoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -646,7 +646,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createAndFillByAutoTestsRequest, "CreateAndFillByAutoTestsRequest")
+            body: ObjectSerializer.serialize(testRunFillByAutoTestsPostModel, "TestRunFillByAutoTestsPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -687,9 +687,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @summary Create test runs picking the needed test points
-     * @param createAndFillByConfigurationsRequest 
+     * @param testRunFillByConfigurationsPostModel 
      */
-    public async createAndFillByConfigurations (createAndFillByConfigurationsRequest?: CreateAndFillByConfigurationsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByConfigurations (testRunFillByConfigurationsPostModel?: TestRunFillByConfigurationsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byConfigurations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -713,7 +713,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createAndFillByConfigurationsRequest, "CreateAndFillByConfigurationsRequest")
+            body: ObjectSerializer.serialize(testRunFillByConfigurationsPostModel, "TestRunFillByConfigurationsPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -754,9 +754,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
      * @summary Create test run based on configurations and work items
-     * @param createAndFillByWorkItemsRequest 
+     * @param testRunFillByWorkItemsPostModel 
      */
-    public async createAndFillByWorkItems (createAndFillByWorkItemsRequest?: CreateAndFillByWorkItemsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByWorkItems (testRunFillByWorkItemsPostModel?: TestRunFillByWorkItemsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byWorkItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -780,7 +780,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createAndFillByWorkItemsRequest, "CreateAndFillByWorkItemsRequest")
+            body: ObjectSerializer.serialize(testRunFillByWorkItemsPostModel, "TestRunFillByWorkItemsPostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -821,9 +821,9 @@ export class TestRunsApi {
     /**
      * <br>Use case  <br>User sets test run model (listed in the request example)  <br>User runs method execution  <br>System creates test run  <br>System returns test run model
      * @summary Create empty TestRun
-     * @param createEmptyRequest 
+     * @param testRunV2PostShortModel 
      */
-    public async createEmpty (createEmptyRequest?: CreateEmptyRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createEmpty (testRunV2PostShortModel?: TestRunV2PostShortModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -847,7 +847,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createEmptyRequest, "CreateEmptyRequest")
+            body: ObjectSerializer.serialize(testRunV2PostShortModel, "TestRunV2PostShortModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1176,9 +1176,9 @@ export class TestRunsApi {
     /**
      * <br>Use case  <br>User sets test run properties (listed in the request example)  <br>User runs method execution  <br>System updates test run  <br>System returns returns no content response
      * @summary Update empty TestRun
-     * @param updateEmptyRequest 
+     * @param testRunV2PutModel 
      */
-    public async updateEmpty (updateEmptyRequest?: UpdateEmptyRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateEmpty (testRunV2PutModel?: TestRunV2PutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1202,7 +1202,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(updateEmptyRequest, "UpdateEmptyRequest")
+            body: ObjectSerializer.serialize(testRunV2PutModel, "TestRunV2PutModel")
         };
 
         let authenticationPromise = Promise.resolve();

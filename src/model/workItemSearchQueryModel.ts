@@ -39,7 +39,7 @@ export class WorkItemSearchQueryModel {
     /**
     * Custom attributes of work item
     */
-    'attributes'?: { [key: string]: Array<string>; } | null;
+    'attributes'?: { [key: string]: Array<string> | null; } | null;
     /**
     * Is result must consist of only actual/deleted work items
     */
@@ -111,7 +111,7 @@ export class WorkItemSearchQueryModel {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: Array<string>; }"
+            "type": "{ [key: string]: Array<string> | null; }"
         },
         {
             "name": "isDeleted",

@@ -11,11 +11,11 @@
  */
 
 import { RequestFile } from './models';
-import { ApiV2ProjectsProjectIdTestPlansSearchPostRequest } from './apiV2ProjectsProjectIdTestPlansSearchPostRequest';
+import { ProjectTestPlansFilterModel } from './projectTestPlansFilterModel';
 import { TestPlanExtractionModel } from './testPlanExtractionModel';
 
 export class TestPlanSelectModel {
-    'filter': ApiV2ProjectsProjectIdTestPlansSearchPostRequest;
+    'filter': ProjectTestPlansFilterModel;
     'extractionModel'?: TestPlanExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
@@ -24,7 +24,7 @@ export class TestPlanSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "ApiV2ProjectsProjectIdTestPlansSearchPostRequest"
+            "type": "ProjectTestPlansFilterModel"
         },
         {
             "name": "extractionModel",

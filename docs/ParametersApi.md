@@ -188,7 +188,7 @@ This endpoint does not need any parameter.
 
 <a name="apiV2ParametersSearchGroupsPost"></a>
 # **apiV2ParametersSearchGroupsPost**
-> List apiV2ParametersSearchGroupsPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_parameters\_search\_post\_request)
+> List apiV2ParametersSearchGroupsPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterFilterModel)
 
 Search for parameters as group
 
@@ -201,7 +201,7 @@ Search for parameters as group
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_parameters\_search\_post\_request** | [**_api_v2_parameters_search_post_request**](../Models/_api_v2_parameters_search_post_request.md)|  | [optional] |
+| **ParameterFilterModel** | [**ParameterFilterModel**](../Models/ParameterFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -218,7 +218,7 @@ Search for parameters as group
 
 <a name="apiV2ParametersSearchPost"></a>
 # **apiV2ParametersSearchPost**
-> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, \_api\_v2\_parameters\_search\_post\_request)
+> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterFilterModel)
 
 Search for parameters
 
@@ -231,7 +231,7 @@ Search for parameters
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **\_api\_v2\_parameters\_search\_post\_request** | [**_api_v2_parameters_search_post_request**](../Models/_api_v2_parameters_search_post_request.md)|  | [optional] |
+| **ParameterFilterModel** | [**ParameterFilterModel**](../Models/ParameterFilterModel.md)|  | [optional] |
 
 ### Return type
 
@@ -248,7 +248,7 @@ Search for parameters
 
 <a name="createParameter"></a>
 # **createParameter**
-> ParameterModel createParameter(CreateParameter\_request)
+> ParameterModel createParameter(ParameterPostModel)
 
 Create parameter
 
@@ -258,7 +258,7 @@ Create parameter
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **CreateParameter\_request** | [**CreateParameter_request**](../Models/CreateParameter_request.md)|  | [optional] |
+| **ParameterPostModel** | [**ParameterPostModel**](../Models/ParameterPostModel.md)|  | [optional] |
 
 ### Return type
 
@@ -415,7 +415,7 @@ Get parameter by ID
 
 <a name="updateParameter"></a>
 # **updateParameter**
-> updateParameter(UpdateParameter\_request)
+> updateParameter(ParameterPutModel)
 
 Update parameter
 
@@ -425,7 +425,7 @@ Update parameter
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UpdateParameter\_request** | [**UpdateParameter_request**](../Models/UpdateParameter_request.md)|  | [optional] |
+| **ParameterPutModel** | [**ParameterPutModel**](../Models/ParameterPutModel.md)|  | [optional] |
 
 ### Return type
 

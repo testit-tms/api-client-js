@@ -15,7 +15,7 @@
 | **lockedDate** | **Date** |  | [optional] [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **lockedById** | **UUID** |  | [optional] [default to null] |
-| **tags** | [**List**](TagShortModel.md) |  | [optional] [default to null] |
+| **tags** | [**List**](TagPostModel.md) |  | [optional] [default to null] |
 | **name** | **String** |  | [default to null] |
 | **startDate** | **Date** | Used for analytics | [optional] [default to null] |
 | **endDate** | **Date** | Used for analytics | [optional] [default to null] |

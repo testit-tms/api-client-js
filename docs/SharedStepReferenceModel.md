@@ -20,7 +20,7 @@
 | **versionId** | **UUID** | used for versioning changes in workitem | [default to null] |
 | **isAutomated** | **Boolean** |  | [default to null] |
 | **sectionId** | **UUID** |  | [default to null] |
-| **tags** | [**List**](TagShortModel.md) |  | [optional] [default to null] |
+| **tags** | [**List**](TagModel.md) |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

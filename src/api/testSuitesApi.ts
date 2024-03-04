@@ -15,17 +15,17 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { ApiV2ProjectsProjectIdWorkItemsSearchPostRequest } from '../model/apiV2ProjectsProjectIdWorkItemsSearchPostRequest';
-import { ApiV2TestSuitesPostRequest } from '../model/apiV2TestSuitesPostRequest';
-import { ApiV2TestSuitesPutRequest } from '../model/apiV2TestSuitesPutRequest';
 import { ConfigurationModel } from '../model/configurationModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
-import { SearchWorkItemsRequest } from '../model/searchWorkItemsRequest';
 import { TestPointByTestSuiteModel } from '../model/testPointByTestSuiteModel';
 import { TestResultV2ShortModel } from '../model/testResultV2ShortModel';
 import { TestSuiteV2GetModel } from '../model/testSuiteV2GetModel';
+import { TestSuiteV2PostModel } from '../model/testSuiteV2PostModel';
+import { TestSuiteV2PutModel } from '../model/testSuiteV2PutModel';
+import { TestSuiteWorkItemsSearchModel } from '../model/testSuiteWorkItemsSearchModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
+import { WorkItemSelectModel } from '../model/workItemSelectModel';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -104,9 +104,9 @@ export class TestSuitesApi {
      * 
      * @summary Add test-points to test suite
      * @param id Test suite internal identifier
-     * @param apiV2ProjectsProjectIdWorkItemsSearchPostRequest Filter object to retrieve work items for test-suite\&#39;s project
+     * @param workItemSelectModel Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsToTestSuite (id: string, apiV2ProjectsProjectIdWorkItemsSearchPostRequest?: ApiV2ProjectsProjectIdWorkItemsSearchPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsToTestSuite (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/test-points'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -136,7 +136,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2ProjectsProjectIdWorkItemsSearchPostRequest, "ApiV2ProjectsProjectIdWorkItemsSearchPostRequest")
+            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -393,9 +393,9 @@ export class TestSuitesApi {
     /**
      * 
      * @summary Create test suite
-     * @param apiV2TestSuitesPostRequest 
+     * @param testSuiteV2PostModel 
      */
-    public async apiV2TestSuitesPost (apiV2TestSuitesPostRequest?: ApiV2TestSuitesPostRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
+    public async apiV2TestSuitesPost (testSuiteV2PostModel?: TestSuiteV2PostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -419,7 +419,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestSuitesPostRequest, "ApiV2TestSuitesPostRequest")
+            body: ObjectSerializer.serialize(testSuiteV2PostModel, "TestSuiteV2PostModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -460,9 +460,9 @@ export class TestSuitesApi {
     /**
      * 
      * @summary Edit test suite
-     * @param apiV2TestSuitesPutRequest 
+     * @param testSuiteV2PutModel 
      */
-    public async apiV2TestSuitesPut (apiV2TestSuitesPutRequest?: ApiV2TestSuitesPutRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesPut (testSuiteV2PutModel?: TestSuiteV2PutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -486,7 +486,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(apiV2TestSuitesPutRequest, "ApiV2TestSuitesPutRequest")
+            body: ObjectSerializer.serialize(testSuiteV2PutModel, "TestSuiteV2PutModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -891,9 +891,9 @@ export class TestSuitesApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param searchWorkItemsRequest 
+     * @param testSuiteWorkItemsSearchModel 
      */
-    public async searchWorkItems (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchWorkItemsRequest?: SearchWorkItemsRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async searchWorkItems (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testSuiteWorkItemsSearchModel?: TestSuiteWorkItemsSearchModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/workItems/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -943,7 +943,7 @@ export class TestSuitesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(searchWorkItemsRequest, "SearchWorkItemsRequest")
+            body: ObjectSerializer.serialize(testSuiteWorkItemsSearchModel, "TestSuiteWorkItemsSearchModel")
         };
 
         let authenticationPromise = Promise.resolve();

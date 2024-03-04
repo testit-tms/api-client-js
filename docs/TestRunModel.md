@@ -7,7 +7,7 @@
 | **autoTestsCount** | **Integer** |  | [default to null] |
 | **testSuiteIds** | **List** |  | [optional] [default to null] |
 | **isAutomated** | **Boolean** |  | [default to null] |
-| **analytic** | [**TestRunModel_analytic**](TestRunModel_analytic.md) |  | [default to null] |
+| **analytic** | [**TestRunAnalyticResultModel**](TestRunAnalyticResultModel.md) |  | [default to null] |
 | **testResults** | [**List**](TestResultModel.md) |  | [optional] [default to null] |
 | **testPlan** | [**TestPlanModel**](TestPlanModel.md) |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [default to null] |

@@ -11,15 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { SetOfAttachmentIds } from './setOfAttachmentIds';
-import { SetOfLinks } from './setOfLinks';
-import { TestRunSelectionModel } from './testRunSelectionModel';
+import { TestRunSelectModel } from './testRunSelectModel';
+import { UpdateAttachmentShortModel } from './updateAttachmentShortModel';
+import { UpdateLinkShortModel } from './updateLinkShortModel';
 
 export class TestRunUpdateMultipleModel {
-    'selectModel': TestRunSelectionModel;
+    'selectModel': TestRunSelectModel;
     'description'?: string | null;
-    'attachmentUpdateScheme': SetOfAttachmentIds;
-    'linkUpdateScheme': SetOfLinks;
+    'attachmentUpdateScheme': UpdateAttachmentShortModel;
+    'linkUpdateScheme': UpdateLinkShortModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -27,7 +27,7 @@ export class TestRunUpdateMultipleModel {
         {
             "name": "selectModel",
             "baseName": "selectModel",
-            "type": "TestRunSelectionModel"
+            "type": "TestRunSelectModel"
         },
         {
             "name": "description",
@@ -37,12 +37,12 @@ export class TestRunUpdateMultipleModel {
         {
             "name": "attachmentUpdateScheme",
             "baseName": "attachmentUpdateScheme",
-            "type": "SetOfAttachmentIds"
+            "type": "UpdateAttachmentShortModel"
         },
         {
             "name": "linkUpdateScheme",
             "baseName": "linkUpdateScheme",
-            "type": "SetOfLinks"
+            "type": "UpdateLinkShortModel"
         }    ];
 
     static getAttributeTypeMap() {

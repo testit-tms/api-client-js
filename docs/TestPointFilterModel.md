@@ -7,6 +7,7 @@
 | **testSuiteIds** | **List** | Specifies a test point test suite IDs to search for | [optional] [default to null] |
 | **workItemGlobalIds** | **List** | Specifies a test point work item global IDs to search for | [optional] [default to null] |
 | **workItemMedianDuration** | [**TestPointFilterModel_workItemMedianDuration**](TestPointFilterModel_workItemMedianDuration.md) |  | [optional] [default to null] |
+| **workItemIsDeleted** | **Boolean** | Specifies a test point work item is deleted flag to search for | [optional] [default to null] |
 | **statuses** | [**List**](TestPointStatus.md) | Specifies a test point statuses to search for | [optional] [default to null] |
 | **priorities** | [**List**](WorkItemPriorityModel.md) | Specifies a test point priorities to search for | [optional] [default to null] |
 | **isAutomated** | **Boolean** | Specifies a test point automation status to search for | [optional] [default to null] |
