@@ -26,6 +26,10 @@ export class WorkItemShortModel {
     */
     'versionId': string;
     /**
+    * Work Item version number
+    */
+    'versionNumber': number;
+    /**
     * Work Item name
     */
     'name': string;
@@ -112,6 +116,11 @@ export class WorkItemShortModel {
             "name": "versionId",
             "baseName": "versionId",
             "type": "string"
+        },
+        {
+            "name": "versionNumber",
+            "baseName": "versionNumber",
+            "type": "number"
         },
         {
             "name": "name",

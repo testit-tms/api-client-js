@@ -19,6 +19,7 @@ export class PublicTestPointModel {
     'autoTestIds'?: Array<string> | null;
     'iterationId': string;
     'parameterModels'?: Array<ParameterShortModel> | null;
+    'id': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -47,6 +48,11 @@ export class PublicTestPointModel {
             "name": "parameterModels",
             "baseName": "parameterModels",
             "type": "Array<ParameterShortModel>"
+        },
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

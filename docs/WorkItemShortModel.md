@@ -5,6 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** | Work Item internal unique identifier | [default to null] |
 | **versionId** | **UUID** | Work Item version identifier | [default to null] |
+| **versionNumber** | **Integer** | Work Item version number | [default to null] |
 | **name** | **String** | Work Item name | [default to null] |
 | **entityTypeName** | **String** | Work Item type. Possible values: CheckLists, SharedSteps, TestCases | [default to null] |
 | **projectId** | **UUID** | Project unique identifier | [default to null] |

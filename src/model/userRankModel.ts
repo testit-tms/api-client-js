@@ -19,6 +19,7 @@ export class UserRankModel {
     'failedTestPoints': number;
     'skippedTestPoints': number;
     'blockedTestPoints': number;
+    'levelAvatarEnabled': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,6 +53,11 @@ export class UserRankModel {
             "name": "blockedTestPoints",
             "baseName": "blockedTestPoints",
             "type": "number"
+        },
+        {
+            "name": "levelAvatarEnabled",
+            "baseName": "levelAvatarEnabled",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

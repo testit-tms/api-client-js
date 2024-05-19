@@ -22,7 +22,7 @@ export class CustomAttributeModel {
     /**
     * Collection of the attribute options  <br />  Available for attributes of type `options` and `multiple options` only
     */
-    'options'?: Array<CustomAttributeOptionModel> | null;
+    'options': Array<CustomAttributeOptionModel>;
     'type': CustomAttributeTypesEnum;
     /**
     * Indicates if the attribute is deleted

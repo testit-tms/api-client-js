@@ -98,6 +98,7 @@ export * from './linkPutModel';
 export * from './linkShortModel';
 export * from './linkSubGetModel';
 export * from './linkType';
+export * from './namedEntityModel';
 export * from './noContentResult';
 export * from './notificationModel';
 export * from './notificationQueryFilterModel';
@@ -133,7 +134,6 @@ export * from './projectsFilterModelSharedStepsCount';
 export * from './projectsFilterModelTestCasesCount';
 export * from './publicTestPointModel';
 export * from './publicTestRunModel';
-export * from './requestData';
 export * from './requestTypeModel';
 export * from './searchAutoTestsQueryIncludesModel';
 export * from './searchCustomAttributeTemplateGetModel';
@@ -168,6 +168,7 @@ export * from './tagModel';
 export * from './tagPostModel';
 export * from './tagPutModel';
 export * from './tagSelectModel';
+export * from './tagShortModel';
 export * from './tagsFilterModel';
 export * from './tagsFilterModelCreatedDate';
 export * from './testPlanChangeModel';
@@ -222,8 +223,11 @@ export * from './testResultUpdateModel';
 export * from './testResultV2GetModel';
 export * from './testResultV2ShortModel';
 export * from './testResultsFilterModel';
+export * from './testResultsFilterModelCompletedOn';
 export * from './testResultsFilterModelCreatedDate';
 export * from './testResultsFilterModelDuration';
+export * from './testResultsFilterModelModifiedDate';
+export * from './testResultsFilterModelStartedOn';
 export * from './testResultsLocalFilterModel';
 export * from './testResultsStatisticsGetModel';
 export * from './testResultsStatisticsGetModelFailureCategories';
@@ -281,6 +285,7 @@ export * from './webHookLogModel';
 export * from './webHookModel';
 export * from './webHookPostModel';
 export * from './webHookTestModel';
+export * from './webhookResponse';
 export * from './webhookVariablesType';
 export * from './workItemChangeModel';
 export * from './workItemChangedAttributeViewModel';
@@ -431,6 +436,7 @@ import { LinkPutModel } from './linkPutModel';
 import { LinkShortModel } from './linkShortModel';
 import { LinkSubGetModel } from './linkSubGetModel';
 import { LinkType } from './linkType';
+import { NamedEntityModel } from './namedEntityModel';
 import { NoContentResult } from './noContentResult';
 import { NotificationModel } from './notificationModel';
 import { NotificationQueryFilterModel } from './notificationQueryFilterModel';
@@ -466,7 +472,6 @@ import { ProjectsFilterModelSharedStepsCount } from './projectsFilterModelShared
 import { ProjectsFilterModelTestCasesCount } from './projectsFilterModelTestCasesCount';
 import { PublicTestPointModel } from './publicTestPointModel';
 import { PublicTestRunModel } from './publicTestRunModel';
-import { RequestData } from './requestData';
 import { RequestTypeModel } from './requestTypeModel';
 import { SearchAutoTestsQueryIncludesModel } from './searchAutoTestsQueryIncludesModel';
 import { SearchCustomAttributeTemplateGetModel } from './searchCustomAttributeTemplateGetModel';
@@ -501,6 +506,7 @@ import { TagModel } from './tagModel';
 import { TagPostModel } from './tagPostModel';
 import { TagPutModel } from './tagPutModel';
 import { TagSelectModel } from './tagSelectModel';
+import { TagShortModel } from './tagShortModel';
 import { TagsFilterModel } from './tagsFilterModel';
 import { TagsFilterModelCreatedDate } from './tagsFilterModelCreatedDate';
 import { TestPlanChangeModel } from './testPlanChangeModel';
@@ -555,8 +561,11 @@ import { TestResultUpdateModel } from './testResultUpdateModel';
 import { TestResultV2GetModel } from './testResultV2GetModel';
 import { TestResultV2ShortModel } from './testResultV2ShortModel';
 import { TestResultsFilterModel } from './testResultsFilterModel';
+import { TestResultsFilterModelCompletedOn } from './testResultsFilterModelCompletedOn';
 import { TestResultsFilterModelCreatedDate } from './testResultsFilterModelCreatedDate';
 import { TestResultsFilterModelDuration } from './testResultsFilterModelDuration';
+import { TestResultsFilterModelModifiedDate } from './testResultsFilterModelModifiedDate';
+import { TestResultsFilterModelStartedOn } from './testResultsFilterModelStartedOn';
 import { TestResultsLocalFilterModel } from './testResultsLocalFilterModel';
 import { TestResultsStatisticsGetModel } from './testResultsStatisticsGetModel';
 import { TestResultsStatisticsGetModelFailureCategories } from './testResultsStatisticsGetModelFailureCategories';
@@ -614,6 +623,7 @@ import { WebHookLogModel } from './webHookLogModel';
 import { WebHookModel } from './webHookModel';
 import { WebHookPostModel } from './webHookPostModel';
 import { WebHookTestModel } from './webHookTestModel';
+import { WebhookResponse } from './webhookResponse';
 import { WebhookVariablesType } from './webhookVariablesType';
 import { WorkItemChangeModel } from './workItemChangeModel';
 import { WorkItemChangedAttributeViewModel } from './workItemChangedAttributeViewModel';
@@ -782,6 +792,7 @@ let typeMap: {[index: string]: any} = {
     "LinkPutModel": LinkPutModel,
     "LinkShortModel": LinkShortModel,
     "LinkSubGetModel": LinkSubGetModel,
+    "NamedEntityModel": NamedEntityModel,
     "NoContentResult": NoContentResult,
     "NotificationModel": NotificationModel,
     "NotificationQueryFilterModel": NotificationQueryFilterModel,
@@ -816,7 +827,6 @@ let typeMap: {[index: string]: any} = {
     "ProjectsFilterModelTestCasesCount": ProjectsFilterModelTestCasesCount,
     "PublicTestPointModel": PublicTestPointModel,
     "PublicTestRunModel": PublicTestRunModel,
-    "RequestData": RequestData,
     "SearchAutoTestsQueryIncludesModel": SearchAutoTestsQueryIncludesModel,
     "SearchCustomAttributeTemplateGetModel": SearchCustomAttributeTemplateGetModel,
     "SearchWebhooksQueryModel": SearchWebhooksQueryModel,
@@ -850,6 +860,7 @@ let typeMap: {[index: string]: any} = {
     "TagPostModel": TagPostModel,
     "TagPutModel": TagPutModel,
     "TagSelectModel": TagSelectModel,
+    "TagShortModel": TagShortModel,
     "TagsFilterModel": TagsFilterModel,
     "TagsFilterModelCreatedDate": TagsFilterModelCreatedDate,
     "TestPlanChangeModel": TestPlanChangeModel,
@@ -901,8 +912,11 @@ let typeMap: {[index: string]: any} = {
     "TestResultV2GetModel": TestResultV2GetModel,
     "TestResultV2ShortModel": TestResultV2ShortModel,
     "TestResultsFilterModel": TestResultsFilterModel,
+    "TestResultsFilterModelCompletedOn": TestResultsFilterModelCompletedOn,
     "TestResultsFilterModelCreatedDate": TestResultsFilterModelCreatedDate,
     "TestResultsFilterModelDuration": TestResultsFilterModelDuration,
+    "TestResultsFilterModelModifiedDate": TestResultsFilterModelModifiedDate,
+    "TestResultsFilterModelStartedOn": TestResultsFilterModelStartedOn,
     "TestResultsLocalFilterModel": TestResultsLocalFilterModel,
     "TestResultsStatisticsGetModel": TestResultsStatisticsGetModel,
     "TestResultsStatisticsGetModelFailureCategories": TestResultsStatisticsGetModelFailureCategories,
@@ -956,6 +970,7 @@ let typeMap: {[index: string]: any} = {
     "WebHookModel": WebHookModel,
     "WebHookPostModel": WebHookPostModel,
     "WebHookTestModel": WebHookTestModel,
+    "WebhookResponse": WebhookResponse,
     "WorkItemChangeModel": WorkItemChangeModel,
     "WorkItemChangedAttributeViewModel": WorkItemChangedAttributeViewModel,
     "WorkItemChangedFieldsViewModel": WorkItemChangedFieldsViewModel,

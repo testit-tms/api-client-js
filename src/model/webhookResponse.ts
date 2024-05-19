@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class RequestData {
+export class WebhookResponse {
     'uri'?: string | null;
     'statusCode': number;
     'requestBody'?: string | null;
@@ -55,7 +55,7 @@ export class RequestData {
         }    ];
 
     static getAttributeTypeMap() {
-        return RequestData.attributeTypeMap;
+        return WebhookResponse.attributeTypeMap;
     }
 }
 

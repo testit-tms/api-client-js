@@ -7,6 +7,9 @@
 | **autoTestGlobalIds** | **List** | Specifies an autotest global IDs to search results for | [optional] [default to null] |
 | **name** | **String** | Specifies an autotest name to search results for | [optional] [default to null] |
 | **createdDate** | [**TestResultsFilterModel_createdDate**](TestResultsFilterModel_createdDate.md) |  | [optional] [default to null] |
+| **modifiedDate** | [**TestResultsFilterModel_modifiedDate**](TestResultsFilterModel_modifiedDate.md) |  | [optional] [default to null] |
+| **startedOn** | [**TestResultsFilterModel_startedOn**](TestResultsFilterModel_startedOn.md) |  | [optional] [default to null] |
+| **completedOn** | [**TestResultsFilterModel_completedOn**](TestResultsFilterModel_completedOn.md) |  | [optional] [default to null] |
 | **duration** | [**TestResultsFilterModel_duration**](TestResultsFilterModel_duration.md) |  | [optional] [default to null] |
 | **resultReasons** | **List** | Specifies result reasons for searching test results | [optional] [default to null] |
 | **configurationIds** | **List** | Specifies a test result configuration IDs to search for | [optional] [default to null] |

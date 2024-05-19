@@ -26,6 +26,8 @@ export class PublicTestRunModel {
     'autoTests': Array<AutoTestModel>;
     'testPoints': Array<PublicTestPointModel>;
     'status': string;
+    'customParameters'?: { [key: string]: string; } | null;
+    'testRunDescription'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -78,6 +80,16 @@ export class PublicTestRunModel {
         {
             "name": "status",
             "baseName": "status",
+            "type": "string"
+        },
+        {
+            "name": "customParameters",
+            "baseName": "customParameters",
+            "type": "{ [key: string]: string; }"
+        },
+        {
+            "name": "testRunDescription",
+            "baseName": "testRunDescription",
             "type": "string"
         }    ];
 

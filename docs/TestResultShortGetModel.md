@@ -12,7 +12,11 @@
 | **outcome** | **String** | Outcome of the test result | [default to null] |
 | **resultReasons** | [**List**](AutotestResultReasonSubGetModel.md) | Collection of result reasons which the test result have | [default to null] |
 | **comment** | **String** | Comment to the test result | [optional] [default to null] |
-| **date** | **Date** | Date when the test result has been set | [default to null] |
+| **date** | **Date** | Date when the test result was completed or started or created | [default to null] |
+| **createdDate** | **Date** | Date when the test result has been created | [default to null] |
+| **modifiedDate** | **Date** | Date when the test result has been modified | [optional] [default to null] |
+| **startedOn** | **Date** | Date when the test result has been started | [optional] [default to null] |
+| **completedOn** | **Date** | Date when the test result has been completed | [optional] [default to null] |
 | **duration** | **Long** | Time which it took to run the test | [optional] [default to null] |
 | **links** | [**List**](LinkSubGetModel.md) | Collection of links attached to the test result | [default to null] |
 | **attachments** | [**List**](AttachmentModel.md) | Collection of files attached to the test result | [default to null] |

@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
 import { LinkModel } from './linkModel';
+import { NamedEntityModel } from './namedEntityModel';
 import { TestResultV2GetModel } from './testResultV2GetModel';
 import { TestRunState } from './testRunState';
 
@@ -36,6 +37,8 @@ export class TestRunV2GetModel {
     'createdByUserName'?: string | null;
     'attachments': Array<AttachmentModel>;
     'links': Array<LinkModel>;
+    'customParameters'?: { [key: string]: string; } | null;
+    'webhooks': Array<NamedEntityModel>;
     'id': string;
     'name': string;
     'description'?: string | null;
@@ -111,6 +114,16 @@ export class TestRunV2GetModel {
             "name": "links",
             "baseName": "links",
             "type": "Array<LinkModel>"
+        },
+        {
+            "name": "customParameters",
+            "baseName": "customParameters",
+            "type": "{ [key: string]: string; }"
+        },
+        {
+            "name": "webhooks",
+            "baseName": "webhooks",
+            "type": "Array<NamedEntityModel>"
         },
         {
             "name": "id",
