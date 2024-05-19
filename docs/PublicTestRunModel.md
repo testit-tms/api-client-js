@@ -13,6 +13,8 @@
 | **autoTests** | [**List**](AutoTestModel.md) |  | [default to null] |
 | **testPoints** | [**List**](PublicTestPointModel.md) |  | [default to null] |
 | **status** | **String** |  | [default to null] |
+| **customParameters** | **Map** |  | [optional] [default to null] |
+| **testRunDescription** | **String** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

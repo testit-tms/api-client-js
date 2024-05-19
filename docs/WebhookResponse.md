@@ -1,4 +1,4 @@
-# RequestData
+# WebhookResponse
 ## Properties
 
 | Name | Type | Description | Notes |

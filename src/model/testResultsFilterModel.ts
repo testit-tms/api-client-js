@@ -13,8 +13,11 @@
 import { RequestFile } from './models';
 import { FailureCategoryModel } from './failureCategoryModel';
 import { TestResultOutcome } from './testResultOutcome';
+import { TestResultsFilterModelCompletedOn } from './testResultsFilterModelCompletedOn';
 import { TestResultsFilterModelCreatedDate } from './testResultsFilterModelCreatedDate';
 import { TestResultsFilterModelDuration } from './testResultsFilterModelDuration';
+import { TestResultsFilterModelModifiedDate } from './testResultsFilterModelModifiedDate';
+import { TestResultsFilterModelStartedOn } from './testResultsFilterModelStartedOn';
 
 export class TestResultsFilterModel {
     /**
@@ -30,6 +33,9 @@ export class TestResultsFilterModel {
     */
     'name'?: string | null;
     'createdDate'?: TestResultsFilterModelCreatedDate | null;
+    'modifiedDate'?: TestResultsFilterModelModifiedDate | null;
+    'startedOn'?: TestResultsFilterModelStartedOn | null;
+    'completedOn'?: TestResultsFilterModelCompletedOn | null;
     'duration'?: TestResultsFilterModelDuration | null;
     /**
     * Specifies result reasons for searching test results
@@ -78,6 +84,21 @@ export class TestResultsFilterModel {
             "name": "createdDate",
             "baseName": "createdDate",
             "type": "TestResultsFilterModelCreatedDate"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "TestResultsFilterModelModifiedDate"
+        },
+        {
+            "name": "startedOn",
+            "baseName": "startedOn",
+            "type": "TestResultsFilterModelStartedOn"
+        },
+        {
+            "name": "completedOn",
+            "baseName": "completedOn",
+            "type": "TestResultsFilterModelCompletedOn"
         },
         {
             "name": "duration",

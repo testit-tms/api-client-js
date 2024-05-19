@@ -16,7 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
-import { TagModel } from '../model/tagModel';
+import { TagShortModel } from '../model/tagShortModel';
 import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
@@ -397,7 +397,7 @@ export class ProjectWorkItemsApi {
      * @param projectId Project internal (UUID) identifier
      * @param isDeleted 
      */
-    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/tags'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -452,13 +452,13 @@ export class ProjectWorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TagModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TagShortModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

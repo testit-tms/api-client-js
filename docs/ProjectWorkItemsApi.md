@@ -121,7 +121,7 @@ Get WorkItems Tags
 
 ### Return type
 
-[**List**](../Models/TagModel.md)
+[**List**](../Models/TagShortModel.md)
 
 ### Authorization
 

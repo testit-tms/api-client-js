@@ -16,12 +16,12 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
-import { RequestData } from '../model/requestData';
 import { SearchWebhooksQueryModel } from '../model/searchWebhooksQueryModel';
 import { WebHookEventType } from '../model/webHookEventType';
 import { WebHookModel } from '../model/webHookModel';
 import { WebHookPostModel } from '../model/webHookPostModel';
 import { WebHookTestModel } from '../model/webHookTestModel';
+import { WebhookResponse } from '../model/webhookResponse';
 import { WebhookVariablesType } from '../model/webhookVariablesType';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -622,7 +622,7 @@ export class WebhooksApi {
      * @summary Test webhook\'s url
      * @param webHookTestModel 
      */
-    public async apiV2WebhooksTestPost (webHookTestModel?: WebHookTestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RequestData;  }> {
+    public async apiV2WebhooksTestPost (webHookTestModel?: WebHookTestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebhookResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/test';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -668,13 +668,13 @@ export class WebhooksApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: RequestData;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: WebhookResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "RequestData");
+                            body = ObjectSerializer.deserialize(body, "WebhookResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

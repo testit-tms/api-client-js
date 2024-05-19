@@ -53,9 +53,25 @@ export class TestResultShortGetModel {
     */
     'comment'?: string | null;
     /**
-    * Date when the test result has been set
+    * Date when the test result was completed or started or created
     */
     'date': Date;
+    /**
+    * Date when the test result has been created
+    */
+    'createdDate': Date;
+    /**
+    * Date when the test result has been modified
+    */
+    'modifiedDate'?: Date | null;
+    /**
+    * Date when the test result has been started
+    */
+    'startedOn'?: Date | null;
+    /**
+    * Date when the test result has been completed
+    */
+    'completedOn'?: Date | null;
     /**
     * Time which it took to run the test
     */
@@ -120,6 +136,26 @@ export class TestResultShortGetModel {
         {
             "name": "date",
             "baseName": "date",
+            "type": "Date"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "Date"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "Date"
+        },
+        {
+            "name": "startedOn",
+            "baseName": "startedOn",
+            "type": "Date"
+        },
+        {
+            "name": "completedOn",
+            "baseName": "completedOn",
             "type": "Date"
         },
         {

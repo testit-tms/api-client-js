@@ -62,6 +62,10 @@ export class TestPointShortGetModel {
     */
     'testSuiteId': string;
     /**
+    * Name of the test suite
+    */
+    'testSuiteName': string;
+    /**
     * Unique ID of work item the test point represents
     */
     'workItemId': string;
@@ -73,6 +77,10 @@ export class TestPointShortGetModel {
     * Unique ID of work item version the test point represents
     */
     'workItemVersionId': string;
+    /**
+    * Number of work item version the test point represents
+    */
+    'workItemVersionNumber': number;
     /**
     * Median duration of work item the test point represents
     */
@@ -189,6 +197,11 @@ export class TestPointShortGetModel {
             "type": "string"
         },
         {
+            "name": "testSuiteName",
+            "baseName": "testSuiteName",
+            "type": "string"
+        },
+        {
             "name": "workItemId",
             "baseName": "workItemId",
             "type": "string"
@@ -202,6 +215,11 @@ export class TestPointShortGetModel {
             "name": "workItemVersionId",
             "baseName": "workItemVersionId",
             "type": "string"
+        },
+        {
+            "name": "workItemVersionNumber",
+            "baseName": "workItemVersionNumber",
+            "type": "number"
         },
         {
             "name": "workItemMedianDuration",

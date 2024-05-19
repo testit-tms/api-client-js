@@ -198,7 +198,7 @@ Get special variables for webhook event type
 
 <a name="apiV2WebhooksTestPost"></a>
 # **apiV2WebhooksTestPost**
-> RequestData apiV2WebhooksTestPost(WebHookTestModel)
+> WebhookResponse apiV2WebhooksTestPost(WebHookTestModel)
 
 Test webhook&#39;s url
 
@@ -210,7 +210,7 @@ Test webhook&#39;s url
 
 ### Return type
 
-[**RequestData**](../Models/RequestData.md)
+[**WebhookResponse**](../Models/WebhookResponse.md)
 
 ### Authorization
 

@@ -14,9 +14,11 @@
 | **tags** | **List** | Collection of the test point tags | [default to null] |
 | **links** | **List** | Collection of the test point links | [default to null] |
 | **testSuiteId** | **UUID** | Unique ID of test suite the test point assigned to | [default to null] |
+| **testSuiteName** | **String** | Name of the test suite | [default to null] |
 | **workItemId** | **UUID** | Unique ID of work item the test point represents | [default to null] |
 | **workItemGlobalId** | **Long** | Global ID of work item the test point represents | [default to null] |
 | **workItemVersionId** | **UUID** | Unique ID of work item version the test point represents | [default to null] |
+| **workItemVersionNumber** | **Integer** | Number of work item version the test point represents | [default to null] |
 | **workItemMedianDuration** | **Long** | Median duration of work item the test point represents | [optional] [default to null] |
 | **status** | [**TestPointStatus**](TestPointStatus.md) |  | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
