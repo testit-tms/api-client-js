@@ -5,7 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** | Unique ID of the attribute | [default to null] |
 | **options** | [**List**](CustomAttributeOptionModel.md) | Collection of the attribute options | [default to null] |
-| **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) |  | [default to null] |
+| **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) | Type of the attribute | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the attribute is deleted | [default to null] |
 | **name** | **String** | Name of the attribute | [default to null] |
 | **isEnabled** | **Boolean** | Indicates if the attribute is enabled | [default to null] |

@@ -11,7 +11,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite |
 | [**apiV2ProjectsIdFiltersGet**](ProjectsApi.md#apiV2ProjectsIdFiltersGet) | **GET** /api/v2/projects/{id}/filters | Get Project filters |
 | [**apiV2ProjectsIdPatch**](ProjectsApi.md#apiV2ProjectsIdPatch) | **PATCH** /api/v2/projects/{id} | Patch project |
-| [**apiV2ProjectsIdPurgePost**](ProjectsApi.md#apiV2ProjectsIdPurgePost) | **POST** /api/v2/projects/{id}/purge | Purge archived project |
+| [**apiV2ProjectsIdPurgePost**](ProjectsApi.md#apiV2ProjectsIdPurgePost) | **POST** /api/v2/projects/{id}/purge | Purge the project |
 | [**apiV2ProjectsIdRestorePost**](ProjectsApi.md#apiV2ProjectsIdRestorePost) | **POST** /api/v2/projects/{id}/restore | Restore archived project |
 | [**apiV2ProjectsIdTestPlansAttributeAttributeIdDelete**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributeAttributeIdDelete) | **DELETE** /api/v2/projects/{id}/testPlans/attribute/{attributeId} | Delete attribute from project&#39;s test plans |
 | [**apiV2ProjectsIdTestPlansAttributePut**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributePut) | **PUT** /api/v2/projects/{id}/testPlans/attribute | Update attribute of project&#39;s test plans |
@@ -21,17 +21,13 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsPurgeBulkPost**](ProjectsApi.md#apiV2ProjectsPurgeBulkPost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects |
 | [**apiV2ProjectsRestoreBulkPost**](ProjectsApi.md#apiV2ProjectsRestoreBulkPost) | **POST** /api/v2/projects/restore/bulk | Restore multiple projects |
 | [**apiV2ProjectsSearchPost**](ProjectsApi.md#apiV2ProjectsSearchPost) | **POST** /api/v2/projects/search | Search for projects |
-| [**backgroundImportProject**](ProjectsApi.md#backgroundImportProject) | **POST** /api/v2/projects/import/json | Import project from JSON file in background job |
-| [**backgroundImportZipProject**](ProjectsApi.md#backgroundImportZipProject) | **POST** /api/v2/projects/import/zip | Import project from Zip file in background job |
 | [**createProject**](ProjectsApi.md#createProject) | **POST** /api/v2/projects | Create project |
 | [**deleteProjectAutoTests**](ProjectsApi.md#deleteProjectAutoTests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete all autotests from project |
-| [**exportWithTestPlansAndConfigurations**](ProjectsApi.md#exportWithTestPlansAndConfigurations) | **POST** /api/v2/projects/{id}/export-by-testPlans | Export project with test plans, test suites and test points as JSON file |
 | [**getAllProjects**](ProjectsApi.md#getAllProjects) | **GET** /api/v2/projects | Get all projects |
 | [**getAutoTestsNamespaces**](ProjectsApi.md#getAutoTestsNamespaces) | **GET** /api/v2/projects/{id}/autoTestsNamespaces | Get namespaces of autotests in project |
 | [**getProjectById**](ProjectsApi.md#getProjectById) | **GET** /api/v2/projects/{id} | Get project by ID |
 | [**getTestPlansByProjectId**](ProjectsApi.md#getTestPlansByProjectId) | **GET** /api/v2/projects/{id}/testPlans | Get project test plans |
 | [**getTestRunsByProjectId**](ProjectsApi.md#getTestRunsByProjectId) | **GET** /api/v2/projects/{id}/testRuns | Get project test runs |
-| [**import**](ProjectsApi.md#import) | **POST** /api/v2/projects/import | Import project from JSON file |
 | [**updateProject**](ProjectsApi.md#updateProject) | **PUT** /api/v2/projects | Update project |
 
 
@@ -41,7 +37,7 @@ All URIs are relative to *http://localhost*
 
 Add global attributes to project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and attributes identifiers  &lt;br&gt;System search project  &lt;br&gt;System relates global attributes with project  &lt;br&gt;System returns no content response
+     Use case   User sets project internal or global identifier and attributes identifiers   System search project   System relates global attributes with project   System returns no content response
 
 ### Parameters
 
@@ -170,7 +166,7 @@ null (empty response body)
 
 Get Project filters
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System returns project filters
+     Use case   User sets project internal or global identifier    User runs method execution   System returns project filters
 
 ### Parameters
 
@@ -223,7 +219,7 @@ null (empty response body)
 # **apiV2ProjectsIdPurgePost**
 > apiV2ProjectsIdPurgePost(id)
 
-Purge archived project
+Purge the project
 
 ### Parameters
 
@@ -275,7 +271,7 @@ null (empty response body)
 
 Delete attribute from project&#39;s test plans
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and attribute identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System updates project and delete attribute from project for test plans  &lt;br&gt;System returns no content response
+     Use case   User sets project internal or global identifier and attribute identifier   User runs method execution   System updates project and delete attribute from project for test plans   System returns no content response
 
 ### Parameters
 
@@ -303,7 +299,7 @@ null (empty response body)
 
 Update attribute of project&#39;s test plans
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and attribute model  &lt;br&gt;User runs method execution  &lt;br&gt;System updates project and project attribute for test plan  &lt;br&gt;System returns no content response
+     Use case   User sets project internal or global identifier and attribute model   User runs method execution   System updates project and project attribute for test plan   System returns no content response
 
 ### Parameters
 
@@ -331,7 +327,7 @@ null (empty response body)
 
 Get active Project TestRuns
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System returns active testruns
+     Use case   User sets project internal or global identifier    User runs method execution   System returns active testruns
 
 ### Parameters
 
@@ -358,7 +354,7 @@ Get active Project TestRuns
 
 Get Project TestRuns full models
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User sets query params   &lt;br&gt;User runs method execution  &lt;br&gt;System returns project test runs full models
+     Use case   User sets project internal or global identifier    User sets query params    User runs method execution   System returns project test runs full models
 
 ### Parameters
 
@@ -487,7 +483,7 @@ Search for projects
 
 ### Return type
 
-[**List**](../Models/ProjectModel.md)
+[**List**](../Models/ProjectShortModel.md)
 
 ### Authorization
 
@@ -498,63 +494,13 @@ Search for projects
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="backgroundImportProject"></a>
-# **backgroundImportProject**
-> UUID backgroundImportProject(file)
-
-Import project from JSON file in background job
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **file** | **File**|  | [optional] [default to null] |
-
-### Return type
-
-**UUID**
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: multipart/form-data, application/json
-- **Accept**: application/json
-
-<a name="backgroundImportZipProject"></a>
-# **backgroundImportZipProject**
-> UUID backgroundImportZipProject(file)
-
-Import project from Zip file in background job
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **file** | **File**|  | [optional] [default to null] |
-
-### Return type
-
-**UUID**
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: multipart/form-data, application/json
-- **Accept**: application/json
-
 <a name="createProject"></a>
 # **createProject**
 > ProjectModel createProject(ProjectPostModel)
 
 Create project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project parameters (listed in request example) and runs method execution  &lt;br&gt;System creates project  &lt;br&gt;System returns project model (example listed in response parameters)
+     Use case   User sets project parameters (listed in request example) and runs method execution   System creates project   System returns project model (example listed in response parameters)
 
 ### Parameters
 
@@ -600,42 +546,13 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="exportWithTestPlansAndConfigurations"></a>
-# **exportWithTestPlansAndConfigurations**
-> File exportWithTestPlansAndConfigurations(id, includeAttachments, ProjectExportWithTestPlansPostModel)
-
-Export project with test plans, test suites and test points as JSON file
-
-    &lt;br&gt;    &lt;b&gt;You cannot export test cases execution history.&lt;/b&gt;    &lt;br&gt;This method exports the project with the test library and specified test plans to another TMS instance.  &lt;br&gt;              After sending a correct request, the project is exported to a &#x60;.json&#x60; file.              If you enable attachment export, the &#x60;.json&#x60; file and the attachments are placed in a &#x60;.zip&#x60; file.              You can import such a project by using the &#x60;POST /api/v2/projects/import&#x60; method.              
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Specifies the ID of the project you want to export. | [default to null] |
-| **includeAttachments** | **Boolean**| Enables attachment export. | [optional] [default to false] |
-| **ProjectExportWithTestPlansPostModel** | [**ProjectExportWithTestPlansPostModel**](../Models/ProjectExportWithTestPlansPostModel.md)|  | [optional] |
-
-### Return type
-
-**File**
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
 <a name="getAllProjects"></a>
 # **getAllProjects**
 > List getAllProjects(isDeleted, projectName, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get all projects
 
-    &lt;br&gt;Use case  &lt;br&gt;[Optional] User sets isDeleted field value  &lt;br&gt;[Optional] If User sets isDeleted field value as true, System search all deleted projects  &lt;br&gt;[Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  &lt;br&gt;If User did not set isDeleted field value, System search all projects  &lt;br&gt;System returns array of all found projects(listed in response model)
+     Use case   [Optional] User sets isDeleted field value   [Optional] If User sets isDeleted field value as true, System search all deleted projects   [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted   If User did not set isDeleted field value, System search all projects   System returns array of all found projects(listed in response model)
 
 ### Parameters
 
@@ -651,7 +568,7 @@ Get all projects
 
 ### Return type
 
-[**List**](../Models/ProjectModel.md)
+[**List**](../Models/ProjectShortModel.md)
 
 ### Authorization
 
@@ -668,7 +585,7 @@ Get all projects
 
 Get namespaces of autotests in project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and runs method execution  &lt;br&gt;System search project  &lt;br&gt;System search all autotest related to the project  &lt;br&gt;System returns array of autotest with namespaces and classnames (listed in response)
+     Use case   User sets project internal or global identifier and runs method execution   System search project   System search all autotest related to the project   System returns array of autotest with namespaces and classnames (listed in response)
 
 ### Parameters
 
@@ -695,7 +612,7 @@ Get namespaces of autotests in project
 
 Get project by ID
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and runs method execution  &lt;br&gt;System search project  &lt;br&gt;System returns project (example listed in response parameters)
+     Use case   User sets project internal or global identifier and runs method execution   System search project   System returns project (example listed in response parameters)
 
 ### Parameters
 
@@ -722,7 +639,7 @@ Get project by ID
 
 Get project test plans
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier  &lt;br&gt;[Optional] User sets isDeleted field value  &lt;br&gt;User runs method execution  &lt;br&gt;System search project  &lt;br&gt;[Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  &lt;br&gt;[Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  &lt;br&gt;[Optional] If User did not set isDeleted field value, System search all v related to project  &lt;br&gt;System returns array of found test plans (listed in response model)
+     Use case   User sets project internal or global identifier   [Optional] User sets isDeleted field value   User runs method execution   System search project   [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project   [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted   [Optional] If User did not set isDeleted field value, System search all v related to project   System returns array of found test plans (listed in response model)
 
 ### Parameters
 
@@ -750,7 +667,7 @@ Get project test plans
 
 Get project test runs
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search project  &lt;br&gt;System search all test runs related to project  &lt;br&gt;System returns array of found test runs (listed in response model)
+     Use case   User sets project internal or global identifier   User runs method execution   System search project   System search all test runs related to project   System returns array of found test runs (listed in response model)
 
 ### Parameters
 
@@ -783,41 +700,13 @@ Get project test runs
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="import"></a>
-# **import**
-> import(includeAttachments, file)
-
-Import project from JSON file
-
-    &lt;br&gt;    &lt;b&gt;A project can only be exported to another TMS instance, different from the one it was imported from.&lt;/b&gt;    &lt;br&gt;This method imports a &#x60;.json&#x60; file with a project to the test management system.  &lt;br&gt;In the body of the request, send the &#x60;.json&#x60; file received by the &#x60;POST /api/v2/projects/export&#x60; method:  &lt;br&gt;    &#x60;&#x60;&#x60;              curl -X POST \&quot;http://{domain.com}/api/v2/projects/import\&quot; \\              -H \&quot;accept: /\&quot; -H \&quot;Authorization: PrivateToken {token}\&quot; -H \&quot;Content-Type: multipart/form-data\&quot; \\              -F \&quot;file&#x3D;@import.txt;type&#x3D;text/plain\&quot;              &#x60;&#x60;&#x60;    &lt;br&gt;              In the second instance, a project with the name of the imported one is created.              User attributes and the test library (along with content and structure) are imported.                &lt;br&gt;Test plan execution history from the first instance of TMS cannot be transferred.
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **includeAttachments** | **Boolean**| Enables attachment import. | [optional] [default to false] |
-| **file** | **File**| Select file | [optional] [default to null] |
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: multipart/form-data
-- **Accept**: application/json
-
 <a name="updateProject"></a>
 # **updateProject**
 > updateProject(ProjectPutModel)
 
 Update project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project parameters (listed in request example) and runs method execution  &lt;br&gt;System updates project  &lt;br&gt;System returns updated project model (example listed in response parameters)
+     Use case   User sets project parameters (listed in request example) and runs method execution   System updates project   System returns updated project model (example listed in response parameters)
 
 ### Parameters
 

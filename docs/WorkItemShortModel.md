@@ -20,8 +20,8 @@
 | **modifiedById** | **UUID** | Unique identifier of user who applied the latest modification of Work Item | [optional] [default to null] |
 | **createdDate** | **Date** | Date and time of Work Item creation | [optional] [default to null] |
 | **modifiedDate** | **Date** | Date and time of the latest modification of Work Item | [optional] [default to null] |
-| **state** | [**WorkItemStates**](WorkItemStates.md) |  | [default to null] |
-| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
+| **state** | [**WorkItemStates**](WorkItemStates.md) | The current state of Work Item | [default to null] |
+| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) | Work Item priority level | [default to null] |
 | **isDeleted** | **Boolean** | Flag determining whether Work Item is deleted | [default to null] |
 | **tagNames** | **List** | Array of tag names of Work Item | [optional] [default to null] |
 | **iterations** | [**List**](IterationModel.md) | Set of iterations related to Work Item | [default to null] |

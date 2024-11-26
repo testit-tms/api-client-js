@@ -11,12 +11,8 @@
  */
 
 import { RequestFile } from './models';
-import { TestPointFilterModelCreatedDate } from './testPointFilterModelCreatedDate';
-import { TestPointFilterModelDuration } from './testPointFilterModelDuration';
-import { TestPointFilterModelModifiedDate } from './testPointFilterModelModifiedDate';
-import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
-import { TestPointFilterModelWorkItemMedianDuration } from './testPointFilterModelWorkItemMedianDuration';
-import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 
@@ -33,7 +29,10 @@ export class TestPointFilterModel {
     * Specifies a test point work item global IDs to search for
     */
     'workItemGlobalIds'?: Array<number> | null;
-    'workItemMedianDuration'?: TestPointFilterModelWorkItemMedianDuration | null;
+    /**
+    * Specifies a test point work item median duration range to search for
+    */
+    'workItemMedianDuration'?: Int64RangeSelectorModel | null;
     /**
     * Specifies a test point work item is deleted flag to search for
     */
@@ -62,17 +61,26 @@ export class TestPointFilterModel {
     * Specifies a test point assigned user IDs to search for
     */
     'testerIds'?: Array<string> | null;
-    'duration'?: TestPointFilterModelDuration | null;
+    /**
+    * Specifies a test point range of duration to search for
+    */
+    'duration'?: Int64RangeSelectorModel | null;
     /**
     * Specifies a test point work item section IDs to search for
     */
     'sectionIds'?: Array<string> | null;
-    'createdDate'?: TestPointFilterModelCreatedDate | null;
+    /**
+    * Specifies a test point range of creation date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a test point creator IDs to search for
     */
     'createdByIds'?: Array<string> | null;
-    'modifiedDate'?: TestPointFilterModelModifiedDate | null;
+    /**
+    * Specifies a test point range of last modification date to search for
+    */
+    'modifiedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a test point last editor IDs to search for
     */
@@ -84,13 +92,19 @@ export class TestPointFilterModel {
     /**
     * Specifies a test point attributes to search for
     */
-    'attributes'?: { [key: string]: Array<string>; } | null;
-    'workItemCreatedDate'?: TestPointFilterModelWorkItemCreatedDate | null;
+    'attributes'?: { [key: string]: Array<string> | null; } | null;
+    /**
+    * Specifies a work item range of creation date to search for
+    */
+    'workItemCreatedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a work item creator IDs to search for
     */
     'workItemCreatedByIds'?: Array<string> | null;
-    'workItemModifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
+    /**
+    * Specifies a work item range of last modification date to search for
+    */
+    'workItemModifiedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a work item last editor IDs to search for
     */
@@ -117,7 +131,7 @@ export class TestPointFilterModel {
         {
             "name": "workItemMedianDuration",
             "baseName": "workItemMedianDuration",
-            "type": "TestPointFilterModelWorkItemMedianDuration"
+            "type": "Int64RangeSelectorModel"
         },
         {
             "name": "workItemIsDeleted",
@@ -157,7 +171,7 @@ export class TestPointFilterModel {
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "TestPointFilterModelDuration"
+            "type": "Int64RangeSelectorModel"
         },
         {
             "name": "sectionIds",
@@ -167,7 +181,7 @@ export class TestPointFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "TestPointFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "createdByIds",
@@ -177,7 +191,7 @@ export class TestPointFilterModel {
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "TestPointFilterModelModifiedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "modifiedByIds",
@@ -192,12 +206,12 @@ export class TestPointFilterModel {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: Array<string>; }"
+            "type": "{ [key: string]: Array<string> | null; }"
         },
         {
             "name": "workItemCreatedDate",
             "baseName": "workItemCreatedDate",
-            "type": "TestPointFilterModelWorkItemCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "workItemCreatedByIds",
@@ -207,7 +221,7 @@ export class TestPointFilterModel {
         {
             "name": "workItemModifiedDate",
             "baseName": "workItemModifiedDate",
-            "type": "TestPointFilterModelWorkItemModifiedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "workItemModifiedByIds",

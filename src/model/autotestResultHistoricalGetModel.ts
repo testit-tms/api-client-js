@@ -12,8 +12,15 @@
 
 import { RequestFile } from './models';
 import { AutotestResultOutcome } from './autotestResultOutcome';
+import { RerunTestResultModel } from './rerunTestResultModel';
 
 export class AutotestResultHistoricalGetModel {
+    'modifiedDate'?: Date | null;
+    'modifiedById'?: string | null;
+    'testPlanId'?: string | null;
+    'testPlanGlobalId'?: number | null;
+    'testPlanName'?: string | null;
+    'duration'?: number | null;
     'id': string;
     'createdDate': Date;
     'createdById': string;
@@ -24,16 +31,42 @@ export class AutotestResultHistoricalGetModel {
     'configurationName': string;
     'outcome': AutotestResultOutcome;
     'launchSource'?: string | null;
-    'modifiedDate'?: Date | null;
-    'modifiedById'?: string | null;
-    'testPlanId'?: string | null;
-    'testPlanGlobalId'?: number | null;
-    'testPlanName'?: string | null;
-    'duration'?: number | null;
+    'rerunCount': number;
+    'rerunTestResults': Array<RerunTestResultModel>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "Date"
+        },
+        {
+            "name": "modifiedById",
+            "baseName": "modifiedById",
+            "type": "string"
+        },
+        {
+            "name": "testPlanId",
+            "baseName": "testPlanId",
+            "type": "string"
+        },
+        {
+            "name": "testPlanGlobalId",
+            "baseName": "testPlanGlobalId",
+            "type": "number"
+        },
+        {
+            "name": "testPlanName",
+            "baseName": "testPlanName",
+            "type": "string"
+        },
+        {
+            "name": "duration",
+            "baseName": "duration",
+            "type": "number"
+        },
         {
             "name": "id",
             "baseName": "id",
@@ -85,34 +118,14 @@ export class AutotestResultHistoricalGetModel {
             "type": "string"
         },
         {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "Date"
-        },
-        {
-            "name": "modifiedById",
-            "baseName": "modifiedById",
-            "type": "string"
-        },
-        {
-            "name": "testPlanId",
-            "baseName": "testPlanId",
-            "type": "string"
-        },
-        {
-            "name": "testPlanGlobalId",
-            "baseName": "testPlanGlobalId",
+            "name": "rerunCount",
+            "baseName": "rerunCount",
             "type": "number"
         },
         {
-            "name": "testPlanName",
-            "baseName": "testPlanName",
-            "type": "string"
-        },
-        {
-            "name": "duration",
-            "baseName": "duration",
-            "type": "number"
+            "name": "rerunTestResults",
+            "baseName": "rerunTestResults",
+            "type": "Array<RerunTestResultModel>"
         }    ];
 
     static getAttributeTypeMap() {

@@ -11,105 +11,34 @@
  */
 
 import { RequestFile } from './models';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { FailureCategoryModel } from './failureCategoryModel';
+import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { TestResultOutcome } from './testResultOutcome';
-import { TestResultsFilterModelCompletedOn } from './testResultsFilterModelCompletedOn';
-import { TestResultsFilterModelCreatedDate } from './testResultsFilterModelCreatedDate';
-import { TestResultsFilterModelDuration } from './testResultsFilterModelDuration';
-import { TestResultsFilterModelModifiedDate } from './testResultsFilterModelModifiedDate';
-import { TestResultsFilterModelStartedOn } from './testResultsFilterModelStartedOn';
 
 export class TestResultsFilterModel {
-    /**
-    * Specifies a test result test run IDs to search for
-    */
-    'testRunIds'?: Array<string> | null;
-    /**
-    * Specifies an autotest global IDs to search results for
-    */
-    'autoTestGlobalIds'?: Array<number> | null;
-    /**
-    * Specifies an autotest name to search results for
-    */
-    'name'?: string | null;
-    'createdDate'?: TestResultsFilterModelCreatedDate | null;
-    'modifiedDate'?: TestResultsFilterModelModifiedDate | null;
-    'startedOn'?: TestResultsFilterModelStartedOn | null;
-    'completedOn'?: TestResultsFilterModelCompletedOn | null;
-    'duration'?: TestResultsFilterModelDuration | null;
-    /**
-    * Specifies result reasons for searching test results
-    */
-    'resultReasons'?: Array<string> | null;
-    /**
-    * Specifies a test result configuration IDs to search for
-    */
     'configurationIds'?: Array<string> | null;
     /**
-    * Specifies a test result outcomes to search for
+    * @deprecated
     */
     'outcomes'?: Array<TestResultOutcome> | null;
-    /**
-    * Specifies a test result failure categories to search for
-    */
+    'statusCodes'?: Array<string> | null;
     'failureCategories'?: Array<FailureCategoryModel> | null;
-    /**
-    * Specifies a test result namespace to search for
-    */
     'namespace'?: string | null;
-    /**
-    * Specifies a test result class name to search for
-    */
     'className'?: string | null;
+    'autoTestGlobalIds'?: Array<number> | null;
+    'name'?: string | null;
+    'createdDate'?: DateTimeRangeSelectorModel | null;
+    'modifiedDate'?: DateTimeRangeSelectorModel | null;
+    'startedOn'?: DateTimeRangeSelectorModel | null;
+    'completedOn'?: DateTimeRangeSelectorModel | null;
+    'duration'?: Int64RangeSelectorModel | null;
+    'resultReasons'?: Array<string> | null;
+    'testRunIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "testRunIds",
-            "baseName": "testRunIds",
-            "type": "Array<string>"
-        },
-        {
-            "name": "autoTestGlobalIds",
-            "baseName": "autoTestGlobalIds",
-            "type": "Array<number>"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "createdDate",
-            "baseName": "createdDate",
-            "type": "TestResultsFilterModelCreatedDate"
-        },
-        {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "TestResultsFilterModelModifiedDate"
-        },
-        {
-            "name": "startedOn",
-            "baseName": "startedOn",
-            "type": "TestResultsFilterModelStartedOn"
-        },
-        {
-            "name": "completedOn",
-            "baseName": "completedOn",
-            "type": "TestResultsFilterModelCompletedOn"
-        },
-        {
-            "name": "duration",
-            "baseName": "duration",
-            "type": "TestResultsFilterModelDuration"
-        },
-        {
-            "name": "resultReasons",
-            "baseName": "resultReasons",
-            "type": "Array<string>"
-        },
         {
             "name": "configurationIds",
             "baseName": "configurationIds",
@@ -119,6 +48,11 @@ export class TestResultsFilterModel {
             "name": "outcomes",
             "baseName": "outcomes",
             "type": "Array<TestResultOutcome>"
+        },
+        {
+            "name": "statusCodes",
+            "baseName": "statusCodes",
+            "type": "Array<string>"
         },
         {
             "name": "failureCategories",
@@ -134,6 +68,51 @@ export class TestResultsFilterModel {
             "name": "className",
             "baseName": "className",
             "type": "string"
+        },
+        {
+            "name": "autoTestGlobalIds",
+            "baseName": "autoTestGlobalIds",
+            "type": "Array<number>"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "DateTimeRangeSelectorModel"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "DateTimeRangeSelectorModel"
+        },
+        {
+            "name": "startedOn",
+            "baseName": "startedOn",
+            "type": "DateTimeRangeSelectorModel"
+        },
+        {
+            "name": "completedOn",
+            "baseName": "completedOn",
+            "type": "DateTimeRangeSelectorModel"
+        },
+        {
+            "name": "duration",
+            "baseName": "duration",
+            "type": "Int64RangeSelectorModel"
+        },
+        {
+            "name": "resultReasons",
+            "baseName": "resultReasons",
+            "type": "Array<string>"
+        },
+        {
+            "name": "testRunIds",
+            "baseName": "testRunIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

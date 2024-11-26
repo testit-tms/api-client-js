@@ -11,13 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { TestRunExtractionModelIds } from './testRunExtractionModelIds';
+import { GuidExtractionModel } from './guidExtractionModel';
 
 /**
 * Rules for different level entities inclusion/exclusion
 */
 export class TestRunExtractionModel {
-    'ids'?: TestRunExtractionModelIds | null;
+    /**
+    * Extraction parameters for test runs
+    */
+    'ids'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,7 +28,7 @@ export class TestRunExtractionModel {
         {
             "name": "ids",
             "baseName": "ids",
-            "type": "TestRunExtractionModelIds"
+            "type": "GuidExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

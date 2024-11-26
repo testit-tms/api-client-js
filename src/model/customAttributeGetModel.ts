@@ -23,6 +23,9 @@ export class CustomAttributeGetModel {
     * Collection of the attribute options
     */
     'options': Array<CustomAttributeOptionModel>;
+    /**
+    * Type of the attribute
+    */
     'type': CustomAttributeTypesEnum;
     /**
     * Indicates if the attribute is deleted

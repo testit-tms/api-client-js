@@ -11,12 +11,17 @@
  */
 
 import { RequestFile } from './models';
-import { ConfigurationExtractionModelIds } from './configurationExtractionModelIds';
-import { ConfigurationExtractionModelProjectIds } from './configurationExtractionModelProjectIds';
+import { GuidExtractionModel } from './guidExtractionModel';
 
 export class ConfigurationExtractionModel {
-    'ids'?: ConfigurationExtractionModelIds | null;
-    'projectIds'?: ConfigurationExtractionModelProjectIds | null;
+    /**
+    * Extraction parameters for configurations
+    */
+    'ids'?: GuidExtractionModel | null;
+    /**
+    * Extraction parameters for projects
+    */
+    'projectIds'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,12 +29,12 @@ export class ConfigurationExtractionModel {
         {
             "name": "ids",
             "baseName": "ids",
-            "type": "ConfigurationExtractionModelIds"
+            "type": "GuidExtractionModel"
         },
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "ConfigurationExtractionModelProjectIds"
+            "type": "GuidExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

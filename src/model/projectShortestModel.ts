@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ProjectTypeModel } from './projectTypeModel';
 
 export class ProjectShortestModel {
     /**
@@ -29,6 +30,10 @@ export class ProjectShortestModel {
     * Name of project
     */
     'name': string;
+    /**
+    * Type of the project
+    */
+    'type': ProjectTypeModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,6 +57,11 @@ export class ProjectShortestModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "ProjectTypeModel"
         }    ];
 
     static getAttributeTypeMap() {
@@ -59,3 +69,5 @@ export class ProjectShortestModel {
     }
 }
 
+export namespace ProjectShortestModel {
+}

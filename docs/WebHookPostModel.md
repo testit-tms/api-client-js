@@ -4,10 +4,10 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **projectId** | **UUID** | Unique ID of the webhook project | [default to null] |
-| **eventType** | [**WebHookEventTypeModel**](WebHookEventTypeModel.md) |  | [default to null] |
+| **eventType** | [**WebHookEventTypeModel**](WebHookEventTypeModel.md) | Type of event which triggers the webhook | [default to null] |
 | **description** | **String** | Description of the webhook | [optional] [default to null] |
 | **url** | **String** | Request URL of the webhook | [default to null] |
-| **requestType** | [**RequestTypeModel**](RequestTypeModel.md) |  | [default to null] |
+| **requestType** | [**RequestTypeModel**](RequestTypeModel.md) | Request method of the webhook | [default to null] |
 | **shouldSendBody** | **Boolean** | Indicates if the webhook sends body | [default to null] |
 | **headers** | **Map** | Collection of the webhook headers | [default to null] |
 | **queryParameters** | **Map** | Collection of the webhook query parameters | [default to null] |

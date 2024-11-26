@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **configuration** | [**Test_result_configuration**](Test_result_configuration.md) |  | [optional] [default to null] |
-| **autoTest** | [**auto_test_related_to_test_result**](auto_test_related_to_test_result.md) |  | [optional] [default to null] |
+| **configuration** | [**ConfigurationModel**](ConfigurationModel.md) |  | [optional] [default to null] |
+| **autoTest** | [**AutoTestModelV2GetModel**](AutoTestModelV2GetModel.md) |  | [optional] [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **configurationId** | **UUID** |  | [default to null] |
 | **workItemVersionId** | **UUID** |  | [default to null] |
@@ -16,7 +16,7 @@
 | **runByUserId** | **UUID** |  | [optional] [default to null] |
 | **stoppedByUserId** | **UUID** |  | [optional] [default to null] |
 | **testPointId** | **UUID** |  | [optional] [default to null] |
-| **testPoint** | [**Test_point_related_to_test_result**](Test_point_related_to_test_result.md) |  | [optional] [default to null] |
+| **testPoint** | [**TestPointShortModel**](TestPointShortModel.md) |  | [optional] [default to null] |
 | **testRunId** | **UUID** |  | [default to null] |
 | **outcome** | **String** | Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped | [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |

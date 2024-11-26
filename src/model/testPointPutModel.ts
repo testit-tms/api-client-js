@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { TestStatusModel } from './testStatusModel';
 
 export class TestPointPutModel {
     'testerId'?: string | null;
@@ -18,7 +19,11 @@ export class TestPointPutModel {
     'workItemId'?: string | null;
     'configurationId'?: string | null;
     'testSuiteId': string;
+    /**
+    * @deprecated
+    */
     'status'?: string | null;
+    'statusModel': TestStatusModel;
     'lastTestResultId'?: string | null;
     /**
     * Unique ID of the entity
@@ -61,6 +66,11 @@ export class TestPointPutModel {
             "name": "status",
             "baseName": "status",
             "type": "string"
+        },
+        {
+            "name": "statusModel",
+            "baseName": "statusModel",
+            "type": "TestStatusModel"
         },
         {
             "name": "lastTestResultId",

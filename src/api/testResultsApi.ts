@@ -16,13 +16,18 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { AttachmentModel } from '../model/attachmentModel';
+import { CreateDefectApiModel } from '../model/createDefectApiModel';
+import { DefectApiModel } from '../model/defectApiModel';
+import { GetExternalFormApiResult } from '../model/getExternalFormApiResult';
 import { ImageResizeType } from '../model/imageResizeType';
 import { ProblemDetails } from '../model/problemDetails';
-import { TestResultModel } from '../model/testResultModel';
-import { TestResultShortGetModel } from '../model/testResultShortGetModel';
-import { TestResultUpdateModel } from '../model/testResultUpdateModel';
-import { TestResultsFilterModel } from '../model/testResultsFilterModel';
-import { TestResultsStatisticsGetModel } from '../model/testResultsStatisticsGetModel';
+import { RerunsModel } from '../model/rerunsModel';
+import { TestResultResponse } from '../model/testResultResponse';
+import { TestResultShortResponse } from '../model/testResultShortResponse';
+import { TestResultUpdateV2Request } from '../model/testResultUpdateV2Request';
+import { TestResultsFilterRequest } from '../model/testResultsFilterRequest';
+import { TestResultsSelectApiModel } from '../model/testResultsSelectApiModel';
+import { TestResultsStatisticsResponse } from '../model/testResultsStatisticsResponse';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -99,10 +104,156 @@ export class TestResultsApi {
 
     /**
      * 
+     * @param externalProjectId 
+     * @param testResultsSelectApiModel 
+     */
+    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost (externalProjectId: string, testResultsSelectApiModel?: TestResultsSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetExternalFormApiResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/testResults/external-projects/{externalProjectId}/defects/external-forms'
+            .replace('{' + 'externalProjectId' + '}', encodeURIComponent(String(externalProjectId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'externalProjectId' is not null or undefined
+        if (externalProjectId === null || externalProjectId === undefined) {
+            throw new Error('Required parameter externalProjectId was null or undefined when calling apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(testResultsSelectApiModel, "TestResultsSelectApiModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: GetExternalFormApiResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "GetExternalFormApiResult");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @param externalProjectId 
+     * @param createDefectApiModel 
+     */
+    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost (externalProjectId: string, createDefectApiModel?: CreateDefectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DefectApiModel;  }> {
+        const localVarPath = this.basePath + '/api/v2/testResults/external-projects/{externalProjectId}/defects'
+            .replace('{' + 'externalProjectId' + '}', encodeURIComponent(String(externalProjectId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'externalProjectId' is not null or undefined
+        if (externalProjectId === null || externalProjectId === undefined) {
+            throw new Error('Required parameter externalProjectId was null or undefined when calling apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(createDefectApiModel, "CreateDefectApiModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: DefectApiModel;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "DefectApiModel");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
      * @summary Get test result by ID aggregated with previous results
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdAggregatedGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultModel;  }> {
+    public async apiV2TestResultsIdAggregatedGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/aggregated'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -153,13 +304,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestResultModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestResultModel");
+                            body = ObjectSerializer.deserialize(body, "TestResultResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -324,7 +475,7 @@ export class TestResultsApi {
      * @summary Get test result by ID
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultModel;  }> {
+    public async apiV2TestResultsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -375,13 +526,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestResultModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestResultModel");
+                            body = ObjectSerializer.deserialize(body, "TestResultResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -395,9 +546,9 @@ export class TestResultsApi {
      * 
      * @summary Edit test result by ID
      * @param id Test result unique ID
-     * @param testResultUpdateModel 
+     * @param testResultUpdateV2Request 
      */
-    public async apiV2TestResultsIdPut (id: string, testResultUpdateModel?: TestResultUpdateModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestResultsIdPut (id: string, testResultUpdateV2Request?: TestResultUpdateV2Request, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -427,7 +578,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultUpdateModel, "TestResultUpdateModel")
+            body: ObjectSerializer.serialize(testResultUpdateV2Request, "TestResultUpdateV2Request")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -466,15 +617,87 @@ export class TestResultsApi {
     }
     /**
      * 
+     * @summary Get reruns
+     * @param id Test result unique ID
+     */
+    public async apiV2TestResultsIdRerunsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: RerunsModel;  }> {
+        const localVarPath = this.basePath + '/api/v2/testResults/{id}/reruns'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling apiV2TestResultsIdRerunsGet.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: RerunsModel;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "RerunsModel");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
      * @summary Search for test results
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testResultsFilterModel 
+     * @param testResultsFilterRequest 
      */
-    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }> {
+    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterRequest?: TestResultsFilterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -518,7 +741,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
+            body: ObjectSerializer.serialize(testResultsFilterRequest, "TestResultsFilterRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -540,13 +763,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultShortGetModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestResultShortGetModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestResultShortResponse>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -559,9 +782,9 @@ export class TestResultsApi {
     /**
      * 
      * @summary Search for test results and extract statistics
-     * @param testResultsFilterModel 
+     * @param testResultsFilterRequest 
      */
-    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterModel?: TestResultsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
+    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterRequest?: TestResultsFilterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/statistics/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -585,7 +808,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterModel, "TestResultsFilterModel")
+            body: ObjectSerializer.serialize(testResultsFilterRequest, "TestResultsFilterRequest")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -607,13 +830,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsResponse;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsGetModel");
+                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsResponse");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -624,12 +847,12 @@ export class TestResultsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets testResultId  <br>User attaches a file  <br>System creates attachment and links it to the test result  <br>System returns attachment identifier
+     *  Use case   User sets testResultId   User attaches a file   System creates attachment and links it to the test result   System returns attachment identifier
      * @summary Upload and link attachment to TestResult
      * @param id Test result internal identifier (guid format)
      * @param file Select file
      */
-    public async createAttachment (id: string, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async createAttachment (id: string, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -685,13 +908,12 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "string");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -702,7 +924,7 @@ export class TestResultsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets testResultId and attachmentId  <br>User attaches a file  <br>User runs method execution  <br>System deletes attachment and unlinks it from the test result  <br>System returns attachment identifier
+     *  Use case   User sets testResultId and attachmentId   User attaches a file   User runs method execution   System deletes attachment and unlinks it from the test result   System returns attachment identifier
      * @summary Remove attachment and unlink from TestResult
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
@@ -780,7 +1002,7 @@ export class TestResultsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attachmentId and testResultId  <br>[Optional] User sets resize configuration  <br>User runs method execution  <br>System search attachments by the attachmentId and the testResultId  <br>                      [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration                    <br>[Optional] Otherwise, System does not resize the attachment  <br>System returns attachment as a file
+     *  Use case   User sets attachmentId and testResultId   [Optional] User sets resize configuration   User runs method execution   System search attachments by the attachmentId and the testResultId                         [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration                     [Optional] Otherwise, System does not resize the attachment   System returns attachment as a file
      * @summary Get attachment of TestResult
      * @param attachmentId Attachment internal identifier (guid format)
      * @param id Test result internal identifier (guid format)
@@ -790,13 +1012,13 @@ export class TestResultsApi {
      * @param backgroundColor Color of the background if the &#x60;resizeType&#x60; is &#x60;AddBackgroundStripes&#x60;
      * @param preview If image must be converted to a preview (lower quality, no animation)
      */
-    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
+    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}'
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/octet-stream', 'application/json'];
+        const produces = ['application/json'];
         // give precedence to 'application/json'
         if (produces.indexOf('application/json') >= 0) {
             localVarHeaderParams.Accept = 'application/json';
@@ -845,7 +1067,7 @@ export class TestResultsApi {
             headers: localVarHeaderParams,
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
-            encoding: null,
+            json: true,
         };
 
         let authenticationPromise = Promise.resolve();
@@ -867,13 +1089,12 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Buffer;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Buffer");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -884,7 +1105,7 @@ export class TestResultsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attachmentId and testResultId  <br>User runs method execution  <br>System search attachment by the attachmentId and the testResultId  <br>System returns attachment data
+     *  Use case   User sets attachmentId and testResultId   User runs method execution   System search attachment by the attachmentId and the testResultId   System returns attachment data
      * @summary Get Metadata of TestResult\'s attachment
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
@@ -963,7 +1184,7 @@ export class TestResultsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets testResultId  <br>User runs method execution  <br>System search all attachments of the test result  <br>System returns attachments enumeration
+     *  Use case   User sets testResultId   User runs method execution   System search all attachments of the test result   System returns attachments enumeration
      * @summary Get all attachments of TestResult
      * @param id Test result internal identifier (guid format)
      */

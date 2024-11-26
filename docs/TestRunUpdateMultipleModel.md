@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **selectModel** | [**TestRunSelectModel**](TestRunSelectModel.md) |  | [default to null] |
+| **selectModel** | [**TestRunSelectModel**](TestRunSelectModel.md) | Model containing options to filter test runs | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |
 | **attachmentUpdateScheme** | [**UpdateAttachmentShortModel**](UpdateAttachmentShortModel.md) |  | [default to null] |
 | **linkUpdateScheme** | [**UpdateLinkShortModel**](UpdateLinkShortModel.md) |  | [default to null] |

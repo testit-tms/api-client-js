@@ -94,7 +94,7 @@ export class NotificationsApi {
     }
 
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns unread notifications total (listed in the response example)
+     *  Use case   User runs method execution   System returns unread notifications total (listed in the response example)
      * @summary Get unread Notifications total in last 7 days
      * @param isRead 
      */
@@ -164,7 +164,7 @@ export class NotificationsApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns notifications (listed in the response example)
+     *  Use case   User runs method execution   System returns notifications (listed in the response example)
      * @summary Get all Notifications for current User
      * @param notificationType 
      * @param skip Amount of items to be skipped (offset)
@@ -259,7 +259,7 @@ export class NotificationsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets notification internal (guid format) identifier  <br>User runs method execution  <br>System set notification as read
+     *  Use case   User sets notification internal (guid format) identifier   User runs method execution   System set notification as read
      * @summary Set Notification as read
      * @param id 
      */
@@ -330,7 +330,7 @@ export class NotificationsApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System set all notifications as read
+     *  Use case   User runs method execution   System set all notifications as read
      * @summary Set all Notifications as read
      */
     public async apiV2NotificationsReadPost (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -394,7 +394,7 @@ export class NotificationsApi {
         });
     }
     /**
-     * <br>Use case  <br>User set filter and runs method execution  <br>System returns notifications (listed in the response example)
+     *  Use case   User set filter and runs method execution   System returns notifications (listed in the response example)
      * @summary Search Notifications for current User
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)

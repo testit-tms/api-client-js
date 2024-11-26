@@ -95,7 +95,7 @@ export class TagsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets collection of tags internal (guid format) identifiers  <br>System searches and deletes a collection of tags
+     *  Use case   User sets collection of tags internal (guid format) identifiers   System searches and deletes a collection of tags
      * @summary Delete tags
      * @param tagSelectModel 
      */
@@ -161,8 +161,10 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns tags (listed in the response example)
+     *  Use case   User runs method execution   System returns tags (listed in the response example)
      * @summary Get all Tags
+     *
+     * @deprecated
      */
     public async apiV2TagsGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/tags';
@@ -226,7 +228,7 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets tag internal (guid format) identifier  <br>System search and delete tag
+     *  Use case   User sets tag internal (guid format) identifier   System search and delete tag
      * @summary Delete tag
      * @param id Tag internal (UUID) identifier
      */
@@ -297,7 +299,7 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets tag model (listed in the request example)  <br>User runs method execution  <br>System creates tag  <br>System returns tag model (listed in the response example)
+     *  Use case   User sets tag model (listed in the request example)   User runs method execution   System creates tag   System returns tag model (listed in the response example)
      * @summary Create tag
      * @param tagPostModel 
      */
@@ -364,7 +366,7 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets tag ID and model (listed in the request example)  <br>User runs method execution  <br>System updates tag  <br>System returns tag model (listed in the response example)
+     *  Use case   User sets tag ID and model (listed in the request example)   User runs method execution   System updates tag   System returns tag model (listed in the response example)
      * @summary Update tag
      * @param id 
      * @param tagPutModel 
@@ -436,7 +438,7 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns collection of tags (listed in the response example)
+     *  Use case   User runs method execution   System returns collection of tags (listed in the response example)
      * @summary Search tags
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
@@ -526,7 +528,7 @@ export class TagsApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns tags (listed in the response example)
+     *  Use case   User runs method execution   System returns tags (listed in the response example)
      * @summary Get all Tags that are used in TestPlans
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)

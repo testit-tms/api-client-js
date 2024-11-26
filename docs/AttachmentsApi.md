@@ -6,6 +6,7 @@ All URIs are relative to *http://localhost*
 |------------- | ------------- | -------------|
 | [**apiV2AttachmentsIdDelete**](AttachmentsApi.md#apiV2AttachmentsIdDelete) | **DELETE** /api/v2/attachments/{id} | Delete attachment file |
 | [**apiV2AttachmentsIdGet**](AttachmentsApi.md#apiV2AttachmentsIdGet) | **GET** /api/v2/attachments/{id} | Download attachment file |
+| [**apiV2AttachmentsIdMetadataGet**](AttachmentsApi.md#apiV2AttachmentsIdMetadataGet) | **GET** /api/v2/attachments/{id}/metadata | Get attachment metadata |
 | [**apiV2AttachmentsOccupiedFileStorageSizeGet**](AttachmentsApi.md#apiV2AttachmentsOccupiedFileStorageSizeGet) | **GET** /api/v2/attachments/occupiedFileStorageSize | Get size of attachments storage in bytes |
 | [**apiV2AttachmentsPost**](AttachmentsApi.md#apiV2AttachmentsPost) | **POST** /api/v2/attachments | Upload new attachment file |
 
@@ -33,11 +34,11 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: application/json
 
 <a name="apiV2AttachmentsIdGet"></a>
 # **apiV2AttachmentsIdGet**
-> File apiV2AttachmentsIdGet(id, width, height, resizeType, backgroundColor, preview)
+> apiV2AttachmentsIdGet(id, width, height, resizeType, backgroundColor, preview)
 
 Download attachment file
 
@@ -54,7 +55,7 @@ Download attachment file
 
 ### Return type
 
-**File**
+null (empty response body)
 
 ### Authorization
 
@@ -63,7 +64,32 @@ Download attachment file
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream
+- **Accept**: application/json
+
+<a name="apiV2AttachmentsIdMetadataGet"></a>
+# **apiV2AttachmentsIdMetadataGet**
+> AttachmentModel apiV2AttachmentsIdMetadataGet(id)
+
+Get attachment metadata
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | [default to null] |
+
+### Return type
+
+[**AttachmentModel**](../Models/AttachmentModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="apiV2AttachmentsOccupiedFileStorageSizeGet"></a>
 # **apiV2AttachmentsOccupiedFileStorageSizeGet**

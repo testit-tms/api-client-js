@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ConfigurationShortModel } from './configurationShortModel';
 import { TestResultsStatisticsGetModel } from './testResultsStatisticsGetModel';
 import { TestRunState } from './testRunState';
 
@@ -23,6 +24,9 @@ export class TestRunShortGetModel {
     * Name of the test run
     */
     'name': string;
+    /**
+    * Current state of the test run
+    */
     'state': TestRunState;
     /**
     * Date when the test run was created
@@ -52,7 +56,14 @@ export class TestRunShortGetModel {
     * Number of AutoTests run in the test run
     */
     'autoTestsCount': number;
+    /**
+    * Statistics of the test run
+    */
     'statistics': TestResultsStatisticsGetModel;
+    /**
+    * Test results configurations
+    */
+    'testResultsConfigurations': Array<ConfigurationShortModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -111,6 +122,11 @@ export class TestRunShortGetModel {
             "name": "statistics",
             "baseName": "statistics",
             "type": "TestResultsStatisticsGetModel"
+        },
+        {
+            "name": "testResultsConfigurations",
+            "baseName": "testResultsConfigurations",
+            "type": "Array<ConfigurationShortModel>"
         }    ];
 
     static getAttributeTypeMap() {

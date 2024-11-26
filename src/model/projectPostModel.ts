@@ -25,6 +25,12 @@ export class ProjectPostModel {
     * Indicates if the project is marked as favorite
     */
     'isFavorite'?: boolean | null;
+    /**
+    * Indicates if the status \"Flaky/Stable\" sets automatically
+    *
+    * @deprecated
+    */
+    'isFlakyAuto'?: boolean | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -42,6 +48,11 @@ export class ProjectPostModel {
         {
             "name": "isFavorite",
             "baseName": "isFavorite",
+            "type": "boolean"
+        },
+        {
+            "name": "isFlakyAuto",
+            "baseName": "isFlakyAuto",
             "type": "boolean"
         }    ];
 

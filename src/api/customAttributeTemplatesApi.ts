@@ -19,10 +19,9 @@ import { CustomAttributeTemplateModel } from '../model/customAttributeTemplateMo
 import { CustomAttributeTemplatePostModel } from '../model/customAttributeTemplatePostModel';
 import { CustomAttributeTemplatePutModel } from '../model/customAttributeTemplatePutModel';
 import { CustomAttributeTemplateSearchQueryModel } from '../model/customAttributeTemplateSearchQueryModel';
-import { NoContentResult } from '../model/noContentResult';
+import { CustomAttributeTemplateValidationResult } from '../model/customAttributeTemplateValidationResult';
 import { ProblemDetails } from '../model/problemDetails';
 import { SearchCustomAttributeTemplateGetModel } from '../model/searchCustomAttributeTemplateGetModel';
-import { ValidateAntiForgeryTokenAttribute } from '../model/validateAntiForgeryTokenAttribute';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -98,7 +97,76 @@ export class CustomAttributeTemplatesApi {
     }
 
     /**
-     * <br>Use case  <br>User sets attribute template internal identifier  <br>User sets attribute internal identifiers   <br>User runs method execution  <br>System delete attributes from attributes tempalte
+     * 
+     * @param name 
+     */
+    public async apiV2CustomAttributesTemplatesExistsGet (name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateValidationResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/customAttributes/templates/exists';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (name !== undefined) {
+            localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateValidationResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "CustomAttributeTemplateValidationResult");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     *  Use case   User sets attribute template internal identifier   User sets attribute internal identifiers    User runs method execution   System delete attributes from attributes tempalte
      * @summary Exclude CustomAttributes from CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
@@ -171,7 +239,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attribute template internal identifier  <br>User sets attribute internal identifiers   <br>User runs method execution  <br>System add attributes to attributes tempalte
+     *  Use case   User sets attribute template internal identifier   User sets attribute internal identifiers    User runs method execution   System add attributes to attributes tempalte
      * @summary Include CustomAttributes to CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
@@ -244,11 +312,11 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attribute template internal identifier  <br>User runs method execution  <br>System search and delete attribute template  <br>System returns no content response
+     *  Use case   User sets attribute template internal identifier   User runs method execution   System search and delete attribute template   System returns no content response
      * @summary Delete CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      */
-    public async apiV2CustomAttributesTemplatesIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: NoContentResult;  }> {
+    public async apiV2CustomAttributesTemplatesIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -299,13 +367,12 @@ export class CustomAttributeTemplatesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: NoContentResult;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "NoContentResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -316,7 +383,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attribute template internal identifier   <br>User runs method execution  <br>System return attribute template (listed in response example)
+     *  Use case   User sets attribute template internal identifier    User runs method execution   System return attribute template (listed in response example)
      * @summary Get CustomAttributeTemplate by ID
      * @param id CustomAttributeTemplate internal (UUID) identifier
      */
@@ -388,7 +455,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attribute template name  <br>User runs method execution  <br>System search and return list of attribute templates (listed in response example)
+     *  Use case   User sets attribute template name   User runs method execution   System search and return list of attribute templates (listed in response example)
      * @summary Get CustomAttributeTemplate by name
      * @param name CustomAttributeTemplate name for search
      */
@@ -460,7 +527,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets attribute template parameters (listed in request example)  <br>User runs method execution  <br>System creates attribute template  <br>System returns attribute template model (example listed in response parameters)
+     *  Use case   User sets attribute template parameters (listed in request example)   User runs method execution   System creates attribute template   System returns attribute template model (example listed in response parameters)
      * @summary Create CustomAttributeTemplate
      * @param customAttributeTemplatePostModel 
      */
@@ -593,7 +660,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets search params model (listed in request example)  <br>User runs method execution  <br>System return attribute templates (listed in response example)
+     *  Use case   User sets search params model (listed in request example)   User runs method execution   System return attribute templates (listed in response example)
      * @summary Search CustomAttributeTemplates
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)

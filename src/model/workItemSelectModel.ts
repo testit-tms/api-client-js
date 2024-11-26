@@ -11,15 +11,21 @@
  */
 
 import { RequestFile } from './models';
+import { WorkItemExtractionModel } from './workItemExtractionModel';
 import { WorkItemFilterModel } from './workItemFilterModel';
-import { WorkItemLocalSelectModelExtractionModel } from './workItemLocalSelectModelExtractionModel';
 
 /**
 * Model containing options to filter work items
 */
 export class WorkItemSelectModel {
+    /**
+    * Collection of filters to apply to search
+    */
     'filter': WorkItemFilterModel;
-    'extractionModel'?: WorkItemLocalSelectModelExtractionModel | null;
+    /**
+    * Rules for different level entities inclusion/exclusion
+    */
+    'extractionModel'?: WorkItemExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -32,7 +38,7 @@ export class WorkItemSelectModel {
         {
             "name": "extractionModel",
             "baseName": "extractionModel",
-            "type": "WorkItemLocalSelectModelExtractionModel"
+            "type": "WorkItemExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

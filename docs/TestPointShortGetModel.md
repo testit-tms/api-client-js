@@ -20,8 +20,8 @@
 | **workItemVersionId** | **UUID** | Unique ID of work item version the test point represents | [default to null] |
 | **workItemVersionNumber** | **Integer** | Number of work item version the test point represents | [default to null] |
 | **workItemMedianDuration** | **Long** | Median duration of work item the test point represents | [optional] [default to null] |
-| **status** | [**TestPointStatus**](TestPointStatus.md) |  | [default to null] |
-| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
+| **status** | [**TestPointStatus**](TestPointStatus.md) | Status of the test point | [default to null] |
+| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) | Priority of the test point | [default to null] |
 | **isAutomated** | **Boolean** | Indicates if the test point represents an autotest | [default to null] |
 | **name** | **String** | Name of the test point | [default to null] |
 | **configurationId** | **UUID** | Unique ID of the test point configuration | [default to null] |
@@ -31,7 +31,7 @@
 | **projectId** | **UUID** | Unique ID of the test point project | [default to null] |
 | **lastTestResult** | [**LastTestResultModel**](LastTestResultModel.md) |  | [default to null] |
 | **iterationId** | **UUID** | Unique ID of work item iteration the test point represents | [default to null] |
-| **workItemState** | [**WorkItemState**](WorkItemState.md) |  | [default to null] |
+| **workItemState** | [**WorkItemState**](WorkItemState.md) | Work item state | [default to null] |
 | **workItemCreatedById** | **UUID** | Unique ID of the work item creator | [default to null] |
 | **workItemCreatedDate** | **Date** | Creation date of work item | [default to null] |
 | **workItemModifiedById** | **UUID** | Unique ID of the work item last editor | [optional] [default to null] |

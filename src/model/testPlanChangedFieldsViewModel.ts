@@ -16,7 +16,6 @@ import { BooleanNullableChangedFieldViewModel } from './booleanNullableChangedFi
 import { CustomAttributeChangeModel } from './customAttributeChangeModel';
 import { PeriodViewModelChangedFieldViewModel } from './periodViewModelChangedFieldViewModel';
 import { StringArrayChangedFieldViewModel } from './stringArrayChangedFieldViewModel';
-import { StringChangedFieldViewModel } from './stringChangedFieldViewModel';
 import { StringChangedFieldWithDiffsViewModel } from './stringChangedFieldWithDiffsViewModel';
 import { TestPointChangeViewModelChangedFieldViewModel } from './testPointChangeViewModelChangedFieldViewModel';
 import { TestResultChangeViewModelChangedFieldViewModel } from './testResultChangeViewModelChangedFieldViewModel';
@@ -25,10 +24,10 @@ import { TestSuiteChangeViewModelChangedFieldViewModel } from './testSuiteChange
 export class TestPlanChangedFieldsViewModel {
     'name'?: StringChangedFieldWithDiffsViewModel | null;
     'description'?: StringChangedFieldWithDiffsViewModel | null;
-    'productName'?: StringChangedFieldViewModel | null;
-    'build'?: StringChangedFieldViewModel | null;
+    'productName'?: StringChangedFieldWithDiffsViewModel | null;
+    'build'?: StringChangedFieldWithDiffsViewModel | null;
     'period'?: PeriodViewModelChangedFieldViewModel | null;
-    'status'?: StringChangedFieldViewModel | null;
+    'status'?: StringChangedFieldWithDiffsViewModel | null;
     'tags'?: StringArrayChangedFieldViewModel | null;
     'testSuite'?: TestSuiteChangeViewModelChangedFieldViewModel | null;
     'testPoints'?: TestPointChangeViewModelChangedFieldViewModel | null;
@@ -53,12 +52,12 @@ export class TestPlanChangedFieldsViewModel {
         {
             "name": "productName",
             "baseName": "productName",
-            "type": "StringChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "build",
             "baseName": "build",
-            "type": "StringChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "period",
@@ -68,7 +67,7 @@ export class TestPlanChangedFieldsViewModel {
         {
             "name": "status",
             "baseName": "status",
-            "type": "StringChangedFieldViewModel"
+            "type": "StringChangedFieldWithDiffsViewModel"
         },
         {
             "name": "tags",

@@ -19,7 +19,7 @@ export class GlobalCustomAttributeUpdateModel {
     */
     'name': string;
     /**
-    * Collection of attribute options  <br />  Available for attributes of type `options` and `multiple options` only
+    * Collection of attribute options     Available for attributes of type `options` and `multiple options` only
     */
     'options'?: Array<CustomAttributeOptionModel> | null;
     /**

@@ -19,7 +19,7 @@ All URIs are relative to *http://localhost*
 
 Delete tags
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets collection of tags internal (guid format) identifiers  &lt;br&gt;System searches and deletes a collection of tags
+     Use case   User sets collection of tags internal (guid format) identifiers   System searches and deletes a collection of tags
 
 ### Parameters
 
@@ -46,7 +46,7 @@ null (empty response body)
 
 Get all Tags
 
-    &lt;br&gt;Use case  &lt;br&gt;User runs method execution  &lt;br&gt;System returns tags (listed in the response example)
+     Use case   User runs method execution   System returns tags (listed in the response example)
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -70,7 +70,7 @@ This endpoint does not need any parameter.
 
 Delete tag
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets tag internal (guid format) identifier  &lt;br&gt;System search and delete tag
+     Use case   User sets tag internal (guid format) identifier   System search and delete tag
 
 ### Parameters
 
@@ -97,7 +97,7 @@ null (empty response body)
 
 Create tag
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets tag model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates tag  &lt;br&gt;System returns tag model (listed in the response example)
+     Use case   User sets tag model (listed in the request example)   User runs method execution   System creates tag   System returns tag model (listed in the response example)
 
 ### Parameters
 
@@ -124,7 +124,7 @@ Create tag
 
 Update tag
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets tag ID and model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates tag  &lt;br&gt;System returns tag model (listed in the response example)
+     Use case   User sets tag ID and model (listed in the request example)   User runs method execution   System updates tag   System returns tag model (listed in the response example)
 
 ### Parameters
 
@@ -152,7 +152,7 @@ Update tag
 
 Search tags
 
-    &lt;br&gt;Use case  &lt;br&gt;User runs method execution  &lt;br&gt;System returns collection of tags (listed in the response example)
+     Use case   User runs method execution   System returns collection of tags (listed in the response example)
 
 ### Parameters
 
@@ -183,7 +183,7 @@ Search tags
 
 Get all Tags that are used in TestPlans
 
-    &lt;br&gt;Use case  &lt;br&gt;User runs method execution  &lt;br&gt;System returns tags (listed in the response example)
+     Use case   User runs method execution   System returns tags (listed in the response example)
 
 ### Parameters
 

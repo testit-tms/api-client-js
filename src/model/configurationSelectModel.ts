@@ -11,12 +11,18 @@
  */
 
 import { RequestFile } from './models';
-import { ConfigurationSelectModelExtractionModel } from './configurationSelectModelExtractionModel';
-import { ConfigurationSelectModelFilter } from './configurationSelectModelFilter';
+import { ConfigurationExtractionModel } from './configurationExtractionModel';
+import { ConfigurationFilterModel } from './configurationFilterModel';
 
 export class ConfigurationSelectModel {
-    'filter'?: ConfigurationSelectModelFilter | null;
-    'extractionModel'?: ConfigurationSelectModelExtractionModel | null;
+    /**
+    * Configuration filters collection
+    */
+    'filter'?: ConfigurationFilterModel | null;
+    /**
+    * Rules for configurations extraction
+    */
+    'extractionModel'?: ConfigurationExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,12 +30,12 @@ export class ConfigurationSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "ConfigurationSelectModelFilter"
+            "type": "ConfigurationFilterModel"
         },
         {
             "name": "extractionModel",
             "baseName": "extractionModel",
-            "type": "ConfigurationSelectModelExtractionModel"
+            "type": "ConfigurationExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

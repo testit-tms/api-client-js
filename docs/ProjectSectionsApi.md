@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 
 Get project sections
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier and runs method execution  &lt;br&gt;System search project  &lt;br&gt;System search all sections related to the project  &lt;br&gt;System returns array of sections (listed in response)
+     Use case   User sets project internal or global identifier and runs method execution   System search project   System search all sections related to the project   System returns array of sections (listed in response)
 
 ### Parameters
 

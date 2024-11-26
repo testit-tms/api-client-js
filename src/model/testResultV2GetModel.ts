@@ -12,14 +12,14 @@
 
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
-import { AutoTestRelatedToTestResult } from './autoTestRelatedToTestResult';
+import { AutoTestModelV2GetModel } from './autoTestModelV2GetModel';
+import { ConfigurationModel } from './configurationModel';
 import { LinkModel } from './linkModel';
-import { TestPointRelatedToTestResult } from './testPointRelatedToTestResult';
-import { TestResultConfiguration } from './testResultConfiguration';
+import { TestPointShortModel } from './testPointShortModel';
 
 export class TestResultV2GetModel {
-    'configuration'?: TestResultConfiguration | null;
-    'autoTest'?: AutoTestRelatedToTestResult | null;
+    'configuration'?: ConfigurationModel | null;
+    'autoTest'?: AutoTestModelV2GetModel | null;
     'id': string;
     'configurationId': string;
     'workItemVersionId': string;
@@ -31,7 +31,7 @@ export class TestResultV2GetModel {
     'runByUserId'?: string | null;
     'stoppedByUserId'?: string | null;
     'testPointId'?: string | null;
-    'testPoint'?: TestPointRelatedToTestResult | null;
+    'testPoint'?: TestPointShortModel | null;
     'testRunId': string;
     /**
     * Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped
@@ -49,12 +49,12 @@ export class TestResultV2GetModel {
         {
             "name": "configuration",
             "baseName": "configuration",
-            "type": "TestResultConfiguration"
+            "type": "ConfigurationModel"
         },
         {
             "name": "autoTest",
             "baseName": "autoTest",
-            "type": "AutoTestRelatedToTestResult"
+            "type": "AutoTestModelV2GetModel"
         },
         {
             "name": "id",
@@ -114,7 +114,7 @@ export class TestResultV2GetModel {
         {
             "name": "testPoint",
             "baseName": "testPoint",
-            "type": "TestPointRelatedToTestResult"
+            "type": "TestPointShortModel"
         },
         {
             "name": "testRunId",

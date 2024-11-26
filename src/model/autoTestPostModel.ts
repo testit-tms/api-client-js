@@ -27,7 +27,7 @@ export class AutoTestPostModel {
     /**
     * Key value pair of custom work item attributes
     */
-    'attributes'?: { [key: string]: any | null; } | null;
+    'attributes'?: { [key: string]: any; } | null;
     /**
     * External ID of the autotest
     */
@@ -101,7 +101,7 @@ export class AutoTestPostModel {
         {
             "name": "attributes",
             "baseName": "attributes",
-            "type": "{ [key: string]: any | null; }"
+            "type": "{ [key: string]: any; }"
         },
         {
             "name": "externalId",

@@ -5,8 +5,10 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**apiV2TestRunsDelete**](TestRunsApi.md#apiV2TestRunsDelete) | **DELETE** /api/v2/testRuns | Delete multiple test runs |
+| [**apiV2TestRunsIdAutoTestsNamespacesGet**](TestRunsApi.md#apiV2TestRunsIdAutoTestsNamespacesGet) | **GET** /api/v2/testRuns/{id}/autoTestsNamespaces | Get autotest classes and namespaces in test run |
 | [**apiV2TestRunsIdDelete**](TestRunsApi.md#apiV2TestRunsIdDelete) | **DELETE** /api/v2/testRuns/{id} | Delete test run |
 | [**apiV2TestRunsIdPurgePost**](TestRunsApi.md#apiV2TestRunsIdPurgePost) | **POST** /api/v2/testRuns/{id}/purge | Permanently delete test run from archive |
+| [**apiV2TestRunsIdRerunsPost**](TestRunsApi.md#apiV2TestRunsIdRerunsPost) | **POST** /api/v2/testRuns/{id}/reruns | Manual autotests rerun in test run |
 | [**apiV2TestRunsIdRestorePost**](TestRunsApi.md#apiV2TestRunsIdRestorePost) | **POST** /api/v2/testRuns/{id}/restore | Restore test run from the archive |
 | [**apiV2TestRunsIdStatisticsFilterPost**](TestRunsApi.md#apiV2TestRunsIdStatisticsFilterPost) | **POST** /api/v2/testRuns/{id}/statistics/filter | Search for the test run test results and build statistics |
 | [**apiV2TestRunsIdTestPointsResultsGet**](TestRunsApi.md#apiV2TestRunsIdTestPointsResultsGet) | **GET** /api/v2/testRuns/{id}/testPoints/results | Get test results from the test run grouped by test points |
@@ -34,7 +36,7 @@ All URIs are relative to *http://localhost*
 
 Delete multiple test runs
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets selection parameters of test runs  &lt;br&gt;System search and delete collection of test runs  &lt;br&gt;System returns the number of deleted test runs
+     Use case   User sets selection parameters of test runs   System search and delete collection of test runs   System returns the number of deleted test runs
 
 ### Parameters
 
@@ -55,13 +57,38 @@ Delete multiple test runs
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2TestRunsIdAutoTestsNamespacesGet"></a>
+# **apiV2TestRunsIdAutoTestsNamespacesGet**
+> AutoTestNamespacesCountResponse apiV2TestRunsIdAutoTestsNamespacesGet(id)
+
+Get autotest classes and namespaces in test run
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | [default to null] |
+
+### Return type
+
+[**AutoTestNamespacesCountResponse**](../Models/AutoTestNamespacesCountResponse.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 <a name="apiV2TestRunsIdDelete"></a>
 # **apiV2TestRunsIdDelete**
 > apiV2TestRunsIdDelete(id)
 
 Delete test run
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run internal (guid format) identifier  &lt;br&gt;System search and delete test run
+     Use case   User sets test run internal (guid format) identifier   System search and delete test run
 
 ### Parameters
 
@@ -88,7 +115,7 @@ null (empty response body)
 
 Permanently delete test run from archive
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets archived test run internal (guid format) identifier  &lt;br&gt;System search and purge archived test run
+     Use case   User sets archived test run internal (guid format) identifier   System search and purge archived test run
 
 ### Parameters
 
@@ -109,13 +136,39 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+<a name="apiV2TestRunsIdRerunsPost"></a>
+# **apiV2TestRunsIdRerunsPost**
+> ManualRerunResultModel apiV2TestRunsIdRerunsPost(id, ManualRerunSelectModel)
+
+Manual autotests rerun in test run
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**|  | [default to null] |
+| **ManualRerunSelectModel** | [**ManualRerunSelectModel**](../Models/ManualRerunSelectModel.md)|  | [optional] |
+
+### Return type
+
+[**ManualRerunResultModel**](../Models/ManualRerunResultModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2TestRunsIdRestorePost"></a>
 # **apiV2TestRunsIdRestorePost**
 > apiV2TestRunsIdRestorePost(id)
 
 Restore test run from the archive
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets archived test run internal (guid format) identifier  &lt;br&gt;System search and restore test run
+     Use case   User sets archived test run internal (guid format) identifier   System search and restore test run
 
 ### Parameters
 
@@ -244,7 +297,7 @@ Get modification date of last test result of the test run
 
 Permanently delete multiple test runs from archive
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets selection parameters of archived test runs  &lt;br&gt;System search and delete collection of archived test runs  &lt;br&gt;System returns the number of deleted archived test runs
+     Use case   User sets selection parameters of archived test runs   System search and delete collection of archived test runs   System returns the number of deleted archived test runs
 
 ### Parameters
 
@@ -271,7 +324,7 @@ Permanently delete multiple test runs from archive
 
 Restore multiple test runs from the archive
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets selection parameters of archived test runs  &lt;br&gt;System search and restore collection of archived test runs  &lt;br&gt;System returns the number of restored test runs
+     Use case   User sets selection parameters of archived test runs   System search and restore collection of archived test runs   System returns the number of restored test runs
 
 ### Parameters
 
@@ -345,7 +398,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 <a name="completeTestRun"></a>
 # **completeTestRun**
@@ -353,7 +406,7 @@ null (empty response body)
 
 Complete TestRun
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System completes test run  &lt;br&gt;System returns no content response
+     Use case   User sets test run identifier   User runs method execution   System completes test run   System returns no content response
 
 ### Parameters
 
@@ -461,7 +514,7 @@ Create test run based on configurations and work items
 
 Create empty TestRun
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates test run  &lt;br&gt;System returns test run model
+     Use case   User sets test run model (listed in the request example)   User runs method execution   System creates test run   System returns test run model
 
 ### Parameters
 
@@ -488,7 +541,7 @@ Create empty TestRun
 
 Get TestRun by Id
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System finds test run  &lt;br&gt;System returns test run
+     Use case   User sets test run identifier   User runs method execution   System finds test run   System returns test run
 
 ### Parameters
 
@@ -543,7 +596,7 @@ Send test results to the test runs in the system
 
 Start TestRun
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System starts test run  &lt;br&gt;System returns no content response
+     Use case   User sets test run identifier   User runs method execution   System starts test run   System returns no content response
 
 ### Parameters
 
@@ -570,7 +623,7 @@ null (empty response body)
 
 Stop TestRun
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System stops test run  &lt;br&gt;System returns no content response
+     Use case   User sets test run identifier   User runs method execution   System stops test run   System returns no content response
 
 ### Parameters
 
@@ -597,7 +650,7 @@ null (empty response body)
 
 Update empty TestRun
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test run properties (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates test run  &lt;br&gt;System returns returns no content response
+     Use case   User sets test run properties (listed in the request example)   User runs method execution   System updates test run   System returns returns no content response
 
 ### Parameters
 

@@ -96,7 +96,7 @@ export class ParametersApi {
     }
 
     /**
-     * <br>Use case  <br>User sets list of parameter model (listed in the request example)  <br>User runs method execution  <br>System creates parameters  <br>System returns list of parameter model (listed in the response example)
+     *  Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System creates parameters   System returns list of parameter model (listed in the response example)
      * @summary Create multiple parameters
      * @param parameterPostModel 
      */
@@ -163,7 +163,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets list of parameter model (listed in the request example)  <br>User runs method execution  <br>System updates parameters
+     *  Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System updates parameters
      * @summary Update multiple parameters
      * @param parameterPutModel 
      */
@@ -229,7 +229,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System search parameters  <br>System returns parameters models as groups (listed in the response example)
+     *  Use case   User runs method execution   System search parameters   System returns parameters models as groups (listed in the response example)
      * @summary Get parameters as group
      * @param isDeleted 
      * @param parameterKeyIds 
@@ -329,7 +329,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets name of parameter key  <br>User runs method execution  <br>System search parameter key  <br>System returns the flag for the existence of the parameter key in the system
+     *  Use case   User sets name of parameter key   User runs method execution   System search parameter key   System returns the flag for the existence of the parameter key in the system
      * @summary Check existence parameter key in system
      * @param name 
      */
@@ -401,7 +401,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets parameter key (string format)  <br>User runs method execution  <br>System search parameter values using the key  <br>System returns parameter
+     *  Use case   User sets parameter key (string format)   User runs method execution   System search parameter values using the key   System returns parameter
      * @summary Get all parameter key values
      * @param key Parameter key (string format)
      */
@@ -473,7 +473,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System search all parameter keys  <br>System returns parameter keys
+     *  Use case   User runs method execution   System search all parameter keys   System returns parameter keys
      * @summary Get all parameter keys
      */
     public async apiV2ParametersKeysGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
@@ -722,7 +722,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets parameter model (listed in the request example)  <br>User runs method execution  <br>System creates parameter  <br>System returns parameter model
+     *  Use case   User sets parameter model (listed in the request example)   User runs method execution   System creates parameter   System returns parameter model
      * @summary Create parameter
      * @param parameterPostModel 
      */
@@ -862,7 +862,7 @@ export class ParametersApi {
     /**
      * Deletes parameter and all it\'s values by parameter key identifier
      * @summary Delete parameters by parameter key identifier
-     * @param keyId 
+     * @param keyId Identifier of the parameter key
      */
     public async deleteByParameterKeyId (keyId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keyId/{keyId}'
@@ -931,7 +931,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets parameter internal (guid format) identifier  <br>System search and delete parameter  <br>System returns deleted parameter
+     *  Use case   User sets parameter internal (guid format) identifier   System search and delete parameter   System returns deleted parameter
      * @summary Delete parameter
      * @param id Parameter internal (UUID) identifier
      */
@@ -1002,7 +1002,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>[Optional] User sets isDeleted field value  <br>[Optional] If User sets isDeleted field value as true, System search all deleted parameters  <br>[Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  <br>If User did not set isDeleted field value, System search all parameters  <br>System returns array of all found parameters(listed in response model)
+     *  Use case   [Optional] User sets isDeleted field value   [Optional] If User sets isDeleted field value as true, System search all deleted parameters   [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted   If User did not set isDeleted field value, System search all parameters   System returns array of all found parameters(listed in response model)
      * @summary Get all parameters
      * @param isDeleted If result must consist of only actual/deleted parameters
      * @param skip Amount of items to be skipped (offset)
@@ -1097,7 +1097,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets parameter internal (guid format) identifier  <br>User runs method execution  <br>System search parameter using the identifier  <br>System returns parameter
+     *  Use case   User sets parameter internal (guid format) identifier   User runs method execution   System search parameter using the identifier   System returns parameter
      * @summary Get parameter by ID
      * @param id Parameter internal (UUID) identifier
      */
@@ -1169,7 +1169,7 @@ export class ParametersApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets parameter updated properties(listed in the request example)  <br>User runs method execution  <br>System updated parameter using updated properties  <br>System returns no content response
+     *  Use case   User sets parameter updated properties(listed in the request example)   User runs method execution   System updated parameter using updated properties   System returns no content response
      * @summary Update parameter
      * @param parameterPutModel 
      */

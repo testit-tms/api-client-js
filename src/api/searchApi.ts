@@ -17,6 +17,8 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { GlobalSearchRequest } from '../model/globalSearchRequest';
 import { GlobalSearchResponse } from '../model/globalSearchResponse';
+import { ProblemDetails } from '../model/problemDetails';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';

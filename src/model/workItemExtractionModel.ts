@@ -11,17 +11,24 @@
  */
 
 import { RequestFile } from './models';
-import { ConfigurationExtractionModelProjectIds } from './configurationExtractionModelProjectIds';
-import { WorkItemExtractionModelIds } from './workItemExtractionModelIds';
-import { WorkItemExtractionModelSectionIds } from './workItemExtractionModelSectionIds';
+import { GuidExtractionModel } from './guidExtractionModel';
 
 /**
 * Rules for different level entities inclusion/exclusion
 */
 export class WorkItemExtractionModel {
-    'projectIds'?: ConfigurationExtractionModelProjectIds | null;
-    'ids'?: WorkItemExtractionModelIds | null;
-    'sectionIds'?: WorkItemExtractionModelSectionIds | null;
+    /**
+    * Extraction parameters for projects
+    */
+    'projectIds'?: GuidExtractionModel | null;
+    /**
+    * Extraction parameters for work items
+    */
+    'ids'?: GuidExtractionModel | null;
+    /**
+    * Extraction parameters for sections
+    */
+    'sectionIds'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,17 +36,17 @@ export class WorkItemExtractionModel {
         {
             "name": "projectIds",
             "baseName": "projectIds",
-            "type": "ConfigurationExtractionModelProjectIds"
+            "type": "GuidExtractionModel"
         },
         {
             "name": "ids",
             "baseName": "ids",
-            "type": "WorkItemExtractionModelIds"
+            "type": "GuidExtractionModel"
         },
         {
             "name": "sectionIds",
             "baseName": "sectionIds",
-            "type": "WorkItemExtractionModelSectionIds"
+            "type": "GuidExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

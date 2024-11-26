@@ -23,7 +23,7 @@ import { SharedStepReferenceSectionModel } from '../model/sharedStepReferenceSec
 import { SharedStepReferenceSectionsQueryFilterModel } from '../model/sharedStepReferenceSectionsQueryFilterModel';
 import { SharedStepReferencesQueryFilterModel } from '../model/sharedStepReferencesQueryFilterModel';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
-import { TestResultHistoryReportModel } from '../model/testResultHistoryReportModel';
+import { TestResultHistoryResponse } from '../model/testResultHistoryResponse';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemChangeModel } from '../model/workItemChangeModel';
 import { WorkItemLikeModel } from '../model/workItemLikeModel';
@@ -108,12 +108,12 @@ export class WorkItemsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets workItemId  <br>User attaches a file  <br>System creates attachment and links it to the work item  <br>System returns attachment identifier
+     *  Use case   User sets workItemId   User attaches a file   System creates attachment and links it to the work item   System returns attachment identifier
      * @summary Upload and link attachment to WorkItem
      * @param id Work item internal identifier (guid format)
      * @param file Select file
      */
-    public async apiV2WorkItemsIdAttachmentsPost (id: string, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
+    public async apiV2WorkItemsIdAttachmentsPost (id: string, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -169,13 +169,12 @@ export class WorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "string");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -186,7 +185,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets checklist identifier  <br>User runs method execution  <br>System transform CheckList to TestCase
+     *  Use case   User sets checklist identifier   User runs method execution   System transform CheckList to TestCase
      * @summary Transform CheckList to TestCase
      * @param id 
      */
@@ -258,7 +257,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System return change history of WorkItem
+     *  Use case   User sets work item identifier   User runs method execution   System return change history of WorkItem
      * @summary Get change history of WorkItem
      * @param id 
      * @param skip Amount of items to be skipped (offset)
@@ -355,7 +354,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System delete like from WorkItem
+     *  Use case   User sets WorkItem identifier   User runs method execution   System delete like from WorkItem
      * @summary Delete like from WorkItem
      * @param id 
      */
@@ -426,7 +425,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System set like to WorkItem
+     *  Use case   User sets WorkItem identifier   User runs method execution   System set like to WorkItem
      * @summary Set like to WorkItem
      * @param id 
      */
@@ -497,7 +496,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System return likes count of WorkItem
+     *  Use case   User sets WorkItem identifier   User runs method execution   System return likes count of WorkItem
      * @summary Get likes count of WorkItem
      * @param id 
      */
@@ -569,7 +568,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System return likes of WorkItem
+     *  Use case   User sets WorkItem identifier   User runs method execution   System return likes of WorkItem
      * @summary Get likes of WorkItem
      * @param id 
      */
@@ -641,7 +640,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System return test results history of WorkItem
+     *  Use case   User sets WorkItem identifier   User runs method execution   System return test results history of WorkItem
      * @summary Get test results history of WorkItem
      * @param id 
      * @param from Take results from this date
@@ -659,7 +658,7 @@ export class WorkItemsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportModel>;  }> {
+    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryResponse>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/testResults/history'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -766,13 +765,13 @@ export class WorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryResponse>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestResultHistoryReportModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestResultHistoryResponse>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -783,7 +782,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System set WorkItem as actual
+     *  Use case   User sets work item identifier   User runs method execution   System set WorkItem as actual
      * @summary Set WorkItem as actual
      * @param id 
      * @param versionId 
@@ -862,7 +861,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets WorkItem identifier  <br>User runs method execution  <br>System move WorkItem to another section
+     *  Use case   User sets WorkItem identifier   User runs method execution   System move WorkItem to another section
      * @summary Move WorkItem to another section
      * @param workItemMovePostModel 
      */
@@ -1021,7 +1020,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets SharedStep identifier  <br>User runs method execution  <br>System return SharedStep references
+     *  Use case   User sets SharedStep identifier   User runs method execution   System return SharedStep references
      * @summary Get SharedStep references in sections
      * @param sharedStepId 
      * @param skip Amount of items to be skipped (offset)
@@ -1120,7 +1119,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets SharedStep identifier  <br>User runs method execution  <br>System return SharedStep references
+     *  Use case   User sets SharedStep identifier   User runs method execution   System return SharedStep references
      * @summary Get SharedStep references in work items
      * @param sharedStepId 
      * @param skip Amount of items to be skipped (offset)
@@ -1219,9 +1218,11 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets SharedStep identifier  <br>User runs method execution  <br>System return SharedStep references
+     *  Use case   User sets SharedStep identifier   User runs method execution   System return SharedStep references
      * @summary Get SharedStep references
      * @param sharedStepId 
+     *
+     * @deprecated
      */
     public async apiV2WorkItemsSharedStepsSharedStepIdReferencesGet (sharedStepId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/sharedSteps/{sharedStepId}/references'
@@ -1291,7 +1292,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System creates work item by identifier  <br>System returns work item model (listed in response parameters)
+     *  Use case   User sets work item properties (listed in request parameters)   User runs method execution   System creates work item by identifier   System returns work item model (listed in response parameters)
      * @summary Create Test Case, Checklist or Shared Step
      * @param workItemPostModel 
      */
@@ -1358,7 +1359,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search and delete all autotests, related to found work item  <br>System returns no content response
+     *  Use case   User sets work item identifier   User runs method execution   System search work item by identifier   System search and delete all autotests, related to found work item   System returns no content response
      * @summary Delete all links AutoTests from WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1429,7 +1430,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System deletes work item  <br>System returns no content response
+     *  Use case   User sets work item identifier   User runs method execution   System deletes work item   System returns no content response
      * @summary Delete Test Case, Checklist or Shared Step by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1500,7 +1501,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search all autotests, related to found work item  <br>System returns list of found autotests
+     *  Use case   User sets work item identifier   User runs method execution   System search work item by identifier   System search all autotests, related to found work item   System returns list of found autotests
      * @summary Get all AutoTests linked to WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
@@ -1654,7 +1655,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>[Optional] User sets work item version identifier  <br>[Optional] User sets work item version number  <br>User runs method execution  <br>System search work item by identifier  <br>[Optional] if User sets work item version identifier, system search work item version by identifier.  <br>[Optional] if user sets work item version number, system search work item version by number  <br>Otherwise, system search last work item version  <br>System returns work item 
+     *  Use case   User sets work item identifier   [Optional] User sets work item version identifier   [Optional] User sets work item version number   User runs method execution   System search work item by identifier   [Optional] if User sets work item version identifier, system search work item version by identifier.   [Optional] if user sets work item version number, system search work item version by number   Otherwise, system search last work item version   System returns work item 
      * @summary Get Test Case, Checklist or Shared Step by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      * @param versionId WorkItem version (guid format) identifier\&quot;
@@ -1736,7 +1737,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>User runs method execution  <br>System search work item by identifier  <br>System search test results of all autotests, related to found work item  <br>System sort results by CompletedOn ascending, then by CreatedDate ascending  <br>System returns sorted collection of test results
+     *  Use case   User sets work item identifier   User runs method execution   System search work item by identifier   System search test results of all autotests, related to found work item   System sort results by CompletedOn ascending, then by CreatedDate ascending   System returns sorted collection of test results
      * @summary Get WorkItem chronology by Id or GlobalId
      * @param id 
      */
@@ -1808,7 +1809,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item identifier  <br>[Optional] User sets work item version identifier  <br>User runs method execution  <br>System search work item by identifier  <br>                      [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item                    <br>System returns array of work item version models (listed in response example)
+     *  Use case   User sets work item identifier   [Optional] User sets work item version identifier   User runs method execution   System search work item by identifier                         [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item                     System returns array of work item version models (listed in response example)
      * @summary Get WorkItem versions
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      * @param workItemVersionId WorkItem version (guid format)  identifier\&quot;
@@ -2032,7 +2033,7 @@ export class WorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets work item properties (listed in request parameters)  <br>User runs method execution  <br>System updates work item by identifier  <br>System returns updated work item model (listed in response parameters)
+     *  Use case   User sets work item properties (listed in request parameters)   User runs method execution   System updates work item by identifier   System returns updated work item model (listed in response parameters)
      * @summary Update Test Case, Checklist or Shared Step
      * @param workItemPutModel 
      */

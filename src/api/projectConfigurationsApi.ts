@@ -92,7 +92,7 @@ export class ProjectConfigurationsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets project internal or global identifier  <br>User runs method execution  <br>System search project  <br>System search all configurations related to project  <br>System returns array of found configurations (listed in response model)
+     *  Use case   User sets project internal or global identifier   User runs method execution   System search project   System search all configurations related to project   System returns array of found configurations (listed in response model)
      * @summary Get project configurations
      * @param projectId Project internal (UUID) or global (integer) identifier
      */

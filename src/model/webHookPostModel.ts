@@ -19,6 +19,9 @@ export class WebHookPostModel {
     * Unique ID of the webhook project
     */
     'projectId': string;
+    /**
+    * Type of event which triggers the webhook
+    */
     'eventType': WebHookEventTypeModel;
     /**
     * Description of the webhook
@@ -28,6 +31,9 @@ export class WebHookPostModel {
     * Request URL of the webhook
     */
     'url': string;
+    /**
+    * Request method of the webhook
+    */
     'requestType': RequestTypeModel;
     /**
     * Indicates if the webhook sends body

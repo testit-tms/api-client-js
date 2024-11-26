@@ -1,0 +1,11 @@
+# ExternalFormModel
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **fields** | [**List**](ExternalFormFieldModel.md) |  | [default to null] |
+| **possibleValues** | [**Map**](array.md) |  | [default to null] |
+| **links** | [**List**](ExternalFormLinkModel.md) |  | [default to null] |
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -11,8 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { SharedStepReferenceSectionsQueryFilterModelCreatedDate } from './sharedStepReferenceSectionsQueryFilterModelCreatedDate';
-import { SharedStepReferenceSectionsQueryFilterModelModifiedDate } from './sharedStepReferenceSectionsQueryFilterModelModifiedDate';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -46,11 +45,17 @@ export class SharedStepReferencesQueryFilterModel {
     */
     'priorities'?: Array<WorkItemPriorityModel> | null;
     /**
-    * Collection of types of work item  <br>Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    * Collection of types of work item   Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
     */
     'entityTypes'?: Array<string> | null;
-    'createdDate'?: SharedStepReferenceSectionsQueryFilterModelCreatedDate | null;
-    'modifiedDate'?: SharedStepReferenceSectionsQueryFilterModelModifiedDate | null;
+    /**
+    * Date and time of work item creation
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
+    /**
+    * Date and time of work item last modification
+    */
+    'modifiedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Is result must consist of only manual/automated work items
     */
@@ -106,12 +111,12 @@ export class SharedStepReferencesQueryFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "SharedStepReferenceSectionsQueryFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "SharedStepReferenceSectionsQueryFilterModelModifiedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "isAutomated",

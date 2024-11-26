@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { AutotestsExtractionModelIds } from './autotestsExtractionModelIds';
+import { GuidExtractionModel } from './guidExtractionModel';
 
 export class AutotestsExtractionModel {
-    'ids'?: AutotestsExtractionModelIds | null;
+    /**
+    * Extraction parameters for autotests
+    */
+    'ids'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -22,7 +25,7 @@ export class AutotestsExtractionModel {
         {
             "name": "ids",
             "baseName": "ids",
-            "type": "AutotestsExtractionModelIds"
+            "type": "GuidExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {

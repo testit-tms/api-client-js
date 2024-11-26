@@ -11,10 +11,13 @@
  */
 
 import { RequestFile } from './models';
-import { SectionSharedStep } from './sectionSharedStep';
+import { SharedStepModel } from './sharedStepModel';
 
 export class StepModel {
-    'workItem'?: SectionSharedStep | null;
+    /**
+    * Nested shared steps are allowed
+    */
+    'workItem'?: SharedStepModel | null;
     'id': string;
     'action'?: string | null;
     'expected'?: string | null;
@@ -28,7 +31,7 @@ export class StepModel {
         {
             "name": "workItem",
             "baseName": "workItem",
-            "type": "SectionSharedStep"
+            "type": "SharedStepModel"
         },
         {
             "name": "id",

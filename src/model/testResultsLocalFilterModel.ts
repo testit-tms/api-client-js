@@ -21,8 +21,14 @@ export class TestResultsLocalFilterModel {
     'configurationIds'?: Array<string> | null;
     /**
     * Specifies a test result outcomes to search for
+    *
+    * @deprecated
     */
     'outcomes'?: Array<TestResultOutcome> | null;
+    /**
+    * Specifies a test result status codes to search for
+    */
+    'statusCodes'?: Array<string> | null;
     /**
     * Specifies a test result failure categories to search for
     */
@@ -48,6 +54,11 @@ export class TestResultsLocalFilterModel {
             "name": "outcomes",
             "baseName": "outcomes",
             "type": "Array<TestResultOutcome>"
+        },
+        {
+            "name": "statusCodes",
+            "baseName": "statusCodes",
+            "type": "Array<string>"
         },
         {
             "name": "failureCategories",

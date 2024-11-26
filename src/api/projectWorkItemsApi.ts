@@ -17,6 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
 import { TagShortModel } from '../model/tagShortModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
@@ -392,7 +393,7 @@ export class ProjectWorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal identifier   <br>User runs method execution  <br>System returns work items tags
+     *  Use case   User sets project internal identifier    User runs method execution   System returns work items tags
      * @summary Get WorkItems Tags
      * @param projectId Project internal (UUID) identifier
      * @param isDeleted 
@@ -469,7 +470,7 @@ export class ProjectWorkItemsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier  <br>[Optional] User sets isDeleted field value  <br>User runs method execution  <br>System search project  <br>[Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  <br>[Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  <br>If User did not set isDeleted field value, System search all  workitems related to project  <br>System returns array of found workitems (listed in response model)
+     *  Use case   User sets project internal or global identifier   [Optional] User sets isDeleted field value   User runs method execution   System search project   [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project   [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted   If User did not set isDeleted field value, System search all  workitems related to project   System returns array of found workitems (listed in response model)
      * @summary Get project work items
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param isDeleted If result must consist of only actual/deleted work items
@@ -480,6 +481,8 @@ export class ProjectWorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
+     *
+     * @deprecated
      */
     public async getWorkItemsByProjectId (projectId: string, isDeleted?: boolean, tagNames?: Array<string>, includeIterations?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems'

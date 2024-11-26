@@ -14,6 +14,9 @@ import { RequestFile } from './models';
 import { RequestTypeModel } from './requestTypeModel';
 
 export class WebHookTestModel {
+    /**
+    * Request method of the webhook
+    */
     'requestType': RequestTypeModel;
     /**
     * Request URL of the webhook

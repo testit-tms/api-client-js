@@ -16,6 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WebHookLogModel } from '../model/webHookLogModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';

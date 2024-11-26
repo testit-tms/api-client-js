@@ -11,11 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { WorkItemGroupGetModelSelectModel } from './workItemGroupGetModelSelectModel';
 import { WorkItemGroupType } from './workItemGroupType';
+import { WorkItemLocalSelectModel } from './workItemLocalSelectModel';
 
 export class WorkItemGroupGetModel {
-    'selectModel'?: WorkItemGroupGetModelSelectModel | null;
+    /**
+    * Model containing options to filter work items
+    */
+    'selectModel'?: WorkItemLocalSelectModel | null;
     'groupType': WorkItemGroupType;
     'customAttributeId'?: string | null;
 
@@ -25,7 +28,7 @@ export class WorkItemGroupGetModel {
         {
             "name": "selectModel",
             "baseName": "selectModel",
-            "type": "WorkItemGroupGetModelSelectModel"
+            "type": "WorkItemLocalSelectModel"
         },
         {
             "name": "groupType",

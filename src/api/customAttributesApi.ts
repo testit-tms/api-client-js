@@ -17,9 +17,11 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CustomAttributeModel } from '../model/customAttributeModel';
 import { CustomAttributeSearchQueryModel } from '../model/customAttributeSearchQueryModel';
+import { CustomAttributeValidationResult } from '../model/customAttributeValidationResult';
 import { GlobalCustomAttributePostModel } from '../model/globalCustomAttributePostModel';
 import { GlobalCustomAttributeUpdateModel } from '../model/globalCustomAttributeUpdateModel';
 import { ProblemDetails } from '../model/problemDetails';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -93,6 +95,80 @@ export class CustomAttributesApi {
         this.interceptors.push(interceptor);
     }
 
+    /**
+     * 
+     * @param name 
+     * @param isGlobal 
+     */
+    public async apiV2CustomAttributesExistsGet (name?: string, isGlobal?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeValidationResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/customAttributes/exists';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (name !== undefined) {
+            localVarQueryParameters['name'] = ObjectSerializer.serialize(name, "string");
+        }
+
+        if (isGlobal !== undefined) {
+            localVarQueryParameters['isGlobal'] = ObjectSerializer.serialize(isGlobal, "boolean");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: CustomAttributeValidationResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "CustomAttributeValidationResult");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
     /**
      * 
      * @summary Delete global attribute

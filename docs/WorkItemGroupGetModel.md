@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **selectModel** | [**WorkItemGroupGetModel_selectModel**](WorkItemGroupGetModel_selectModel.md) |  | [optional] [default to null] |
+| **selectModel** | [**WorkItemLocalSelectModel**](WorkItemLocalSelectModel.md) | Model containing options to filter work items | [optional] [default to null] |
 | **groupType** | [**WorkItemGroupType**](WorkItemGroupType.md) |  | [default to null] |
 | **customAttributeId** | **UUID** |  | [optional] [default to null] |
 

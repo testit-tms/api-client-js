@@ -21,11 +21,11 @@ import { FailureClassModel } from '../model/failureClassModel';
 import { FilterModel } from '../model/filterModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
-import { ProjectExportWithTestPlansPostModel } from '../model/projectExportWithTestPlansPostModel';
 import { ProjectModel } from '../model/projectModel';
 import { ProjectPostModel } from '../model/projectPostModel';
 import { ProjectPutModel } from '../model/projectPutModel';
 import { ProjectSelectModel } from '../model/projectSelectModel';
+import { ProjectShortModel } from '../model/projectShortModel';
 import { ProjectsFilterModel } from '../model/projectsFilterModel';
 import { PublicTestRunModel } from '../model/publicTestRunModel';
 import { TestPlanModel } from '../model/testPlanModel';
@@ -106,82 +106,7 @@ export class ProjectsApi {
     }
 
     /**
-     * <br>    <b>A project can only be exported to another TMS instance, different from the one it was imported from.</b>    <br>This method imports a `.json` file with a project to the test management system.  <br>In the body of the request, send the `.json` file received by the `POST /api/v2/projects/export` method:  <br>    ```              curl -X POST \"http://{domain.com}/api/v2/projects/import\" \\              -H \"accept: /\" -H \"Authorization: PrivateToken {token}\" -H \"Content-Type: multipart/form-data\" \\              -F \"file=@import.txt;type=text/plain\"              ```    <br>              In the second instance, a project with the name of the imported one is created.              User attributes and the test library (along with content and structure) are imported.                <br>Test plan execution history from the first instance of TMS cannot be transferred.
-     * @summary Import project from JSON file
-     * @param includeAttachments Enables attachment import.
-     * @param file Select file
-     */
-    public async _import (includeAttachments?: boolean, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
-        const localVarPath = this.basePath + '/api/v2/projects/import';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        if (includeAttachments !== undefined) {
-            localVarQueryParameters['includeAttachments'] = ObjectSerializer.serialize(includeAttachments, "boolean");
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        if (file !== undefined) {
-            localVarFormParams['file'] = file;
-        }
-        localVarUseFormData = true;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * <br>Use case  <br>User sets project internal or global identifier and attributes identifiers  <br>System search project  <br>System relates global attributes with project  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attributes identifiers   System search project   System relates global attributes with project   System returns no content response
      * @summary Add global attributes to project
      * @param id Project internal (UUID) or global (integer) identifier
      * @param requestBody 
@@ -539,7 +464,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User runs method execution  <br>System returns project filters
+     *  Use case   User sets project internal or global identifier    User runs method execution   System returns project filters
      * @summary Get Project filters
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -685,7 +610,7 @@ export class ProjectsApi {
     }
     /**
      * 
-     * @summary Purge archived project
+     * @summary Purge the project
      * @param id Unique or global ID of the project
      */
     public async apiV2ProjectsIdPurgePost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -826,10 +751,12 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and attribute identifier  <br>User runs method execution  <br>System updates project and delete attribute from project for test plans  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attribute identifier   User runs method execution   System updates project and delete attribute from project for test plans   System returns no content response
      * @summary Delete attribute from project\'s test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param attributeId 
+     *
+     * @deprecated
      */
     public async apiV2ProjectsIdTestPlansAttributeAttributeIdDelete (id: string, attributeId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/attribute/{attributeId}'
@@ -904,10 +831,12 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and attribute model  <br>User runs method execution  <br>System updates project and project attribute for test plan  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attribute model   User runs method execution   System updates project and project attribute for test plan   System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param customAttributeTestPlanProjectRelationPutModel 
+     *
+     * @deprecated
      */
     public async apiV2ProjectsIdTestPlansAttributePut (id: string, customAttributeTestPlanProjectRelationPutModel?: CustomAttributeTestPlanProjectRelationPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testPlans/attribute'
@@ -977,7 +906,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User runs method execution  <br>System returns active testruns
+     *  Use case   User sets project internal or global identifier    User runs method execution   System returns active testruns
      * @summary Get active Project TestRuns
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -1049,7 +978,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User sets query params   <br>User runs method execution  <br>System returns project test runs full models
+     *  Use case   User sets project internal or global identifier    User sets query params    User runs method execution   System returns project test runs full models
      * @summary Get Project TestRuns full models
      * @param id Project internal (UUID) or global (integer) identifier
      * @param includeTestResults 
@@ -1405,7 +1334,7 @@ export class ProjectsApi {
      * @param searchValue Value for searching
      * @param projectsFilterModel 
      */
-    public async apiV2ProjectsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectsFilterModel?: ProjectsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }> {
+    public async apiV2ProjectsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectsFilterModel?: ProjectsFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1471,13 +1400,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<ProjectShortModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<ProjectModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<ProjectShortModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1488,149 +1417,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * 
-     * @summary Import project from JSON file in background job
-     * @param file 
-     */
-    public async backgroundImportProject (file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
-        const localVarPath = this.basePath + '/api/v2/projects/import/json';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        if (file !== undefined) {
-            localVarFormParams['file'] = file;
-        }
-        localVarUseFormData = true;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "string");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * 
-     * @summary Import project from Zip file in background job
-     * @param file 
-     */
-    public async backgroundImportZipProject (file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
-        const localVarPath = this.basePath + '/api/v2/projects/import/zip';
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        if (file !== undefined) {
-            localVarFormParams['file'] = file;
-        }
-        localVarUseFormData = true;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: string;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "string");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * <br>Use case  <br>User sets project parameters (listed in request example) and runs method execution  <br>System creates project  <br>System returns project model (example listed in response parameters)
+     *  Use case   User sets project parameters (listed in request example) and runs method execution   System creates project   System returns project model (example listed in response parameters)
      * @summary Create project
      * @param projectPostModel 
      */
@@ -1768,86 +1555,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>    <b>You cannot export test cases execution history.</b>    <br>This method exports the project with the test library and specified test plans to another TMS instance.  <br>              After sending a correct request, the project is exported to a `.json` file.              If you enable attachment export, the `.json` file and the attachments are placed in a `.zip` file.              You can import such a project by using the `POST /api/v2/projects/import` method.              
-     * @summary Export project with test plans, test suites and test points as JSON file
-     * @param id Specifies the ID of the project you want to export.
-     * @param includeAttachments Enables attachment export.
-     * @param projectExportWithTestPlansPostModel 
-     */
-    public async exportWithTestPlansAndConfigurations (id: string, includeAttachments?: boolean, projectExportWithTestPlansPostModel?: ProjectExportWithTestPlansPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Buffer;  }> {
-        const localVarPath = this.basePath + '/api/v2/projects/{id}/export-by-testPlans'
-            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling exportWithTestPlansAndConfigurations.');
-        }
-
-        if (includeAttachments !== undefined) {
-            localVarQueryParameters['includeAttachments'] = ObjectSerializer.serialize(includeAttachments, "boolean");
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'POST',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            encoding: null,
-            body: ObjectSerializer.serialize(projectExportWithTestPlansPostModel, "ProjectExportWithTestPlansPostModel")
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: Buffer;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Buffer");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * <br>Use case  <br>[Optional] User sets isDeleted field value  <br>[Optional] If User sets isDeleted field value as true, System search all deleted projects  <br>[Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  <br>If User did not set isDeleted field value, System search all projects  <br>System returns array of all found projects(listed in response model)
+     *  Use case   [Optional] User sets isDeleted field value   [Optional] If User sets isDeleted field value as true, System search all deleted projects   [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted   If User did not set isDeleted field value, System search all projects   System returns array of all found projects(listed in response model)
      * @summary Get all projects
      * @param isDeleted If result must consist of only actual/deleted parameters
      * @param projectName 
@@ -1856,8 +1564,10 @@ export class ProjectsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
+     *
+     * @deprecated
      */
-    public async getAllProjects (isDeleted?: boolean, projectName?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }> {
+    public async getAllProjects (isDeleted?: boolean, projectName?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1930,13 +1640,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<ProjectModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<ProjectShortModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<ProjectModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<ProjectShortModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1947,7 +1657,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and runs method execution  <br>System search project  <br>System search all autotest related to the project  <br>System returns array of autotest with namespaces and classnames (listed in response)
+     *  Use case   User sets project internal or global identifier and runs method execution   System search project   System search all autotest related to the project   System returns array of autotest with namespaces and classnames (listed in response)
      * @summary Get namespaces of autotests in project
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -2019,7 +1729,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and runs method execution  <br>System search project  <br>System returns project (example listed in response parameters)
+     *  Use case   User sets project internal or global identifier and runs method execution   System search project   System returns project (example listed in response parameters)
      * @summary Get project by ID
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -2091,7 +1801,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier  <br>[Optional] User sets isDeleted field value  <br>User runs method execution  <br>System search project  <br>[Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  <br>[Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  <br>[Optional] If User did not set isDeleted field value, System search all v related to project  <br>System returns array of found test plans (listed in response model)
+     *  Use case   User sets project internal or global identifier   [Optional] User sets isDeleted field value   User runs method execution   System search project   [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project   [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted   [Optional] If User did not set isDeleted field value, System search all v related to project   System returns array of found test plans (listed in response model)
      * @summary Get project test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param isDeleted If result must consist of only actual/archived test plans
@@ -2168,7 +1878,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier  <br>User runs method execution  <br>System search project  <br>System search all test runs related to project  <br>System returns array of found test runs (listed in response model)
+     *  Use case   User sets project internal or global identifier   User runs method execution   System search project   System search all test runs related to project   System returns array of found test runs (listed in response model)
      * @summary Get project test runs
      * @param id Project internal (UUID) or global (integer) identifier
      * @param notStarted 
@@ -2300,7 +2010,7 @@ export class ProjectsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project parameters (listed in request example) and runs method execution  <br>System updates project  <br>System returns updated project model (example listed in response parameters)
+     *  Use case   User sets project parameters (listed in request example) and runs method execution   System updates project   System returns updated project model (example listed in response parameters)
      * @summary Update project
      * @param projectPutModel 
      */

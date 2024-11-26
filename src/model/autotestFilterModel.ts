@@ -11,10 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { AutotestFilterModelCreatedDate } from './autotestFilterModelCreatedDate';
-import { AutotestFilterModelModifiedDate } from './autotestFilterModelModifiedDate';
-import { AutotestFilterModelStabilityPercentage } from './autotestFilterModelStabilityPercentage';
 import { AutotestResultOutcome } from './autotestResultOutcome';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 
 export class AutotestFilterModel {
     /**
@@ -41,13 +40,22 @@ export class AutotestFilterModel {
     * Specifies an autotest unapproved changes status to search for
     */
     'mustBeApproved'?: boolean | null;
-    'stabilityPercentage'?: AutotestFilterModelStabilityPercentage | null;
-    'createdDate'?: AutotestFilterModelCreatedDate | null;
+    /**
+    * Specifies an autotest range of stability percentage to search for
+    */
+    'stabilityPercentage'?: Int64RangeSelectorModel | null;
+    /**
+    * Specifies an autotest range of creation date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies an autotest creator IDs to search for
     */
     'createdByIds'?: Array<string> | null;
-    'modifiedDate'?: AutotestFilterModelModifiedDate | null;
+    /**
+    * Specifies an autotest range of last modification date to search for
+    */
+    'modifiedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies an autotest last editor IDs to search for
     */
@@ -72,11 +80,18 @@ export class AutotestFilterModel {
     * Specifies an autotest class name presence status to search for
     */
     'isEmptyClassName'?: boolean | null;
+    /**
+    * Specifies an autotest outcome of the last test result to search for
+    */
     'lastTestResultOutcome'?: AutotestResultOutcome | null;
     /**
     * Specifies an autotest external key to search for
     */
     'externalKey'?: string | null;
+    /**
+    * Specifies an autotest configuration IDs of the last test result to search for
+    */
+    'lastTestResultConfigurationIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -114,12 +129,12 @@ export class AutotestFilterModel {
         {
             "name": "stabilityPercentage",
             "baseName": "stabilityPercentage",
-            "type": "AutotestFilterModelStabilityPercentage"
+            "type": "Int64RangeSelectorModel"
         },
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "AutotestFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "createdByIds",
@@ -129,7 +144,7 @@ export class AutotestFilterModel {
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "AutotestFilterModelModifiedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "modifiedByIds",
@@ -170,6 +185,11 @@ export class AutotestFilterModel {
             "name": "externalKey",
             "baseName": "externalKey",
             "type": "string"
+        },
+        {
+            "name": "lastTestResultConfigurationIds",
+            "baseName": "lastTestResultConfigurationIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

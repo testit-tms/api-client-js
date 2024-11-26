@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **workItem** | [**Section_shared_step**](Section_shared_step.md) |  | [optional] [default to null] |
+| **workItem** | [**SharedStepModel**](SharedStepModel.md) | Nested shared steps are allowed | [optional] [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **action** | **String** |  | [optional] [default to null] |
 | **expected** | **String** |  | [optional] [default to null] |

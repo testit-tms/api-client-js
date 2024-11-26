@@ -27,6 +27,9 @@ export class LinkModel {
     * Link description.
     */
     'description'?: string | null;
+    /**
+    * Specifies the type of the link.
+    */
     'type'?: LinkType | null;
     'hasInfo': boolean;
 

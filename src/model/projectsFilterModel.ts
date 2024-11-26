@@ -11,11 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { ProjectsFilterModelAutotestsCount } from './projectsFilterModelAutotestsCount';
-import { ProjectsFilterModelChecklistsCount } from './projectsFilterModelChecklistsCount';
-import { ProjectsFilterModelCreatedDate } from './projectsFilterModelCreatedDate';
-import { ProjectsFilterModelSharedStepsCount } from './projectsFilterModelSharedStepsCount';
-import { ProjectsFilterModelTestCasesCount } from './projectsFilterModelTestCasesCount';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
+import { ProjectTypeModel } from './projectTypeModel';
 
 export class ProjectsFilterModel {
     /**
@@ -30,19 +28,38 @@ export class ProjectsFilterModel {
     * Specifies a project deleted status to search for
     */
     'isDeleted'?: boolean | null;
-    'testCasesCount'?: ProjectsFilterModelTestCasesCount | null;
-    'checklistsCount'?: ProjectsFilterModelChecklistsCount | null;
-    'sharedStepsCount'?: ProjectsFilterModelSharedStepsCount | null;
-    'autotestsCount'?: ProjectsFilterModelAutotestsCount | null;
+    /**
+    * Specifies a project range of test cases count to search for
+    */
+    'testCasesCount'?: Int32RangeSelectorModel | null;
+    /**
+    * Specifies a project range of checklists count to search for
+    */
+    'checklistsCount'?: Int32RangeSelectorModel | null;
+    /**
+    * Specifies a project range of shared steps count to search for
+    */
+    'sharedStepsCount'?: Int32RangeSelectorModel | null;
+    /**
+    * Specifies a project range of autotests count to search for
+    */
+    'autotestsCount'?: Int32RangeSelectorModel | null;
     /**
     * Specifies a project global IDs to search for
     */
     'globalIds'?: Array<number> | null;
-    'createdDate'?: ProjectsFilterModelCreatedDate | null;
+    /**
+    * Specifies a project range of creation date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies an autotest creator IDs to search for
     */
     'createdByIds'?: Array<string> | null;
+    /**
+    * Collection of project types to search for
+    */
+    'types'?: Array<ProjectTypeModel> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -65,22 +82,22 @@ export class ProjectsFilterModel {
         {
             "name": "testCasesCount",
             "baseName": "testCasesCount",
-            "type": "ProjectsFilterModelTestCasesCount"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "checklistsCount",
             "baseName": "checklistsCount",
-            "type": "ProjectsFilterModelChecklistsCount"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "sharedStepsCount",
             "baseName": "sharedStepsCount",
-            "type": "ProjectsFilterModelSharedStepsCount"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "autotestsCount",
             "baseName": "autotestsCount",
-            "type": "ProjectsFilterModelAutotestsCount"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "globalIds",
@@ -90,12 +107,17 @@ export class ProjectsFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "ProjectsFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "createdByIds",
             "baseName": "createdByIds",
             "type": "Array<string>"
+        },
+        {
+            "name": "types",
+            "baseName": "types",
+            "type": "Array<ProjectTypeModel>"
         }    ];
 
     static getAttributeTypeMap() {
