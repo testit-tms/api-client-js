@@ -9,6 +9,7 @@
 | **configurationId** | **UUID** |  | [optional] [default to null] |
 | **testSuiteId** | **UUID** |  | [default to null] |
 | **status** | **String** |  | [optional] [default to null] |
+| **statusModel** | [**TestStatusModel**](TestStatusModel.md) |  | [default to null] |
 | **lastTestResultId** | **UUID** |  | [optional] [default to null] |
 | **id** | **UUID** | Unique ID of the entity | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |

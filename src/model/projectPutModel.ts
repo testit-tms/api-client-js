@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ProjectTypeModel } from './projectTypeModel';
 
 export class ProjectPutModel {
     /**
@@ -29,6 +30,16 @@ export class ProjectPutModel {
     * Indicates if the project is marked as favorite
     */
     'isFavorite'?: boolean | null;
+    /**
+    * Indicates if the status \"Flaky/Stable\" sets automatically
+    *
+    * @deprecated
+    */
+    'isFlakyAuto'?: boolean | null;
+    /**
+    * Type of the project
+    */
+    'type': ProjectTypeModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,6 +63,16 @@ export class ProjectPutModel {
             "name": "isFavorite",
             "baseName": "isFavorite",
             "type": "boolean"
+        },
+        {
+            "name": "isFlakyAuto",
+            "baseName": "isFlakyAuto",
+            "type": "boolean"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "ProjectTypeModel"
         }    ];
 
     static getAttributeTypeMap() {
@@ -59,3 +80,5 @@ export class ProjectPutModel {
     }
 }
 
+export namespace ProjectPutModel {
+}

@@ -4,11 +4,14 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost**](TestResultsApi.md#apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost) | **POST** /api/v2/testResults/external-projects/{externalProjectId}/defects/external-forms |  |
+| [**apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost**](TestResultsApi.md#apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost) | **POST** /api/v2/testResults/external-projects/{externalProjectId}/defects |  |
 | [**apiV2TestResultsIdAggregatedGet**](TestResultsApi.md#apiV2TestResultsIdAggregatedGet) | **GET** /api/v2/testResults/{id}/aggregated | Get test result by ID aggregated with previous results |
 | [**apiV2TestResultsIdAttachmentsAttachmentIdPut**](TestResultsApi.md#apiV2TestResultsIdAttachmentsAttachmentIdPut) | **PUT** /api/v2/testResults/{id}/attachments/{attachmentId} | Attach file to the test result |
 | [**apiV2TestResultsIdAttachmentsInfoGet**](TestResultsApi.md#apiV2TestResultsIdAttachmentsInfoGet) | **GET** /api/v2/testResults/{id}/attachments/info | Get test result attachments meta-information |
 | [**apiV2TestResultsIdGet**](TestResultsApi.md#apiV2TestResultsIdGet) | **GET** /api/v2/testResults/{id} | Get test result by ID |
 | [**apiV2TestResultsIdPut**](TestResultsApi.md#apiV2TestResultsIdPut) | **PUT** /api/v2/testResults/{id} | Edit test result by ID |
+| [**apiV2TestResultsIdRerunsGet**](TestResultsApi.md#apiV2TestResultsIdRerunsGet) | **GET** /api/v2/testResults/{id}/reruns | Get reruns |
 | [**apiV2TestResultsSearchPost**](TestResultsApi.md#apiV2TestResultsSearchPost) | **POST** /api/v2/testResults/search | Search for test results |
 | [**apiV2TestResultsStatisticsFilterPost**](TestResultsApi.md#apiV2TestResultsStatisticsFilterPost) | **POST** /api/v2/testResults/statistics/filter | Search for test results and extract statistics |
 | [**createAttachment**](TestResultsApi.md#createAttachment) | **POST** /api/v2/testResults/{id}/attachments | Upload and link attachment to TestResult |
@@ -18,9 +21,61 @@ All URIs are relative to *http://localhost*
 | [**getAttachments**](TestResultsApi.md#getAttachments) | **GET** /api/v2/testResults/{id}/attachments | Get all attachments of TestResult |
 
 
+<a name="apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost"></a>
+# **apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost**
+> GetExternalFormApiResult apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost(externalProjectId, TestResultsSelectApiModel)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalProjectId** | **UUID**|  | [default to null] |
+| **TestResultsSelectApiModel** | [**TestResultsSelectApiModel**](../Models/TestResultsSelectApiModel.md)|  | [optional] |
+
+### Return type
+
+[**GetExternalFormApiResult**](../Models/GetExternalFormApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost"></a>
+# **apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost**
+> DefectApiModel apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost(externalProjectId, CreateDefectApiModel)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalProjectId** | **UUID**|  | [default to null] |
+| **CreateDefectApiModel** | [**CreateDefectApiModel**](../Models/CreateDefectApiModel.md)|  | [optional] |
+
+### Return type
+
+[**DefectApiModel**](../Models/DefectApiModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2TestResultsIdAggregatedGet"></a>
 # **apiV2TestResultsIdAggregatedGet**
-> TestResultModel apiV2TestResultsIdAggregatedGet(id)
+> TestResultResponse apiV2TestResultsIdAggregatedGet(id)
 
 Get test result by ID aggregated with previous results
 
@@ -32,7 +87,7 @@ Get test result by ID aggregated with previous results
 
 ### Return type
 
-[**TestResultModel**](../Models/TestResultModel.md)
+[**TestResultResponse**](../Models/TestResultResponse.md)
 
 ### Authorization
 
@@ -96,7 +151,7 @@ Get test result attachments meta-information
 
 <a name="apiV2TestResultsIdGet"></a>
 # **apiV2TestResultsIdGet**
-> TestResultModel apiV2TestResultsIdGet(id)
+> TestResultResponse apiV2TestResultsIdGet(id)
 
 Get test result by ID
 
@@ -108,7 +163,7 @@ Get test result by ID
 
 ### Return type
 
-[**TestResultModel**](../Models/TestResultModel.md)
+[**TestResultResponse**](../Models/TestResultResponse.md)
 
 ### Authorization
 
@@ -121,7 +176,7 @@ Get test result by ID
 
 <a name="apiV2TestResultsIdPut"></a>
 # **apiV2TestResultsIdPut**
-> apiV2TestResultsIdPut(id, TestResultUpdateModel)
+> apiV2TestResultsIdPut(id, TestResultUpdateV2Request)
 
 Edit test result by ID
 
@@ -130,7 +185,7 @@ Edit test result by ID
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test result unique ID | [default to null] |
-| **TestResultUpdateModel** | [**TestResultUpdateModel**](../Models/TestResultUpdateModel.md)|  | [optional] |
+| **TestResultUpdateV2Request** | [**TestResultUpdateV2Request**](../Models/TestResultUpdateV2Request.md)|  | [optional] |
 
 ### Return type
 
@@ -145,9 +200,34 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2TestResultsIdRerunsGet"></a>
+# **apiV2TestResultsIdRerunsGet**
+> RerunsModel apiV2TestResultsIdRerunsGet(id)
+
+Get reruns
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **UUID**| Test result unique ID | [default to null] |
+
+### Return type
+
+[**RerunsModel**](../Models/RerunsModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 <a name="apiV2TestResultsSearchPost"></a>
 # **apiV2TestResultsSearchPost**
-> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestResultsFilterModel)
+> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestResultsFilterRequest)
 
 Search for test results
 
@@ -160,11 +240,11 @@ Search for test results
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestResultsFilterModel** | [**TestResultsFilterModel**](../Models/TestResultsFilterModel.md)|  | [optional] |
+| **TestResultsFilterRequest** | [**TestResultsFilterRequest**](../Models/TestResultsFilterRequest.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/TestResultShortGetModel.md)
+[**List**](../Models/TestResultShortResponse.md)
 
 ### Authorization
 
@@ -177,7 +257,7 @@ Search for test results
 
 <a name="apiV2TestResultsStatisticsFilterPost"></a>
 # **apiV2TestResultsStatisticsFilterPost**
-> TestResultsStatisticsGetModel apiV2TestResultsStatisticsFilterPost(TestResultsFilterModel)
+> TestResultsStatisticsResponse apiV2TestResultsStatisticsFilterPost(TestResultsFilterRequest)
 
 Search for test results and extract statistics
 
@@ -185,11 +265,11 @@ Search for test results and extract statistics
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestResultsFilterModel** | [**TestResultsFilterModel**](../Models/TestResultsFilterModel.md)|  | [optional] |
+| **TestResultsFilterRequest** | [**TestResultsFilterRequest**](../Models/TestResultsFilterRequest.md)|  | [optional] |
 
 ### Return type
 
-[**TestResultsStatisticsGetModel**](../Models/TestResultsStatisticsGetModel.md)
+[**TestResultsStatisticsResponse**](../Models/TestResultsStatisticsResponse.md)
 
 ### Authorization
 
@@ -202,11 +282,11 @@ Search for test results and extract statistics
 
 <a name="createAttachment"></a>
 # **createAttachment**
-> UUID createAttachment(id, file)
+> createAttachment(id, file)
 
 Upload and link attachment to TestResult
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets testResultId  &lt;br&gt;User attaches a file  &lt;br&gt;System creates attachment and links it to the test result  &lt;br&gt;System returns attachment identifier
+     Use case   User sets testResultId   User attaches a file   System creates attachment and links it to the test result   System returns attachment identifier
 
 ### Parameters
 
@@ -217,7 +297,7 @@ Upload and link attachment to TestResult
 
 ### Return type
 
-**UUID**
+null (empty response body)
 
 ### Authorization
 
@@ -234,7 +314,7 @@ Upload and link attachment to TestResult
 
 Remove attachment and unlink from TestResult
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets testResultId and attachmentId  &lt;br&gt;User attaches a file  &lt;br&gt;User runs method execution  &lt;br&gt;System deletes attachment and unlinks it from the test result  &lt;br&gt;System returns attachment identifier
+     Use case   User sets testResultId and attachmentId   User attaches a file   User runs method execution   System deletes attachment and unlinks it from the test result   System returns attachment identifier
 
 ### Parameters
 
@@ -258,11 +338,11 @@ null (empty response body)
 
 <a name="downloadAttachment"></a>
 # **downloadAttachment**
-> File downloadAttachment(attachmentId, id, width, height, resizeType, backgroundColor, preview)
+> downloadAttachment(attachmentId, id, width, height, resizeType, backgroundColor, preview)
 
 Get attachment of TestResult
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attachmentId and testResultId  &lt;br&gt;[Optional] User sets resize configuration  &lt;br&gt;User runs method execution  &lt;br&gt;System search attachments by the attachmentId and the testResultId  &lt;br&gt;                      [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration                    &lt;br&gt;[Optional] Otherwise, System does not resize the attachment  &lt;br&gt;System returns attachment as a file
+     Use case   User sets attachmentId and testResultId   [Optional] User sets resize configuration   User runs method execution   System search attachments by the attachmentId and the testResultId                         [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration                     [Optional] Otherwise, System does not resize the attachment   System returns attachment as a file
 
 ### Parameters
 
@@ -278,7 +358,7 @@ Get attachment of TestResult
 
 ### Return type
 
-**File**
+null (empty response body)
 
 ### Authorization
 
@@ -287,7 +367,7 @@ Get attachment of TestResult
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream, application/json
+- **Accept**: application/json
 
 <a name="getAttachment"></a>
 # **getAttachment**
@@ -295,7 +375,7 @@ Get attachment of TestResult
 
 Get Metadata of TestResult&#39;s attachment
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attachmentId and testResultId  &lt;br&gt;User runs method execution  &lt;br&gt;System search attachment by the attachmentId and the testResultId  &lt;br&gt;System returns attachment data
+     Use case   User sets attachmentId and testResultId   User runs method execution   System search attachment by the attachmentId and the testResultId   System returns attachment data
 
 ### Parameters
 
@@ -323,7 +403,7 @@ Get Metadata of TestResult&#39;s attachment
 
 Get all attachments of TestResult
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets testResultId  &lt;br&gt;User runs method execution  &lt;br&gt;System search all attachments of the test result  &lt;br&gt;System returns attachments enumeration
+     Use case   User sets testResultId   User runs method execution   System search all attachments of the test result   System returns attachments enumeration
 
 ### Parameters
 

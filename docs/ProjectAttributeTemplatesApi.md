@@ -46,7 +46,7 @@ Search for custom attributes templates
 
 Delete CustomAttributeTemplate from Project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User sets attribute template internal identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System delete attribute template from project
+     Use case   User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution   System delete attribute template from project
 
 ### Parameters
 
@@ -66,7 +66,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 <a name="apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost"></a>
 # **apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost**
@@ -74,7 +74,7 @@ null (empty response body)
 
 Add CustomAttributeTemplate to Project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User sets attribute template internal identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System add attribute template to project
+     Use case   User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution   System add attribute template to project
 
 ### Parameters
 
@@ -94,5 +94,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 

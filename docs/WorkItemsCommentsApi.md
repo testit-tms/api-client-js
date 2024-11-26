@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2WorkItemsCommentsCommentIdDelete**](WorkItemsCommentsApi.md#apiV2WorkItemsCommentsCommentIdDelete) | **DELETE** /api/v2/workItems/comments/{commentId} | Delete WorkItem comment |
 | [**apiV2WorkItemsCommentsPost**](WorkItemsCommentsApi.md#apiV2WorkItemsCommentsPost) | **POST** /api/v2/workItems/comments | Create WorkItem comment |
 | [**apiV2WorkItemsCommentsPut**](WorkItemsCommentsApi.md#apiV2WorkItemsCommentsPut) | **PUT** /api/v2/workItems/comments | Update work item comment |
+| [**apiV2WorkItemsIdCommentsCountGet**](WorkItemsCommentsApi.md#apiV2WorkItemsIdCommentsCountGet) | **GET** /api/v2/workItems/{id}/comments/count | Get work item comments count |
 | [**apiV2WorkItemsIdCommentsGet**](WorkItemsCommentsApi.md#apiV2WorkItemsIdCommentsGet) | **GET** /api/v2/workItems/{id}/comments | Get work item comments |
 
 
@@ -16,7 +17,7 @@ All URIs are relative to *http://localhost*
 
 Delete WorkItem comment
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets comment identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System delete comment   &lt;br&gt;System returns success status code
+     Use case   User sets comment identifier   User runs method execution   System delete comment    System returns success status code
 
 ### Parameters
 
@@ -43,7 +44,7 @@ null (empty response body)
 
 Create WorkItem comment
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets comment properties (listed in request parameters)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates comment   &lt;br&gt;System returns comment model (listed in response parameters)
+     Use case   User sets comment properties (listed in request parameters)   User runs method execution   System creates comment    System returns comment model (listed in response parameters)
 
 ### Parameters
 
@@ -87,6 +88,31 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2WorkItemsIdCommentsCountGet"></a>
+# **apiV2WorkItemsIdCommentsCountGet**
+> Integer apiV2WorkItemsIdCommentsCountGet(id)
+
+Get work item comments count
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Unique or global ID of the work item | [default to null] |
+
+### Return type
+
+**Integer**
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="apiV2WorkItemsIdCommentsGet"></a>

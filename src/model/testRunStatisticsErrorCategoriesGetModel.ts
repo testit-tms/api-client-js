@@ -14,14 +14,6 @@ import { RequestFile } from './models';
 
 export class TestRunStatisticsErrorCategoriesGetModel {
     /**
-    * Number of test results which outcomes were not analyzed
-    */
-    'noAnalytics': number;
-    /**
-    * Number of test results which outcomes were not caused by any defect
-    */
-    'noDefect': number;
-    /**
     * Number of test results which outcomes were caused by some infrastructure defect
     */
     'infrastructureDefect': number;
@@ -37,16 +29,6 @@ export class TestRunStatisticsErrorCategoriesGetModel {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "noAnalytics",
-            "baseName": "noAnalytics",
-            "type": "number"
-        },
-        {
-            "name": "noDefect",
-            "baseName": "noDefect",
-            "type": "number"
-        },
         {
             "name": "infrastructureDefect",
             "baseName": "infrastructureDefect",

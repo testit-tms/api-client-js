@@ -4,15 +4,42 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2WebhooksDelete**](WebhooksApi.md#apiV2WebhooksDelete) | **DELETE** /api/v2/webhooks |  |
 | [**apiV2WebhooksGet**](WebhooksApi.md#apiV2WebhooksGet) | **GET** /api/v2/webhooks | Get all webhooks |
 | [**apiV2WebhooksIdDelete**](WebhooksApi.md#apiV2WebhooksIdDelete) | **DELETE** /api/v2/webhooks/{id} | Delete webhook by ID |
 | [**apiV2WebhooksIdGet**](WebhooksApi.md#apiV2WebhooksIdGet) | **GET** /api/v2/webhooks/{id} | Get webhook by ID |
 | [**apiV2WebhooksIdPut**](WebhooksApi.md#apiV2WebhooksIdPut) | **PUT** /api/v2/webhooks/{id} | Edit webhook by ID |
 | [**apiV2WebhooksPost**](WebhooksApi.md#apiV2WebhooksPost) | **POST** /api/v2/webhooks | Create webhook |
+| [**apiV2WebhooksPut**](WebhooksApi.md#apiV2WebhooksPut) | **PUT** /api/v2/webhooks |  |
 | [**apiV2WebhooksSearchPost**](WebhooksApi.md#apiV2WebhooksSearchPost) | **POST** /api/v2/webhooks/search | Search for webhooks |
 | [**apiV2WebhooksSpecialVariablesGet**](WebhooksApi.md#apiV2WebhooksSpecialVariablesGet) | **GET** /api/v2/webhooks/specialVariables | Get special variables for webhook event type |
 | [**apiV2WebhooksTestPost**](WebhooksApi.md#apiV2WebhooksTestPost) | **POST** /api/v2/webhooks/test | Test webhook&#39;s url |
 
+
+<a name="apiV2WebhooksDelete"></a>
+# **apiV2WebhooksDelete**
+> apiV2WebhooksDelete(WebhooksDeleteRequest)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **WebhooksDeleteRequest** | [**WebhooksDeleteRequest**](../Models/WebhooksDeleteRequest.md)|  | [optional] |
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 <a name="apiV2WebhooksGet"></a>
 # **apiV2WebhooksGet**
@@ -130,6 +157,31 @@ Create webhook
 ### Return type
 
 [**WebHookModel**](../Models/WebHookModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2WebhooksPut"></a>
+# **apiV2WebhooksPut**
+> WebhooksUpdateResponse apiV2WebhooksPut(WebhooksUpdateRequest)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **WebhooksUpdateRequest** | [**WebhooksUpdateRequest**](../Models/WebhooksUpdateRequest.md)|  | [optional] |
+
+### Return type
+
+[**WebhooksUpdateResponse**](../Models/WebhooksUpdateResponse.md)
 
 ### Authorization
 

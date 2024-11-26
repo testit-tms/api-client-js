@@ -34,6 +34,9 @@ export class AutoTestResultsForTestRunModel {
     * Specifies the external ID of the autotest, which was specified when the test run was created.
     */
     'autoTestExternalId': string;
+    /**
+    * Specifies the result of the autotest execution.
+    */
     'outcome': AvailableTestResultOutcome;
     /**
     * A comment for the result.

@@ -4,12 +4,39 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2CustomAttributesExistsGet**](CustomAttributesApi.md#apiV2CustomAttributesExistsGet) | **GET** /api/v2/customAttributes/exists |  |
 | [**apiV2CustomAttributesGlobalIdDelete**](CustomAttributesApi.md#apiV2CustomAttributesGlobalIdDelete) | **DELETE** /api/v2/customAttributes/global/{id} | Delete global attribute |
 | [**apiV2CustomAttributesGlobalIdPut**](CustomAttributesApi.md#apiV2CustomAttributesGlobalIdPut) | **PUT** /api/v2/customAttributes/global/{id} | Edit global attribute |
 | [**apiV2CustomAttributesGlobalPost**](CustomAttributesApi.md#apiV2CustomAttributesGlobalPost) | **POST** /api/v2/customAttributes/global | Create global attribute |
 | [**apiV2CustomAttributesIdGet**](CustomAttributesApi.md#apiV2CustomAttributesIdGet) | **GET** /api/v2/customAttributes/{id} | Get attribute |
 | [**apiV2CustomAttributesSearchPost**](CustomAttributesApi.md#apiV2CustomAttributesSearchPost) | **POST** /api/v2/customAttributes/search | Search for attributes |
 
+
+<a name="apiV2CustomAttributesExistsGet"></a>
+# **apiV2CustomAttributesExistsGet**
+> CustomAttributeValidationResult apiV2CustomAttributesExistsGet(name, isGlobal)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**|  | [optional] [default to null] |
+| **isGlobal** | **Boolean**|  | [optional] [default to null] |
+
+### Return type
+
+[**CustomAttributeValidationResult**](../Models/CustomAttributeValidationResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="apiV2CustomAttributesGlobalIdDelete"></a>
 # **apiV2CustomAttributesGlobalIdDelete**

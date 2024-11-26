@@ -16,6 +16,8 @@ import { TestSuiteType } from './testSuiteType';
 export class TestSuiteV2TreeModel {
     /**
     * nested enumeration of children is allowed
+    *
+    * @deprecated
     */
     'children'?: Array<TestSuiteV2TreeModel> | null;
     /**
@@ -38,6 +40,9 @@ export class TestSuiteV2TreeModel {
     * Name of the test suite
     */
     'name': string;
+    /**
+    * Type of the test suite
+    */
     'type'?: TestSuiteType | null;
     /**
     * Indicates if the test suite retains section tree structure

@@ -39,6 +39,7 @@ export class TestRunV2GetModel {
     'links': Array<LinkModel>;
     'customParameters'?: { [key: string]: string; } | null;
     'webhooks': Array<NamedEntityModel>;
+    'runCount': number;
     'id': string;
     'name': string;
     'description'?: string | null;
@@ -124,6 +125,11 @@ export class TestRunV2GetModel {
             "name": "webhooks",
             "baseName": "webhooks",
             "type": "Array<NamedEntityModel>"
+        },
+        {
+            "name": "runCount",
+            "baseName": "runCount",
+            "type": "number"
         },
         {
             "name": "id",

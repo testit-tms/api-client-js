@@ -19,6 +19,9 @@ import { TestRunFilterModel } from './testRunFilterModel';
 */
 export class TestRunSelectModel {
     'filter': TestRunFilterModel;
+    /**
+    * Rules for different level entities inclusion/exclusion
+    */
     'extractionModel': TestRunExtractionModel;
 
     static discriminator: string | undefined = undefined;

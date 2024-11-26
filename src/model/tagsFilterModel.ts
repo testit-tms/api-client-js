@@ -11,14 +11,17 @@
  */
 
 import { RequestFile } from './models';
-import { TagsFilterModelCreatedDate } from './tagsFilterModelCreatedDate';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 
 export class TagsFilterModel {
     /**
     * Specifies a tag name to search for
     */
     'name'?: string | null;
-    'createdDate'?: TagsFilterModelCreatedDate | null;
+    /**
+    * Specifies a tag range of creation date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a tag creator IDs to search for
     */
@@ -35,7 +38,7 @@ export class TagsFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "TagsFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "createdByIds",

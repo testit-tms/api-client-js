@@ -27,7 +27,7 @@ All URIs are relative to *http://localhost*
 
 Create multiple parameters
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets list of parameter model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates parameters  &lt;br&gt;System returns list of parameter model (listed in the response example)
+     Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System creates parameters   System returns list of parameter model (listed in the response example)
 
 ### Parameters
 
@@ -54,7 +54,7 @@ Create multiple parameters
 
 Update multiple parameters
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets list of parameter model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates parameters
+     Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System updates parameters
 
 ### Parameters
 
@@ -81,7 +81,7 @@ null (empty response body)
 
 Get parameters as group
 
-    &lt;br&gt;Use case  &lt;br&gt;User runs method execution  &lt;br&gt;System search parameters  &lt;br&gt;System returns parameters models as groups (listed in the response example)
+     Use case   User runs method execution   System search parameters   System returns parameters models as groups (listed in the response example)
 
 ### Parameters
 
@@ -114,7 +114,7 @@ Get parameters as group
 
 Check existence parameter key in system
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets name of parameter key  &lt;br&gt;User runs method execution  &lt;br&gt;System search parameter key  &lt;br&gt;System returns the flag for the existence of the parameter key in the system
+     Use case   User sets name of parameter key   User runs method execution   System search parameter key   System returns the flag for the existence of the parameter key in the system
 
 ### Parameters
 
@@ -141,7 +141,7 @@ Check existence parameter key in system
 
 Get all parameter key values
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets parameter key (string format)  &lt;br&gt;User runs method execution  &lt;br&gt;System search parameter values using the key  &lt;br&gt;System returns parameter
+     Use case   User sets parameter key (string format)   User runs method execution   System search parameter values using the key   System returns parameter
 
 ### Parameters
 
@@ -168,7 +168,7 @@ Get all parameter key values
 
 Get all parameter keys
 
-    &lt;br&gt;Use case  &lt;br&gt;User runs method execution  &lt;br&gt;System search all parameter keys  &lt;br&gt;System returns parameter keys
+     Use case   User runs method execution   System search all parameter keys   System returns parameter keys
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -252,7 +252,7 @@ Search for parameters
 
 Create parameter
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets parameter model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates parameter  &lt;br&gt;System returns parameter model
+     Use case   User sets parameter model (listed in the request example)   User runs method execution   System creates parameter   System returns parameter model
 
 ### Parameters
 
@@ -312,7 +312,7 @@ Delete parameters by parameter key identifier
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **keyId** | **UUID**|  | [default to null] |
+| **keyId** | **UUID**| Identifier of the parameter key | [default to null] |
 
 ### Return type
 
@@ -333,7 +333,7 @@ null (empty response body)
 
 Delete parameter
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets parameter internal (guid format) identifier  &lt;br&gt;System search and delete parameter  &lt;br&gt;System returns deleted parameter
+     Use case   User sets parameter internal (guid format) identifier   System search and delete parameter   System returns deleted parameter
 
 ### Parameters
 
@@ -360,7 +360,7 @@ null (empty response body)
 
 Get all parameters
 
-    &lt;br&gt;Use case  &lt;br&gt;[Optional] User sets isDeleted field value  &lt;br&gt;[Optional] If User sets isDeleted field value as true, System search all deleted parameters  &lt;br&gt;[Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  &lt;br&gt;If User did not set isDeleted field value, System search all parameters  &lt;br&gt;System returns array of all found parameters(listed in response model)
+     Use case   [Optional] User sets isDeleted field value   [Optional] If User sets isDeleted field value as true, System search all deleted parameters   [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted   If User did not set isDeleted field value, System search all parameters   System returns array of all found parameters(listed in response model)
 
 ### Parameters
 
@@ -392,7 +392,7 @@ Get all parameters
 
 Get parameter by ID
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets parameter internal (guid format) identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search parameter using the identifier  &lt;br&gt;System returns parameter
+     Use case   User sets parameter internal (guid format) identifier   User runs method execution   System search parameter using the identifier   System returns parameter
 
 ### Parameters
 
@@ -419,7 +419,7 @@ Get parameter by ID
 
 Update parameter
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets parameter updated properties(listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updated parameter using updated properties  &lt;br&gt;System returns no content response
+     Use case   User sets parameter updated properties(listed in the request example)   User runs method execution   System updated parameter using updated properties   System returns no content response
 
 ### Parameters
 

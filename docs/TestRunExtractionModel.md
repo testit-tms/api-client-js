@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**TestRunExtractionModel_ids**](TestRunExtractionModel_ids.md) |  | [optional] [default to null] |
+| **ids** | [**GuidExtractionModel**](GuidExtractionModel.md) | Extraction parameters for test runs | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -14,6 +14,7 @@
 | **lastTestRunId** | **UUID** | Unique ID of the autotest last test run | [optional] [default to null] |
 | **lastTestRunName** | **String** | Name of the autotest last test run | [optional] [default to null] |
 | **lastTestResultId** | **UUID** | Unique ID of the autotest last test result | [optional] [default to null] |
+| **lastTestResultConfiguration** | [**ConfigurationShortModel**](ConfigurationShortModel.md) | Configuration of the autotest last test result | [optional] [default to null] |
 | **lastTestResultOutcome** | **String** | Outcome of the autotest last test result | [optional] [default to null] |
 | **stabilityPercentage** | **Integer** | Stability percentage of the autotest | [optional] [default to null] |
 | **externalId** | **String** | External ID of the autotest | [default to null] |

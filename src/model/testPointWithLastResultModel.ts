@@ -23,7 +23,7 @@ export class TestPointWithLastResultModel {
     'workItemId': string;
     'configurationId'?: string | null;
     'testSuiteId': string;
-    'lastTestResult'?: LastTestResultModel | null;
+    'lastTestResult'?: LastTestResultModel;
     'status'?: string | null;
     'workItemGlobalId'?: number | null;
     'workItemEntityTypeName'?: string | null;

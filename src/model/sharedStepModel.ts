@@ -17,6 +17,9 @@ export class SharedStepModel {
     'versionId': string;
     'globalId': number;
     'name': string;
+    /**
+    * @deprecated
+    */
     'steps': Array<StepModel>;
     'isDeleted': boolean;
 

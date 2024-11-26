@@ -85,7 +85,13 @@ export class TestPointShortGetModel {
     * Median duration of work item the test point represents
     */
     'workItemMedianDuration'?: number | null;
+    /**
+    * Status of the test point
+    */
     'status': TestPointStatus;
+    /**
+    * Priority of the test point
+    */
     'priority': WorkItemPriorityModel;
     /**
     * Indicates if the test point represents an autotest
@@ -120,6 +126,9 @@ export class TestPointShortGetModel {
     * Unique ID of work item iteration the test point represents
     */
     'iterationId': string;
+    /**
+    * Work item state
+    */
     'workItemState': WorkItemState;
     /**
     * Unique ID of the work item creator

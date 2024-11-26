@@ -15,7 +15,10 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { AutoTestNamespacesCountResponse } from '../model/autoTestNamespacesCountResponse';
 import { AutoTestResultsForTestRunModel } from '../model/autoTestResultsForTestRunModel';
+import { ManualRerunResultModel } from '../model/manualRerunResultModel';
+import { ManualRerunSelectModel } from '../model/manualRerunSelectModel';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestPointResultModel } from '../model/testPointResultModel';
 import { TestResultsLocalFilterModel } from '../model/testResultsLocalFilterModel';
@@ -106,7 +109,7 @@ export class TestRunsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets selection parameters of test runs  <br>System search and delete collection of test runs  <br>System returns the number of deleted test runs
+     *  Use case   User sets selection parameters of test runs   System search and delete collection of test runs   System returns the number of deleted test runs
      * @summary Delete multiple test runs
      * @param testRunSelectModel 
      */
@@ -173,7 +176,79 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run internal (guid format) identifier  <br>System search and delete test run
+     * 
+     * @summary Get autotest classes and namespaces in test run
+     * @param id 
+     */
+    public async apiV2TestRunsIdAutoTestsNamespacesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestNamespacesCountResponse;  }> {
+        const localVarPath = this.basePath + '/api/v2/testRuns/{id}/autoTestsNamespaces'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling apiV2TestRunsIdAutoTestsNamespacesGet.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'GET',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: AutoTestNamespacesCountResponse;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "AutoTestNamespacesCountResponse");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     *  Use case   User sets test run internal (guid format) identifier   System search and delete test run
      * @summary Delete test run
      * @param id Test run internal (UUID) identifier
      */
@@ -244,7 +319,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets archived test run internal (guid format) identifier  <br>System search and purge archived test run
+     *  Use case   User sets archived test run internal (guid format) identifier   System search and purge archived test run
      * @summary Permanently delete test run from archive
      * @param id Test run internal (UUID) identifier
      */
@@ -315,7 +390,81 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets archived test run internal (guid format) identifier  <br>System search and restore test run
+     * 
+     * @summary Manual autotests rerun in test run
+     * @param id 
+     * @param manualRerunSelectModel 
+     */
+    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectModel?: ManualRerunSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunResultModel;  }> {
+        const localVarPath = this.basePath + '/api/v2/testRuns/{id}/reruns'
+            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'id' is not null or undefined
+        if (id === null || id === undefined) {
+            throw new Error('Required parameter id was null or undefined when calling apiV2TestRunsIdRerunsPost.');
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(manualRerunSelectModel, "ManualRerunSelectModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: ManualRerunResultModel;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "ManualRerunResultModel");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     *  Use case   User sets archived test run internal (guid format) identifier   System search and restore test run
      * @summary Restore test run from the archive
      * @param id Unique ID of the test run
      */
@@ -677,7 +826,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets selection parameters of archived test runs  <br>System search and delete collection of archived test runs  <br>System returns the number of deleted archived test runs
+     *  Use case   User sets selection parameters of archived test runs   System search and delete collection of archived test runs   System returns the number of deleted archived test runs
      * @summary Permanently delete multiple test runs from archive
      * @param testRunSelectModel 
      */
@@ -744,7 +893,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets selection parameters of archived test runs  <br>System search and restore collection of archived test runs  <br>System returns the number of restored test runs
+     *  Use case   User sets selection parameters of archived test runs   System search and restore collection of archived test runs   System returns the number of restored test runs
      * @summary Restore multiple test runs from the archive
      * @param testRunSelectModel 
      */
@@ -911,6 +1060,13 @@ export class TestRunsApi {
         const localVarPath = this.basePath + '/api/v2/testRuns/updateMultiple';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
         let localVarFormParams: any = {};
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -962,7 +1118,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run identifier  <br>User runs method execution  <br>System completes test run  <br>System returns no content response
+     *  Use case   User sets test run identifier   User runs method execution   System completes test run   System returns no content response
      * @summary Complete TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1234,7 +1390,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run model (listed in the request example)  <br>User runs method execution  <br>System creates test run  <br>System returns test run model
+     *  Use case   User sets test run model (listed in the request example)   User runs method execution   System creates test run   System returns test run model
      * @summary Create empty TestRun
      * @param testRunV2PostShortModel 
      */
@@ -1301,7 +1457,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run identifier  <br>User runs method execution  <br>System finds test run  <br>System returns test run
+     *  Use case   User sets test run identifier   User runs method execution   System finds test run   System returns test run
      * @summary Get TestRun by Id
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1447,7 +1603,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run identifier  <br>User runs method execution  <br>System starts test run  <br>System returns no content response
+     *  Use case   User sets test run identifier   User runs method execution   System starts test run   System returns no content response
      * @summary Start TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1518,7 +1674,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run identifier  <br>User runs method execution  <br>System stops test run  <br>System returns no content response
+     *  Use case   User sets test run identifier   User runs method execution   System stops test run   System returns no content response
      * @summary Stop TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1589,7 +1745,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test run properties (listed in the request example)  <br>User runs method execution  <br>System updates test run  <br>System returns returns no content response
+     *  Use case   User sets test run properties (listed in the request example)   User runs method execution   System updates test run   System returns returns no content response
      * @summary Update empty TestRun
      * @param testRunV2PutModel 
      */

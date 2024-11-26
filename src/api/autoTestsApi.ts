@@ -26,7 +26,6 @@ import { FlakyBulkModel } from '../model/flakyBulkModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
-import { TestResultHistoryReportModel } from '../model/testResultHistoryReportModel';
 import { TestRunShortModel } from '../model/testRunShortModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemIdModel } from '../model/workItemIdModel';
@@ -269,7 +268,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User sets getTestResultHistoryReportQuery (listed in the example)  <br>User runs method execution  <br>System search for test results using filters set by user in getTestResultHistoryReportQuery and id  <br>System returns the enumeration of test results
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   User sets getTestResultHistoryReportQuery (listed in the example)   User runs method execution   System search for test results using filters set by user in getTestResultHistoryReportQuery and id   System returns the enumeration of test results
      * @summary Get test results history for autotest
      * @param id Autotest identifier
      * @param skip Amount of items to be skipped (offset)
@@ -610,7 +609,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>This method creates a new autotest.  <br>To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  <br>Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+     *  This method creates a new autotest.   To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.   Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
      * @summary Create autotest
      * @param autoTestPostModel 
      */
@@ -677,7 +676,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest parameters (listed in the example) and runs method execution  <br>System creates autotest  <br>[Optional] If steps enumeration is set, system creates step items and relates them to autotest  <br>[Optional] If setup enumeration is set, system creates setup items and relates them to autotest  <br>[Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  <br>[Optional] If label enumeration is set, system creates labels and relates them to autotest  <br>[Optional] If link enumeration is set, system creates links and relates them to autotest  <br>System returns autotest model (example listed in response parameters)
+     *  Use case   User sets autotest parameters (listed in the example) and runs method execution   System creates autotest   [Optional] If steps enumeration is set, system creates step items and relates them to autotest   [Optional] If setup enumeration is set, system creates setup items and relates them to autotest   [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest   [Optional] If label enumeration is set, system creates labels and relates them to autotest   [Optional] If link enumeration is set, system creates links and relates them to autotest   System returns autotest model (example listed in response parameters)
      * @summary Create multiple autotests
      * @param autoTestPostModel 
      */
@@ -744,7 +743,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  <br>System finds the autotest by the identifier  <br>System deletes autotest and returns no content response
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier and runs method execution   System finds the autotest by the identifier   System deletes autotest and returns no content response
      * @summary Delete autotest
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
@@ -815,7 +814,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>[Optional] User sets workitem internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System finds the autotest by the autotest identifier  <br>              [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.                <br>[Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  <br>System returns no content response
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   [Optional] User sets workitem internal (guid format) or global (integer format) identifier   User runs method execution   System finds the autotest by the autotest identifier                 [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.                 [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.   System returns no content response
      * @summary Unlink autotest from work item
      * @param id Autotest internal (UUID) or global (integer) identifier
      * @param workItemId Work item internal (UUID) or global (integer) identifier
@@ -918,6 +917,8 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
+     *
+     * @deprecated
      */
     public async getAllAutoTests (projectId?: string, externalId?: string, globalId?: number, namespace?: string, isNamespaceNull?: boolean, includeEmptyNamespaces?: boolean, className?: string, isClassnameNull?: boolean, includeEmptyClassNames?: boolean, isDeleted?: boolean, deleted?: boolean, labels?: Array<string>, stabilityMinimal?: number, minStability?: number, stabilityMaximal?: number, maxStability?: number, isFlaky?: boolean, flaky?: boolean, includeSteps?: boolean, includeLabels?: boolean, externalKey?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
@@ -1085,7 +1086,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System calculates pass average duration and fail average duration of autotest from all related test results  <br>System returns pass average duration and fail average duration for autotest
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   User runs method execution   System calculates pass average duration and fail average duration of autotest from all related test results   System returns pass average duration and fail average duration for autotest
      * @summary Get average autotest duration
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
@@ -1157,7 +1158,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal or global identifier and runs method execution  <br>System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+     *  Use case   User sets autotest internal or global identifier and runs method execution   System returns autotest, which internal or global identifier equals the identifier value set in the previous action
      * @summary Get autotest by internal or global ID
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
@@ -1229,7 +1230,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System search all test results related to autotest (with default limit equal 100)  <br>System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  <br>System returns test result chronology for autotest
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   User runs method execution   System search all test results related to autotest (with default limit equal 100)   System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending   System returns test result chronology for autotest
      * @summary Get autotest chronology
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
@@ -1301,7 +1302,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System search for all test runs related to the autotest  <br>System returns the enumeration of test runs
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   User runs method execution   System search for all test runs related to the autotest   System returns the enumeration of test runs
      * @summary Get completed tests runs for autotests
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
@@ -1373,150 +1374,9 @@ export class AutoTestsApi {
         });
     }
     /**
-     * 
-     * @param id 
-     * @param from Take results from this date
-     * @param to Take results until this date
-     * @param configurationIds Identifiers of test result configurations
-     * @param testPlanIds Identifiers of test plans which contain test results
-     * @param userIds Identifiers of users who set test results
-     * @param outcomes List of outcomes of test results
-     * @param isAutomated OBSOLETE: Use &#x60;Automated&#x60; instead
-     * @param automated If result must consist of only manual/automated test results
-     * @param testRunIds Identifiers of test runs which contain test results
-     * @param skip Amount of items to be skipped (offset)
-     * @param take Amount of items to be taken (limit)
-     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
-     * @param searchField Property name for searching
-     * @param searchValue Value for searching
-     */
-    public async getWorkItemResults (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportModel>;  }> {
-        const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testResultHistory'
-            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling getWorkItemResults.');
-        }
-
-        if (from !== undefined) {
-            localVarQueryParameters['from'] = ObjectSerializer.serialize(from, "Date");
-        }
-
-        if (to !== undefined) {
-            localVarQueryParameters['to'] = ObjectSerializer.serialize(to, "Date");
-        }
-
-        if (configurationIds !== undefined) {
-            localVarQueryParameters['configurationIds'] = ObjectSerializer.serialize(configurationIds, "Array<string>");
-        }
-
-        if (testPlanIds !== undefined) {
-            localVarQueryParameters['testPlanIds'] = ObjectSerializer.serialize(testPlanIds, "Array<string>");
-        }
-
-        if (userIds !== undefined) {
-            localVarQueryParameters['userIds'] = ObjectSerializer.serialize(userIds, "Array<string>");
-        }
-
-        if (outcomes !== undefined) {
-            localVarQueryParameters['outcomes'] = ObjectSerializer.serialize(outcomes, "Array<string>");
-        }
-
-        if (isAutomated !== undefined) {
-            localVarQueryParameters['isAutomated'] = ObjectSerializer.serialize(isAutomated, "boolean");
-        }
-
-        if (automated !== undefined) {
-            localVarQueryParameters['automated'] = ObjectSerializer.serialize(automated, "boolean");
-        }
-
-        if (testRunIds !== undefined) {
-            localVarQueryParameters['testRunIds'] = ObjectSerializer.serialize(testRunIds, "Array<string>");
-        }
-
-        if (skip !== undefined) {
-            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
-        }
-
-        if (take !== undefined) {
-            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
-        }
-
-        if (orderBy !== undefined) {
-            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
-        }
-
-        if (searchField !== undefined) {
-            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
-        }
-
-        if (searchValue !== undefined) {
-            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        let localVarRequestOptions: localVarRequest.Options = {
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportModel>;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestResultHistoryReportModel>");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     * <br>              This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:                <br>              1. Open the project in GUI.<br />              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.<br />              3. Select the autotest(s) you want to run using checkboxes.<br />              4. In the toolbar above the test list, click <b>Run autotests</b>.              
+     *                This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:                               1. Open the project in GUI.               2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.               3. Select the autotest(s) you want to run using checkboxes.               4. In the toolbar above the test list, click <b>Run autotests</b>.              
      * @summary Get work items linked to autotest
-     * @param id Specifies the autotest entity ID.&lt;br /&gt;  You can copy it from the address bar in your web browser or use autotest GUID.
+     * @param id Specifies the autotest entity ID.   You can copy it from the address bar in your web browser or use autotest GUID.
      * @param isDeleted Specifies that a test is deleted or still relevant.
      * @param isWorkItemDeleted OBSOLETE: Use &#x60;isDeleted&#x60; instead
      */
@@ -1596,7 +1456,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest internal (guid format) or global (integer format) identifier  <br>User sets work item internal (guid format) or global (integer format) identifier  <br>User runs method execution  <br>System finds the autotest by the autotest identifier  <br>System finds the work item by the work item identifier  <br>System relates the work item with the autotest and returns no content response
+     *  Use case   User sets autotest internal (guid format) or global (integer format) identifier   User sets work item internal (guid format) or global (integer format) identifier   User runs method execution   System finds the autotest by the autotest identifier   System finds the work item by the work item identifier   System relates the work item with the autotest and returns no content response
      * @summary Link autotest with work items
      * @param id Autotest internal (UUID) or global (integer) identifier
      * @param workItemIdModel 
@@ -1669,7 +1529,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest updated parameters values (listed in the example) and runs method execution  <br>System finds the autotest by the identifier  <br>System updates autotest parameters   <br>              [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)                <br>              [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)                <br>              [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)                <br>              [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)                <br>              [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)                <br>System updates autotest and returns no content response
+     *  Use case   User sets autotest updated parameters values (listed in the example) and runs method execution   System finds the autotest by the identifier   System updates autotest parameters                  [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)                               [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)                               [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)                               [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)                               [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)                 System updates autotest and returns no content response
      * @summary Update autotest
      * @param autoTestPutModel 
      */
@@ -1735,7 +1595,7 @@ export class AutoTestsApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets autotest updated parameters values (listed in the example) and runs method execution  <br>System finds the autotest by the identifier  <br>System updates autotest parameters   <br>              [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)                <br>              [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)                <br>              [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)                <br>              [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)                <br>              [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)                <br>System updates autotest and returns no content response
+     *  Use case   User sets autotest updated parameters values (listed in the example) and runs method execution   System finds the autotest by the identifier   System updates autotest parameters                  [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)                               [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)                               [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)                               [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)                               [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)                 System updates autotest and returns no content response
      * @summary Update multiple autotests
      * @param autoTestPutModel 
      */

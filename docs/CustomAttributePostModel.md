@@ -3,8 +3,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **options** | [**List**](CustomAttributeOptionPostModel.md) | Collection of attribute options  &lt;br /&gt;  Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | [optional] [default to null] |
-| **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) |  | [default to null] |
+| **options** | [**List**](CustomAttributeOptionPostModel.md) | Collection of attribute options     Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | [optional] [default to null] |
+| **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) | Type of attribute | [default to null] |
 | **name** | **String** | Name of the attribute | [default to null] |
 | **isEnabled** | **Boolean** | Indicates if the attribute is enabled | [default to null] |
 | **isRequired** | **Boolean** | Indicates if the attribute value is mandatory to specify | [default to null] |

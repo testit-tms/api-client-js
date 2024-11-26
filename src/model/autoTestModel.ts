@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { AutoTestStepModel } from './autoTestStepModel';
+import { ConfigurationShortModel } from './configurationShortModel';
 import { LabelShortModel } from './labelShortModel';
 import { LinkPutModel } from './linkPutModel';
 
@@ -60,6 +61,10 @@ export class AutoTestModel {
     * Unique ID of the autotest last test result
     */
     'lastTestResultId'?: string | null;
+    /**
+    * Configuration of the autotest last test result
+    */
+    'lastTestResultConfiguration'?: ConfigurationShortModel | null;
     /**
     * Outcome of the autotest last test result
     */
@@ -182,6 +187,11 @@ export class AutoTestModel {
             "name": "lastTestResultId",
             "baseName": "lastTestResultId",
             "type": "string"
+        },
+        {
+            "name": "lastTestResultConfiguration",
+            "baseName": "lastTestResultConfiguration",
+            "type": "ConfigurationShortModel"
         },
         {
             "name": "lastTestResultOutcome",

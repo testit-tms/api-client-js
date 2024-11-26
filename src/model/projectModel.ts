@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { CustomAttributeModel } from './customAttributeModel';
+import { ProjectTypeModel } from './projectTypeModel';
 
 export class ProjectModel {
     /**
@@ -78,6 +79,16 @@ export class ProjectModel {
     * Global ID of the project
     */
     'globalId': number;
+    /**
+    * Type of the project
+    */
+    'type': ProjectTypeModel;
+    /**
+    * Indicates if the status \"Flaky/Stable\" sets automatically
+    *
+    * @deprecated
+    */
+    'isFlakyAuto': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -161,6 +172,16 @@ export class ProjectModel {
             "name": "globalId",
             "baseName": "globalId",
             "type": "number"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "ProjectTypeModel"
+        },
+        {
+            "name": "isFlakyAuto",
+            "baseName": "isFlakyAuto",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
@@ -168,3 +189,5 @@ export class ProjectModel {
     }
 }
 
+export namespace ProjectModel {
+}

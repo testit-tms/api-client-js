@@ -20,6 +20,7 @@ import { CustomAttributeModel } from '../model/customAttributeModel';
 import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
 import { ProblemDetails } from '../model/problemDetails';
 import { ProjectAttributesFilterModel } from '../model/projectAttributesFilterModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -94,7 +95,7 @@ export class ProjectTestPlanAttributesApi {
     }
 
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and attributes identifiers  <br>User runs method execution  <br>System updates project and add attributes to project for test plans  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attributes identifiers   User runs method execution   System updates project and add attributes to project for test plans   System returns no content response
      * @summary Add attributes to project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param requestBody 
@@ -167,7 +168,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and attribute identifier  <br>User runs method execution  <br>System updates project and delete attribute from project for test plans  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attribute identifier   User runs method execution   System updates project and delete attribute from project for test plans   System returns no content response
      * @summary Delete attribute from project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param attributeId 
@@ -245,7 +246,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     * <br>Use case  <br>User runs method execution  <br>System returns project for test plans attributes by project identifier
+     *  Use case   User runs method execution   System returns project for test plans attributes by project identifier
      * @summary Get project\'s test plan attributes
      * @param projectId Project internal (UUID) or global (integer) identifier
      */
@@ -416,7 +417,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and attribute model  <br>User runs method execution  <br>System updates project and project attribute for test plan  <br>System returns no content response
+     *  Use case   User sets project internal or global identifier and attribute model   User runs method execution   System updates project and project attribute for test plan   System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param customAttributeTestPlanProjectRelationPutModel 

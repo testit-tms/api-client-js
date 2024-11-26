@@ -19,6 +19,7 @@ import { StepCommentModel } from './stepCommentModel';
 import { StepResultModel } from './stepResultModel';
 import { TestPointPutModel } from './testPointPutModel';
 import { TestResultOutcome } from './testResultOutcome';
+import { TestStatusModel } from './testStatusModel';
 
 export class TestResultModel {
     'autoTestId'?: string | null;
@@ -49,7 +50,11 @@ export class TestResultModel {
     'modifiedById'?: string | null;
     'stepComments'?: Array<StepCommentModel> | null;
     'failureClassIds': Array<string>;
+    /**
+    * @deprecated
+    */
     'outcome'?: TestResultOutcome | null;
+    'status'?: TestStatusModel | null;
     'comment'?: string | null;
     'links'?: Array<LinkModel> | null;
     'stepResults'?: Array<StepResultModel> | null;
@@ -202,6 +207,11 @@ export class TestResultModel {
             "name": "outcome",
             "baseName": "outcome",
             "type": "TestResultOutcome"
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "TestStatusModel"
         },
         {
             "name": "comment",

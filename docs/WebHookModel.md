@@ -4,10 +4,10 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the webhook | [default to null] |
-| **eventType** | [**WebHookEventTypeModel**](WebHookEventTypeModel.md) |  | [default to null] |
+| **eventType** | [**WebHookEventTypeModel**](WebHookEventTypeModel.md) | Type of event which triggers the webhook | [default to null] |
 | **description** | **String** | Description of the webhook | [optional] [default to null] |
 | **url** | **String** | Url to which the webhook sends request | [default to null] |
-| **requestType** | [**RequestTypeModel**](RequestTypeModel.md) |  | [default to null] |
+| **requestType** | [**RequestTypeModel**](RequestTypeModel.md) | Method which the webhook uses | [default to null] |
 | **shouldSendBody** | **Boolean** | Indicates if the webhook sends body | [default to null] |
 | **headers** | **Map** | Collection of headers which the webhook sends | [optional] [default to null] |
 | **queryParameters** | **Map** | Collection of query parameters which the webhook sends | [optional] [default to null] |

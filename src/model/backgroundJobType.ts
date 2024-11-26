@@ -26,5 +26,7 @@ export enum BackgroundJobType {
     ImportTestRailXmlProject = <any> 'ImportTestRailXmlProject',
     PurgeProject = <any> 'PurgeProject',
     ExportProjects = <any> 'ExportProjects',
-    ImportProjects = <any> 'ImportProjects'
+    ImportProjects = <any> 'ImportProjects',
+    PurgeEntities = <any> 'PurgeEntities',
+    DeleteCompletedJobs = <any> 'DeleteCompletedJobs'
 }

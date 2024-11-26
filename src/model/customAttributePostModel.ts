@@ -16,9 +16,12 @@ import { CustomAttributeTypesEnum } from './customAttributeTypesEnum';
 
 export class CustomAttributePostModel {
     /**
-    * Collection of attribute options  <br />  Available for attributes of type `options` and `multiple options` only
+    * Collection of attribute options     Available for attributes of type `options` and `multiple options` only
     */
     'options'?: Array<CustomAttributeOptionPostModel> | null;
+    /**
+    * Type of attribute
+    */
     'type': CustomAttributeTypesEnum;
     /**
     * Name of the attribute

@@ -32,6 +32,7 @@
 | **stepComments** | [**List**](StepCommentModel.md) |  | [optional] [default to null] |
 | **failureClassIds** | **List** |  | [default to null] |
 | **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] [default to null] |
+| **status** | [**TestStatusModel**](TestStatusModel.md) |  | [optional] [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |
 | **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |
 | **stepResults** | [**List**](StepResultModel.md) |  | [optional] [default to null] |

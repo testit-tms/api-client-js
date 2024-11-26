@@ -19,6 +19,7 @@ import { ProblemDetails } from '../model/problemDetails';
 import { TestPointFilterModel } from '../model/testPointFilterModel';
 import { TestPointShortGetModel } from '../model/testPointShortGetModel';
 import { TestRunModel } from '../model/testRunModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemModel } from '../model/workItemModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';

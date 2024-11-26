@@ -15,7 +15,13 @@ import { AutotestFilterModel } from './autotestFilterModel';
 import { SearchAutoTestsQueryIncludesModel } from './searchAutoTestsQueryIncludesModel';
 
 export class AutotestsSelectModel {
+    /**
+    * Object containing different filters to adjust search
+    */
     'filter': AutotestFilterModel;
+    /**
+    * Object specifying data to be included
+    */
     'includes': SearchAutoTestsQueryIncludesModel;
 
     static discriminator: string | undefined = undefined;

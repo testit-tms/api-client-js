@@ -16,6 +16,9 @@ import { UpdateAttachmentShortModel } from './updateAttachmentShortModel';
 import { UpdateLinkShortModel } from './updateLinkShortModel';
 
 export class TestRunUpdateMultipleModel {
+    /**
+    * Model containing options to filter test runs
+    */
     'selectModel': TestRunSelectModel;
     'description'?: string | null;
     'attachmentUpdateScheme': UpdateAttachmentShortModel;

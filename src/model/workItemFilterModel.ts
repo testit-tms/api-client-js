@@ -11,10 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { TestPointFilterModelWorkItemCreatedDate } from './testPointFilterModelWorkItemCreatedDate';
-import { TestPointFilterModelWorkItemModifiedDate } from './testPointFilterModelWorkItemModifiedDate';
-import { TestSuiteWorkItemsSearchModelDuration } from './testSuiteWorkItemsSearchModelDuration';
-import { TestSuiteWorkItemsSearchModelMedianDuration } from './testSuiteWorkItemsSearchModelMedianDuration';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
+import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
+import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
@@ -83,10 +82,22 @@ export class WorkItemFilterModel {
     * Collection of types of work item
     */
     'types'?: Array<WorkItemEntityTypes> | null;
-    'createdDate'?: TestPointFilterModelWorkItemCreatedDate | null;
-    'modifiedDate'?: TestPointFilterModelWorkItemModifiedDate | null;
-    'duration'?: TestSuiteWorkItemsSearchModelDuration | null;
-    'medianDuration'?: TestSuiteWorkItemsSearchModelMedianDuration | null;
+    /**
+    * Specifies a work item range of creation date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
+    /**
+    * Specifies a work item range of last modification date to search for
+    */
+    'modifiedDate'?: DateTimeRangeSelectorModel | null;
+    /**
+    * Specifies a work item duration range to search for
+    */
+    'duration'?: Int32RangeSelectorModel | null;
+    /**
+    * Specifies a work item median duration range to search for
+    */
+    'medianDuration'?: Int64RangeSelectorModel | null;
     /**
     * Is result must consist of only manual/automated work items
     */
@@ -99,6 +110,10 @@ export class WorkItemFilterModel {
     * Collection of identifiers of linked autotests
     */
     'autoTestIds'?: Array<string> | null;
+    /**
+    * Collection of identifiers work items versions.
+    */
+    'workItemVersionIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -181,22 +196,22 @@ export class WorkItemFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "TestPointFilterModelWorkItemCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "modifiedDate",
             "baseName": "modifiedDate",
-            "type": "TestPointFilterModelWorkItemModifiedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "duration",
             "baseName": "duration",
-            "type": "TestSuiteWorkItemsSearchModelDuration"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "medianDuration",
             "baseName": "medianDuration",
-            "type": "TestSuiteWorkItemsSearchModelMedianDuration"
+            "type": "Int64RangeSelectorModel"
         },
         {
             "name": "isAutomated",
@@ -211,6 +226,11 @@ export class WorkItemFilterModel {
         {
             "name": "autoTestIds",
             "baseName": "autoTestIds",
+            "type": "Array<string>"
+        },
+        {
+            "name": "workItemVersionIds",
+            "baseName": "workItemVersionIds",
             "type": "Array<string>"
         }    ];
 

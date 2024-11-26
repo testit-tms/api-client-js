@@ -31,7 +31,7 @@ export class TestPointShortModel {
     */
     'configurationId'?: string | null;
     /**
-    * Test point status  <br>Applies one of these values: Blocked, NoResults, Failed, Passed
+    * Test point status   Applies one of these values: Blocked, NoResults, Failed, Passed
     */
     'status'?: string | null;
     /**

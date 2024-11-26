@@ -20,12 +20,10 @@ export * from './projectAttributesApi';
 import { ProjectAttributesApi } from './projectAttributesApi';
 export * from './projectConfigurationsApi';
 import { ProjectConfigurationsApi } from './projectConfigurationsApi';
-export * from './projectExportApi';
-import { ProjectExportApi } from './projectExportApi';
-export * from './projectImportApi';
-import { ProjectImportApi } from './projectImportApi';
 export * from './projectSectionsApi';
 import { ProjectSectionsApi } from './projectSectionsApi';
+export * from './projectSettingsApi';
+import { ProjectSettingsApi } from './projectSettingsApi';
 export * from './projectTestPlanAttributesApi';
 import { ProjectTestPlanAttributesApi } from './projectTestPlanAttributesApi';
 export * from './projectTestPlansApi';
@@ -50,6 +48,8 @@ export * from './testRunsApi';
 import { TestRunsApi } from './testRunsApi';
 export * from './testSuitesApi';
 import { TestSuitesApi } from './testSuitesApi';
+export * from './usersApi';
+import { UsersApi } from './usersApi';
 export * from './webhooksApi';
 import { WebhooksApi } from './webhooksApi';
 export * from './webhooksLogsApi';
@@ -69,4 +69,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectExportApi, ProjectImportApi, ProjectSectionsApi, ProjectTestPlanAttributesApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];
+export const APIS = [AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];

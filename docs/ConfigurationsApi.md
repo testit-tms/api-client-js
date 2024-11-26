@@ -282,7 +282,7 @@ Search for configurations
 
 Create Configuration
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets configuration model (listed in the request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates configuration  &lt;br&gt;System returns created configuration (listed in the response example)
+     Use case   User sets configuration model (listed in the request example)   User runs method execution   System creates configuration   System returns created configuration (listed in the response example)
 
 ### Parameters
 
@@ -309,7 +309,7 @@ Create Configuration
 
 Get configuration by internal or global ID
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets configuration internal (guid format) or global (integer format) identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search configuration using the identifier  &lt;br&gt;System returns configuration
+     Use case   User sets configuration internal (guid format) or global (integer format) identifier   User runs method execution   System search configuration using the identifier   System returns configuration
 
 ### Parameters
 

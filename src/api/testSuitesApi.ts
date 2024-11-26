@@ -524,7 +524,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User runs method execution  <br>System search test suite by identifier  <br>System deletes test suite  <br>System returns no content response
+     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System deletes test suite   System returns no content response
      * @summary Delete TestSuite
      * @param id Test suite internal (guid format) identifier\&quot;
      */
@@ -595,7 +595,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User runs method execution  <br>System search test suite by identifier  <br>System search test points related to the test suite  <br>System search configurations related to the test points  <br>System returns configurations array
+     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search configurations related to the test points   System returns configurations array
      * @summary Get Configurations By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
@@ -667,7 +667,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User runs method execution  <br>System search test suite by identifier  <br>System search test points related to the test suite  <br>System returns test points array
+     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System returns test points array
      * @summary Get TestPoints By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
@@ -739,7 +739,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User runs method execution  <br>System search test suite by identifier  <br>System search test points related to the test suite  <br>System search test results related to the test points  <br>System returns test results array
+     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search test results related to the test points   System returns test results array
      * @summary Get TestResults By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
@@ -811,7 +811,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User runs method execution  <br>System search test suite by identifier  <br>System returns test suite
+     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System returns test suite
      * @summary Get TestSuite by Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
@@ -883,7 +883,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>[Optional] User sets filter  <br>User runs method execution  <br>System search test suite by identifier  <br>System search test points related to the test suite  <br>System search work items related to the test points  <br>                      [Optional] User sets filter, system applies filter                    <br>System returns work items array
+     *  Use case   User sets test suite identifier   [Optional] User sets filter   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search work items related to the test points                         [Optional] User sets filter, system applies filter                     System returns work items array
      * @summary Search WorkItems
      * @param id Test suite internal (guid format) identifier\&quot;
      * @param skip Amount of items to be skipped (offset)
@@ -892,6 +892,8 @@ export class TestSuitesApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      * @param testSuiteWorkItemsSearchModel 
+     *
+     * @deprecated
      */
     public async searchWorkItems (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testSuiteWorkItemsSearchModel?: TestSuiteWorkItemsSearchModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/workItems/search'
@@ -982,7 +984,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets test suite identifier  <br>User sets collection of configuration identifiers  <br>User runs method execution  <br>System search test suite by identifier  <br>System search test points related to the test suite  <br>System search configuration  <br>System restores(if exist) or creates test points with listed configuration  <br>System returns no content response
+     *  Use case   User sets test suite identifier   User sets collection of configuration identifiers   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search configuration   System restores(if exist) or creates test points with listed configuration   System returns no content response
      * @summary Set Configurations By TestSuite Id
      * @param id Test suite internal (guid format) identifier\&quot;
      * @param requestBody Collection of configuration identifiers\&quot;

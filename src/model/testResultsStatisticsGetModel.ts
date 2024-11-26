@@ -11,12 +11,18 @@
  */
 
 import { RequestFile } from './models';
-import { TestResultsStatisticsGetModelFailureCategories } from './testResultsStatisticsGetModelFailureCategories';
-import { TestResultsStatisticsGetModelStatuses } from './testResultsStatisticsGetModelStatuses';
+import { TestRunStatisticsErrorCategoriesGetModel } from './testRunStatisticsErrorCategoriesGetModel';
+import { TestRunStatisticsStatusesGetModel } from './testRunStatisticsStatusesGetModel';
 
 export class TestResultsStatisticsGetModel {
-    'statuses': TestResultsStatisticsGetModelStatuses;
-    'failureCategories': TestResultsStatisticsGetModelFailureCategories;
+    /**
+    * Test results counts aggregated by outcome
+    */
+    'statuses': TestRunStatisticsStatusesGetModel;
+    /**
+    * Test results counts aggregated by result failure categories
+    */
+    'failureCategories': TestRunStatisticsErrorCategoriesGetModel;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,12 +30,12 @@ export class TestResultsStatisticsGetModel {
         {
             "name": "statuses",
             "baseName": "statuses",
-            "type": "TestResultsStatisticsGetModelStatuses"
+            "type": "TestRunStatisticsStatusesGetModel"
         },
         {
             "name": "failureCategories",
             "baseName": "failureCategories",
-            "type": "TestResultsStatisticsGetModelFailureCategories"
+            "type": "TestRunStatisticsErrorCategoriesGetModel"
         }    ];
 
     static getAttributeTypeMap() {

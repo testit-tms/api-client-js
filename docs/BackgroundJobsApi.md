@@ -4,12 +4,35 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2BackgroundJobsCompletedDelete**](BackgroundJobsApi.md#apiV2BackgroundJobsCompletedDelete) | **DELETE** /api/v2/backgroundJobs/completed | Delete all completed background jobs |
 | [**apiV2BackgroundJobsGet**](BackgroundJobsApi.md#apiV2BackgroundJobsGet) | **GET** /api/v2/backgroundJobs |  |
 | [**apiV2BackgroundJobsIdCancelPost**](BackgroundJobsApi.md#apiV2BackgroundJobsIdCancelPost) | **POST** /api/v2/backgroundJobs/{id}/cancel | Cancel current user background job |
 | [**apiV2BackgroundJobsIdGet**](BackgroundJobsApi.md#apiV2BackgroundJobsIdGet) | **GET** /api/v2/backgroundJobs/{id} | Get background job by ID |
 | [**apiV2BackgroundJobsIdStatusGet**](BackgroundJobsApi.md#apiV2BackgroundJobsIdStatusGet) | **GET** /api/v2/backgroundJobs/{id}/status | Get background job status by job ID |
 | [**apiV2BackgroundJobsSearchPost**](BackgroundJobsApi.md#apiV2BackgroundJobsSearchPost) | **POST** /api/v2/backgroundJobs/search | Search for user background jobs |
 
+
+<a name="apiV2BackgroundJobsCompletedDelete"></a>
+# **apiV2BackgroundJobsCompletedDelete**
+> apiV2BackgroundJobsCompletedDelete()
+
+Delete all completed background jobs
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 <a name="apiV2BackgroundJobsGet"></a>
 # **apiV2BackgroundJobsGet**
@@ -63,7 +86,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 <a name="apiV2BackgroundJobsIdGet"></a>
 # **apiV2BackgroundJobsIdGet**

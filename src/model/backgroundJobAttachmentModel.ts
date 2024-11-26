@@ -16,6 +16,7 @@ export class BackgroundJobAttachmentModel {
     'id': string;
     'name': string;
     'type': string;
+    'size': number;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +35,11 @@ export class BackgroundJobAttachmentModel {
             "name": "type",
             "baseName": "type",
             "type": "string"
+        },
+        {
+            "name": "size",
+            "baseName": "size",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {

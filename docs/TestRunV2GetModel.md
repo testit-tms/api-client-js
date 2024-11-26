@@ -18,6 +18,7 @@
 | **links** | [**List**](LinkModel.md) |  | [default to null] |
 | **customParameters** | **Map** |  | [optional] [default to null] |
 | **webhooks** | [**List**](NamedEntityModel.md) |  | [default to null] |
+| **runCount** | **Integer** |  | [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |

@@ -11,12 +11,10 @@
  */
 
 import { RequestFile } from './models';
+import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { FailureCategoryModel } from './failureCategoryModel';
+import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
 import { TestResultOutcome } from './testResultOutcome';
-import { TestRunFilterModelAutoTestsCount } from './testRunFilterModelAutoTestsCount';
-import { TestRunFilterModelCompletedDate } from './testRunFilterModelCompletedDate';
-import { TestRunFilterModelCreatedDate } from './testRunFilterModelCreatedDate';
-import { TestRunFilterModelStartedDate } from './testRunFilterModelStartedDate';
 import { TestRunState } from './testRunState';
 
 export class TestRunFilterModel {
@@ -32,8 +30,14 @@ export class TestRunFilterModel {
     * Specifies a test run states to search for
     */
     'states'?: Array<TestRunState> | null;
-    'createdDate'?: TestRunFilterModelCreatedDate | null;
-    'startedDate'?: TestRunFilterModelStartedDate | null;
+    /**
+    * Specifies a test run range of created date to search for
+    */
+    'createdDate'?: DateTimeRangeSelectorModel | null;
+    /**
+    * Specifies a test run range of started date to search for
+    */
+    'startedDate'?: DateTimeRangeSelectorModel | null;
     /**
     * Specifies a test run creator IDs to search for
     */
@@ -46,7 +50,10 @@ export class TestRunFilterModel {
     * Specifies a test run deleted status to search for
     */
     'isDeleted'?: boolean | null;
-    'autoTestsCount'?: TestRunFilterModelAutoTestsCount | null;
+    /**
+    * Number of autoTests run in the test run
+    */
+    'autoTestsCount'?: Int32RangeSelectorModel | null;
     /**
     * Specifies test results outcomes
     */
@@ -55,7 +62,14 @@ export class TestRunFilterModel {
     * Specifies failure categories
     */
     'failureCategory'?: Array<FailureCategoryModel> | null;
-    'completedDate'?: TestRunFilterModelCompletedDate | null;
+    /**
+    * Specifies a test run range of completed date to search for
+    */
+    'completedDate'?: DateTimeRangeSelectorModel | null;
+    /**
+    * Specifies a test result configuration IDs to search for
+    */
+    'testResultsConfigurationIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -78,12 +92,12 @@ export class TestRunFilterModel {
         {
             "name": "createdDate",
             "baseName": "createdDate",
-            "type": "TestRunFilterModelCreatedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "startedDate",
             "baseName": "startedDate",
-            "type": "TestRunFilterModelStartedDate"
+            "type": "DateTimeRangeSelectorModel"
         },
         {
             "name": "createdByIds",
@@ -103,7 +117,7 @@ export class TestRunFilterModel {
         {
             "name": "autoTestsCount",
             "baseName": "autoTestsCount",
-            "type": "TestRunFilterModelAutoTestsCount"
+            "type": "Int32RangeSelectorModel"
         },
         {
             "name": "testResultsOutcome",
@@ -118,7 +132,12 @@ export class TestRunFilterModel {
         {
             "name": "completedDate",
             "baseName": "completedDate",
-            "type": "TestRunFilterModelCompletedDate"
+            "type": "DateTimeRangeSelectorModel"
+        },
+        {
+            "name": "testResultsConfigurationIds",
+            "baseName": "testResultsConfigurationIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

@@ -18,6 +18,7 @@ import http from 'http';
 import { ProblemDetails } from '../model/problemDetails';
 import { ProjectCustomAttributeTemplateGetModel } from '../model/projectCustomAttributeTemplateGetModel';
 import { ProjectCustomAttributesTemplatesFilterModel } from '../model/projectCustomAttributesTemplatesFilterModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -191,7 +192,7 @@ export class ProjectAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User sets attribute template internal identifier   <br>User runs method execution  <br>System delete attribute template from project
+     *  Use case   User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution   System delete attribute template from project
      * @summary Delete CustomAttributeTemplate from Project
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier
@@ -202,6 +203,13 @@ export class ProjectAttributeTemplatesApi {
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
         let localVarFormParams: any = {};
 
         // verify required parameter 'projectId' is not null or undefined
@@ -262,7 +270,7 @@ export class ProjectAttributeTemplatesApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User sets attribute template internal identifier   <br>User runs method execution  <br>System add attribute template to project
+     *  Use case   User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution   System add attribute template to project
      * @summary Add CustomAttributeTemplate to Project
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier
@@ -273,6 +281,13 @@ export class ProjectAttributeTemplatesApi {
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
         let localVarFormParams: any = {};
 
         // verify required parameter 'projectId' is not null or undefined

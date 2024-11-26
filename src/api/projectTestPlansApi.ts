@@ -19,6 +19,7 @@ import { ProblemDetails } from '../model/problemDetails';
 import { ProjectTestPlansFilterModel } from '../model/projectTestPlansFilterModel';
 import { TestPlanSelectModel } from '../model/testPlanSelectModel';
 import { TestPlanWithAnalyticModel } from '../model/testPlanWithAnalyticModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -93,7 +94,7 @@ export class ProjectTestPlansApi {
     }
 
     /**
-     * <br>Use case  <br>User sets project internal identifier  <br>User sets query params  <br>User runs method execution  <br>System return analytics
+     *  Use case   User sets project internal identifier   User sets query params   User runs method execution   System return analytics
      * @summary Get TestPlans analytics
      * @param projectId Project internal (UUID) identifier
      * @param isDeleted 
@@ -274,7 +275,7 @@ export class ProjectTestPlansApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User runs method execution  <br>System purge delete project workitems
+     *  Use case   User sets project internal or global identifier    User runs method execution   System purge delete project workitems
      * @summary Checks if TestPlan exists with the specified name exists for the project
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param name TestPlan name to check
@@ -431,7 +432,7 @@ export class ProjectTestPlansApi {
      * @param projectId Unique or global ID of the project
      * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/restore/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -483,12 +484,13 @@ export class ProjectTestPlansApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<string>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "Array<string>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -499,7 +501,7 @@ export class ProjectTestPlansApi {
         });
     }
     /**
-     * <br>Use case  <br>User sets project internal or global identifier   <br>User sets request body   <br>User runs method execution  <br>System returns project testplans with analytics
+     *  Use case   User sets project internal or global identifier    User sets request body    User runs method execution   System returns project testplans with analytics
      * @summary Get Project TestPlans with analytics
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param mustUpdateCache 

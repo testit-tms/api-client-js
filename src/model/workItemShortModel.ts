@@ -85,7 +85,13 @@ export class WorkItemShortModel {
     * Date and time of the latest modification of Work Item
     */
     'modifiedDate'?: Date | null;
+    /**
+    * The current state of Work Item
+    */
     'state': WorkItemStates;
+    /**
+    * Work Item priority level
+    */
     'priority': WorkItemPriorityModel;
     /**
     * Flag determining whether Work Item is deleted

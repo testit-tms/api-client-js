@@ -26,6 +26,9 @@ export class TestSuiteV2PostModel {
     * Name of the test suite
     */
     'name': string;
+    /**
+    * Type of the test suite
+    */
     'type'?: TestSuiteType | null;
     /**
     * Indicates if the test suite retains section tree structure

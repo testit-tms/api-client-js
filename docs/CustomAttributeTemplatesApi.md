@@ -4,6 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2CustomAttributesTemplatesExistsGet**](CustomAttributeTemplatesApi.md#apiV2CustomAttributesTemplatesExistsGet) | **GET** /api/v2/customAttributes/templates/exists |  |
 | [**apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost**](CustomAttributeTemplatesApi.md#apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost) | **POST** /api/v2/customAttributes/templates/{id}/customAttributes/exclude | Exclude CustomAttributes from CustomAttributeTemplate |
 | [**apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost**](CustomAttributeTemplatesApi.md#apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost) | **POST** /api/v2/customAttributes/templates/{id}/customAttributes/include | Include CustomAttributes to CustomAttributeTemplate |
 | [**apiV2CustomAttributesTemplatesIdDelete**](CustomAttributeTemplatesApi.md#apiV2CustomAttributesTemplatesIdDelete) | **DELETE** /api/v2/customAttributes/templates/{id} | Delete CustomAttributeTemplate |
@@ -14,13 +15,38 @@ All URIs are relative to *http://localhost*
 | [**apiV2CustomAttributesTemplatesSearchPost**](CustomAttributeTemplatesApi.md#apiV2CustomAttributesTemplatesSearchPost) | **POST** /api/v2/customAttributes/templates/search | Search CustomAttributeTemplates |
 
 
+<a name="apiV2CustomAttributesTemplatesExistsGet"></a>
+# **apiV2CustomAttributesTemplatesExistsGet**
+> CustomAttributeTemplateValidationResult apiV2CustomAttributesTemplatesExistsGet(name)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**|  | [optional] [default to null] |
+
+### Return type
+
+[**CustomAttributeTemplateValidationResult**](../Models/CustomAttributeTemplateValidationResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 <a name="apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost"></a>
 # **apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost**
 > apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost(id, request\_body)
 
 Exclude CustomAttributes from CustomAttributeTemplate
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template internal identifier  &lt;br&gt;User sets attribute internal identifiers   &lt;br&gt;User runs method execution  &lt;br&gt;System delete attributes from attributes tempalte
+     Use case   User sets attribute template internal identifier   User sets attribute internal identifiers    User runs method execution   System delete attributes from attributes tempalte
 
 ### Parameters
 
@@ -48,7 +74,7 @@ null (empty response body)
 
 Include CustomAttributes to CustomAttributeTemplate
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template internal identifier  &lt;br&gt;User sets attribute internal identifiers   &lt;br&gt;User runs method execution  &lt;br&gt;System add attributes to attributes tempalte
+     Use case   User sets attribute template internal identifier   User sets attribute internal identifiers    User runs method execution   System add attributes to attributes tempalte
 
 ### Parameters
 
@@ -72,11 +98,11 @@ null (empty response body)
 
 <a name="apiV2CustomAttributesTemplatesIdDelete"></a>
 # **apiV2CustomAttributesTemplatesIdDelete**
-> NoContentResult apiV2CustomAttributesTemplatesIdDelete(id)
+> apiV2CustomAttributesTemplatesIdDelete(id)
 
 Delete CustomAttributeTemplate
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template internal identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search and delete attribute template  &lt;br&gt;System returns no content response
+     Use case   User sets attribute template internal identifier   User runs method execution   System search and delete attribute template   System returns no content response
 
 ### Parameters
 
@@ -86,7 +112,7 @@ Delete CustomAttributeTemplate
 
 ### Return type
 
-[**NoContentResult**](../Models/NoContentResult.md)
+null (empty response body)
 
 ### Authorization
 
@@ -103,7 +129,7 @@ Delete CustomAttributeTemplate
 
 Get CustomAttributeTemplate by ID
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template internal identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System return attribute template (listed in response example)
+     Use case   User sets attribute template internal identifier    User runs method execution   System return attribute template (listed in response example)
 
 ### Parameters
 
@@ -130,7 +156,7 @@ Get CustomAttributeTemplate by ID
 
 Get CustomAttributeTemplate by name
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template name  &lt;br&gt;User runs method execution  &lt;br&gt;System search and return list of attribute templates (listed in response example)
+     Use case   User sets attribute template name   User runs method execution   System search and return list of attribute templates (listed in response example)
 
 ### Parameters
 
@@ -157,7 +183,7 @@ Get CustomAttributeTemplate by name
 
 Create CustomAttributeTemplate
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets attribute template parameters (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates attribute template  &lt;br&gt;System returns attribute template model (example listed in response parameters)
+     Use case   User sets attribute template parameters (listed in request example)   User runs method execution   System creates attribute template   System returns attribute template model (example listed in response parameters)
 
 ### Parameters
 
@@ -209,7 +235,7 @@ null (empty response body)
 
 Search CustomAttributeTemplates
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets search params model (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System return attribute templates (listed in response example)
+     Use case   User sets search params model (listed in request example)   User runs method execution   System return attribute templates (listed in response example)
 
 ### Parameters
 

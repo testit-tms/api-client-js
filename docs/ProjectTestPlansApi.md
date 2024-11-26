@@ -18,7 +18,7 @@ All URIs are relative to *http://localhost*
 
 Get TestPlans analytics
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal identifier  &lt;br&gt;User sets query params  &lt;br&gt;User runs method execution  &lt;br&gt;System return analytics
+     Use case   User sets project internal identifier   User sets query params   User runs method execution   System return analytics
 
 ### Parameters
 
@@ -78,7 +78,7 @@ Delete multiple test plans
 
 Checks if TestPlan exists with the specified name exists for the project
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User runs method execution  &lt;br&gt;System purge delete project workitems
+     Use case   User sets project internal or global identifier    User runs method execution   System purge delete project workitems
 
 ### Parameters
 
@@ -128,7 +128,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsProjectIdTestPlansRestoreBulkPost"></a>
 # **apiV2ProjectsProjectIdTestPlansRestoreBulkPost**
-> apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, TestPlanSelectModel)
+> List apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, TestPlanSelectModel)
 
 Restore multiple test plans
 
@@ -141,7 +141,7 @@ Restore multiple test plans
 
 ### Return type
 
-null (empty response body)
+**List**
 
 ### Authorization
 
@@ -158,7 +158,7 @@ null (empty response body)
 
 Get Project TestPlans with analytics
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets project internal or global identifier   &lt;br&gt;User sets request body   &lt;br&gt;User runs method execution  &lt;br&gt;System returns project testplans with analytics
+     Use case   User sets project internal or global identifier    User sets request body    User runs method execution   System returns project testplans with analytics
 
 ### Parameters
 

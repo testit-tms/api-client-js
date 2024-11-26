@@ -17,6 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
 import { SectionModel } from '../model/sectionModel';
+import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -91,7 +92,7 @@ export class ProjectSectionsApi {
     }
 
     /**
-     * <br>Use case  <br>User sets project internal or global identifier and runs method execution  <br>System search project  <br>System search all sections related to the project  <br>System returns array of sections (listed in response)
+     *  Use case   User sets project internal or global identifier and runs method execution   System search project   System search all sections related to the project   System returns array of sections (listed in response)
      * @summary Get project sections
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param skip Amount of items to be skipped (offset)

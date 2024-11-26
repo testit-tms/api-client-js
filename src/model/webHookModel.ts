@@ -19,6 +19,9 @@ export class WebHookModel {
     * Name of the webhook
     */
     'name': string;
+    /**
+    * Type of event which triggers the webhook
+    */
     'eventType': WebHookEventTypeModel;
     /**
     * Description of the webhook
@@ -28,6 +31,9 @@ export class WebHookModel {
     * Url to which the webhook sends request
     */
     'url': string;
+    /**
+    * Method which the webhook uses
+    */
     'requestType': RequestTypeModel;
     /**
     * Indicates if the webhook sends body

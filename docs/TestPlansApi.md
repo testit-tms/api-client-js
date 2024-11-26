@@ -14,6 +14,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2TestPlansIdHistoryGet**](TestPlansApi.md#apiV2TestPlansIdHistoryGet) | **GET** /api/v2/testPlans/{id}/history | Get TestPlan history |
 | [**apiV2TestPlansIdLinksGet**](TestPlansApi.md#apiV2TestPlansIdLinksGet) | **GET** /api/v2/testPlans/{id}/links | Get Links of TestPlan |
 | [**apiV2TestPlansIdPatch**](TestPlansApi.md#apiV2TestPlansIdPatch) | **PATCH** /api/v2/testPlans/{id} | Patch test plan |
+| [**apiV2TestPlansIdSummariesGet**](TestPlansApi.md#apiV2TestPlansIdSummariesGet) | **GET** /api/v2/testPlans/{id}/summaries | Get summary by TestPlan |
 | [**apiV2TestPlansIdTestPointsLastResultsGet**](TestPlansApi.md#apiV2TestPlansIdTestPointsLastResultsGet) | **GET** /api/v2/testPlans/{id}/testPoints/lastResults | Get TestPoints with last result from TestPlan |
 | [**apiV2TestPlansIdTestPointsResetPost**](TestPlansApi.md#apiV2TestPlansIdTestPointsResetPost) | **POST** /api/v2/testPlans/{id}/testPoints/reset | Reset TestPoints status of TestPlan |
 | [**apiV2TestPlansIdTestPointsTesterDelete**](TestPlansApi.md#apiV2TestPlansIdTestPointsTesterDelete) | **DELETE** /api/v2/testPlans/{id}/testPoints/tester | Unassign users from multiple test points |
@@ -68,7 +69,7 @@ null (empty response body)
 
 Add WorkItems to TestPlan with Sections as TestSuites
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets TestPlan identifier  &lt;br&gt;User sets WorkItem identifiers (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System added WorkItems and Sections to TestPlan  &lt;br&gt;System returns no content response
+     Use case   User sets TestPlan identifier   User sets WorkItem identifiers (listed in request example)   User runs method execution   System added WorkItems and Sections to TestPlan   System returns no content response
 
 ### Parameters
 
@@ -96,7 +97,7 @@ null (empty response body)
 
 Get analytics by TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System returns analytics by test plan
+     Use case   User sets test plan identifier   User runs method execution   System returns analytics by test plan
 
 ### Parameters
 
@@ -149,7 +150,7 @@ Distribute test points between the users
 
 Get TestPlan configurations
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System return test plan configurations
+     Use case   User sets test plan identifier   User runs method execution   System return test plan configurations
 
 ### Parameters
 
@@ -172,11 +173,11 @@ Get TestPlan configurations
 
 <a name="apiV2TestPlansIdExportTestPointsXlsxPost"></a>
 # **apiV2TestPlansIdExportTestPointsXlsxPost**
-> File apiV2TestPlansIdExportTestPointsXlsxPost(id, time-Zone-Offset-In-Minutes, GetXlsxTestPointsByTestPlanModel)
+> apiV2TestPlansIdExportTestPointsXlsxPost(id, time-Zone-Offset-In-Minutes, GetXlsxTestPointsByTestPlanModel)
 
 Export TestPoints from TestPlan in xls format
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets filter model (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System return export xlsx file
+     Use case   User sets test plan identifier   User sets filter model (listed in request example)   User runs method execution   System return export xlsx file
 
 ### Parameters
 
@@ -188,7 +189,7 @@ Export TestPoints from TestPlan in xls format
 
 ### Return type
 
-**File**
+null (empty response body)
 
 ### Authorization
 
@@ -197,15 +198,15 @@ Export TestPoints from TestPlan in xls format
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/octet-stream, application/json
+- **Accept**: application/json
 
 <a name="apiV2TestPlansIdExportTestResultHistoryXlsxPost"></a>
 # **apiV2TestPlansIdExportTestResultHistoryXlsxPost**
-> File apiV2TestPlansIdExportTestResultHistoryXlsxPost(id, mustReturnOnlyLastTestResult, includeSteps, includeDeletedTestSuites, time-Zone-Offset-In-Minutes)
+> apiV2TestPlansIdExportTestResultHistoryXlsxPost(id, mustReturnOnlyLastTestResult, includeSteps, includeDeletedTestSuites, time-Zone-Offset-In-Minutes)
 
 Export TestResults history from TestPlan in xls format
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets filter model (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System return export xlsx file
+     Use case   User sets test plan identifier   User sets filter model (listed in request example)   User runs method execution   System return export xlsx file
 
 ### Parameters
 
@@ -219,7 +220,7 @@ Export TestResults history from TestPlan in xls format
 
 ### Return type
 
-**File**
+null (empty response body)
 
 ### Authorization
 
@@ -228,7 +229,7 @@ Export TestResults history from TestPlan in xls format
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/octet-stream, application/json
+- **Accept**: application/json
 
 <a name="apiV2TestPlansIdHistoryGet"></a>
 # **apiV2TestPlansIdHistoryGet**
@@ -236,7 +237,7 @@ Export TestResults history from TestPlan in xls format
 
 Get TestPlan history
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System return test plan history
+     Use case   User sets test plan identifier   User runs method execution   System return test plan history
 
 ### Parameters
 
@@ -268,7 +269,7 @@ Get TestPlan history
 
 Get Links of TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets pagination filter (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System returns links of TestPlan
+     Use case   User sets test plan identifier   User sets pagination filter (listed in request example)   User runs method execution   System returns links of TestPlan
 
 ### Parameters
 
@@ -320,13 +321,40 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2TestPlansIdSummariesGet"></a>
+# **apiV2TestPlansIdSummariesGet**
+> TestPlanSummaryModel apiV2TestPlansIdSummariesGet(id)
+
+Get summary by TestPlan
+
+     Use case   User sets test plan identifier   User runs method execution   System returns summary by test plan
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+
+### Return type
+
+[**TestPlanSummaryModel**](../Models/TestPlanSummaryModel.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 <a name="apiV2TestPlansIdTestPointsLastResultsGet"></a>
 # **apiV2TestPlansIdTestPointsLastResultsGet**
 > List apiV2TestPlansIdTestPointsLastResultsGet(id, testerId, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get TestPoints with last result from TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets filter (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System return test points with last result from test plan
+     Use case   User sets test plan identifier   User sets filter (listed in request example)   User runs method execution   System return test points with last result from test plan
 
 ### Parameters
 
@@ -359,7 +387,7 @@ Get TestPoints with last result from TestPlan
 
 Reset TestPoints status of TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets test points identifiers  &lt;br&gt;User runs method execution  &lt;br&gt;System reset test points statuses of test plan
+     Use case   User sets test plan identifier   User sets test points identifiers   User runs method execution   System reset test points statuses of test plan
 
 ### Parameters
 
@@ -440,7 +468,7 @@ Assign user as a tester to multiple test points
 
 Get TestRuns of TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets TestRun status filter (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System returns TestRuns for TestPlan
+     Use case   User sets test plan identifier   User sets TestRun status filter (listed in request example)   User runs method execution   System returns TestRuns for TestPlan
 
 ### Parameters
 
@@ -476,7 +504,7 @@ Get TestRuns of TestPlan
 
 Search TestRuns of TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User sets TestRuns filter (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System returns TestRuns for TestPlan
+     Use case   User sets test plan identifier   User sets TestRuns filter (listed in request example)   User runs method execution   System returns TestRuns for TestPlan
 
 ### Parameters
 
@@ -505,7 +533,7 @@ Search TestRuns of TestPlan
 
 <a name="apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet"></a>
 # **apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet**
-> Date apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet(id)
+> apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet(id)
 
 Get last modification date of test plan&#39;s test results
 
@@ -517,7 +545,7 @@ Get last modification date of test plan&#39;s test results
 
 ### Return type
 
-**Date**
+null (empty response body)
 
 ### Authorization
 
@@ -534,7 +562,7 @@ Get last modification date of test plan&#39;s test results
 
 Send unlock TestPlan notification
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System send unlock test plan notification
+     Use case   User sets test plan identifier   User runs method execution   System send unlock test plan notification
 
 ### Parameters
 
@@ -561,7 +589,7 @@ null (empty response body)
 
 Get TestPlans short models by Project identifiers
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets projects identifiers  &lt;br&gt;User runs method execution  &lt;br&gt;System return test plans short models (listed in response example)
+     Use case   User sets projects identifiers   User runs method execution   System return test plans short models (listed in response example)
 
 ### Parameters
 
@@ -589,7 +617,7 @@ Get TestPlans short models by Project identifiers
 
 Clone TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System clones test plan  &lt;br&gt;System returns test plan (listed in response example)
+     Use case   User sets test plan identifier   User runs method execution   System clones test plan   System returns test plan (listed in response example)
 
 ### Parameters
 
@@ -616,7 +644,7 @@ Clone TestPlan
 
 Complete TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System completes the test plan and updates test plan status  &lt;br&gt;System returns no content response
+     Use case   User sets test plan identifier   User runs method execution   System completes the test plan and updates test plan status   System returns no content response
 
 ### Parameters
 
@@ -643,7 +671,7 @@ null (empty response body)
 
 Create TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan properties (listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System creates test plan  &lt;br&gt;System returns test plan (listed in response example)
+     Use case   User sets test plan properties (listed in request example)   User runs method execution   System creates test plan   System returns test plan (listed in response example)
 
 ### Parameters
 
@@ -670,7 +698,7 @@ Create TestPlan
 
 Delete TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System delete test plan  &lt;br&gt;System returns no content response
+     Use case   User sets test plan identifier   User runs method execution   System delete test plan   System returns no content response
 
 ### Parameters
 
@@ -697,7 +725,7 @@ null (empty response body)
 
 Get TestPlan by Id
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System search  test plan by the identifier  &lt;br&gt;System returns test plan
+     Use case   User sets test plan identifier   User runs method execution   System search  test plan by the identifier   System returns test plan
 
 ### Parameters
 
@@ -724,7 +752,7 @@ Get TestPlan by Id
 
 Get TestSuites Tree By Id
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System finds test suites related to the test plan  &lt;br&gt;System returns test suites as a tree model (listed in response example)
+     Use case   User sets test plan identifier   User runs method execution   System finds test suites related to the test plan   System returns test suites as a tree model (listed in response example)
 
 ### Parameters
 
@@ -751,7 +779,7 @@ Get TestSuites Tree By Id
 
 Pause TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System pauses the test plan and updates test plan status  &lt;br&gt;System returns no content response
+     Use case   User sets test plan identifier   User runs method execution   System pauses the test plan and updates test plan status   System returns no content response
 
 ### Parameters
 
@@ -803,7 +831,7 @@ null (empty response body)
 
 Restore TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System restores test plan  &lt;br&gt;System returns no content response
+     Use case   User sets test plan identifier   User runs method execution   System restores test plan   System returns no content response
 
 ### Parameters
 
@@ -830,7 +858,7 @@ null (empty response body)
 
 Start TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan identifier  &lt;br&gt;User runs method execution  &lt;br&gt;System starts the test plan and updates test plan status  &lt;br&gt;System returns no content response
+     Use case   User sets test plan identifier   User runs method execution   System starts the test plan and updates test plan status   System returns no content response
 
 ### Parameters
 
@@ -857,7 +885,7 @@ null (empty response body)
 
 Update TestPlan
 
-    &lt;br&gt;Use case  &lt;br&gt;User sets test plan properties(listed in request example)  &lt;br&gt;User runs method execution  &lt;br&gt;System updates test plan  &lt;br&gt;System returns no content response
+     Use case   User sets test plan properties(listed in request example)   User runs method execution   System updates test plan   System returns no content response
 
 ### Parameters
 
