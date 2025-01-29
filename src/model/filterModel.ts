@@ -18,7 +18,7 @@ export class FilterModel {
     'modifiedDate'?: Date | null;
     'createdById': string;
     'modifiedById'?: string | null;
-    'data': WorkItemSearchQueryModel;
+    'data'?: WorkItemSearchQueryModel | null;
     'projectId': string;
     'fieldsToShow'?: any | null;
     'name': string;

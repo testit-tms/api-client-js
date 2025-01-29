@@ -11,7 +11,7 @@
 | **configurationId** | **UUID** |  | [optional] [default to null] |
 | **testSuiteId** | **UUID** |  | [default to null] |
 | **status** | **String** |  | [optional] [default to null] |
-| **statusModel** | [**TestStatus**](TestStatus.md) |  | [optional] [default to null] |
+| **statusModel** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
 | **lastTestResultId** | **UUID** |  | [optional] [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

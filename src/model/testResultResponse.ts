@@ -19,7 +19,7 @@ import { StepComment } from './stepComment';
 import { StepResult } from './stepResult';
 import { TestPoint } from './testPoint';
 import { TestResultOutcome } from './testResultOutcome';
-import { TestStatus } from './testStatus';
+import { TestStatusApiResult } from './testStatusApiResult';
 
 export class TestResultResponse {
     'id': string;
@@ -33,7 +33,7 @@ export class TestResultResponse {
     * @deprecated
     */
     'outcome'?: TestResultOutcome | null;
-    'status'?: TestStatus | null;
+    'status'?: TestStatusApiResult | null;
     'comment'?: string | null;
     'links'?: Array<Link> | null;
     'stepResults'?: Array<StepResult> | null;
@@ -106,7 +106,7 @@ export class TestResultResponse {
         {
             "name": "status",
             "baseName": "status",
-            "type": "TestStatus"
+            "type": "TestStatusApiResult"
         },
         {
             "name": "comment",

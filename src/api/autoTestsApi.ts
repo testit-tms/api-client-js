@@ -15,14 +15,17 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
+import { AutoTestApiResult } from '../model/autoTestApiResult';
 import { AutoTestAverageDurationModel } from '../model/autoTestAverageDurationModel';
+import { AutoTestBulkDeleteApiModel } from '../model/autoTestBulkDeleteApiModel';
+import { AutoTestBulkDeleteApiResult } from '../model/autoTestBulkDeleteApiResult';
+import { AutoTestFlakyBulkApiModel } from '../model/autoTestFlakyBulkApiModel';
 import { AutoTestModel } from '../model/autoTestModel';
 import { AutoTestPostModel } from '../model/autoTestPostModel';
 import { AutoTestPutModel } from '../model/autoTestPutModel';
+import { AutoTestSearchApiModel } from '../model/autoTestSearchApiModel';
 import { AutotestHistoricalResultSelectModel } from '../model/autotestHistoricalResultSelectModel';
 import { AutotestResultHistoricalGetModel } from '../model/autotestResultHistoricalGetModel';
-import { AutotestsSelectModel } from '../model/autotestsSelectModel';
-import { FlakyBulkModel } from '../model/flakyBulkModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
@@ -104,6 +107,73 @@ export class AutoTestsApi {
     }
 
     /**
+     * 
+     * @summary Delete autotests
+     * @param autoTestBulkDeleteApiModel 
+     */
+    public async apiV2AutoTestsDelete (autoTestBulkDeleteApiModel?: AutoTestBulkDeleteApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestBulkDeleteApiResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/autoTests';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'DELETE',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(autoTestBulkDeleteApiModel, "AutoTestBulkDeleteApiModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: AutoTestBulkDeleteApiResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "AutoTestBulkDeleteApiResult");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @summary Set \"Flaky\" status for multiple autotests
      * @param skip Amount of items to be skipped (offset)
@@ -111,9 +181,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param flakyBulkModel 
+     * @param autoTestFlakyBulkApiModel 
      */
-    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, flakyBulkModel?: FlakyBulkModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestFlakyBulkApiModel?: AutoTestFlakyBulkApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/flaky/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -157,7 +227,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(flakyBulkModel, "FlakyBulkModel")
+            body: ObjectSerializer.serialize(autoTestFlakyBulkApiModel, "AutoTestFlakyBulkApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -524,9 +594,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param autotestsSelectModel 
+     * @param autoTestSearchApiModel 
      */
-    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autotestsSelectModel?: AutotestsSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestSearchApiModel?: AutoTestSearchApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -570,7 +640,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(autotestsSelectModel, "AutotestsSelectModel")
+            body: ObjectSerializer.serialize(autoTestSearchApiModel, "AutoTestSearchApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -592,13 +662,13 @@ export class AutoTestsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<AutoTestModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AutoTestApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

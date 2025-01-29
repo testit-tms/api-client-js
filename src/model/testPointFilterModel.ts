@@ -39,8 +39,14 @@ export class TestPointFilterModel {
     'workItemIsDeleted'?: boolean | null;
     /**
     * Specifies a test point statuses to search for
+    *
+    * @deprecated
     */
     'statuses'?: Array<TestPointStatus> | null;
+    /**
+    * Specifies a test point status codes to search for
+    */
+    'statusCodes'?: Array<string> | null;
     /**
     * Specifies a test point priorities to search for
     */
@@ -142,6 +148,11 @@ export class TestPointFilterModel {
             "name": "statuses",
             "baseName": "statuses",
             "type": "Array<TestPointStatus>"
+        },
+        {
+            "name": "statusCodes",
+            "baseName": "statusCodes",
+            "type": "Array<string>"
         },
         {
             "name": "priorities",

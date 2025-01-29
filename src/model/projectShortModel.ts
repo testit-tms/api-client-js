@@ -74,12 +74,6 @@ export class ProjectShortModel {
     * Type of the project
     */
     'type': ProjectTypeModel;
-    /**
-    * Indicates if the status \"Flaky/Stable\" sets automatically
-    *
-    * @deprecated
-    */
-    'isFlakyAuto': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -158,11 +152,6 @@ export class ProjectShortModel {
             "name": "type",
             "baseName": "type",
             "type": "ProjectTypeModel"
-        },
-        {
-            "name": "isFlakyAuto",
-            "baseName": "isFlakyAuto",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

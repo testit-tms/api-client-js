@@ -17,23 +17,23 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { AutoTestNamespacesCountResponse } from '../model/autoTestNamespacesCountResponse';
 import { AutoTestResultsForTestRunModel } from '../model/autoTestResultsForTestRunModel';
-import { ManualRerunResultModel } from '../model/manualRerunResultModel';
-import { ManualRerunSelectModel } from '../model/manualRerunSelectModel';
+import { CreateEmptyTestRunApiModel } from '../model/createEmptyTestRunApiModel';
+import { CreateTestRunAndFillByAutoTestsApiModel } from '../model/createTestRunAndFillByAutoTestsApiModel';
+import { CreateTestRunAndFillByConfigurationsApiModel } from '../model/createTestRunAndFillByConfigurationsApiModel';
+import { CreateTestRunAndFillByWorkItemsApiModel } from '../model/createTestRunAndFillByWorkItemsApiModel';
+import { ManualRerunApiResult } from '../model/manualRerunApiResult';
+import { ManualRerunSelectApiModel } from '../model/manualRerunSelectApiModel';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestPointResultModel } from '../model/testPointResultModel';
-import { TestResultsLocalFilterModel } from '../model/testResultsLocalFilterModel';
-import { TestResultsStatisticsGetModel } from '../model/testResultsStatisticsGetModel';
-import { TestRunFillByAutoTestsPostModel } from '../model/testRunFillByAutoTestsPostModel';
-import { TestRunFillByConfigurationsPostModel } from '../model/testRunFillByConfigurationsPostModel';
-import { TestRunFillByWorkItemsPostModel } from '../model/testRunFillByWorkItemsPostModel';
-import { TestRunFilterModel } from '../model/testRunFilterModel';
-import { TestRunSelectModel } from '../model/testRunSelectModel';
-import { TestRunShortGetModel } from '../model/testRunShortGetModel';
+import { TestResultsStatisticsApiResult } from '../model/testResultsStatisticsApiResult';
+import { TestRunFilterApiModel } from '../model/testRunFilterApiModel';
+import { TestRunSelectApiModel } from '../model/testRunSelectApiModel';
+import { TestRunShortApiResult } from '../model/testRunShortApiResult';
+import { TestRunStatisticsFilterApiModel } from '../model/testRunStatisticsFilterApiModel';
 import { TestRunTestResultsPartialBulkSetModel } from '../model/testRunTestResultsPartialBulkSetModel';
-import { TestRunUpdateMultipleModel } from '../model/testRunUpdateMultipleModel';
-import { TestRunV2GetModel } from '../model/testRunV2GetModel';
-import { TestRunV2PostShortModel } from '../model/testRunV2PostShortModel';
-import { TestRunV2PutModel } from '../model/testRunV2PutModel';
+import { TestRunV2ApiResult } from '../model/testRunV2ApiResult';
+import { UpdateEmptyTestRunApiModel } from '../model/updateEmptyTestRunApiModel';
+import { UpdateMultipleTestRunsApiModel } from '../model/updateMultipleTestRunsApiModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -111,9 +111,9 @@ export class TestRunsApi {
     /**
      *  Use case   User sets selection parameters of test runs   System search and delete collection of test runs   System returns the number of deleted test runs
      * @summary Delete multiple test runs
-     * @param testRunSelectModel 
+     * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsDelete (testRunSelectModel?: TestRunSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsDelete (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -137,7 +137,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunSelectModel, "TestRunSelectModel")
+            body: ObjectSerializer.serialize(testRunSelectApiModel, "TestRunSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -393,9 +393,9 @@ export class TestRunsApi {
      * 
      * @summary Manual autotests rerun in test run
      * @param id 
-     * @param manualRerunSelectModel 
+     * @param manualRerunSelectApiModel 
      */
-    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectModel?: ManualRerunSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunResultModel;  }> {
+    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectApiModel?: ManualRerunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/reruns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -425,7 +425,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(manualRerunSelectModel, "ManualRerunSelectModel")
+            body: ObjectSerializer.serialize(manualRerunSelectApiModel, "ManualRerunSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -447,13 +447,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ManualRerunResultModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ManualRerunResultModel");
+                            body = ObjectSerializer.deserialize(body, "ManualRerunApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -538,9 +538,9 @@ export class TestRunsApi {
      * 
      * @summary Search for the test run test results and build statistics
      * @param id Test run unique ID
-     * @param testResultsLocalFilterModel 
+     * @param testRunStatisticsFilterApiModel 
      */
-    public async apiV2TestRunsIdStatisticsFilterPost (id: string, testResultsLocalFilterModel?: TestResultsLocalFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }> {
+    public async apiV2TestRunsIdStatisticsFilterPost (id: string, testRunStatisticsFilterApiModel?: TestRunStatisticsFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/statistics/filter'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -570,7 +570,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsLocalFilterModel, "TestResultsLocalFilterModel")
+            body: ObjectSerializer.serialize(testRunStatisticsFilterApiModel, "TestRunStatisticsFilterApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -592,13 +592,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsGetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsGetModel");
+                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -828,9 +828,9 @@ export class TestRunsApi {
     /**
      *  Use case   User sets selection parameters of archived test runs   System search and delete collection of archived test runs   System returns the number of deleted archived test runs
      * @summary Permanently delete multiple test runs from archive
-     * @param testRunSelectModel 
+     * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsPurgeBulkPost (testRunSelectModel?: TestRunSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsPurgeBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/purge/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -854,7 +854,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunSelectModel, "TestRunSelectModel")
+            body: ObjectSerializer.serialize(testRunSelectApiModel, "TestRunSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -895,9 +895,9 @@ export class TestRunsApi {
     /**
      *  Use case   User sets selection parameters of archived test runs   System search and restore collection of archived test runs   System returns the number of restored test runs
      * @summary Restore multiple test runs from the archive
-     * @param testRunSelectModel 
+     * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsRestoreBulkPost (testRunSelectModel?: TestRunSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsRestoreBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/restore/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -921,7 +921,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunSelectModel, "TestRunSelectModel")
+            body: ObjectSerializer.serialize(testRunSelectApiModel, "TestRunSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -967,9 +967,9 @@ export class TestRunsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testRunFilterModel 
+     * @param testRunFilterApiModel 
      */
-    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunFilterModel?: TestRunFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortGetModel>;  }> {
+    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunFilterApiModel?: TestRunFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1013,7 +1013,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunFilterModel, "TestRunFilterModel")
+            body: ObjectSerializer.serialize(testRunFilterApiModel, "TestRunFilterApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1035,13 +1035,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunShortGetModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunShortApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunShortGetModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunShortApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1054,9 +1054,9 @@ export class TestRunsApi {
     /**
      * 
      * @summary Update multiple test runs
-     * @param testRunUpdateMultipleModel 
+     * @param updateMultipleTestRunsApiModel 
      */
-    public async apiV2TestRunsUpdateMultiplePost (testRunUpdateMultipleModel?: TestRunUpdateMultipleModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsUpdateMultiplePost (updateMultipleTestRunsApiModel?: UpdateMultipleTestRunsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/updateMultiple';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1080,7 +1080,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunUpdateMultipleModel, "TestRunUpdateMultipleModel")
+            body: ObjectSerializer.serialize(updateMultipleTestRunsApiModel, "UpdateMultipleTestRunsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1191,9 +1191,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @summary Create test runs based on autotests and configurations
-     * @param testRunFillByAutoTestsPostModel 
+     * @param createTestRunAndFillByAutoTestsApiModel 
      */
-    public async createAndFillByAutoTests (testRunFillByAutoTestsPostModel?: TestRunFillByAutoTestsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByAutoTests (createTestRunAndFillByAutoTestsApiModel?: CreateTestRunAndFillByAutoTestsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byAutoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1217,7 +1217,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunFillByAutoTestsPostModel, "TestRunFillByAutoTestsPostModel")
+            body: ObjectSerializer.serialize(createTestRunAndFillByAutoTestsApiModel, "CreateTestRunAndFillByAutoTestsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1239,13 +1239,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestRunV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestRunV2ApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1258,9 +1258,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @summary Create test runs picking the needed test points
-     * @param testRunFillByConfigurationsPostModel 
+     * @param createTestRunAndFillByConfigurationsApiModel 
      */
-    public async createAndFillByConfigurations (testRunFillByConfigurationsPostModel?: TestRunFillByConfigurationsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByConfigurations (createTestRunAndFillByConfigurationsApiModel?: CreateTestRunAndFillByConfigurationsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byConfigurations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1284,7 +1284,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunFillByConfigurationsPostModel, "TestRunFillByConfigurationsPostModel")
+            body: ObjectSerializer.serialize(createTestRunAndFillByConfigurationsApiModel, "CreateTestRunAndFillByConfigurationsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1306,13 +1306,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestRunV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestRunV2ApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1325,9 +1325,9 @@ export class TestRunsApi {
     /**
      * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
      * @summary Create test run based on configurations and work items
-     * @param testRunFillByWorkItemsPostModel 
+     * @param createTestRunAndFillByWorkItemsApiModel 
      */
-    public async createAndFillByWorkItems (testRunFillByWorkItemsPostModel?: TestRunFillByWorkItemsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createAndFillByWorkItems (createTestRunAndFillByWorkItemsApiModel?: CreateTestRunAndFillByWorkItemsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byWorkItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1351,7 +1351,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunFillByWorkItemsPostModel, "TestRunFillByWorkItemsPostModel")
+            body: ObjectSerializer.serialize(createTestRunAndFillByWorkItemsApiModel, "CreateTestRunAndFillByWorkItemsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1373,13 +1373,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestRunV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestRunV2ApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1392,9 +1392,9 @@ export class TestRunsApi {
     /**
      *  Use case   User sets test run model (listed in the request example)   User runs method execution   System creates test run   System returns test run model
      * @summary Create empty TestRun
-     * @param testRunV2PostShortModel 
+     * @param createEmptyTestRunApiModel 
      */
-    public async createEmpty (testRunV2PostShortModel?: TestRunV2PostShortModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async createEmpty (createEmptyTestRunApiModel?: CreateEmptyTestRunApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1418,7 +1418,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunV2PostShortModel, "TestRunV2PostShortModel")
+            body: ObjectSerializer.serialize(createEmptyTestRunApiModel, "CreateEmptyTestRunApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1440,13 +1440,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestRunV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestRunV2ApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1461,7 +1461,7 @@ export class TestRunsApi {
      * @summary Get TestRun by Id
      * @param id Test Run internal identifier (GUID format)
      */
-    public async getTestRunById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }> {
+    public async getTestRunById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1512,13 +1512,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestRunV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestRunV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestRunV2ApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1747,9 +1747,9 @@ export class TestRunsApi {
     /**
      *  Use case   User sets test run properties (listed in the request example)   User runs method execution   System updates test run   System returns returns no content response
      * @summary Update empty TestRun
-     * @param testRunV2PutModel 
+     * @param updateEmptyTestRunApiModel 
      */
-    public async updateEmpty (testRunV2PutModel?: TestRunV2PutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateEmpty (updateEmptyTestRunApiModel?: UpdateEmptyTestRunApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1773,7 +1773,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunV2PutModel, "TestRunV2PutModel")
+            body: ObjectSerializer.serialize(updateEmptyTestRunApiModel, "UpdateEmptyTestRunApiModel")
         };
 
         let authenticationPromise = Promise.resolve();

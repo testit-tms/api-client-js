@@ -20,7 +20,10 @@ import { TestResultStepCommentUpdateRequest } from './testResultStepCommentUpdat
 
 export class TestResultUpdateV2Request {
     'failureClassIds'?: Array<string> | null;
-    'outcome'?: TestResultOutcome;
+    /**
+    * @deprecated
+    */
+    'outcome'?: TestResultOutcome | null;
     'statusCode'?: string | null;
     'comment'?: string | null;
     'links'?: Array<Link> | null;

@@ -370,7 +370,7 @@ Get TestPoints with last result from TestPlan
 
 ### Return type
 
-[**List**](../Models/TestPointWithLastResultModel.md)
+[**List**](../Models/TestPointWithLastResultResponseModel.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ Get TestRuns of TestPlan
 
 ### Return type
 
-[**List**](../Models/TestRunModel.md)
+[**List**](../Models/TestRunApiResult.md)
 
 ### Authorization
 
@@ -500,7 +500,7 @@ Get TestRuns of TestPlan
 
 <a name="apiV2TestPlansIdTestRunsSearchPost"></a>
 # **apiV2TestPlansIdTestRunsSearchPost**
-> List apiV2TestPlansIdTestRunsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, TestRunSearchQueryModel)
+> List apiV2TestPlansIdTestRunsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, SearchTestRunsApiModel)
 
 Search TestRuns of TestPlan
 
@@ -516,11 +516,11 @@ Search TestRuns of TestPlan
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestRunSearchQueryModel** | [**TestRunSearchQueryModel**](../Models/TestRunSearchQueryModel.md)|  | [optional] |
+| **SearchTestRunsApiModel** | [**SearchTestRunsApiModel**](../Models/SearchTestRunsApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/TestRunModel.md)
+[**List**](../Models/TestRunApiResult.md)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ null (empty response body)
 
 <a name="createTestPlan"></a>
 # **createTestPlan**
-> TestPlanModel createTestPlan(TestPlanPostModel)
+> TestPlanModel createTestPlan(CreateTestPlanApiModel)
 
 Create TestPlan
 
@@ -677,7 +677,7 @@ Create TestPlan
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestPlanPostModel** | [**TestPlanPostModel**](../Models/TestPlanPostModel.md)|  | [optional] |
+| **CreateTestPlanApiModel** | [**CreateTestPlanApiModel**](../Models/CreateTestPlanApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -881,7 +881,7 @@ null (empty response body)
 
 <a name="updateTestPlan"></a>
 # **updateTestPlan**
-> updateTestPlan(TestPlanPutModel)
+> updateTestPlan(UpdateTestPlanApiModel)
 
 Update TestPlan
 
@@ -891,7 +891,7 @@ Update TestPlan
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestPlanPutModel** | [**TestPlanPutModel**](../Models/TestPlanPutModel.md)|  | [optional] |
+| **UpdateTestPlanApiModel** | [**UpdateTestPlanApiModel**](../Models/UpdateTestPlanApiModel.md)|  | [optional] |
 
 ### Return type
 

@@ -16,23 +16,23 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ConfigurationModel } from '../model/configurationModel';
+import { CreateTestPlanApiModel } from '../model/createTestPlanApiModel';
 import { GetXlsxTestPointsByTestPlanModel } from '../model/getXlsxTestPointsByTestPlanModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
+import { SearchTestRunsApiModel } from '../model/searchTestRunsApiModel';
 import { TestPlanChangeModel } from '../model/testPlanChangeModel';
 import { TestPlanLink } from '../model/testPlanLink';
 import { TestPlanModel } from '../model/testPlanModel';
-import { TestPlanPostModel } from '../model/testPlanPostModel';
-import { TestPlanPutModel } from '../model/testPlanPutModel';
 import { TestPlanShortModel } from '../model/testPlanShortModel';
 import { TestPlanSummaryModel } from '../model/testPlanSummaryModel';
 import { TestPlanWithTestSuiteTreeModel } from '../model/testPlanWithTestSuiteTreeModel';
 import { TestPointAnalyticResult } from '../model/testPointAnalyticResult';
 import { TestPointSelectModel } from '../model/testPointSelectModel';
-import { TestPointWithLastResultModel } from '../model/testPointWithLastResultModel';
-import { TestRunModel } from '../model/testRunModel';
-import { TestRunSearchQueryModel } from '../model/testRunSearchQueryModel';
+import { TestPointWithLastResultResponseModel } from '../model/testPointWithLastResultResponseModel';
+import { TestRunApiResult } from '../model/testRunApiResult';
 import { TestSuiteV2TreeModel } from '../model/testSuiteV2TreeModel';
+import { UpdateTestPlanApiModel } from '../model/updateTestPlanApiModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
 
@@ -978,7 +978,7 @@ export class TestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TestPlansIdTestPointsLastResultsGet (id: string, testerId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultModel>;  }> {
+    public async apiV2TestPlansIdTestPointsLastResultsGet (id: string, testerId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultResponseModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/lastResults'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1053,13 +1053,13 @@ export class TestPlansApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultResponseModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestPointWithLastResultModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestPointWithLastResultResponseModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1311,7 +1311,7 @@ export class TestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TestPlansIdTestRunsGet (id: string, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
+    public async apiV2TestPlansIdTestRunsGet (id: string, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1398,13 +1398,13 @@ export class TestPlansApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1423,9 +1423,9 @@ export class TestPlansApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testRunSearchQueryModel 
+     * @param searchTestRunsApiModel 
      */
-    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunSearchQueryModel?: TestRunSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
+    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchTestRunsApiModel?: SearchTestRunsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1475,7 +1475,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testRunSearchQueryModel, "TestRunSearchQueryModel")
+            body: ObjectSerializer.serialize(searchTestRunsApiModel, "SearchTestRunsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1497,13 +1497,13 @@ export class TestPlansApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1873,9 +1873,9 @@ export class TestPlansApi {
     /**
      *  Use case   User sets test plan properties (listed in request example)   User runs method execution   System creates test plan   System returns test plan (listed in response example)
      * @summary Create TestPlan
-     * @param testPlanPostModel 
+     * @param createTestPlanApiModel 
      */
-    public async createTestPlan (testPlanPostModel?: TestPlanPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
+    public async createTestPlan (createTestPlanApiModel?: CreateTestPlanApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1899,7 +1899,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPlanPostModel, "TestPlanPostModel")
+            body: ObjectSerializer.serialize(createTestPlanApiModel, "CreateTestPlanApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2439,9 +2439,9 @@ export class TestPlansApi {
     /**
      *  Use case   User sets test plan properties(listed in request example)   User runs method execution   System updates test plan   System returns no content response
      * @summary Update TestPlan
-     * @param testPlanPutModel 
+     * @param updateTestPlanApiModel 
      */
-    public async updateTestPlan (testPlanPutModel?: TestPlanPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateTestPlan (updateTestPlanApiModel?: UpdateTestPlanApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2465,7 +2465,7 @@ export class TestPlansApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPlanPutModel, "TestPlanPutModel")
+            body: ObjectSerializer.serialize(updateTestPlanApiModel, "UpdateTestPlanApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
