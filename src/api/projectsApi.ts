@@ -29,8 +29,8 @@ import { ProjectShortModel } from '../model/projectShortModel';
 import { ProjectsFilterModel } from '../model/projectsFilterModel';
 import { PublicTestRunModel } from '../model/publicTestRunModel';
 import { TestPlanModel } from '../model/testPlanModel';
-import { TestRunModel } from '../model/testRunModel';
-import { TestRunV2GetModel } from '../model/testRunV2GetModel';
+import { TestRunApiResult } from '../model/testRunApiResult';
+import { TestRunV2ApiResult } from '../model/testRunV2ApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -996,7 +996,7 @@ export class ProjectsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2ProjectsIdTestRunsFullGet (id: string, includeTestResults?: boolean, mustAggregateTestResults?: boolean, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, createdDateFrom?: Date, createdDateTo?: Date, testPlanId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
+    public async apiV2ProjectsIdTestRunsFullGet (id: string, includeTestResults?: boolean, mustAggregateTestResults?: boolean, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, createdDateFrom?: Date, createdDateTo?: Date, testPlanId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testRuns/full'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1103,13 +1103,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1894,7 +1894,7 @@ export class ProjectsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getTestRunsByProjectId (id: string, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, createdDateFrom?: Date, createdDateTo?: Date, testPlanId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunV2GetModel>;  }> {
+    public async getTestRunsByProjectId (id: string, notStarted: boolean, inProgress: boolean, stopped: boolean, completed: boolean, createdDateFrom?: Date, createdDateTo?: Date, testPlanId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunV2ApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1911,6 +1911,26 @@ export class ProjectsApi {
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling getTestRunsByProjectId.');
+        }
+
+        // verify required parameter 'notStarted' is not null or undefined
+        if (notStarted === null || notStarted === undefined) {
+            throw new Error('Required parameter notStarted was null or undefined when calling getTestRunsByProjectId.');
+        }
+
+        // verify required parameter 'inProgress' is not null or undefined
+        if (inProgress === null || inProgress === undefined) {
+            throw new Error('Required parameter inProgress was null or undefined when calling getTestRunsByProjectId.');
+        }
+
+        // verify required parameter 'stopped' is not null or undefined
+        if (stopped === null || stopped === undefined) {
+            throw new Error('Required parameter stopped was null or undefined when calling getTestRunsByProjectId.');
+        }
+
+        // verify required parameter 'completed' is not null or undefined
+        if (completed === null || completed === undefined) {
+            throw new Error('Required parameter completed was null or undefined when calling getTestRunsByProjectId.');
         }
 
         if (notStarted !== undefined) {
@@ -1993,13 +2013,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunV2GetModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunV2ApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunV2GetModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunV2ApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

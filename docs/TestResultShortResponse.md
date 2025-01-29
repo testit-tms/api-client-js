@@ -10,7 +10,7 @@
 | **configurationId** | **UUID** | Unique ID of configuration which the test result uses | [default to null] |
 | **configurationName** | **String** | Name of configuration which the test result uses | [default to null] |
 | **outcome** | **String** | Outcome of the test result | [optional] [default to null] |
-| **status** | [**TestStatus**](TestStatus.md) |  | [optional] [default to null] |
+| **status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
 | **resultReasons** | [**List**](AutoTestResultReasonShort.md) | Collection of result reasons which the test result have | [default to null] |
 | **comment** | **String** | Comment to the test result | [optional] [default to null] |
 | **date** | **Date** | Date when the test result was completed or started or created | [default to null] |

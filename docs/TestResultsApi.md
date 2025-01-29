@@ -227,7 +227,7 @@ Get reruns
 
 <a name="apiV2TestResultsSearchPost"></a>
 # **apiV2TestResultsSearchPost**
-> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestResultsFilterRequest)
+> List apiV2TestResultsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestResultsFilterApiModel)
 
 Search for test results
 
@@ -240,7 +240,7 @@ Search for test results
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestResultsFilterRequest** | [**TestResultsFilterRequest**](../Models/TestResultsFilterRequest.md)|  | [optional] |
+| **TestResultsFilterApiModel** | [**TestResultsFilterApiModel**](../Models/TestResultsFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -257,7 +257,7 @@ Search for test results
 
 <a name="apiV2TestResultsStatisticsFilterPost"></a>
 # **apiV2TestResultsStatisticsFilterPost**
-> TestResultsStatisticsResponse apiV2TestResultsStatisticsFilterPost(TestResultsFilterRequest)
+> TestResultsStatisticsApiResult apiV2TestResultsStatisticsFilterPost(TestResultsFilterApiModel)
 
 Search for test results and extract statistics
 
@@ -265,11 +265,11 @@ Search for test results and extract statistics
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestResultsFilterRequest** | [**TestResultsFilterRequest**](../Models/TestResultsFilterRequest.md)|  | [optional] |
+| **TestResultsFilterApiModel** | [**TestResultsFilterApiModel**](../Models/TestResultsFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestResultsStatisticsResponse**](../Models/TestResultsStatisticsResponse.md)
+[**TestResultsStatisticsApiResult**](../Models/TestResultsStatisticsApiResult.md)
 
 ### Authorization
 

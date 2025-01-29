@@ -361,8 +361,8 @@ Get Project TestRuns full models
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **includeTestResults** | **Boolean**|  | [optional] [default to false] |
-| **mustAggregateTestResults** | **Boolean**|  | [optional] [default to true] |
+| **includeTestResults** | **Boolean**|  | [optional] [default to null] |
+| **mustAggregateTestResults** | **Boolean**|  | [optional] [default to null] |
 | **notStarted** | **Boolean**|  | [optional] [default to null] |
 | **inProgress** | **Boolean**|  | [optional] [default to null] |
 | **stopped** | **Boolean**|  | [optional] [default to null] |
@@ -378,7 +378,7 @@ Get Project TestRuns full models
 
 ### Return type
 
-[**List**](../Models/TestRunModel.md)
+[**List**](../Models/TestRunApiResult.md)
 
 ### Authorization
 
@@ -674,10 +674,10 @@ Get project test runs
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **notStarted** | **Boolean**|  | [optional] [default to null] |
-| **inProgress** | **Boolean**|  | [optional] [default to null] |
-| **stopped** | **Boolean**|  | [optional] [default to null] |
-| **completed** | **Boolean**|  | [optional] [default to null] |
+| **notStarted** | **Boolean**|  | [default to null] |
+| **inProgress** | **Boolean**|  | [default to null] |
+| **stopped** | **Boolean**|  | [default to null] |
+| **completed** | **Boolean**|  | [default to null] |
 | **createdDateFrom** | **Date**|  | [optional] [default to null] |
 | **createdDateTo** | **Date**|  | [optional] [default to null] |
 | **testPlanId** | **UUID**|  | [optional] [default to null] |
@@ -689,7 +689,7 @@ Get project test runs
 
 ### Return type
 
-[**List**](../Models/TestRunV2GetModel.md)
+[**List**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TestStatus } from './testStatus';
+import { TestStatusApiResult } from './testStatusApiResult';
 
 export class TestPoint {
     /**
@@ -31,7 +31,7 @@ export class TestPoint {
     * @deprecated
     */
     'status'?: string | null;
-    'statusModel'?: TestStatus | null;
+    'statusModel'?: TestStatusApiResult | null;
     'lastTestResultId'?: string | null;
 
     static discriminator: string | undefined = undefined;
@@ -80,7 +80,7 @@ export class TestPoint {
         {
             "name": "statusModel",
             "baseName": "statusModel",
-            "type": "TestStatus"
+            "type": "TestStatusApiResult"
         },
         {
             "name": "lastTestResultId",

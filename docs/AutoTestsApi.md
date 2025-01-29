@@ -4,6 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**apiV2AutoTestsDelete**](AutoTestsApi.md#apiV2AutoTestsDelete) | **DELETE** /api/v2/autoTests | Delete autotests |
 | [**apiV2AutoTestsFlakyBulkPost**](AutoTestsApi.md#apiV2AutoTestsFlakyBulkPost) | **POST** /api/v2/autoTests/flaky/bulk | Set \&quot;Flaky\&quot; status for multiple autotests |
 | [**apiV2AutoTestsIdPatch**](AutoTestsApi.md#apiV2AutoTestsIdPatch) | **PATCH** /api/v2/autoTests/{id} | Patch auto test |
 | [**apiV2AutoTestsIdTestResultsSearchPost**](AutoTestsApi.md#apiV2AutoTestsIdTestResultsSearchPost) | **POST** /api/v2/autoTests/{id}/testResults/search | Get test results history for autotest |
@@ -25,9 +26,34 @@ All URIs are relative to *http://localhost*
 | [**updateMultiple**](AutoTestsApi.md#updateMultiple) | **PUT** /api/v2/autoTests/bulk | Update multiple autotests |
 
 
+<a name="apiV2AutoTestsDelete"></a>
+# **apiV2AutoTestsDelete**
+> AutoTestBulkDeleteApiResult apiV2AutoTestsDelete(AutoTestBulkDeleteApiModel)
+
+Delete autotests
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **AutoTestBulkDeleteApiModel** | [**AutoTestBulkDeleteApiModel**](../Models/AutoTestBulkDeleteApiModel.md)|  | [optional] |
+
+### Return type
+
+[**AutoTestBulkDeleteApiResult**](../Models/AutoTestBulkDeleteApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2AutoTestsFlakyBulkPost"></a>
 # **apiV2AutoTestsFlakyBulkPost**
-> apiV2AutoTestsFlakyBulkPost(Skip, Take, OrderBy, SearchField, SearchValue, FlakyBulkModel)
+> apiV2AutoTestsFlakyBulkPost(Skip, Take, OrderBy, SearchField, SearchValue, AutoTestFlakyBulkApiModel)
 
 Set \&quot;Flaky\&quot; status for multiple autotests
 
@@ -42,7 +68,7 @@ Set \&quot;Flaky\&quot; status for multiple autotests
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **FlakyBulkModel** | [**FlakyBulkModel**](../Models/FlakyBulkModel.md)|  | [optional] |
+| **AutoTestFlakyBulkApiModel** | [**AutoTestFlakyBulkApiModel**](../Models/AutoTestFlakyBulkApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -175,7 +201,7 @@ null (empty response body)
 
 <a name="apiV2AutoTestsSearchPost"></a>
 # **apiV2AutoTestsSearchPost**
-> List apiV2AutoTestsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, AutotestsSelectModel)
+> List apiV2AutoTestsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, AutoTestSearchApiModel)
 
 Search for autotests
 
@@ -188,11 +214,11 @@ Search for autotests
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **AutotestsSelectModel** | [**AutotestsSelectModel**](../Models/AutotestsSelectModel.md)|  | [optional] |
+| **AutoTestSearchApiModel** | [**AutoTestSearchApiModel**](../Models/AutoTestSearchApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/AutoTestModel.md)
+[**List**](../Models/AutoTestApiResult.md)
 
 ### Authorization
 

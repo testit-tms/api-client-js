@@ -25,9 +25,9 @@ import { RerunsModel } from '../model/rerunsModel';
 import { TestResultResponse } from '../model/testResultResponse';
 import { TestResultShortResponse } from '../model/testResultShortResponse';
 import { TestResultUpdateV2Request } from '../model/testResultUpdateV2Request';
-import { TestResultsFilterRequest } from '../model/testResultsFilterRequest';
+import { TestResultsFilterApiModel } from '../model/testResultsFilterApiModel';
 import { TestResultsSelectApiModel } from '../model/testResultsSelectApiModel';
-import { TestResultsStatisticsResponse } from '../model/testResultsStatisticsResponse';
+import { TestResultsStatisticsApiResult } from '../model/testResultsStatisticsApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -695,9 +695,9 @@ export class TestResultsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testResultsFilterRequest 
+     * @param testResultsFilterApiModel 
      */
-    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterRequest?: TestResultsFilterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }> {
+    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -741,7 +741,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterRequest, "TestResultsFilterRequest")
+            body: ObjectSerializer.serialize(testResultsFilterApiModel, "TestResultsFilterApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -782,9 +782,9 @@ export class TestResultsApi {
     /**
      * 
      * @summary Search for test results and extract statistics
-     * @param testResultsFilterRequest 
+     * @param testResultsFilterApiModel 
      */
-    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterRequest?: TestResultsFilterRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsResponse;  }> {
+    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/statistics/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -808,7 +808,7 @@ export class TestResultsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testResultsFilterRequest, "TestResultsFilterRequest")
+            body: ObjectSerializer.serialize(testResultsFilterApiModel, "TestResultsFilterApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -830,13 +830,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsResponse");
+                            body = ObjectSerializer.deserialize(body, "TestResultsStatisticsApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
