@@ -11,11 +11,16 @@
  */
 
 import { RequestFile } from './models';
+import { TestStatusType } from './testStatusType';
 
 export class TestStatusModel {
     'id': string;
     'name': string;
+    'type': TestStatusType;
+    'isBased': boolean;
+    'isDefault': boolean;
     'code': string;
+    'description'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -31,8 +36,28 @@ export class TestStatusModel {
             "type": "string"
         },
         {
+            "name": "type",
+            "baseName": "type",
+            "type": "TestStatusType"
+        },
+        {
+            "name": "isBased",
+            "baseName": "isBased",
+            "type": "boolean"
+        },
+        {
+            "name": "isDefault",
+            "baseName": "isDefault",
+            "type": "boolean"
+        },
+        {
             "name": "code",
             "baseName": "code",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         }    ];
 
@@ -41,3 +66,5 @@ export class TestStatusModel {
     }
 }
 
+export namespace TestStatusModel {
+}

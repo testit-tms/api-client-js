@@ -32,7 +32,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2TestRunsDelete"></a>
 # **apiV2TestRunsDelete**
-> Integer apiV2TestRunsDelete(TestRunSelectModel)
+> Integer apiV2TestRunsDelete(TestRunSelectApiModel)
 
 Delete multiple test runs
 
@@ -42,7 +42,7 @@ Delete multiple test runs
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunSelectModel** | [**TestRunSelectModel**](../Models/TestRunSelectModel.md)|  | [optional] |
+| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -138,7 +138,7 @@ null (empty response body)
 
 <a name="apiV2TestRunsIdRerunsPost"></a>
 # **apiV2TestRunsIdRerunsPost**
-> ManualRerunResultModel apiV2TestRunsIdRerunsPost(id, ManualRerunSelectModel)
+> ManualRerunApiResult apiV2TestRunsIdRerunsPost(id, ManualRerunSelectApiModel)
 
 Manual autotests rerun in test run
 
@@ -147,11 +147,11 @@ Manual autotests rerun in test run
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**|  | [default to null] |
-| **ManualRerunSelectModel** | [**ManualRerunSelectModel**](../Models/ManualRerunSelectModel.md)|  | [optional] |
+| **ManualRerunSelectApiModel** | [**ManualRerunSelectApiModel**](../Models/ManualRerunSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**ManualRerunResultModel**](../Models/ManualRerunResultModel.md)
+[**ManualRerunApiResult**](../Models/ManualRerunApiResult.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ null (empty response body)
 
 <a name="apiV2TestRunsIdStatisticsFilterPost"></a>
 # **apiV2TestRunsIdStatisticsFilterPost**
-> TestResultsStatisticsGetModel apiV2TestRunsIdStatisticsFilterPost(id, TestResultsLocalFilterModel)
+> TestResultsStatisticsApiResult apiV2TestRunsIdStatisticsFilterPost(id, TestRunStatisticsFilterApiModel)
 
 Search for the test run test results and build statistics
 
@@ -200,11 +200,11 @@ Search for the test run test results and build statistics
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**| Test run unique ID | [default to null] |
-| **TestResultsLocalFilterModel** | [**TestResultsLocalFilterModel**](../Models/TestResultsLocalFilterModel.md)|  | [optional] |
+| **TestRunStatisticsFilterApiModel** | [**TestRunStatisticsFilterApiModel**](../Models/TestRunStatisticsFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestResultsStatisticsGetModel**](../Models/TestResultsStatisticsGetModel.md)
+[**TestResultsStatisticsApiResult**](../Models/TestResultsStatisticsApiResult.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Get modification date of last test result of the test run
 
 <a name="apiV2TestRunsPurgeBulkPost"></a>
 # **apiV2TestRunsPurgeBulkPost**
-> Integer apiV2TestRunsPurgeBulkPost(TestRunSelectModel)
+> Integer apiV2TestRunsPurgeBulkPost(TestRunSelectApiModel)
 
 Permanently delete multiple test runs from archive
 
@@ -303,7 +303,7 @@ Permanently delete multiple test runs from archive
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunSelectModel** | [**TestRunSelectModel**](../Models/TestRunSelectModel.md)|  | [optional] |
+| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -320,7 +320,7 @@ Permanently delete multiple test runs from archive
 
 <a name="apiV2TestRunsRestoreBulkPost"></a>
 # **apiV2TestRunsRestoreBulkPost**
-> Integer apiV2TestRunsRestoreBulkPost(TestRunSelectModel)
+> Integer apiV2TestRunsRestoreBulkPost(TestRunSelectApiModel)
 
 Restore multiple test runs from the archive
 
@@ -330,7 +330,7 @@ Restore multiple test runs from the archive
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunSelectModel** | [**TestRunSelectModel**](../Models/TestRunSelectModel.md)|  | [optional] |
+| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -347,7 +347,7 @@ Restore multiple test runs from the archive
 
 <a name="apiV2TestRunsSearchPost"></a>
 # **apiV2TestRunsSearchPost**
-> List apiV2TestRunsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestRunFilterModel)
+> List apiV2TestRunsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestRunFilterApiModel)
 
 Search for test runs
 
@@ -360,11 +360,11 @@ Search for test runs
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestRunFilterModel** | [**TestRunFilterModel**](../Models/TestRunFilterModel.md)|  | [optional] |
+| **TestRunFilterApiModel** | [**TestRunFilterApiModel**](../Models/TestRunFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/TestRunShortGetModel.md)
+[**List**](../Models/TestRunShortApiResult.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ Search for test runs
 
 <a name="apiV2TestRunsUpdateMultiplePost"></a>
 # **apiV2TestRunsUpdateMultiplePost**
-> apiV2TestRunsUpdateMultiplePost(TestRunUpdateMultipleModel)
+> apiV2TestRunsUpdateMultiplePost(UpdateMultipleTestRunsApiModel)
 
 Update multiple test runs
 
@@ -385,7 +385,7 @@ Update multiple test runs
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunUpdateMultipleModel** | [**TestRunUpdateMultipleModel**](../Models/TestRunUpdateMultipleModel.md)|  | [optional] |
+| **UpdateMultipleTestRunsApiModel** | [**UpdateMultipleTestRunsApiModel**](../Models/UpdateMultipleTestRunsApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -429,7 +429,7 @@ null (empty response body)
 
 <a name="createAndFillByAutoTests"></a>
 # **createAndFillByAutoTests**
-> TestRunV2GetModel createAndFillByAutoTests(TestRunFillByAutoTestsPostModel)
+> TestRunV2ApiResult createAndFillByAutoTests(CreateTestRunAndFillByAutoTestsApiModel)
 
 Create test runs based on autotests and configurations
 
@@ -439,11 +439,11 @@ Create test runs based on autotests and configurations
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunFillByAutoTestsPostModel** | [**TestRunFillByAutoTestsPostModel**](../Models/TestRunFillByAutoTestsPostModel.md)|  | [optional] |
+| **CreateTestRunAndFillByAutoTestsApiModel** | [**CreateTestRunAndFillByAutoTestsApiModel**](../Models/CreateTestRunAndFillByAutoTestsApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestRunV2GetModel**](../Models/TestRunV2GetModel.md)
+[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Create test runs based on autotests and configurations
 
 <a name="createAndFillByConfigurations"></a>
 # **createAndFillByConfigurations**
-> TestRunV2GetModel createAndFillByConfigurations(TestRunFillByConfigurationsPostModel)
+> TestRunV2ApiResult createAndFillByConfigurations(CreateTestRunAndFillByConfigurationsApiModel)
 
 Create test runs picking the needed test points
 
@@ -466,11 +466,11 @@ Create test runs picking the needed test points
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunFillByConfigurationsPostModel** | [**TestRunFillByConfigurationsPostModel**](../Models/TestRunFillByConfigurationsPostModel.md)|  | [optional] |
+| **CreateTestRunAndFillByConfigurationsApiModel** | [**CreateTestRunAndFillByConfigurationsApiModel**](../Models/CreateTestRunAndFillByConfigurationsApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestRunV2GetModel**](../Models/TestRunV2GetModel.md)
+[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -483,7 +483,7 @@ Create test runs picking the needed test points
 
 <a name="createAndFillByWorkItems"></a>
 # **createAndFillByWorkItems**
-> TestRunV2GetModel createAndFillByWorkItems(TestRunFillByWorkItemsPostModel)
+> TestRunV2ApiResult createAndFillByWorkItems(CreateTestRunAndFillByWorkItemsApiModel)
 
 Create test run based on configurations and work items
 
@@ -493,11 +493,11 @@ Create test run based on configurations and work items
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunFillByWorkItemsPostModel** | [**TestRunFillByWorkItemsPostModel**](../Models/TestRunFillByWorkItemsPostModel.md)|  | [optional] |
+| **CreateTestRunAndFillByWorkItemsApiModel** | [**CreateTestRunAndFillByWorkItemsApiModel**](../Models/CreateTestRunAndFillByWorkItemsApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestRunV2GetModel**](../Models/TestRunV2GetModel.md)
+[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ Create test run based on configurations and work items
 
 <a name="createEmpty"></a>
 # **createEmpty**
-> TestRunV2GetModel createEmpty(TestRunV2PostShortModel)
+> TestRunV2ApiResult createEmpty(CreateEmptyTestRunApiModel)
 
 Create empty TestRun
 
@@ -520,11 +520,11 @@ Create empty TestRun
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunV2PostShortModel** | [**TestRunV2PostShortModel**](../Models/TestRunV2PostShortModel.md)|  | [optional] |
+| **CreateEmptyTestRunApiModel** | [**CreateEmptyTestRunApiModel**](../Models/CreateEmptyTestRunApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TestRunV2GetModel**](../Models/TestRunV2GetModel.md)
+[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -537,7 +537,7 @@ Create empty TestRun
 
 <a name="getTestRunById"></a>
 # **getTestRunById**
-> TestRunV2GetModel getTestRunById(id)
+> TestRunV2ApiResult getTestRunById(id)
 
 Get TestRun by Id
 
@@ -551,7 +551,7 @@ Get TestRun by Id
 
 ### Return type
 
-[**TestRunV2GetModel**](../Models/TestRunV2GetModel.md)
+[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -646,7 +646,7 @@ null (empty response body)
 
 <a name="updateEmpty"></a>
 # **updateEmpty**
-> updateEmpty(TestRunV2PutModel)
+> updateEmpty(UpdateEmptyTestRunApiModel)
 
 Update empty TestRun
 
@@ -656,7 +656,7 @@ Update empty TestRun
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TestRunV2PutModel** | [**TestRunV2PutModel**](../Models/TestRunV2PutModel.md)|  | [optional] |
+| **UpdateEmptyTestRunApiModel** | [**UpdateEmptyTestRunApiModel**](../Models/UpdateEmptyTestRunApiModel.md)|  | [optional] |
 
 ### Return type
 

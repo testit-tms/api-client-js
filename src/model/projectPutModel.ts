@@ -31,12 +31,6 @@ export class ProjectPutModel {
     */
     'isFavorite'?: boolean | null;
     /**
-    * Indicates if the status \"Flaky/Stable\" sets automatically
-    *
-    * @deprecated
-    */
-    'isFlakyAuto'?: boolean | null;
-    /**
     * Type of the project
     */
     'type': ProjectTypeModel;
@@ -62,11 +56,6 @@ export class ProjectPutModel {
         {
             "name": "isFavorite",
             "baseName": "isFavorite",
-            "type": "boolean"
-        },
-        {
-            "name": "isFlakyAuto",
-            "baseName": "isFlakyAuto",
             "type": "boolean"
         },
         {

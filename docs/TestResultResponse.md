@@ -11,7 +11,7 @@
 | **stepComments** | [**List**](StepComment.md) |  | [optional] [default to null] |
 | **failureClassIds** | **List** |  | [default to null] |
 | **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] [default to null] |
-| **status** | [**TestStatus**](TestStatus.md) |  | [optional] [default to null] |
+| **status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |
 | **links** | [**List**](Link.md) |  | [optional] [default to null] |
 | **stepResults** | [**List**](StepResult.md) |  | [optional] [default to null] |

@@ -13,10 +13,7 @@
 import { RequestFile } from './models';
 import { GuidExtractionModel } from './guidExtractionModel';
 
-export class AutotestsExtractionModel {
-    /**
-    * Extraction parameters for autotests
-    */
+export class AutoTestsExtractionModel {
     'ids'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
@@ -29,7 +26,7 @@ export class AutotestsExtractionModel {
         }    ];
 
     static getAttributeTypeMap() {
-        return AutotestsExtractionModel.attributeTypeMap;
+        return AutoTestsExtractionModel.attributeTypeMap;
     }
 }
 

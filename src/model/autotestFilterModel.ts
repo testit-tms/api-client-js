@@ -15,82 +15,26 @@ import { AutotestResultOutcome } from './autotestResultOutcome';
 import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 
-export class AutotestFilterModel {
-    /**
-    * Specifies an autotest projects IDs to search for
-    */
+export class AutoTestFilterModel {
     'projectIds'?: Array<string> | null;
-    /**
-    * Specifies an autotest external IDs to search for
-    */
     'externalIds'?: Array<string> | null;
-    /**
-    * Specifies an autotest global IDs to search for
-    */
     'globalIds'?: Array<number> | null;
-    /**
-    * Specifies an autotest name to search for
-    */
     'name'?: string | null;
-    /**
-    * Specifies an autotest flaky status to search for
-    */
     'isFlaky'?: boolean | null;
-    /**
-    * Specifies an autotest unapproved changes status to search for
-    */
     'mustBeApproved'?: boolean | null;
-    /**
-    * Specifies an autotest range of stability percentage to search for
-    */
     'stabilityPercentage'?: Int64RangeSelectorModel | null;
-    /**
-    * Specifies an autotest range of creation date to search for
-    */
     'createdDate'?: DateTimeRangeSelectorModel | null;
-    /**
-    * Specifies an autotest creator IDs to search for
-    */
     'createdByIds'?: Array<string> | null;
-    /**
-    * Specifies an autotest range of last modification date to search for
-    */
     'modifiedDate'?: DateTimeRangeSelectorModel | null;
-    /**
-    * Specifies an autotest last editor IDs to search for
-    */
     'modifiedByIds'?: Array<string> | null;
-    /**
-    * Specifies an autotest deleted status to search for
-    */
     'isDeleted'?: boolean | null;
-    /**
-    * Specifies an autotest namespace to search for
-    */
     'namespace'?: string | null;
-    /**
-    * Specifies an autotest namespace name presence status to search for
-    */
     'isEmptyNamespace'?: boolean | null;
-    /**
-    * Specifies an autotest class name to search for
-    */
     'className'?: string | null;
-    /**
-    * Specifies an autotest class name presence status to search for
-    */
     'isEmptyClassName'?: boolean | null;
-    /**
-    * Specifies an autotest outcome of the last test result to search for
-    */
     'lastTestResultOutcome'?: AutotestResultOutcome | null;
-    /**
-    * Specifies an autotest external key to search for
-    */
+    'lastTestResultStatusCode'?: string | null;
     'externalKey'?: string | null;
-    /**
-    * Specifies an autotest configuration IDs of the last test result to search for
-    */
     'lastTestResultConfigurationIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
@@ -182,6 +126,11 @@ export class AutotestFilterModel {
             "type": "AutotestResultOutcome"
         },
         {
+            "name": "lastTestResultStatusCode",
+            "baseName": "lastTestResultStatusCode",
+            "type": "string"
+        },
+        {
             "name": "externalKey",
             "baseName": "externalKey",
             "type": "string"
@@ -193,9 +142,9 @@ export class AutotestFilterModel {
         }    ];
 
     static getAttributeTypeMap() {
-        return AutotestFilterModel.attributeTypeMap;
+        return AutoTestFilterModel.attributeTypeMap;
     }
 }
 
-export namespace AutotestFilterModel {
+export namespace AutoTestFilterModel {
 }

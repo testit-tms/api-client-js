@@ -16,9 +16,9 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
-import { TestPointFilterModel } from '../model/testPointFilterModel';
-import { TestPointShortGetModel } from '../model/testPointShortGetModel';
-import { TestRunModel } from '../model/testRunModel';
+import { TestPointFilterRequestModel } from '../model/testPointFilterRequestModel';
+import { TestPointShortResponseModel } from '../model/testPointShortResponseModel';
+import { TestRunApiResult } from '../model/testRunApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemModel } from '../model/workItemModel';
 
@@ -99,7 +99,7 @@ export class TestPointsApi {
      * @summary Get all test runs which use test point
      * @param id Test point unique ID
      */
-    public async apiV2TestPointsIdTestRunsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }> {
+    public async apiV2TestPointsIdTestRunsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -150,13 +150,13 @@ export class TestPointsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -246,9 +246,9 @@ export class TestPointsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testPointFilterModel 
+     * @param testPointFilterRequestModel 
      */
-    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterModel?: TestPointFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search/id';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -292,7 +292,7 @@ export class TestPointsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointFilterModel, "TestPointFilterModel")
+            body: ObjectSerializer.serialize(testPointFilterRequestModel, "TestPointFilterRequestModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -338,9 +338,9 @@ export class TestPointsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param testPointFilterModel 
+     * @param testPointFilterRequestModel 
      */
-    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterModel?: TestPointFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortGetModel>;  }> {
+    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortResponseModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -384,7 +384,7 @@ export class TestPointsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(testPointFilterModel, "TestPointFilterModel")
+            body: ObjectSerializer.serialize(testPointFilterRequestModel, "TestPointFilterRequestModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -406,13 +406,13 @@ export class TestPointsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointShortGetModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointShortResponseModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestPointShortGetModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestPointShortResponseModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

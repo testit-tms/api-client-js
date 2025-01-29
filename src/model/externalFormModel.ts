@@ -13,12 +13,10 @@
 import { RequestFile } from './models';
 import { ExternalFormAllowedValueModel } from './externalFormAllowedValueModel';
 import { ExternalFormFieldModel } from './externalFormFieldModel';
-import { ExternalFormLinkModel } from './externalFormLinkModel';
 
 export class ExternalFormModel {
     'fields': Array<ExternalFormFieldModel>;
     'possibleValues': { [key: string]: Array<ExternalFormAllowedValueModel>; };
-    'links': Array<ExternalFormLinkModel>;
 
     static discriminator: string | undefined = undefined;
 
@@ -32,11 +30,6 @@ export class ExternalFormModel {
             "name": "possibleValues",
             "baseName": "possibleValues",
             "type": "{ [key: string]: Array<ExternalFormAllowedValueModel>; }"
-        },
-        {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<ExternalFormLinkModel>"
         }    ];
 
     static getAttributeTypeMap() {

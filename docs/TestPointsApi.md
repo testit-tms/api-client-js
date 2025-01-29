@@ -24,7 +24,7 @@ Get all test runs which use test point
 
 ### Return type
 
-[**List**](../Models/TestRunModel.md)
+[**List**](../Models/TestRunApiResult.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Get work item represented by test point
 
 <a name="apiV2TestPointsSearchIdPost"></a>
 # **apiV2TestPointsSearchIdPost**
-> List apiV2TestPointsSearchIdPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterModel)
+> List apiV2TestPointsSearchIdPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterRequestModel)
 
 Search for test points and extract IDs only
 
@@ -75,7 +75,7 @@ Search for test points and extract IDs only
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestPointFilterModel** | [**TestPointFilterModel**](../Models/TestPointFilterModel.md)|  | [optional] |
+| **TestPointFilterRequestModel** | [**TestPointFilterRequestModel**](../Models/TestPointFilterRequestModel.md)|  | [optional] |
 
 ### Return type
 
@@ -92,7 +92,7 @@ Search for test points and extract IDs only
 
 <a name="apiV2TestPointsSearchPost"></a>
 # **apiV2TestPointsSearchPost**
-> List apiV2TestPointsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterModel)
+> List apiV2TestPointsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestPointFilterRequestModel)
 
 Search for test points
 
@@ -105,11 +105,11 @@ Search for test points
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestPointFilterModel** | [**TestPointFilterModel**](../Models/TestPointFilterModel.md)|  | [optional] |
+| **TestPointFilterRequestModel** | [**TestPointFilterRequestModel**](../Models/TestPointFilterRequestModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/TestPointShortGetModel.md)
+[**List**](../Models/TestPointShortResponseModel.md)
 
 ### Authorization
 

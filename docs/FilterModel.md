@@ -7,7 +7,7 @@
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **data** | [**WorkItemSearchQueryModel**](WorkItemSearchQueryModel.md) |  | [default to null] |
+| **data** | [**WorkItemSearchQueryModel**](WorkItemSearchQueryModel.md) |  | [optional] [default to null] |
 | **projectId** | **UUID** |  | [default to null] |
 | **fieldsToShow** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |
 | **name** | **String** |  | [default to null] |

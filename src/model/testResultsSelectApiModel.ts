@@ -12,13 +12,13 @@
 
 import { RequestFile } from './models';
 import { TestResultsExtractionApiModel } from './testResultsExtractionApiModel';
-import { TestResultsFilterRequest } from './testResultsFilterRequest';
+import { TestResultsFilterApiModel } from './testResultsFilterApiModel';
 
 export class TestResultsSelectApiModel {
     /**
     * Test result filters
     */
-    'filter': TestResultsFilterRequest;
+    'filter': TestResultsFilterApiModel;
     /**
     * Test results extraction model
     */
@@ -30,7 +30,7 @@ export class TestResultsSelectApiModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "TestResultsFilterRequest"
+            "type": "TestResultsFilterApiModel"
         },
         {
             "name": "extractionModel",

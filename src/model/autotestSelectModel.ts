@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { AutotestFilterModel } from './autotestFilterModel';
-import { AutotestsExtractionModel } from './autotestsExtractionModel';
+import { AutoTestFilterModel } from './autoTestFilterModel';
+import { AutoTestsExtractionModel } from './autoTestsExtractionModel';
 
-export class AutotestSelectModel {
-    'filter': AutotestFilterModel;
-    'extractionModel': AutotestsExtractionModel;
+export class AutoTestSelectModel {
+    'filter': AutoTestFilterModel;
+    'extractionModel'?: AutoTestsExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,16 +24,16 @@ export class AutotestSelectModel {
         {
             "name": "filter",
             "baseName": "filter",
-            "type": "AutotestFilterModel"
+            "type": "AutoTestFilterModel"
         },
         {
             "name": "extractionModel",
             "baseName": "extractionModel",
-            "type": "AutotestsExtractionModel"
+            "type": "AutoTestsExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {
-        return AutotestSelectModel.attributeTypeMap;
+        return AutoTestSelectModel.attributeTypeMap;
     }
 }
 

@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { Attachment } from './attachment';
 import { AutoTestResultReasonShort } from './autoTestResultReasonShort';
 import { LinkShort } from './linkShort';
-import { TestStatus } from './testStatus';
+import { TestStatusApiResult } from './testStatusApiResult';
 
 export class TestResultShortResponse {
     /**
@@ -47,7 +47,7 @@ export class TestResultShortResponse {
     * @deprecated
     */
     'outcome'?: string | null;
-    'status'?: TestStatus | null;
+    'status'?: TestStatusApiResult | null;
     /**
     * Collection of result reasons which the test result have
     */
@@ -136,7 +136,7 @@ export class TestResultShortResponse {
         {
             "name": "status",
             "baseName": "status",
-            "type": "TestStatus"
+            "type": "TestStatusApiResult"
         },
         {
             "name": "resultReasons",
