@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 import { AttachmentApiResult } from './attachmentApiResult';
-import { AutoTestModel } from './autoTestModel';
+import { AutoTestApiResult } from './autoTestApiResult';
 import { AutoTestStepResultsApiResult } from './autoTestStepResultsApiResult';
 import { LinkApiResult } from './linkApiResult';
 import { StepCommentApiResult } from './stepCommentApiResult';
@@ -37,7 +37,7 @@ export class TestResultApiResult {
     'configurationId': string;
     'status': TestStatusApiResult;
     'testPoint'?: TestPointShortApiResult | null;
-    'autoTest'?: AutoTestModel | null;
+    'autoTest'?: AutoTestApiResult | null;
     'autoTestStepResults'?: Array<AutoTestStepResultsApiResult> | null;
     'setupResults'?: Array<AutoTestStepResultsApiResult> | null;
     'teardownResults'?: Array<AutoTestStepResultsApiResult> | null;
@@ -141,7 +141,7 @@ export class TestResultApiResult {
         {
             "name": "autoTest",
             "baseName": "autoTest",
-            "type": "AutoTestModel"
+            "type": "AutoTestApiResult"
         },
         {
             "name": "autoTestStepResults",
