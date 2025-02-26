@@ -15,7 +15,7 @@ import { AttachmentApiResult } from './attachmentApiResult';
 import { AutoTestApiResult } from './autoTestApiResult';
 import { AutoTestStepResultsApiResult } from './autoTestStepResultsApiResult';
 import { LinkApiResult } from './linkApiResult';
-import { StepCommentApiResult } from './stepCommentApiResult';
+import { StepCommentApiModel } from './stepCommentApiModel';
 import { TestPointShortApiResult } from './testPointShortApiResult';
 import { TestResultFailureClassApiResult } from './testResultFailureClassApiResult';
 import { TestStatusApiResult } from './testStatusApiResult';
@@ -46,7 +46,7 @@ export class TestResultApiResult {
     'attachments': Array<AttachmentApiResult>;
     'links': Array<LinkApiResult>;
     'failureClasses': Array<TestResultFailureClassApiResult>;
-    'stepComments'?: Array<StepCommentApiResult> | null;
+    'stepComments'?: Array<StepCommentApiModel> | null;
     'parameters'?: { [key: string]: string; } | null;
     'properties'?: { [key: string]: string; } | null;
     'createdDate': Date;
@@ -186,7 +186,7 @@ export class TestResultApiResult {
         {
             "name": "stepComments",
             "baseName": "stepComments",
-            "type": "Array<StepCommentApiResult>"
+            "type": "Array<StepCommentApiModel>"
         },
         {
             "name": "parameters",

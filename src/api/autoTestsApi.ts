@@ -23,13 +23,13 @@ import { AutoTestFlakyBulkApiModel } from '../model/autoTestFlakyBulkApiModel';
 import { AutoTestModel } from '../model/autoTestModel';
 import { AutoTestPostModel } from '../model/autoTestPostModel';
 import { AutoTestPutModel } from '../model/autoTestPutModel';
+import { AutoTestResultHistoryApiResult } from '../model/autoTestResultHistoryApiResult';
+import { AutoTestResultHistorySelectApiModel } from '../model/autoTestResultHistorySelectApiModel';
 import { AutoTestSearchApiModel } from '../model/autoTestSearchApiModel';
-import { AutotestHistoricalResultSelectModel } from '../model/autotestHistoricalResultSelectModel';
-import { AutotestResultHistoricalGetModel } from '../model/autotestResultHistoricalGetModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
-import { TestRunShortModel } from '../model/testRunShortModel';
+import { TestRunByAutoTestApiResult } from '../model/testRunByAutoTestApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemIdModel } from '../model/workItemIdModel';
 import { WorkItemIdentifierModel } from '../model/workItemIdentifierModel';
@@ -346,9 +346,9 @@ export class AutoTestsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param autotestHistoricalResultSelectModel 
+     * @param autoTestResultHistorySelectApiModel 
      */
-    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autotestHistoricalResultSelectModel?: AutotestHistoricalResultSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutotestResultHistoricalGetModel>;  }> {
+    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestResultHistorySelectApiModel?: AutoTestResultHistorySelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultHistoryApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testResults/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -398,7 +398,7 @@ export class AutoTestsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(autotestHistoricalResultSelectModel, "AutotestHistoricalResultSelectModel")
+            body: ObjectSerializer.serialize(autoTestResultHistorySelectApiModel, "AutoTestResultHistorySelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -420,13 +420,13 @@ export class AutoTestsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<AutotestResultHistoricalGetModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultHistoryApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<AutotestResultHistoricalGetModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AutoTestResultHistoryApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1376,7 +1376,7 @@ export class AutoTestsApi {
      * @summary Get completed tests runs for autotests
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async getTestRuns (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortModel>;  }> {
+    public async getTestRuns (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunByAutoTestApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1427,13 +1427,13 @@ export class AutoTestsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestRunByAutoTestApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestRunShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestRunByAutoTestApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

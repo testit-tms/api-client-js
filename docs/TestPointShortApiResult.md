@@ -4,6 +4,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** | Test point unique internal identifier | [default to null] |
+| **isDeleted** | **Boolean** | Indicates if the entity is deleted | [default to null] |
 | **testerId** | **UUID** | Tester who is responded for the test unique internal identifier | [optional] [default to null] |
 | **workItemId** | **UUID** | Workitem to which test point relates unique identifier | [optional] [default to null] |
 | **configurationId** | **UUID** | Configuration to which test point relates unique identifier | [optional] [default to null] |

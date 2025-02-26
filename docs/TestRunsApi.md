@@ -138,7 +138,7 @@ null (empty response body)
 
 <a name="apiV2TestRunsIdRerunsPost"></a>
 # **apiV2TestRunsIdRerunsPost**
-> ManualRerunApiResult apiV2TestRunsIdRerunsPost(id, ManualRerunSelectApiModel)
+> ManualRerunApiResult apiV2TestRunsIdRerunsPost(id, ManualRerunSelectTestResultsApiModel)
 
 Manual autotests rerun in test run
 
@@ -147,7 +147,7 @@ Manual autotests rerun in test run
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**|  | [default to null] |
-| **ManualRerunSelectApiModel** | [**ManualRerunSelectApiModel**](../Models/ManualRerunSelectApiModel.md)|  | [optional] |
+| **ManualRerunSelectTestResultsApiModel** | [**ManualRerunSelectTestResultsApiModel**](../Models/ManualRerunSelectTestResultsApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -229,7 +229,7 @@ Get test results from the test run grouped by test points
 
 ### Return type
 
-[**List**](../Models/TestPointResultModel.md)
+[**List**](../Models/TestPointResultApiResult.md)
 
 ### Authorization
 

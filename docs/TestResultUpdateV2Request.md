@@ -8,7 +8,7 @@
 | **statusCode** | **String** |  | [optional] [default to null] |
 | **comment** | **String** |  | [optional] [default to null] |
 | **links** | [**List**](Link.md) |  | [optional] [default to null] |
-| **stepResults** | [**List**](StepResult.md) |  | [optional] [default to null] |
+| **stepResults** | [**List**](StepResultApiModel.md) |  | [optional] [default to null] |
 | **attachments** | [**List**](AttachmentUpdateRequest.md) |  | [optional] [default to null] |
 | **durationInMs** | **Long** |  | [optional] [default to null] |
 | **duration** | **Long** |  | [optional] [default to null] |

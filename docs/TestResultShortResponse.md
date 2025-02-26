@@ -20,7 +20,7 @@
 | **completedOn** | **Date** | Date when the test result has been completed | [optional] [default to null] |
 | **duration** | **Long** | Time which it took to run the test | [optional] [default to null] |
 | **links** | [**List**](LinkShort.md) | Collection of links attached to the test result | [default to null] |
-| **attachments** | [**List**](Attachment.md) | Collection of files attached to the test result | [default to null] |
+| **attachments** | [**List**](AttachmentApiResult.md) | Collection of files attached to the test result | [default to null] |
 | **rerunCompletedCount** | **Integer** | Run count | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

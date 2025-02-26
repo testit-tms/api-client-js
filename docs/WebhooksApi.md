@@ -18,7 +18,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2WebhooksDelete"></a>
 # **apiV2WebhooksDelete**
-> apiV2WebhooksDelete(WebhooksDeleteRequest)
+> apiV2WebhooksDelete(WebhooksDeleteApiModel)
 
 
 
@@ -26,7 +26,7 @@ All URIs are relative to *http://localhost*
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WebhooksDeleteRequest** | [**WebhooksDeleteRequest**](../Models/WebhooksDeleteRequest.md)|  | [optional] |
+| **WebhooksDeleteApiModel** | [**WebhooksDeleteApiModel**](../Models/WebhooksDeleteApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -169,7 +169,7 @@ Create webhook
 
 <a name="apiV2WebhooksPut"></a>
 # **apiV2WebhooksPut**
-> WebhooksUpdateResponse apiV2WebhooksPut(WebhooksUpdateRequest)
+> WebhooksUpdateApiResult apiV2WebhooksPut(WebhooksUpdateApiModel)
 
 
 
@@ -177,11 +177,11 @@ Create webhook
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **WebhooksUpdateRequest** | [**WebhooksUpdateRequest**](../Models/WebhooksUpdateRequest.md)|  | [optional] |
+| **WebhooksUpdateApiModel** | [**WebhooksUpdateApiModel**](../Models/WebhooksUpdateApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**WebhooksUpdateResponse**](../Models/WebhooksUpdateResponse.md)
+[**WebhooksUpdateApiResult**](../Models/WebhooksUpdateApiResult.md)
 
 ### Authorization
 

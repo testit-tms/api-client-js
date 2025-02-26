@@ -20,7 +20,9 @@ import { TagShortModel } from '../model/tagShortModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
+import { WorkItemSelectApiModel } from '../model/workItemSelectApiModel';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
+import { WorkItemShortApiResult } from '../model/workItemShortApiResult';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -302,9 +304,9 @@ export class ProjectWorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param workItemSelectModel 
+     * @param workItemSelectApiModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -354,7 +356,7 @@ export class ProjectWorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
+            body: ObjectSerializer.serialize(workItemSelectApiModel, "WorkItemSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -376,13 +378,13 @@ export class ProjectWorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<WorkItemShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<WorkItemShortApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

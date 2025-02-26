@@ -18,20 +18,23 @@ import http from 'http';
 import { AutoTestModel } from '../model/autoTestModel';
 import { IterationModel } from '../model/iterationModel';
 import { ProblemDetails } from '../model/problemDetails';
+import { SearchWorkItemLinkUrlsApiResult } from '../model/searchWorkItemLinkUrlsApiResult';
 import { SharedStepReferenceModel } from '../model/sharedStepReferenceModel';
 import { SharedStepReferenceSectionModel } from '../model/sharedStepReferenceSectionModel';
 import { SharedStepReferenceSectionsQueryFilterModel } from '../model/sharedStepReferenceSectionsQueryFilterModel';
 import { SharedStepReferencesQueryFilterModel } from '../model/sharedStepReferencesQueryFilterModel';
 import { TestResultChronologyModel } from '../model/testResultChronologyModel';
-import { TestResultHistoryResponse } from '../model/testResultHistoryResponse';
+import { TestResultHistoryReportApiResult } from '../model/testResultHistoryReportApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemChangeModel } from '../model/workItemChangeModel';
 import { WorkItemLikeModel } from '../model/workItemLikeModel';
+import { WorkItemLinkUrlApiModel } from '../model/workItemLinkUrlApiModel';
 import { WorkItemModel } from '../model/workItemModel';
 import { WorkItemMovePostModel } from '../model/workItemMovePostModel';
 import { WorkItemPostModel } from '../model/workItemPostModel';
 import { WorkItemPutModel } from '../model/workItemPutModel';
-import { WorkItemSelectModel } from '../model/workItemSelectModel';
+import { WorkItemSelectApiModel } from '../model/workItemSelectApiModel';
+import { WorkItemShortApiResult } from '../model/workItemShortApiResult';
 import { WorkItemShortModel } from '../model/workItemShortModel';
 import { WorkItemVersionModel } from '../model/workItemVersionModel';
 
@@ -649,6 +652,7 @@ export class WorkItemsApi {
      * @param testPlanIds Identifiers of test plans which contain test results
      * @param userIds Identifiers of users who set test results
      * @param outcomes List of outcomes of test results
+     * @param statusCodes List of status codes of test results
      * @param isAutomated OBSOLETE: Use &#x60;Automated&#x60; instead
      * @param automated If result must consist of only manual/automated test results
      * @param testRunIds Identifiers of test runs which contain test results
@@ -658,7 +662,7 @@ export class WorkItemsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryResponse>;  }> {
+    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, statusCodes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/testResults/history'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -699,6 +703,10 @@ export class WorkItemsApi {
 
         if (outcomes !== undefined) {
             localVarQueryParameters['outcomes'] = ObjectSerializer.serialize(outcomes, "Array<string>");
+        }
+
+        if (statusCodes !== undefined) {
+            localVarQueryParameters['statusCodes'] = ObjectSerializer.serialize(statusCodes, "Array<string>");
         }
 
         if (isAutomated !== undefined) {
@@ -765,13 +773,13 @@ export class WorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryResponse>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestResultHistoryResponse>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestResultHistoryReportApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -861,6 +869,97 @@ export class WorkItemsApi {
         });
     }
     /**
+     * 
+     * @param skip Amount of items to be skipped (offset)
+     * @param take Amount of items to be taken (limit)
+     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param searchField Property name for searching
+     * @param searchValue Value for searching
+     * @param workItemLinkUrlApiModel 
+     */
+    public async apiV2WorkItemsLinksUrlsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemLinkUrlApiModel?: WorkItemLinkUrlApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SearchWorkItemLinkUrlsApiResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/workItems/links/urls/search';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        if (skip !== undefined) {
+            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
+        }
+
+        if (take !== undefined) {
+            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
+        }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
+        }
+
+        if (searchField !== undefined) {
+            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
+        }
+
+        if (searchValue !== undefined) {
+            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        let localVarRequestOptions: localVarRequest.Options = {
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(workItemLinkUrlApiModel, "WorkItemLinkUrlApiModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: SearchWorkItemLinkUrlsApiResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "SearchWorkItemLinkUrlsApiResult");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
      *  Use case   User sets WorkItem identifier   User runs method execution   System move WorkItem to another section
      * @summary Move WorkItem to another section
      * @param workItemMovePostModel 
@@ -935,9 +1034,9 @@ export class WorkItemsApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
-     * @param workItemSelectModel 
+     * @param workItemSelectApiModel 
      */
-    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -981,7 +1080,7 @@ export class WorkItemsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(workItemSelectModel, "WorkItemSelectModel")
+            body: ObjectSerializer.serialize(workItemSelectApiModel, "WorkItemSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -1003,13 +1102,13 @@ export class WorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<WorkItemShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<WorkItemShortApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

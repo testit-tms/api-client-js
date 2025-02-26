@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { AttachmentPutModelAutoTestStepResultsModel } from './attachmentPutModelAutoTestStepResultsModel';
 import { AttachmentUpdateRequest } from './attachmentUpdateRequest';
 import { Link } from './link';
-import { StepResult } from './stepResult';
+import { StepResultApiModel } from './stepResultApiModel';
 import { TestResultOutcome } from './testResultOutcome';
 import { TestResultStepCommentUpdateRequest } from './testResultStepCommentUpdateRequest';
 
@@ -27,7 +27,7 @@ export class TestResultUpdateV2Request {
     'statusCode'?: string | null;
     'comment'?: string | null;
     'links'?: Array<Link> | null;
-    'stepResults'?: Array<StepResult> | null;
+    'stepResults'?: Array<StepResultApiModel> | null;
     'attachments'?: Array<AttachmentUpdateRequest> | null;
     /**
     * @deprecated
@@ -71,7 +71,7 @@ export class TestResultUpdateV2Request {
         {
             "name": "stepResults",
             "baseName": "stepResults",
-            "type": "Array<StepResult>"
+            "type": "Array<StepResultApiModel>"
         },
         {
             "name": "attachments",
