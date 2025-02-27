@@ -1,6 +1,6 @@
 {
     "name": "testit-api-client",
-    "version": "5.2.1-TMS-5.2.2",
+    "version": "5.3.0-TMS-CLOUD",
     "description": "Api client for Test IT TMS",
     "repository": {
         "type": "git",

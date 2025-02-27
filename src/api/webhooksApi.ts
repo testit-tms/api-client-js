@@ -24,9 +24,9 @@ import { WebHookPostModel } from '../model/webHookPostModel';
 import { WebHookTestModel } from '../model/webHookTestModel';
 import { WebhookResponse } from '../model/webhookResponse';
 import { WebhookVariablesType } from '../model/webhookVariablesType';
-import { WebhooksDeleteRequest } from '../model/webhooksDeleteRequest';
-import { WebhooksUpdateRequest } from '../model/webhooksUpdateRequest';
-import { WebhooksUpdateResponse } from '../model/webhooksUpdateResponse';
+import { WebhooksDeleteApiModel } from '../model/webhooksDeleteApiModel';
+import { WebhooksUpdateApiModel } from '../model/webhooksUpdateApiModel';
+import { WebhooksUpdateApiResult } from '../model/webhooksUpdateApiResult';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -102,9 +102,9 @@ export class WebhooksApi {
 
     /**
      * 
-     * @param webhooksDeleteRequest 
+     * @param webhooksDeleteApiModel 
      */
-    public async apiV2WebhooksDelete (webhooksDeleteRequest?: WebhooksDeleteRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WebhooksDelete (webhooksDeleteApiModel?: WebhooksDeleteApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -128,7 +128,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(webhooksDeleteRequest, "WebhooksDeleteRequest")
+            body: ObjectSerializer.serialize(webhooksDeleteApiModel, "WebhooksDeleteApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -521,9 +521,9 @@ export class WebhooksApi {
     }
     /**
      * 
-     * @param webhooksUpdateRequest 
+     * @param webhooksUpdateApiModel 
      */
-    public async apiV2WebhooksPut (webhooksUpdateRequest?: WebhooksUpdateRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebhooksUpdateResponse;  }> {
+    public async apiV2WebhooksPut (webhooksUpdateApiModel?: WebhooksUpdateApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebhooksUpdateApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -547,7 +547,7 @@ export class WebhooksApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(webhooksUpdateRequest, "WebhooksUpdateRequest")
+            body: ObjectSerializer.serialize(webhooksUpdateApiModel, "WebhooksUpdateApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -569,13 +569,13 @@ export class WebhooksApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: WebhooksUpdateResponse;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: WebhooksUpdateApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "WebhooksUpdateResponse");
+                            body = ObjectSerializer.deserialize(body, "WebhooksUpdateApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

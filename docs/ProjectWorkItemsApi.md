@@ -75,7 +75,7 @@ Search for work items and extract IDs only
 
 <a name="apiV2ProjectsProjectIdWorkItemsSearchPost"></a>
 # **apiV2ProjectsProjectIdWorkItemsSearchPost**
-> List apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
+> List apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectApiModel)
 
 Search for work items
 
@@ -89,11 +89,11 @@ Search for work items
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
+| **WorkItemSelectApiModel** | [**WorkItemSelectApiModel**](../Models/WorkItemSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/WorkItemShortModel.md)
+[**List**](../Models/WorkItemShortApiResult.md)
 
 ### Authorization
 

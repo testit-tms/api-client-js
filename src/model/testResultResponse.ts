@@ -11,12 +11,12 @@
  */
 
 import { RequestFile } from './models';
-import { Attachment } from './attachment';
+import { AttachmentApiResult } from './attachmentApiResult';
 import { AutoTest } from './autoTest';
 import { AutoTestStepResult } from './autoTestStepResult';
 import { Link } from './link';
-import { StepComment } from './stepComment';
-import { StepResult } from './stepResult';
+import { StepCommentApiModel } from './stepCommentApiModel';
+import { StepResultApiModel } from './stepResultApiModel';
 import { TestPoint } from './testPoint';
 import { TestResultOutcome } from './testResultOutcome';
 import { TestStatusApiResult } from './testStatusApiResult';
@@ -27,7 +27,7 @@ export class TestResultResponse {
     'modifiedDate'?: Date | null;
     'createdById': string;
     'modifiedById'?: string | null;
-    'stepComments'?: Array<StepComment> | null;
+    'stepComments'?: Array<StepCommentApiModel> | null;
     'failureClassIds': Array<string>;
     /**
     * @deprecated
@@ -36,8 +36,8 @@ export class TestResultResponse {
     'status'?: TestStatusApiResult | null;
     'comment'?: string | null;
     'links'?: Array<Link> | null;
-    'stepResults'?: Array<StepResult> | null;
-    'attachments'?: Array<Attachment> | null;
+    'stepResults'?: Array<StepResultApiModel> | null;
+    'attachments'?: Array<AttachmentApiResult> | null;
     'autoTestId'?: string | null;
     'configurationId': string;
     'startedOn'?: Date | null;
@@ -91,7 +91,7 @@ export class TestResultResponse {
         {
             "name": "stepComments",
             "baseName": "stepComments",
-            "type": "Array<StepComment>"
+            "type": "Array<StepCommentApiModel>"
         },
         {
             "name": "failureClassIds",
@@ -121,12 +121,12 @@ export class TestResultResponse {
         {
             "name": "stepResults",
             "baseName": "stepResults",
-            "type": "Array<StepResult>"
+            "type": "Array<StepResultApiModel>"
         },
         {
             "name": "attachments",
             "baseName": "attachments",
-            "type": "Array<Attachment>"
+            "type": "Array<AttachmentApiResult>"
         },
         {
             "name": "autoTestId",

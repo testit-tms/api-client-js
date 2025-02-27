@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { Attachment } from './attachment';
+import { AttachmentApiResult } from './attachmentApiResult';
 import { AvailableTestResultOutcome } from './availableTestResultOutcome';
 
 export class AutoTestStepResult {
@@ -50,7 +50,7 @@ export class AutoTestStepResult {
     /**
     * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
     */
-    'attachments'?: Array<Attachment> | null;
+    'attachments'?: Array<AttachmentApiResult> | null;
     /**
     * \"<b>parameter</b>\": \"<b>value</b>\" pair with arbitrary custom parameters. Multiple parameters can be sent.
     */
@@ -102,7 +102,7 @@ export class AutoTestStepResult {
         {
             "name": "attachments",
             "baseName": "attachments",
-            "type": "Array<Attachment>"
+            "type": "Array<AttachmentApiResult>"
         },
         {
             "name": "parameters",

@@ -113,7 +113,7 @@ null (empty response body)
 
 <a name="apiV2AutoTestsIdTestResultsSearchPost"></a>
 # **apiV2AutoTestsIdTestResultsSearchPost**
-> List apiV2AutoTestsIdTestResultsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, AutotestHistoricalResultSelectModel)
+> List apiV2AutoTestsIdTestResultsSearchPost(id, Skip, Take, OrderBy, SearchField, SearchValue, AutoTestResultHistorySelectApiModel)
 
 Get test results history for autotest
 
@@ -129,11 +129,11 @@ Get test results history for autotest
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **AutotestHistoricalResultSelectModel** | [**AutotestHistoricalResultSelectModel**](../Models/AutotestHistoricalResultSelectModel.md)|  | [optional] |
+| **AutoTestResultHistorySelectApiModel** | [**AutoTestResultHistorySelectApiModel**](../Models/AutoTestResultHistorySelectApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/AutotestResultHistoricalGetModel.md)
+[**List**](../Models/AutoTestResultHistoryApiResult.md)
 
 ### Authorization
 
@@ -485,7 +485,7 @@ Get completed tests runs for autotests
 
 ### Return type
 
-[**List**](../Models/TestRunShortModel.md)
+[**List**](../Models/TestRunByAutoTestApiResult.md)
 
 ### Authorization
 

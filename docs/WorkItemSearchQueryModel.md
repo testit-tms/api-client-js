@@ -4,6 +4,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **projectIds** | **Set** | Collection of project identifiers | [optional] [default to null] |
+| **links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] [default to null] |
 | **name** | **String** | Name of work item | [optional] [default to null] |
 | **ids** | **Set** | Specifies a work item unique IDs to search for | [optional] [default to null] |
 | **globalIds** | **Set** | Collection of global (integer) identifiers | [optional] [default to null] |

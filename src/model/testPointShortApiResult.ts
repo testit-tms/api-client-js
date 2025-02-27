@@ -19,6 +19,10 @@ export class TestPointShortApiResult {
     */
     'id': string;
     /**
+    * Indicates if the entity is deleted
+    */
+    'isDeleted': boolean;
+    /**
     * Tester who is responded for the test unique internal identifier
     */
     'testerId'?: string | null;
@@ -64,6 +68,11 @@ export class TestPointShortApiResult {
             "name": "id",
             "baseName": "id",
             "type": "string"
+        },
+        {
+            "name": "isDeleted",
+            "baseName": "isDeleted",
+            "type": "boolean"
         },
         {
             "name": "testerId",

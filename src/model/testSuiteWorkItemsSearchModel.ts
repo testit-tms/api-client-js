@@ -15,6 +15,7 @@ import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
+import { WorkItemLinkFilterModel } from './workItemLinkFilterModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemStates } from './workItemStates';
 
@@ -47,6 +48,10 @@ export class TestSuiteWorkItemsSearchModel {
     * Collection of project identifiers
     */
     'projectIds'?: Array<string> | null;
+    /**
+    * Specifies a work item filter by its links
+    */
+    'links'?: WorkItemLinkFilterModel | null;
     /**
     * Name of work item
     */
@@ -156,6 +161,11 @@ export class TestSuiteWorkItemsSearchModel {
             "name": "projectIds",
             "baseName": "projectIds",
             "type": "Array<string>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "WorkItemLinkFilterModel"
         },
         {
             "name": "name",

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { Attachment } from './attachment';
+import { AttachmentApiResult } from './attachmentApiResult';
 import { AutoTestResultReasonShort } from './autoTestResultReasonShort';
 import { LinkShort } from './linkShort';
 import { TestStatusApiResult } from './testStatusApiResult';
@@ -89,7 +89,7 @@ export class TestResultShortResponse {
     /**
     * Collection of files attached to the test result
     */
-    'attachments': Array<Attachment>;
+    'attachments': Array<AttachmentApiResult>;
     /**
     * Run count
     */
@@ -186,7 +186,7 @@ export class TestResultShortResponse {
         {
             "name": "attachments",
             "baseName": "attachments",
-            "type": "Array<Attachment>"
+            "type": "Array<AttachmentApiResult>"
         },
         {
             "name": "rerunCompletedCount",

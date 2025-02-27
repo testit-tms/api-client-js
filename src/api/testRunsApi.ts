@@ -22,9 +22,9 @@ import { CreateTestRunAndFillByAutoTestsApiModel } from '../model/createTestRunA
 import { CreateTestRunAndFillByConfigurationsApiModel } from '../model/createTestRunAndFillByConfigurationsApiModel';
 import { CreateTestRunAndFillByWorkItemsApiModel } from '../model/createTestRunAndFillByWorkItemsApiModel';
 import { ManualRerunApiResult } from '../model/manualRerunApiResult';
-import { ManualRerunSelectApiModel } from '../model/manualRerunSelectApiModel';
+import { ManualRerunSelectTestResultsApiModel } from '../model/manualRerunSelectTestResultsApiModel';
 import { ProblemDetails } from '../model/problemDetails';
-import { TestPointResultModel } from '../model/testPointResultModel';
+import { TestPointResultApiResult } from '../model/testPointResultApiResult';
 import { TestResultsStatisticsApiResult } from '../model/testResultsStatisticsApiResult';
 import { TestRunFilterApiModel } from '../model/testRunFilterApiModel';
 import { TestRunSelectApiModel } from '../model/testRunSelectApiModel';
@@ -393,9 +393,9 @@ export class TestRunsApi {
      * 
      * @summary Manual autotests rerun in test run
      * @param id 
-     * @param manualRerunSelectApiModel 
+     * @param manualRerunSelectTestResultsApiModel 
      */
-    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectApiModel?: ManualRerunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }> {
+    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectTestResultsApiModel?: ManualRerunSelectTestResultsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/reruns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -425,7 +425,7 @@ export class TestRunsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(manualRerunSelectApiModel, "ManualRerunSelectApiModel")
+            body: ObjectSerializer.serialize(manualRerunSelectTestResultsApiModel, "ManualRerunSelectTestResultsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -613,7 +613,7 @@ export class TestRunsApi {
      * @summary Get test results from the test run grouped by test points
      * @param id Test run unique ID
      */
-    public async apiV2TestRunsIdTestPointsResultsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointResultModel>;  }> {
+    public async apiV2TestRunsIdTestPointsResultsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointResultApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testPoints/results'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -664,13 +664,13 @@ export class TestRunsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointResultModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestPointResultApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestPointResultModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestPointResultApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

@@ -13,6 +13,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2WorkItemsIdLikesGet**](WorkItemsApi.md#apiV2WorkItemsIdLikesGet) | **GET** /api/v2/workItems/{id}/likes | Get likes of WorkItem |
 | [**apiV2WorkItemsIdTestResultsHistoryGet**](WorkItemsApi.md#apiV2WorkItemsIdTestResultsHistoryGet) | **GET** /api/v2/workItems/{id}/testResults/history | Get test results history of WorkItem |
 | [**apiV2WorkItemsIdVersionVersionIdActualPost**](WorkItemsApi.md#apiV2WorkItemsIdVersionVersionIdActualPost) | **POST** /api/v2/workItems/{id}/version/{versionId}/actual | Set WorkItem as actual |
+| [**apiV2WorkItemsLinksUrlsSearchPost**](WorkItemsApi.md#apiV2WorkItemsLinksUrlsSearchPost) | **POST** /api/v2/workItems/links/urls/search |  |
 | [**apiV2WorkItemsMovePost**](WorkItemsApi.md#apiV2WorkItemsMovePost) | **POST** /api/v2/workItems/move | Move WorkItem to another section |
 | [**apiV2WorkItemsSearchPost**](WorkItemsApi.md#apiV2WorkItemsSearchPost) | **POST** /api/v2/workItems/search | Search for work items |
 | [**apiV2WorkItemsSharedStepIdReferencesSectionsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesSectionsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/sections | Get SharedStep references in sections |
@@ -228,7 +229,7 @@ Get likes of WorkItem
 
 <a name="apiV2WorkItemsIdTestResultsHistoryGet"></a>
 # **apiV2WorkItemsIdTestResultsHistoryGet**
-> List apiV2WorkItemsIdTestResultsHistoryGet(id, from, to, configurationIds, testPlanIds, userIds, outcomes, isAutomated, automated, testRunIds, Skip, Take, OrderBy, SearchField, SearchValue)
+> List apiV2WorkItemsIdTestResultsHistoryGet(id, from, to, configurationIds, testPlanIds, userIds, outcomes, statusCodes, isAutomated, automated, testRunIds, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get test results history of WorkItem
 
@@ -245,6 +246,7 @@ Get test results history of WorkItem
 | **testPlanIds** | [**List**](../Models/UUID.md)| Identifiers of test plans which contain test results | [optional] [default to null] |
 | **userIds** | [**List**](../Models/UUID.md)| Identifiers of users who set test results | [optional] [default to null] |
 | **outcomes** | [**List**](../Models/String.md)| List of outcomes of test results | [optional] [default to null] |
+| **statusCodes** | [**List**](../Models/String.md)| List of status codes of test results | [optional] [default to null] |
 | **isAutomated** | **Boolean**| OBSOLETE: Use &#x60;Automated&#x60; instead | [optional] [default to null] |
 | **automated** | **Boolean**| If result must consist of only manual/automated test results | [optional] [default to null] |
 | **testRunIds** | [**List**](../Models/UUID.md)| Identifiers of test runs which contain test results | [optional] [default to null] |
@@ -256,7 +258,7 @@ Get test results history of WorkItem
 
 ### Return type
 
-[**List**](../Models/TestResultHistoryResponse.md)
+[**List**](../Models/TestResultHistoryReportApiResult.md)
 
 ### Authorization
 
@@ -295,6 +297,36 @@ Set WorkItem as actual
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+<a name="apiV2WorkItemsLinksUrlsSearchPost"></a>
+# **apiV2WorkItemsLinksUrlsSearchPost**
+> SearchWorkItemLinkUrlsApiResult apiV2WorkItemsLinksUrlsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, WorkItemLinkUrlApiModel)
+
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
+| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
+| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
+| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
+| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+| **WorkItemLinkUrlApiModel** | [**WorkItemLinkUrlApiModel**](../Models/WorkItemLinkUrlApiModel.md)|  | [optional] |
+
+### Return type
+
+[**SearchWorkItemLinkUrlsApiResult**](../Models/SearchWorkItemLinkUrlsApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2WorkItemsMovePost"></a>
 # **apiV2WorkItemsMovePost**
 > WorkItemShortModel apiV2WorkItemsMovePost(WorkItemMovePostModel)
@@ -324,7 +356,7 @@ Move WorkItem to another section
 
 <a name="apiV2WorkItemsSearchPost"></a>
 # **apiV2WorkItemsSearchPost**
-> List apiV2WorkItemsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectModel)
+> List apiV2WorkItemsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectApiModel)
 
 Search for work items
 
@@ -337,11 +369,11 @@ Search for work items
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)|  | [optional] |
+| **WorkItemSelectApiModel** | [**WorkItemSelectApiModel**](../Models/WorkItemSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/WorkItemShortModel.md)
+[**List**](../Models/WorkItemShortApiResult.md)
 
 ### Authorization
 

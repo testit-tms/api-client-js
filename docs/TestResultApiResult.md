@@ -28,7 +28,7 @@
 | **attachments** | [**List**](AttachmentApiResult.md) |  | [default to null] |
 | **links** | [**List**](LinkApiResult.md) |  | [default to null] |
 | **failureClasses** | [**List**](TestResultFailureClassApiResult.md) |  | [default to null] |
-| **stepComments** | [**List**](StepCommentApiResult.md) |  | [optional] [default to null] |
+| **stepComments** | [**List**](StepCommentApiModel.md) |  | [optional] [default to null] |
 | **parameters** | **Map** |  | [optional] [default to null] |
 | **properties** | **Map** |  | [optional] [default to null] |
 | **createdDate** | **Date** |  | [default to null] |
