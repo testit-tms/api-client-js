@@ -17,8 +17,7 @@ export class TestStatusApiResult {
     'id': string;
     'name': string;
     'type': TestStatusType;
-    'isBased': boolean;
-    'isDefault': boolean;
+    'isSystem': boolean;
     'code': string;
     'description'?: string | null;
 
@@ -41,13 +40,8 @@ export class TestStatusApiResult {
             "type": "TestStatusType"
         },
         {
-            "name": "isBased",
-            "baseName": "isBased",
-            "type": "boolean"
-        },
-        {
-            "name": "isDefault",
-            "baseName": "isDefault",
+            "name": "isSystem",
+            "baseName": "isSystem",
             "type": "boolean"
         },
         {

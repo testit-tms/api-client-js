@@ -6,8 +6,7 @@
 | **id** | **UUID** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 | **type** | [**TestStatusType**](TestStatusType.md) |  | [default to null] |
-| **isBased** | **Boolean** |  | [default to null] |
-| **isDefault** | **Boolean** |  | [default to null] |
+| **isSystem** | **Boolean** |  | [default to null] |
 | **code** | **String** |  | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |
 

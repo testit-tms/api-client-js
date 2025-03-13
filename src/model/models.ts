@@ -93,6 +93,7 @@ export * from './customAttributeValidationResult';
 export * from './dateTimeRangeSelectorModel';
 export * from './defectApiModel';
 export * from './deletionState';
+export * from './enableProjectExternalServiceApiModel';
 export * from './externalFormAllowedValueModel';
 export * from './externalFormCreateModel';
 export * from './externalFormFieldModel';
@@ -161,6 +162,7 @@ export * from './projectAttributesFilterModel';
 export * from './projectCustomAttributeTemplateGetModel';
 export * from './projectCustomAttributesTemplatesFilterModel';
 export * from './projectExternalServiceApiResult';
+export * from './projectExternalServiceSettingsApiResult';
 export * from './projectExternalServicesApiResult';
 export * from './projectExtractionModel';
 export * from './projectModel';
@@ -473,6 +475,7 @@ import { CustomAttributeValidationResult } from './customAttributeValidationResu
 import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { DefectApiModel } from './defectApiModel';
 import { DeletionState } from './deletionState';
+import { EnableProjectExternalServiceApiModel } from './enableProjectExternalServiceApiModel';
 import { ExternalFormAllowedValueModel } from './externalFormAllowedValueModel';
 import { ExternalFormCreateModel } from './externalFormCreateModel';
 import { ExternalFormFieldModel } from './externalFormFieldModel';
@@ -541,6 +544,7 @@ import { ProjectAttributesFilterModel } from './projectAttributesFilterModel';
 import { ProjectCustomAttributeTemplateGetModel } from './projectCustomAttributeTemplateGetModel';
 import { ProjectCustomAttributesTemplatesFilterModel } from './projectCustomAttributesTemplatesFilterModel';
 import { ProjectExternalServiceApiResult } from './projectExternalServiceApiResult';
+import { ProjectExternalServiceSettingsApiResult } from './projectExternalServiceSettingsApiResult';
 import { ProjectExternalServicesApiResult } from './projectExternalServicesApiResult';
 import { ProjectExtractionModel } from './projectExtractionModel';
 import { ProjectModel } from './projectModel';
@@ -881,6 +885,7 @@ let typeMap: {[index: string]: any} = {
     "CustomAttributeValidationResult": CustomAttributeValidationResult,
     "DateTimeRangeSelectorModel": DateTimeRangeSelectorModel,
     "DefectApiModel": DefectApiModel,
+    "EnableProjectExternalServiceApiModel": EnableProjectExternalServiceApiModel,
     "ExternalFormAllowedValueModel": ExternalFormAllowedValueModel,
     "ExternalFormCreateModel": ExternalFormCreateModel,
     "ExternalFormFieldModel": ExternalFormFieldModel,
@@ -943,6 +948,7 @@ let typeMap: {[index: string]: any} = {
     "ProjectCustomAttributeTemplateGetModel": ProjectCustomAttributeTemplateGetModel,
     "ProjectCustomAttributesTemplatesFilterModel": ProjectCustomAttributesTemplatesFilterModel,
     "ProjectExternalServiceApiResult": ProjectExternalServiceApiResult,
+    "ProjectExternalServiceSettingsApiResult": ProjectExternalServiceSettingsApiResult,
     "ProjectExternalServicesApiResult": ProjectExternalServicesApiResult,
     "ProjectExtractionModel": ProjectExtractionModel,
     "ProjectModel": ProjectModel,

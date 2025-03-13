@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { AttachmentPutModelAutoTestStepResultsModel } from './attachmentPutModelAutoTestStepResultsModel';
 import { AttachmentUpdateRequest } from './attachmentUpdateRequest';
 import { AvailableTestResultOutcome } from './availableTestResultOutcome';
 
@@ -47,7 +46,7 @@ export class AutoTestStepResultUpdateRequest {
     /**
     * Nested step results. The maximum nesting level is 15.
     */
-    'stepResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
+    'stepResults'?: Array<AutoTestStepResultUpdateRequest> | null;
     /**
     * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
     */
@@ -98,7 +97,7 @@ export class AutoTestStepResultUpdateRequest {
         {
             "name": "stepResults",
             "baseName": "stepResults",
-            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
+            "type": "Array<AutoTestStepResultUpdateRequest>"
         },
         {
             "name": "attachments",

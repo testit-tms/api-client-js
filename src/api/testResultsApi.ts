@@ -252,6 +252,8 @@ export class TestResultsApi {
      * 
      * @summary Get test result by ID aggregated with previous results
      * @param id Test result unique ID
+     *
+     * @deprecated
      */
     public async apiV2TestResultsIdAggregatedGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/aggregated'

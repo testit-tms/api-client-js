@@ -58,4 +58,3 @@ export class ValidationProblemDetails {
         return ValidationProblemDetails.attributeTypeMap;
     }
 }
-

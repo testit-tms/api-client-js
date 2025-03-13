@@ -11,8 +11,8 @@
  */
 
 import { RequestFile } from './models';
-import { AttachmentPutModelAutoTestStepResultsModel } from './attachmentPutModelAutoTestStepResultsModel';
 import { AttachmentUpdateRequest } from './attachmentUpdateRequest';
+import { AutoTestStepResultUpdateRequest } from './autoTestStepResultUpdateRequest';
 import { Link } from './link';
 import { StepResultApiModel } from './stepResultApiModel';
 import { TestResultOutcome } from './testResultOutcome';
@@ -35,8 +35,8 @@ export class TestResultUpdateV2Request {
     'durationInMs'?: number | null;
     'duration'?: number | null;
     'stepComments'?: Array<TestResultStepCommentUpdateRequest> | null;
-    'setupResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
-    'teardownResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
+    'setupResults'?: Array<AutoTestStepResultUpdateRequest> | null;
+    'teardownResults'?: Array<AutoTestStepResultUpdateRequest> | null;
     'message'?: string | null;
     'trace'?: string | null;
 
@@ -96,12 +96,12 @@ export class TestResultUpdateV2Request {
         {
             "name": "setupResults",
             "baseName": "setupResults",
-            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
+            "type": "Array<AutoTestStepResultUpdateRequest>"
         },
         {
             "name": "teardownResults",
             "baseName": "teardownResults",
-            "type": "Array<AttachmentPutModelAutoTestStepResultsModel>"
+            "type": "Array<AutoTestStepResultUpdateRequest>"
         },
         {
             "name": "message",
