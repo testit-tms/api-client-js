@@ -13,8 +13,8 @@
 | **durationInMs** | **Long** |  | [optional] [default to null] |
 | **duration** | **Long** |  | [optional] [default to null] |
 | **stepComments** | [**List**](TestResultStepCommentUpdateRequest.md) |  | [optional] [default to null] |
-| **setupResults** | [**List**](AttachmentPutModelAutoTestStepResultsModel.md) |  | [optional] [default to null] |
-| **teardownResults** | [**List**](AttachmentPutModelAutoTestStepResultsModel.md) |  | [optional] [default to null] |
+| **setupResults** | [**List**](AutoTestStepResultUpdateRequest.md) |  | [optional] [default to null] |
+| **teardownResults** | [**List**](AutoTestStepResultUpdateRequest.md) |  | [optional] [default to null] |
 | **message** | **String** |  | [optional] [default to null] |
 | **trace** | **String** |  | [optional] [default to null] |
 

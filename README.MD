@@ -18,7 +18,11 @@
 | 5.0     | 5.0             |
 | 5.2     | 5.1             |
 | 5.2.2   | 5.2.1-TMS-5.2.2 |
-| Cloud   | 5.3.0-TMS-CLOUD |
+| Cloud   | 5.4.0-TMS-CLOUD |
+
+## For new versions
+
+On the new version generation please run `npm run fix` for models fixing
 
 ## Installation
 
