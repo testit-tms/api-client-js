@@ -61,7 +61,7 @@ null (empty response body)
 
 <a name="apiV2ProjectsDemoPost"></a>
 # **apiV2ProjectsDemoPost**
-> ProjectModel apiV2ProjectsDemoPost(ProjectPostModel)
+> DemoProjectApiResult apiV2ProjectsDemoPost(CreateProjectApiModel)
 
 
 
@@ -69,11 +69,11 @@ null (empty response body)
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ProjectPostModel** | [**ProjectPostModel**](../Models/ProjectPostModel.md)|  | [optional] |
+| **CreateProjectApiModel** | [**CreateProjectApiModel**](../Models/CreateProjectApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**ProjectModel**](../Models/ProjectModel.md)
+[**DemoProjectApiResult**](../Models/DemoProjectApiResult.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ Search for projects
 
 <a name="createProject"></a>
 # **createProject**
-> ProjectModel createProject(ProjectPostModel)
+> ProjectModel createProject(CreateProjectApiModel)
 
 Create project
 
@@ -506,7 +506,7 @@ Create project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ProjectPostModel** | [**ProjectPostModel**](../Models/ProjectPostModel.md)|  | [optional] |
+| **CreateProjectApiModel** | [**CreateProjectApiModel**](../Models/CreateProjectApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -702,7 +702,7 @@ Get project test runs
 
 <a name="updateProject"></a>
 # **updateProject**
-> updateProject(ProjectPutModel)
+> updateProject(UpdateProjectApiModel)
 
 Update project
 
@@ -712,7 +712,7 @@ Update project
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ProjectPutModel** | [**ProjectPutModel**](../Models/ProjectPutModel.md)|  | [optional] |
+| **UpdateProjectApiModel** | [**UpdateProjectApiModel**](../Models/UpdateProjectApiModel.md)|  | [optional] |
 
 ### Return type
 

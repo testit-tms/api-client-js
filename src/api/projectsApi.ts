@@ -16,14 +16,14 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { AutoTestNamespaceModel } from '../model/autoTestNamespaceModel';
+import { CreateProjectApiModel } from '../model/createProjectApiModel';
 import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
+import { DemoProjectApiResult } from '../model/demoProjectApiResult';
 import { FailureClassModel } from '../model/failureClassModel';
 import { FilterModel } from '../model/filterModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { ProjectModel } from '../model/projectModel';
-import { ProjectPostModel } from '../model/projectPostModel';
-import { ProjectPutModel } from '../model/projectPutModel';
 import { ProjectSelectModel } from '../model/projectSelectModel';
 import { ProjectShortModel } from '../model/projectShortModel';
 import { ProjectsFilterModel } from '../model/projectsFilterModel';
@@ -31,6 +31,7 @@ import { PublicTestRunModel } from '../model/publicTestRunModel';
 import { TestPlanModel } from '../model/testPlanModel';
 import { TestRunApiResult } from '../model/testRunApiResult';
 import { TestRunV2ApiResult } from '../model/testRunV2ApiResult';
+import { UpdateProjectApiModel } from '../model/updateProjectApiModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -180,9 +181,9 @@ export class ProjectsApi {
     }
     /**
      * 
-     * @param projectPostModel 
+     * @param createProjectApiModel 
      */
-    public async apiV2ProjectsDemoPost (projectPostModel?: ProjectPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
+    public async apiV2ProjectsDemoPost (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/demo';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -206,7 +207,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectPostModel, "ProjectPostModel")
+            body: ObjectSerializer.serialize(createProjectApiModel, "CreateProjectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -228,13 +229,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ProjectModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ProjectModel");
+                            body = ObjectSerializer.deserialize(body, "DemoProjectApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1419,9 +1420,9 @@ export class ProjectsApi {
     /**
      *  Use case   User sets project parameters (listed in request example) and runs method execution   System creates project   System returns project model (example listed in response parameters)
      * @summary Create project
-     * @param projectPostModel 
+     * @param createProjectApiModel 
      */
-    public async createProject (projectPostModel?: ProjectPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
+    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1445,7 +1446,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectPostModel, "ProjectPostModel")
+            body: ObjectSerializer.serialize(createProjectApiModel, "CreateProjectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -2032,9 +2033,9 @@ export class ProjectsApi {
     /**
      *  Use case   User sets project parameters (listed in request example) and runs method execution   System updates project   System returns updated project model (example listed in response parameters)
      * @summary Update project
-     * @param projectPutModel 
+     * @param updateProjectApiModel 
      */
-    public async updateProject (projectPutModel?: ProjectPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateProject (updateProjectApiModel?: UpdateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2058,7 +2059,7 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(projectPutModel, "ProjectPutModel")
+            body: ObjectSerializer.serialize(updateProjectApiModel, "UpdateProjectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();

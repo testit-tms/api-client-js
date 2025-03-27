@@ -12,41 +12,32 @@
 
 import { RequestFile } from './models';
 
-export class ProjectPostModel {
-    /**
-    * Description of the project
-    */
-    'description'?: string | null;
-    /**
-    * Name of the project
-    */
+export class WorkItemPreviewApiModel {
     'name': string;
-    /**
-    * Indicates if the project is marked as favorite
-    */
-    'isFavorite'?: boolean | null;
+    'action': string;
+    'expected': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string"
-        },
         {
             "name": "name",
             "baseName": "name",
             "type": "string"
         },
         {
-            "name": "isFavorite",
-            "baseName": "isFavorite",
-            "type": "boolean"
+            "name": "action",
+            "baseName": "action",
+            "type": "string"
+        },
+        {
+            "name": "expected",
+            "baseName": "expected",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ProjectPostModel.attributeTypeMap;
+        return WorkItemPreviewApiModel.attributeTypeMap;
     }
 }
 

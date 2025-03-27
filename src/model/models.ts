@@ -70,10 +70,12 @@ export * from './configurationShortModel';
 export * from './createDefectApiModel';
 export * from './createEmptyTestRunApiModel';
 export * from './createLinkApiModel';
+export * from './createProjectApiModel';
 export * from './createTestPlanApiModel';
 export * from './createTestRunAndFillByAutoTestsApiModel';
 export * from './createTestRunAndFillByConfigurationsApiModel';
 export * from './createTestRunAndFillByWorkItemsApiModel';
+export * from './createWorkItemPreviewsApiModel';
 export * from './customAttributeChangeModel';
 export * from './customAttributeGetModel';
 export * from './customAttributeModel';
@@ -93,6 +95,7 @@ export * from './customAttributeValidationResult';
 export * from './dateTimeRangeSelectorModel';
 export * from './defectApiModel';
 export * from './deletionState';
+export * from './demoProjectApiResult';
 export * from './enableProjectExternalServiceApiModel';
 export * from './externalFormAllowedValueModel';
 export * from './externalFormCreateModel';
@@ -108,6 +111,8 @@ export * from './failureCategoryModel';
 export * from './failureClassModel';
 export * from './failureClassRegexModel';
 export * from './filterModel';
+export * from './generateWorkItemPreviewsApiModel';
+export * from './generateWorkItemPreviewsApiResult';
 export * from './getExternalFormApiResult';
 export * from './getXlsxTestPointsByTestPlanModel';
 export * from './globalCustomAttributePostModel';
@@ -166,8 +171,6 @@ export * from './projectExternalServiceSettingsApiResult';
 export * from './projectExternalServicesApiResult';
 export * from './projectExtractionModel';
 export * from './projectModel';
-export * from './projectPostModel';
-export * from './projectPutModel';
 export * from './projectSelectModel';
 export * from './projectShortModel';
 export * from './projectShortestModel';
@@ -305,6 +308,7 @@ export * from './updateLinkApiModel';
 export * from './updateMultipleAttachmentsApiModel';
 export * from './updateMultipleLinksApiModel';
 export * from './updateMultipleTestRunsApiModel';
+export * from './updateProjectApiModel';
 export * from './updateTestPlanApiModel';
 export * from './userCustomNameValidationResponse';
 export * from './userRankModel';
@@ -356,6 +360,7 @@ export * from './workItemLocalSelectModel';
 export * from './workItemModel';
 export * from './workItemMovePostModel';
 export * from './workItemPostModel';
+export * from './workItemPreviewApiModel';
 export * from './workItemPriorityModel';
 export * from './workItemPutModel';
 export * from './workItemSearchQueryModel';
@@ -452,10 +457,12 @@ import { ConfigurationShortModel } from './configurationShortModel';
 import { CreateDefectApiModel } from './createDefectApiModel';
 import { CreateEmptyTestRunApiModel } from './createEmptyTestRunApiModel';
 import { CreateLinkApiModel } from './createLinkApiModel';
+import { CreateProjectApiModel } from './createProjectApiModel';
 import { CreateTestPlanApiModel } from './createTestPlanApiModel';
 import { CreateTestRunAndFillByAutoTestsApiModel } from './createTestRunAndFillByAutoTestsApiModel';
 import { CreateTestRunAndFillByConfigurationsApiModel } from './createTestRunAndFillByConfigurationsApiModel';
 import { CreateTestRunAndFillByWorkItemsApiModel } from './createTestRunAndFillByWorkItemsApiModel';
+import { CreateWorkItemPreviewsApiModel } from './createWorkItemPreviewsApiModel';
 import { CustomAttributeChangeModel } from './customAttributeChangeModel';
 import { CustomAttributeGetModel } from './customAttributeGetModel';
 import { CustomAttributeModel } from './customAttributeModel';
@@ -475,6 +482,7 @@ import { CustomAttributeValidationResult } from './customAttributeValidationResu
 import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { DefectApiModel } from './defectApiModel';
 import { DeletionState } from './deletionState';
+import { DemoProjectApiResult } from './demoProjectApiResult';
 import { EnableProjectExternalServiceApiModel } from './enableProjectExternalServiceApiModel';
 import { ExternalFormAllowedValueModel } from './externalFormAllowedValueModel';
 import { ExternalFormCreateModel } from './externalFormCreateModel';
@@ -490,6 +498,8 @@ import { FailureCategoryModel } from './failureCategoryModel';
 import { FailureClassModel } from './failureClassModel';
 import { FailureClassRegexModel } from './failureClassRegexModel';
 import { FilterModel } from './filterModel';
+import { GenerateWorkItemPreviewsApiModel } from './generateWorkItemPreviewsApiModel';
+import { GenerateWorkItemPreviewsApiResult } from './generateWorkItemPreviewsApiResult';
 import { GetExternalFormApiResult } from './getExternalFormApiResult';
 import { GetXlsxTestPointsByTestPlanModel } from './getXlsxTestPointsByTestPlanModel';
 import { GlobalCustomAttributePostModel } from './globalCustomAttributePostModel';
@@ -548,8 +558,6 @@ import { ProjectExternalServiceSettingsApiResult } from './projectExternalServic
 import { ProjectExternalServicesApiResult } from './projectExternalServicesApiResult';
 import { ProjectExtractionModel } from './projectExtractionModel';
 import { ProjectModel } from './projectModel';
-import { ProjectPostModel } from './projectPostModel';
-import { ProjectPutModel } from './projectPutModel';
 import { ProjectSelectModel } from './projectSelectModel';
 import { ProjectShortModel } from './projectShortModel';
 import { ProjectShortestModel } from './projectShortestModel';
@@ -687,6 +695,7 @@ import { UpdateLinkApiModel } from './updateLinkApiModel';
 import { UpdateMultipleAttachmentsApiModel } from './updateMultipleAttachmentsApiModel';
 import { UpdateMultipleLinksApiModel } from './updateMultipleLinksApiModel';
 import { UpdateMultipleTestRunsApiModel } from './updateMultipleTestRunsApiModel';
+import { UpdateProjectApiModel } from './updateProjectApiModel';
 import { UpdateTestPlanApiModel } from './updateTestPlanApiModel';
 import { UserCustomNameValidationResponse } from './userCustomNameValidationResponse';
 import { UserRankModel } from './userRankModel';
@@ -738,6 +747,7 @@ import { WorkItemLocalSelectModel } from './workItemLocalSelectModel';
 import { WorkItemModel } from './workItemModel';
 import { WorkItemMovePostModel } from './workItemMovePostModel';
 import { WorkItemPostModel } from './workItemPostModel';
+import { WorkItemPreviewApiModel } from './workItemPreviewApiModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemPutModel } from './workItemPutModel';
 import { WorkItemSearchQueryModel } from './workItemSearchQueryModel';
@@ -864,10 +874,12 @@ let typeMap: {[index: string]: any} = {
     "CreateDefectApiModel": CreateDefectApiModel,
     "CreateEmptyTestRunApiModel": CreateEmptyTestRunApiModel,
     "CreateLinkApiModel": CreateLinkApiModel,
+    "CreateProjectApiModel": CreateProjectApiModel,
     "CreateTestPlanApiModel": CreateTestPlanApiModel,
     "CreateTestRunAndFillByAutoTestsApiModel": CreateTestRunAndFillByAutoTestsApiModel,
     "CreateTestRunAndFillByConfigurationsApiModel": CreateTestRunAndFillByConfigurationsApiModel,
     "CreateTestRunAndFillByWorkItemsApiModel": CreateTestRunAndFillByWorkItemsApiModel,
+    "CreateWorkItemPreviewsApiModel": CreateWorkItemPreviewsApiModel,
     "CustomAttributeChangeModel": CustomAttributeChangeModel,
     "CustomAttributeGetModel": CustomAttributeGetModel,
     "CustomAttributeModel": CustomAttributeModel,
@@ -885,6 +897,7 @@ let typeMap: {[index: string]: any} = {
     "CustomAttributeValidationResult": CustomAttributeValidationResult,
     "DateTimeRangeSelectorModel": DateTimeRangeSelectorModel,
     "DefectApiModel": DefectApiModel,
+    "DemoProjectApiResult": DemoProjectApiResult,
     "EnableProjectExternalServiceApiModel": EnableProjectExternalServiceApiModel,
     "ExternalFormAllowedValueModel": ExternalFormAllowedValueModel,
     "ExternalFormCreateModel": ExternalFormCreateModel,
@@ -897,6 +910,8 @@ let typeMap: {[index: string]: any} = {
     "FailureClassModel": FailureClassModel,
     "FailureClassRegexModel": FailureClassRegexModel,
     "FilterModel": FilterModel,
+    "GenerateWorkItemPreviewsApiModel": GenerateWorkItemPreviewsApiModel,
+    "GenerateWorkItemPreviewsApiResult": GenerateWorkItemPreviewsApiResult,
     "GetExternalFormApiResult": GetExternalFormApiResult,
     "GetXlsxTestPointsByTestPlanModel": GetXlsxTestPointsByTestPlanModel,
     "GlobalCustomAttributePostModel": GlobalCustomAttributePostModel,
@@ -952,8 +967,6 @@ let typeMap: {[index: string]: any} = {
     "ProjectExternalServicesApiResult": ProjectExternalServicesApiResult,
     "ProjectExtractionModel": ProjectExtractionModel,
     "ProjectModel": ProjectModel,
-    "ProjectPostModel": ProjectPostModel,
-    "ProjectPutModel": ProjectPutModel,
     "ProjectSelectModel": ProjectSelectModel,
     "ProjectShortModel": ProjectShortModel,
     "ProjectShortestModel": ProjectShortestModel,
@@ -1081,6 +1094,7 @@ let typeMap: {[index: string]: any} = {
     "UpdateMultipleAttachmentsApiModel": UpdateMultipleAttachmentsApiModel,
     "UpdateMultipleLinksApiModel": UpdateMultipleLinksApiModel,
     "UpdateMultipleTestRunsApiModel": UpdateMultipleTestRunsApiModel,
+    "UpdateProjectApiModel": UpdateProjectApiModel,
     "UpdateTestPlanApiModel": UpdateTestPlanApiModel,
     "UserCustomNameValidationResponse": UserCustomNameValidationResponse,
     "UserRankModel": UserRankModel,
@@ -1126,6 +1140,7 @@ let typeMap: {[index: string]: any} = {
     "WorkItemModel": WorkItemModel,
     "WorkItemMovePostModel": WorkItemMovePostModel,
     "WorkItemPostModel": WorkItemPostModel,
+    "WorkItemPreviewApiModel": WorkItemPreviewApiModel,
     "WorkItemPutModel": WorkItemPutModel,
     "WorkItemSearchQueryModel": WorkItemSearchQueryModel,
     "WorkItemSelectApiModel": WorkItemSelectApiModel,
