@@ -11,29 +11,28 @@
  */
 
 import { RequestFile } from './models';
-import { ProjectTypeModel } from './projectTypeModel';
 
-export class ProjectPutModel {
+export class UpdateProjectApiModel {
     /**
     * Unique ID of the project
     */
     'id': string;
     /**
-    * Description of the project
-    */
-    'description'?: string | null;
-    /**
     * Name of the project
     */
     'name': string;
+    /**
+    * Description of the project
+    */
+    'description'?: string | null;
     /**
     * Indicates if the project is marked as favorite
     */
     'isFavorite'?: boolean | null;
     /**
-    * Type of the project
+    * Identifier of the workflow project should use
     */
-    'type': ProjectTypeModel;
+    'workflowId'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -44,13 +43,13 @@ export class ProjectPutModel {
             "type": "string"
         },
         {
-            "name": "description",
-            "baseName": "description",
+            "name": "name",
+            "baseName": "name",
             "type": "string"
         },
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         },
         {
@@ -59,15 +58,13 @@ export class ProjectPutModel {
             "type": "boolean"
         },
         {
-            "name": "type",
-            "baseName": "type",
-            "type": "ProjectTypeModel"
+            "name": "workflowId",
+            "baseName": "workflowId",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ProjectPutModel.attributeTypeMap;
+        return UpdateProjectApiModel.attributeTypeMap;
     }
 }
 
-export namespace ProjectPutModel {
-}

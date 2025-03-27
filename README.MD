@@ -18,7 +18,7 @@
 | 5.0     | 5.0             |
 | 5.2     | 5.1             |
 | 5.2.2   | 5.2.1-TMS-5.2.2 |
-| Cloud   | 5.4.0-TMS-CLOUD |
+| Cloud   | 6.0.0-TMS-CLOUD |
 
 ## For new versions
 
@@ -292,6 +292,13 @@ All URIs are relative to *http://localhost*
 *TestRunsApi* | [**startTestRun**](docs/TestRunsApi.md#starttestrun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun |
 *TestRunsApi* | [**stopTestRun**](docs/TestRunsApi.md#stoptestrun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun |
 *TestRunsApi* | [**updateEmpty**](docs/TestRunsApi.md#updateempty) | **PUT** /api/v2/testRuns | Update empty TestRun |
+| *TestStatusesApi* | [**apiV2TestStatusesCodeCodeExistsGet**](docs/TestStatusesApi.md#apiv2teststatusescodecodeexistsget) | **GET** /api/v2/testStatuses/code/{code}/exists |  |
+*TestStatusesApi* | [**apiV2TestStatusesGet**](docs/TestStatusesApi.md#apiv2teststatusesget) | **GET** /api/v2/testStatuses |  |
+*TestStatusesApi* | [**apiV2TestStatusesIdDelete**](docs/TestStatusesApi.md#apiv2teststatusesiddelete) | **DELETE** /api/v2/testStatuses/{id} |  |
+*TestStatusesApi* | [**apiV2TestStatusesIdGet**](docs/TestStatusesApi.md#apiv2teststatusesidget) | **GET** /api/v2/testStatuses/{id} |  |
+*TestStatusesApi* | [**apiV2TestStatusesNameNameExistsGet**](docs/TestStatusesApi.md#apiv2teststatusesnamenameexistsget) | **GET** /api/v2/testStatuses/name/{name}/exists |  |
+*TestStatusesApi* | [**apiV2TestStatusesPost**](docs/TestStatusesApi.md#apiv2teststatusespost) | **POST** /api/v2/testStatuses |  |
+*TestStatusesApi* | [**apiV2TestStatusesPut**](docs/TestStatusesApi.md#apiv2teststatusesput) | **PUT** /api/v2/testStatuses |  |
 | *TestSuitesApi* | [**addTestPointsToTestSuite**](docs/TestSuitesApi.md#addtestpointstotestsuite) | **POST** /api/v2/testSuites/{id}/test-points | Add test-points to test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdPatch**](docs/TestSuitesApi.md#apiv2testsuitesidpatch) | **PATCH** /api/v2/testSuites/{id} | Patch test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdRefreshPost**](docs/TestSuitesApi.md#apiv2testsuitesidrefreshpost) | **POST** /api/v2/testSuites/{id}/refresh | Refresh test suite. Only dynamic test suites are supported by this method |
