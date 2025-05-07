@@ -96,7 +96,7 @@ export class ProjectConfigurationsApi {
      * @summary Get project configurations
      * @param projectId Project internal (UUID) or global (integer) identifier
      */
-    public async getConfigurationsByProjectId (projectId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
+    public async getConfigurationsByProjectId (projectId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/configurations'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};

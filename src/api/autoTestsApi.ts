@@ -111,7 +111,7 @@ export class AutoTestsApi {
      * @summary Delete autotests
      * @param autoTestBulkDeleteApiModel 
      */
-    public async apiV2AutoTestsDelete (autoTestBulkDeleteApiModel?: AutoTestBulkDeleteApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestBulkDeleteApiResult;  }> {
+    public async apiV2AutoTestsDelete (autoTestBulkDeleteApiModel?: AutoTestBulkDeleteApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestBulkDeleteApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -184,7 +184,7 @@ export class AutoTestsApi {
      * @param searchValue Value for searching
      * @param autoTestFlakyBulkApiModel 
      */
-    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestFlakyBulkApiModel?: AutoTestFlakyBulkApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2AutoTestsFlakyBulkPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestFlakyBulkApiModel?: AutoTestFlakyBulkApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/flaky/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -272,7 +272,7 @@ export class AutoTestsApi {
      * @param id Global Id of auto test
      * @param operation 
      */
-    public async apiV2AutoTestsIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2AutoTestsIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -351,7 +351,7 @@ export class AutoTestsApi {
      * @param searchValue Value for searching
      * @param autoTestResultHistorySelectApiModel 
      */
-    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestResultHistorySelectApiModel?: AutoTestResultHistorySelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultHistoryApiResult>;  }> {
+    public async apiV2AutoTestsIdTestResultsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestResultHistorySelectApiModel?: AutoTestResultHistorySelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultHistoryApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testResults/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -445,7 +445,7 @@ export class AutoTestsApi {
      * @summary Get identifiers of changed linked work items
      * @param id 
      */
-    public async apiV2AutoTestsIdWorkItemsChangedIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2AutoTestsIdWorkItemsChangedIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems/changed/id'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -519,7 +519,7 @@ export class AutoTestsApi {
      * @param id 
      * @param workItemId 
      */
-    public async apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost (id: string, workItemId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost (id: string, workItemId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems/changed/{workItemId}/approve'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'workItemId' + '}', encodeURIComponent(String(workItemId)));
@@ -602,7 +602,7 @@ export class AutoTestsApi {
      * @param searchValue Value for searching
      * @param autoTestSearchApiModel 
      */
-    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestSearchApiModel?: AutoTestSearchApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestApiResult>;  }> {
+    public async apiV2AutoTestsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, autoTestSearchApiModel?: AutoTestSearchApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -690,7 +690,7 @@ export class AutoTestsApi {
      * @summary Create autotest
      * @param autoTestPostModel 
      */
-    public async createAutoTest (autoTestPostModel?: AutoTestPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
+    public async createAutoTest (autoTestPostModel?: AutoTestPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -758,7 +758,7 @@ export class AutoTestsApi {
      * @summary Create multiple autotests
      * @param autoTestPostModel 
      */
-    public async createMultiple (autoTestPostModel?: Array<AutoTestPostModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async createMultiple (autoTestPostModel?: Array<AutoTestPostModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -826,7 +826,7 @@ export class AutoTestsApi {
      * @summary Delete autotest
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async deleteAutoTest (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteAutoTest (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -899,7 +899,7 @@ export class AutoTestsApi {
      * @param id Autotest internal (UUID) or global (integer) identifier
      * @param workItemId Work item internal (UUID) or global (integer) identifier
      */
-    public async deleteAutoTestLinkFromWorkItem (id: string, workItemId?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteAutoTestLinkFromWorkItem (id: string, workItemId?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1001,7 +1001,7 @@ export class AutoTestsApi {
      *
      * @deprecated
      */
-    public async getAllAutoTests (projectId?: string, externalId?: string, globalId?: number, namespace?: string, isNamespaceNull?: boolean, includeEmptyNamespaces?: boolean, className?: string, isClassnameNull?: boolean, includeEmptyClassNames?: boolean, isDeleted?: boolean, deleted?: boolean, labels?: Array<string>, stabilityMinimal?: number, minStability?: number, stabilityMaximal?: number, maxStability?: number, isFlaky?: boolean, flaky?: boolean, includeSteps?: boolean, includeLabels?: boolean, externalKey?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async getAllAutoTests (projectId?: string, externalId?: string, globalId?: number, namespace?: string, isNamespaceNull?: boolean, includeEmptyNamespaces?: boolean, className?: string, isClassnameNull?: boolean, includeEmptyClassNames?: boolean, isDeleted?: boolean, deleted?: boolean, labels?: Array<string>, stabilityMinimal?: number, minStability?: number, stabilityMaximal?: number, maxStability?: number, isFlaky?: boolean, flaky?: boolean, includeSteps?: boolean, includeLabels?: boolean, externalKey?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1172,7 +1172,7 @@ export class AutoTestsApi {
      * @summary Get average autotest duration
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async getAutoTestAverageDuration (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestAverageDurationModel;  }> {
+    public async getAutoTestAverageDuration (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestAverageDurationModel;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/averageDuration'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1245,7 +1245,7 @@ export class AutoTestsApi {
      * @summary Get autotest by internal or global ID
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async getAutoTestById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
+    public async getAutoTestById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestModel;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1318,7 +1318,7 @@ export class AutoTestsApi {
      * @summary Get autotest chronology
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async getAutoTestChronology (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultChronologyModel>;  }> {
+    public async getAutoTestChronology (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultChronologyModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/chronology'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1391,7 +1391,7 @@ export class AutoTestsApi {
      * @summary Get completed tests runs for autotests
      * @param id Autotest internal (UUID) or global (integer) identifier
      */
-    public async getTestRuns (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunByAutoTestApiResult>;  }> {
+    public async getTestRuns (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunByAutoTestApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1466,7 +1466,7 @@ export class AutoTestsApi {
      * @param isDeleted Specifies that a test is deleted or still relevant.
      * @param isWorkItemDeleted OBSOLETE: Use &#x60;isDeleted&#x60; instead
      */
-    public async getWorkItemsLinkedToAutoTest (id: string, isDeleted?: boolean, isWorkItemDeleted?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemIdentifierModel>;  }> {
+    public async getWorkItemsLinkedToAutoTest (id: string, isDeleted?: boolean, isWorkItemDeleted?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemIdentifierModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1548,7 +1548,7 @@ export class AutoTestsApi {
      * @param id Autotest internal (UUID) or global (integer) identifier
      * @param workItemIdModel 
      */
-    public async linkAutoTestToWorkItem (id: string, workItemIdModel?: WorkItemIdModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async linkAutoTestToWorkItem (id: string, workItemIdModel?: WorkItemIdModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1621,7 +1621,7 @@ export class AutoTestsApi {
      * @summary Update autotest
      * @param autoTestPutModel 
      */
-    public async updateAutoTest (autoTestPutModel?: AutoTestPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateAutoTest (autoTestPutModel?: AutoTestPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1688,7 +1688,7 @@ export class AutoTestsApi {
      * @summary Update multiple autotests
      * @param autoTestPutModel 
      */
-    public async updateMultiple (autoTestPutModel?: Array<AutoTestPutModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateMultiple (autoTestPutModel?: Array<AutoTestPutModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/autoTests/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);

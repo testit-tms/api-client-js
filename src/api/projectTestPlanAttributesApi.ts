@@ -100,7 +100,7 @@ export class ProjectTestPlanAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param requestBody 
      */
-    public async createCustomAttributeTestPlanProjectRelations (projectId: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async createCustomAttributeTestPlanProjectRelations (projectId: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -174,7 +174,7 @@ export class ProjectTestPlanAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param attributeId 
      */
-    public async deleteCustomAttributeTestPlanProjectRelations (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteCustomAttributeTestPlanProjectRelations (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes/{attributeId}'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'attributeId' + '}', encodeURIComponent(String(attributeId)));
@@ -252,7 +252,7 @@ export class ProjectTestPlanAttributesApi {
      * @summary Get project\'s test plan attributes
      * @param projectId Project internal (UUID) or global (integer) identifier
      */
-    public async getCustomAttributeTestPlanProjectRelations (projectId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
+    public async getCustomAttributeTestPlanProjectRelations (projectId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -331,7 +331,7 @@ export class ProjectTestPlanAttributesApi {
      * @param searchValue Value for searching
      * @param projectAttributesFilterModel 
      */
-    public async searchTestPlanAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchTestPlanAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -426,7 +426,7 @@ export class ProjectTestPlanAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param customAttributeTestPlanProjectRelationPutModel 
      */
-    public async updateCustomAttributeTestPlanProjectRelations (projectId: string, customAttributeTestPlanProjectRelationPutModel?: CustomAttributeTestPlanProjectRelationPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateCustomAttributeTestPlanProjectRelations (projectId: string, customAttributeTestPlanProjectRelationPutModel?: CustomAttributeTestPlanProjectRelationPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};

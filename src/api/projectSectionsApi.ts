@@ -101,7 +101,7 @@ export class ProjectSectionsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getSectionsByProjectId (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SectionModel>;  }> {
+    public async getSectionsByProjectId (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SectionModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/sections'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};

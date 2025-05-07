@@ -114,7 +114,7 @@ export class TestPlansApi {
      * @param id Test plan internal (guid format) or global (int  format) identifier
      * @param workItemSelectModel Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsWithSections (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsWithSections (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/test-points/withSections'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -188,7 +188,7 @@ export class TestPlansApi {
      * @param id Test plan internal (guid format) or global (int  format) identifier
      * @param requestBody 
      */
-    public async addWorkItemsWithSections (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addWorkItemsWithSections (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/workItems/withSections'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -261,7 +261,7 @@ export class TestPlansApi {
      * @summary Get analytics by TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async apiV2TestPlansIdAnalyticsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPointAnalyticResult;  }> {
+    public async apiV2TestPlansIdAnalyticsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPointAnalyticResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/analytics'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -335,7 +335,7 @@ export class TestPlansApi {
      * @param id Test plan unique or global ID
      * @param testers Specifies a project user IDs to distribute
      */
-    public async apiV2TestPlansIdAutobalancePost (id: string, testers?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanWithTestSuiteTreeModel;  }> {
+    public async apiV2TestPlansIdAutobalancePost (id: string, testers?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanWithTestSuiteTreeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/autobalance'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -412,7 +412,7 @@ export class TestPlansApi {
      * @summary Get TestPlan configurations
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async apiV2TestPlansIdConfigurationsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
+    public async apiV2TestPlansIdConfigurationsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/configurations'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -487,7 +487,7 @@ export class TestPlansApi {
      * @param timeZoneOffsetInMinutes 
      * @param getXlsxTestPointsByTestPlanModel 
      */
-    public async apiV2TestPlansIdExportTestPointsXlsxPost (id: string, timeZoneOffsetInMinutes?: number, getXlsxTestPointsByTestPlanModel?: GetXlsxTestPointsByTestPlanModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdExportTestPointsXlsxPost (id: string, timeZoneOffsetInMinutes?: number, getXlsxTestPointsByTestPlanModel?: GetXlsxTestPointsByTestPlanModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/export/testPoints/xlsx'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -565,7 +565,7 @@ export class TestPlansApi {
      * @param includeDeletedTestSuites 
      * @param timeZoneOffsetInMinutes 
      */
-    public async apiV2TestPlansIdExportTestResultHistoryXlsxPost (id: string, mustReturnOnlyLastTestResult?: boolean, includeSteps?: boolean, includeDeletedTestSuites?: boolean, timeZoneOffsetInMinutes?: number, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdExportTestResultHistoryXlsxPost (id: string, mustReturnOnlyLastTestResult?: boolean, includeSteps?: boolean, includeDeletedTestSuites?: boolean, timeZoneOffsetInMinutes?: number, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/export/testResultHistory/xlsx'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -655,7 +655,7 @@ export class TestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TestPlansIdHistoryGet (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanChangeModel>;  }> {
+    public async apiV2TestPlansIdHistoryGet (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanChangeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/history'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -751,7 +751,7 @@ export class TestPlansApi {
      * @param take 
      * @param orderBy 
      */
-    public async apiV2TestPlansIdLinksGet (id: string, skip?: number, take?: number, orderBy?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanLink>;  }> {
+    public async apiV2TestPlansIdLinksGet (id: string, skip?: number, take?: number, orderBy?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanLink>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/links'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -837,7 +837,7 @@ export class TestPlansApi {
      * @param id Unique ID of the test plan
      * @param operation 
      */
-    public async apiV2TestPlansIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -910,7 +910,7 @@ export class TestPlansApi {
      * @summary Get summary by TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async apiV2TestPlansIdSummariesGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanSummaryModel;  }> {
+    public async apiV2TestPlansIdSummariesGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanSummaryModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/summaries'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -989,7 +989,7 @@ export class TestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TestPlansIdTestPointsLastResultsGet (id: string, testerId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultResponseModel>;  }> {
+    public async apiV2TestPlansIdTestPointsLastResultsGet (id: string, testerId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointWithLastResultResponseModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/lastResults'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1087,7 +1087,7 @@ export class TestPlansApi {
      * @param id Test plan internal (guid format) or global (int  format) identifier
      * @param requestBody 
      */
-    public async apiV2TestPlansIdTestPointsResetPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdTestPointsResetPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/reset'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1161,7 +1161,7 @@ export class TestPlansApi {
      * @param id Unique or global ID of the test plan
      * @param testPointSelectModel 
      */
-    public async apiV2TestPlansIdTestPointsTesterDelete (id: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPlansIdTestPointsTesterDelete (id: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/tester'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1237,7 +1237,7 @@ export class TestPlansApi {
      * @param userId Unique ID of the user
      * @param testPointSelectModel 
      */
-    public async apiV2TestPlansIdTestPointsTesterUserIdPost (id: string, userId: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPlansIdTestPointsTesterUserIdPost (id: string, userId: string, testPointSelectModel?: TestPointSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testPoints/tester/{userId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
@@ -1326,7 +1326,7 @@ export class TestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2TestPlansIdTestRunsGet (id: string, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
+    public async apiV2TestPlansIdTestRunsGet (id: string, notStarted?: boolean, inProgress?: boolean, stopped?: boolean, completed?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1441,7 +1441,7 @@ export class TestPlansApi {
      * @param searchValue Value for searching
      * @param searchTestRunsApiModel 
      */
-    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchTestRunsApiModel?: SearchTestRunsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
+    public async apiV2TestPlansIdTestRunsSearchPost (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchTestRunsApiModel?: SearchTestRunsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1535,7 +1535,7 @@ export class TestPlansApi {
      * @summary Get last modification date of test plan\'s test results
      * @param id Test plan unique or global ID
      */
-    public async apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns/testResults/lastModified/modifiedDate'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1607,7 +1607,7 @@ export class TestPlansApi {
      * @summary Send unlock TestPlan notification
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async apiV2TestPlansIdUnlockRequestPost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestPlansIdUnlockRequestPost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/unlock/request'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1680,7 +1680,7 @@ export class TestPlansApi {
      * @param isDeleted 
      * @param requestBody 
      */
-    public async apiV2TestPlansShortsPost (isDeleted?: boolean, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanShortModel>;  }> {
+    public async apiV2TestPlansShortsPost (isDeleted?: boolean, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/shorts';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1752,7 +1752,7 @@ export class TestPlansApi {
      * @summary Clone TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async clone (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
+    public async clone (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/clone'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1825,7 +1825,7 @@ export class TestPlansApi {
      * @summary Complete TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async complete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async complete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/complete'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1897,7 +1897,7 @@ export class TestPlansApi {
      * @summary Create TestPlan
      * @param createTestPlanApiModel 
      */
-    public async createTestPlan (createTestPlanApiModel?: CreateTestPlanApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
+    public async createTestPlan (createTestPlanApiModel?: CreateTestPlanApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1965,7 +1965,7 @@ export class TestPlansApi {
      * @summary Delete TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async deleteTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2037,7 +2037,7 @@ export class TestPlansApi {
      * @summary Get TestPlan by Id
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async getTestPlanById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
+    public async getTestPlanById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2110,7 +2110,7 @@ export class TestPlansApi {
      * @summary Get TestSuites Tree By Id
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async getTestSuitesById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestSuiteV2TreeModel>;  }> {
+    public async getTestSuitesById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestSuiteV2TreeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testSuites'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2183,7 +2183,7 @@ export class TestPlansApi {
      * @summary Pause TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async pause (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async pause (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/pause'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2255,7 +2255,7 @@ export class TestPlansApi {
      * @summary Permanently delete test plan from archive
      * @param id Unique or global ID of the test plan
      */
-    public async purgeTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async purgeTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/purge'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2327,7 +2327,7 @@ export class TestPlansApi {
      * @summary Restore TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async restoreTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async restoreTestPlan (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/restore'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2399,7 +2399,7 @@ export class TestPlansApi {
      * @summary Start TestPlan
      * @param id Test plan internal (guid format) or global (int  format) identifier
      */
-    public async start (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async start (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/start'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2471,7 +2471,7 @@ export class TestPlansApi {
      * @summary Update TestPlan
      * @param updateTestPlanApiModel 
      */
-    public async updateTestPlan (updateTestPlanApiModel?: UpdateTestPlanApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateTestPlan (updateTestPlanApiModel?: UpdateTestPlanApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);

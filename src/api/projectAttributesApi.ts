@@ -102,7 +102,7 @@ export class ProjectAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param customAttributePostModel 
      */
-    public async createProjectsAttribute (projectId: string, customAttributePostModel?: CustomAttributePostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async createProjectsAttribute (projectId: string, customAttributePostModel?: CustomAttributePostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -177,7 +177,7 @@ export class ProjectAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param attributeId Project attribute internal (UUID)
      */
-    public async deleteProjectsAttribute (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteProjectsAttribute (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/{attributeId}'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'attributeId' + '}', encodeURIComponent(String(attributeId)));
@@ -256,7 +256,7 @@ export class ProjectAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param attributeId Project attribute internal (UUID) or global (integer) identifier
      */
-    public async getAttributeByProjectId (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
+    public async getAttributeByProjectId (projectId: string, attributeId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/{attributeId}'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'attributeId' + '}', encodeURIComponent(String(attributeId)));
@@ -336,7 +336,7 @@ export class ProjectAttributesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param isDeleted 
      */
-    public async getAttributesByProjectId (projectId: string, isDeleted?: DeletionState, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
+    public async getAttributesByProjectId (projectId: string, isDeleted?: DeletionState, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -419,7 +419,7 @@ export class ProjectAttributesApi {
      * @param searchValue Value for searching
      * @param projectAttributesFilterModel 
      */
-    public async searchAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
+    public async searchAttributesInProject (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectAttributesFilterModel?: ProjectAttributesFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -514,7 +514,7 @@ export class ProjectAttributesApi {
      * @param projectId Unique or global project ID
      * @param customAttributePutModel 
      */
-    public async updateProjectsAttribute (projectId: string, customAttributePutModel?: CustomAttributePutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateProjectsAttribute (projectId: string, customAttributePutModel?: CustomAttributePutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};

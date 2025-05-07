@@ -104,7 +104,7 @@ export class WebhooksApi {
      * 
      * @param webhooksDeleteApiModel 
      */
-    public async apiV2WebhooksDelete (webhooksDeleteApiModel?: WebhooksDeleteApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WebhooksDelete (webhooksDeleteApiModel?: WebhooksDeleteApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -171,7 +171,7 @@ export class WebhooksApi {
      * @summary Get all webhooks
      * @param projectId Project unique ID
      */
-    public async apiV2WebhooksGet (projectId?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
+    public async apiV2WebhooksGet (projectId?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -242,7 +242,7 @@ export class WebhooksApi {
      * @summary Delete webhook by ID
      * @param id Webhook unique ID
      */
-    public async apiV2WebhooksIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WebhooksIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -314,7 +314,7 @@ export class WebhooksApi {
      * @summary Get webhook by ID
      * @param id Webhook unique ID
      */
-    public async apiV2WebhooksIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -388,7 +388,7 @@ export class WebhooksApi {
      * @param id Webhook unique ID
      * @param webHookPostModel 
      */
-    public async apiV2WebhooksIdPut (id: string, webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksIdPut (id: string, webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -462,7 +462,7 @@ export class WebhooksApi {
      * @summary Create webhook
      * @param webHookPostModel 
      */
-    public async apiV2WebhooksPost (webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
+    public async apiV2WebhooksPost (webHookPostModel?: WebHookPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -529,7 +529,7 @@ export class WebhooksApi {
      * 
      * @param webhooksUpdateApiModel 
      */
-    public async apiV2WebhooksPut (webhooksUpdateApiModel?: WebhooksUpdateApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebhooksUpdateApiResult;  }> {
+    public async apiV2WebhooksPut (webhooksUpdateApiModel?: WebhooksUpdateApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebhooksUpdateApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -602,7 +602,7 @@ export class WebhooksApi {
      * @param searchValue Value for searching
      * @param searchWebhooksQueryModel 
      */
-    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchWebhooksQueryModel?: SearchWebhooksQueryModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
+    public async apiV2WebhooksSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, searchWebhooksQueryModel?: SearchWebhooksQueryModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -691,7 +691,7 @@ export class WebhooksApi {
      * @param eventType Webhook event type
      * @param variablesType 
      */
-    public async apiV2WebhooksSpecialVariablesGet (eventType?: WebHookEventType, variablesType?: WebhookVariablesType, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2WebhooksSpecialVariablesGet (eventType?: WebHookEventType, variablesType?: WebhookVariablesType, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/specialVariables';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -766,7 +766,7 @@ export class WebhooksApi {
      * @summary Test webhook\'s url
      * @param webHookTestModel 
      */
-    public async apiV2WebhooksTestPost (webHookTestModel?: WebHookTestModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebhookResponse;  }> {
+    public async apiV2WebhooksTestPost (webHookTestModel?: WebHookTestModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebhookResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/test';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);

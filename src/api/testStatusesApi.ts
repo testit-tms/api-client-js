@@ -97,7 +97,7 @@ export class TestStatusesApi {
      * 
      * @param code 
      */
-    public async apiV2TestStatusesCodeCodeExistsGet (code: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
+    public async apiV2TestStatusesCodeCodeExistsGet (code: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses/code/{code}/exists'
             .replace('{' + 'code' + '}', encodeURIComponent(String(code)));
         let localVarQueryParameters: any = {};
@@ -168,7 +168,7 @@ export class TestStatusesApi {
     /**
      * 
      */
-    public async apiV2TestStatusesGet (options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestStatusApiResult>;  }> {
+    public async apiV2TestStatusesGet (options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestStatusApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -234,7 +234,7 @@ export class TestStatusesApi {
      * 
      * @param id 
      */
-    public async apiV2TestStatusesIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestStatusesIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -305,7 +305,7 @@ export class TestStatusesApi {
      * 
      * @param id 
      */
-    public async apiV2TestStatusesIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestStatusApiResult;  }> {
+    public async apiV2TestStatusesIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestStatusApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -377,7 +377,7 @@ export class TestStatusesApi {
      * 
      * @param name 
      */
-    public async apiV2TestStatusesNameNameExistsGet (name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
+    public async apiV2TestStatusesNameNameExistsGet (name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses/name/{name}/exists'
             .replace('{' + 'name' + '}', encodeURIComponent(String(name)));
         let localVarQueryParameters: any = {};
@@ -449,7 +449,7 @@ export class TestStatusesApi {
      * 
      * @param testStatusCreateModel 
      */
-    public async apiV2TestStatusesPost (testStatusCreateModel?: TestStatusCreateModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestStatusApiResult;  }> {
+    public async apiV2TestStatusesPost (testStatusCreateModel?: TestStatusCreateModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestStatusApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -516,7 +516,7 @@ export class TestStatusesApi {
      * 
      * @param testStatusUpdateModel 
      */
-    public async apiV2TestStatusesPut (testStatusUpdateModel?: TestStatusUpdateModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestStatusesPut (testStatusUpdateModel?: TestStatusUpdateModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testStatuses';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);

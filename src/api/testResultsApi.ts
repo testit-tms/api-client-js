@@ -107,7 +107,7 @@ export class TestResultsApi {
      * @param externalProjectId 
      * @param testResultsSelectApiModel 
      */
-    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost (externalProjectId: string, testResultsSelectApiModel?: TestResultsSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: GetExternalFormApiResult;  }> {
+    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost (externalProjectId: string, testResultsSelectApiModel?: TestResultsSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: GetExternalFormApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/external-projects/{externalProjectId}/defects/external-forms'
             .replace('{' + 'externalProjectId' + '}', encodeURIComponent(String(externalProjectId)));
         let localVarQueryParameters: any = {};
@@ -181,7 +181,7 @@ export class TestResultsApi {
      * @param externalProjectId 
      * @param createDefectApiModel 
      */
-    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost (externalProjectId: string, createDefectApiModel?: CreateDefectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: DefectApiModel;  }> {
+    public async apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost (externalProjectId: string, createDefectApiModel?: CreateDefectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: DefectApiModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/external-projects/{externalProjectId}/defects'
             .replace('{' + 'externalProjectId' + '}', encodeURIComponent(String(externalProjectId)));
         let localVarQueryParameters: any = {};
@@ -257,7 +257,7 @@ export class TestResultsApi {
      *
      * @deprecated
      */
-    public async apiV2TestResultsIdAggregatedGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
+    public async apiV2TestResultsIdAggregatedGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/aggregated'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -331,7 +331,7 @@ export class TestResultsApi {
      * @param id Test result unique ID
      * @param attachmentId Attachment unique ID
      */
-    public async apiV2TestResultsIdAttachmentsAttachmentIdPut (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestResultsIdAttachmentsAttachmentIdPut (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)));
@@ -409,7 +409,7 @@ export class TestResultsApi {
      * @summary Get test result attachments meta-information
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdAttachmentsInfoGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
+    public async apiV2TestResultsIdAttachmentsInfoGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/info'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -482,7 +482,7 @@ export class TestResultsApi {
      * @summary Get test result by ID
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
+    public async apiV2TestResultsIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -556,7 +556,7 @@ export class TestResultsApi {
      * @param id Test result unique ID
      * @param testResultUpdateV2Request 
      */
-    public async apiV2TestResultsIdPut (id: string, testResultUpdateV2Request?: TestResultUpdateV2Request, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestResultsIdPut (id: string, testResultUpdateV2Request?: TestResultUpdateV2Request, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -629,7 +629,7 @@ export class TestResultsApi {
      * @summary Get reruns
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdRerunsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: RerunsModel;  }> {
+    public async apiV2TestResultsIdRerunsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: RerunsModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/reruns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -707,7 +707,7 @@ export class TestResultsApi {
      * @param searchValue Value for searching
      * @param testResultsFilterApiModel 
      */
-    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }> {
+    public async apiV2TestResultsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultShortResponse>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -795,7 +795,7 @@ export class TestResultsApi {
      * @summary Search for test results and extract statistics
      * @param testResultsFilterApiModel 
      */
-    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
+    public async apiV2TestResultsStatisticsFilterPost (testResultsFilterApiModel?: TestResultsFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/statistics/filter';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -864,7 +864,7 @@ export class TestResultsApi {
      * @param id Test result internal identifier (guid format)
      * @param file Select file
      */
-    public async createAttachment (id: string, file?: RequestFile, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async createAttachment (id: string, file?: RequestFile, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -942,7 +942,7 @@ export class TestResultsApi {
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
      */
-    public async deleteAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)));
@@ -1026,7 +1026,7 @@ export class TestResultsApi {
      * @param backgroundColor Color of the background if the &#x60;resizeType&#x60; is &#x60;AddBackgroundStripes&#x60;
      * @param preview If image must be converted to a preview (lower quality, no animation)
      */
-    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async downloadAttachment (attachmentId: string, id: string, width?: number, height?: number, resizeType?: ImageResizeType, backgroundColor?: string, preview?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}'
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)))
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
@@ -1125,7 +1125,7 @@ export class TestResultsApi {
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
      */
-    public async getAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AttachmentModel;  }> {
+    public async getAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AttachmentModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}/info'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)));
@@ -1204,7 +1204,7 @@ export class TestResultsApi {
      * @summary Get all attachments of TestResult
      * @param id Test result internal identifier (guid format)
      */
-    public async getAttachments (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
+    public async getAttachments (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
