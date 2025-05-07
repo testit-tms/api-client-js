@@ -103,7 +103,7 @@ export class ProjectAttributeTemplatesApi {
      * @param searchValue Value for searching
      * @param projectCustomAttributesTemplatesFilterModel 
      */
-    public async apiV2ProjectsProjectIdAttributesTemplatesSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectCustomAttributesTemplatesFilterModel?: ProjectCustomAttributesTemplatesFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
+    public async apiV2ProjectsProjectIdAttributesTemplatesSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectCustomAttributesTemplatesFilterModel?: ProjectCustomAttributesTemplatesFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ProjectCustomAttributeTemplateGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/templates/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -147,6 +147,7 @@ export class ProjectAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -197,7 +198,7 @@ export class ProjectAttributeTemplatesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier
      */
-    public async apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete (projectId: string, templateId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete (projectId: string, templateId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/templates/{templateId}'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
@@ -227,6 +228,7 @@ export class ProjectAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -275,7 +277,7 @@ export class ProjectAttributeTemplatesApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier
      */
-    public async apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost (projectId: string, templateId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost (projectId: string, templateId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/attributes/templates/{templateId}'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'templateId' + '}', encodeURIComponent(String(templateId)));
@@ -305,6 +307,7 @@ export class ProjectAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

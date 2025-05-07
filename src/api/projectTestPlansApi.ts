@@ -105,7 +105,7 @@ export class ProjectTestPlansApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2ProjectsProjectIdTestPlansAnalyticsGet (projectId: string, isDeleted?: boolean, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansAnalyticsGet (projectId: string, isDeleted?: boolean, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/analytics'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -157,6 +157,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -206,7 +207,7 @@ export class ProjectTestPlansApi {
      * @param projectId Unique or global ID of the project
      * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansDeleteBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansDeleteBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/delete/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -230,6 +231,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -280,7 +282,7 @@ export class ProjectTestPlansApi {
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param name TestPlan name to check
      */
-    public async apiV2ProjectsProjectIdTestPlansNameExistsGet (projectId: string, name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
+    public async apiV2ProjectsProjectIdTestPlansNameExistsGet (projectId: string, name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/{name}/exists'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
             .replace('{' + 'name' + '}', encodeURIComponent(String(name)));
@@ -310,6 +312,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -359,7 +362,7 @@ export class ProjectTestPlansApi {
      * @param projectId Unique or global ID of the project
      * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansPurgeBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdTestPlansPurgeBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/purge/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -383,6 +386,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -432,7 +436,7 @@ export class ProjectTestPlansApi {
      * @param projectId Unique or global ID of the project
      * @param testPlanSelectModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansRestoreBulkPost (projectId: string, testPlanSelectModel?: TestPlanSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/restore/bulk'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -456,6 +460,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -512,7 +517,7 @@ export class ProjectTestPlansApi {
      * @param searchValue Value for searching
      * @param projectTestPlansFilterModel 
      */
-    public async apiV2ProjectsProjectIdTestPlansSearchPost (projectId: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
+    public async apiV2ProjectsProjectIdTestPlansSearchPost (projectId: string, mustUpdateCache?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, projectTestPlansFilterModel?: ProjectTestPlansFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPlanWithAnalyticModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/testPlans/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -560,6 +565,7 @@ export class ProjectTestPlansApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

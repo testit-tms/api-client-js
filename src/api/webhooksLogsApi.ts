@@ -101,7 +101,7 @@ export class WebhooksLogsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WebhooksLogsGet (projectId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookLogModel>;  }> {
+    public async apiV2WebhooksLogsGet (projectId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookLogModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/logs';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -143,6 +143,7 @@ export class WebhooksLogsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -191,7 +192,7 @@ export class WebhooksLogsApi {
      * @summary Delete webhook log by ID
      * @param id Webhook log unique ID
      */
-    public async apiV2WebhooksLogsIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WebhooksLogsIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/logs/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -215,6 +216,7 @@ export class WebhooksLogsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -262,7 +264,7 @@ export class WebhooksLogsApi {
      * @summary Get webhook log by ID
      * @param id Webhook log unique ID
      */
-    public async apiV2WebhooksLogsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookLogModel;  }> {
+    public async apiV2WebhooksLogsIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WebHookLogModel;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/logs/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -286,6 +288,7 @@ export class WebhooksLogsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

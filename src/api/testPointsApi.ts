@@ -99,7 +99,7 @@ export class TestPointsApi {
      * @summary Get all test runs which use test point
      * @param id Test point unique ID
      */
-    public async apiV2TestPointsIdTestRunsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
+    public async apiV2TestPointsIdTestRunsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/{id}/testRuns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -123,6 +123,7 @@ export class TestPointsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -171,7 +172,7 @@ export class TestPointsApi {
      * @summary Get work item represented by test point
      * @param id Test point unique ID
      */
-    public async apiV2TestPointsIdWorkItemGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async apiV2TestPointsIdWorkItemGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/{id}/workItem'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,6 +196,7 @@ export class TestPointsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -248,7 +250,7 @@ export class TestPointsApi {
      * @param searchValue Value for searching
      * @param testPointFilterRequestModel 
      */
-    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2TestPointsSearchIdPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search/id';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -286,6 +288,7 @@ export class TestPointsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -340,7 +343,7 @@ export class TestPointsApi {
      * @param searchValue Value for searching
      * @param testPointFilterRequestModel 
      */
-    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortResponseModel>;  }> {
+    public async apiV2TestPointsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testPointFilterRequestModel?: TestPointFilterRequestModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointShortResponseModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPoints/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -378,6 +381,7 @@ export class TestPointsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

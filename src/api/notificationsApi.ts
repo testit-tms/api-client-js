@@ -98,7 +98,7 @@ export class NotificationsApi {
      * @summary Get unread Notifications total in last 7 days
      * @param isRead 
      */
-    public async apiV2NotificationsCountGet (isRead?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2NotificationsCountGet (isRead?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications/count';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -120,6 +120,7 @@ export class NotificationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -173,7 +174,7 @@ export class NotificationsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2NotificationsGet (notificationType?: NotificationTypeModel, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
+    public async apiV2NotificationsGet (notificationType?: NotificationTypeModel, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -215,6 +216,7 @@ export class NotificationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -263,7 +265,7 @@ export class NotificationsApi {
      * @summary Set Notification as read
      * @param id 
      */
-    public async apiV2NotificationsIdReadPost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2NotificationsIdReadPost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications/{id}/read'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -287,6 +289,7 @@ export class NotificationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -333,7 +336,7 @@ export class NotificationsApi {
      *  Use case   User runs method execution   System set all notifications as read
      * @summary Set all Notifications as read
      */
-    public async apiV2NotificationsReadPost (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2NotificationsReadPost (options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications/read';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -351,6 +354,7 @@ export class NotificationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -403,7 +407,7 @@ export class NotificationsApi {
      * @param searchValue Value for searching
      * @param notificationQueryFilterModel 
      */
-    public async apiV2NotificationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, notificationQueryFilterModel?: NotificationQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
+    public async apiV2NotificationsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, notificationQueryFilterModel?: NotificationQueryFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<NotificationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/notifications/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -441,6 +445,7 @@ export class NotificationsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

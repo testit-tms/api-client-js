@@ -96,7 +96,7 @@ export class SearchApi {
      * 
      * @param globalSearchRequest 
      */
-    public async apiV2SearchGlobalSearchPost (globalSearchRequest?: GlobalSearchRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
+    public async apiV2SearchGlobalSearchPost (globalSearchRequest?: GlobalSearchRequest, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/search/globalSearch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -114,6 +114,7 @@ export class SearchApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

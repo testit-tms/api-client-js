@@ -116,7 +116,7 @@ export class WorkItemsApi {
      * @param id Work item internal identifier (guid format)
      * @param file Select file
      */
-    public async apiV2WorkItemsIdAttachmentsPost (id: string, file?: RequestFile, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsIdAttachmentsPost (id: string, file?: RequestFile, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -145,6 +145,7 @@ export class WorkItemsApi {
         localVarUseFormData = true;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -192,7 +193,7 @@ export class WorkItemsApi {
      * @summary Transform CheckList to TestCase
      * @param id 
      */
-    public async apiV2WorkItemsIdCheckListTransformToTestCasePost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async apiV2WorkItemsIdCheckListTransformToTestCasePost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/checkList/transformTo/testCase'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -216,6 +217,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -269,7 +271,7 @@ export class WorkItemsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WorkItemsIdHistoryGet (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemChangeModel>;  }> {
+    public async apiV2WorkItemsIdHistoryGet (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemChangeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/history'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -313,6 +315,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -361,7 +364,7 @@ export class WorkItemsApi {
      * @summary Delete like from WorkItem
      * @param id 
      */
-    public async apiV2WorkItemsIdLikeDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsIdLikeDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/like'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -385,6 +388,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -432,7 +436,7 @@ export class WorkItemsApi {
      * @summary Set like to WorkItem
      * @param id 
      */
-    public async apiV2WorkItemsIdLikePost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsIdLikePost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/like'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -456,6 +460,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -503,7 +508,7 @@ export class WorkItemsApi {
      * @summary Get likes count of WorkItem
      * @param id 
      */
-    public async apiV2WorkItemsIdLikesCountGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2WorkItemsIdLikesCountGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/likes/count'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -527,6 +532,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -575,7 +581,7 @@ export class WorkItemsApi {
      * @summary Get likes of WorkItem
      * @param id 
      */
-    public async apiV2WorkItemsIdLikesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemLikeModel>;  }> {
+    public async apiV2WorkItemsIdLikesGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemLikeModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/likes'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -599,6 +605,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -662,7 +669,7 @@ export class WorkItemsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, statusCodes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportApiResult>;  }> {
+    public async apiV2WorkItemsIdTestResultsHistoryGet (id: string, from?: Date, to?: Date, configurationIds?: Array<string>, testPlanIds?: Array<string>, userIds?: Array<string>, outcomes?: Array<string>, statusCodes?: Array<string>, isAutomated?: boolean, automated?: boolean, testRunIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultHistoryReportApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/testResults/history'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -746,6 +753,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -795,7 +803,7 @@ export class WorkItemsApi {
      * @param id 
      * @param versionId 
      */
-    public async apiV2WorkItemsIdVersionVersionIdActualPost (id: string, versionId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async apiV2WorkItemsIdVersionVersionIdActualPost (id: string, versionId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/version/{versionId}/actual'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'versionId' + '}', encodeURIComponent(String(versionId)));
@@ -825,6 +833,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -877,7 +886,7 @@ export class WorkItemsApi {
      * @param searchValue Value for searching
      * @param workItemLinkUrlApiModel 
      */
-    public async apiV2WorkItemsLinksUrlsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemLinkUrlApiModel?: WorkItemLinkUrlApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SearchWorkItemLinkUrlsApiResult;  }> {
+    public async apiV2WorkItemsLinksUrlsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemLinkUrlApiModel?: WorkItemLinkUrlApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: SearchWorkItemLinkUrlsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/links/urls/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -915,6 +924,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -964,7 +974,7 @@ export class WorkItemsApi {
      * @summary Move WorkItem to another section
      * @param workItemMovePostModel 
      */
-    public async apiV2WorkItemsMovePost (workItemMovePostModel?: WorkItemMovePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemShortModel;  }> {
+    public async apiV2WorkItemsMovePost (workItemMovePostModel?: WorkItemMovePostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemShortModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/move';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -982,6 +992,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1036,7 +1047,7 @@ export class WorkItemsApi {
      * @param searchValue Value for searching
      * @param workItemSelectApiModel 
      */
-    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
+    public async apiV2WorkItemsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1074,6 +1085,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1129,7 +1141,7 @@ export class WorkItemsApi {
      * @param searchValue Value for searching
      * @param sharedStepReferenceSectionsQueryFilterModel 
      */
-    public async apiV2WorkItemsSharedStepIdReferencesSectionsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferenceSectionsQueryFilterModel?: SharedStepReferenceSectionsQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceSectionModel>;  }> {
+    public async apiV2WorkItemsSharedStepIdReferencesSectionsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferenceSectionsQueryFilterModel?: SharedStepReferenceSectionsQueryFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceSectionModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{sharedStepId}/references/sections'
             .replace('{' + 'sharedStepId' + '}', encodeURIComponent(String(sharedStepId)));
         let localVarQueryParameters: any = {};
@@ -1173,6 +1185,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1228,7 +1241,7 @@ export class WorkItemsApi {
      * @param searchValue Value for searching
      * @param sharedStepReferencesQueryFilterModel 
      */
-    public async apiV2WorkItemsSharedStepIdReferencesWorkItemsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferencesQueryFilterModel?: SharedStepReferencesQueryFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
+    public async apiV2WorkItemsSharedStepIdReferencesWorkItemsPost (sharedStepId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, sharedStepReferencesQueryFilterModel?: SharedStepReferencesQueryFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{sharedStepId}/references/workItems'
             .replace('{' + 'sharedStepId' + '}', encodeURIComponent(String(sharedStepId)));
         let localVarQueryParameters: any = {};
@@ -1272,6 +1285,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1323,7 +1337,7 @@ export class WorkItemsApi {
      *
      * @deprecated
      */
-    public async apiV2WorkItemsSharedStepsSharedStepIdReferencesGet (sharedStepId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
+    public async apiV2WorkItemsSharedStepsSharedStepIdReferencesGet (sharedStepId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SharedStepReferenceModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/sharedSteps/{sharedStepId}/references'
             .replace('{' + 'sharedStepId' + '}', encodeURIComponent(String(sharedStepId)));
         let localVarQueryParameters: any = {};
@@ -1347,6 +1361,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1395,7 +1410,7 @@ export class WorkItemsApi {
      * @summary Create Test Case, Checklist or Shared Step
      * @param workItemPostModel 
      */
-    public async createWorkItem (workItemPostModel?: WorkItemPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async createWorkItem (workItemPostModel?: WorkItemPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1413,6 +1428,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1462,7 +1478,7 @@ export class WorkItemsApi {
      * @summary Delete all links AutoTests from WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
-    public async deleteAllWorkItemsFromAutoTest (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteAllWorkItemsFromAutoTest (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/autoTests'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1486,6 +1502,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1533,7 +1550,7 @@ export class WorkItemsApi {
      * @summary Delete Test Case, Checklist or Shared Step by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
-    public async deleteWorkItem (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteWorkItem (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1557,6 +1574,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1604,7 +1622,7 @@ export class WorkItemsApi {
      * @summary Get all AutoTests linked to WorkItem by Id or GlobalId
      * @param id WorkItem internal (guid format) or  global(integer format) identifier\&quot;
      */
-    public async getAutoTestsForWorkItem (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
+    public async getAutoTestsForWorkItem (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/autoTests'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1628,6 +1646,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1678,7 +1697,7 @@ export class WorkItemsApi {
      * @param versionId WorkItem version (guid format) identifier
      * @param versionNumber WorkItem version number (0 is the last version)\&quot;
      */
-    public async getIterations (id: string, versionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<IterationModel>;  }> {
+    public async getIterations (id: string, versionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<IterationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/iterations'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1710,6 +1729,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1760,7 +1780,7 @@ export class WorkItemsApi {
      * @param versionId WorkItem version (guid format) identifier\&quot;
      * @param versionNumber WorkItem version number (0 is the last version)\&quot;
      */
-    public async getWorkItemById (id: string, versionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
+    public async getWorkItemById (id: string, versionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1792,6 +1812,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1840,7 +1861,7 @@ export class WorkItemsApi {
      * @summary Get WorkItem chronology by Id or GlobalId
      * @param id 
      */
-    public async getWorkItemChronology (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultChronologyModel>;  }> {
+    public async getWorkItemChronology (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultChronologyModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/chronology'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1864,6 +1885,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1914,7 +1936,7 @@ export class WorkItemsApi {
      * @param workItemVersionId WorkItem version (guid format)  identifier\&quot;
      * @param versionNumber WorkItem version (integer format)  number\&quot;
      */
-    public async getWorkItemVersions (id: string, workItemVersionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemVersionModel>;  }> {
+    public async getWorkItemVersions (id: string, workItemVersionId?: string, versionNumber?: number, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemVersionModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/versions'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1946,6 +1968,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1994,7 +2017,7 @@ export class WorkItemsApi {
      * @summary Permanently delete test case, checklist or shared steps from archive
      * @param id Unique or global ID of the work item
      */
-    public async purgeWorkItem (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async purgeWorkItem (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/purge'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2018,6 +2041,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -2065,7 +2089,7 @@ export class WorkItemsApi {
      * @summary Restore test case, checklist or shared steps from archive
      * @param id Unique or global ID of the work item
      */
-    public async restoreWorkItem (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async restoreWorkItem (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/restore'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2089,6 +2113,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -2136,7 +2161,7 @@ export class WorkItemsApi {
      * @summary Update Test Case, Checklist or Shared Step
      * @param workItemPutModel 
      */
-    public async updateWorkItem (workItemPutModel?: WorkItemPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateWorkItem (workItemPutModel?: WorkItemPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -2154,6 +2179,7 @@ export class WorkItemsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

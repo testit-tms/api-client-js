@@ -113,7 +113,7 @@ export class TestRunsApi {
      * @summary Delete multiple test runs
      * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsDelete (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsDelete (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -131,6 +131,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -180,7 +181,7 @@ export class TestRunsApi {
      * @summary Get autotest classes and namespaces in test run
      * @param id 
      */
-    public async apiV2TestRunsIdAutoTestsNamespacesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestNamespacesCountResponse;  }> {
+    public async apiV2TestRunsIdAutoTestsNamespacesGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestNamespacesCountResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/autoTestsNamespaces'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -204,6 +205,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -252,7 +254,7 @@ export class TestRunsApi {
      * @summary Delete test run
      * @param id Test run internal (UUID) identifier
      */
-    public async apiV2TestRunsIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -276,6 +278,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -323,7 +326,7 @@ export class TestRunsApi {
      * @summary Permanently delete test run from archive
      * @param id Test run internal (UUID) identifier
      */
-    public async apiV2TestRunsIdPurgePost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsIdPurgePost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/purge'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -347,6 +350,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -395,7 +399,7 @@ export class TestRunsApi {
      * @param id 
      * @param manualRerunSelectTestResultsApiModel 
      */
-    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectTestResultsApiModel?: ManualRerunSelectTestResultsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }> {
+    public async apiV2TestRunsIdRerunsPost (id: string, manualRerunSelectTestResultsApiModel?: ManualRerunSelectTestResultsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: ManualRerunApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/reruns'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -419,6 +423,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -468,7 +473,7 @@ export class TestRunsApi {
      * @summary Restore test run from the archive
      * @param id Unique ID of the test run
      */
-    public async apiV2TestRunsIdRestorePost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsIdRestorePost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/restore'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -492,6 +497,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -540,7 +546,7 @@ export class TestRunsApi {
      * @param id Test run unique ID
      * @param testRunStatisticsFilterApiModel 
      */
-    public async apiV2TestRunsIdStatisticsFilterPost (id: string, testRunStatisticsFilterApiModel?: TestRunStatisticsFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
+    public async apiV2TestRunsIdStatisticsFilterPost (id: string, testRunStatisticsFilterApiModel?: TestRunStatisticsFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestResultsStatisticsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/statistics/filter'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -564,6 +570,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -613,7 +620,7 @@ export class TestRunsApi {
      * @summary Get test results from the test run grouped by test points
      * @param id Test run unique ID
      */
-    public async apiV2TestRunsIdTestPointsResultsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointResultApiResult>;  }> {
+    public async apiV2TestRunsIdTestPointsResultsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointResultApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testPoints/results'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -637,6 +644,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -686,7 +694,7 @@ export class TestRunsApi {
      * @param id Test run unique ID
      * @param testRunTestResultsPartialBulkSetModel 
      */
-    public async apiV2TestRunsIdTestResultsBulkPut (id: string, testRunTestResultsPartialBulkSetModel?: TestRunTestResultsPartialBulkSetModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsIdTestResultsBulkPut (id: string, testRunTestResultsPartialBulkSetModel?: TestRunTestResultsPartialBulkSetModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testResults/bulk'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -710,6 +718,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -758,7 +767,7 @@ export class TestRunsApi {
      * @summary Get modification date of last test result of the test run
      * @param id Test run unique ID
      */
-    public async apiV2TestRunsIdTestResultsLastModifiedModificationDateGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Date;  }> {
+    public async apiV2TestRunsIdTestResultsLastModifiedModificationDateGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Date;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testResults/lastModified/modificationDate'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -782,6 +791,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -830,7 +840,7 @@ export class TestRunsApi {
      * @summary Permanently delete multiple test runs from archive
      * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsPurgeBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsPurgeBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/purge/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -848,6 +858,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -897,7 +908,7 @@ export class TestRunsApi {
      * @summary Restore multiple test runs from the archive
      * @param testRunSelectApiModel 
      */
-    public async apiV2TestRunsRestoreBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2TestRunsRestoreBulkPost (testRunSelectApiModel?: TestRunSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/restore/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -915,6 +926,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -969,7 +981,7 @@ export class TestRunsApi {
      * @param searchValue Value for searching
      * @param testRunFilterApiModel 
      */
-    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunFilterApiModel?: TestRunFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortApiResult>;  }> {
+    public async apiV2TestRunsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testRunFilterApiModel?: TestRunFilterApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestRunShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1007,6 +1019,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1056,7 +1069,7 @@ export class TestRunsApi {
      * @summary Update multiple test runs
      * @param updateMultipleTestRunsApiModel 
      */
-    public async apiV2TestRunsUpdateMultiplePost (updateMultipleTestRunsApiModel?: UpdateMultipleTestRunsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestRunsUpdateMultiplePost (updateMultipleTestRunsApiModel?: UpdateMultipleTestRunsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/updateMultiple';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1074,6 +1087,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1122,7 +1136,7 @@ export class TestRunsApi {
      * @summary Complete TestRun
      * @param id Test Run internal identifier (GUID format)
      */
-    public async completeTestRun (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async completeTestRun (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/complete'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1146,6 +1160,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1193,7 +1208,7 @@ export class TestRunsApi {
      * @summary Create test runs based on autotests and configurations
      * @param createTestRunAndFillByAutoTestsApiModel 
      */
-    public async createAndFillByAutoTests (createTestRunAndFillByAutoTestsApiModel?: CreateTestRunAndFillByAutoTestsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
+    public async createAndFillByAutoTests (createTestRunAndFillByAutoTestsApiModel?: CreateTestRunAndFillByAutoTestsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byAutoTests';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1211,6 +1226,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1260,7 +1276,7 @@ export class TestRunsApi {
      * @summary Create test runs picking the needed test points
      * @param createTestRunAndFillByConfigurationsApiModel 
      */
-    public async createAndFillByConfigurations (createTestRunAndFillByConfigurationsApiModel?: CreateTestRunAndFillByConfigurationsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
+    public async createAndFillByConfigurations (createTestRunAndFillByConfigurationsApiModel?: CreateTestRunAndFillByConfigurationsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byConfigurations';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1278,6 +1294,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1327,7 +1344,7 @@ export class TestRunsApi {
      * @summary Create test run based on configurations and work items
      * @param createTestRunAndFillByWorkItemsApiModel 
      */
-    public async createAndFillByWorkItems (createTestRunAndFillByWorkItemsApiModel?: CreateTestRunAndFillByWorkItemsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
+    public async createAndFillByWorkItems (createTestRunAndFillByWorkItemsApiModel?: CreateTestRunAndFillByWorkItemsApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/byWorkItems';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1345,6 +1362,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1394,7 +1412,7 @@ export class TestRunsApi {
      * @summary Create empty TestRun
      * @param createEmptyTestRunApiModel 
      */
-    public async createEmpty (createEmptyTestRunApiModel?: CreateEmptyTestRunApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
+    public async createEmpty (createEmptyTestRunApiModel?: CreateEmptyTestRunApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1412,6 +1430,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1461,7 +1480,7 @@ export class TestRunsApi {
      * @summary Get TestRun by Id
      * @param id Test Run internal identifier (GUID format)
      */
-    public async getTestRunById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
+    public async getTestRunById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestRunV2ApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1485,6 +1504,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1534,7 +1554,7 @@ export class TestRunsApi {
      * @param id Test Run internal identifier (GUID format)
      * @param autoTestResultsForTestRunModel 
      */
-    public async setAutoTestResultsForTestRun (id: string, autoTestResultsForTestRunModel?: Array<AutoTestResultsForTestRunModel>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async setAutoTestResultsForTestRun (id: string, autoTestResultsForTestRunModel?: Array<AutoTestResultsForTestRunModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/testResults'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1558,6 +1578,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1607,7 +1628,7 @@ export class TestRunsApi {
      * @summary Start TestRun
      * @param id Test Run internal identifier (GUID format)
      */
-    public async startTestRun (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async startTestRun (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/start'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1631,6 +1652,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1678,7 +1700,7 @@ export class TestRunsApi {
      * @summary Stop TestRun
      * @param id Test Run internal identifier (GUID format)
      */
-    public async stopTestRun (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async stopTestRun (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns/{id}/stop'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1702,6 +1724,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1749,7 +1772,7 @@ export class TestRunsApi {
      * @summary Update empty TestRun
      * @param updateEmptyTestRunApiModel 
      */
-    public async updateEmpty (updateEmptyTestRunApiModel?: UpdateEmptyTestRunApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateEmpty (updateEmptyTestRunApiModel?: UpdateEmptyTestRunApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testRuns';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1767,6 +1790,7 @@ export class TestRunsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
