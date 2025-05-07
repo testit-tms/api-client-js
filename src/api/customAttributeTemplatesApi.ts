@@ -100,7 +100,7 @@ export class CustomAttributeTemplatesApi {
      * 
      * @param name 
      */
-    public async apiV2CustomAttributesTemplatesExistsGet (name?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateValidationResult;  }> {
+    public async apiV2CustomAttributesTemplatesExistsGet (name?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateValidationResult;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/exists';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -122,6 +122,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -171,7 +172,7 @@ export class CustomAttributeTemplatesApi {
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
      */
-    public async apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}/customAttributes/exclude'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,6 +196,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -244,7 +246,7 @@ export class CustomAttributeTemplatesApi {
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
      */
-    public async apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}/customAttributes/include'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -268,6 +270,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -316,7 +319,7 @@ export class CustomAttributeTemplatesApi {
      * @summary Delete CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      */
-    public async apiV2CustomAttributesTemplatesIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesIdDelete (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -340,6 +343,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -387,7 +391,7 @@ export class CustomAttributeTemplatesApi {
      * @summary Get CustomAttributeTemplate by ID
      * @param id CustomAttributeTemplate internal (UUID) identifier
      */
-    public async apiV2CustomAttributesTemplatesIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
+    public async apiV2CustomAttributesTemplatesIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -411,6 +415,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -459,7 +464,7 @@ export class CustomAttributeTemplatesApi {
      * @summary Get CustomAttributeTemplate by name
      * @param name CustomAttributeTemplate name for search
      */
-    public async apiV2CustomAttributesTemplatesNameGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
+    public async apiV2CustomAttributesTemplatesNameGet (name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/{name}'
             .replace('{' + 'name' + '}', encodeURIComponent(String(name)));
         let localVarQueryParameters: any = {};
@@ -483,6 +488,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -531,7 +537,7 @@ export class CustomAttributeTemplatesApi {
      * @summary Create CustomAttributeTemplate
      * @param customAttributeTemplatePostModel 
      */
-    public async apiV2CustomAttributesTemplatesPost (customAttributeTemplatePostModel?: CustomAttributeTemplatePostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
+    public async apiV2CustomAttributesTemplatesPost (customAttributeTemplatePostModel?: CustomAttributeTemplatePostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: CustomAttributeTemplateModel;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -549,6 +555,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -598,7 +605,7 @@ export class CustomAttributeTemplatesApi {
      * @summary Update custom attributes template
      * @param customAttributeTemplatePutModel 
      */
-    public async apiV2CustomAttributesTemplatesPut (customAttributeTemplatePutModel?: CustomAttributeTemplatePutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2CustomAttributesTemplatesPut (customAttributeTemplatePutModel?: CustomAttributeTemplatePutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -616,6 +623,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -669,7 +677,7 @@ export class CustomAttributeTemplatesApi {
      * @param searchValue Value for searching
      * @param customAttributeTemplateSearchQueryModel 
      */
-    public async apiV2CustomAttributesTemplatesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeTemplateSearchQueryModel?: CustomAttributeTemplateSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SearchCustomAttributeTemplateGetModel>;  }> {
+    public async apiV2CustomAttributesTemplatesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeTemplateSearchQueryModel?: CustomAttributeTemplateSearchQueryModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SearchCustomAttributeTemplateGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/templates/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -707,6 +715,7 @@ export class CustomAttributeTemplatesApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

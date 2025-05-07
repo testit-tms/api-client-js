@@ -104,7 +104,7 @@ export class SectionsApi {
      * @param id Section internal (UUID) identifier
      * @param operation 
      */
-    public async apiV2SectionsIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2SectionsIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -128,6 +128,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PATCH',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -176,7 +177,7 @@ export class SectionsApi {
      * @summary Create section
      * @param sectionPostModel 
      */
-    public async createSection (sectionPostModel?: SectionPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
+    public async createSection (sectionPostModel?: SectionPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
         const localVarPath = this.basePath + '/api/v2/sections';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -194,6 +195,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -243,7 +245,7 @@ export class SectionsApi {
      * @summary Delete section
      * @param id Section internal (UUID) identifier
      */
-    public async deleteSection (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteSection (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -267,6 +269,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -315,7 +318,7 @@ export class SectionsApi {
      * @param id Section internal (UUID) identifier
      * @param isDeleted 
      */
-    public async getSectionById (id: string, isDeleted?: DeletionState, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
+    public async getSectionById (id: string, isDeleted?: DeletionState, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: SectionWithStepsModel;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -343,6 +346,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -401,7 +405,7 @@ export class SectionsApi {
      *
      * @deprecated
      */
-    public async getWorkItemsBySectionId (id: string, isDeleted?: boolean, tagNames?: Array<string>, includeIterations?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async getWorkItemsBySectionId (id: string, isDeleted?: boolean, tagNames?: Array<string>, includeIterations?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -457,6 +461,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -505,7 +510,7 @@ export class SectionsApi {
      * @summary Move section with all work items into another section
      * @param sectionMoveModel 
      */
-    public async move (sectionMoveModel?: SectionMoveModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async move (sectionMoveModel?: SectionMoveModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/move';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -523,6 +528,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -571,7 +577,7 @@ export class SectionsApi {
      * @summary Rename section
      * @param sectionRenameModel 
      */
-    public async rename (sectionRenameModel?: SectionRenameModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async rename (sectionRenameModel?: SectionRenameModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections/rename';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -589,6 +595,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -637,7 +644,7 @@ export class SectionsApi {
      * @summary Update section
      * @param sectionPutModel 
      */
-    public async updateSection (sectionPutModel?: SectionPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateSection (sectionPutModel?: SectionPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/sections';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -655,6 +662,7 @@ export class SectionsApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

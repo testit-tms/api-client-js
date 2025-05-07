@@ -95,7 +95,7 @@ export class UsersApi {
      * 
      * @param userName 
      */
-    public async apiV2UsersExistsGet (userName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UserCustomNameValidationResponse;  }> {
+    public async apiV2UsersExistsGet (userName?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: UserCustomNameValidationResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/users/exists';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -117,6 +117,7 @@ export class UsersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

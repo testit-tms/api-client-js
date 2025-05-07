@@ -100,7 +100,7 @@ export class ParametersApi {
      * @summary Create multiple parameters
      * @param parameterPostModel 
      */
-    public async apiV2ParametersBulkPost (parameterPostModel?: Array<ParameterPostModel>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+    public async apiV2ParametersBulkPost (parameterPostModel?: Array<ParameterPostModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -118,6 +118,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -167,7 +168,7 @@ export class ParametersApi {
      * @summary Update multiple parameters
      * @param parameterPutModel 
      */
-    public async apiV2ParametersBulkPut (parameterPutModel?: Array<ParameterPutModel>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ParametersBulkPut (parameterPutModel?: Array<ParameterPutModel>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -185,6 +186,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -239,7 +241,7 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2ParametersGroupsGet (isDeleted?: boolean, parameterKeyIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
+    public async apiV2ParametersGroupsGet (isDeleted?: boolean, parameterKeyIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -285,6 +287,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -333,7 +336,7 @@ export class ParametersApi {
      * @summary Check existence parameter key in system
      * @param name 
      */
-    public async apiV2ParametersKeyNameNameExistsGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
+    public async apiV2ParametersKeyNameNameExistsGet (name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/key/name/{name}/exists'
             .replace('{' + 'name' + '}', encodeURIComponent(String(name)));
         let localVarQueryParameters: any = {};
@@ -357,6 +360,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -405,7 +409,7 @@ export class ParametersApi {
      * @summary Get all parameter key values
      * @param key Parameter key (string format)
      */
-    public async apiV2ParametersKeyValuesGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ParametersKeyValuesGet (key: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{key}/values'
             .replace('{' + 'key' + '}', encodeURIComponent(String(key)));
         let localVarQueryParameters: any = {};
@@ -429,6 +433,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -476,7 +481,7 @@ export class ParametersApi {
      *  Use case   User runs method execution   System search all parameter keys   System returns parameter keys
      * @summary Get all parameter keys
      */
-    public async apiV2ParametersKeysGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ParametersKeysGet (options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keys';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -494,6 +499,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -547,7 +553,7 @@ export class ParametersApi {
      * @param searchValue Value for searching
      * @param parameterFilterModel 
      */
-    public async apiV2ParametersSearchGroupsPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
+    public async apiV2ParametersSearchGroupsPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -585,6 +591,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -639,7 +646,7 @@ export class ParametersApi {
      * @param searchValue Value for searching
      * @param parameterFilterModel 
      */
-    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+    public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterFilterModel?: ParameterFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -677,6 +684,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -726,7 +734,7 @@ export class ParametersApi {
      * @summary Create parameter
      * @param parameterPostModel 
      */
-    public async createParameter (parameterPostModel?: ParameterPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
+    public async createParameter (parameterPostModel?: ParameterPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -744,6 +752,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -793,7 +802,7 @@ export class ParametersApi {
      * @summary Delete parameter by name
      * @param name Name of the parameter
      */
-    public async deleteByName (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteByName (name: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/name/{name}'
             .replace('{' + 'name' + '}', encodeURIComponent(String(name)));
         let localVarQueryParameters: any = {};
@@ -817,6 +826,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -864,7 +874,7 @@ export class ParametersApi {
      * @summary Delete parameters by parameter key identifier
      * @param keyId Identifier of the parameter key
      */
-    public async deleteByParameterKeyId (keyId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteByParameterKeyId (keyId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keyId/{keyId}'
             .replace('{' + 'keyId' + '}', encodeURIComponent(String(keyId)));
         let localVarQueryParameters: any = {};
@@ -888,6 +898,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -935,7 +946,7 @@ export class ParametersApi {
      * @summary Delete parameter
      * @param id Parameter internal (UUID) identifier
      */
-    public async deleteParameter (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteParameter (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -959,6 +970,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1011,7 +1023,7 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getAllParameters (isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
+    public async getAllParameters (isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1053,6 +1065,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1101,7 +1114,7 @@ export class ParametersApi {
      * @summary Get parameter by ID
      * @param id Parameter internal (UUID) identifier
      */
-    public async getParameterById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
+    public async getParameterById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: ParameterModel;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1125,6 +1138,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -1173,7 +1187,7 @@ export class ParametersApi {
      * @summary Update parameter
      * @param parameterPutModel 
      */
-    public async updateParameter (parameterPutModel?: ParameterPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async updateParameter (parameterPutModel?: ParameterPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1191,6 +1205,7 @@ export class ParametersApi {
         let localVarUseFormData = false;
 
         let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: options.rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
