@@ -36,7 +36,9 @@ export enum ProjectSectionsApiApiKeys {
 
 export class ProjectSectionsApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -71,6 +73,10 @@ export class ProjectSectionsApi {
         this._defaultHeaders = defaultHeaders;
     }
 
+    set rejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -92,7 +98,7 @@ export class ProjectSectionsApi {
     }
 
     /**
-     *  Use case   User sets project internal or global identifier and runs method execution   System search project   System search all sections related to the project   System returns array of sections (listed in response)
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
      * @summary Get project sections
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param skip Amount of items to be skipped (offset)
@@ -101,7 +107,7 @@ export class ProjectSectionsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async getSectionsByProjectId (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<SectionModel>;  }> {
+    public async getSectionsByProjectId (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SectionModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/sections'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -144,8 +150,9 @@ export class ProjectSectionsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

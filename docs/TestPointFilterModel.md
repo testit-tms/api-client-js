@@ -11,6 +11,7 @@
 | **statuses** | [**List**](TestPointStatus.md) | Specifies a test point statuses to search for | [optional] [default to null] |
 | **statusCodes** | **List** | Specifies a test point status codes to search for | [optional] [default to null] |
 | **priorities** | [**List**](WorkItemPriorityModel.md) | Specifies a test point priorities to search for | [optional] [default to null] |
+| **sourceTypes** | [**List**](WorkItemSourceTypeModel.md) | Specifies a test point source types to search for | [optional] [default to null] |
 | **isAutomated** | **Boolean** | Specifies a test point automation status to search for | [optional] [default to null] |
 | **name** | **String** | Specifies a test point name to search for | [optional] [default to null] |
 | **configurationIds** | **List** | Specifies a test point configuration IDs to search for | [optional] [default to null] |

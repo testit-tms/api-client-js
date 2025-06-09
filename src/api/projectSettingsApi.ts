@@ -37,7 +37,9 @@ export enum ProjectSettingsApiApiKeys {
 
 export class ProjectSettingsApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -72,6 +74,10 @@ export class ProjectSettingsApi {
         this._defaultHeaders = defaultHeaders;
     }
 
+    set rejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -98,7 +104,7 @@ export class ProjectSettingsApi {
      * @param projectId 
      * @param autoTestProjectSettingsPostModel 
      */
-    public async apiV2ProjectsProjectIdSettingsAutotestsPost (projectId: string, autoTestProjectSettingsPostModel?: AutoTestProjectSettingsPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdSettingsAutotestsPost (projectId: string, autoTestProjectSettingsPostModel?: AutoTestProjectSettingsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/settings/autotests'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -121,8 +127,9 @@ export class ProjectSettingsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -171,7 +178,7 @@ export class ProjectSettingsApi {
      * @summary Get autotest project settings.
      * @param projectId 
      */
-    public async getAutotestProjectSettings (projectId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsGetModel;  }> {
+    public async getAutotestProjectSettings (projectId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsGetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/settings/autotests'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -194,8 +201,9 @@ export class ProjectSettingsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

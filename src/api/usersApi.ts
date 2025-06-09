@@ -36,7 +36,9 @@ export enum UsersApiApiKeys {
 
 export class UsersApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -71,6 +73,10 @@ export class UsersApi {
         this._defaultHeaders = defaultHeaders;
     }
 
+    set rejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -95,7 +101,7 @@ export class UsersApi {
      * 
      * @param userName 
      */
-    public async apiV2UsersExistsGet (userName?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: UserCustomNameValidationResponse;  }> {
+    public async apiV2UsersExistsGet (userName?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UserCustomNameValidationResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/users/exists';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -116,8 +122,9 @@ export class UsersApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

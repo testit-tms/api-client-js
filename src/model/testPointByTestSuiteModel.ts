@@ -30,7 +30,7 @@ export class TestPointByTestSuiteModel {
     */
     'configurationId'?: string | null;
     /**
-    * Test point status   Applies one of these values: Blocked, NoResults, Failed, Passed
+    * Test point status  Applies one of these values: Blocked, NoResults, Failed, Passed
     */
     'status'?: string | null;
     /**

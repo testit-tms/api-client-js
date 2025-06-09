@@ -5,7 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** |  | [default to null] |
 | **name** | **String** |  | [default to null] |
-| **type** | [**TestStatusType**](TestStatusType.md) |  | [default to null] |
+| **type** | [**TestStatusApiType**](TestStatusApiType.md) | Collection of possible status types | [default to null] |
 | **isSystem** | **Boolean** |  | [default to null] |
 | **code** | **String** |  | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |

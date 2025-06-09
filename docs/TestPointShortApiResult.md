@@ -8,7 +8,7 @@
 | **testerId** | **UUID** | Tester who is responded for the test unique internal identifier | [optional] [default to null] |
 | **workItemId** | **UUID** | Workitem to which test point relates unique identifier | [optional] [default to null] |
 | **configurationId** | **UUID** | Configuration to which test point relates unique identifier | [optional] [default to null] |
-| **status** | **String** | Test point status   Applies one of these values: Blocked, NoResults, Failed, Passed | [optional] [default to null] |
+| **status** | **String** | Test point status  Applies one of these values: Blocked, NoResults, Failed, Passed | [optional] [default to null] |
 | **statusModel** | [**TestStatusApiResult**](TestStatusApiResult.md) | Test point status | [default to null] |
 | **lastTestResultId** | **UUID** | Last test result unique identifier | [optional] [default to null] |
 | **iterationId** | **UUID** | Iteration unique identifier | [default to null] |

@@ -32,7 +32,7 @@ export class TestRunV2ApiResult {
     */
     'description'?: string | null;
     /**
-    * Test run launch source                Once launch source is specified it cannot be updated.
+    * Test run launch source              Once launch source is specified it cannot be updated.
     */
     'launchSource'?: string | null;
     /**
@@ -54,11 +54,11 @@ export class TestRunV2ApiResult {
     */
     'status': TestStatusApiResult;
     /**
-    * Project unique identifier                This property is used to link test run with project.
+    * Project unique identifier              This property is used to link test run with project.
     */
     'projectId': string;
     /**
-    * Test plan unique identifier                This property is used to link test run with test plan.
+    * Test plan unique identifier              This property is used to link test run with test plan.
     */
     'testPlanId'?: string | null;
     /**

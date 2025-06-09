@@ -13,44 +13,14 @@
 import { RequestFile } from './models';
 
 export class TagModel {
-    'id': string;
     'name': string;
-    'createdDate': Date;
-    'modifiedDate'?: Date | null;
-    'createdById': string;
-    'modifiedById'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
             "name": "name",
             "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "createdDate",
-            "baseName": "createdDate",
-            "type": "Date"
-        },
-        {
-            "name": "modifiedDate",
-            "baseName": "modifiedDate",
-            "type": "Date"
-        },
-        {
-            "name": "createdById",
-            "baseName": "createdById",
-            "type": "string"
-        },
-        {
-            "name": "modifiedById",
-            "baseName": "modifiedById",
             "type": "string"
         }    ];
 

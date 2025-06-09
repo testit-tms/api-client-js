@@ -37,7 +37,9 @@ export enum SearchApiApiKeys {
 
 export class SearchApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -72,6 +74,10 @@ export class SearchApi {
         this._defaultHeaders = defaultHeaders;
     }
 
+    set rejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -96,7 +102,7 @@ export class SearchApi {
      * 
      * @param globalSearchRequest 
      */
-    public async apiV2SearchGlobalSearchPost (globalSearchRequest?: GlobalSearchRequest, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
+    public async apiV2SearchGlobalSearchPost (globalSearchRequest?: GlobalSearchRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GlobalSearchResponse;  }> {
         const localVarPath = this.basePath + '/api/v2/search/globalSearch';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -113,8 +119,9 @@ export class SearchApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

@@ -23,21 +23,21 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ParametersBulkPost"></a>
 # **apiV2ParametersBulkPost**
-> List apiV2ParametersBulkPost(ParameterPostModel)
+> List apiV2ParametersBulkPost(CreateParameterApiModel)
 
 Create multiple parameters
 
-     Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System creates parameters   System returns list of parameter model (listed in the response example)
+     Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPostModel** | [**List**](../Models/ParameterPostModel.md)|  | [optional] |
+| **CreateParameterApiModel** | [**List**](../Models/CreateParameterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/ParameterModel.md)
+[**List**](../Models/ParameterApiResult.md)
 
 ### Authorization
 
@@ -50,17 +50,17 @@ Create multiple parameters
 
 <a name="apiV2ParametersBulkPut"></a>
 # **apiV2ParametersBulkPut**
-> apiV2ParametersBulkPut(ParameterPutModel)
+> apiV2ParametersBulkPut(UpdateParameterApiModel)
 
 Update multiple parameters
 
-     Use case   User sets list of parameter model (listed in the request example)   User runs method execution   System updates parameters
+     Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPutModel** | [**List**](../Models/ParameterPutModel.md)|  | [optional] |
+| **UpdateParameterApiModel** | [**List**](../Models/UpdateParameterApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -77,18 +77,19 @@ null (empty response body)
 
 <a name="apiV2ParametersGroupsGet"></a>
 # **apiV2ParametersGroupsGet**
-> List apiV2ParametersGroupsGet(isDeleted, parameterKeyIds, Skip, Take, OrderBy, SearchField, SearchValue)
+> List apiV2ParametersGroupsGet(parameterKeyIds, name, isDeleted, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get parameters as group
 
-     Use case   User runs method execution   System search parameters   System returns parameters models as groups (listed in the response example)
+     Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **isDeleted** | **Boolean**|  | [optional] [default to null] |
 | **parameterKeyIds** | [**Set**](../Models/UUID.md)|  | [optional] [default to null] |
+| **name** | **String**|  | [optional] [default to null] |
+| **isDeleted** | **Boolean**|  | [optional] [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
@@ -97,7 +98,7 @@ Get parameters as group
 
 ### Return type
 
-[**List**](../Models/ParameterGroupModel.md)
+[**List**](../Models/ParameterGroupApiResult.md)
 
 ### Authorization
 
@@ -114,7 +115,7 @@ Get parameters as group
 
 Check existence parameter key in system
 
-     Use case   User sets name of parameter key   User runs method execution   System search parameter key   System returns the flag for the existence of the parameter key in the system
+     Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
 
 ### Parameters
 
@@ -141,7 +142,7 @@ Check existence parameter key in system
 
 Get all parameter key values
 
-     Use case   User sets parameter key (string format)   User runs method execution   System search parameter values using the key   System returns parameter
+     Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
 
 ### Parameters
 
@@ -168,7 +169,7 @@ Get all parameter key values
 
 Get all parameter keys
 
-     Use case   User runs method execution   System search all parameter keys   System returns parameter keys
+     Use case  User runs method execution  System search all parameter keys  System returns parameter keys
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -188,7 +189,7 @@ This endpoint does not need any parameter.
 
 <a name="apiV2ParametersSearchGroupsPost"></a>
 # **apiV2ParametersSearchGroupsPost**
-> List apiV2ParametersSearchGroupsPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterFilterModel)
+> List apiV2ParametersSearchGroupsPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterGroupsFilterApiModel)
 
 Search for parameters as group
 
@@ -201,11 +202,11 @@ Search for parameters as group
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ParameterFilterModel** | [**ParameterFilterModel**](../Models/ParameterFilterModel.md)|  | [optional] |
+| **ParameterGroupsFilterApiModel** | [**ParameterGroupsFilterApiModel**](../Models/ParameterGroupsFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/ParameterGroupModel.md)
+[**List**](../Models/ParameterGroupApiResult.md)
 
 ### Authorization
 
@@ -218,7 +219,7 @@ Search for parameters as group
 
 <a name="apiV2ParametersSearchPost"></a>
 # **apiV2ParametersSearchPost**
-> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ParameterFilterModel)
+> List apiV2ParametersSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ParametersFilterApiModel)
 
 Search for parameters
 
@@ -231,11 +232,11 @@ Search for parameters
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
 | **SearchField** | **String**| Property name for searching | [optional] [default to null] |
 | **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ParameterFilterModel** | [**ParameterFilterModel**](../Models/ParameterFilterModel.md)|  | [optional] |
+| **ParametersFilterApiModel** | [**ParametersFilterApiModel**](../Models/ParametersFilterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**List**](../Models/ParameterModel.md)
+[**List**](../Models/ParameterApiResult.md)
 
 ### Authorization
 
@@ -248,21 +249,21 @@ Search for parameters
 
 <a name="createParameter"></a>
 # **createParameter**
-> ParameterModel createParameter(ParameterPostModel)
+> ParameterApiResult createParameter(CreateParameterApiModel)
 
 Create parameter
 
-     Use case   User sets parameter model (listed in the request example)   User runs method execution   System creates parameter   System returns parameter model
+     Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPostModel** | [**ParameterPostModel**](../Models/ParameterPostModel.md)|  | [optional] |
+| **CreateParameterApiModel** | [**CreateParameterApiModel**](../Models/CreateParameterApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**ParameterModel**](../Models/ParameterModel.md)
+[**ParameterApiResult**](../Models/ParameterApiResult.md)
 
 ### Authorization
 
@@ -333,7 +334,7 @@ null (empty response body)
 
 Delete parameter
 
-     Use case   User sets parameter internal (guid format) identifier   System search and delete parameter   System returns deleted parameter
+     Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
 
 ### Parameters
 
@@ -360,7 +361,7 @@ null (empty response body)
 
 Get all parameters
 
-     Use case   [Optional] User sets isDeleted field value   [Optional] If User sets isDeleted field value as true, System search all deleted parameters   [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted   If User did not set isDeleted field value, System search all parameters   System returns array of all found parameters(listed in response model)
+     Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
 
 ### Parameters
 
@@ -375,7 +376,7 @@ Get all parameters
 
 ### Return type
 
-[**List**](../Models/ParameterModel.md)
+[**List**](../Models/ParameterApiResult.md)
 
 ### Authorization
 
@@ -388,11 +389,11 @@ Get all parameters
 
 <a name="getParameterById"></a>
 # **getParameterById**
-> ParameterModel getParameterById(id)
+> ParameterApiResult getParameterById(id)
 
 Get parameter by ID
 
-     Use case   User sets parameter internal (guid format) identifier   User runs method execution   System search parameter using the identifier   System returns parameter
+     Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
 
 ### Parameters
 
@@ -402,7 +403,7 @@ Get parameter by ID
 
 ### Return type
 
-[**ParameterModel**](../Models/ParameterModel.md)
+[**ParameterApiResult**](../Models/ParameterApiResult.md)
 
 ### Authorization
 
@@ -415,17 +416,17 @@ Get parameter by ID
 
 <a name="updateParameter"></a>
 # **updateParameter**
-> updateParameter(ParameterPutModel)
+> updateParameter(UpdateParameterApiModel)
 
 Update parameter
 
-     Use case   User sets parameter updated properties(listed in the request example)   User runs method execution   System updated parameter using updated properties   System returns no content response
+     Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ParameterPutModel** | [**ParameterPutModel**](../Models/ParameterPutModel.md)|  | [optional] |
+| **UpdateParameterApiModel** | [**UpdateParameterApiModel**](../Models/UpdateParameterApiModel.md)|  | [optional] |
 
 ### Return type
 

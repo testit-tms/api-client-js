@@ -6,6 +6,7 @@
 | **includeName** | **Boolean** |  | [default to null] |
 | **includeSection** | **Boolean** |  | [default to null] |
 | **includePriority** | **Boolean** |  | [default to null] |
+| **includeSourceType** | **Boolean** |  | [default to null] |
 | **includeAutomated** | **Boolean** |  | [default to null] |
 | **includeStatus** | **Boolean** |  | [default to null] |
 | **includeDuration** | **Boolean** |  | [default to null] |

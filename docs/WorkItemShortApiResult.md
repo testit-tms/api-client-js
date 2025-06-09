@@ -22,6 +22,7 @@
 | **modifiedDate** | **Date** | Date and time of the latest modification of Work Item | [optional] [default to null] |
 | **state** | [**WorkItemStates**](WorkItemStates.md) | The current state of Work Item | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) | Work Item priority level | [default to null] |
+| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) | Work Item priority level | [default to null] |
 | **isDeleted** | **Boolean** | Flag determining whether Work Item is deleted | [default to null] |
 | **tagNames** | **List** | Array of tag names of Work Item | [optional] [default to null] |
 | **iterations** | [**List**](IterationApiResult.md) | Set of iterations related to Work Item | [default to null] |

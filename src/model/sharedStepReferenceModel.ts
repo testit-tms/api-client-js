@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { TagModel } from './tagModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 
 export class SharedStepReferenceModel {
     'id': string;
@@ -28,6 +29,7 @@ export class SharedStepReferenceModel {
     'modifiedDate'?: Date | null;
     'state': string;
     'priority': WorkItemPriorityModel;
+    'sourceType': WorkItemSourceTypeModel;
     'isDeleted': boolean;
     /**
     * used for versioning changes in workitem
@@ -104,6 +106,11 @@ export class SharedStepReferenceModel {
             "name": "priority",
             "baseName": "priority",
             "type": "WorkItemPriorityModel"
+        },
+        {
+            "name": "sourceType",
+            "baseName": "sourceType",
+            "type": "WorkItemSourceTypeModel"
         },
         {
             "name": "isDeleted",

@@ -45,7 +45,7 @@ export class SharedStepReferencesQueryFilterModel {
     */
     'priorities'?: Array<WorkItemPriorityModel> | null;
     /**
-    * Collection of types of work item   Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    * Collection of types of work item  Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
     */
     'entityTypes'?: Array<string> | null;
     /**

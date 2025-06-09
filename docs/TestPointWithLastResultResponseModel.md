@@ -25,6 +25,7 @@
 | **tagNames** | **List** |  | [optional] [default to null] |
 | **duration** | **Integer** |  | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
+| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [default to null] |
 | **testSuiteNameBreadCrumbs** | **List** |  | [optional] [default to null] |
 | **groupCount** | **Integer** |  | [optional] [default to null] |
 | **iteration** | [**IterationModel**](IterationModel.md) |  | [optional] [default to null] |

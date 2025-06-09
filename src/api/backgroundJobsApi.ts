@@ -38,7 +38,9 @@ export enum BackgroundJobsApiApiKeys {
 
 export class BackgroundJobsApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -73,6 +75,10 @@ export class BackgroundJobsApi {
         this._defaultHeaders = defaultHeaders;
     }
 
+    set rejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -97,7 +103,7 @@ export class BackgroundJobsApi {
      * 
      * @summary Delete all completed background jobs
      */
-    public async apiV2BackgroundJobsCompletedDelete (options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2BackgroundJobsCompletedDelete (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/completed';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -114,8 +120,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -168,7 +175,7 @@ export class BackgroundJobsApi {
      *
      * @deprecated
      */
-    public async apiV2BackgroundJobsGet (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
+    public async apiV2BackgroundJobsGet (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -205,8 +212,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -255,7 +263,7 @@ export class BackgroundJobsApi {
      * @summary Cancel current user background job
      * @param id 
      */
-    public async apiV2BackgroundJobsIdCancelPost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2BackgroundJobsIdCancelPost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/{id}/cancel'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -278,8 +286,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -327,7 +336,7 @@ export class BackgroundJobsApi {
      * @summary Get background job by ID
      * @param id Unique ID of the background job
      */
-    public async apiV2BackgroundJobsIdGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: BackgroundJobGetModel;  }> {
+    public async apiV2BackgroundJobsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BackgroundJobGetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -350,8 +359,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -400,7 +410,7 @@ export class BackgroundJobsApi {
      * @summary Get background job status by job ID
      * @param id Unique ID of the background job
      */
-    public async apiV2BackgroundJobsIdStatusGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: BackgroundJobState;  }> {
+    public async apiV2BackgroundJobsIdStatusGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BackgroundJobState;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/{id}/status'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -423,8 +433,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -478,7 +489,7 @@ export class BackgroundJobsApi {
      * @param searchValue Value for searching
      * @param backgroundJobFilterModel 
      */
-    public async apiV2BackgroundJobsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, backgroundJobFilterModel?: BackgroundJobFilterModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
+    public async apiV2BackgroundJobsSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, backgroundJobFilterModel?: BackgroundJobFilterModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<BackgroundJobGetModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/backgroundJobs/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -515,8 +526,9 @@ export class BackgroundJobsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

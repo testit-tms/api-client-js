@@ -15,6 +15,7 @@ import { IterationModel } from './iterationModel';
 import { LastTestResultModel } from './lastTestResultModel';
 import { TestStatusApiResult } from './testStatusApiResult';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 
 export class TestPointWithLastResultResponseModel {
     'id': string;
@@ -42,6 +43,7 @@ export class TestPointWithLastResultResponseModel {
     'tagNames'?: Array<string> | null;
     'duration': number;
     'priority': WorkItemPriorityModel;
+    'sourceType': WorkItemSourceTypeModel;
     'testSuiteNameBreadCrumbs'?: Array<string> | null;
     'groupCount'?: number | null;
     'iteration'?: IterationModel | null;
@@ -158,6 +160,11 @@ export class TestPointWithLastResultResponseModel {
             "name": "priority",
             "baseName": "priority",
             "type": "WorkItemPriorityModel"
+        },
+        {
+            "name": "sourceType",
+            "baseName": "sourceType",
+            "type": "WorkItemSourceTypeModel"
         },
         {
             "name": "testSuiteNameBreadCrumbs",

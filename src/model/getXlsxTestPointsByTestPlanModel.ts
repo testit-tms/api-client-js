@@ -16,6 +16,7 @@ export class GetXlsxTestPointsByTestPlanModel {
     'includeName': boolean;
     'includeSection': boolean;
     'includePriority': boolean;
+    'includeSourceType': boolean;
     'includeAutomated': boolean;
     'includeStatus': boolean;
     'includeDuration': boolean;
@@ -44,6 +45,11 @@ export class GetXlsxTestPointsByTestPlanModel {
         {
             "name": "includePriority",
             "baseName": "includePriority",
+            "type": "boolean"
+        },
+        {
+            "name": "includeSourceType",
+            "baseName": "includeSourceType",
             "type": "boolean"
         },
         {

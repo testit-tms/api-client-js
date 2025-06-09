@@ -17,6 +17,7 @@ import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemLinkFilterApiModel } from './workItemLinkFilterApiModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 import { WorkItemStates } from './workItemStates';
 
 export class WorkItemFilterApiModel {
@@ -76,6 +77,10 @@ export class WorkItemFilterApiModel {
     * Collection of priorities of work item
     */
     'priorities'?: Array<WorkItemPriorityModel> | null;
+    /**
+    * Source type of work item (manual creation or AI generated)
+    */
+    'sourceTypes'?: Array<WorkItemSourceTypeModel> | null;
     /**
     * Collection of types of work item
     */
@@ -189,6 +194,11 @@ export class WorkItemFilterApiModel {
             "name": "priorities",
             "baseName": "priorities",
             "type": "Array<WorkItemPriorityModel>"
+        },
+        {
+            "name": "sourceTypes",
+            "baseName": "sourceTypes",
+            "type": "Array<WorkItemSourceTypeModel>"
         },
         {
             "name": "types",

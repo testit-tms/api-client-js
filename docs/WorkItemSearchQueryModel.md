@@ -15,6 +15,7 @@
 | **modifiedByIds** | **Set** | Collection of identifiers of users who applied last modification to work item | [optional] [default to null] |
 | **states** | [**Set**](WorkItemStates.md) | Collection of states of work item | [optional] [default to null] |
 | **priorities** | [**Set**](WorkItemPriorityModel.md) | Collection of priorities of work item | [optional] [default to null] |
+| **sourceTypes** | [**Set**](WorkItemSourceTypeModel.md) | Collection of priorities of work item | [optional] [default to null] |
 | **types** | [**Set**](WorkItemEntityTypes.md) | Collection of types of work item | [optional] [default to null] |
 | **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of creation date to search for | [optional] [default to null] |
 | **modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of last modification date to search for | [optional] [default to null] |

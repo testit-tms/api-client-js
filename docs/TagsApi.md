@@ -5,7 +5,6 @@ All URIs are relative to *http://localhost*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**apiV2TagsDelete**](TagsApi.md#apiV2TagsDelete) | **DELETE** /api/v2/tags | Delete tags |
-| [**apiV2TagsGet**](TagsApi.md#apiV2TagsGet) | **GET** /api/v2/tags | Get all Tags |
 | [**apiV2TagsIdDelete**](TagsApi.md#apiV2TagsIdDelete) | **DELETE** /api/v2/tags/{id} | Delete tag |
 | [**apiV2TagsPost**](TagsApi.md#apiV2TagsPost) | **POST** /api/v2/tags | Create tag |
 | [**apiV2TagsPut**](TagsApi.md#apiV2TagsPut) | **PUT** /api/v2/tags | Update tag |
@@ -15,17 +14,17 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2TagsDelete"></a>
 # **apiV2TagsDelete**
-> apiV2TagsDelete(TagSelectModel)
+> apiV2TagsDelete(SelectTagsApiModel)
 
 Delete tags
 
-     Use case   User sets collection of tags internal (guid format) identifiers   System searches and deletes a collection of tags
+     Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TagSelectModel** | [**TagSelectModel**](../Models/TagSelectModel.md)|  | [optional] |
+| **SelectTagsApiModel** | [**SelectTagsApiModel**](../Models/SelectTagsApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -40,37 +39,13 @@ null (empty response body)
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
 - **Accept**: application/json
 
-<a name="apiV2TagsGet"></a>
-# **apiV2TagsGet**
-> List apiV2TagsGet()
-
-Get all Tags
-
-     Use case   User runs method execution   System returns tags (listed in the response example)
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List**](../Models/TagModel.md)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
 <a name="apiV2TagsIdDelete"></a>
 # **apiV2TagsIdDelete**
 > apiV2TagsIdDelete(id)
 
 Delete tag
 
-     Use case   User sets tag internal (guid format) identifier   System search and delete tag
+     Use case  User sets tag internal (guid format) identifier  System search and delete tag
 
 ### Parameters
 
@@ -93,21 +68,21 @@ null (empty response body)
 
 <a name="apiV2TagsPost"></a>
 # **apiV2TagsPost**
-> TagModel apiV2TagsPost(TagPostModel)
+> TagApiResult apiV2TagsPost(CreateTagApiModel)
 
 Create tag
 
-     Use case   User sets tag model (listed in the request example)   User runs method execution   System creates tag   System returns tag model (listed in the response example)
+     Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **TagPostModel** | [**TagPostModel**](../Models/TagPostModel.md)|  | [optional] |
+| **CreateTagApiModel** | [**CreateTagApiModel**](../Models/CreateTagApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TagModel**](../Models/TagModel.md)
+[**TagApiResult**](../Models/TagApiResult.md)
 
 ### Authorization
 
@@ -120,22 +95,22 @@ Create tag
 
 <a name="apiV2TagsPut"></a>
 # **apiV2TagsPut**
-> TagModel apiV2TagsPut(id, TagPutModel)
+> TagApiResult apiV2TagsPut(id, UpdateTagApiModel)
 
 Update tag
 
-     Use case   User sets tag ID and model (listed in the request example)   User runs method execution   System updates tag   System returns tag model (listed in the response example)
+     Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **UUID**|  | [optional] [default to null] |
-| **TagPutModel** | [**TagPutModel**](../Models/TagPutModel.md)|  | [optional] |
+| **UpdateTagApiModel** | [**UpdateTagApiModel**](../Models/UpdateTagApiModel.md)|  | [optional] |
 
 ### Return type
 
-[**TagModel**](../Models/TagModel.md)
+[**TagApiResult**](../Models/TagApiResult.md)
 
 ### Authorization
 
@@ -152,7 +127,7 @@ Update tag
 
 Search tags
 
-     Use case   User runs method execution   System returns collection of tags (listed in the response example)
+     Use case  User runs method execution  System returns collection of tags (listed in the response example)
 
 ### Parameters
 
@@ -166,7 +141,7 @@ Search tags
 
 ### Return type
 
-[**List**](../Models/TagModel.md)
+[**List**](../Models/TagApiResult.md)
 
 ### Authorization
 
@@ -183,7 +158,7 @@ Search tags
 
 Get all Tags that are used in TestPlans
 
-     Use case   User runs method execution   System returns tags (listed in the response example)
+     Use case  User runs method execution  System returns tags (listed in the response example)
 
 ### Parameters
 
@@ -197,7 +172,7 @@ Get all Tags that are used in TestPlans
 
 ### Return type
 
-[**List**](../Models/TagModel.md)
+[**List**](../Models/TagApiResult.md)
 
 ### Authorization
 

@@ -17,7 +17,7 @@ All URIs are relative to *http://localhost*
 
 Add attributes to project&#39;s test plans
 
-     Use case   User sets project internal or global identifier and attributes identifiers   User runs method execution   System updates project and add attributes to project for test plans   System returns no content response
+     Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
 
 ### Parameters
 
@@ -45,7 +45,7 @@ null (empty response body)
 
 Delete attribute from project&#39;s test plans
 
-     Use case   User sets project internal or global identifier and attribute identifier   User runs method execution   System updates project and delete attribute from project for test plans   System returns no content response
+     Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
 
 ### Parameters
 
@@ -73,7 +73,7 @@ null (empty response body)
 
 Get project&#39;s test plan attributes
 
-     Use case   User runs method execution   System returns project for test plans attributes by project identifier
+     Use case  User runs method execution  System returns project for test plans attributes by project identifier
 
 ### Parameters
 
@@ -131,7 +131,7 @@ Search for attributes used in the project test plans
 
 Update attribute of project&#39;s test plans
 
-     Use case   User sets project internal or global identifier and attribute model   User runs method execution   System updates project and project attribute for test plan   System returns no content response
+     Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
 
 ### Parameters
 

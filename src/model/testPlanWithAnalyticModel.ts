@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { TagPostModel } from './tagPostModel';
+import { TagModel } from './tagModel';
 import { TestPlanStatusModel } from './testPlanStatusModel';
 import { TestPointAnalyticResult } from './testPointAnalyticResult';
 
@@ -38,7 +38,7 @@ export class TestPlanWithAnalyticModel {
     'lockedDate'?: Date | null;
     'id': string;
     'lockedById'?: string | null;
-    'tags'?: Array<TagPostModel> | null;
+    'tags'?: Array<TagModel> | null;
     'name': string;
     /**
     * Used for analytics
@@ -126,7 +126,7 @@ export class TestPlanWithAnalyticModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagPostModel>"
+            "type": "Array<TagModel>"
         },
         {
             "name": "name",
