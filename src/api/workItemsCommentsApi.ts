@@ -75,10 +75,6 @@ export class WorkItemsCommentsApi {
         this._defaultHeaders = defaultHeaders;
     }
 
-    set rejectUnauthorized(value: boolean) {
-        this._rejectUnauthorized = value;
-    }
-
     get defaultHeaders() {
         return this._defaultHeaders;
     }
@@ -97,6 +93,10 @@ export class WorkItemsCommentsApi {
 
     public addInterceptor(interceptor: Interceptor) {
         this.interceptors.push(interceptor);
+    }
+
+    public setRejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
     }
 
     /**
