@@ -15,6 +15,7 @@ import { LastTestResultModel } from './lastTestResultModel';
 import { TestPointStatus } from './testPointStatus';
 import { TestStatusApiResult } from './testStatusApiResult';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 import { WorkItemState } from './workItemState';
 
 export class TestPointShortResponseModel {
@@ -100,6 +101,10 @@ export class TestPointShortResponseModel {
     * Priority of the test point
     */
     'priority': WorkItemPriorityModel;
+    /**
+    * Source type of the test point
+    */
+    'sourceType': WorkItemSourceTypeModel;
     /**
     * Indicates if the test point represents an autotest
     */
@@ -259,6 +264,11 @@ export class TestPointShortResponseModel {
             "name": "priority",
             "baseName": "priority",
             "type": "WorkItemPriorityModel"
+        },
+        {
+            "name": "sourceType",
+            "baseName": "sourceType",
+            "type": "WorkItemSourceTypeModel"
         },
         {
             "name": "isAutomated",

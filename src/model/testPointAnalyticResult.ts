@@ -12,16 +12,26 @@
 
 import { RequestFile } from './models';
 import { TestPlanGroupByStatus } from './testPlanGroupByStatus';
+import { TestPlanGroupByStatusCode } from './testPlanGroupByStatusCode';
 import { TestPlanGroupByTestSuite } from './testPlanGroupByTestSuite';
 import { TestPlanGroupByTester } from './testPlanGroupByTester';
 import { TestPlanGroupByTesterAndStatus } from './testPlanGroupByTesterAndStatus';
+import { TestPlanGroupByTesterAndStatusCode } from './testPlanGroupByTesterAndStatusCode';
 
 export class TestPointAnalyticResult {
+    /**
+    * @deprecated
+    */
     'countGroupByStatus': Array<TestPlanGroupByStatus>;
     'sumGroupByTester': Array<TestPlanGroupByTester>;
     'countGroupByTester': Array<TestPlanGroupByTester>;
     'countGroupByTestSuite': Array<TestPlanGroupByTestSuite>;
+    /**
+    * @deprecated
+    */
     'countGroupByTesterAndStatus': Array<TestPlanGroupByTesterAndStatus>;
+    'countGroupByStatusCode': Array<TestPlanGroupByStatusCode>;
+    'countGroupByTesterAndStatusCode': Array<TestPlanGroupByTesterAndStatusCode>;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,6 +60,16 @@ export class TestPointAnalyticResult {
             "name": "countGroupByTesterAndStatus",
             "baseName": "countGroupByTesterAndStatus",
             "type": "Array<TestPlanGroupByTesterAndStatus>"
+        },
+        {
+            "name": "countGroupByStatusCode",
+            "baseName": "countGroupByStatusCode",
+            "type": "Array<TestPlanGroupByStatusCode>"
+        },
+        {
+            "name": "countGroupByTesterAndStatusCode",
+            "baseName": "countGroupByTesterAndStatusCode",
+            "type": "Array<TestPlanGroupByTesterAndStatusCode>"
         }    ];
 
     static getAttributeTypeMap() {

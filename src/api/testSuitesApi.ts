@@ -45,7 +45,9 @@ export enum TestSuitesApiApiKeys {
 
 export class TestSuitesApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -100,13 +102,17 @@ export class TestSuitesApi {
         this.interceptors.push(interceptor);
     }
 
+    public setRejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     /**
      * 
      * @summary Add test-points to test suite
      * @param id Test suite internal identifier
      * @param workItemSelectModel Filter object to retrieve work items for test-suite\&#39;s project
      */
-    public async addTestPointsToTestSuite (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async addTestPointsToTestSuite (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/test-points'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -129,8 +135,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -180,7 +187,7 @@ export class TestSuitesApi {
      * @param id Test Suite internal (UUID) identifier
      * @param operation 
      */
-    public async apiV2TestSuitesIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesIdPatch (id: string, operation?: Array<Operation>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -203,8 +210,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'PATCH',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -253,7 +261,7 @@ export class TestSuitesApi {
      * @summary Refresh test suite. Only dynamic test suites are supported by this method
      * @param id Test Suite internal (UUID) identifier
      */
-    public async apiV2TestSuitesIdRefreshPost (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesIdRefreshPost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/refresh'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -276,8 +284,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -326,7 +335,7 @@ export class TestSuitesApi {
      * @param id Unique ID of the test suite
      * @param requestBody 
      */
-    public async apiV2TestSuitesIdWorkItemsPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesIdWorkItemsPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/workItems'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -349,8 +358,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -399,7 +409,7 @@ export class TestSuitesApi {
      * @summary Create test suite
      * @param testSuiteV2PostModel 
      */
-    public async apiV2TestSuitesPost (testSuiteV2PostModel?: TestSuiteV2PostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
+    public async apiV2TestSuitesPost (testSuiteV2PostModel?: TestSuiteV2PostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -416,8 +426,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -467,7 +478,7 @@ export class TestSuitesApi {
      * @summary Edit test suite
      * @param testSuiteV2PutModel 
      */
-    public async apiV2TestSuitesPut (testSuiteV2PutModel?: TestSuiteV2PutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2TestSuitesPut (testSuiteV2PutModel?: TestSuiteV2PutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -484,8 +495,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -530,11 +542,11 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System deletes test suite   System returns no content response
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
      * @summary Delete TestSuite
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async deleteTestSuite (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async deleteTestSuite (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -557,8 +569,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -602,11 +615,11 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search configurations related to the test points   System returns configurations array
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
      * @summary Get Configurations By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async getConfigurationsByTestSuiteId (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
+    public async getConfigurationsByTestSuiteId (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/configurations'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -629,8 +642,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -675,11 +689,11 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System returns test points array
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
      * @summary Get TestPoints By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async getTestPointsById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointByTestSuiteModel>;  }> {
+    public async getTestPointsById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestPointByTestSuiteModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/testPoints'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -702,8 +716,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -748,11 +763,11 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search test results related to the test points   System returns test results array
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
      * @summary Get TestResults By Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async getTestResultsById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultV2ShortModel>;  }> {
+    public async getTestResultsById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestResultV2ShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/testResults'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -775,8 +790,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -821,11 +837,11 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User runs method execution   System search test suite by identifier   System returns test suite
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
      * @summary Get TestSuite by Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async getTestSuiteById (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
+    public async getTestSuiteById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -848,8 +864,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -894,7 +911,7 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   [Optional] User sets filter   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search work items related to the test points                         [Optional] User sets filter, system applies filter                     System returns work items array
+     *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
      * @summary Search WorkItems
      * @param id Test suite internal (guid format) identifier\&quot;
      * @param skip Amount of items to be skipped (offset)
@@ -906,7 +923,7 @@ export class TestSuitesApi {
      *
      * @deprecated
      */
-    public async searchWorkItems (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testSuiteWorkItemsSearchModel?: TestSuiteWorkItemsSearchModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async searchWorkItems (id: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, testSuiteWorkItemsSearchModel?: TestSuiteWorkItemsSearchModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/workItems/search'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -949,8 +966,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -996,12 +1014,12 @@ export class TestSuitesApi {
         });
     }
     /**
-     *  Use case   User sets test suite identifier   User sets collection of configuration identifiers   User runs method execution   System search test suite by identifier   System search test points related to the test suite   System search configuration   System restores(if exist) or creates test points with listed configuration   System returns no content response
+     *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
      * @summary Set Configurations By TestSuite Id
      * @param id Test suite internal (guid format) identifier\&quot;
      * @param requestBody Collection of configuration identifiers\&quot;
      */
-    public async setConfigurationsByTestSuiteId (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async setConfigurationsByTestSuiteId (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}/configurations'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1024,8 +1042,9 @@ export class TestSuitesApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

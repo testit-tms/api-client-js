@@ -16,6 +16,7 @@
 | **modifiedDate** | **Date** |  | [optional] [default to null] |
 | **state** | **String** |  | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
+| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [default to null] |
 | **isDeleted** | **Boolean** |  | [default to null] |
 | **versionId** | **UUID** | used for versioning changes in workitem | [default to null] |
 | **isAutomated** | **Boolean** |  | [default to null] |

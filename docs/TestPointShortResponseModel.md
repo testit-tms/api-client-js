@@ -23,6 +23,7 @@
 | **status** | [**TestPointStatus**](TestPointStatus.md) | Status of the test point | [default to null] |
 | **statusModel** | [**TestStatusApiResult**](TestStatusApiResult.md) | Status of the test point | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) | Priority of the test point | [default to null] |
+| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) | Source type of the test point | [default to null] |
 | **isAutomated** | **Boolean** | Indicates if the test point represents an autotest | [default to null] |
 | **name** | **String** | Name of the test point | [default to null] |
 | **configurationId** | **UUID** | Unique ID of the test point configuration | [default to null] |

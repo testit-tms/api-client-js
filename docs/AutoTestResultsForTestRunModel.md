@@ -7,7 +7,8 @@
 | **links** | [**List**](LinkPostModel.md) | Specifies the links in the autotest. | [optional] [default to null] |
 | **failureReasonNames** | [**List**](FailureCategoryModel.md) | Specifies the cause of autotest failure. | [optional] [default to null] |
 | **autoTestExternalId** | **String** | Specifies the external ID of the autotest, which was specified when the test run was created. | [default to null] |
-| **outcome** | [**AvailableTestResultOutcome**](AvailableTestResultOutcome.md) | Specifies the result of the autotest execution. | [default to null] |
+| **outcome** | [**AvailableTestResultOutcome**](AvailableTestResultOutcome.md) | Specifies the result of the autotest execution. | [optional] [default to null] |
+| **statusCode** | **String** | Specifies the result of the autotest execution. | [optional] [default to null] |
 | **message** | **String** | A comment for the result. | [optional] [default to null] |
 | **traces** | **String** | An extended comment or a stack trace. | [optional] [default to null] |
 | **startedOn** | **Date** | Test run start date. | [optional] [default to null] |

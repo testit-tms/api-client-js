@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { TagPostModel } from './tagPostModel';
+import { TagApiModel } from './tagApiModel';
 import { TestSuiteTestPlanApiModel } from './testSuiteTestPlanApiModel';
 
 export class CreateTestPlanApiModel {
     /**
     * Test plan tag names collection
     */
-    'tags'?: Array<TagPostModel> | null;
+    'tags'?: Array<TagApiModel> | null;
     /**
     * Test plan name
     */
@@ -63,7 +63,7 @@ export class CreateTestPlanApiModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagPostModel>"
+            "type": "Array<TagApiModel>"
         },
         {
             "name": "name",

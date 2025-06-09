@@ -17,6 +17,7 @@ import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemLinkFilterModel } from './workItemLinkFilterModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 import { WorkItemStates } from './workItemStates';
 
 export class TestSuiteWorkItemsSearchModel {
@@ -27,7 +28,7 @@ export class TestSuiteWorkItemsSearchModel {
     */
     'tagNames'?: Array<string> | null;
     /**
-    * Collection of types of work item   Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    * Collection of types of work item  Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
     *
     * @deprecated
     */
@@ -92,6 +93,10 @@ export class TestSuiteWorkItemsSearchModel {
     * Collection of priorities of work item
     */
     'priorities'?: Array<WorkItemPriorityModel> | null;
+    /**
+    * Collection of priorities of work item
+    */
+    'sourceTypes'?: Array<WorkItemSourceTypeModel> | null;
     /**
     * Collection of types of work item
     */
@@ -216,6 +221,11 @@ export class TestSuiteWorkItemsSearchModel {
             "name": "priorities",
             "baseName": "priorities",
             "type": "Array<WorkItemPriorityModel>"
+        },
+        {
+            "name": "sourceTypes",
+            "baseName": "sourceTypes",
+            "type": "Array<WorkItemSourceTypeModel>"
         },
         {
             "name": "types",

@@ -52,3 +52,4 @@ export class ProblemDetails {
         return ProblemDetails.attributeTypeMap;
     }
 }
+

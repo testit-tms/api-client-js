@@ -38,7 +38,9 @@ export enum WorkItemsCommentsApiApiKeys {
 
 export class WorkItemsCommentsApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -93,12 +95,16 @@ export class WorkItemsCommentsApi {
         this.interceptors.push(interceptor);
     }
 
+    public setRejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     /**
-     *  Use case   User sets comment identifier   User runs method execution   System delete comment    System returns success status code
+     *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
      * @summary Delete WorkItem comment
      * @param commentId Comment internal (guid format) identifier
      */
-    public async apiV2WorkItemsCommentsCommentIdDelete (commentId: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsCommentsCommentIdDelete (commentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments/{commentId}'
             .replace('{' + 'commentId' + '}', encodeURIComponent(String(commentId)));
         let localVarQueryParameters: any = {};
@@ -121,8 +127,9 @@ export class WorkItemsCommentsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'DELETE',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -166,11 +173,11 @@ export class WorkItemsCommentsApi {
         });
     }
     /**
-     *  Use case   User sets comment properties (listed in request parameters)   User runs method execution   System creates comment    System returns comment model (listed in response parameters)
+     *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
      * @summary Create WorkItem comment
      * @param workItemCommentPostModel 
      */
-    public async apiV2WorkItemsCommentsPost (workItemCommentPostModel?: WorkItemCommentPostModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: WorkItemCommentModel;  }> {
+    public async apiV2WorkItemsCommentsPost (workItemCommentPostModel?: WorkItemCommentPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemCommentModel;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -187,8 +194,9 @@ export class WorkItemsCommentsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -238,7 +246,7 @@ export class WorkItemsCommentsApi {
      * @summary Update work item comment
      * @param workItemCommentPutModel 
      */
-    public async apiV2WorkItemsCommentsPut (workItemCommentPutModel?: WorkItemCommentPutModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2WorkItemsCommentsPut (workItemCommentPutModel?: WorkItemCommentPutModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/comments';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -255,8 +263,9 @@ export class WorkItemsCommentsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'PUT',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -305,7 +314,7 @@ export class WorkItemsCommentsApi {
      * @summary Get work item comments count
      * @param id Unique or global ID of the work item
      */
-    public async apiV2WorkItemsIdCommentsCountGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2WorkItemsIdCommentsCountGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/comments/count'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -328,8 +337,9 @@ export class WorkItemsCommentsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -378,7 +388,7 @@ export class WorkItemsCommentsApi {
      * @summary Get work item comments
      * @param id Unique or global ID of the work item
      */
-    public async apiV2WorkItemsIdCommentsGet (id: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemCommentModel>;  }> {
+    public async apiV2WorkItemsIdCommentsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemCommentModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/workItems/{id}/comments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -401,8 +411,9 @@ export class WorkItemsCommentsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

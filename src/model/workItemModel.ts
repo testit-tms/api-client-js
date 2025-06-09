@@ -16,9 +16,10 @@ import { AutoTestModel } from './autoTestModel';
 import { IterationModel } from './iterationModel';
 import { LinkModel } from './linkModel';
 import { StepModel } from './stepModel';
-import { TagPutModel } from './tagPutModel';
+import { TagModel } from './tagModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 import { WorkItemStates } from './workItemStates';
 
 export class WorkItemModel {
@@ -53,12 +54,13 @@ export class WorkItemModel {
     'description'?: string | null;
     'state': WorkItemStates;
     'priority': WorkItemPriorityModel;
+    'sourceType': WorkItemSourceTypeModel;
     'steps': Array<StepModel>;
     'preconditionSteps': Array<StepModel>;
     'postconditionSteps': Array<StepModel>;
     'duration': number;
     'attributes': { [key: string]: any; };
-    'tags': Array<TagPutModel>;
+    'tags': Array<TagModel>;
     'links': Array<LinkModel>;
     'name': string;
 
@@ -176,6 +178,11 @@ export class WorkItemModel {
             "type": "WorkItemPriorityModel"
         },
         {
+            "name": "sourceType",
+            "baseName": "sourceType",
+            "type": "WorkItemSourceTypeModel"
+        },
+        {
             "name": "steps",
             "baseName": "steps",
             "type": "Array<StepModel>"
@@ -203,7 +210,7 @@ export class WorkItemModel {
         {
             "name": "tags",
             "baseName": "tags",
-            "type": "Array<TagPutModel>"
+            "type": "Array<TagModel>"
         },
         {
             "name": "links",

@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { AutoTestModel } from './autoTestModel';
 import { ConfigurationModel } from './configurationModel';
 import { PublicTestPointModel } from './publicTestPointModel';
+import { TestStatusModel } from './testStatusModel';
 
 export class PublicTestRunModel {
     'testRunId': string;
@@ -25,7 +26,11 @@ export class PublicTestRunModel {
     'configurations': Array<ConfigurationModel>;
     'autoTests': Array<AutoTestModel>;
     'testPoints': Array<PublicTestPointModel>;
+    /**
+    * @deprecated
+    */
     'status': string;
+    'statusModel': TestStatusModel;
     'customParameters'?: { [key: string]: string; } | null;
     'testRunDescription'?: string | null;
 
@@ -81,6 +86,11 @@ export class PublicTestRunModel {
             "name": "status",
             "baseName": "status",
             "type": "string"
+        },
+        {
+            "name": "statusModel",
+            "baseName": "statusModel",
+            "type": "TestStatusModel"
         },
         {
             "name": "customParameters",

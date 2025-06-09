@@ -18,7 +18,7 @@ All URIs are relative to *http://localhost*
 
 Get TestPlans analytics
 
-     Use case   User sets project internal identifier   User sets query params   User runs method execution   System return analytics
+     Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
 
 ### Parameters
 
@@ -78,7 +78,7 @@ Delete multiple test plans
 
 Checks if TestPlan exists with the specified name exists for the project
 
-     Use case   User sets project internal or global identifier    User runs method execution   System purge delete project workitems
+     Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
 
 ### Parameters
 
@@ -158,7 +158,7 @@ Restore multiple test plans
 
 Get Project TestPlans with analytics
 
-     Use case   User sets project internal or global identifier    User sets request body    User runs method execution   System returns project testplans with analytics
+     Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
 
 ### Parameters
 

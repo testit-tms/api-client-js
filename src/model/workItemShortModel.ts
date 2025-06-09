@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { IterationModel } from './iterationModel';
 import { LinkShortModel } from './linkShortModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 import { WorkItemStates } from './workItemStates';
 
 export class WorkItemShortModel {
@@ -93,6 +94,10 @@ export class WorkItemShortModel {
     * Work Item priority level
     */
     'priority': WorkItemPriorityModel;
+    /**
+    * Work Item source type
+    */
+    'sourceType': WorkItemSourceTypeModel;
     /**
     * Flag determining whether Work Item is deleted
     */
@@ -207,6 +212,11 @@ export class WorkItemShortModel {
             "name": "priority",
             "baseName": "priority",
             "type": "WorkItemPriorityModel"
+        },
+        {
+            "name": "sourceType",
+            "baseName": "sourceType",
+            "type": "WorkItemSourceTypeModel"
         },
         {
             "name": "isDeleted",

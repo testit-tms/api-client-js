@@ -15,6 +15,7 @@ import { AutoTestStepModel } from './autoTestStepModel';
 import { ConfigurationShortModel } from './configurationShortModel';
 import { LabelShortModel } from './labelShortModel';
 import { LinkPutModel } from './linkPutModel';
+import { TestStatusModel } from './testStatusModel';
 
 export class AutoTestModel {
     /**
@@ -67,8 +68,14 @@ export class AutoTestModel {
     'lastTestResultConfiguration'?: ConfigurationShortModel | null;
     /**
     * Outcome of the autotest last test result
+    *
+    * @deprecated
     */
     'lastTestResultOutcome'?: string | null;
+    /**
+    * Status of the autotest last test result
+    */
+    'lastTestResultStatus': TestStatusModel;
     /**
     * Stability percentage of the autotest
     */
@@ -197,6 +204,11 @@ export class AutoTestModel {
             "name": "lastTestResultOutcome",
             "baseName": "lastTestResultOutcome",
             "type": "string"
+        },
+        {
+            "name": "lastTestResultStatus",
+            "baseName": "lastTestResultStatus",
+            "type": "TestStatusModel"
         },
         {
             "name": "stabilityPercentage",

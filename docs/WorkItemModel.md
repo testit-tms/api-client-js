@@ -25,12 +25,13 @@
 | **description** | **String** |  | [optional] [default to null] |
 | **state** | [**WorkItemStates**](WorkItemStates.md) |  | [default to null] |
 | **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
+| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [default to null] |
 | **steps** | [**List**](StepModel.md) |  | [default to null] |
 | **preconditionSteps** | [**List**](StepModel.md) |  | [default to null] |
 | **postconditionSteps** | [**List**](StepModel.md) |  | [default to null] |
 | **duration** | **Integer** |  | [default to null] |
 | **attributes** | [**Map**](AnyType.md) |  | [default to null] |
-| **tags** | [**List**](TagPutModel.md) |  | [default to null] |
+| **tags** | [**List**](TagModel.md) |  | [default to null] |
 | **links** | [**List**](LinkModel.md) |  | [default to null] |
 | **name** | **String** |  | [default to null] |
 

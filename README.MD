@@ -19,7 +19,7 @@
 | 5.2     | 5.1             |
 | 5.2.2   | 5.2.1-TMS-5.2.2 |
 | 5.3     | 6.0.1-TMS-5.3   |
-| Cloud   | 6.0.0-TMS-CLOUD |
+| Cloud   | 6.1.0-TMS-CLOUD |
 
 ## For new versions
 
@@ -195,6 +195,7 @@ All URIs are relative to *http://localhost*
 *ProjectsApi* | [**apiV2ProjectsPurgeBulkPost**](docs/ProjectsApi.md#apiv2projectspurgebulkpost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects |
 *ProjectsApi* | [**apiV2ProjectsRestoreBulkPost**](docs/ProjectsApi.md#apiv2projectsrestorebulkpost) | **POST** /api/v2/projects/restore/bulk | Restore multiple projects |
 *ProjectsApi* | [**apiV2ProjectsSearchPost**](docs/ProjectsApi.md#apiv2projectssearchpost) | **POST** /api/v2/projects/search | Search for projects |
+*ProjectsApi* | [**apiV2ProjectsShortsPost**](docs/ProjectsApi.md#apiv2projectsshortspost) | **POST** /api/v2/projects/shorts | Get projects short models |
 *ProjectsApi* | [**createProject**](docs/ProjectsApi.md#createproject) | **POST** /api/v2/projects | Create project |
 *ProjectsApi* | [**deleteProjectAutoTests**](docs/ProjectsApi.md#deleteprojectautotests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete all autotests from project |
 *ProjectsApi* | [**getAllProjects**](docs/ProjectsApi.md#getallprojects) | **GET** /api/v2/projects | Get all projects |
@@ -213,7 +214,6 @@ All URIs are relative to *http://localhost*
 *SectionsApi* | [**rename**](docs/SectionsApi.md#rename) | **POST** /api/v2/sections/rename | Rename section |
 *SectionsApi* | [**updateSection**](docs/SectionsApi.md#updatesection) | **PUT** /api/v2/sections | Update section |
 | *TagsApi* | [**apiV2TagsDelete**](docs/TagsApi.md#apiv2tagsdelete) | **DELETE** /api/v2/tags | Delete tags |
-*TagsApi* | [**apiV2TagsGet**](docs/TagsApi.md#apiv2tagsget) | **GET** /api/v2/tags | Get all Tags |
 *TagsApi* | [**apiV2TagsIdDelete**](docs/TagsApi.md#apiv2tagsiddelete) | **DELETE** /api/v2/tags/{id} | Delete tag |
 *TagsApi* | [**apiV2TagsPost**](docs/TagsApi.md#apiv2tagspost) | **POST** /api/v2/tags | Create tag |
 *TagsApi* | [**apiV2TagsPut**](docs/TagsApi.md#apiv2tagsput) | **PUT** /api/v2/tags | Update tag |
@@ -293,13 +293,6 @@ All URIs are relative to *http://localhost*
 *TestRunsApi* | [**startTestRun**](docs/TestRunsApi.md#starttestrun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun |
 *TestRunsApi* | [**stopTestRun**](docs/TestRunsApi.md#stoptestrun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun |
 *TestRunsApi* | [**updateEmpty**](docs/TestRunsApi.md#updateempty) | **PUT** /api/v2/testRuns | Update empty TestRun |
-| *TestStatusesApi* | [**apiV2TestStatusesCodeCodeExistsGet**](docs/TestStatusesApi.md#apiv2teststatusescodecodeexistsget) | **GET** /api/v2/testStatuses/code/{code}/exists |  |
-*TestStatusesApi* | [**apiV2TestStatusesGet**](docs/TestStatusesApi.md#apiv2teststatusesget) | **GET** /api/v2/testStatuses |  |
-*TestStatusesApi* | [**apiV2TestStatusesIdDelete**](docs/TestStatusesApi.md#apiv2teststatusesiddelete) | **DELETE** /api/v2/testStatuses/{id} |  |
-*TestStatusesApi* | [**apiV2TestStatusesIdGet**](docs/TestStatusesApi.md#apiv2teststatusesidget) | **GET** /api/v2/testStatuses/{id} |  |
-*TestStatusesApi* | [**apiV2TestStatusesNameNameExistsGet**](docs/TestStatusesApi.md#apiv2teststatusesnamenameexistsget) | **GET** /api/v2/testStatuses/name/{name}/exists |  |
-*TestStatusesApi* | [**apiV2TestStatusesPost**](docs/TestStatusesApi.md#apiv2teststatusespost) | **POST** /api/v2/testStatuses |  |
-*TestStatusesApi* | [**apiV2TestStatusesPut**](docs/TestStatusesApi.md#apiv2teststatusesput) | **PUT** /api/v2/testStatuses |  |
 | *TestSuitesApi* | [**addTestPointsToTestSuite**](docs/TestSuitesApi.md#addtestpointstotestsuite) | **POST** /api/v2/testSuites/{id}/test-points | Add test-points to test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdPatch**](docs/TestSuitesApi.md#apiv2testsuitesidpatch) | **PATCH** /api/v2/testSuites/{id} | Patch test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdRefreshPost**](docs/TestSuitesApi.md#apiv2testsuitesidrefreshpost) | **POST** /api/v2/testSuites/{id}/refresh | Refresh test suite. Only dynamic test suites are supported by this method |

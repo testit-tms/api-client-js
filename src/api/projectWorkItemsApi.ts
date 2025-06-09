@@ -16,7 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
-import { TagShortModel } from '../model/tagShortModel';
+import { TagShortApiResult } from '../model/tagShortApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
@@ -42,7 +42,9 @@ export enum ProjectWorkItemsApiApiKeys {
 
 export class ProjectWorkItemsApi {
     protected _basePath = defaultBasePath;
+    
     protected _defaultHeaders : any = {};
+    protected _rejectUnauthorized : any = {};
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -97,6 +99,10 @@ export class ProjectWorkItemsApi {
         this.interceptors.push(interceptor);
     }
 
+    public setRejectUnauthorized(value: boolean) {
+        this._rejectUnauthorized = value;
+    }
+
     /**
      * 
      * @summary Search for work items and group results by attribute
@@ -108,7 +114,7 @@ export class ProjectWorkItemsApi {
      * @param searchValue Value for searching
      * @param workItemGroupGetModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchGroupedPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemGroupGetModel?: WorkItemGroupGetModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemGroupModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchGroupedPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemGroupGetModel?: WorkItemGroupGetModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemGroupModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search/grouped'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -151,8 +157,9 @@ export class ProjectWorkItemsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -208,7 +215,7 @@ export class ProjectWorkItemsApi {
      * @param searchValue Value for searching
      * @param workItemSelectModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchIdPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchIdPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search/id'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -251,8 +258,9 @@ export class ProjectWorkItemsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -308,7 +316,7 @@ export class ProjectWorkItemsApi {
      * @param searchValue Value for searching
      * @param workItemSelectApiModel 
      */
-    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsSearchPost (projectId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -351,8 +359,9 @@ export class ProjectWorkItemsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'POST',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -398,12 +407,12 @@ export class ProjectWorkItemsApi {
         });
     }
     /**
-     *  Use case   User sets project internal identifier    User runs method execution   System returns work items tags
+     *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
      * @summary Get WorkItems Tags
      * @param projectId Project internal (UUID) identifier
      * @param isDeleted 
      */
-    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }> {
+    public async apiV2ProjectsProjectIdWorkItemsTagsGet (projectId: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TagShortApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/tags'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -430,8 +439,9 @@ export class ProjectWorkItemsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,
@@ -459,13 +469,13 @@ export class ProjectWorkItemsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TagShortApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TagShortModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TagShortApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -476,7 +486,7 @@ export class ProjectWorkItemsApi {
         });
     }
     /**
-     *  Use case   User sets project internal or global identifier   [Optional] User sets isDeleted field value   User runs method execution   System search project   [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project   [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted   If User did not set isDeleted field value, System search all  workitems related to project   System returns array of found workitems (listed in response model)
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
      * @summary Get project work items
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param isDeleted If result must consist of only actual/deleted work items
@@ -490,7 +500,7 @@ export class ProjectWorkItemsApi {
      *
      * @deprecated
      */
-    public async getWorkItemsByProjectId (projectId: string, isDeleted?: boolean, tagNames?: Array<string>, includeIterations?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}, rejectUnauthorized: boolean | undefined} = {headers: {}, rejectUnauthorized: true}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
+    public async getWorkItemsByProjectId (projectId: string, isDeleted?: boolean, tagNames?: Array<string>, includeIterations?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WorkItemShortModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -545,8 +555,9 @@ export class ProjectWorkItemsApi {
 
         let localVarUseFormData = false;
 
-        let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: options.rejectUnauthorized,
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
             method: 'GET',
             qs: localVarQueryParameters,
             headers: localVarHeaderParams,

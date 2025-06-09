@@ -3,7 +3,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **tags** | [**List**](TagPostModel.md) | Test plan tag names collection | [optional] [default to null] |
+| **tags** | [**List**](TagApiModel.md) | Test plan tag names collection | [optional] [default to null] |
 | **name** | **String** | Test plan name | [default to null] |
 | **startDate** | **Date** | Date and time of test plan start | [optional] [default to null] |
 | **endDate** | **Date** | Date and time of test plan end | [optional] [default to null] |

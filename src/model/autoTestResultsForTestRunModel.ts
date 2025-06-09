@@ -36,8 +36,14 @@ export class AutoTestResultsForTestRunModel {
     'autoTestExternalId': string;
     /**
     * Specifies the result of the autotest execution.
+    *
+    * @deprecated
     */
-    'outcome': AvailableTestResultOutcome;
+    'outcome'?: AvailableTestResultOutcome | null;
+    /**
+    * Specifies the result of the autotest execution.
+    */
+    'statusCode'?: string | null;
     /**
     * A comment for the result.
     */
@@ -110,6 +116,11 @@ export class AutoTestResultsForTestRunModel {
             "name": "outcome",
             "baseName": "outcome",
             "type": "AvailableTestResultOutcome"
+        },
+        {
+            "name": "statusCode",
+            "baseName": "statusCode",
+            "type": "string"
         },
         {
             "name": "message",

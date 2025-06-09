@@ -15,6 +15,7 @@ import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { TestPointStatus } from './testPointStatus';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
+import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
 
 export class TestPointFilterModel {
     /**
@@ -51,6 +52,10 @@ export class TestPointFilterModel {
     * Specifies a test point priorities to search for
     */
     'priorities'?: Array<WorkItemPriorityModel> | null;
+    /**
+    * Specifies a test point source types to search for
+    */
+    'sourceTypes'?: Array<WorkItemSourceTypeModel> | null;
     /**
     * Specifies a test point automation status to search for
     */
@@ -158,6 +163,11 @@ export class TestPointFilterModel {
             "name": "priorities",
             "baseName": "priorities",
             "type": "Array<WorkItemPriorityModel>"
+        },
+        {
+            "name": "sourceTypes",
+            "baseName": "sourceTypes",
+            "type": "Array<WorkItemSourceTypeModel>"
         },
         {
             "name": "isAutomated",

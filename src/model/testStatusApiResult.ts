@@ -11,12 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { TestStatusType } from './testStatusType';
+import { TestStatusApiType } from './testStatusApiType';
 
 export class TestStatusApiResult {
     'id': string;
     'name': string;
-    'type': TestStatusType;
+    /**
+    * Collection of possible status types
+    */
+    'type': TestStatusApiType;
     'isSystem': boolean;
     'code': string;
     'description'?: string | null;
@@ -37,7 +40,7 @@ export class TestStatusApiResult {
         {
             "name": "type",
             "baseName": "type",
-            "type": "TestStatusType"
+            "type": "TestStatusApiType"
         },
         {
             "name": "isSystem",
