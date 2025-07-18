@@ -158,7 +158,7 @@ Search for attributes
 
 ### Return type
 
-[**List**](../Models/CustomAttributeModel.md)
+[**List**](../Models/CustomAttributeSearchResponseModel.md)
 
 ### Authorization
 

@@ -16,6 +16,7 @@ export class ParameterGroupsFilterApiModel {
     'parameterKeyIds'?: Array<string> | null;
     'name'?: string | null;
     'isDeleted'?: boolean | null;
+    'projectIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +35,11 @@ export class ParameterGroupsFilterApiModel {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

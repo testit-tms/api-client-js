@@ -17,6 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CustomAttributeModel } from '../model/customAttributeModel';
 import { CustomAttributeSearchQueryModel } from '../model/customAttributeSearchQueryModel';
+import { CustomAttributeSearchResponseModel } from '../model/customAttributeSearchResponseModel';
 import { CustomAttributeValidationResult } from '../model/customAttributeValidationResult';
 import { GlobalCustomAttributePostModel } from '../model/globalCustomAttributePostModel';
 import { GlobalCustomAttributeUpdateModel } from '../model/globalCustomAttributeUpdateModel';
@@ -42,7 +43,7 @@ export class CustomAttributesApi {
     protected _basePath = defaultBasePath;
     
     protected _defaultHeaders : any = {};
-    protected _rejectUnauthorized : any = {};
+    protected _rejectUnauthorized : boolean = true;
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -479,7 +480,7 @@ export class CustomAttributesApi {
      * @param searchValue Value for searching
      * @param customAttributeSearchQueryModel 
      */
-    public async apiV2CustomAttributesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeSearchQueryModel?: CustomAttributeSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }> {
+    public async apiV2CustomAttributesSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, customAttributeSearchQueryModel?: CustomAttributeSearchQueryModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeSearchResponseModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/customAttributes/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -547,13 +548,13 @@ export class CustomAttributesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<CustomAttributeSearchResponseModel>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<CustomAttributeModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<CustomAttributeSearchResponseModel>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

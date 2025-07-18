@@ -43,7 +43,7 @@ export class ParametersApi {
     protected _basePath = defaultBasePath;
     
     protected _defaultHeaders : any = {};
-    protected _rejectUnauthorized : any = {};
+    protected _rejectUnauthorized : boolean = true;
     protected _useQuerystring : boolean = false;
 
     protected authentications = {
@@ -245,13 +245,14 @@ export class ParametersApi {
      * @param parameterKeyIds 
      * @param name 
      * @param isDeleted 
+     * @param projectIds 
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2ParametersGroupsGet (parameterKeyIds?: Array<string>, name?: string, isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupApiResult>;  }> {
+    public async apiV2ParametersGroupsGet (parameterKeyIds?: Array<string>, name?: string, isDeleted?: boolean, projectIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/groups';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -274,6 +275,10 @@ export class ParametersApi {
 
         if (isDeleted !== undefined) {
             localVarQueryParameters['isDeleted'] = ObjectSerializer.serialize(isDeleted, "boolean");
+        }
+
+        if (projectIds !== undefined) {
+            localVarQueryParameters['projectIds'] = ObjectSerializer.serialize(projectIds, "Array<string>");
         }
 
         if (skip !== undefined) {
@@ -497,8 +502,9 @@ export class ParametersApi {
     /**
      *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
      * @summary Get all parameter keys
+     * @param projectIds 
      */
-    public async apiV2ParametersKeysGet (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ParametersKeysGet (projectIds?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keys';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -510,6 +516,10 @@ export class ParametersApi {
             localVarHeaderParams.Accept = produces.join(',');
         }
         let localVarFormParams: any = {};
+
+        if (projectIds !== undefined) {
+            localVarQueryParameters['projectIds'] = ObjectSerializer.serialize(projectIds, "Array<string>");
+        }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
 

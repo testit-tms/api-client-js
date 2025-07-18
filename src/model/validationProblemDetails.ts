@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class ValidationProblemDetails {
+export class ValidationProblemDetails extends any {
     'errors': { [key: string]: Array<string>; };
     'type'?: string | null;
     'title'?: string | null;
@@ -55,7 +55,7 @@ export class ValidationProblemDetails {
         }    ];
 
     static getAttributeTypeMap() {
-        return ValidationProblemDetails.attributeTypeMap;
+        return super.getAttributeTypeMap().concat(ValidationProblemDetails.attributeTypeMap);
     }
 }
 

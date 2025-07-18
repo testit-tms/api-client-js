@@ -22,6 +22,7 @@ export class ParameterApiResult {
     'modifiedDate'?: Date | null;
     'modifiedById'?: string | null;
     'isDeleted': boolean;
+    'projectIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,6 +71,11 @@ export class ParameterApiResult {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

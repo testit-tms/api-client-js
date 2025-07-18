@@ -39,7 +39,7 @@ export class SearchApi {
     protected _basePath = defaultBasePath;
     
     protected _defaultHeaders : any = {};
-    protected _rejectUnauthorized : any = {};
+    protected _rejectUnauthorized : boolean = true;
     protected _useQuerystring : boolean = false;
 
     protected authentications = {

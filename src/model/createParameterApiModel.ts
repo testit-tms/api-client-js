@@ -21,6 +21,10 @@ export class CreateParameterApiModel {
     * Value of the parameter
     */
     'value': string;
+    /**
+    * List of projects where parameter should be available
+    */
+    'projectIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +38,11 @@ export class CreateParameterApiModel {
             "name": "value",
             "baseName": "value",
             "type": "string"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
