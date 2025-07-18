@@ -11,29 +11,27 @@
  */
 
 import { RequestFile } from './models';
-import { PreviewsIssueLinkApiResult } from './previewsIssueLinkApiResult';
-import { WorkItemPreviewApiModel } from './workItemPreviewApiModel';
 
-export class GenerateWorkItemPreviewsApiResult {
-    'previews': Array<WorkItemPreviewApiModel>;
-    'link'?: PreviewsIssueLinkApiResult | null;
+export class PreviewsIssueLinkApiModel {
+    'title': string;
+    'url': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "previews",
-            "baseName": "previews",
-            "type": "Array<WorkItemPreviewApiModel>"
+            "name": "title",
+            "baseName": "title",
+            "type": "string"
         },
         {
-            "name": "link",
-            "baseName": "link",
-            "type": "PreviewsIssueLinkApiResult"
+            "name": "url",
+            "baseName": "url",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return GenerateWorkItemPreviewsApiResult.attributeTypeMap;
+        return PreviewsIssueLinkApiModel.attributeTypeMap;
     }
 }
 

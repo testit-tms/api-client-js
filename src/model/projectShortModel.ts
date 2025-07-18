@@ -80,6 +80,7 @@ export class ProjectShortModel {
     * @deprecated
     */
     'isFlakyAuto': boolean;
+    'workflowId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -163,6 +164,11 @@ export class ProjectShortModel {
             "name": "isFlakyAuto",
             "baseName": "isFlakyAuto",
             "type": "boolean"
+        },
+        {
+            "name": "workflowId",
+            "baseName": "workflowId",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

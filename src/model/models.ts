@@ -177,6 +177,8 @@ export * from './parameterShortModel';
 export * from './parametersFilterApiModel';
 export * from './periodViewModel';
 export * from './periodViewModelChangedFieldViewModel';
+export * from './previewsIssueLinkApiModel';
+export * from './previewsIssueLinkApiResult';
 export * from './problemDetails';
 export * from './projectAttributesFilterModel';
 export * from './projectCustomAttributeTemplateGetModel';
@@ -620,6 +622,8 @@ import { ParameterShortModel } from './parameterShortModel';
 import { ParametersFilterApiModel } from './parametersFilterApiModel';
 import { PeriodViewModel } from './periodViewModel';
 import { PeriodViewModelChangedFieldViewModel } from './periodViewModelChangedFieldViewModel';
+import { PreviewsIssueLinkApiModel } from './previewsIssueLinkApiModel';
+import { PreviewsIssueLinkApiResult } from './previewsIssueLinkApiResult';
 import { ProblemDetails } from './problemDetails';
 import { ProjectAttributesFilterModel } from './projectAttributesFilterModel';
 import { ProjectCustomAttributeTemplateGetModel } from './projectCustomAttributeTemplateGetModel';
@@ -1089,6 +1093,8 @@ let typeMap: {[index: string]: any} = {
     "ParametersFilterApiModel": ParametersFilterApiModel,
     "PeriodViewModel": PeriodViewModel,
     "PeriodViewModelChangedFieldViewModel": PeriodViewModelChangedFieldViewModel,
+    "PreviewsIssueLinkApiModel": PreviewsIssueLinkApiModel,
+    "PreviewsIssueLinkApiResult": PreviewsIssueLinkApiResult,
     "ProblemDetails": ProblemDetails,
     "ProjectAttributesFilterModel": ProjectAttributesFilterModel,
     "ProjectCustomAttributeTemplateGetModel": ProjectCustomAttributeTemplateGetModel,
