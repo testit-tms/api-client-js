@@ -89,6 +89,7 @@ export class ProjectModel {
     * @deprecated
     */
     'isFlakyAuto': boolean;
+    'workflowId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -182,6 +183,11 @@ export class ProjectModel {
             "name": "isFlakyAuto",
             "baseName": "isFlakyAuto",
             "type": "boolean"
+        },
+        {
+            "name": "workflowId",
+            "baseName": "workflowId",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
