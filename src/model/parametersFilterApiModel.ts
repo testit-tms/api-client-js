@@ -15,6 +15,7 @@ import { RequestFile } from './models';
 export class ParametersFilterApiModel {
     'name'?: string | null;
     'isDeleted'?: boolean | null;
+    'projectIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,6 +29,11 @@ export class ParametersFilterApiModel {
             "name": "isDeleted",
             "baseName": "isDeleted",
             "type": "boolean"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

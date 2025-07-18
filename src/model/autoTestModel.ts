@@ -75,7 +75,7 @@ export class AutoTestModel {
     /**
     * Status of the autotest last test result
     */
-    'lastTestResultStatus': TestStatusModel;
+    'lastTestResultStatus'?: TestStatusModel | null;
     /**
     * Stability percentage of the autotest
     */

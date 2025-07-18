@@ -77,7 +77,7 @@ null (empty response body)
 
 <a name="apiV2ParametersGroupsGet"></a>
 # **apiV2ParametersGroupsGet**
-> List apiV2ParametersGroupsGet(parameterKeyIds, name, isDeleted, Skip, Take, OrderBy, SearchField, SearchValue)
+> List apiV2ParametersGroupsGet(parameterKeyIds, name, isDeleted, projectIds, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get parameters as group
 
@@ -90,6 +90,7 @@ Get parameters as group
 | **parameterKeyIds** | [**Set**](../Models/UUID.md)|  | [optional] [default to null] |
 | **name** | **String**|  | [optional] [default to null] |
 | **isDeleted** | **Boolean**|  | [optional] [default to null] |
+| **projectIds** | [**List**](../Models/UUID.md)|  | [optional] [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
@@ -165,14 +166,17 @@ Get all parameter key values
 
 <a name="apiV2ParametersKeysGet"></a>
 # **apiV2ParametersKeysGet**
-> List apiV2ParametersKeysGet()
+> List apiV2ParametersKeysGet(projectIds)
 
 Get all parameter keys
 
      Use case  User runs method execution  System search all parameter keys  System returns parameter keys
 
 ### Parameters
-This endpoint does not need any parameter.
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectIds** | [**List**](../Models/UUID.md)|  | [optional] [default to null] |
 
 ### Return type
 

@@ -93,6 +93,7 @@ export * from './customAttributeOptionPostModel';
 export * from './customAttributePostModel';
 export * from './customAttributePutModel';
 export * from './customAttributeSearchQueryModel';
+export * from './customAttributeSearchResponseModel';
 export * from './customAttributeTemplateModel';
 export * from './customAttributeTemplatePostModel';
 export * from './customAttributeTemplatePutModel';
@@ -535,6 +536,7 @@ import { CustomAttributeOptionPostModel } from './customAttributeOptionPostModel
 import { CustomAttributePostModel } from './customAttributePostModel';
 import { CustomAttributePutModel } from './customAttributePutModel';
 import { CustomAttributeSearchQueryModel } from './customAttributeSearchQueryModel';
+import { CustomAttributeSearchResponseModel } from './customAttributeSearchResponseModel';
 import { CustomAttributeTemplateModel } from './customAttributeTemplateModel';
 import { CustomAttributeTemplatePostModel } from './customAttributeTemplatePostModel';
 import { CustomAttributeTemplatePutModel } from './customAttributeTemplatePutModel';
@@ -1013,6 +1015,7 @@ let typeMap: {[index: string]: any} = {
     "CustomAttributePostModel": CustomAttributePostModel,
     "CustomAttributePutModel": CustomAttributePutModel,
     "CustomAttributeSearchQueryModel": CustomAttributeSearchQueryModel,
+    "CustomAttributeSearchResponseModel": CustomAttributeSearchResponseModel,
     "CustomAttributeTemplateModel": CustomAttributeTemplateModel,
     "CustomAttributeTemplatePostModel": CustomAttributeTemplatePostModel,
     "CustomAttributeTemplatePutModel": CustomAttributeTemplatePutModel,

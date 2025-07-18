@@ -23,6 +23,7 @@ export class ParameterShortModel {
     * Key of the parameter
     */
     'name': string;
+    'projectIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -46,6 +47,11 @@ export class ParameterShortModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

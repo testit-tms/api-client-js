@@ -16,6 +16,7 @@ export class ParameterGroupApiResult {
     'parameterKeyId': string;
     'name': string;
     'values': { [key: string]: string; };
+    'projectIds': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +35,11 @@ export class ParameterGroupApiResult {
             "name": "values",
             "baseName": "values",
             "type": "{ [key: string]: string; }"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
