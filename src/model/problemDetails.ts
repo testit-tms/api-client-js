@@ -12,7 +12,7 @@
 
 import { RequestFile } from './models';
 
-export class ProblemDetails extends any {
+export class ProblemDetails {
     'type'?: string | null;
     'title'?: string | null;
     'status'?: number | null;
@@ -49,7 +49,7 @@ export class ProblemDetails extends any {
         }    ];
 
     static getAttributeTypeMap() {
-        return super.getAttributeTypeMap().concat(ProblemDetails.attributeTypeMap);
+        return ProblemDetails.attributeTypeMap;
     }
 }
 
