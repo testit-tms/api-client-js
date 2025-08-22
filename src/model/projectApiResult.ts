@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 import { CustomAttributeModel } from './customAttributeModel';
 import { ProjectTypeModel } from './projectTypeModel';
 
-export class ProjectModel {
+export class ProjectApiResult {
     /**
     * Unique ID of the project
     */
@@ -89,6 +89,7 @@ export class ProjectModel {
     * @deprecated
     */
     'isFlakyAuto': boolean;
+    'workflowId': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -182,12 +183,17 @@ export class ProjectModel {
             "name": "isFlakyAuto",
             "baseName": "isFlakyAuto",
             "type": "boolean"
+        },
+        {
+            "name": "workflowId",
+            "baseName": "workflowId",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return ProjectModel.attributeTypeMap;
+        return ProjectApiResult.attributeTypeMap;
     }
 }
 
-export namespace ProjectModel {
+export namespace ProjectApiResult {
 }
