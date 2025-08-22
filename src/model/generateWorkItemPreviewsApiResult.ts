@@ -11,12 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { PreviewsIssueLinkApiResult } from './previewsIssueLinkApiResult';
 import { WorkItemPreviewApiModel } from './workItemPreviewApiModel';
 
 export class GenerateWorkItemPreviewsApiResult {
     'previews': Array<WorkItemPreviewApiModel>;
-    'link'?: PreviewsIssueLinkApiResult | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,11 +23,6 @@ export class GenerateWorkItemPreviewsApiResult {
             "name": "previews",
             "baseName": "previews",
             "type": "Array<WorkItemPreviewApiModel>"
-        },
-        {
-            "name": "link",
-            "baseName": "link",
-            "type": "PreviewsIssueLinkApiResult"
         }    ];
 
     static getAttributeTypeMap() {
