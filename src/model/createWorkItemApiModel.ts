@@ -17,78 +17,97 @@ import { AutoTestIdModel } from './autoTestIdModel';
 import { CreateLinkApiModel } from './createLinkApiModel';
 import { CreateStepApiModel } from './createStepApiModel';
 import { TagModel } from './tagModel';
-import { WorkItemEntityTypes } from './workItemEntityTypes';
-import { WorkItemPriorityModel } from './workItemPriorityModel';
-import { WorkItemStates } from './workItemStates';
+import { WorkItemEntityTypeApiModel } from './workItemEntityTypeApiModel';
+import { WorkItemPriorityApiModel } from './workItemPriorityApiModel';
+import { WorkItemStateApiModel } from './workItemStateApiModel';
 
 export class CreateWorkItemApiModel {
-    'entityTypeName': WorkItemEntityTypes;
     /**
-    * Workitem description
-    */
-    'description'?: string | null;
-    'state': WorkItemStates;
-    'priority': WorkItemPriorityModel;
-    /**
-    * Collection of workitem steps
-    */
-    'steps': Array<CreateStepApiModel>;
-    /**
-    * Collection of workitem precondition steps
-    */
-    'preconditionSteps': Array<CreateStepApiModel>;
-    /**
-    * Collection of workitem postcondition steps
-    */
-    'postconditionSteps': Array<CreateStepApiModel>;
-    /**
-    * WorkItem duration in milliseconds, must be 0 for shared steps and greater than 0 for the other types of work items
-    */
-    'duration': number;
-    /**
-    * Key value pair of custom workitem attributes
-    */
-    'attributes': { [key: string]: any; };
-    /**
-    * Collection of workitem tags
-    */
-    'tags': Array<TagModel>;
-    /**
-    * Collection of workitem attachments
-    */
-    'attachments'?: Array<AssignAttachmentApiModel> | null;
-    /**
-    * Collection of parameter sets
-    */
-    'iterations'?: Array<AssignIterationApiModel> | null;
-    /**
-    * Collection of workitem links
-    */
-    'links': Array<CreateLinkApiModel>;
-    /**
-    * Workitem name
-    */
-    'name': string;
-    /**
-    * Project unique identifier - used to link workitem with project
+    * Unique identifier of the project
     */
     'projectId': string;
     /**
-    * Internal identifier of section where workitem is located
+    * Unique identifier of the section within a project
     */
-    'sectionId': string;
+    'sectionId'?: string | null;
     /**
-    * Collection of autotest internal ids
+    * Name of the work item
+    */
+    'name': string;
+    /**
+    * Description of the work item
+    */
+    'description'?: string | null;
+    /**
+    * Type of entity associated with this work item
+    */
+    'entityTypeName': WorkItemEntityTypeApiModel;
+    /**
+    * Duration of the work item in milliseconds
+    */
+    'duration': number;
+    /**
+    * State of the work item
+    */
+    'state': WorkItemStateApiModel;
+    /**
+    * Priority level of the work item
+    */
+    'priority': WorkItemPriorityApiModel;
+    /**
+    * Set of custom attributes associated with the work item
+    */
+    'attributes': { [key: string]: any; };
+    /**
+    * Set of tags applied to the work item
+    */
+    'tags': Array<TagModel>;
+    /**
+    * Set of precondition steps that need to be executed before starting the main steps
+    */
+    'preconditionSteps': Array<CreateStepApiModel>;
+    /**
+    * Main steps or actions defined for the work item
+    */
+    'steps': Array<CreateStepApiModel>;
+    /**
+    * Set of postcondition steps that are executed after completing the main steps
+    */
+    'postconditionSteps': Array<CreateStepApiModel>;
+    /**
+    * Associated iterations linked to the work item
+    */
+    'iterations'?: Array<AssignIterationApiModel> | null;
+    /**
+    * Automated tests associated with the work item
     */
     'autoTests'?: Array<AutoTestIdModel> | null;
+    /**
+    * Files attached to the work item
+    */
+    'attachments'?: Array<AssignAttachmentApiModel> | null;
+    /**
+    * Set of links related to the work item
+    */
+    'links': Array<CreateLinkApiModel>;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "entityTypeName",
-            "baseName": "entityTypeName",
-            "type": "WorkItemEntityTypes"
+            "name": "projectId",
+            "baseName": "projectId",
+            "type": "string"
+        },
+        {
+            "name": "sectionId",
+            "baseName": "sectionId",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "baseName": "name",
+            "type": "string"
         },
         {
             "name": "description",
@@ -96,34 +115,24 @@ export class CreateWorkItemApiModel {
             "type": "string"
         },
         {
-            "name": "state",
-            "baseName": "state",
-            "type": "WorkItemStates"
-        },
-        {
-            "name": "priority",
-            "baseName": "priority",
-            "type": "WorkItemPriorityModel"
-        },
-        {
-            "name": "steps",
-            "baseName": "steps",
-            "type": "Array<CreateStepApiModel>"
-        },
-        {
-            "name": "preconditionSteps",
-            "baseName": "preconditionSteps",
-            "type": "Array<CreateStepApiModel>"
-        },
-        {
-            "name": "postconditionSteps",
-            "baseName": "postconditionSteps",
-            "type": "Array<CreateStepApiModel>"
+            "name": "entityTypeName",
+            "baseName": "entityTypeName",
+            "type": "WorkItemEntityTypeApiModel"
         },
         {
             "name": "duration",
             "baseName": "duration",
             "type": "number"
+        },
+        {
+            "name": "state",
+            "baseName": "state",
+            "type": "WorkItemStateApiModel"
+        },
+        {
+            "name": "priority",
+            "baseName": "priority",
+            "type": "WorkItemPriorityApiModel"
         },
         {
             "name": "attributes",
@@ -136,9 +145,19 @@ export class CreateWorkItemApiModel {
             "type": "Array<TagModel>"
         },
         {
-            "name": "attachments",
-            "baseName": "attachments",
-            "type": "Array<AssignAttachmentApiModel>"
+            "name": "preconditionSteps",
+            "baseName": "preconditionSteps",
+            "type": "Array<CreateStepApiModel>"
+        },
+        {
+            "name": "steps",
+            "baseName": "steps",
+            "type": "Array<CreateStepApiModel>"
+        },
+        {
+            "name": "postconditionSteps",
+            "baseName": "postconditionSteps",
+            "type": "Array<CreateStepApiModel>"
         },
         {
             "name": "iterations",
@@ -146,29 +165,19 @@ export class CreateWorkItemApiModel {
             "type": "Array<AssignIterationApiModel>"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<CreateLinkApiModel>"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "projectId",
-            "baseName": "projectId",
-            "type": "string"
-        },
-        {
-            "name": "sectionId",
-            "baseName": "sectionId",
-            "type": "string"
-        },
-        {
             "name": "autoTests",
             "baseName": "autoTests",
             "type": "Array<AutoTestIdModel>"
+        },
+        {
+            "name": "attachments",
+            "baseName": "attachments",
+            "type": "Array<AssignAttachmentApiModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<CreateLinkApiModel>"
         }    ];
 
     static getAttributeTypeMap() {

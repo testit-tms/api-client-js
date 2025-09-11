@@ -16,14 +16,15 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { AutoTestNamespaceModel } from '../model/autoTestNamespaceModel';
+import { AutoTestResultReasonProjectApiResult } from '../model/autoTestResultReasonProjectApiResult';
 import { CreateProjectApiModel } from '../model/createProjectApiModel';
 import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
 import { DemoProjectApiResult } from '../model/demoProjectApiResult';
-import { FailureClassModel } from '../model/failureClassModel';
 import { FilterModel } from '../model/filterModel';
 import { GetShortProjectsApiModel } from '../model/getShortProjectsApiModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
+import { ProjectApiResult } from '../model/projectApiResult';
 import { ProjectModel } from '../model/projectModel';
 import { ProjectSelectModel } from '../model/projectSelectModel';
 import { ProjectShortApiResultReply } from '../model/projectShortApiResultReply';
@@ -191,9 +192,8 @@ export class ProjectsApi {
     }
     /**
      * 
-     * @param createProjectApiModel 
      */
-    public async apiV2ProjectsDemoPost (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }> {
+    public async apiV2ProjectsDemoPost (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/demo';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -219,7 +219,6 @@ export class ProjectsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(createProjectApiModel, "CreateProjectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -336,7 +335,7 @@ export class ProjectsApi {
      * @param id Unique or global ID of the project
      * @param isDeleted 
      */
-    public async apiV2ProjectsIdFailureClassesGet (id: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<FailureClassModel>;  }> {
+    public async apiV2ProjectsIdFailureClassesGet (id: string, isDeleted?: boolean, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultReasonProjectApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/failureClasses'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -393,13 +392,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<FailureClassModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestResultReasonProjectApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<FailureClassModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AutoTestResultReasonProjectApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1533,7 +1532,7 @@ export class ProjectsApi {
      * @summary Create project
      * @param createProjectApiModel 
      */
-    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
+    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1581,13 +1580,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ProjectModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ProjectModel");
+                            body = ObjectSerializer.deserialize(body, "ProjectApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

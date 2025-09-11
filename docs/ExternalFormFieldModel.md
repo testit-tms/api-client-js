@@ -12,8 +12,8 @@
 | **isCustomValueAllowed** | **Boolean** |  | [default to null] |
 | **autoCompleteUrl** | **String** |  | [optional] [default to null] |
 | **controlType** | **String** |  | [optional] [default to null] |
-| **minLength** | **Integer** |  | [optional] [default to null] |
-| **maxLength** | **Integer** |  | [optional] [default to null] |
+| **minLength** | **Double** |  | [optional] [default to null] |
+| **maxLength** | **Double** |  | [optional] [default to null] |
 | **isRequired** | **Boolean** |  | [optional] [default to null] |
 | **min** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |
 | **max** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |

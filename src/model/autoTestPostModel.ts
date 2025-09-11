@@ -18,8 +18,14 @@ import { LinkPostModel } from './linkPostModel';
 export class AutoTestPostModel {
     /**
     * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    *
+    * @deprecated
     */
     'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
+    /**
+    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    */
+    'workItemIds'?: Array<string> | null;
     /**
     * Creates a test case linked to the autotest.
     */
@@ -91,6 +97,11 @@ export class AutoTestPostModel {
         {
             "name": "workItemIdsForLinkWithAutoTest",
             "baseName": "workItemIdsForLinkWithAutoTest",
+            "type": "Array<string>"
+        },
+        {
+            "name": "workItemIds",
+            "baseName": "workItemIds",
             "type": "Array<string>"
         },
         {

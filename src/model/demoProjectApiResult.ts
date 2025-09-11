@@ -14,14 +14,6 @@ import { RequestFile } from './models';
 
 export class DemoProjectApiResult {
     /**
-    * Demo project ID
-    */
-    'projectId': string;
-    /**
-    * Demo project global ID
-    */
-    'projectGlobalId': number;
-    /**
     * Job ID
     */
     'jobId': string;
@@ -29,16 +21,6 @@ export class DemoProjectApiResult {
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "projectId",
-            "baseName": "projectId",
-            "type": "string"
-        },
-        {
-            "name": "projectGlobalId",
-            "baseName": "projectGlobalId",
-            "type": "number"
-        },
         {
             "name": "jobId",
             "baseName": "jobId",
