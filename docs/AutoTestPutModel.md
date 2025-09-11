@@ -5,6 +5,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **id** | **UUID** | Used for search autotest. If value is null or equals Guid mask filled with zeros, search will be executed using ExternalId | [optional] [default to null] |
 | **workItemIdsForLinkWithAutoTest** | **Set** |  | [optional] [default to null] |
+| **workItemIds** | **List** |  | [optional] [default to null] |
 | **externalId** | **String** | External ID of the autotest | [default to null] |
 | **links** | [**List**](LinkPutModel.md) | Collection of the autotest links | [optional] [default to null] |
 | **projectId** | **UUID** | Unique ID of the autotest project | [default to null] |

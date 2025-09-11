@@ -20,6 +20,7 @@ import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
 import { TestPointByTestSuiteModel } from '../model/testPointByTestSuiteModel';
 import { TestResultV2ShortModel } from '../model/testResultV2ShortModel';
+import { TestSuiteApiResult } from '../model/testSuiteApiResult';
 import { TestSuiteV2GetModel } from '../model/testSuiteV2GetModel';
 import { TestSuiteV2PostModel } from '../model/testSuiteV2PostModel';
 import { TestSuiteV2PutModel } from '../model/testSuiteV2PutModel';
@@ -841,7 +842,7 @@ export class TestSuitesApi {
      * @summary Get TestSuite by Id
      * @param id Test suite internal (guid format) identifier\&quot;
      */
-    public async getTestSuiteById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }> {
+    public async getTestSuiteById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestSuiteApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testSuites/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -894,13 +895,13 @@ export class TestSuitesApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: TestSuiteV2GetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: TestSuiteApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "TestSuiteV2GetModel");
+                            body = ObjectSerializer.deserialize(body, "TestSuiteApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

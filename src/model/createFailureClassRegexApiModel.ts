@@ -12,17 +12,11 @@
 
 import { RequestFile } from './models';
 
-export class FailureClassRegexModel {
+export class CreateFailureClassRegexApiModel {
+    /**
+    * Failure category regex
+    */
     'regexText': string;
-    'failureClassId'?: string | null;
-    /**
-    * Unique ID of the entity
-    */
-    'id': string;
-    /**
-    * Indicates if the entity is deleted
-    */
-    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -31,25 +25,10 @@ export class FailureClassRegexModel {
             "name": "regexText",
             "baseName": "regexText",
             "type": "string"
-        },
-        {
-            "name": "failureClassId",
-            "baseName": "failureClassId",
-            "type": "string"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return FailureClassRegexModel.attributeTypeMap;
+        return CreateFailureClassRegexApiModel.attributeTypeMap;
     }
 }
 

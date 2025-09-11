@@ -15,11 +15,11 @@ All URIs are relative to *http://localhost*
 | [**apiV2WorkItemsIdVersionVersionIdActualPost**](WorkItemsApi.md#apiV2WorkItemsIdVersionVersionIdActualPost) | **POST** /api/v2/workItems/{id}/version/{versionId}/actual | Set WorkItem as actual |
 | [**apiV2WorkItemsLinksUrlsSearchPost**](WorkItemsApi.md#apiV2WorkItemsLinksUrlsSearchPost) | **POST** /api/v2/workItems/links/urls/search |  |
 | [**apiV2WorkItemsMovePost**](WorkItemsApi.md#apiV2WorkItemsMovePost) | **POST** /api/v2/workItems/move | Move WorkItem to another section |
+| [**apiV2WorkItemsPost**](WorkItemsApi.md#apiV2WorkItemsPost) | **POST** /api/v2/workItems | Creates work item |
 | [**apiV2WorkItemsSearchPost**](WorkItemsApi.md#apiV2WorkItemsSearchPost) | **POST** /api/v2/workItems/search | Search for work items |
 | [**apiV2WorkItemsSharedStepIdReferencesSectionsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesSectionsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/sections | Get SharedStep references in sections |
 | [**apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**](WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesWorkItemsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/workItems | Get SharedStep references in work items |
 | [**apiV2WorkItemsSharedStepsSharedStepIdReferencesGet**](WorkItemsApi.md#apiV2WorkItemsSharedStepsSharedStepIdReferencesGet) | **GET** /api/v2/workItems/sharedSteps/{sharedStepId}/references | Get SharedStep references |
-| [**createWorkItem**](WorkItemsApi.md#createWorkItem) | **POST** /api/v2/workItems | Create Test Case, Checklist or Shared Step |
 | [**deleteAllWorkItemsFromAutoTest**](WorkItemsApi.md#deleteAllWorkItemsFromAutoTest) | **DELETE** /api/v2/workItems/{id}/autoTests | Delete all links AutoTests from WorkItem by Id or GlobalId |
 | [**deleteWorkItem**](WorkItemsApi.md#deleteWorkItem) | **DELETE** /api/v2/workItems/{id} | Delete Test Case, Checklist or Shared Step by Id or GlobalId |
 | [**getAutoTestsForWorkItem**](WorkItemsApi.md#getAutoTestsForWorkItem) | **GET** /api/v2/workItems/{id}/autoTests | Get all AutoTests linked to WorkItem by Id or GlobalId |
@@ -354,6 +354,31 @@ Move WorkItem to another section
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2WorkItemsPost"></a>
+# **apiV2WorkItemsPost**
+> WorkItemApiResult apiV2WorkItemsPost(CreateWorkItemApiModel)
+
+Creates work item
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **CreateWorkItemApiModel** | [**CreateWorkItemApiModel**](../Models/CreateWorkItemApiModel.md)|  | [optional] |
+
+### Return type
+
+[**WorkItemApiResult**](../Models/WorkItemApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2WorkItemsSearchPost"></a>
 # **apiV2WorkItemsSearchPost**
 > List apiV2WorkItemsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectApiModel)
@@ -475,33 +500,6 @@ Get SharedStep references
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-<a name="createWorkItem"></a>
-# **createWorkItem**
-> WorkItemModel createWorkItem(CreateWorkItemApiModel)
-
-Create Test Case, Checklist or Shared Step
-
-     Use case  User sets work item properties (listed in request parameters)  User runs method execution  System creates work item by identifier  System returns work item model (listed in response parameters)
-
-### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateWorkItemApiModel** | [**CreateWorkItemApiModel**](../Models/CreateWorkItemApiModel.md)|  | [optional] |
-
-### Return type
-
-[**WorkItemModel**](../Models/WorkItemModel.md)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 
 <a name="deleteAllWorkItemsFromAutoTest"></a>
