@@ -6,6 +6,7 @@
 | **id** | **UUID** | Unique ID of the test result | [default to null] |
 | **name** | **String** | Name of autotest represented by the test result | [default to null] |
 | **autotestGlobalId** | **Long** | Global ID of autotest represented by the test result | [default to null] |
+| **autotestExternalId** | **String** | External ID of autotest represented by the test result | [optional] [default to null] |
 | **testRunId** | **UUID** | Unique ID of test run where the test result is located | [default to null] |
 | **configurationId** | **UUID** | Unique ID of configuration which the test result uses | [default to null] |
 | **configurationName** | **String** | Name of configuration which the test result uses | [default to null] |

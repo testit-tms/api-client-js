@@ -541,7 +541,7 @@ Get last modification date of test plan&#39;s test results
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan unique or global ID | [default to null] |
+| **id** | **String**|  | [default to null] |
 
 ### Return type
 
@@ -762,7 +762,7 @@ Get TestSuites Tree By Id
 
 ### Return type
 
-[**List**](../Models/TestSuiteV2TreeModel.md)
+[**List**](../Models/TestSuiteHierarchyApiResult.md)
 
 ### Authorization
 

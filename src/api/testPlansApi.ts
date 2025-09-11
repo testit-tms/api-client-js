@@ -31,7 +31,7 @@ import { TestPointAnalyticResult } from '../model/testPointAnalyticResult';
 import { TestPointSelectModel } from '../model/testPointSelectModel';
 import { TestPointWithLastResultResponseModel } from '../model/testPointWithLastResultResponseModel';
 import { TestRunApiResult } from '../model/testRunApiResult';
-import { TestSuiteV2TreeModel } from '../model/testSuiteV2TreeModel';
+import { TestSuiteHierarchyApiResult } from '../model/testSuiteHierarchyApiResult';
 import { UpdateTestPlanApiModel } from '../model/updateTestPlanApiModel';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
@@ -1558,7 +1558,7 @@ export class TestPlansApi {
     /**
      * 
      * @summary Get last modification date of test plan\'s test results
-     * @param id Test plan unique or global ID
+     * @param id 
      */
     public async apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testRuns/testResults/lastModified/modifiedDate'
@@ -2143,7 +2143,7 @@ export class TestPlansApi {
      * @summary Get TestSuites Tree By Id
      * @param id Test plan internal (guid format) or global (int format) identifier
      */
-    public async getTestSuitesById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestSuiteV2TreeModel>;  }> {
+    public async getTestSuitesById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestSuiteHierarchyApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testSuites'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -2196,13 +2196,13 @@ export class TestPlansApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<TestSuiteV2TreeModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<TestSuiteHierarchyApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<TestSuiteV2TreeModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<TestSuiteHierarchyApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

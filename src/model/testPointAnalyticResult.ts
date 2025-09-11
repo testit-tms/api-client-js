@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { TestPlanGroupByStatus } from './testPlanGroupByStatus';
 import { TestPlanGroupByStatusCode } from './testPlanGroupByStatusCode';
+import { TestPlanGroupByStatusType } from './testPlanGroupByStatusType';
 import { TestPlanGroupByTestSuite } from './testPlanGroupByTestSuite';
 import { TestPlanGroupByTester } from './testPlanGroupByTester';
 import { TestPlanGroupByTesterAndStatus } from './testPlanGroupByTesterAndStatus';
@@ -32,6 +33,7 @@ export class TestPointAnalyticResult {
     'countGroupByTesterAndStatus': Array<TestPlanGroupByTesterAndStatus>;
     'countGroupByStatusCode': Array<TestPlanGroupByStatusCode>;
     'countGroupByTesterAndStatusCode': Array<TestPlanGroupByTesterAndStatusCode>;
+    'countGroupByStatusType': Array<TestPlanGroupByStatusType>;
 
     static discriminator: string | undefined = undefined;
 
@@ -70,6 +72,11 @@ export class TestPointAnalyticResult {
             "name": "countGroupByTesterAndStatusCode",
             "baseName": "countGroupByTesterAndStatusCode",
             "type": "Array<TestPlanGroupByTesterAndStatusCode>"
+        },
+        {
+            "name": "countGroupByStatusType",
+            "baseName": "countGroupByStatusType",
+            "type": "Array<TestPlanGroupByStatusType>"
         }    ];
 
     static getAttributeTypeMap() {

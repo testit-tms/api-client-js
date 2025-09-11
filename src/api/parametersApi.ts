@@ -106,6 +106,8 @@ export class ParametersApi {
      *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
      * @summary Create multiple parameters
      * @param createParameterApiModel 
+     *
+     * @deprecated
      */
     public async apiV2ParametersBulkPost (createParameterApiModel?: Array<CreateParameterApiModel>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/bulk';
@@ -175,6 +177,8 @@ export class ParametersApi {
      *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
      * @summary Update multiple parameters
      * @param updateParameterApiModel 
+     *
+     * @deprecated
      */
     public async apiV2ParametersBulkPut (updateParameterApiModel?: Array<UpdateParameterApiModel>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/bulk';
@@ -251,6 +255,8 @@ export class ParametersApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
+     *
+     * @deprecated
      */
     public async apiV2ParametersGroupsGet (parameterKeyIds?: Array<string>, name?: string, isDeleted?: boolean, projectIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/groups';
@@ -355,6 +361,8 @@ export class ParametersApi {
      *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
      * @summary Check existence parameter key in system
      * @param name 
+     *
+     * @deprecated
      */
     public async apiV2ParametersKeyNameNameExistsGet (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: boolean;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/key/name/{name}/exists'
@@ -429,6 +437,8 @@ export class ParametersApi {
      *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
      * @summary Get all parameter key values
      * @param key Parameter key (string format)
+     *
+     * @deprecated
      */
     public async apiV2ParametersKeyValuesGet (key: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{key}/values'
@@ -503,8 +513,15 @@ export class ParametersApi {
      *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
      * @summary Get all parameter keys
      * @param projectIds 
+     * @param skip Amount of items to be skipped (offset)
+     * @param take Amount of items to be taken (limit)
+     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param searchField Property name for searching
+     * @param searchValue Value for searching
+     *
+     * @deprecated
      */
-    public async apiV2ParametersKeysGet (projectIds?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
+    public async apiV2ParametersKeysGet (projectIds?: Array<string>, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<string>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keys';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -519,6 +536,26 @@ export class ParametersApi {
 
         if (projectIds !== undefined) {
             localVarQueryParameters['projectIds'] = ObjectSerializer.serialize(projectIds, "Array<string>");
+        }
+
+        if (skip !== undefined) {
+            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
+        }
+
+        if (take !== undefined) {
+            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
+        }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
+        }
+
+        if (searchField !== undefined) {
+            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
+        }
+
+        if (searchValue !== undefined) {
+            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
@@ -580,6 +617,8 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      * @param parameterGroupsFilterApiModel 
+     *
+     * @deprecated
      */
     public async apiV2ParametersSearchGroupsPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parameterGroupsFilterApiModel?: ParameterGroupsFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterGroupApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search/groups';
@@ -674,6 +713,8 @@ export class ParametersApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      * @param parametersFilterApiModel 
+     *
+     * @deprecated
      */
     public async apiV2ParametersSearchPost (skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, parametersFilterApiModel?: ParametersFilterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/search';
@@ -763,6 +804,8 @@ export class ParametersApi {
      *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
      * @summary Create parameter
      * @param createParameterApiModel 
+     *
+     * @deprecated
      */
     public async createParameter (createParameterApiModel?: CreateParameterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
@@ -832,6 +875,8 @@ export class ParametersApi {
      * Deletes parameter and all it\'s values
      * @summary Delete parameter by name
      * @param name Name of the parameter
+     *
+     * @deprecated
      */
     public async deleteByName (name: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/name/{name}'
@@ -905,6 +950,8 @@ export class ParametersApi {
      * Deletes parameter and all it\'s values by parameter key identifier
      * @summary Delete parameters by parameter key identifier
      * @param keyId Identifier of the parameter key
+     *
+     * @deprecated
      */
     public async deleteByParameterKeyId (keyId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/keyId/{keyId}'
@@ -978,6 +1025,8 @@ export class ParametersApi {
      *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
      * @summary Delete parameter
      * @param id Parameter internal (UUID) identifier
+     *
+     * @deprecated
      */
     public async deleteParameter (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{id}'
@@ -1056,6 +1105,8 @@ export class ParametersApi {
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param searchField Property name for searching
      * @param searchValue Value for searching
+     *
+     * @deprecated
      */
     public async getAllParameters (isDeleted?: boolean, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ParameterApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';
@@ -1148,6 +1199,8 @@ export class ParametersApi {
      *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
      * @summary Get parameter by ID
      * @param id Parameter internal (UUID) identifier
+     *
+     * @deprecated
      */
     public async getParameterById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ParameterApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters/{id}'
@@ -1222,6 +1275,8 @@ export class ParametersApi {
      *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
      * @summary Update parameter
      * @param updateParameterApiModel 
+     *
+     * @deprecated
      */
     public async updateParameter (updateParameterApiModel?: UpdateParameterApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/parameters';

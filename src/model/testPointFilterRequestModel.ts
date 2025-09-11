@@ -71,7 +71,7 @@ export class TestPointFilterRequestModel {
     /**
     * Specifies a test point assigned user IDs to search for
     */
-    'testerIds'?: Array<string> | null;
+    'testerIds'?: Array<string | null> | null;
     /**
     * Specifies a test point range of duration to search for
     */
@@ -187,7 +187,7 @@ export class TestPointFilterRequestModel {
         {
             "name": "testerIds",
             "baseName": "testerIds",
-            "type": "Array<string>"
+            "type": "Array<string | null>"
         },
         {
             "name": "duration",

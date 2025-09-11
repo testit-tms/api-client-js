@@ -284,7 +284,7 @@ Get TestResults By Id
 
 <a name="getTestSuiteById"></a>
 # **getTestSuiteById**
-> TestSuiteV2GetModel getTestSuiteById(id)
+> TestSuiteApiResult getTestSuiteById(id)
 
 Get TestSuite by Id
 
@@ -298,7 +298,7 @@ Get TestSuite by Id
 
 ### Return type
 
-[**TestSuiteV2GetModel**](../Models/TestSuiteV2GetModel.md)
+[**TestSuiteApiResult**](../Models/TestSuiteApiResult.md)
 
 ### Authorization
 

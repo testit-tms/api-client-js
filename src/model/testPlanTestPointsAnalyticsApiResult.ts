@@ -12,14 +12,24 @@
 
 import { RequestFile } from './models';
 import { TestPlanTestPointsStatusGroupApiResult } from './testPlanTestPointsStatusGroupApiResult';
+import { TestPlanTestPointsStatusTypeGroupApiResult } from './testPlanTestPointsStatusTypeGroupApiResult';
 import { TestPlanTestPointsTesterAndStatusGroupApiResult } from './testPlanTestPointsTesterAndStatusGroupApiResult';
+import { TestPlanTestPointsTesterAndStatusTypeGroupApiResult } from './testPlanTestPointsTesterAndStatusTypeGroupApiResult';
 import { TestPlanTestPointsTesterGroupApiResult } from './testPlanTestPointsTesterGroupApiResult';
 
 export class TestPlanTestPointsAnalyticsApiResult {
+    /**
+    * @deprecated
+    */
     'countGroupByStatus': Array<TestPlanTestPointsStatusGroupApiResult>;
+    /**
+    * @deprecated
+    */
+    'countGroupByTesterAndStatus': Array<TestPlanTestPointsTesterAndStatusGroupApiResult>;
     'sumGroupByTester': Array<TestPlanTestPointsTesterGroupApiResult>;
     'countGroupByTester': Array<TestPlanTestPointsTesterGroupApiResult>;
-    'countGroupByTesterAndStatus': Array<TestPlanTestPointsTesterAndStatusGroupApiResult>;
+    'countGroupByStatusType': Array<TestPlanTestPointsStatusTypeGroupApiResult>;
+    'countGroupByTesterAndStatusType': Array<TestPlanTestPointsTesterAndStatusTypeGroupApiResult>;
 
     static discriminator: string | undefined = undefined;
 
@@ -28,6 +38,11 @@ export class TestPlanTestPointsAnalyticsApiResult {
             "name": "countGroupByStatus",
             "baseName": "countGroupByStatus",
             "type": "Array<TestPlanTestPointsStatusGroupApiResult>"
+        },
+        {
+            "name": "countGroupByTesterAndStatus",
+            "baseName": "countGroupByTesterAndStatus",
+            "type": "Array<TestPlanTestPointsTesterAndStatusGroupApiResult>"
         },
         {
             "name": "sumGroupByTester",
@@ -40,9 +55,14 @@ export class TestPlanTestPointsAnalyticsApiResult {
             "type": "Array<TestPlanTestPointsTesterGroupApiResult>"
         },
         {
-            "name": "countGroupByTesterAndStatus",
-            "baseName": "countGroupByTesterAndStatus",
-            "type": "Array<TestPlanTestPointsTesterAndStatusGroupApiResult>"
+            "name": "countGroupByStatusType",
+            "baseName": "countGroupByStatusType",
+            "type": "Array<TestPlanTestPointsStatusTypeGroupApiResult>"
+        },
+        {
+            "name": "countGroupByTesterAndStatusType",
+            "baseName": "countGroupByTesterAndStatusType",
+            "type": "Array<TestPlanTestPointsTesterAndStatusTypeGroupApiResult>"
         }    ];
 
     static getAttributeTypeMap() {

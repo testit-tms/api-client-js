@@ -23,7 +23,7 @@ export class ProjectTestPlansFilterModel {
     'globalIds'?: Array<number> | null;
     'isLocked'?: boolean | null;
     'lockedDate'?: DateTimeRangeSelectorModel | null;
-    'automaticDurationTimer'?: Array<boolean> | null;
+    'automaticDurationTimer'?: Array<boolean | null> | null;
     'createdByIds'?: Array<string> | null;
     'createdDate'?: DateTimeRangeSelectorModel | null;
     'startDate'?: DateTimeRangeSelectorModel | null;
@@ -78,7 +78,7 @@ export class ProjectTestPlansFilterModel {
         {
             "name": "automaticDurationTimer",
             "baseName": "automaticDurationTimer",
-            "type": "Array<boolean>"
+            "type": "Array<boolean | null>"
         },
         {
             "name": "createdByIds",

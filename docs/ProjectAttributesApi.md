@@ -109,7 +109,7 @@ Get project attributes
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectId** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to NotDeleted] [enum: Any, Deleted, NotDeleted] |
+| **isDeleted** | [**DeletionState**](../Models/.md)|  | [optional] [default to null] [enum: Any, Deleted, NotDeleted] |
 
 ### Return type
 

@@ -21,7 +21,7 @@ export class WorkflowStatusApiResult {
     * Collection of possible status types
     */
     'type': TestStatusApiType;
-    'description'?: string | null;
+    'description': string | null;
     'isSystem': boolean;
     'priority': number;
 

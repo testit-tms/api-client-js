@@ -166,7 +166,7 @@ Get all parameter key values
 
 <a name="apiV2ParametersKeysGet"></a>
 # **apiV2ParametersKeysGet**
-> List apiV2ParametersKeysGet(projectIds)
+> List apiV2ParametersKeysGet(projectIds, Skip, Take, OrderBy, SearchField, SearchValue)
 
 Get all parameter keys
 
@@ -177,6 +177,11 @@ Get all parameter keys
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **projectIds** | [**List**](../Models/UUID.md)|  | [optional] [default to null] |
+| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
+| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
+| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
+| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
+| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
 
 ### Return type
 

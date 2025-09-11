@@ -62,15 +62,12 @@ null (empty response body)
 
 <a name="apiV2ProjectsDemoPost"></a>
 # **apiV2ProjectsDemoPost**
-> DemoProjectApiResult apiV2ProjectsDemoPost(CreateProjectApiModel)
+> DemoProjectApiResult apiV2ProjectsDemoPost()
 
 
 
 ### Parameters
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateProjectApiModel** | [**CreateProjectApiModel**](../Models/CreateProjectApiModel.md)|  | [optional] |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -82,7 +79,7 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="apiV2ProjectsIdDelete"></a>
@@ -125,7 +122,7 @@ Get failure classes
 
 ### Return type
 
-[**List**](../Models/FailureClassModel.md)
+[**List**](../Models/AutoTestResultReasonProjectApiResult.md)
 
 ### Authorization
 
