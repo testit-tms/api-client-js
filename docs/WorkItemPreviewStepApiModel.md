@@ -1,11 +1,9 @@
-# WorkItemPreviewApiModel
+# WorkItemPreviewStepApiModel
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **name** | **String** |  | [default to null] |
-| **description** | **String** |  | [default to null] |
-| **steps** | [**List**](WorkItemPreviewStepApiModel.md) |  | [default to null] |
+| **number** | **Integer** |  | [default to null] |
 | **action** | **String** |  | [default to null] |
 | **expected** | **String** |  | [default to null] |
 

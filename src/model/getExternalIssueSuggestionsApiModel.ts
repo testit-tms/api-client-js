@@ -11,33 +11,31 @@
  */
 
 import { RequestFile } from './models';
+import { ExternalIssueApiField } from './externalIssueApiField';
+import { Inquiry } from './inquiry';
 
-export class ParametersFilterApiModel {
-    'name'?: string | null;
-    'isDeleted'?: boolean | null;
-    'projectIds'?: Array<string | null> | null;
+export class GetExternalIssueSuggestionsApiModel {
+    'field': ExternalIssueApiField;
+    'inquiry': Inquiry | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
+            "name": "field",
+            "baseName": "field",
+            "type": "ExternalIssueApiField"
         },
         {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string | null>"
+            "name": "inquiry",
+            "baseName": "inquiry",
+            "type": "Inquiry"
         }    ];
 
     static getAttributeTypeMap() {
-        return ParametersFilterApiModel.attributeTypeMap;
+        return GetExternalIssueSuggestionsApiModel.attributeTypeMap;
     }
 }
 
+export namespace GetExternalIssueSuggestionsApiModel {
+}

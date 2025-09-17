@@ -11,10 +11,19 @@
  */
 
 import { RequestFile } from './models';
+import { WorkItemPreviewStepApiModel } from './workItemPreviewStepApiModel';
 
 export class WorkItemPreviewApiModel {
     'name': string;
+    'description': string;
+    'steps': Array<WorkItemPreviewStepApiModel>;
+    /**
+    * @deprecated
+    */
     'action': string;
+    /**
+    * @deprecated
+    */
     'expected': string;
 
     static discriminator: string | undefined = undefined;
@@ -24,6 +33,16 @@ export class WorkItemPreviewApiModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string"
+        },
+        {
+            "name": "steps",
+            "baseName": "steps",
+            "type": "Array<WorkItemPreviewStepApiModel>"
         },
         {
             "name": "action",

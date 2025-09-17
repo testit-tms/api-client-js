@@ -12,32 +12,32 @@
 
 import { RequestFile } from './models';
 
-export class ParametersFilterApiModel {
-    'name'?: string | null;
-    'isDeleted'?: boolean | null;
-    'projectIds'?: Array<string | null> | null;
+export class ReplaceProjectExternalServiceApiModel {
+    /**
+    * The unique ID of the new external service that will replace the current one
+    */
+    'newExternalServiceId': string;
+    /**
+    * External service settings
+    */
+    'settings'?: any | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "newExternalServiceId",
+            "baseName": "newExternalServiceId",
             "type": "string"
         },
         {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string | null>"
+            "name": "settings",
+            "baseName": "settings",
+            "type": "any"
         }    ];
 
     static getAttributeTypeMap() {
-        return ParametersFilterApiModel.attributeTypeMap;
+        return ReplaceProjectExternalServiceApiModel.attributeTypeMap;
     }
 }
 

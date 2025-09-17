@@ -11,16 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { TestStatusApiType } from './testStatusApiType';
 
-export class TestStatusShortApiResult {
+export class WorkflowProjectApiResult {
     'id': string;
-    'name': string;
-    'code': string;
-    /**
-    * Collection of possible status types
-    */
-    'type': TestStatusApiType;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,27 +22,10 @@ export class TestStatusShortApiResult {
             "name": "id",
             "baseName": "id",
             "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "TestStatusApiType"
         }    ];
 
     static getAttributeTypeMap() {
-        return TestStatusShortApiResult.attributeTypeMap;
+        return WorkflowProjectApiResult.attributeTypeMap;
     }
 }
 
-export namespace TestStatusShortApiResult {
-}

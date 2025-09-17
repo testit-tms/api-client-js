@@ -12,23 +12,15 @@
 
 import { RequestFile } from './models';
 
-export class CustomAttributeOptionApiResult {
+export class AIServiceModelApiResult {
     /**
-    * Unique ID of the attribute option
+    * Model id
     */
     'id': string;
     /**
-    * Indicates if the attributes option is deleted
+    * Model Name
     */
-    'isDeleted': boolean;
-    /**
-    * Value of the attribute option
-    */
-    'value'?: string | null;
-    /**
-    * Indicates if the attribute option is used by default
-    */
-    'isDefault': boolean;
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -39,23 +31,13 @@ export class CustomAttributeOptionApiResult {
             "type": "string"
         },
         {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "value",
-            "baseName": "value",
+            "name": "name",
+            "baseName": "name",
             "type": "string"
-        },
-        {
-            "name": "isDefault",
-            "baseName": "isDefault",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return CustomAttributeOptionApiResult.attributeTypeMap;
+        return AIServiceModelApiResult.attributeTypeMap;
     }
 }
 

@@ -12,32 +12,20 @@
 
 import { RequestFile } from './models';
 
-export class ParametersFilterApiModel {
-    'name'?: string | null;
-    'isDeleted'?: boolean | null;
-    'projectIds'?: Array<string | null> | null;
+export class ExternalIssueApiFieldSuggestion {
+    'value': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "value",
+            "baseName": "value",
             "type": "string"
-        },
-        {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string | null>"
         }    ];
 
     static getAttributeTypeMap() {
-        return ParametersFilterApiModel.attributeTypeMap;
+        return ExternalIssueApiFieldSuggestion.attributeTypeMap;
     }
 }
 

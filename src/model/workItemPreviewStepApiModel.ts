@@ -11,45 +11,33 @@
  */
 
 import { RequestFile } from './models';
-import { TestStatusApiType } from './testStatusApiType';
 
-export class TestStatusShortApiResult {
-    'id': string;
-    'name': string;
-    'code': string;
-    /**
-    * Collection of possible status types
-    */
-    'type': TestStatusApiType;
+export class WorkItemPreviewStepApiModel {
+    'number': number;
+    'action': string;
+    'expected': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
+            "name": "number",
+            "baseName": "number",
+            "type": "number"
+        },
+        {
+            "name": "action",
+            "baseName": "action",
             "type": "string"
         },
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "expected",
+            "baseName": "expected",
             "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "TestStatusApiType"
         }    ];
 
     static getAttributeTypeMap() {
-        return TestStatusShortApiResult.attributeTypeMap;
+        return WorkItemPreviewStepApiModel.attributeTypeMap;
     }
 }
 
-export namespace TestStatusShortApiResult {
-}

@@ -13,43 +13,31 @@
 import { RequestFile } from './models';
 import { TestStatusApiType } from './testStatusApiType';
 
-export class TestStatusShortApiResult {
-    'id': string;
-    'name': string;
-    'code': string;
+export class TestPlanTestPointsStatusTypeGroupApiResult {
     /**
     * Collection of possible status types
     */
-    'type': TestStatusApiType;
+    'statusType': TestStatusApiType;
+    'value': number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
+            "name": "statusType",
+            "baseName": "statusType",
             "type": "TestStatusApiType"
+        },
+        {
+            "name": "value",
+            "baseName": "value",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return TestStatusShortApiResult.attributeTypeMap;
+        return TestPlanTestPointsStatusTypeGroupApiResult.attributeTypeMap;
     }
 }
 
-export namespace TestStatusShortApiResult {
+export namespace TestPlanTestPointsStatusTypeGroupApiResult {
 }

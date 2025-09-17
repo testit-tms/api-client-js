@@ -17,6 +17,7 @@ export class CreateWorkflowApiModel {
     'name': string;
     'isDefault'?: boolean | null;
     'statuses': Array<WorkflowStatusApiModel>;
+    'projectIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -35,6 +36,11 @@ export class CreateWorkflowApiModel {
             "name": "statuses",
             "baseName": "statuses",
             "type": "Array<WorkflowStatusApiModel>"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

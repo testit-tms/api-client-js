@@ -11,16 +11,16 @@
  */
 
 import { RequestFile } from './models';
-import { TestStatusApiType } from './testStatusApiType';
 
-export class TestStatusShortApiResult {
-    'id': string;
-    'name': string;
-    'code': string;
+export class TestRunNameApiResult {
     /**
-    * Collection of possible status types
+    * Test run id.
     */
-    'type': TestStatusApiType;
+    'id': string;
+    /**
+    * Test run name.
+    */
+    'name': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,22 +34,10 @@ export class TestStatusShortApiResult {
             "name": "name",
             "baseName": "name",
             "type": "string"
-        },
-        {
-            "name": "code",
-            "baseName": "code",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "TestStatusApiType"
         }    ];
 
     static getAttributeTypeMap() {
-        return TestStatusShortApiResult.attributeTypeMap;
+        return TestRunNameApiResult.attributeTypeMap;
     }
 }
 
-export namespace TestStatusShortApiResult {
-}

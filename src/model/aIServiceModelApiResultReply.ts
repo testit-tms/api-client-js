@@ -11,33 +11,28 @@
  */
 
 import { RequestFile } from './models';
+import { AIServiceModelApiResult } from './aIServiceModelApiResult';
 
-export class ParametersFilterApiModel {
-    'name'?: string | null;
-    'isDeleted'?: boolean | null;
-    'projectIds'?: Array<string | null> | null;
+export class AIServiceModelApiResultReply {
+    'data': Array<AIServiceModelApiResult>;
+    'totalCount': number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
+            "name": "data",
+            "baseName": "data",
+            "type": "Array<AIServiceModelApiResult>"
         },
         {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
-        },
-        {
-            "name": "projectIds",
-            "baseName": "projectIds",
-            "type": "Array<string | null>"
+            "name": "totalCount",
+            "baseName": "totalCount",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return ParametersFilterApiModel.attributeTypeMap;
+        return AIServiceModelApiResultReply.attributeTypeMap;
     }
 }
 

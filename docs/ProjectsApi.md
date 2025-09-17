@@ -521,7 +521,7 @@ Get projects short models
 
 <a name="createProject"></a>
 # **createProject**
-> ProjectApiResult createProject(CreateProjectApiModel)
+> ProjectModel createProject(CreateProjectApiModel)
 
 Create project
 
@@ -535,7 +535,7 @@ Create project
 
 ### Return type
 
-[**ProjectApiResult**](../Models/ProjectApiResult.md)
+[**ProjectModel**](../Models/ProjectModel.md)
 
 ### Authorization
 
