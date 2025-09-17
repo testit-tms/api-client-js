@@ -7,7 +7,7 @@
 | **name** | **String** |  | [default to null] |
 | **code** | **String** |  | [default to null] |
 | **type** | [**TestStatusApiType**](TestStatusApiType.md) | Collection of possible status types | [default to null] |
-| **description** | **String** |  | [optional] [default to null] |
+| **description** | **String** |  | [default to null] |
 | **isSystem** | **Boolean** |  | [default to null] |
 | **priority** | **Integer** |  | [default to null] |
 

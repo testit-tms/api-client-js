@@ -24,7 +24,6 @@ import { FilterModel } from '../model/filterModel';
 import { GetShortProjectsApiModel } from '../model/getShortProjectsApiModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
-import { ProjectApiResult } from '../model/projectApiResult';
 import { ProjectModel } from '../model/projectModel';
 import { ProjectSelectModel } from '../model/projectSelectModel';
 import { ProjectShortApiResultReply } from '../model/projectShortApiResultReply';
@@ -1532,7 +1531,7 @@ export class ProjectsApi {
      * @summary Create project
      * @param createProjectApiModel 
      */
-    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }> {
+    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1580,13 +1579,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: ProjectModel;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ProjectApiResult");
+                            body = ObjectSerializer.deserialize(body, "ProjectModel");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

@@ -11,11 +11,16 @@
  */
 
 import { RequestFile } from './models';
+import { TestStatusApiType } from './testStatusApiType';
 
 export class TestStatusShortApiResult {
     'id': string;
     'name': string;
     'code': string;
+    /**
+    * Collection of possible status types
+    */
+    'type': TestStatusApiType;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,6 +39,11 @@ export class TestStatusShortApiResult {
             "name": "code",
             "baseName": "code",
             "type": "string"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "TestStatusApiType"
         }    ];
 
     static getAttributeTypeMap() {
@@ -41,3 +51,5 @@ export class TestStatusShortApiResult {
     }
 }
 
+export namespace TestStatusShortApiResult {
+}

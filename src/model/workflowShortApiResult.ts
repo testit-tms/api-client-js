@@ -11,12 +11,14 @@
  */
 
 import { RequestFile } from './models';
+import { WorkflowProjectApiResultApiCollectionPreview } from './workflowProjectApiResultApiCollectionPreview';
 
 export class WorkflowShortApiResult {
     'id': string;
     'name': string;
     'isSystem': boolean;
     'isDefault': boolean;
+    'projects': WorkflowProjectApiResultApiCollectionPreview;
 
     static discriminator: string | undefined = undefined;
 
@@ -40,6 +42,11 @@ export class WorkflowShortApiResult {
             "name": "isDefault",
             "baseName": "isDefault",
             "type": "boolean"
+        },
+        {
+            "name": "projects",
+            "baseName": "projects",
+            "type": "WorkflowProjectApiResultApiCollectionPreview"
         }    ];
 
     static getAttributeTypeMap() {

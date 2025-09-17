@@ -30,6 +30,10 @@ export class TestResultShortResponse {
     */
     'autotestGlobalId': number;
     /**
+    * External ID of autotest represented by the test result
+    */
+    'autotestExternalId'?: string | null;
+    /**
     * Unique ID of test run where the test result is located
     */
     'testRunId': string;
@@ -112,6 +116,11 @@ export class TestResultShortResponse {
             "name": "autotestGlobalId",
             "baseName": "autotestGlobalId",
             "type": "number"
+        },
+        {
+            "name": "autotestExternalId",
+            "baseName": "autotestExternalId",
+            "type": "string"
         },
         {
             "name": "testRunId",

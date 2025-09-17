@@ -26,6 +26,8 @@ export * from './projectSettingsApi';
 import { ProjectSettingsApi } from './projectSettingsApi';
 export * from './projectTestPlanAttributesApi';
 import { ProjectTestPlanAttributesApi } from './projectTestPlanAttributesApi';
+export * from './projectTestPlanTestPointsApi';
+import { ProjectTestPlanTestPointsApi } from './projectTestPlanTestPointsApi';
 export * from './projectTestPlansApi';
 import { ProjectTestPlansApi } from './projectTestPlansApi';
 export * from './projectWorkItemsApi';
@@ -69,4 +71,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];
+export const APIS = [AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, NotificationsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlanTestPointsApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi];

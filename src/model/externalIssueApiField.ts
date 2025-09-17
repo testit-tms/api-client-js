@@ -12,11 +12,10 @@
 
 import { RequestFile } from './models';
 
-export enum CustomAttributeType {
-    String = <any> 'string',
-    Datetime = <any> 'datetime',
-    Options = <any> 'options',
-    User = <any> 'user',
-    MultipleOptions = <any> 'multipleOptions',
-    Checkbox = <any> 'checkbox'
+export enum ExternalIssueApiField {
+    Id = <any> 'Id',
+    Type = <any> 'Type',
+    Priority = <any> 'Priority',
+    Status = <any> 'Status',
+    Assignee = <any> 'Assignee'
 }
