@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsProjectIdWorkItemsSearchGroupedPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchGroupedPost) | **POST** /api/v2/projects/{projectId}/workItems/search/grouped | Search for work items and group results by attribute |
 | [**apiV2ProjectsProjectIdWorkItemsSearchIdPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchIdPost) | **POST** /api/v2/projects/{projectId}/workItems/search/id | Search for work items and extract IDs only |
 | [**apiV2ProjectsProjectIdWorkItemsSearchPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchPost) | **POST** /api/v2/projects/{projectId}/workItems/search | Search for work items |
+| [**apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost) | **POST** /api/v2/projects/{projectId}/workItems/search/{workItemId}/index | Get work item index (position) in a collection by its id. |
 | [**apiV2ProjectsProjectIdWorkItemsTagsGet**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsTagsGet) | **GET** /api/v2/projects/{projectId}/workItems/tags | Get WorkItems Tags |
 | [**getWorkItemsByProjectId**](ProjectWorkItemsApi.md#getWorkItemsByProjectId) | **GET** /api/v2/projects/{projectId}/workItems | Get project work items |
 
@@ -94,6 +95,38 @@ Search for work items
 ### Return type
 
 [**List**](../Models/WorkItemShortApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+<a name="apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost"></a>
+# **apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost**
+> WorkItemIndexApiResult apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectApiModel)
+
+Get work item index (position) in a collection by its id.
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectId** | **String**|  | [default to null] |
+| **workItemId** | **UUID**|  | [default to null] |
+| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
+| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
+| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
+| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
+| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+| **WorkItemSelectApiModel** | [**WorkItemSelectApiModel**](../Models/WorkItemSelectApiModel.md)|  | [optional] |
+
+### Return type
+
+[**WorkItemIndexApiResult**](../Models/WorkItemIndexApiResult.md)
 
 ### Authorization
 

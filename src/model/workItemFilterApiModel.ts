@@ -15,6 +15,7 @@ import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
+import { WorkItemExternalMetadataFilterApiModel } from './workItemExternalMetadataFilterApiModel';
 import { WorkItemLinkFilterApiModel } from './workItemLinkFilterApiModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
@@ -121,6 +122,10 @@ export class WorkItemFilterApiModel {
     * Specifies a work item filter by its links
     */
     'links'?: WorkItemLinkFilterApiModel | null;
+    /**
+    * Specifies work item filter by its external metadata
+    */
+    'externalMetadata'?: WorkItemExternalMetadataFilterApiModel | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -249,6 +254,11 @@ export class WorkItemFilterApiModel {
             "name": "links",
             "baseName": "links",
             "type": "WorkItemLinkFilterApiModel"
+        },
+        {
+            "name": "externalMetadata",
+            "baseName": "externalMetadata",
+            "type": "WorkItemExternalMetadataFilterApiModel"
         }    ];
 
     static getAttributeTypeMap() {

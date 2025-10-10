@@ -20,6 +20,7 @@
 | **createdById** | **UUID** |  | [default to null] |
 | **modifiedById** | **UUID** |  | [optional] [default to null] |
 | **globalId** | **Long** |  | [default to null] |
+| **externalIssues** | [**List**](ExternalIssueModel.md) |  | [default to null] |
 | **id** | **UUID** |  | [default to null] |
 | **sectionId** | **UUID** |  | [default to null] |
 | **description** | **String** |  | [optional] [default to null] |

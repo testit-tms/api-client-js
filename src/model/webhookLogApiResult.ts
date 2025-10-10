@@ -11,12 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { RequestTypeModel } from './requestTypeModel';
-import { WebHookEventTypeModel } from './webHookEventTypeModel';
+import { RequestType } from './requestType';
+import { WebHookEventType } from './webHookEventType';
 
-export class WebHookLogModel {
+export class WebhookLogApiResult {
+    'id': string;
+    'isDeleted': boolean;
     'webHookName': string;
-    'eventType': WebHookEventTypeModel;
+    'eventType': WebHookEventType;
     'webHookId': string;
     'requestBody'?: string | null;
     'requestMeta'?: string | null;
@@ -25,23 +27,25 @@ export class WebHookLogModel {
     'responseMeta'?: string | null;
     'projectId': string;
     'url': string;
-    'requestType': RequestTypeModel;
+    'requestType': RequestType;
     'createdDate'?: Date | null;
     'modifiedDate'?: Date | null;
     'createdById': string;
     'modifiedById'?: string | null;
-    /**
-    * Unique ID of the entity
-    */
-    'id': string;
-    /**
-    * Indicates if the entity is deleted
-    */
-    'isDeleted': boolean;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "id",
+            "baseName": "id",
+            "type": "string"
+        },
+        {
+            "name": "isDeleted",
+            "baseName": "isDeleted",
+            "type": "boolean"
+        },
         {
             "name": "webHookName",
             "baseName": "webHookName",
@@ -50,7 +54,7 @@ export class WebHookLogModel {
         {
             "name": "eventType",
             "baseName": "eventType",
-            "type": "WebHookEventTypeModel"
+            "type": "WebHookEventType"
         },
         {
             "name": "webHookId",
@@ -95,7 +99,7 @@ export class WebHookLogModel {
         {
             "name": "requestType",
             "baseName": "requestType",
-            "type": "RequestTypeModel"
+            "type": "RequestType"
         },
         {
             "name": "createdDate",
@@ -116,22 +120,12 @@ export class WebHookLogModel {
             "name": "modifiedById",
             "baseName": "modifiedById",
             "type": "string"
-        },
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "isDeleted",
-            "baseName": "isDeleted",
-            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {
-        return WebHookLogModel.attributeTypeMap;
+        return WebhookLogApiResult.attributeTypeMap;
     }
 }
 
-export namespace WebHookLogModel {
+export namespace WebhookLogApiResult {
 }

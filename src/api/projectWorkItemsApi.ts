@@ -20,6 +20,7 @@ import { TagShortApiResult } from '../model/tagShortApiResult';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 import { WorkItemGroupGetModel } from '../model/workItemGroupGetModel';
 import { WorkItemGroupModel } from '../model/workItemGroupModel';
+import { WorkItemIndexApiResult } from '../model/workItemIndexApiResult';
 import { WorkItemSelectApiModel } from '../model/workItemSelectApiModel';
 import { WorkItemSelectModel } from '../model/workItemSelectModel';
 import { WorkItemShortApiResult } from '../model/workItemShortApiResult';
@@ -397,6 +398,114 @@ export class ProjectWorkItemsApi {
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
                             body = ObjectSerializer.deserialize(body, "Array<WorkItemShortApiResult>");
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary Get work item index (position) in a collection by its id.
+     * @param projectId 
+     * @param workItemId 
+     * @param skip Amount of items to be skipped (offset)
+     * @param take Amount of items to be taken (limit)
+     * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param searchField Property name for searching
+     * @param searchValue Value for searching
+     * @param workItemSelectApiModel 
+     */
+    public async apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost (projectId: string, workItemId: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, workItemSelectApiModel?: WorkItemSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WorkItemIndexApiResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/projects/{projectId}/workItems/search/{workItemId}/index'
+            .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)))
+            .replace('{' + 'workItemId' + '}', encodeURIComponent(String(workItemId)));
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        // verify required parameter 'projectId' is not null or undefined
+        if (projectId === null || projectId === undefined) {
+            throw new Error('Required parameter projectId was null or undefined when calling apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost.');
+        }
+
+        // verify required parameter 'workItemId' is not null or undefined
+        if (workItemId === null || workItemId === undefined) {
+            throw new Error('Required parameter workItemId was null or undefined when calling apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost.');
+        }
+
+        if (skip !== undefined) {
+            localVarQueryParameters['Skip'] = ObjectSerializer.serialize(skip, "number");
+        }
+
+        if (take !== undefined) {
+            localVarQueryParameters['Take'] = ObjectSerializer.serialize(take, "number");
+        }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameters['OrderBy'] = ObjectSerializer.serialize(orderBy, "string");
+        }
+
+        if (searchField !== undefined) {
+            localVarQueryParameters['SearchField'] = ObjectSerializer.serialize(searchField, "string");
+        }
+
+        if (searchValue !== undefined) {
+            localVarQueryParameters['SearchValue'] = ObjectSerializer.serialize(searchValue, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+            body: ObjectSerializer.serialize(workItemSelectApiModel, "WorkItemSelectApiModel")
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: WorkItemIndexApiResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "WorkItemIndexApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

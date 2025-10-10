@@ -15,8 +15,18 @@ import { ManualRerunTestResultApiModel } from './manualRerunTestResultApiModel';
 import { TestResultsFilterApiModel } from './testResultsFilterApiModel';
 
 export class ManualRerunSelectTestResultsApiModel {
+    /**
+    * Test results filter.
+    */
     'filter'?: TestResultsFilterApiModel | null;
+    /**
+    * Test results extraction model.
+    */
     'extractionModel'?: ManualRerunTestResultApiModel | null;
+    /**
+    * Webhook ids to rerun.
+    */
+    'webhookIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,6 +40,11 @@ export class ManualRerunSelectTestResultsApiModel {
             "name": "extractionModel",
             "baseName": "extractionModel",
             "type": "ManualRerunTestResultApiModel"
+        },
+        {
+            "name": "webhookIds",
+            "baseName": "webhookIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
