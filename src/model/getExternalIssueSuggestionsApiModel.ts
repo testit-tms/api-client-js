@@ -15,8 +15,18 @@ import { ExternalIssueApiField } from './externalIssueApiField';
 import { Inquiry } from './inquiry';
 
 export class GetExternalIssueSuggestionsApiModel {
+    /**
+    * Field of external issue metadata to get
+    */
     'field': ExternalIssueApiField;
-    'inquiry': Inquiry | null;
+    /**
+    * List of project identifiers where external issue is available
+    */
+    'projectIds'?: Array<string> | null;
+    /**
+    * Inquiry
+    */
+    'inquiry'?: Inquiry | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,6 +35,11 @@ export class GetExternalIssueSuggestionsApiModel {
             "name": "field",
             "baseName": "field",
             "type": "ExternalIssueApiField"
+        },
+        {
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "Array<string>"
         },
         {
             "name": "inquiry",

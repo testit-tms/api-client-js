@@ -48,7 +48,7 @@ export class AttachmentPutModelAutoTestStepResultsModel {
     */
     'stepResults'?: Array<AttachmentPutModelAutoTestStepResultsModel> | null;
     /**
-    * /// <summary> Specifies an attachment GUID. Multiple values can be sent. </summary>
+    * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
     */
     'attachments'?: Array<AttachmentPutModel> | null;
     /**

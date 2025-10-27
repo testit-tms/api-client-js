@@ -4,8 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**addGlobaAttributesToProject**](ProjectsApi.md#addGlobaAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project |
-| [**apiV2ProjectsDemoPost**](ProjectsApi.md#apiV2ProjectsDemoPost) | **POST** /api/v2/projects/demo |  |
+| [**addGlobalAttributesToProject**](ProjectsApi.md#addGlobalAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project |
 | [**apiV2ProjectsIdDelete**](ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project |
 | [**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes |
 | [**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite |
@@ -32,13 +31,13 @@ All URIs are relative to *http://localhost*
 | [**updateProject**](ProjectsApi.md#updateProject) | **PUT** /api/v2/projects | Update project |
 
 
-<a name="addGlobaAttributesToProject"></a>
-# **addGlobaAttributesToProject**
-> addGlobaAttributesToProject(id, request\_body)
+<a name="addGlobalAttributesToProject"></a>
+# **addGlobalAttributesToProject**
+> addGlobalAttributesToProject(id, request\_body)
 
 Add global attributes to project
 
-     Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+      Use case    User sets project internal or global identifier and attributes identifiers    System search project    System relates global attributes with project    System returns no content response
 
 ### Parameters
 
@@ -58,28 +57,6 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-<a name="apiV2ProjectsDemoPost"></a>
-# **apiV2ProjectsDemoPost**
-> DemoProjectApiResult apiV2ProjectsDemoPost()
-
-
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**DemoProjectApiResult**](../Models/DemoProjectApiResult.md)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 <a name="apiV2ProjectsIdDelete"></a>
@@ -122,7 +99,7 @@ Get failure classes
 
 ### Return type
 
-[**List**](../Models/AutoTestResultReasonProjectApiResult.md)
+[**List**](../Models/FailureCategoryApiResult.md)
 
 ### Authorization
 
@@ -164,7 +141,7 @@ null (empty response body)
 
 Get Project filters
 
-     Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+      Use case    User sets project internal or global identifier    User runs method execution    System returns project filters
 
 ### Parameters
 
@@ -269,7 +246,7 @@ null (empty response body)
 
 Delete attribute from project&#39;s test plans
 
-     Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+      Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
 
 ### Parameters
 
@@ -297,7 +274,7 @@ null (empty response body)
 
 Update attribute of project&#39;s test plans
 
-     Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+      Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
 
 ### Parameters
 
@@ -325,7 +302,7 @@ null (empty response body)
 
 Get active Project TestRuns
 
-     Use case  User sets project internal or global identifier  User runs method execution  System returns active testruns
+      Use case    User sets project internal or global identifier    User runs method execution    System returns active testruns
 
 ### Parameters
 
@@ -352,7 +329,7 @@ Get active Project TestRuns
 
 Get Project TestRuns full models
 
-     Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+      Use case    User sets project internal or global identifier    User sets query params    User runs method execution    System returns project test runs full models
 
 ### Parameters
 
@@ -498,7 +475,7 @@ Search for projects
 
 Get projects short models
 
-     Use case  User sets query params  User runs method execution  System return projects short models
+      Use case    User sets query params    User runs method execution    System return projects short models
 
 ### Parameters
 
@@ -525,7 +502,7 @@ Get projects short models
 
 Create project
 
-     Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+      Use case    User sets project parameters (listed in request example) and runs method execution    System creates project    System returns project model (example listed in response parameters)
 
 ### Parameters
 
@@ -577,7 +554,7 @@ null (empty response body)
 
 Get all projects
 
-     Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+      Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted projects    [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted    If User did not set isDeleted field value, System search all projects    System returns array of all found projects(listed in response model)
 
 ### Parameters
 
@@ -610,7 +587,7 @@ Get all projects
 
 Get namespaces of autotests in project
 
-     Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+      Use case    User sets project internal or global identifier and runs method execution    System search project    System search all autotest related to the project    System returns array of autotest with namespaces and classnames (listed in response)
 
 ### Parameters
 
@@ -637,7 +614,7 @@ Get namespaces of autotests in project
 
 Get project by ID
 
-     Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+      Use case    User sets project internal or global identifier and runs method execution    System search project    System returns project (example listed in response parameters)
 
 ### Parameters
 
@@ -664,7 +641,7 @@ Get project by ID
 
 Get project test plans
 
-     Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+      Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project    [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted    [Optional] If User did not set isDeleted field value, System search all v related to project    System returns array of found test plans (listed in response model)
 
 ### Parameters
 
@@ -692,7 +669,7 @@ Get project test plans
 
 Get project test runs
 
-     Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+      Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all test runs related to project    System returns array of found test runs (listed in response model)
 
 ### Parameters
 
@@ -731,7 +708,7 @@ Get project test runs
 
 Update project
 
-     Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+      Use case    User sets project parameters (listed in request example) and runs method execution    System updates project    System returns updated project model (example listed in response parameters)
 
 ### Parameters
 

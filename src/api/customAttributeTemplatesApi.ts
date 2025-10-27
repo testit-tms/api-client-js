@@ -174,7 +174,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
      * @summary Exclude CustomAttributes from CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
@@ -249,7 +249,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
      * @summary Include CustomAttributes to CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      * @param requestBody 
@@ -324,7 +324,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
      * @summary Delete CustomAttributeTemplate
      * @param id Attribute template internal (UUID) identifier
      */
@@ -397,7 +397,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
      * @summary Get CustomAttributeTemplate by ID
      * @param id CustomAttributeTemplate internal (UUID) identifier
      */
@@ -471,7 +471,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+     *   Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
      * @summary Get CustomAttributeTemplate by name
      * @param name CustomAttributeTemplate name for search
      */
@@ -545,7 +545,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+     *   Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
      * @summary Create CustomAttributeTemplate
      * @param customAttributeTemplatePostModel 
      */
@@ -682,7 +682,7 @@ export class CustomAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+     *   Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
      * @summary Search CustomAttributeTemplates
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)

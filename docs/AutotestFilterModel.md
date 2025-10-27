@@ -20,7 +20,7 @@
 | **className** | **String** |  | [optional] [default to null] |
 | **isEmptyClassName** | **Boolean** |  | [optional] [default to null] |
 | **lastTestResultOutcome** | [**AutotestResultOutcome**](AutotestResultOutcome.md) |  | [optional] [default to null] |
-| **lastTestResultStatusCode** | **String** |  | [optional] [default to null] |
+| **lastTestResultStatusCodes** | **List** |  | [optional] [default to null] |
 | **externalKey** | **String** |  | [optional] [default to null] |
 | **lastTestResultConfigurationIds** | **List** |  | [optional] [default to null] |
 

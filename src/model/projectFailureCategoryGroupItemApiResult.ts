@@ -11,14 +11,14 @@
  */
 
 import { RequestFile } from './models';
-import { AutoTestResultReasonGroupApiResult } from './autoTestResultReasonGroupApiResult';
+import { FailureCategoryGroupApiResult } from './failureCategoryGroupApiResult';
 import { ProjectFailureCategoryApiResult } from './projectFailureCategoryApiResult';
 
 export class ProjectFailureCategoryGroupItemApiResult {
     /**
     * Group details
     */
-    'group'?: AutoTestResultReasonGroupApiResult | null;
+    'group'?: FailureCategoryGroupApiResult | null;
     /**
     * Group data
     */
@@ -30,7 +30,7 @@ export class ProjectFailureCategoryGroupItemApiResult {
         {
             "name": "group",
             "baseName": "group",
-            "type": "AutoTestResultReasonGroupApiResult"
+            "type": "FailureCategoryGroupApiResult"
         },
         {
             "name": "items",

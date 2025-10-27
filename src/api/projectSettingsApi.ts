@@ -15,8 +15,8 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { AutoTestProjectSettingsGetModel } from '../model/autoTestProjectSettingsGetModel';
-import { AutoTestProjectSettingsPostModel } from '../model/autoTestProjectSettingsPostModel';
+import { AutoTestProjectSettingsApiModel } from '../model/autoTestProjectSettingsApiModel';
+import { AutoTestProjectSettingsApiResult } from '../model/autoTestProjectSettingsApiResult';
 import { ProblemDetails } from '../model/problemDetails';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
 
@@ -101,10 +101,10 @@ export class ProjectSettingsApi {
     /**
      * 
      * @summary Set autotest project settings.
-     * @param projectId 
-     * @param autoTestProjectSettingsPostModel 
+     * @param projectId Internal (UUID) or global (integer) identifier
+     * @param autoTestProjectSettingsApiModel 
      */
-    public async apiV2ProjectsProjectIdSettingsAutotestsPost (projectId: string, autoTestProjectSettingsPostModel?: AutoTestProjectSettingsPostModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ProjectsProjectIdSettingsAutotestsPost (projectId: string, autoTestProjectSettingsApiModel?: AutoTestProjectSettingsApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/settings/autotests'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -136,7 +136,7 @@ export class ProjectSettingsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(autoTestProjectSettingsPostModel, "AutoTestProjectSettingsPostModel")
+            body: ObjectSerializer.serialize(autoTestProjectSettingsApiModel, "AutoTestProjectSettingsApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -176,9 +176,9 @@ export class ProjectSettingsApi {
     /**
      * 
      * @summary Get autotest project settings.
-     * @param projectId 
+     * @param projectId Internal (UUID) or global (integer) identifier
      */
-    public async getAutotestProjectSettings (projectId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsGetModel;  }> {
+    public async getAutotestProjectSettings (projectId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{projectId}/settings/autotests'
             .replace('{' + 'projectId' + '}', encodeURIComponent(String(projectId)));
         let localVarQueryParameters: any = {};
@@ -231,13 +231,13 @@ export class ProjectSettingsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsGetModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: AutoTestProjectSettingsApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "AutoTestProjectSettingsGetModel");
+                            body = ObjectSerializer.deserialize(body, "AutoTestProjectSettingsApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

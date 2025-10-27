@@ -540,7 +540,7 @@ export class ConfigurationsApi {
      * @summary Permanently delete multiple archived configurations
      * @param configurationSelectModel 
      */
-    public async apiV2ConfigurationsPurgeBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
+    public async apiV2ConfigurationsPurgeBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/purge/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -588,12 +588,13 @@ export class ConfigurationsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body?: any;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: number;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "number");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -835,7 +836,7 @@ export class ConfigurationsApi {
         });
     }
     /**
-     *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
+     *   Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
      * @summary Create Configuration
      * @param configurationPostModel 
      */
@@ -904,7 +905,7 @@ export class ConfigurationsApi {
         });
     }
     /**
-     *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
+     *   Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
      * @summary Get configuration by internal or global ID
      * @param id Configuration internal (guid format) or global (integer format) identifier
      */

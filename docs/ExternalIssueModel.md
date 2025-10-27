@@ -1,0 +1,12 @@
+# ExternalIssueModel
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **id** | **UUID** |  | [default to null] |
+| **externalId** | **String** |  | [default to null] |
+| **url** | **String** |  | [default to null] |
+| **metadata** | [**ExternalIssueMetadataModel**](ExternalIssueMetadataModel.md) |  | [default to null] |
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

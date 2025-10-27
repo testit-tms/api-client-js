@@ -101,7 +101,7 @@ export class ProjectAttributeTemplatesApi {
     /**
      * 
      * @summary Search for custom attributes templates
-     * @param projectId 
+     * @param projectId Internal (UUID) or global (integer) identifier
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
@@ -200,7 +200,7 @@ export class ProjectAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
      * @summary Delete CustomAttributeTemplate from Project
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier
@@ -280,7 +280,7 @@ export class ProjectAttributeTemplatesApi {
         });
     }
     /**
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
      * @summary Add CustomAttributeTemplate to Project
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param templateId CustomAttributeTemplate internal (UUID) identifier

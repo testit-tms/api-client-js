@@ -18,6 +18,10 @@ export class WorkflowShortApiResult {
     'name': string;
     'isSystem': boolean;
     'isDefault': boolean;
+    'createdDate': Date;
+    'createdById': string;
+    'modifiedDate': Date;
+    'modifiedById': string;
     'projects': WorkflowProjectApiResultApiCollectionPreview;
 
     static discriminator: string | undefined = undefined;
@@ -42,6 +46,26 @@ export class WorkflowShortApiResult {
             "name": "isDefault",
             "baseName": "isDefault",
             "type": "boolean"
+        },
+        {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "Date"
+        },
+        {
+            "name": "createdById",
+            "baseName": "createdById",
+            "type": "string"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "Date"
+        },
+        {
+            "name": "modifiedById",
+            "baseName": "modifiedById",
+            "type": "string"
         },
         {
             "name": "projects",

@@ -102,7 +102,7 @@ export class ProjectTestPlanTestPointsApi {
     /**
      * 
      * @summary Rerun autotests.
-     * @param projectId 
+     * @param projectId Internal (UUID) or global (integer) identifier
      * @param testPlanId 
      * @param testPlanTestPointsAutoTestsRerunApiModel 
      */
@@ -184,7 +184,7 @@ export class ProjectTestPlanTestPointsApi {
     /**
      * 
      * @summary Run autotests.
-     * @param projectId 
+     * @param projectId Internal (UUID) or global (integer) identifier
      * @param testPlanId 
      * @param testPlanTestPointsAutoTestsRunApiModel 
      */

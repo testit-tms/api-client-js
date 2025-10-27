@@ -19,7 +19,7 @@ Search for custom attributes templates
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**|  | [default to null] |
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
@@ -46,7 +46,7 @@ Search for custom attributes templates
 
 Delete CustomAttributeTemplate from Project
 
-     Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+      Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
 
 ### Parameters
 
@@ -74,7 +74,7 @@ null (empty response body)
 
 Add CustomAttributeTemplate to Project
 
-     Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+      Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
 
 ### Parameters
 

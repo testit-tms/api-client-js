@@ -15,6 +15,7 @@ import { DateTimeRangeSelectorModel } from './dateTimeRangeSelectorModel';
 import { Int32RangeSelectorModel } from './int32RangeSelectorModel';
 import { Int64RangeSelectorModel } from './int64RangeSelectorModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
+import { WorkItemExternalMetadataFilterModel } from './workItemExternalMetadataFilterModel';
 import { WorkItemLinkFilterModel } from './workItemLinkFilterModel';
 import { WorkItemPriorityModel } from './workItemPriorityModel';
 import { WorkItemSourceTypeModel } from './workItemSourceTypeModel';
@@ -36,6 +37,10 @@ export class WorkItemFilterModel {
     * Collection of identifiers of work items which need to be excluded from result regardless of filtering
     */
     'excludeIds'?: Array<string> | null;
+    /**
+    * Specifies work item filter by its external metadata
+    */
+    'externalMetadata'?: WorkItemExternalMetadataFilterModel | null;
     /**
     * Collection of project identifiers
     */
@@ -117,6 +122,10 @@ export class WorkItemFilterModel {
     */
     'tags'?: Array<string> | null;
     /**
+    * Collection of tags to exclude
+    */
+    'excludeTags'?: Array<string> | null;
+    /**
     * Collection of identifiers of linked autotests
     */
     'autoTestIds'?: Array<string> | null;
@@ -142,6 +151,11 @@ export class WorkItemFilterModel {
             "name": "excludeIds",
             "baseName": "excludeIds",
             "type": "Array<string>"
+        },
+        {
+            "name": "externalMetadata",
+            "baseName": "externalMetadata",
+            "type": "WorkItemExternalMetadataFilterModel"
         },
         {
             "name": "projectIds",
@@ -241,6 +255,11 @@ export class WorkItemFilterModel {
         {
             "name": "tags",
             "baseName": "tags",
+            "type": "Array<string>"
+        },
+        {
+            "name": "excludeTags",
+            "baseName": "excludeTags",
             "type": "Array<string>"
         },
         {

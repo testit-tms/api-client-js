@@ -23,6 +23,7 @@
 | **medianDuration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) | Specifies a work item median duration range to search for | [optional] [default to null] |
 | **isAutomated** | **Boolean** | Is result must consist of only manual/automated work items | [optional] [default to null] |
 | **tags** | **Set** | Collection of tags | [optional] [default to null] |
+| **excludeTags** | **Set** | Collection of tags to exclude | [optional] [default to null] |
 | **autoTestIds** | **Set** | Collection of identifiers of linked autotests | [optional] [default to null] |
 | **workItemVersionIds** | **List** | Collection of identifiers work items versions. | [optional] [default to null] |
 

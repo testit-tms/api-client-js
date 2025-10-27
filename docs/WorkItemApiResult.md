@@ -29,6 +29,7 @@
 | **autoTests** | [**List**](AutoTestModel.md) | Automated tests associated with the work item | [default to null] |
 | **attachments** | [**List**](AttachmentModel.md) | Files attached to the work item | [default to null] |
 | **links** | [**List**](LinkModel.md) | Set of links related to the work item | [default to null] |
+| **externalIssues** | [**List**](ExternalIssueApiResult.md) | Set of external issues related to the work item | [default to null] |
 | **createdDate** | **Date** | Creation date of the work item | [default to null] |
 | **createdById** | **UUID** | Unique identifier of the work item creator | [default to null] |
 | **modifiedDate** | **Date** | Modification date of the work item | [optional] [default to null] |

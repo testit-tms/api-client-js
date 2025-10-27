@@ -6,7 +6,7 @@
 | **workItemUsage** | [**List**](ProjectShortestModel.md) |  | [default to null] |
 | **testPlanUsage** | [**List**](ProjectShortestModel.md) |  | [default to null] |
 | **id** | **UUID** | Unique ID of the attribute | [default to null] |
-| **options** | [**List**](CustomAttributeOptionModel.md) | Collection of the attribute options   Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | [default to null] |
+| **options** | [**List**](CustomAttributeOptionModel.md) | Collection of the attribute options      Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | [default to null] |
 | **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) | Type of the attribute | [default to null] |
 | **isDeleted** | **Boolean** | Indicates if the attribute is deleted | [default to null] |
 | **name** | **String** | Name of the attribute | [default to null] |

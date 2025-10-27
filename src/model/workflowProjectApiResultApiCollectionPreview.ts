@@ -14,7 +14,13 @@ import { RequestFile } from './models';
 import { WorkflowProjectApiResult } from './workflowProjectApiResult';
 
 export class WorkflowProjectApiResultApiCollectionPreview {
+    /**
+    * Preview items
+    */
     'data': Array<WorkflowProjectApiResult>;
+    /**
+    * Total count
+    */
     'totalCount': number;
 
     static discriminator: string | undefined = undefined;

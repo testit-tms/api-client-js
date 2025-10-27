@@ -102,6 +102,10 @@ export class WorkItemSearchQueryModel {
     */
     'tags'?: Array<string> | null;
     /**
+    * Collection of tags to exclude
+    */
+    'excludeTags'?: Array<string> | null;
+    /**
     * Collection of identifiers of linked autotests
     */
     'autoTestIds'?: Array<string> | null;
@@ -211,6 +215,11 @@ export class WorkItemSearchQueryModel {
         {
             "name": "tags",
             "baseName": "tags",
+            "type": "Array<string>"
+        },
+        {
+            "name": "excludeTags",
+            "baseName": "excludeTags",
             "type": "Array<string>"
         },
         {

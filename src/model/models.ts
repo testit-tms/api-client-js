@@ -33,21 +33,14 @@ export * from './autoTestNamespaceModel';
 export * from './autoTestNamespacesCountResponse';
 export * from './autoTestOutcome';
 export * from './autoTestPostModel';
-export * from './autoTestProjectSettingsGetModel';
-export * from './autoTestProjectSettingsPostModel';
+export * from './autoTestProjectSettingsApiModel';
+export * from './autoTestProjectSettingsApiResult';
 export * from './autoTestPutModel';
 export * from './autoTestResultHistoryApiResult';
 export * from './autoTestResultHistorySelectApiModel';
-export * from './autoTestResultReasonGroupApiModel';
-export * from './autoTestResultReasonGroupApiResult';
-export * from './autoTestResultReasonGroupItemApiResult';
-export * from './autoTestResultReasonGroupItemApiResultReply';
-export * from './autoTestResultReasonGroupSearchApiModel';
-export * from './autoTestResultReasonProjectApiResult';
 export * from './autoTestResultReasonShort';
 export * from './autoTestResultReasonsCountItemModel';
 export * from './autoTestResultReasonsCountModel';
-export * from './autoTestResultReasonsProjectApiResult';
 export * from './autoTestResultsForTestRunModel';
 export * from './autoTestSearchApiModel';
 export * from './autoTestSearchIncludeApiModel';
@@ -73,6 +66,8 @@ export * from './backgroundJobState';
 export * from './backgroundJobType';
 export * from './booleanChangedFieldViewModel';
 export * from './booleanNullableChangedFieldViewModel';
+export * from './collectionFilter';
+export * from './collectionOperator';
 export * from './compositeFilter';
 export * from './configurationByParametersModel';
 export * from './configurationExtractionModel';
@@ -84,9 +79,9 @@ export * from './configurationSelectModel';
 export * from './configurationShort';
 export * from './configurationShortApiResult';
 export * from './configurationShortModel';
-export * from './createAutoTestResultReasonProjectApiModel';
 export * from './createDefectApiModel';
 export * from './createEmptyTestRunApiModel';
+export * from './createFailureCategoryApiModel';
 export * from './createFailureClassRegexApiModel';
 export * from './createLinkApiModel';
 export * from './createParameterApiModel';
@@ -132,14 +127,32 @@ export * from './externalFormModel';
 export * from './externalIssueApiField';
 export * from './externalIssueApiFieldSuggestion';
 export * from './externalIssueApiFieldSuggestionReply';
+export * from './externalIssueApiMetadata';
+export * from './externalIssueApiPriority';
+export * from './externalIssueApiResult';
+export * from './externalIssueApiType';
+export * from './externalIssueExternalServiceApiResult';
+export * from './externalIssueMetadataModel';
+export * from './externalIssueModel';
+export * from './externalIssuePriorityModel';
+export * from './externalIssueTypeModel';
 export * from './externalLinkModel';
 export * from './externalServiceCategoryApiResult';
 export * from './externalServiceMetadataApiResult';
 export * from './externalServicesMetadataApiResult';
 export * from './failureCategory';
+export * from './failureCategoryApiResult';
+export * from './failureCategoryGroupApiModel';
+export * from './failureCategoryGroupApiResult';
+export * from './failureCategoryGroupItemApiResult';
+export * from './failureCategoryGroupItemApiResultReply';
+export * from './failureCategoryGroupSearchApiModel';
+export * from './failureCategoryItemApiResult';
 export * from './failureCategoryModel';
 export * from './failureClassRegexApiResult';
+export * from './filter';
 export * from './filterModel';
+export * from './filterOperator';
 export * from './generateWorkItemPreviewsApiModel';
 export * from './generateWorkItemPreviewsApiResult';
 export * from './getAIServiceModelsApiModel';
@@ -154,6 +167,7 @@ export * from './globalSearchRequest';
 export * from './globalSearchResponse';
 export * from './guidChangedFieldViewModel';
 export * from './guidExtractionModel';
+export * from './iFilter';
 export * from './imageResizeType';
 export * from './inquiry';
 export * from './int32ChangedFieldViewModel';
@@ -226,12 +240,14 @@ export * from './projectsFilterModel';
 export * from './publicTestPointModel';
 export * from './publicTestRunModel';
 export * from './replaceProjectExternalServiceApiModel';
+export * from './requestType';
 export * from './requestTypeApiModel';
 export * from './requestTypeModel';
 export * from './rerunTestResultApiResult';
 export * from './rerunTestResultModel';
 export * from './rerunsModel';
 export * from './searchCustomAttributeTemplateGetModel';
+export * from './searchExternalIssuesApiModel';
 export * from './searchTestRunsApiModel';
 export * from './searchTestStatusesApiModel';
 export * from './searchWebhooksQueryModel';
@@ -383,8 +399,8 @@ export * from './testSuiteV2PostModel';
 export * from './testSuiteV2PutModel';
 export * from './testSuiteWithChildrenModel';
 export * from './testSuiteWorkItemsSearchModel';
-export * from './updateAutoTestResultReasonProjectApiModel';
 export * from './updateEmptyTestRunApiModel';
+export * from './updateFailureCategoryApiModel';
 export * from './updateFailureCategoryProjectApiModel';
 export * from './updateFailureClassRegexApiModel';
 export * from './updateLinkApiModel';
@@ -407,11 +423,11 @@ export * from './validationProblemDetails';
 export * from './webHookEventType';
 export * from './webHookEventTypeModel';
 export * from './webHookEventTypeRequest';
-export * from './webHookLogModel';
 export * from './webHookModel';
 export * from './webHookPostModel';
 export * from './webHookTestModel';
 export * from './webhookBulkUpdateApiModel';
+export * from './webhookLogApiResult';
 export * from './webhookResponse';
 export * from './webhookVariablesType';
 export * from './webhooksDeleteApiModel';
@@ -429,6 +445,10 @@ export * from './workItemCommentPostModel';
 export * from './workItemCommentPutModel';
 export * from './workItemEntityTypeApiModel';
 export * from './workItemEntityTypes';
+export * from './workItemExternalMetadataFieldFilterApiModel';
+export * from './workItemExternalMetadataFieldFilterModel';
+export * from './workItemExternalMetadataFilterApiModel';
+export * from './workItemExternalMetadataFilterModel';
 export * from './workItemExtractionApiModel';
 export * from './workItemExtractionModel';
 export * from './workItemFilterApiModel';
@@ -436,8 +456,9 @@ export * from './workItemFilterModel';
 export * from './workItemGroupGetModel';
 export * from './workItemGroupModel';
 export * from './workItemGroupType';
-export * from './workItemIdModel';
+export * from './workItemIdApiModel';
 export * from './workItemIdentifierModel';
+export * from './workItemIndexApiResult';
 export * from './workItemLikeModel';
 export * from './workItemLinkChangeViewModel';
 export * from './workItemLinkChangeViewModelArrayChangedFieldViewModel';
@@ -525,21 +546,14 @@ import { AutoTestNamespaceModel } from './autoTestNamespaceModel';
 import { AutoTestNamespacesCountResponse } from './autoTestNamespacesCountResponse';
 import { AutoTestOutcome } from './autoTestOutcome';
 import { AutoTestPostModel } from './autoTestPostModel';
-import { AutoTestProjectSettingsGetModel } from './autoTestProjectSettingsGetModel';
-import { AutoTestProjectSettingsPostModel } from './autoTestProjectSettingsPostModel';
+import { AutoTestProjectSettingsApiModel } from './autoTestProjectSettingsApiModel';
+import { AutoTestProjectSettingsApiResult } from './autoTestProjectSettingsApiResult';
 import { AutoTestPutModel } from './autoTestPutModel';
 import { AutoTestResultHistoryApiResult } from './autoTestResultHistoryApiResult';
 import { AutoTestResultHistorySelectApiModel } from './autoTestResultHistorySelectApiModel';
-import { AutoTestResultReasonGroupApiModel } from './autoTestResultReasonGroupApiModel';
-import { AutoTestResultReasonGroupApiResult } from './autoTestResultReasonGroupApiResult';
-import { AutoTestResultReasonGroupItemApiResult } from './autoTestResultReasonGroupItemApiResult';
-import { AutoTestResultReasonGroupItemApiResultReply } from './autoTestResultReasonGroupItemApiResultReply';
-import { AutoTestResultReasonGroupSearchApiModel } from './autoTestResultReasonGroupSearchApiModel';
-import { AutoTestResultReasonProjectApiResult } from './autoTestResultReasonProjectApiResult';
 import { AutoTestResultReasonShort } from './autoTestResultReasonShort';
 import { AutoTestResultReasonsCountItemModel } from './autoTestResultReasonsCountItemModel';
 import { AutoTestResultReasonsCountModel } from './autoTestResultReasonsCountModel';
-import { AutoTestResultReasonsProjectApiResult } from './autoTestResultReasonsProjectApiResult';
 import { AutoTestResultsForTestRunModel } from './autoTestResultsForTestRunModel';
 import { AutoTestSearchApiModel } from './autoTestSearchApiModel';
 import { AutoTestSearchIncludeApiModel } from './autoTestSearchIncludeApiModel';
@@ -565,6 +579,8 @@ import { BackgroundJobState } from './backgroundJobState';
 import { BackgroundJobType } from './backgroundJobType';
 import { BooleanChangedFieldViewModel } from './booleanChangedFieldViewModel';
 import { BooleanNullableChangedFieldViewModel } from './booleanNullableChangedFieldViewModel';
+import { CollectionFilter } from './collectionFilter';
+import { CollectionOperator } from './collectionOperator';
 import { CompositeFilter } from './compositeFilter';
 import { ConfigurationByParametersModel } from './configurationByParametersModel';
 import { ConfigurationExtractionModel } from './configurationExtractionModel';
@@ -576,9 +592,9 @@ import { ConfigurationSelectModel } from './configurationSelectModel';
 import { ConfigurationShort } from './configurationShort';
 import { ConfigurationShortApiResult } from './configurationShortApiResult';
 import { ConfigurationShortModel } from './configurationShortModel';
-import { CreateAutoTestResultReasonProjectApiModel } from './createAutoTestResultReasonProjectApiModel';
 import { CreateDefectApiModel } from './createDefectApiModel';
 import { CreateEmptyTestRunApiModel } from './createEmptyTestRunApiModel';
+import { CreateFailureCategoryApiModel } from './createFailureCategoryApiModel';
 import { CreateFailureClassRegexApiModel } from './createFailureClassRegexApiModel';
 import { CreateLinkApiModel } from './createLinkApiModel';
 import { CreateParameterApiModel } from './createParameterApiModel';
@@ -624,14 +640,32 @@ import { ExternalFormModel } from './externalFormModel';
 import { ExternalIssueApiField } from './externalIssueApiField';
 import { ExternalIssueApiFieldSuggestion } from './externalIssueApiFieldSuggestion';
 import { ExternalIssueApiFieldSuggestionReply } from './externalIssueApiFieldSuggestionReply';
+import { ExternalIssueApiMetadata } from './externalIssueApiMetadata';
+import { ExternalIssueApiPriority } from './externalIssueApiPriority';
+import { ExternalIssueApiResult } from './externalIssueApiResult';
+import { ExternalIssueApiType } from './externalIssueApiType';
+import { ExternalIssueExternalServiceApiResult } from './externalIssueExternalServiceApiResult';
+import { ExternalIssueMetadataModel } from './externalIssueMetadataModel';
+import { ExternalIssueModel } from './externalIssueModel';
+import { ExternalIssuePriorityModel } from './externalIssuePriorityModel';
+import { ExternalIssueTypeModel } from './externalIssueTypeModel';
 import { ExternalLinkModel } from './externalLinkModel';
 import { ExternalServiceCategoryApiResult } from './externalServiceCategoryApiResult';
 import { ExternalServiceMetadataApiResult } from './externalServiceMetadataApiResult';
 import { ExternalServicesMetadataApiResult } from './externalServicesMetadataApiResult';
 import { FailureCategory } from './failureCategory';
+import { FailureCategoryApiResult } from './failureCategoryApiResult';
+import { FailureCategoryGroupApiModel } from './failureCategoryGroupApiModel';
+import { FailureCategoryGroupApiResult } from './failureCategoryGroupApiResult';
+import { FailureCategoryGroupItemApiResult } from './failureCategoryGroupItemApiResult';
+import { FailureCategoryGroupItemApiResultReply } from './failureCategoryGroupItemApiResultReply';
+import { FailureCategoryGroupSearchApiModel } from './failureCategoryGroupSearchApiModel';
+import { FailureCategoryItemApiResult } from './failureCategoryItemApiResult';
 import { FailureCategoryModel } from './failureCategoryModel';
 import { FailureClassRegexApiResult } from './failureClassRegexApiResult';
+import { Filter } from './filter';
 import { FilterModel } from './filterModel';
+import { FilterOperator } from './filterOperator';
 import { GenerateWorkItemPreviewsApiModel } from './generateWorkItemPreviewsApiModel';
 import { GenerateWorkItemPreviewsApiResult } from './generateWorkItemPreviewsApiResult';
 import { GetAIServiceModelsApiModel } from './getAIServiceModelsApiModel';
@@ -646,6 +680,7 @@ import { GlobalSearchRequest } from './globalSearchRequest';
 import { GlobalSearchResponse } from './globalSearchResponse';
 import { GuidChangedFieldViewModel } from './guidChangedFieldViewModel';
 import { GuidExtractionModel } from './guidExtractionModel';
+import { IFilter } from './iFilter';
 import { ImageResizeType } from './imageResizeType';
 import { Inquiry } from './inquiry';
 import { Int32ChangedFieldViewModel } from './int32ChangedFieldViewModel';
@@ -718,12 +753,14 @@ import { ProjectsFilterModel } from './projectsFilterModel';
 import { PublicTestPointModel } from './publicTestPointModel';
 import { PublicTestRunModel } from './publicTestRunModel';
 import { ReplaceProjectExternalServiceApiModel } from './replaceProjectExternalServiceApiModel';
+import { RequestType } from './requestType';
 import { RequestTypeApiModel } from './requestTypeApiModel';
 import { RequestTypeModel } from './requestTypeModel';
 import { RerunTestResultApiResult } from './rerunTestResultApiResult';
 import { RerunTestResultModel } from './rerunTestResultModel';
 import { RerunsModel } from './rerunsModel';
 import { SearchCustomAttributeTemplateGetModel } from './searchCustomAttributeTemplateGetModel';
+import { SearchExternalIssuesApiModel } from './searchExternalIssuesApiModel';
 import { SearchTestRunsApiModel } from './searchTestRunsApiModel';
 import { SearchTestStatusesApiModel } from './searchTestStatusesApiModel';
 import { SearchWebhooksQueryModel } from './searchWebhooksQueryModel';
@@ -875,8 +912,8 @@ import { TestSuiteV2PostModel } from './testSuiteV2PostModel';
 import { TestSuiteV2PutModel } from './testSuiteV2PutModel';
 import { TestSuiteWithChildrenModel } from './testSuiteWithChildrenModel';
 import { TestSuiteWorkItemsSearchModel } from './testSuiteWorkItemsSearchModel';
-import { UpdateAutoTestResultReasonProjectApiModel } from './updateAutoTestResultReasonProjectApiModel';
 import { UpdateEmptyTestRunApiModel } from './updateEmptyTestRunApiModel';
+import { UpdateFailureCategoryApiModel } from './updateFailureCategoryApiModel';
 import { UpdateFailureCategoryProjectApiModel } from './updateFailureCategoryProjectApiModel';
 import { UpdateFailureClassRegexApiModel } from './updateFailureClassRegexApiModel';
 import { UpdateLinkApiModel } from './updateLinkApiModel';
@@ -899,11 +936,11 @@ import { ValidationProblemDetails } from './validationProblemDetails';
 import { WebHookEventType } from './webHookEventType';
 import { WebHookEventTypeModel } from './webHookEventTypeModel';
 import { WebHookEventTypeRequest } from './webHookEventTypeRequest';
-import { WebHookLogModel } from './webHookLogModel';
 import { WebHookModel } from './webHookModel';
 import { WebHookPostModel } from './webHookPostModel';
 import { WebHookTestModel } from './webHookTestModel';
 import { WebhookBulkUpdateApiModel } from './webhookBulkUpdateApiModel';
+import { WebhookLogApiResult } from './webhookLogApiResult';
 import { WebhookResponse } from './webhookResponse';
 import { WebhookVariablesType } from './webhookVariablesType';
 import { WebhooksDeleteApiModel } from './webhooksDeleteApiModel';
@@ -921,6 +958,10 @@ import { WorkItemCommentPostModel } from './workItemCommentPostModel';
 import { WorkItemCommentPutModel } from './workItemCommentPutModel';
 import { WorkItemEntityTypeApiModel } from './workItemEntityTypeApiModel';
 import { WorkItemEntityTypes } from './workItemEntityTypes';
+import { WorkItemExternalMetadataFieldFilterApiModel } from './workItemExternalMetadataFieldFilterApiModel';
+import { WorkItemExternalMetadataFieldFilterModel } from './workItemExternalMetadataFieldFilterModel';
+import { WorkItemExternalMetadataFilterApiModel } from './workItemExternalMetadataFilterApiModel';
+import { WorkItemExternalMetadataFilterModel } from './workItemExternalMetadataFilterModel';
 import { WorkItemExtractionApiModel } from './workItemExtractionApiModel';
 import { WorkItemExtractionModel } from './workItemExtractionModel';
 import { WorkItemFilterApiModel } from './workItemFilterApiModel';
@@ -928,8 +969,9 @@ import { WorkItemFilterModel } from './workItemFilterModel';
 import { WorkItemGroupGetModel } from './workItemGroupGetModel';
 import { WorkItemGroupModel } from './workItemGroupModel';
 import { WorkItemGroupType } from './workItemGroupType';
-import { WorkItemIdModel } from './workItemIdModel';
+import { WorkItemIdApiModel } from './workItemIdApiModel';
 import { WorkItemIdentifierModel } from './workItemIdentifierModel';
+import { WorkItemIndexApiResult } from './workItemIndexApiResult';
 import { WorkItemLikeModel } from './workItemLikeModel';
 import { WorkItemLinkChangeViewModel } from './workItemLinkChangeViewModel';
 import { WorkItemLinkChangeViewModelArrayChangedFieldViewModel } from './workItemLinkChangeViewModelArrayChangedFieldViewModel';
@@ -991,12 +1033,14 @@ let enumsMap: {[index: string]: any} = {
         "AvailableTestResultOutcome": AvailableTestResultOutcome,
         "BackgroundJobState": BackgroundJobState,
         "BackgroundJobType": BackgroundJobType,
+        "CollectionOperator": CollectionOperator,
         "CustomAttributeTypesEnum": CustomAttributeTypesEnum,
         "DeletionState": DeletionState,
         "ExternalIssueApiField": ExternalIssueApiField,
         "ExternalServiceCategoryApiResult": ExternalServiceCategoryApiResult,
         "FailureCategory": FailureCategory,
         "FailureCategoryModel": FailureCategoryModel,
+        "FilterOperator": FilterOperator,
         "ImageResizeType": ImageResizeType,
         "LinkType": LinkType,
         "ListSortDirection": ListSortDirection,
@@ -1004,6 +1048,7 @@ let enumsMap: {[index: string]: any} = {
         "NotificationTypeModel": NotificationTypeModel,
         "ProjectType": ProjectType,
         "ProjectTypeModel": ProjectTypeModel,
+        "RequestType": RequestType,
         "RequestTypeApiModel": RequestTypeApiModel,
         "RequestTypeModel": RequestTypeModel,
         "TestPlanStatus": TestPlanStatus,
@@ -1064,21 +1109,14 @@ let typeMap: {[index: string]: any} = {
     "AutoTestNamespaceModel": AutoTestNamespaceModel,
     "AutoTestNamespacesCountResponse": AutoTestNamespacesCountResponse,
     "AutoTestPostModel": AutoTestPostModel,
-    "AutoTestProjectSettingsGetModel": AutoTestProjectSettingsGetModel,
-    "AutoTestProjectSettingsPostModel": AutoTestProjectSettingsPostModel,
+    "AutoTestProjectSettingsApiModel": AutoTestProjectSettingsApiModel,
+    "AutoTestProjectSettingsApiResult": AutoTestProjectSettingsApiResult,
     "AutoTestPutModel": AutoTestPutModel,
     "AutoTestResultHistoryApiResult": AutoTestResultHistoryApiResult,
     "AutoTestResultHistorySelectApiModel": AutoTestResultHistorySelectApiModel,
-    "AutoTestResultReasonGroupApiModel": AutoTestResultReasonGroupApiModel,
-    "AutoTestResultReasonGroupApiResult": AutoTestResultReasonGroupApiResult,
-    "AutoTestResultReasonGroupItemApiResult": AutoTestResultReasonGroupItemApiResult,
-    "AutoTestResultReasonGroupItemApiResultReply": AutoTestResultReasonGroupItemApiResultReply,
-    "AutoTestResultReasonGroupSearchApiModel": AutoTestResultReasonGroupSearchApiModel,
-    "AutoTestResultReasonProjectApiResult": AutoTestResultReasonProjectApiResult,
     "AutoTestResultReasonShort": AutoTestResultReasonShort,
     "AutoTestResultReasonsCountItemModel": AutoTestResultReasonsCountItemModel,
     "AutoTestResultReasonsCountModel": AutoTestResultReasonsCountModel,
-    "AutoTestResultReasonsProjectApiResult": AutoTestResultReasonsProjectApiResult,
     "AutoTestResultsForTestRunModel": AutoTestResultsForTestRunModel,
     "AutoTestSearchApiModel": AutoTestSearchApiModel,
     "AutoTestSearchIncludeApiModel": AutoTestSearchIncludeApiModel,
@@ -1099,6 +1137,7 @@ let typeMap: {[index: string]: any} = {
     "BackgroundJobGetModel": BackgroundJobGetModel,
     "BooleanChangedFieldViewModel": BooleanChangedFieldViewModel,
     "BooleanNullableChangedFieldViewModel": BooleanNullableChangedFieldViewModel,
+    "CollectionFilter": CollectionFilter,
     "CompositeFilter": CompositeFilter,
     "ConfigurationByParametersModel": ConfigurationByParametersModel,
     "ConfigurationExtractionModel": ConfigurationExtractionModel,
@@ -1110,9 +1149,9 @@ let typeMap: {[index: string]: any} = {
     "ConfigurationShort": ConfigurationShort,
     "ConfigurationShortApiResult": ConfigurationShortApiResult,
     "ConfigurationShortModel": ConfigurationShortModel,
-    "CreateAutoTestResultReasonProjectApiModel": CreateAutoTestResultReasonProjectApiModel,
     "CreateDefectApiModel": CreateDefectApiModel,
     "CreateEmptyTestRunApiModel": CreateEmptyTestRunApiModel,
+    "CreateFailureCategoryApiModel": CreateFailureCategoryApiModel,
     "CreateFailureClassRegexApiModel": CreateFailureClassRegexApiModel,
     "CreateLinkApiModel": CreateLinkApiModel,
     "CreateParameterApiModel": CreateParameterApiModel,
@@ -1155,10 +1194,27 @@ let typeMap: {[index: string]: any} = {
     "ExternalFormModel": ExternalFormModel,
     "ExternalIssueApiFieldSuggestion": ExternalIssueApiFieldSuggestion,
     "ExternalIssueApiFieldSuggestionReply": ExternalIssueApiFieldSuggestionReply,
+    "ExternalIssueApiMetadata": ExternalIssueApiMetadata,
+    "ExternalIssueApiPriority": ExternalIssueApiPriority,
+    "ExternalIssueApiResult": ExternalIssueApiResult,
+    "ExternalIssueApiType": ExternalIssueApiType,
+    "ExternalIssueExternalServiceApiResult": ExternalIssueExternalServiceApiResult,
+    "ExternalIssueMetadataModel": ExternalIssueMetadataModel,
+    "ExternalIssueModel": ExternalIssueModel,
+    "ExternalIssuePriorityModel": ExternalIssuePriorityModel,
+    "ExternalIssueTypeModel": ExternalIssueTypeModel,
     "ExternalLinkModel": ExternalLinkModel,
     "ExternalServiceMetadataApiResult": ExternalServiceMetadataApiResult,
     "ExternalServicesMetadataApiResult": ExternalServicesMetadataApiResult,
+    "FailureCategoryApiResult": FailureCategoryApiResult,
+    "FailureCategoryGroupApiModel": FailureCategoryGroupApiModel,
+    "FailureCategoryGroupApiResult": FailureCategoryGroupApiResult,
+    "FailureCategoryGroupItemApiResult": FailureCategoryGroupItemApiResult,
+    "FailureCategoryGroupItemApiResultReply": FailureCategoryGroupItemApiResultReply,
+    "FailureCategoryGroupSearchApiModel": FailureCategoryGroupSearchApiModel,
+    "FailureCategoryItemApiResult": FailureCategoryItemApiResult,
     "FailureClassRegexApiResult": FailureClassRegexApiResult,
+    "Filter": Filter,
     "FilterModel": FilterModel,
     "GenerateWorkItemPreviewsApiModel": GenerateWorkItemPreviewsApiModel,
     "GenerateWorkItemPreviewsApiResult": GenerateWorkItemPreviewsApiResult,
@@ -1174,6 +1230,7 @@ let typeMap: {[index: string]: any} = {
     "GlobalSearchResponse": GlobalSearchResponse,
     "GuidChangedFieldViewModel": GuidChangedFieldViewModel,
     "GuidExtractionModel": GuidExtractionModel,
+    "IFilter": IFilter,
     "Inquiry": Inquiry,
     "Int32ChangedFieldViewModel": Int32ChangedFieldViewModel,
     "Int32RangeSelectorModel": Int32RangeSelectorModel,
@@ -1243,6 +1300,7 @@ let typeMap: {[index: string]: any} = {
     "RerunTestResultModel": RerunTestResultModel,
     "RerunsModel": RerunsModel,
     "SearchCustomAttributeTemplateGetModel": SearchCustomAttributeTemplateGetModel,
+    "SearchExternalIssuesApiModel": SearchExternalIssuesApiModel,
     "SearchTestRunsApiModel": SearchTestRunsApiModel,
     "SearchTestStatusesApiModel": SearchTestStatusesApiModel,
     "SearchWebhooksQueryModel": SearchWebhooksQueryModel,
@@ -1385,8 +1443,8 @@ let typeMap: {[index: string]: any} = {
     "TestSuiteV2PutModel": TestSuiteV2PutModel,
     "TestSuiteWithChildrenModel": TestSuiteWithChildrenModel,
     "TestSuiteWorkItemsSearchModel": TestSuiteWorkItemsSearchModel,
-    "UpdateAutoTestResultReasonProjectApiModel": UpdateAutoTestResultReasonProjectApiModel,
     "UpdateEmptyTestRunApiModel": UpdateEmptyTestRunApiModel,
+    "UpdateFailureCategoryApiModel": UpdateFailureCategoryApiModel,
     "UpdateFailureCategoryProjectApiModel": UpdateFailureCategoryProjectApiModel,
     "UpdateFailureClassRegexApiModel": UpdateFailureClassRegexApiModel,
     "UpdateLinkApiModel": UpdateLinkApiModel,
@@ -1406,11 +1464,11 @@ let typeMap: {[index: string]: any} = {
     "UserRankModel": UserRankModel,
     "UserWithRankModel": UserWithRankModel,
     "ValidationProblemDetails": ValidationProblemDetails,
-    "WebHookLogModel": WebHookLogModel,
     "WebHookModel": WebHookModel,
     "WebHookPostModel": WebHookPostModel,
     "WebHookTestModel": WebHookTestModel,
     "WebhookBulkUpdateApiModel": WebhookBulkUpdateApiModel,
+    "WebhookLogApiResult": WebhookLogApiResult,
     "WebhookResponse": WebhookResponse,
     "WebhooksDeleteApiModel": WebhooksDeleteApiModel,
     "WebhooksDeleteFilterApiModel": WebhooksDeleteFilterApiModel,
@@ -1425,14 +1483,19 @@ let typeMap: {[index: string]: any} = {
     "WorkItemCommentModel": WorkItemCommentModel,
     "WorkItemCommentPostModel": WorkItemCommentPostModel,
     "WorkItemCommentPutModel": WorkItemCommentPutModel,
+    "WorkItemExternalMetadataFieldFilterApiModel": WorkItemExternalMetadataFieldFilterApiModel,
+    "WorkItemExternalMetadataFieldFilterModel": WorkItemExternalMetadataFieldFilterModel,
+    "WorkItemExternalMetadataFilterApiModel": WorkItemExternalMetadataFilterApiModel,
+    "WorkItemExternalMetadataFilterModel": WorkItemExternalMetadataFilterModel,
     "WorkItemExtractionApiModel": WorkItemExtractionApiModel,
     "WorkItemExtractionModel": WorkItemExtractionModel,
     "WorkItemFilterApiModel": WorkItemFilterApiModel,
     "WorkItemFilterModel": WorkItemFilterModel,
     "WorkItemGroupGetModel": WorkItemGroupGetModel,
     "WorkItemGroupModel": WorkItemGroupModel,
-    "WorkItemIdModel": WorkItemIdModel,
+    "WorkItemIdApiModel": WorkItemIdApiModel,
     "WorkItemIdentifierModel": WorkItemIdentifierModel,
+    "WorkItemIndexApiResult": WorkItemIndexApiResult,
     "WorkItemLikeModel": WorkItemLikeModel,
     "WorkItemLinkChangeViewModel": WorkItemLinkChangeViewModel,
     "WorkItemLinkChangeViewModelArrayChangedFieldViewModel": WorkItemLinkChangeViewModelArrayChangedFieldViewModel,

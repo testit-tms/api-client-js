@@ -88,6 +88,10 @@ export class TestPlanTestPointsSearchApiModel {
     */
     'tags'?: Array<string> | null;
     /**
+    * Specifies a test point tags to exclude to search for
+    */
+    'excludeTags'?: Array<string> | null;
+    /**
     * Specifies a test point attributes to search for
     */
     'attributes'?: { [key: string]: Array<string> | null; } | null;
@@ -194,6 +198,11 @@ export class TestPlanTestPointsSearchApiModel {
         {
             "name": "tags",
             "baseName": "tags",
+            "type": "Array<string>"
+        },
+        {
+            "name": "excludeTags",
+            "baseName": "excludeTags",
             "type": "Array<string>"
         },
         {

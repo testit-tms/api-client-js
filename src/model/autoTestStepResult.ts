@@ -48,7 +48,7 @@ export class AutoTestStepResult {
     */
     'stepResults'?: Array<AutoTestStepResult> | null;
     /**
-    * /// <summary> Specifies an attachment GUID. Multiple values can be sent. </summary>
+    * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
     */
     'attachments'?: Array<AttachmentApiResult> | null;
     /**
