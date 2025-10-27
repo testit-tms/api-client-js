@@ -4,10 +4,11 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 | **tagNames** | **Set** | Collection of tags | [optional] [default to null] |
-| **entityTypes** | [**Set**](WorkItemEntityTypes.md) | Collection of types of work item  Allowed values: &#x60;TestCases&#x60;, &#x60;CheckLists&#x60;, &#x60;SharedSteps&#x60; | [optional] [default to null] |
+| **entityTypes** | [**Set**](WorkItemEntityTypes.md) | Collection of types of work item    Allowed values: &#x60;TestCases&#x60;, &#x60;CheckLists&#x60;, &#x60;SharedSteps&#x60; | [optional] [default to null] |
 | **nameOrId** | **String** | Name or identifier (UUID) of work item | [optional] [default to null] |
 | **includeIds** | **Set** | Collection of identifiers of work items which need to be included in result regardless of filtering | [optional] [default to null] |
 | **excludeIds** | **Set** | Collection of identifiers of work items which need to be excluded from result regardless of filtering | [optional] [default to null] |
+| **externalMetadata** | [**WorkItemExternalMetadataFilterModel**](WorkItemExternalMetadataFilterModel.md) | Specifies work item filter by its external metadata | [optional] [default to null] |
 | **projectIds** | **Set** | Collection of project identifiers | [optional] [default to null] |
 | **links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] [default to null] |
 | **name** | **String** | Name of work item | [optional] [default to null] |
@@ -28,6 +29,7 @@
 | **medianDuration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) | Specifies a work item median duration range to search for | [optional] [default to null] |
 | **isAutomated** | **Boolean** | Is result must consist of only manual/automated work items | [optional] [default to null] |
 | **tags** | **Set** | Collection of tags | [optional] [default to null] |
+| **excludeTags** | **Set** | Collection of tags to exclude | [optional] [default to null] |
 | **autoTestIds** | **Set** | Collection of identifiers of linked autotests | [optional] [default to null] |
 | **workItemVersionIds** | **List** | Collection of identifiers work items versions. | [optional] [default to null] |
 

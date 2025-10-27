@@ -17,7 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { ProblemDetails } from '../model/problemDetails';
 import { ValidationProblemDetails } from '../model/validationProblemDetails';
-import { WebHookLogModel } from '../model/webHookLogModel';
+import { WebhookLogApiResult } from '../model/webhookLogApiResult';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
@@ -99,7 +99,7 @@ export class WebhooksLogsApi {
 
     /**
      * 
-     * @summary Get all webhook logs
+     * @summary Get last webhook logs
      * @param projectId Project unique ID
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
@@ -107,7 +107,7 @@ export class WebhooksLogsApi {
      * @param searchField Property name for searching
      * @param searchValue Value for searching
      */
-    public async apiV2WebhooksLogsGet (projectId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebHookLogModel>;  }> {
+    public async apiV2WebhooksLogsGet (projectId?: string, skip?: number, take?: number, orderBy?: string, searchField?: string, searchValue?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<WebhookLogApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/logs';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -178,13 +178,13 @@ export class WebhooksLogsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<WebHookLogModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<WebhookLogApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<WebHookLogModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<WebhookLogApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -272,7 +272,7 @@ export class WebhooksLogsApi {
      * @summary Get webhook log by ID
      * @param id Webhook log unique ID
      */
-    public async apiV2WebhooksLogsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebHookLogModel;  }> {
+    public async apiV2WebhooksLogsIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: WebhookLogApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/webhooks/logs/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -325,13 +325,13 @@ export class WebhooksLogsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: WebHookLogModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: WebhookLogApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "WebHookLogModel");
+                            body = ObjectSerializer.deserialize(body, "WebhookLogApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

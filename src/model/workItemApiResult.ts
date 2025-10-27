@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
 import { AutoTestModel } from './autoTestModel';
+import { ExternalIssueApiResult } from './externalIssueApiResult';
 import { IterationModel } from './iterationModel';
 import { LinkModel } from './linkModel';
 import { StepModel } from './stepModel';
@@ -124,6 +125,10 @@ export class WorkItemApiResult {
     * Set of links related to the work item
     */
     'links': Array<LinkModel>;
+    /**
+    * Set of external issues related to the work item
+    */
+    'externalIssues': Array<ExternalIssueApiResult>;
     /**
     * Creation date of the work item
     */
@@ -277,6 +282,11 @@ export class WorkItemApiResult {
             "name": "links",
             "baseName": "links",
             "type": "Array<LinkModel>"
+        },
+        {
+            "name": "externalIssues",
+            "baseName": "externalIssues",
+            "type": "Array<ExternalIssueApiResult>"
         },
         {
             "name": "createdDate",

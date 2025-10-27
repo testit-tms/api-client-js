@@ -28,7 +28,7 @@ export class GlobalCustomAttributePostModel {
     */
     'isRequired'?: boolean | null;
     /**
-    * Collection of attribute options   Available for attributes of type `options` and `multiple options` only
+    * Collection of attribute options      Available for attributes of type `options` and `multiple options` only
     */
     'options'?: Array<CustomAttributeOptionPostModel> | null;
     /**

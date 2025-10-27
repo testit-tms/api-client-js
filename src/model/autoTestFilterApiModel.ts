@@ -85,9 +85,9 @@ export class AutoTestFilterApiModel {
     */
     'lastTestResultOutcome'?: AutotestResultOutcome | null;
     /**
-    * Specifies an autotest status code of the last test result to search for
+    * Specifies an autotest status codes of the last test result to search for
     */
-    'lastTestResultStatusCode'?: string | null;
+    'lastTestResultStatusCodes'?: Array<string> | null;
     /**
     * Specifies an autotest external key to search for
     */
@@ -186,9 +186,9 @@ export class AutoTestFilterApiModel {
             "type": "AutotestResultOutcome"
         },
         {
-            "name": "lastTestResultStatusCode",
-            "baseName": "lastTestResultStatusCode",
-            "type": "string"
+            "name": "lastTestResultStatusCodes",
+            "baseName": "lastTestResultStatusCodes",
+            "type": "Array<string>"
         },
         {
             "name": "externalKey",

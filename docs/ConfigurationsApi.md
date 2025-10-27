@@ -173,7 +173,7 @@ null (empty response body)
 
 <a name="apiV2ConfigurationsPurgeBulkPost"></a>
 # **apiV2ConfigurationsPurgeBulkPost**
-> apiV2ConfigurationsPurgeBulkPost(ConfigurationSelectModel)
+> Integer apiV2ConfigurationsPurgeBulkPost(ConfigurationSelectModel)
 
 Permanently delete multiple archived configurations
 
@@ -185,7 +185,7 @@ Permanently delete multiple archived configurations
 
 ### Return type
 
-null (empty response body)
+**Integer**
 
 ### Authorization
 
@@ -282,7 +282,7 @@ Search for configurations
 
 Create Configuration
 
-     Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
+      Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
 
 ### Parameters
 
@@ -309,7 +309,7 @@ Create Configuration
 
 Get configuration by internal or global ID
 
-     Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
+      Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
 
 ### Parameters
 

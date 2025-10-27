@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { AttachmentModel } from './attachmentModel';
 import { AutoTestModel } from './autoTestModel';
+import { ExternalIssueModel } from './externalIssueModel';
 import { IterationModel } from './iterationModel';
 import { LinkModel } from './linkModel';
 import { StepModel } from './stepModel';
@@ -49,6 +50,7 @@ export class WorkItemModel {
     'createdById': string;
     'modifiedById'?: string | null;
     'globalId': number;
+    'externalIssues': Array<ExternalIssueModel>;
     'id': string;
     'sectionId': string;
     'description'?: string | null;
@@ -151,6 +153,11 @@ export class WorkItemModel {
             "name": "globalId",
             "baseName": "globalId",
             "type": "number"
+        },
+        {
+            "name": "externalIssues",
+            "baseName": "externalIssues",
+            "type": "Array<ExternalIssueModel>"
         },
         {
             "name": "id",

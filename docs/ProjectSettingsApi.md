@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 <a name="apiV2ProjectsProjectIdSettingsAutotestsPost"></a>
 # **apiV2ProjectsProjectIdSettingsAutotestsPost**
-> apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, AutoTestProjectSettingsPostModel)
+> apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, AutoTestProjectSettingsApiModel)
 
 Set autotest project settings.
 
@@ -18,8 +18,8 @@ Set autotest project settings.
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**|  | [default to null] |
-| **AutoTestProjectSettingsPostModel** | [**AutoTestProjectSettingsPostModel**](../Models/AutoTestProjectSettingsPostModel.md)|  | [optional] |
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
+| **AutoTestProjectSettingsApiModel** | [**AutoTestProjectSettingsApiModel**](../Models/AutoTestProjectSettingsApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -36,7 +36,7 @@ null (empty response body)
 
 <a name="getAutotestProjectSettings"></a>
 # **getAutotestProjectSettings**
-> AutoTestProjectSettingsGetModel getAutotestProjectSettings(projectId)
+> AutoTestProjectSettingsApiResult getAutotestProjectSettings(projectId)
 
 Get autotest project settings.
 
@@ -44,11 +44,11 @@ Get autotest project settings.
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**|  | [default to null] |
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
 
 ### Return type
 
-[**AutoTestProjectSettingsGetModel**](../Models/AutoTestProjectSettingsGetModel.md)
+[**AutoTestProjectSettingsApiResult**](../Models/AutoTestProjectSettingsApiResult.md)
 
 ### Authorization
 

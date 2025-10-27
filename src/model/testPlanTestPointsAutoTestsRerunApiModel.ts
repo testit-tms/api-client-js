@@ -15,8 +15,18 @@ import { TestPlanTestPointsExtractionApiModel } from './testPlanTestPointsExtrac
 import { TestPlanTestPointsSearchApiModel } from './testPlanTestPointsSearchApiModel';
 
 export class TestPlanTestPointsAutoTestsRerunApiModel {
+    /**
+    * Test points filters.
+    */
     'filter'?: TestPlanTestPointsSearchApiModel | null;
+    /**
+    * Test points extraction model.
+    */
     'extractionModel'?: TestPlanTestPointsExtractionApiModel | null;
+    /**
+    * Webhook ids to rerun.
+    */
+    'webhookIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -30,6 +40,11 @@ export class TestPlanTestPointsAutoTestsRerunApiModel {
             "name": "extractionModel",
             "baseName": "extractionModel",
             "type": "TestPlanTestPointsExtractionApiModel"
+        },
+        {
+            "name": "webhookIds",
+            "baseName": "webhookIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {

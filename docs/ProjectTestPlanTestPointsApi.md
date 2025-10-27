@@ -18,7 +18,7 @@ Rerun autotests.
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**|  | [default to null] |
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
 | **testPlanId** | **UUID**|  | [default to null] |
 | **TestPlanTestPointsAutoTestsRerunApiModel** | [**TestPlanTestPointsAutoTestsRerunApiModel**](../Models/TestPlanTestPointsAutoTestsRerunApiModel.md)|  | [optional] |
 
@@ -45,7 +45,7 @@ Run autotests.
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**|  | [default to null] |
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
 | **testPlanId** | **UUID**|  | [default to null] |
 | **TestPlanTestPointsAutoTestsRunApiModel** | [**TestPlanTestPointsAutoTestsRunApiModel**](../Models/TestPlanTestPointsAutoTestsRunApiModel.md)|  | [optional] |
 

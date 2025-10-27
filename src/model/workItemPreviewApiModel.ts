@@ -17,14 +17,6 @@ export class WorkItemPreviewApiModel {
     'name': string;
     'description': string;
     'steps': Array<WorkItemPreviewStepApiModel>;
-    /**
-    * @deprecated
-    */
-    'action': string;
-    /**
-    * @deprecated
-    */
-    'expected': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -43,16 +35,6 @@ export class WorkItemPreviewApiModel {
             "name": "steps",
             "baseName": "steps",
             "type": "Array<WorkItemPreviewStepApiModel>"
-        },
-        {
-            "name": "action",
-            "baseName": "action",
-            "type": "string"
-        },
-        {
-            "name": "expected",
-            "baseName": "expected",
-            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

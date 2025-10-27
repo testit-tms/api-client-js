@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { WorkflowProjectApiResult } from './workflowProjectApiResult';
 import { WorkflowStatusApiResult } from './workflowStatusApiResult';
 
 export class WorkflowApiResult {
@@ -18,7 +19,12 @@ export class WorkflowApiResult {
     'name': string;
     'isSystem': boolean;
     'isDefault': boolean;
+    'createdDate': Date;
+    'createdById': string;
+    'modifiedDate': Date;
+    'modifiedById': string;
     'statuses': Array<WorkflowStatusApiResult>;
+    'projects': Array<WorkflowProjectApiResult>;
 
     static discriminator: string | undefined = undefined;
 
@@ -44,9 +50,34 @@ export class WorkflowApiResult {
             "type": "boolean"
         },
         {
+            "name": "createdDate",
+            "baseName": "createdDate",
+            "type": "Date"
+        },
+        {
+            "name": "createdById",
+            "baseName": "createdById",
+            "type": "string"
+        },
+        {
+            "name": "modifiedDate",
+            "baseName": "modifiedDate",
+            "type": "Date"
+        },
+        {
+            "name": "modifiedById",
+            "baseName": "modifiedById",
+            "type": "string"
+        },
+        {
             "name": "statuses",
             "baseName": "statuses",
             "type": "Array<WorkflowStatusApiResult>"
+        },
+        {
+            "name": "projects",
+            "baseName": "projects",
+            "type": "Array<WorkflowProjectApiResult>"
         }    ];
 
     static getAttributeTypeMap() {

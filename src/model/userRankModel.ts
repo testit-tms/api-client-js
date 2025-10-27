@@ -15,11 +15,22 @@ import { RequestFile } from './models';
 export class UserRankModel {
     'score': number;
     'workItemsCreated': number;
+    /**
+    * @deprecated
+    */
     'passedTestPoints': number;
     'failedTestPoints': number;
+    /**
+    * @deprecated
+    */
     'skippedTestPoints': number;
+    /**
+    * @deprecated
+    */
     'blockedTestPoints': number;
     'levelAvatarEnabled': boolean;
+    'succeededTestPoints': number;
+    'incompleteTestPoints': number;
 
     static discriminator: string | undefined = undefined;
 
@@ -58,6 +69,16 @@ export class UserRankModel {
             "name": "levelAvatarEnabled",
             "baseName": "levelAvatarEnabled",
             "type": "boolean"
+        },
+        {
+            "name": "succeededTestPoints",
+            "baseName": "succeededTestPoints",
+            "type": "number"
+        },
+        {
+            "name": "incompleteTestPoints",
+            "baseName": "incompleteTestPoints",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {

@@ -19,8 +19,14 @@ export class TestResultsStatisticsStatusesApiResult {
     'inProgress': number;
     /**
     * Number of test results which successfully passed
+    *
+    * @deprecated
     */
     'passed': number;
+    /**
+    * Number of successful test results
+    */
+    'succeeded': number;
     /**
     * Number of test results which failed with an error
     */
@@ -53,6 +59,11 @@ export class TestResultsStatisticsStatusesApiResult {
         {
             "name": "passed",
             "baseName": "passed",
+            "type": "number"
+        },
+        {
+            "name": "succeeded",
+            "baseName": "succeeded",
             "type": "number"
         },
         {

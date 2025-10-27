@@ -15,6 +15,7 @@ import { RequestFile } from './models';
 export class LinkShortModel {
     'id': string;
     'title': string;
+    'type'?: string | null;
     'url': string;
 
     static discriminator: string | undefined = undefined;
@@ -28,6 +29,11 @@ export class LinkShortModel {
         {
             "name": "title",
             "baseName": "title",
+            "type": "string"
+        },
+        {
+            "name": "type",
+            "baseName": "type",
             "type": "string"
         },
         {

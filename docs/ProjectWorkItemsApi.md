@@ -7,6 +7,7 @@ All URIs are relative to *http://localhost*
 | [**apiV2ProjectsProjectIdWorkItemsSearchGroupedPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchGroupedPost) | **POST** /api/v2/projects/{projectId}/workItems/search/grouped | Search for work items and group results by attribute |
 | [**apiV2ProjectsProjectIdWorkItemsSearchIdPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchIdPost) | **POST** /api/v2/projects/{projectId}/workItems/search/id | Search for work items and extract IDs only |
 | [**apiV2ProjectsProjectIdWorkItemsSearchPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchPost) | **POST** /api/v2/projects/{projectId}/workItems/search | Search for work items |
+| [**apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost) | **POST** /api/v2/projects/{projectId}/workItems/search/{workItemId}/index | Get work item index (position) in a collection by its id. |
 | [**apiV2ProjectsProjectIdWorkItemsTagsGet**](ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsTagsGet) | **GET** /api/v2/projects/{projectId}/workItems/tags | Get WorkItems Tags |
 | [**getWorkItemsByProjectId**](ProjectWorkItemsApi.md#getWorkItemsByProjectId) | **GET** /api/v2/projects/{projectId}/workItems | Get project work items |
 
@@ -104,13 +105,45 @@ Search for work items
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+<a name="apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost"></a>
+# **apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost**
+> WorkItemIndexApiResult apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, Skip, Take, OrderBy, SearchField, SearchValue, WorkItemSelectApiModel)
+
+Get work item index (position) in a collection by its id.
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
+| **workItemId** | **UUID**|  | [default to null] |
+| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
+| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
+| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
+| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
+| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+| **WorkItemSelectApiModel** | [**WorkItemSelectApiModel**](../Models/WorkItemSelectApiModel.md)|  | [optional] |
+
+### Return type
+
+[**WorkItemIndexApiResult**](../Models/WorkItemIndexApiResult.md)
+
+### Authorization
+
+[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
 <a name="apiV2ProjectsProjectIdWorkItemsTagsGet"></a>
 # **apiV2ProjectsProjectIdWorkItemsTagsGet**
 > List apiV2ProjectsProjectIdWorkItemsTagsGet(projectId, isDeleted)
 
 Get WorkItems Tags
 
-     Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+      Use case    User sets project internal identifier    User runs method execution    System returns work items tags
 
 ### Parameters
 
@@ -138,7 +171,7 @@ Get WorkItems Tags
 
 Get project work items
 
-     Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+      Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project    [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted    If User did not set isDeleted field value, System search all  workitems related to project    System returns array of found workitems (listed in response model)
 
 ### Parameters
 

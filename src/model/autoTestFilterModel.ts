@@ -33,7 +33,7 @@ export class AutoTestFilterModel {
     'className'?: string | null;
     'isEmptyClassName'?: boolean | null;
     'lastTestResultOutcome'?: AutotestResultOutcome | null;
-    'lastTestResultStatusCode'?: string | null;
+    'lastTestResultStatusCodes'?: Array<string> | null;
     'externalKey'?: string | null;
     'lastTestResultConfigurationIds'?: Array<string> | null;
 
@@ -126,9 +126,9 @@ export class AutoTestFilterModel {
             "type": "AutotestResultOutcome"
         },
         {
-            "name": "lastTestResultStatusCode",
-            "baseName": "lastTestResultStatusCode",
-            "type": "string"
+            "name": "lastTestResultStatusCodes",
+            "baseName": "lastTestResultStatusCodes",
+            "type": "Array<string>"
         },
         {
             "name": "externalKey",

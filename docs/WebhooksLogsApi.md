@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**apiV2WebhooksLogsGet**](WebhooksLogsApi.md#apiV2WebhooksLogsGet) | **GET** /api/v2/webhooks/logs | Get all webhook logs |
+| [**apiV2WebhooksLogsGet**](WebhooksLogsApi.md#apiV2WebhooksLogsGet) | **GET** /api/v2/webhooks/logs | Get last webhook logs |
 | [**apiV2WebhooksLogsIdDelete**](WebhooksLogsApi.md#apiV2WebhooksLogsIdDelete) | **DELETE** /api/v2/webhooks/logs/{id} | Delete webhook log by ID |
 | [**apiV2WebhooksLogsIdGet**](WebhooksLogsApi.md#apiV2WebhooksLogsIdGet) | **GET** /api/v2/webhooks/logs/{id} | Get webhook log by ID |
 
@@ -13,7 +13,7 @@ All URIs are relative to *http://localhost*
 # **apiV2WebhooksLogsGet**
 > List apiV2WebhooksLogsGet(projectId, Skip, Take, OrderBy, SearchField, SearchValue)
 
-Get all webhook logs
+Get last webhook logs
 
 ### Parameters
 
@@ -28,7 +28,7 @@ Get all webhook logs
 
 ### Return type
 
-[**List**](../Models/WebHookLogModel.md)
+[**List**](../Models/WebhookLogApiResult.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ null (empty response body)
 
 <a name="apiV2WebhooksLogsIdGet"></a>
 # **apiV2WebhooksLogsIdGet**
-> WebHookLogModel apiV2WebhooksLogsIdGet(id)
+> WebhookLogApiResult apiV2WebhooksLogsIdGet(id)
 
 Get webhook log by ID
 
@@ -78,7 +78,7 @@ Get webhook log by ID
 
 ### Return type
 
-[**WebHookLogModel**](../Models/WebHookLogModel.md)
+[**WebhookLogApiResult**](../Models/WebhookLogApiResult.md)
 
 ### Authorization
 

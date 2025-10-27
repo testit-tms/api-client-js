@@ -11,9 +11,17 @@
  */
 
 import { RequestFile } from './models';
+import { ExternalIssueExternalServiceApiResult } from './externalIssueExternalServiceApiResult';
 
 export class ExternalIssueApiFieldSuggestion {
+    /**
+    * Value of the external issue field
+    */
     'value': string;
+    /**
+    * Associated external service with this value
+    */
+    'externalService': ExternalIssueExternalServiceApiResult;
 
     static discriminator: string | undefined = undefined;
 
@@ -22,6 +30,11 @@ export class ExternalIssueApiFieldSuggestion {
             "name": "value",
             "baseName": "value",
             "type": "string"
+        },
+        {
+            "name": "externalService",
+            "baseName": "externalService",
+            "type": "ExternalIssueExternalServiceApiResult"
         }    ];
 
     static getAttributeTypeMap() {

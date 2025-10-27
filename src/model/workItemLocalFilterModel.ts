@@ -96,6 +96,10 @@ export class WorkItemLocalFilterModel {
     */
     'tags'?: Array<string> | null;
     /**
+    * Collection of tags to exclude
+    */
+    'excludeTags'?: Array<string> | null;
+    /**
     * Collection of identifiers of linked autotests
     */
     'autoTestIds'?: Array<string> | null;
@@ -195,6 +199,11 @@ export class WorkItemLocalFilterModel {
         {
             "name": "tags",
             "baseName": "tags",
+            "type": "Array<string>"
+        },
+        {
+            "name": "excludeTags",
+            "baseName": "excludeTags",
             "type": "Array<string>"
         },
         {

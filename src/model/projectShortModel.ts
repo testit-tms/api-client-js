@@ -79,7 +79,7 @@ export class ProjectShortModel {
     *
     * @deprecated
     */
-    'isFlakyAuto': boolean;
+    'isFlakyAuto'?: boolean | null;
     'workflowId': string;
 
     static discriminator: string | undefined = undefined;

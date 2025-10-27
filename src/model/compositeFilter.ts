@@ -11,10 +11,11 @@
  */
 
 import { RequestFile } from './models';
+import { IFilter } from './iFilter';
 import { LogicalOperator } from './logicalOperator';
 
 export class CompositeFilter {
-    'filters': Array<object>;
+    'filters': Array<IFilter>;
     'operator': LogicalOperator;
 
     static discriminator: string | undefined = undefined;
@@ -23,7 +24,7 @@ export class CompositeFilter {
         {
             "name": "filters",
             "baseName": "filters",
-            "type": "Array<object>"
+            "type": "Array<IFilter>"
         },
         {
             "name": "operator",

@@ -10,6 +10,8 @@
 | **skippedTestPoints** | **Integer** |  | [default to null] |
 | **blockedTestPoints** | **Integer** |  | [default to null] |
 | **levelAvatarEnabled** | **Boolean** |  | [default to null] |
+| **succeededTestPoints** | **Integer** |  | [default to null] |
+| **incompleteTestPoints** | **Integer** |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
