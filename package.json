@@ -4,7 +4,7 @@
     "description": "Api client for Test IT TMS",
     "repository": {
         "type": "git",
-        "url": "https://github.com/testit-tms/api-client-js"
+        "url": "git+https://github.com/testit-tms/api-client-js.git"
     },
     "main": "dist/api.js",
     "types": "dist/api.d.ts",
