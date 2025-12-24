@@ -46,7 +46,7 @@ All URIs are relative to *http://localhost*
 
 Exclude CustomAttributes from CustomAttributeTemplate
 
-      Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
+     Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
 
 ### Parameters
 
@@ -74,7 +74,7 @@ null (empty response body)
 
 Include CustomAttributes to CustomAttributeTemplate
 
-      Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
+     Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
 
 ### Parameters
 
@@ -102,7 +102,7 @@ null (empty response body)
 
 Delete CustomAttributeTemplate
 
-      Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
+     Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
 
 ### Parameters
 
@@ -129,7 +129,7 @@ null (empty response body)
 
 Get CustomAttributeTemplate by ID
 
-      Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
+     Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
 
 ### Parameters
 
@@ -156,7 +156,7 @@ Get CustomAttributeTemplate by ID
 
 Get CustomAttributeTemplate by name
 
-      Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
+     Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
 
 ### Parameters
 
@@ -183,7 +183,7 @@ Get CustomAttributeTemplate by name
 
 Create CustomAttributeTemplate
 
-      Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
+     Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
 
 ### Parameters
 
@@ -235,7 +235,7 @@ null (empty response body)
 
 Search CustomAttributeTemplates
 
-      Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
+     Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
 
 ### Parameters
 

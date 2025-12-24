@@ -12,11 +12,15 @@
 
 import { RequestFile } from './models';
 
-export class LabelPostModel {
+export class AutoTestNamespaceApiResult {
     /**
-    * Name of the label
+    * Autotest namespace
     */
-    'name': string;
+    'name'?: string | null;
+    /**
+    * Autotest classnames
+    */
+    'classes': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,10 +29,15 @@ export class LabelPostModel {
             "name": "name",
             "baseName": "name",
             "type": "string"
+        },
+        {
+            "name": "classes",
+            "baseName": "classes",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return LabelPostModel.attributeTypeMap;
+        return AutoTestNamespaceApiResult.attributeTypeMap;
     }
 }
 

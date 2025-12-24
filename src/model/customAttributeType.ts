@@ -12,7 +12,11 @@
 
 import { RequestFile } from './models';
 
-export enum ExternalServiceCategoryApiResult {
-    Ai = <any> 'AI',
-    IssueTracker = <any> 'IssueTracker'
+export enum CustomAttributeType {
+    String = <any> 'string',
+    Datetime = <any> 'datetime',
+    Options = <any> 'options',
+    User = <any> 'user',
+    MultipleOptions = <any> 'multipleOptions',
+    Checkbox = <any> 'checkbox'
 }

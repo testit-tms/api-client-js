@@ -20,6 +20,7 @@ import { ConfigurationFilterModel } from '../model/configurationFilterModel';
 import { ConfigurationModel } from '../model/configurationModel';
 import { ConfigurationPostModel } from '../model/configurationPostModel';
 import { ConfigurationPutModel } from '../model/configurationPutModel';
+import { ConfigurationSelectApiModel } from '../model/configurationSelectApiModel';
 import { ConfigurationSelectModel } from '../model/configurationSelectModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
@@ -175,9 +176,9 @@ export class ConfigurationsApi {
     /**
      * 
      * @summary Delete multiple configurations
-     * @param configurationSelectModel 
+     * @param configurationSelectApiModel 
      */
-    public async apiV2ConfigurationsDeleteBulkPost (configurationSelectModel?: ConfigurationSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
+    public async apiV2ConfigurationsDeleteBulkPost (configurationSelectApiModel?: ConfigurationSelectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: number;  }> {
         const localVarPath = this.basePath + '/api/v2/configurations/delete/bulk';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -203,7 +204,7 @@ export class ConfigurationsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(configurationSelectModel, "ConfigurationSelectModel")
+            body: ObjectSerializer.serialize(configurationSelectApiModel, "ConfigurationSelectApiModel")
         };
 
         let authenticationPromise = Promise.resolve();
@@ -836,7 +837,7 @@ export class ConfigurationsApi {
         });
     }
     /**
-     *   Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
+     *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
      * @summary Create Configuration
      * @param configurationPostModel 
      */
@@ -905,7 +906,7 @@ export class ConfigurationsApi {
         });
     }
     /**
-     *   Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
+     *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
      * @summary Get configuration by internal or global ID
      * @param id Configuration internal (guid format) or global (integer format) identifier
      */

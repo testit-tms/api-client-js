@@ -17,6 +17,7 @@
 | **startDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
 | **endDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
 | **tagNames** | **Set** |  | [optional] [default to null] |
+| **excludeTagNames** | **Set** |  | [optional] [default to null] |
 | **attributes** | [**Map**](set.md) |  | [optional] [default to null] |
 | **isDeleted** | **Boolean** |  | [optional] [default to null] |
 

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { ExternalServiceCategoryApiResult } from './externalServiceCategoryApiResult';
+import { ApiExternalServiceCategory } from './apiExternalServiceCategory';
 
 export class ExternalServiceMetadataApiResult {
     /**
@@ -29,7 +29,7 @@ export class ExternalServiceMetadataApiResult {
     /**
     * The category of the external service
     */
-    'category': ExternalServiceCategoryApiResult;
+    'category': ApiExternalServiceCategory;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,7 +52,7 @@ export class ExternalServiceMetadataApiResult {
         {
             "name": "category",
             "baseName": "category",
-            "type": "ExternalServiceCategoryApiResult"
+            "type": "ApiExternalServiceCategory"
         }    ];
 
     static getAttributeTypeMap() {

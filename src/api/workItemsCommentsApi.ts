@@ -100,7 +100,7 @@ export class WorkItemsCommentsApi {
     }
 
     /**
-     *   Use case    User sets comment identifier    User runs method execution    System delete comment    System returns success status code
+     *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
      * @summary Delete WorkItem comment
      * @param commentId Comment internal (guid format) identifier
      */
@@ -173,7 +173,7 @@ export class WorkItemsCommentsApi {
         });
     }
     /**
-     *   Use case    User sets comment properties (listed in request parameters)    User runs method execution    System creates comment    System returns comment model (listed in response parameters)
+     *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
      * @summary Create WorkItem comment
      * @param workItemCommentPostModel 
      */

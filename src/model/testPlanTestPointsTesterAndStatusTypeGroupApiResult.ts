@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { TestPlanTestPointsStatusCodeGroupApiResult } from './testPlanTestPointsStatusCodeGroupApiResult';
 import { TestStatusApiType } from './testStatusApiType';
 
 export class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
@@ -19,7 +20,7 @@ export class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
     * Collection of possible status types
     */
     'statusType': TestStatusApiType;
-    'value': number;
+    'statuses': Array<TestPlanTestPointsStatusCodeGroupApiResult>;
 
     static discriminator: string | undefined = undefined;
 
@@ -35,9 +36,9 @@ export class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
             "type": "TestStatusApiType"
         },
         {
-            "name": "value",
-            "baseName": "value",
-            "type": "number"
+            "name": "statuses",
+            "baseName": "statuses",
+            "type": "Array<TestPlanTestPointsStatusCodeGroupApiResult>"
         }    ];
 
     static getAttributeTypeMap() {

@@ -11,27 +11,34 @@
  */
 
 import { RequestFile } from './models';
+import { GuidExtractionModel } from './guidExtractionModel';
 
-export class AutoTestNamespaceModel {
-    'name'?: string | null;
-    'classes'?: Array<string> | null;
+export class ConfigurationExtractionApiModel {
+    /**
+    * Extraction parameters for configurations
+    */
+    'ids'?: GuidExtractionModel | null;
+    /**
+    * Extraction parameters for projects
+    */
+    'projectIds'?: GuidExtractionModel | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
+            "name": "ids",
+            "baseName": "ids",
+            "type": "GuidExtractionModel"
         },
         {
-            "name": "classes",
-            "baseName": "classes",
-            "type": "Array<string>"
+            "name": "projectIds",
+            "baseName": "projectIds",
+            "type": "GuidExtractionModel"
         }    ];
 
     static getAttributeTypeMap() {
-        return AutoTestNamespaceModel.attributeTypeMap;
+        return ConfigurationExtractionApiModel.attributeTypeMap;
     }
 }
 

@@ -45,7 +45,7 @@ Create configurations by parameters
 
 <a name="apiV2ConfigurationsDeleteBulkPost"></a>
 # **apiV2ConfigurationsDeleteBulkPost**
-> Integer apiV2ConfigurationsDeleteBulkPost(ConfigurationSelectModel)
+> Integer apiV2ConfigurationsDeleteBulkPost(ConfigurationSelectApiModel)
 
 Delete multiple configurations
 
@@ -53,7 +53,7 @@ Delete multiple configurations
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ConfigurationSelectModel** | [**ConfigurationSelectModel**](../Models/ConfigurationSelectModel.md)|  | [optional] |
+| **ConfigurationSelectApiModel** | [**ConfigurationSelectApiModel**](../Models/ConfigurationSelectApiModel.md)|  | [optional] |
 
 ### Return type
 
@@ -282,7 +282,7 @@ Search for configurations
 
 Create Configuration
 
-      Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
+     Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
 
 ### Parameters
 
@@ -309,7 +309,7 @@ Create Configuration
 
 Get configuration by internal or global ID
 
-      Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
+     Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
 
 ### Parameters
 

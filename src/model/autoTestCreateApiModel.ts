@@ -11,37 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { AutoTestStepModel } from './autoTestStepModel';
-import { LabelPostModel } from './labelPostModel';
-import { LinkPostModel } from './linkPostModel';
+import { AutoTestStepApiModel } from './autoTestStepApiModel';
+import { LabelApiModel } from './labelApiModel';
+import { LinkCreateApiModel } from './linkCreateApiModel';
 
-export class AutoTestPostModel {
-    /**
-    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
-    *
-    * @deprecated
-    */
-    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
-    /**
-    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
-    */
-    'workItemIds'?: Array<string> | null;
-    /**
-    * Creates a test case linked to the autotest.
-    */
-    'shouldCreateWorkItem'?: boolean | null;
-    /**
-    * Key value pair of custom work item attributes
-    */
-    'attributes'?: { [key: string]: any; } | null;
+export class AutoTestCreateApiModel {
     /**
     * External ID of the autotest
     */
     'externalId': string;
     /**
-    * Collection of the autotest links
+    * External key of the autotest
     */
-    'links'?: Array<LinkPostModel> | null;
+    'externalKey'?: string | null;
     /**
     * Unique ID of the autotest project
     */
@@ -61,15 +43,15 @@ export class AutoTestPostModel {
     /**
     * Collection of the autotest steps
     */
-    'steps'?: Array<AutoTestStepModel> | null;
+    'steps'?: Array<AutoTestStepApiModel> | null;
     /**
     * Collection of the autotest setup steps
     */
-    'setup'?: Array<AutoTestStepModel> | null;
+    'setup'?: Array<AutoTestStepApiModel> | null;
     /**
     * Collection of the autotest teardown steps
     */
-    'teardown'?: Array<AutoTestStepModel> | null;
+    'teardown'?: Array<AutoTestStepApiModel> | null;
     /**
     * Name of the autotest in autotest\'s card
     */
@@ -81,48 +63,46 @@ export class AutoTestPostModel {
     /**
     * Collection of the autotest labels
     */
-    'labels'?: Array<LabelPostModel> | null;
+    'labels'?: Array<LabelApiModel> | null;
+    /**
+    * Collection of the autotest links
+    */
+    'links'?: Array<LinkCreateApiModel> | null;
     /**
     * Indicates if the autotest is marked as flaky
     */
     'isFlaky'?: boolean | null;
     /**
-    * External key of the autotest
+    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    *
+    * @deprecated
     */
-    'externalKey'?: string | null;
+    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
+    /**
+    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    */
+    'workItemIds'?: Array<string> | null;
+    /**
+    * Creates a test case linked to the autotest.
+    */
+    'shouldCreateWorkItem'?: boolean | null;
+    /**
+    * Key value pair of custom work item attributes
+    */
+    'attributes'?: { [key: string]: any; } | null;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "workItemIdsForLinkWithAutoTest",
-            "baseName": "workItemIdsForLinkWithAutoTest",
-            "type": "Array<string>"
-        },
-        {
-            "name": "workItemIds",
-            "baseName": "workItemIds",
-            "type": "Array<string>"
-        },
-        {
-            "name": "shouldCreateWorkItem",
-            "baseName": "shouldCreateWorkItem",
-            "type": "boolean"
-        },
-        {
-            "name": "attributes",
-            "baseName": "attributes",
-            "type": "{ [key: string]: any; }"
-        },
         {
             "name": "externalId",
             "baseName": "externalId",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<LinkPostModel>"
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         },
         {
             "name": "projectId",
@@ -147,17 +127,17 @@ export class AutoTestPostModel {
         {
             "name": "steps",
             "baseName": "steps",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "setup",
             "baseName": "setup",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "teardown",
             "baseName": "teardown",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "title",
@@ -172,7 +152,12 @@ export class AutoTestPostModel {
         {
             "name": "labels",
             "baseName": "labels",
-            "type": "Array<LabelPostModel>"
+            "type": "Array<LabelApiModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkCreateApiModel>"
         },
         {
             "name": "isFlaky",
@@ -180,13 +165,28 @@ export class AutoTestPostModel {
             "type": "boolean"
         },
         {
-            "name": "externalKey",
-            "baseName": "externalKey",
-            "type": "string"
+            "name": "workItemIdsForLinkWithAutoTest",
+            "baseName": "workItemIdsForLinkWithAutoTest",
+            "type": "Array<string>"
+        },
+        {
+            "name": "workItemIds",
+            "baseName": "workItemIds",
+            "type": "Array<string>"
+        },
+        {
+            "name": "shouldCreateWorkItem",
+            "baseName": "shouldCreateWorkItem",
+            "type": "boolean"
+        },
+        {
+            "name": "attributes",
+            "baseName": "attributes",
+            "type": "{ [key: string]: any; }"
         }    ];
 
     static getAttributeTypeMap() {
-        return AutoTestPostModel.attributeTypeMap;
+        return AutoTestCreateApiModel.attributeTypeMap;
     }
 }
 
