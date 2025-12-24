@@ -29,6 +29,7 @@ export class ProjectTestPlansFilterModel {
     'startDate'?: DateTimeRangeSelectorModel | null;
     'endDate'?: DateTimeRangeSelectorModel | null;
     'tagNames'?: Array<string> | null;
+    'excludeTagNames'?: Array<string> | null;
     'attributes'?: { [key: string]: Array<string> | null; } | null;
     'isDeleted'?: boolean | null;
 
@@ -103,6 +104,11 @@ export class ProjectTestPlansFilterModel {
         {
             "name": "tagNames",
             "baseName": "tagNames",
+            "type": "Array<string>"
+        },
+        {
+            "name": "excludeTagNames",
+            "baseName": "excludeTagNames",
             "type": "Array<string>"
         },
         {

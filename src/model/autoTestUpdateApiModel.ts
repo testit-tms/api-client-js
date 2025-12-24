@@ -11,28 +11,23 @@
  */
 
 import { RequestFile } from './models';
-import { AutoTestStepModel } from './autoTestStepModel';
-import { LabelPostModel } from './labelPostModel';
-import { LinkPutModel } from './linkPutModel';
+import { AutoTestStepApiModel } from './autoTestStepApiModel';
+import { LabelApiModel } from './labelApiModel';
+import { LinkUpdateApiModel } from './linkUpdateApiModel';
 
-export class AutoTestPutModel {
+export class AutoTestUpdateApiModel {
     /**
-    * Used for search autotest. If value is null or equals Guid mask filled with zeros, search will be executed using ExternalId
+    * Autotest unique internal identifier
     */
     'id'?: string | null;
-    /**
-    * @deprecated
-    */
-    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
-    'workItemIds'?: Array<string> | null;
     /**
     * External ID of the autotest
     */
     'externalId': string;
     /**
-    * Collection of the autotest links
+    * External key of the autotest
     */
-    'links'?: Array<LinkPutModel> | null;
+    'externalKey'?: string | null;
     /**
     * Unique ID of the autotest project
     */
@@ -52,15 +47,15 @@ export class AutoTestPutModel {
     /**
     * Collection of the autotest steps
     */
-    'steps'?: Array<AutoTestStepModel> | null;
+    'steps'?: Array<AutoTestStepApiModel> | null;
     /**
     * Collection of the autotest setup steps
     */
-    'setup'?: Array<AutoTestStepModel> | null;
+    'setup'?: Array<AutoTestStepApiModel> | null;
     /**
     * Collection of the autotest teardown steps
     */
-    'teardown'?: Array<AutoTestStepModel> | null;
+    'teardown'?: Array<AutoTestStepApiModel> | null;
     /**
     * Name of the autotest in autotest\'s card
     */
@@ -72,15 +67,25 @@ export class AutoTestPutModel {
     /**
     * Collection of the autotest labels
     */
-    'labels'?: Array<LabelPostModel> | null;
+    'labels'?: Array<LabelApiModel> | null;
+    /**
+    * Collection of the autotest links
+    */
+    'links'?: Array<LinkUpdateApiModel> | null;
     /**
     * Indicates if the autotest is marked as flaky
     */
     'isFlaky'?: boolean | null;
     /**
-    * External key of the autotest
+    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    *
+    * @deprecated
     */
-    'externalKey'?: string | null;
+    'workItemIdsForLinkWithAutoTest'?: Array<string> | null;
+    /**
+    * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+    */
+    'workItemIds'?: Array<string> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -91,24 +96,14 @@ export class AutoTestPutModel {
             "type": "string"
         },
         {
-            "name": "workItemIdsForLinkWithAutoTest",
-            "baseName": "workItemIdsForLinkWithAutoTest",
-            "type": "Array<string>"
-        },
-        {
-            "name": "workItemIds",
-            "baseName": "workItemIds",
-            "type": "Array<string>"
-        },
-        {
             "name": "externalId",
             "baseName": "externalId",
             "type": "string"
         },
         {
-            "name": "links",
-            "baseName": "links",
-            "type": "Array<LinkPutModel>"
+            "name": "externalKey",
+            "baseName": "externalKey",
+            "type": "string"
         },
         {
             "name": "projectId",
@@ -133,17 +128,17 @@ export class AutoTestPutModel {
         {
             "name": "steps",
             "baseName": "steps",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "setup",
             "baseName": "setup",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "teardown",
             "baseName": "teardown",
-            "type": "Array<AutoTestStepModel>"
+            "type": "Array<AutoTestStepApiModel>"
         },
         {
             "name": "title",
@@ -158,7 +153,12 @@ export class AutoTestPutModel {
         {
             "name": "labels",
             "baseName": "labels",
-            "type": "Array<LabelPostModel>"
+            "type": "Array<LabelApiModel>"
+        },
+        {
+            "name": "links",
+            "baseName": "links",
+            "type": "Array<LinkUpdateApiModel>"
         },
         {
             "name": "isFlaky",
@@ -166,13 +166,18 @@ export class AutoTestPutModel {
             "type": "boolean"
         },
         {
-            "name": "externalKey",
-            "baseName": "externalKey",
-            "type": "string"
+            "name": "workItemIdsForLinkWithAutoTest",
+            "baseName": "workItemIdsForLinkWithAutoTest",
+            "type": "Array<string>"
+        },
+        {
+            "name": "workItemIds",
+            "baseName": "workItemIds",
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
-        return AutoTestPutModel.attributeTypeMap;
+        return AutoTestUpdateApiModel.attributeTypeMap;
     }
 }
 

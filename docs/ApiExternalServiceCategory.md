@@ -1,4 +1,4 @@
-# ExternalServiceCategoryApiResult
+# ApiExternalServiceCategory
 ## Properties
 
 | Name | Type | Description | Notes |

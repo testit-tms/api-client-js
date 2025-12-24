@@ -101,7 +101,7 @@ export class ProjectTestPlanAttributesApi {
     }
 
     /**
-     *   Use case    User sets project internal or global identifier and attributes identifiers    User runs method execution    System updates project and add attributes to project for test plans    System returns no content response
+     *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
      * @summary Add attributes to project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param requestBody 
@@ -176,7 +176,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
+     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
      * @summary Delete attribute from project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param attributeId 
@@ -256,7 +256,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     *   Use case    User runs method execution    System returns project for test plans attributes by project identifier
+     *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
      * @summary Get project\'s test plan attributes
      * @param projectId Project internal (UUID) or global (integer) identifier
      */
@@ -431,7 +431,7 @@ export class ProjectTestPlanAttributesApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
+     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param projectId Project internal (UUID) or global (integer) identifier
      * @param customAttributeTestPlanProjectRelationPutModel 

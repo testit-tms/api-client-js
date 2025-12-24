@@ -51,7 +51,7 @@ export class TestResultShortResponse {
     * @deprecated
     */
     'outcome'?: string | null;
-    'status'?: TestStatusApiResult | null;
+    'status': TestStatusApiResult;
     /**
     * Collection of result reasons which the test result have
     */

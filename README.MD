@@ -186,6 +186,7 @@ All URIs are relative to *http://localhost*
 *ProjectWorkItemsApi* | [**apiV2ProjectsProjectIdWorkItemsTagsGet**](docs/ProjectWorkItemsApi.md#apiv2projectsprojectidworkitemstagsget) | **GET** /api/v2/projects/{projectId}/workItems/tags | Get WorkItems Tags |
 *ProjectWorkItemsApi* | [**getWorkItemsByProjectId**](docs/ProjectWorkItemsApi.md#getworkitemsbyprojectid) | **GET** /api/v2/projects/{projectId}/workItems | Get project work items |
 | *ProjectsApi* | [**addGlobalAttributesToProject**](docs/ProjectsApi.md#addglobalattributestoproject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project |
+*ProjectsApi* | [**apiV2ProjectsDemoPost**](docs/ProjectsApi.md#apiv2projectsdemopost) | **POST** /api/v2/projects/demo |  |
 *ProjectsApi* | [**apiV2ProjectsIdDelete**](docs/ProjectsApi.md#apiv2projectsiddelete) | **DELETE** /api/v2/projects/{id} | Archive project |
 *ProjectsApi* | [**apiV2ProjectsIdFailureClassesGet**](docs/ProjectsApi.md#apiv2projectsidfailureclassesget) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes |
 *ProjectsApi* | [**apiV2ProjectsIdFavoritePut**](docs/ProjectsApi.md#apiv2projectsidfavoriteput) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite |
@@ -195,7 +196,6 @@ All URIs are relative to *http://localhost*
 *ProjectsApi* | [**apiV2ProjectsIdRestorePost**](docs/ProjectsApi.md#apiv2projectsidrestorepost) | **POST** /api/v2/projects/{id}/restore | Restore archived project |
 *ProjectsApi* | [**apiV2ProjectsIdTestPlansAttributeAttributeIdDelete**](docs/ProjectsApi.md#apiv2projectsidtestplansattributeattributeiddelete) | **DELETE** /api/v2/projects/{id}/testPlans/attribute/{attributeId} | Delete attribute from project's test plans |
 *ProjectsApi* | [**apiV2ProjectsIdTestPlansAttributePut**](docs/ProjectsApi.md#apiv2projectsidtestplansattributeput) | **PUT** /api/v2/projects/{id}/testPlans/attribute | Update attribute of project's test plans |
-*ProjectsApi* | [**apiV2ProjectsIdTestRunsActiveGet**](docs/ProjectsApi.md#apiv2projectsidtestrunsactiveget) | **GET** /api/v2/projects/{id}/testRuns/active | Get active Project TestRuns |
 *ProjectsApi* | [**apiV2ProjectsIdTestRunsFullGet**](docs/ProjectsApi.md#apiv2projectsidtestrunsfullget) | **GET** /api/v2/projects/{id}/testRuns/full | Get Project TestRuns full models |
 *ProjectsApi* | [**apiV2ProjectsNameNameExistsGet**](docs/ProjectsApi.md#apiv2projectsnamenameexistsget) | **GET** /api/v2/projects/name/{name}/exists |  |
 *ProjectsApi* | [**apiV2ProjectsPurgeBulkPost**](docs/ProjectsApi.md#apiv2projectspurgebulkpost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects |
@@ -299,13 +299,6 @@ All URIs are relative to *http://localhost*
 *TestRunsApi* | [**startTestRun**](docs/TestRunsApi.md#starttestrun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun |
 *TestRunsApi* | [**stopTestRun**](docs/TestRunsApi.md#stoptestrun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun |
 *TestRunsApi* | [**updateEmpty**](docs/TestRunsApi.md#updateempty) | **PUT** /api/v2/testRuns | Update empty TestRun |
-| *TestStatusesApi* | [**apiV2TestStatusesCodeCodeExistsGet**](docs/TestStatusesApi.md#apiv2teststatusescodecodeexistsget) | **GET** /api/v2/testStatuses/code/{code}/exists |  |
-*TestStatusesApi* | [**apiV2TestStatusesIdDelete**](docs/TestStatusesApi.md#apiv2teststatusesiddelete) | **DELETE** /api/v2/testStatuses/{id} |  |
-*TestStatusesApi* | [**apiV2TestStatusesIdGet**](docs/TestStatusesApi.md#apiv2teststatusesidget) | **GET** /api/v2/testStatuses/{id} |  |
-*TestStatusesApi* | [**apiV2TestStatusesIdPut**](docs/TestStatusesApi.md#apiv2teststatusesidput) | **PUT** /api/v2/testStatuses/{id} |  |
-*TestStatusesApi* | [**apiV2TestStatusesNameNameExistsGet**](docs/TestStatusesApi.md#apiv2teststatusesnamenameexistsget) | **GET** /api/v2/testStatuses/name/{name}/exists |  |
-*TestStatusesApi* | [**apiV2TestStatusesPost**](docs/TestStatusesApi.md#apiv2teststatusespost) | **POST** /api/v2/testStatuses |  |
-*TestStatusesApi* | [**apiV2TestStatusesSearchPost**](docs/TestStatusesApi.md#apiv2teststatusessearchpost) | **POST** /api/v2/testStatuses/search |  |
 | *TestSuitesApi* | [**addTestPointsToTestSuite**](docs/TestSuitesApi.md#addtestpointstotestsuite) | **POST** /api/v2/testSuites/{id}/test-points | Add test-points to test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdPatch**](docs/TestSuitesApi.md#apiv2testsuitesidpatch) | **PATCH** /api/v2/testSuites/{id} | Patch test suite |
 *TestSuitesApi* | [**apiV2TestSuitesIdRefreshPost**](docs/TestSuitesApi.md#apiv2testsuitesidrefreshpost) | **POST** /api/v2/testSuites/{id}/refresh | Refresh test suite. Only dynamic test suites are supported by this method |
@@ -364,14 +357,6 @@ All URIs are relative to *http://localhost*
 *WorkItemsCommentsApi* | [**apiV2WorkItemsCommentsPut**](docs/WorkItemsCommentsApi.md#apiv2workitemscommentsput) | **PUT** /api/v2/workItems/comments | Update work item comment |
 *WorkItemsCommentsApi* | [**apiV2WorkItemsIdCommentsCountGet**](docs/WorkItemsCommentsApi.md#apiv2workitemsidcommentscountget) | **GET** /api/v2/workItems/{id}/comments/count | Get work item comments count |
 *WorkItemsCommentsApi* | [**apiV2WorkItemsIdCommentsGet**](docs/WorkItemsCommentsApi.md#apiv2workitemsidcommentsget) | **GET** /api/v2/workItems/{id}/comments | Get work item comments |
-| *WorkflowsApi* | [**apiV2WorkflowsIdDelete**](docs/WorkflowsApi.md#apiv2workflowsiddelete) | **DELETE** /api/v2/workflows/{id} |  |
-*WorkflowsApi* | [**apiV2WorkflowsIdGet**](docs/WorkflowsApi.md#apiv2workflowsidget) | **GET** /api/v2/workflows/{id} |  |
-*WorkflowsApi* | [**apiV2WorkflowsIdPatch**](docs/WorkflowsApi.md#apiv2workflowsidpatch) | **PATCH** /api/v2/workflows/{id} | See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details |
-*WorkflowsApi* | [**apiV2WorkflowsIdProjectsSearchPost**](docs/WorkflowsApi.md#apiv2workflowsidprojectssearchpost) | **POST** /api/v2/workflows/{id}/projects/search |  |
-*WorkflowsApi* | [**apiV2WorkflowsIdPut**](docs/WorkflowsApi.md#apiv2workflowsidput) | **PUT** /api/v2/workflows/{id} |  |
-*WorkflowsApi* | [**apiV2WorkflowsNameNameExistsGet**](docs/WorkflowsApi.md#apiv2workflowsnamenameexistsget) | **GET** /api/v2/workflows/name/{name}/exists |  |
-*WorkflowsApi* | [**apiV2WorkflowsPost**](docs/WorkflowsApi.md#apiv2workflowspost) | **POST** /api/v2/workflows |  |
-*WorkflowsApi* | [**apiV2WorkflowsSearchPost**](docs/WorkflowsApi.md#apiv2workflowssearchpost) | **POST** /api/v2/workflows/search |  |
 
 
 <a name="documentation-for-models"></a>

@@ -38,7 +38,7 @@ All URIs are relative to *http://localhost*
 
 Upload and link attachment to WorkItem
 
-      Use case    User sets workItemId    User attaches a file    System creates attachment and links it to the work item    System returns attachment identifier
+     Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
 
 ### Parameters
 
@@ -66,7 +66,7 @@ null (empty response body)
 
 Transform CheckList to TestCase
 
-      Use case    User sets checklist identifier    User runs method execution    System transform CheckList to TestCase
+     Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
 
 ### Parameters
 
@@ -93,7 +93,7 @@ Transform CheckList to TestCase
 
 Get change history of WorkItem
 
-      Use case    User sets work item identifier    User runs method execution    System return change history of WorkItem
+     Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
 
 ### Parameters
 
@@ -125,7 +125,7 @@ Get change history of WorkItem
 
 Delete like from WorkItem
 
-      Use case    User sets WorkItem identifier    User runs method execution    System delete like from WorkItem
+     Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
 
 ### Parameters
 
@@ -152,7 +152,7 @@ null (empty response body)
 
 Set like to WorkItem
 
-      Use case    User sets WorkItem identifier    User runs method execution    System set like to WorkItem
+     Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
 
 ### Parameters
 
@@ -179,7 +179,7 @@ null (empty response body)
 
 Get likes count of WorkItem
 
-      Use case    User sets WorkItem identifier    User runs method execution    System return likes count of WorkItem
+     Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
 
 ### Parameters
 
@@ -206,7 +206,7 @@ Get likes count of WorkItem
 
 Get likes of WorkItem
 
-      Use case    User sets WorkItem identifier    User runs method execution    System return likes of WorkItem
+     Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
 
 ### Parameters
 
@@ -233,7 +233,7 @@ Get likes of WorkItem
 
 Get test results history of WorkItem
 
-      Use case    User sets WorkItem identifier    User runs method execution    System return test results history of WorkItem
+     Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
 
 ### Parameters
 
@@ -275,7 +275,7 @@ Get test results history of WorkItem
 
 Set WorkItem as actual
 
-      Use case    User sets work item identifier    User runs method execution    System set WorkItem as actual
+     Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
 
 ### Parameters
 
@@ -333,7 +333,7 @@ Set WorkItem as actual
 
 Move WorkItem to another section
 
-      Use case    User sets WorkItem identifier    User runs method execution    System move WorkItem to another section
+     Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
 
 ### Parameters
 
@@ -415,7 +415,7 @@ Search for work items
 
 Get SharedStep references in sections
 
-      Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
+     Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
 
 ### Parameters
 
@@ -448,7 +448,7 @@ Get SharedStep references in sections
 
 Get SharedStep references in work items
 
-      Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
+     Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
 
 ### Parameters
 
@@ -481,7 +481,7 @@ Get SharedStep references in work items
 
 Get SharedStep references
 
-      Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
+     Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
 
 ### Parameters
 
@@ -508,13 +508,13 @@ Get SharedStep references
 
 Delete all links AutoTests from WorkItem by Id or GlobalId
 
-      Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search and delete all autotests, related to found work item    System returns no content response
+     Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
 
 ### Return type
 
@@ -535,13 +535,13 @@ null (empty response body)
 
 Delete Test Case, Checklist or Shared Step by Id or GlobalId
 
-      Use case    User sets work item identifier    User runs method execution    System deletes work item    System returns no content response
+     Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
 
 ### Return type
 
@@ -562,13 +562,13 @@ null (empty response body)
 
 Get all AutoTests linked to WorkItem by Id or GlobalId
 
-      Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search all autotests, related to found work item    System returns list of found autotests
+     Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
 
 ### Return type
 
@@ -593,7 +593,7 @@ Get iterations by work item Id or GlobalId
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
 | **versionId** | **UUID**| WorkItem version (guid format) identifier | [optional] [default to null] |
 | **versionNumber** | **Integer**| WorkItem version number (0 is the last version)\&quot; | [optional] [default to null] |
 
@@ -616,13 +616,13 @@ Get iterations by work item Id or GlobalId
 
 Get Test Case, Checklist or Shared Step by Id or GlobalId
 
-      Use case    User sets work item identifier    [Optional] User sets work item version identifier    [Optional] User sets work item version number    User runs method execution    System search work item by identifier    [Optional] if User sets work item version identifier, system search work item version by identifier.    [Optional] if user sets work item version number, system search work item version by number    Otherwise, system search last work item version    System returns work item
+     Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
 | **versionId** | **UUID**| WorkItem version (guid format) identifier\&quot; | [optional] [default to null] |
 | **versionNumber** | **Integer**| WorkItem version number (0 is the last version)\&quot; | [optional] [default to null] |
 
@@ -645,7 +645,7 @@ Get Test Case, Checklist or Shared Step by Id or GlobalId
 
 Get WorkItem chronology by Id or GlobalId
 
-      Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search test results of all autotests, related to found work item    System sort results by CompletedOn ascending, then by CreatedDate ascending    System returns sorted collection of test results
+     Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
 
 ### Parameters
 
@@ -672,15 +672,15 @@ Get WorkItem chronology by Id or GlobalId
 
 Get WorkItem versions
 
-      Use case    User sets work item identifier    [Optional] User sets work item version identifier    User runs method execution    System search work item by identifier    [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item    System returns array of work item version models (listed in response example)
+     Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| WorkItem internal (guid format) or  global(integer format) identifier\&quot; | [default to null] |
-| **workItemVersionId** | **UUID**| WorkItem version (guid format)  identifier\&quot; | [optional] [default to null] |
-| **versionNumber** | **Integer**| WorkItem version (integer format)  number\&quot; | [optional] [default to null] |
+| **id** | **String**| WorkItem internal (guid format) or global(integer format) identifier\&quot; | [default to null] |
+| **workItemVersionId** | **UUID**| WorkItem version (guid format) identifier\&quot; | [optional] [default to null] |
+| **versionNumber** | **Integer**| WorkItem version (integer format) number\&quot; | [optional] [default to null] |
 
 ### Return type
 
@@ -751,7 +751,7 @@ null (empty response body)
 
 Update Test Case, Checklist or Shared Step
 
-      Use case    User sets work item properties (listed in request parameters)    User runs method execution    System updates work item by identifier    System returns updated work item model (listed in response parameters)
+     Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
 
 ### Parameters
 

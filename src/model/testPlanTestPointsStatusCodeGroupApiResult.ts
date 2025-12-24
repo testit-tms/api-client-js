@@ -12,26 +12,32 @@
 
 import { RequestFile } from './models';
 
-export class AutoTestAverageDurationModel {
-    'passedAverageDuration': number;
-    'failedAverageDuration': number;
+export class TestPlanTestPointsStatusCodeGroupApiResult {
+    'statusCode': string;
+    'statusName': string;
+    'value': number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "passedAverageDuration",
-            "baseName": "passedAverageDuration",
-            "type": "number"
+            "name": "statusCode",
+            "baseName": "statusCode",
+            "type": "string"
         },
         {
-            "name": "failedAverageDuration",
-            "baseName": "failedAverageDuration",
+            "name": "statusName",
+            "baseName": "statusName",
+            "type": "string"
+        },
+        {
+            "name": "value",
+            "baseName": "value",
             "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return AutoTestAverageDurationModel.attributeTypeMap;
+        return TestPlanTestPointsStatusCodeGroupApiResult.attributeTypeMap;
     }
 }
 

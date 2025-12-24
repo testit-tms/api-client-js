@@ -20,7 +20,7 @@ export class ReplaceProjectExternalServiceApiModel {
     /**
     * External service settings
     */
-    'settings'?: any | null;
+    'settings': any | null;
 
     static discriminator: string | undefined = undefined;
 

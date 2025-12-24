@@ -101,7 +101,7 @@ export class TagsApi {
     }
 
     /**
-     *   Use case    User sets collection of tags internal (guid format) identifiers    System searches and deletes a collection of tags
+     *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
      * @summary Delete tags
      * @param selectTagsApiModel 
      */
@@ -169,7 +169,7 @@ export class TagsApi {
         });
     }
     /**
-     *   Use case    User sets tag internal (guid format) identifier    System search and delete tag
+     *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
      * @summary Delete tag
      * @param id Tag internal (UUID) identifier
      */
@@ -242,7 +242,7 @@ export class TagsApi {
         });
     }
     /**
-     *   Use case    User sets tag model (listed in the request example)    User runs method execution    System creates tag    System returns tag model (listed in the response example)
+     *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
      * @summary Create tag
      * @param createTagApiModel 
      */
@@ -311,7 +311,7 @@ export class TagsApi {
         });
     }
     /**
-     *   Use case    User sets tag ID and model (listed in the request example)    User runs method execution    System updates tag    System returns tag model (listed in the response example)
+     *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
      * @summary Update tag
      * @param id 
      * @param updateTagApiModel 
@@ -385,7 +385,7 @@ export class TagsApi {
         });
     }
     /**
-     *   Use case    User runs method execution    System returns collection of tags (listed in the response example)
+     *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
      * @summary Search tags
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
@@ -477,7 +477,7 @@ export class TagsApi {
         });
     }
     /**
-     *   Use case    User runs method execution    System returns tags (listed in the response example)
+     *  Use case  User runs method execution  System returns tags (listed in the response example)
      * @summary Get all Tags that are used in TestPlans
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)

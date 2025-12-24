@@ -117,7 +117,7 @@ export class TestPlansApi {
     /**
      * 
      * @summary Add test-points to TestPlan with sections
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param workItemSelectModel Filter object to retrieve work items for test-suite\&#39;s project
      */
     public async addTestPointsWithSections (id: string, workItemSelectModel?: WorkItemSelectModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -190,9 +190,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+     *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
      * @summary Add WorkItems to TestPlan with Sections as TestSuites
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param requestBody 
      */
     public async addWorkItemsWithSections (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -265,9 +265,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+     *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
      * @summary Get analytics by TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async apiV2TestPlansIdAnalyticsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPointAnalyticResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/analytics'
@@ -420,9 +420,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+     *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
      * @summary Get TestPlan configurations
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async apiV2TestPlansIdConfigurationsGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<ConfigurationModel>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/configurations'
@@ -494,9 +494,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
      * @summary Export TestPoints from TestPlan in xls format
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param timeZoneOffsetInMinutes 
      * @param getXlsxTestPointsByTestPlanModel 
      */
@@ -571,9 +571,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
      * @summary Export TestResults history from TestPlan in xls format
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param mustReturnOnlyLastTestResult 
      * @param includeSteps 
      * @param includeDeletedTestSuites 
@@ -661,9 +661,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System return test plan history
+     *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
      * @summary Get TestPlan history
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
@@ -760,9 +760,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+     *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
      * @summary Get Links of TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param skip 
      * @param take 
      * @param orderBy 
@@ -924,9 +924,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+     *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
      * @summary Get summary by TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async apiV2TestPlansIdSummariesGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanSummaryModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/summaries'
@@ -998,9 +998,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+     *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
      * @summary Get TestPoints with last result from TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param testerId 
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
@@ -1102,9 +1102,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+     *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
      * @summary Reset TestPoints status of TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param requestBody 
      */
     public async apiV2TestPlansIdTestPointsResetPost (id: string, requestBody?: Array<string>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
@@ -1336,9 +1336,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
      * @summary Get TestRuns of TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param notStarted 
      * @param inProgress 
      * @param stopped 
@@ -1455,9 +1455,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
      * @summary Search TestRuns of TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      * @param skip Amount of items to be skipped (offset)
      * @param take Amount of items to be taken (limit)
      * @param orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
@@ -1629,9 +1629,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+     *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
      * @summary Send unlock TestPlan notification
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async apiV2TestPlansIdUnlockRequestPost (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/unlock/request'
@@ -1702,7 +1702,7 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
+     *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
      * @summary Get TestPlans short models by Project identifiers
      * @param isDeleted 
      * @param requestBody 
@@ -1776,9 +1776,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+     *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
      * @summary Clone TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async clone (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/clone'
@@ -1850,9 +1850,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+     *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
      * @summary Complete TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async complete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/complete'
@@ -1923,7 +1923,7 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
+     *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
      * @summary Create TestPlan
      * @param createTestPlanApiModel 
      */
@@ -1992,9 +1992,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+     *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
      * @summary Delete TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async deleteTestPlan (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}'
@@ -2065,9 +2065,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+     *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
      * @summary Get TestPlan by Id
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async getTestPlanById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: TestPlanModel;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}'
@@ -2139,9 +2139,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+     *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
      * @summary Get TestSuites Tree By Id
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async getTestSuitesById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<TestSuiteHierarchyApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/testSuites'
@@ -2213,9 +2213,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+     *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
      * @summary Pause TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async pause (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/pause'
@@ -2359,9 +2359,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+     *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
      * @summary Restore TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async restoreTestPlan (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/restore'
@@ -2432,9 +2432,9 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+     *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
      * @summary Start TestPlan
-     * @param id Test plan internal (guid format) or global (int  format) identifier
+     * @param id Test plan internal (guid format) or global (int format) identifier
      */
     public async start (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body?: any;  }> {
         const localVarPath = this.basePath + '/api/v2/testPlans/{id}/start'
@@ -2505,7 +2505,7 @@ export class TestPlansApi {
         });
     }
     /**
-     *   Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
+     *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
      * @summary Update TestPlan
      * @param updateTestPlanApiModel 
      */

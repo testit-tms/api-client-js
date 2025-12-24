@@ -47,7 +47,7 @@ Add test-points to TestPlan with sections
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **WorkItemSelectModel** | [**WorkItemSelectModel**](../Models/WorkItemSelectModel.md)| Filter object to retrieve work items for test-suite&#39;s project | [optional] |
 
 ### Return type
@@ -69,13 +69,13 @@ null (empty response body)
 
 Add WorkItems to TestPlan with Sections as TestSuites
 
-      Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+     Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **request\_body** | [**Set**](../Models/UUID.md)|  | [optional] |
 
 ### Return type
@@ -97,13 +97,13 @@ null (empty response body)
 
 Get analytics by TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+     Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -150,13 +150,13 @@ Distribute test points between the users
 
 Get TestPlan configurations
 
-      Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+     Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -177,13 +177,13 @@ Get TestPlan configurations
 
 Export TestPoints from TestPlan in xls format
 
-      Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **time-Zone-Offset-In-Minutes** | **Long**|  | [optional] [default to null] |
 | **GetXlsxTestPointsByTestPlanModel** | [**GetXlsxTestPointsByTestPlanModel**](../Models/GetXlsxTestPointsByTestPlanModel.md)|  | [optional] |
 
@@ -206,13 +206,13 @@ null (empty response body)
 
 Export TestResults history from TestPlan in xls format
 
-      Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **mustReturnOnlyLastTestResult** | **Boolean**|  | [optional] [default to null] |
 | **includeSteps** | **Boolean**|  | [optional] [default to null] |
 | **includeDeletedTestSuites** | **Boolean**|  | [optional] [default to null] |
@@ -237,13 +237,13 @@ null (empty response body)
 
 Get TestPlan history
 
-      Use case    User sets test plan identifier    User runs method execution    System return test plan history
+     Use case  User sets test plan identifier  User runs method execution  System return test plan history
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
@@ -269,13 +269,13 @@ Get TestPlan history
 
 Get Links of TestPlan
 
-      Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+     Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **skip** | **Integer**|  | [optional] [default to null] |
 | **take** | **Integer**|  | [optional] [default to null] |
 | **orderBy** | **String**|  | [optional] [default to null] |
@@ -327,13 +327,13 @@ null (empty response body)
 
 Get summary by TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+     Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -354,13 +354,13 @@ Get summary by TestPlan
 
 Get TestPoints with last result from TestPlan
 
-      Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+     Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **testerId** | **UUID**|  | [optional] [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
@@ -387,13 +387,13 @@ Get TestPoints with last result from TestPlan
 
 Reset TestPoints status of TestPlan
 
-      Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+     Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **request\_body** | [**Set**](../Models/UUID.md)|  | [optional] |
 
 ### Return type
@@ -468,13 +468,13 @@ Assign user as a tester to multiple test points
 
 Get TestRuns of TestPlan
 
-      Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **notStarted** | **Boolean**|  | [optional] [default to null] |
 | **inProgress** | **Boolean**|  | [optional] [default to null] |
 | **stopped** | **Boolean**|  | [optional] [default to null] |
@@ -504,13 +504,13 @@ Get TestRuns of TestPlan
 
 Search TestRuns of TestPlan
 
-      Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 | **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
 | **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
 | **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
@@ -562,13 +562,13 @@ null (empty response body)
 
 Send unlock TestPlan notification
 
-      Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+     Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -589,7 +589,7 @@ null (empty response body)
 
 Get TestPlans short models by Project identifiers
 
-      Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
+     Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
 
 ### Parameters
 
@@ -617,13 +617,13 @@ Get TestPlans short models by Project identifiers
 
 Clone TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+     Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -644,13 +644,13 @@ Clone TestPlan
 
 Complete TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+     Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -671,7 +671,7 @@ null (empty response body)
 
 Create TestPlan
 
-      Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
+     Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
 
 ### Parameters
 
@@ -698,13 +698,13 @@ Create TestPlan
 
 Delete TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+     Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -725,13 +725,13 @@ null (empty response body)
 
 Get TestPlan by Id
 
-      Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+     Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -752,13 +752,13 @@ Get TestPlan by Id
 
 Get TestSuites Tree By Id
 
-      Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+     Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -779,13 +779,13 @@ Get TestSuites Tree By Id
 
 Pause TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+     Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -831,13 +831,13 @@ null (empty response body)
 
 Restore TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+     Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -858,13 +858,13 @@ null (empty response body)
 
 Start TestPlan
 
-      Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+     Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
 
 ### Parameters
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Test plan internal (guid format) or global (int  format) identifier | [default to null] |
+| **id** | **String**| Test plan internal (guid format) or global (int format) identifier | [default to null] |
 
 ### Return type
 
@@ -885,7 +885,7 @@ null (empty response body)
 
 Update TestPlan
 
-      Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
+     Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
 
 ### Parameters
 

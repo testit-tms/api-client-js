@@ -15,7 +15,7 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { AttachmentModel } from '../model/attachmentModel';
+import { AttachmentApiResult } from '../model/attachmentApiResult';
 import { CreateDefectApiModel } from '../model/createDefectApiModel';
 import { DefectApiModel } from '../model/defectApiModel';
 import { GetExternalFormApiResult } from '../model/getExternalFormApiResult';
@@ -419,7 +419,7 @@ export class TestResultsApi {
      * @summary Get test result attachments meta-information
      * @param id Test result unique ID
      */
-    public async apiV2TestResultsIdAttachmentsInfoGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
+    public async apiV2TestResultsIdAttachmentsInfoGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/info'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -472,13 +472,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AttachmentApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<AttachmentModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AttachmentApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -875,7 +875,7 @@ export class TestResultsApi {
         });
     }
     /**
-     *   Use case    User sets testResultId    User attaches a file    System creates attachment and links it to the test result    System returns attachment identifier
+     *  Use case  User sets testResultId  User attaches a file  System creates attachment and links it to the test result  System returns attachment identifier
      * @summary Upload and link attachment to TestResult
      * @param id Test result internal identifier (guid format)
      * @param file Select file
@@ -954,7 +954,7 @@ export class TestResultsApi {
         });
     }
     /**
-     *   Use case    User sets testResultId and attachmentId    User attaches a file    User runs method execution    System deletes attachment and unlinks it from the test result    System returns attachment identifier
+     *  Use case  User sets testResultId and attachmentId  User attaches a file  User runs method execution  System deletes attachment and unlinks it from the test result  System returns attachment identifier
      * @summary Remove attachment and unlink from TestResult
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
@@ -1034,7 +1034,7 @@ export class TestResultsApi {
         });
     }
     /**
-     *   Use case    User sets attachmentId and testResultId    [Optional] User sets resize configuration    User runs method execution    System search attachments by the attachmentId and the testResultId    [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration    [Optional] Otherwise, System does not resize the attachment    System returns attachment as a file
+     *  Use case  User sets attachmentId and testResultId  [Optional] User sets resize configuration  User runs method execution  System search attachments by the attachmentId and the testResultId  [Optional] If resize configuration is set, System resizes the attachment according to the resize                     configuration  [Optional] Otherwise, System does not resize the attachment  System returns attachment as a file
      * @summary Get attachment of TestResult
      * @param attachmentId Attachment internal identifier (guid format)
      * @param id Test result internal identifier (guid format)
@@ -1139,12 +1139,12 @@ export class TestResultsApi {
         });
     }
     /**
-     *   Use case    User sets attachmentId and testResultId    User runs method execution    System search attachment by the attachmentId and the testResultId    System returns attachment data
+     *  Use case  User sets attachmentId and testResultId  User runs method execution  System search attachment by the attachmentId and the testResultId  System returns attachment data
      * @summary Get Metadata of TestResult\'s attachment
      * @param id Test result internal identifier (guid format)
      * @param attachmentId Attachment internal identifier (guid format)
      */
-    public async getAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentModel;  }> {
+    public async getAttachment (id: string, attachmentId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: AttachmentApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments/{attachmentId}/info'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)))
             .replace('{' + 'attachmentId' + '}', encodeURIComponent(String(attachmentId)));
@@ -1203,13 +1203,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: AttachmentModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: AttachmentApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "AttachmentModel");
+                            body = ObjectSerializer.deserialize(body, "AttachmentApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1220,11 +1220,11 @@ export class TestResultsApi {
         });
     }
     /**
-     *   Use case    User sets testResultId    User runs method execution    System search all attachments of the test result    System returns attachments enumeration
+     *  Use case  User sets testResultId  User runs method execution  System search all attachments of the test result  System returns attachments enumeration
      * @summary Get all attachments of TestResult
      * @param id Test result internal identifier (guid format)
      */
-    public async getAttachments (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }> {
+    public async getAttachments (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AttachmentApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/testResults/{id}/attachments'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1277,13 +1277,13 @@ export class TestResultsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<AttachmentModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AttachmentApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<AttachmentModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AttachmentApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));

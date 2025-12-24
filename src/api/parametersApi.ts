@@ -103,7 +103,7 @@ export class ParametersApi {
     }
 
     /**
-     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System creates parameters    System returns list of parameter model (listed in the response example)
+     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
      * @summary Create multiple parameters
      * @param createParameterApiModel 
      *
@@ -174,7 +174,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System updates parameters
+     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
      * @summary Update multiple parameters
      * @param updateParameterApiModel 
      *
@@ -244,7 +244,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User runs method execution    System search parameters    System returns parameters models as groups (listed in the response example)
+     *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
      * @summary Get parameters as group
      * @param parameterKeyIds 
      * @param name 
@@ -358,7 +358,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets name of parameter key    User runs method execution    System search parameter key    System returns the flag for the existence of the parameter key in the system
+     *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
      * @summary Check existence parameter key in system
      * @param name 
      *
@@ -434,7 +434,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets parameter key (string format)    User runs method execution    System search parameter values using the key    System returns parameter
+     *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
      * @summary Get all parameter key values
      * @param key Parameter key (string format)
      *
@@ -510,7 +510,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User runs method execution    System search all parameter keys    System returns parameter keys
+     *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
      * @summary Get all parameter keys
      * @param projectIds 
      * @param skip Amount of items to be skipped (offset)
@@ -801,7 +801,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets parameter model (listed in the request example)    User runs method execution    System creates parameter    System returns parameter model
+     *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
      * @summary Create parameter
      * @param createParameterApiModel 
      *
@@ -1022,7 +1022,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets parameter internal (guid format) identifier    System search and delete parameter    System returns deleted parameter
+     *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
      * @summary Delete parameter
      * @param id Parameter internal (UUID) identifier
      *
@@ -1097,7 +1097,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted parameters    [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted    If User did not set isDeleted field value, System search all parameters    System returns array of all found parameters(listed in response model)
+     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
      * @summary Get all parameters
      * @param isDeleted If result must consist of only actual/deleted parameters
      * @param skip Amount of items to be skipped (offset)
@@ -1196,7 +1196,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets parameter internal (guid format) identifier    User runs method execution    System search parameter using the identifier    System returns parameter
+     *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
      * @summary Get parameter by ID
      * @param id Parameter internal (UUID) identifier
      *
@@ -1272,7 +1272,7 @@ export class ParametersApi {
         });
     }
     /**
-     *   Use case    User sets parameter updated properties(listed in the request example)    User runs method execution    System updated parameter using updated properties    System returns no content response
+     *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
      * @summary Update parameter
      * @param updateParameterApiModel 
      *

@@ -12,11 +12,14 @@
 
 import { RequestFile } from './models';
 
-export class WorkItemIdentifierModel {
+export class AutoTestWorkItemIdentifierApiResult {
     /**
-    * Used for search WorkItem. Internal identifier has a Guid data format. Global identifier has an integer data format
+    * WorkItem unique internal identifier
     */
     'id': string;
+    /**
+    * WorkItem Global unique identifier
+    */
     'globalId': number;
 
     static discriminator: string | undefined = undefined;
@@ -34,7 +37,7 @@ export class WorkItemIdentifierModel {
         }    ];
 
     static getAttributeTypeMap() {
-        return WorkItemIdentifierModel.attributeTypeMap;
+        return AutoTestWorkItemIdentifierApiResult.attributeTypeMap;
     }
 }
 

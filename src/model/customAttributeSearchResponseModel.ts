@@ -23,7 +23,7 @@ export class CustomAttributeSearchResponseModel {
     */
     'id': string;
     /**
-    * Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
+    * Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
     */
     'options': Array<CustomAttributeOptionModel>;
     /**

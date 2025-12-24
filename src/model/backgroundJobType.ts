@@ -16,6 +16,7 @@ export enum BackgroundJobType {
     ExportXlsxTestResultsByTestPlan = <any> 'ExportXlsxTestResultsByTestPlan',
     ExportXlsxWorkItemsByProject = <any> 'ExportXlsxWorkItemsByProject',
     ExportXlsxTestPointsByTestPlan = <any> 'ExportXlsxTestPointsByTestPlan',
+    ExportXlsxWorkItemLinks = <any> 'ExportXlsxWorkItemLinks',
     ExportJsonProject = <any> 'ExportJsonProject',
     ExportZipProject = <any> 'ExportZipProject',
     ExportJsonProjectWithTestPlans = <any> 'ExportJsonProjectWithTestPlans',
@@ -28,5 +29,6 @@ export enum BackgroundJobType {
     ExportProjects = <any> 'ExportProjects',
     ImportProjects = <any> 'ImportProjects',
     PurgeEntities = <any> 'PurgeEntities',
-    DeleteCompletedJobs = <any> 'DeleteCompletedJobs'
+    DeleteCompletedJobs = <any> 'DeleteCompletedJobs',
+    CopySections = <any> 'CopySections'
 }

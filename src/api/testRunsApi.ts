@@ -115,7 +115,7 @@ export class TestRunsApi {
     }
 
     /**
-     *   Use case    User sets selection parameters of test runs    System search and delete collection of test runs    System returns the number of deleted test runs
+     *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
      * @summary Delete multiple test runs
      * @param testRunSelectApiModel 
      */
@@ -258,7 +258,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run internal (guid format) identifier    System search and delete test run
+     *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
      * @summary Delete test run
      * @param id Test run internal (UUID) identifier
      */
@@ -331,7 +331,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets archived test run internal (guid format) identifier    System search and purge archived test run
+     *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
      * @summary Permanently delete test run from archive
      * @param id Test run internal (UUID) identifier
      */
@@ -480,7 +480,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets archived test run internal (guid format) identifier    System search and restore test run
+     *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
      * @summary Restore test run from the archive
      * @param id Unique ID of the test run
      */
@@ -852,7 +852,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets selection parameters of archived test runs    System search and delete collection of archived test runs    System returns the number of deleted archived test runs
+     *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
      * @summary Permanently delete multiple test runs from archive
      * @param testRunSelectApiModel 
      */
@@ -921,7 +921,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets selection parameters of archived test runs    System search and restore collection of archived test runs    System returns the number of restored test runs
+     *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
      * @summary Restore multiple test runs from the archive
      * @param testRunSelectApiModel 
      */
@@ -1152,7 +1152,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run identifier    User runs method execution    System completes test run    System returns no content response
+     *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
      * @summary Complete TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1225,7 +1225,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
+     * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @summary Create test runs based on autotests and configurations
      * @param createTestRunAndFillByAutoTestsApiModel 
      */
@@ -1294,7 +1294,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
+     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @summary Create test runs picking the needed test points
      * @param createTestRunAndFillByConfigurationsApiModel 
      */
@@ -1363,7 +1363,7 @@ export class TestRunsApi {
         });
     }
     /**
-     * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
+     * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
      * @summary Create test run based on configurations and work items
      * @param createTestRunAndFillByWorkItemsApiModel 
      */
@@ -1432,7 +1432,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run model (listed in the request example)    User runs method execution    System creates test run    System returns test run model
+     *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
      * @summary Create empty TestRun
      * @param createEmptyTestRunApiModel 
      */
@@ -1501,7 +1501,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run identifier    User runs method execution    System finds test run    System returns test run
+     *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
      * @summary Get TestRun by Id
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1651,7 +1651,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run identifier    User runs method execution    System starts test run    System returns no content response
+     *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
      * @summary Start TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1724,7 +1724,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run identifier    User runs method execution    System stops test run    System returns no content response
+     *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
      * @summary Stop TestRun
      * @param id Test Run internal identifier (GUID format)
      */
@@ -1797,7 +1797,7 @@ export class TestRunsApi {
         });
     }
     /**
-     *   Use case    User sets test run properties (listed in the request example)    User runs method execution    System updates test run    System returns returns no content response
+     *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
      * @summary Update empty TestRun
      * @param updateEmptyTestRunApiModel 
      */

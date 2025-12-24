@@ -15,20 +15,21 @@ import localVarRequest from 'request';
 import http from 'http';
 
 /* tslint:disable:no-unused-locals */
-import { AutoTestNamespaceModel } from '../model/autoTestNamespaceModel';
+import { AutoTestNamespaceApiResult } from '../model/autoTestNamespaceApiResult';
 import { CreateProjectApiModel } from '../model/createProjectApiModel';
 import { CustomAttributeTestPlanProjectRelationPutModel } from '../model/customAttributeTestPlanProjectRelationPutModel';
+import { DemoProjectApiResult } from '../model/demoProjectApiResult';
 import { FailureCategoryApiResult } from '../model/failureCategoryApiResult';
 import { FilterModel } from '../model/filterModel';
 import { GetShortProjectsApiModel } from '../model/getShortProjectsApiModel';
 import { Operation } from '../model/operation';
 import { ProblemDetails } from '../model/problemDetails';
+import { ProjectApiResult } from '../model/projectApiResult';
 import { ProjectModel } from '../model/projectModel';
 import { ProjectSelectModel } from '../model/projectSelectModel';
 import { ProjectShortApiResultReply } from '../model/projectShortApiResultReply';
 import { ProjectShortModel } from '../model/projectShortModel';
 import { ProjectsFilterModel } from '../model/projectsFilterModel';
-import { PublicTestRunModel } from '../model/publicTestRunModel';
 import { TestPlanModel } from '../model/testPlanModel';
 import { TestRunApiResult } from '../model/testRunApiResult';
 import { TestRunV2ApiResult } from '../model/testRunV2ApiResult';
@@ -114,7 +115,7 @@ export class ProjectsApi {
     }
 
     /**
-     *   Use case    User sets project internal or global identifier and attributes identifiers    System search project    System relates global attributes with project    System returns no content response
+     *  Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
      * @summary Add global attributes to project
      * @param id Project internal (UUID) or global (integer) identifier
      * @param requestBody 
@@ -179,6 +180,72 @@ export class ProjectsApi {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            resolve({ response: response, body: body });
+                        } else {
+                            reject(new HttpError(response, body, response.statusCode));
+                        }
+                    }
+                });
+            });
+        });
+    }
+    /**
+     * 
+     */
+    public async apiV2ProjectsDemoPost (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }> {
+        const localVarPath = this.basePath + '/api/v2/projects/demo';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams.Accept = 'application/json';
+        } else {
+            localVarHeaderParams.Accept = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        
+    let localVarRequestOptions: localVarRequest.Options = {
+            rejectUnauthorized: this._rejectUnauthorized,
+            method: 'POST',
+            qs: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            uri: localVarPath,
+            useQuerystring: this._useQuerystring,
+            json: true,
+        };
+
+        let authenticationPromise = Promise.resolve();
+        if (this.authentications['Bearer or PrivateToken'].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            if (Object.keys(localVarFormParams).length) {
+                if (localVarUseFormData) {
+                    (<any>localVarRequestOptions).formData = localVarFormParams;
+                } else {
+                    localVarRequestOptions.form = localVarFormParams;
+                }
+            }
+            return new Promise<{ response: http.IncomingMessage; body: DemoProjectApiResult;  }>((resolve, reject) => {
+                localVarRequest(localVarRequestOptions, (error, response, body) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
+                            body = ObjectSerializer.deserialize(body, "DemoProjectApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -416,7 +483,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier    User runs method execution    System returns project filters
+     *  Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
      * @summary Get Project filters
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -711,7 +778,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
+     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
      * @summary Delete attribute from project\'s test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param attributeId 
@@ -793,7 +860,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
+     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
      * @summary Update attribute of project\'s test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param customAttributeTestPlanProjectRelationPutModel 
@@ -870,81 +937,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier    User runs method execution    System returns active testruns
-     * @summary Get active Project TestRuns
-     * @param id Project internal (UUID) or global (integer) identifier
-     */
-    public async apiV2ProjectsIdTestRunsActiveGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<PublicTestRunModel>;  }> {
-        const localVarPath = this.basePath + '/api/v2/projects/{id}/testRuns/active'
-            .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
-        let localVarQueryParameters: any = {};
-        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
-        const produces = ['application/json'];
-        // give precedence to 'application/json'
-        if (produces.indexOf('application/json') >= 0) {
-            localVarHeaderParams.Accept = 'application/json';
-        } else {
-            localVarHeaderParams.Accept = produces.join(',');
-        }
-        let localVarFormParams: any = {};
-
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling apiV2ProjectsIdTestRunsActiveGet.');
-        }
-
-        (<any>Object).assign(localVarHeaderParams, options.headers);
-
-        let localVarUseFormData = false;
-
-        
-    let localVarRequestOptions: localVarRequest.Options = {
-            rejectUnauthorized: this._rejectUnauthorized,
-            method: 'GET',
-            qs: localVarQueryParameters,
-            headers: localVarHeaderParams,
-            uri: localVarPath,
-            useQuerystring: this._useQuerystring,
-            json: true,
-        };
-
-        let authenticationPromise = Promise.resolve();
-        if (this.authentications['Bearer or PrivateToken'].apiKey) {
-            authenticationPromise = authenticationPromise.then(() => this.authentications['Bearer or PrivateToken'].applyToRequest(localVarRequestOptions));
-        }
-        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
-
-        let interceptorPromise = authenticationPromise;
-        for (const interceptor of this.interceptors) {
-            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
-        }
-
-        return interceptorPromise.then(() => {
-            if (Object.keys(localVarFormParams).length) {
-                if (localVarUseFormData) {
-                    (<any>localVarRequestOptions).formData = localVarFormParams;
-                } else {
-                    localVarRequestOptions.form = localVarFormParams;
-                }
-            }
-            return new Promise<{ response: http.IncomingMessage; body: Array<PublicTestRunModel>;  }>((resolve, reject) => {
-                localVarRequest(localVarRequestOptions, (error, response, body) => {
-                    if (error) {
-                        reject(error);
-                    } else {
-                        if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<PublicTestRunModel>");
-                            resolve({ response: response, body: body });
-                        } else {
-                            reject(new HttpError(response, body, response.statusCode));
-                        }
-                    }
-                });
-            });
-        });
-    }
-    /**
-     *   Use case    User sets project internal or global identifier    User sets query params    User runs method execution    System returns project test runs full models
+     *  Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
      * @summary Get Project TestRuns full models
      * @param id Project internal (UUID) or global (integer) identifier
      * @param includeTestResults 
@@ -1393,7 +1386,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets query params    User runs method execution    System return projects short models
+     *  Use case  User sets query params  User runs method execution  System return projects short models
      * @summary Get projects short models
      * @param getShortProjectsApiModel 
      */
@@ -1462,11 +1455,11 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project parameters (listed in request example) and runs method execution    System creates project    System returns project model (example listed in response parameters)
+     *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
      * @summary Create project
      * @param createProjectApiModel 
      */
-    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectModel;  }> {
+    public async createProject (createProjectApiModel?: CreateProjectApiModel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }> {
         const localVarPath = this.basePath + '/api/v2/projects';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -1514,13 +1507,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ProjectModel;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: ProjectApiResult;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ProjectModel");
+                            body = ObjectSerializer.deserialize(body, "ProjectApiResult");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1604,7 +1597,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted projects    [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted    If User did not set isDeleted field value, System search all projects    System returns array of all found projects(listed in response model)
+     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
      * @summary Get all projects
      * @param isDeleted If result must consist of only actual/deleted parameters
      * @param projectName 
@@ -1708,11 +1701,11 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all autotest related to the project    System returns array of autotest with namespaces and classnames (listed in response)
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
      * @summary Get namespaces of autotests in project
      * @param id Project internal (UUID) or global (integer) identifier
      */
-    public async getAutoTestsNamespaces (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestNamespaceModel>;  }> {
+    public async getAutoTestsNamespaces (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<AutoTestNamespaceApiResult>;  }> {
         const localVarPath = this.basePath + '/api/v2/projects/{id}/autoTestsNamespaces'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -1765,13 +1758,13 @@ export class ProjectsApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestNamespaceModel>;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: Array<AutoTestNamespaceApiResult>;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "Array<AutoTestNamespaceModel>");
+                            body = ObjectSerializer.deserialize(body, "Array<AutoTestNamespaceApiResult>");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -1782,7 +1775,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier and runs method execution    System search project    System returns project (example listed in response parameters)
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
      * @summary Get project by ID
      * @param id Project internal (UUID) or global (integer) identifier
      */
@@ -1856,7 +1849,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project    [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted    [Optional] If User did not set isDeleted field value, System search all v related to project    System returns array of found test plans (listed in response model)
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
      * @summary Get project test plans
      * @param id Project internal (UUID) or global (integer) identifier
      * @param isDeleted If result must consist of only actual/archived test plans
@@ -1935,7 +1928,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all test runs related to project    System returns array of found test runs (listed in response model)
+     *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
      * @summary Get project test runs
      * @param id Project internal (UUID) or global (integer) identifier
      * @param notStarted 
@@ -2089,7 +2082,7 @@ export class ProjectsApi {
         });
     }
     /**
-     *   Use case    User sets project parameters (listed in request example) and runs method execution    System updates project    System returns updated project model (example listed in response parameters)
+     *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
      * @summary Update project
      * @param updateProjectApiModel 
      */

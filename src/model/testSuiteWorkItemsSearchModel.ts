@@ -27,7 +27,7 @@ export class TestSuiteWorkItemsSearchModel {
     */
     'tagNames'?: Array<string> | null;
     /**
-    * Collection of types of work item    Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+    * Collection of types of work item  Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
     */
     'entityTypes'?: Array<WorkItemEntityTypes> | null;
     /**
