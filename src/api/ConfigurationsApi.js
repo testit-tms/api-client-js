@@ -27,7 +27,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Configurations service.
 * @module api/ConfigurationsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ConfigurationsApi {
 
@@ -43,22 +43,14 @@ export default class ConfigurationsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ConfigurationsCreateByParametersPost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsCreateByParametersPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create configurations by parameters
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationByParametersModel} [configurationByParametersModel] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsCreateByParametersPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ConfigurationsCreateByParametersPost(opts, callback) {
+    apiV2ConfigurationsCreateByParametersPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationByParametersModel'];
 
@@ -78,26 +70,31 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/createByParameters', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsDeleteBulkPost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsDeleteBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create configurations by parameters
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationByParametersModel} opts.configurationByParametersModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ConfigurationsCreateByParametersPost(opts) {
+      return this.apiV2ConfigurationsCreateByParametersPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete multiple configurations
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationSelectApiModel} [configurationSelectApiModel] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsDeleteBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2ConfigurationsDeleteBulkPost(opts, callback) {
+    apiV2ConfigurationsDeleteBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationSelectApiModel'];
 
@@ -117,24 +114,30 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/delete/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsIdDelete operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete multiple configurations
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationSelectApiModel} opts.configurationSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2ConfigurationsDeleteBulkPost(opts) {
+      return this.apiV2ConfigurationsDeleteBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete configuration
      * @param {String} id Unique or global ID of the configuration
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ConfigurationsIdDelete(id, callback) {
+    apiV2ConfigurationsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -158,17 +161,22 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsIdPatch operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete configuration
+     * @param {String} id Unique or global ID of the configuration
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ConfigurationsIdDelete(id) {
+      return this.apiV2ConfigurationsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Patch configuration
@@ -176,9 +184,9 @@ export default class ConfigurationsApi {
      * @param {String} id Unique ID of the configuration
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ConfigurationsIdPatch(id, opts, callback) {
+    apiV2ConfigurationsIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -203,24 +211,32 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsIdPurgePost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsIdPurgePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Patch configuration
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Unique ID of the configuration
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ConfigurationsIdPatch(id, opts) {
+      return this.apiV2ConfigurationsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete configuration from archive
      * @param {String} id Unique or global ID of the configuration
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsIdPurgePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ConfigurationsIdPurgePost(id, callback) {
+    apiV2ConfigurationsIdPurgePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -244,24 +260,29 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/{id}/purge', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsIdRestorePost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsIdRestorePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete configuration from archive
+     * @param {String} id Unique or global ID of the configuration
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ConfigurationsIdPurgePost(id) {
+      return this.apiV2ConfigurationsIdPurgePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore configuration from the archive
      * @param {String} id Unique or global ID of the configuration
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsIdRestorePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ConfigurationsIdRestorePost(id, callback) {
+    apiV2ConfigurationsIdRestorePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -285,26 +306,30 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/{id}/restore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsPurgeBulkPost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsPurgeBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore configuration from the archive
+     * @param {String} id Unique or global ID of the configuration
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ConfigurationsIdRestorePost(id) {
+      return this.apiV2ConfigurationsIdRestorePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete multiple archived configurations
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationSelectModel} [configurationSelectModel] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsPurgeBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2ConfigurationsPurgeBulkPost(opts, callback) {
+    apiV2ConfigurationsPurgeBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationSelectModel'];
 
@@ -324,25 +349,31 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/purge/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsPut operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete multiple archived configurations
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationSelectModel} opts.configurationSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2ConfigurationsPurgeBulkPost(opts) {
+      return this.apiV2ConfigurationsPurgeBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit configuration
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationPutModel} [configurationPutModel] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ConfigurationsPut(opts, callback) {
+    apiV2ConfigurationsPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationPutModel'];
 
@@ -362,26 +393,31 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsRestoreBulkPost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsRestoreBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Edit configuration
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationPutModel} opts.configurationPutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ConfigurationsPut(opts) {
+      return this.apiV2ConfigurationsPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore multiple configurations from the archive
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationSelectModel} [configurationSelectModel] 
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsRestoreBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2ConfigurationsRestoreBulkPost(opts, callback) {
+    apiV2ConfigurationsRestoreBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationSelectModel'];
 
@@ -401,17 +437,23 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/restore/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ConfigurationsSearchPost operation.
-     * @callback module:api/ConfigurationsApi~apiV2ConfigurationsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ConfigurationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore multiple configurations from the archive
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationSelectModel} opts.configurationSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2ConfigurationsRestoreBulkPost(opts) {
+      return this.apiV2ConfigurationsRestoreBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for configurations
@@ -422,10 +464,9 @@ export default class ConfigurationsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ConfigurationFilterModel} [configurationFilterModel] Model containing all the filters
-     * @param {module:api/ConfigurationsApi~apiV2ConfigurationsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ConfigurationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
-    apiV2ConfigurationsSearchPost(opts, callback) {
+    apiV2ConfigurationsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationFilterModel'];
 
@@ -450,27 +491,37 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createConfiguration operation.
-     * @callback module:api/ConfigurationsApi~createConfigurationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ConfigurationModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for configurations
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ConfigurationFilterModel} opts.configurationFilterModel Model containing all the filters
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */
+    apiV2ConfigurationsSearchPost(opts) {
+      return this.apiV2ConfigurationsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create Configuration
      *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/ConfigurationPostModel} [configurationPostModel] 
-     * @param {module:api/ConfigurationsApi~createConfigurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ConfigurationModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ConfigurationModel} and HTTP response
      */
-    createConfiguration(opts, callback) {
+    createConfigurationWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['configurationPostModel'];
 
@@ -490,26 +541,32 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getConfigurationById operation.
-     * @callback module:api/ConfigurationsApi~getConfigurationByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ConfigurationModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create Configuration
+     *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ConfigurationPostModel} opts.configurationPostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ConfigurationModel}
      */
+    createConfiguration(opts) {
+      return this.createConfigurationWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get configuration by internal or global ID
      *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
      * @param {String} id Configuration internal (guid format) or global (integer format) identifier
-     * @param {module:api/ConfigurationsApi~getConfigurationByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ConfigurationModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ConfigurationModel} and HTTP response
      */
-    getConfigurationById(id, callback) {
+    getConfigurationByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -533,8 +590,21 @@ export default class ConfigurationsApi {
       return this.apiClient.callApi(
         '/api/v2/configurations/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get configuration by internal or global ID
+     *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
+     * @param {String} id Configuration internal (guid format) or global (integer format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ConfigurationModel}
+     */
+    getConfigurationById(id) {
+      return this.getConfigurationByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

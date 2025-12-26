@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPointSelector model module.
  * @module model/TestPointSelector
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class TestPointSelector {
     /**

@@ -37,7 +37,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestRuns service.
 * @module api/TestRunsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class TestRunsApi {
 
@@ -53,23 +53,15 @@ export default class TestRunsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2TestRunsDelete operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete multiple test runs
      *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2TestRunsDelete(opts, callback) {
+    apiV2TestRunsDeleteWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testRunSelectApiModel'];
 
@@ -89,25 +81,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdAutoTestsNamespacesGet operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdAutoTestsNamespacesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestNamespacesCountResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete multiple test runs
+     *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2TestRunsDelete(opts) {
+      return this.apiV2TestRunsDeleteWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get autotest classes and namespaces in test run
      * @param {String} id 
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdAutoTestsNamespacesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestNamespacesCountResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestNamespacesCountResponse} and HTTP response
      */
-    apiV2TestRunsIdAutoTestsNamespacesGet(id, callback) {
+    apiV2TestRunsIdAutoTestsNamespacesGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -131,25 +129,30 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/autoTestsNamespaces', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdDelete operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get autotest classes and namespaces in test run
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestNamespacesCountResponse}
      */
+    apiV2TestRunsIdAutoTestsNamespacesGet(id) {
+      return this.apiV2TestRunsIdAutoTestsNamespacesGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete test run
      *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
      * @param {String} id Test run internal (UUID) identifier
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestRunsIdDelete(id, callback) {
+    apiV2TestRunsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -173,25 +176,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdPurgePost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdPurgePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete test run
+     *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
+     * @param {String} id Test run internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestRunsIdDelete(id) {
+      return this.apiV2TestRunsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete test run from archive
      *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
      * @param {String} id Test run internal (UUID) identifier
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdPurgePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestRunsIdPurgePost(id, callback) {
+    apiV2TestRunsIdPurgePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -215,27 +224,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/purge', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdRerunsPost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdRerunsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ManualRerunApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete test run from archive
+     *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+     * @param {String} id Test run internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestRunsIdPurgePost(id) {
+      return this.apiV2TestRunsIdPurgePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Manual autotests rerun in test run
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/ManualRerunSelectTestResultsApiModel} [manualRerunSelectTestResultsApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdRerunsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ManualRerunApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManualRerunApiResult} and HTTP response
      */
-    apiV2TestRunsIdRerunsPost(id, opts, callback) {
+    apiV2TestRunsIdRerunsPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['manualRerunSelectTestResultsApiModel'];
       // verify the required parameter 'id' is set
@@ -260,25 +274,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/reruns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdRestorePost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdRestorePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Manual autotests rerun in test run
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ManualRerunSelectTestResultsApiModel} opts.manualRerunSelectTestResultsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ManualRerunApiResult}
      */
+    apiV2TestRunsIdRerunsPost(id, opts) {
+      return this.apiV2TestRunsIdRerunsPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore test run from the archive
      *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
      * @param {String} id Unique ID of the test run
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdRestorePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestRunsIdRestorePost(id, callback) {
+    apiV2TestRunsIdRestorePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -302,27 +323,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/restore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdStatisticsFilterPost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdStatisticsFilterPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestResultsStatisticsApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore test run from the archive
+     *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+     * @param {String} id Unique ID of the test run
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestRunsIdRestorePost(id) {
+      return this.apiV2TestRunsIdRestorePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for the test run test results and build statistics
      * @param {String} id Test run unique ID
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunStatisticsFilterApiModel} [testRunStatisticsFilterApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdStatisticsFilterPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestResultsStatisticsApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultsStatisticsApiResult} and HTTP response
      */
-    apiV2TestRunsIdStatisticsFilterPost(id, opts, callback) {
+    apiV2TestRunsIdStatisticsFilterPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['testRunStatisticsFilterApiModel'];
       // verify the required parameter 'id' is set
@@ -347,25 +373,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/statistics/filter', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdTestPointsResultsGet operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdTestPointsResultsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPointResultApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for the test run test results and build statistics
+     * @param {String} id Test run unique ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestRunStatisticsFilterApiModel} opts.testRunStatisticsFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResultsStatisticsApiResult}
      */
+    apiV2TestRunsIdStatisticsFilterPost(id, opts) {
+      return this.apiV2TestRunsIdStatisticsFilterPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test results from the test run grouped by test points
      * @param {String} id Test run unique ID
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdTestPointsResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPointResultApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointResultApiResult>} and HTTP response
      */
-    apiV2TestRunsIdTestPointsResultsGet(id, callback) {
+    apiV2TestRunsIdTestPointsResultsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -389,26 +421,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/testPoints/results', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdTestResultsBulkPut operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdTestResultsBulkPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get test results from the test run grouped by test points
+     * @param {String} id Test run unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointResultApiResult>}
      */
+    apiV2TestRunsIdTestPointsResultsGet(id) {
+      return this.apiV2TestRunsIdTestPointsResultsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Partial edit of multiple test results in the test run
      * @param {String} id Test run unique ID
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunTestResultsPartialBulkSetModel} [testRunTestResultsPartialBulkSetModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdTestResultsBulkPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestRunsIdTestResultsBulkPut(id, opts, callback) {
+    apiV2TestRunsIdTestResultsBulkPutWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['testRunTestResultsPartialBulkSetModel'];
       // verify the required parameter 'id' is set
@@ -433,25 +470,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/testResults/bulk', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsIdTestResultsLastModifiedModificationDateGet operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsIdTestResultsLastModifiedModificationDateGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Date} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Partial edit of multiple test results in the test run
+     * @param {String} id Test run unique ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestRunTestResultsPartialBulkSetModel} opts.testRunTestResultsPartialBulkSetModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestRunsIdTestResultsBulkPut(id, opts) {
+      return this.apiV2TestRunsIdTestResultsBulkPutWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get modification date of last test result of the test run
      * @param {String} id Test run unique ID
-     * @param {module:api/TestRunsApi~apiV2TestRunsIdTestResultsLastModifiedModificationDateGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Date}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Date} and HTTP response
      */
-    apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id, callback) {
+    apiV2TestRunsIdTestResultsLastModifiedModificationDateGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -475,27 +518,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/testResults/lastModified/modificationDate', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsPurgeBulkPost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsPurgeBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get modification date of last test result of the test run
+     * @param {String} id Test run unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Date}
      */
+    apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id) {
+      return this.apiV2TestRunsIdTestResultsLastModifiedModificationDateGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete multiple test runs from archive
      *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsPurgeBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2TestRunsPurgeBulkPost(opts, callback) {
+    apiV2TestRunsPurgeBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testRunSelectApiModel'];
 
@@ -515,27 +562,33 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/purge/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsRestoreBulkPost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsRestoreBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete multiple test runs from archive
+     *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2TestRunsPurgeBulkPost(opts) {
+      return this.apiV2TestRunsPurgeBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore multiple test runs from the archive
      *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsRestoreBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2TestRunsRestoreBulkPost(opts, callback) {
+    apiV2TestRunsRestoreBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testRunSelectApiModel'];
 
@@ -555,17 +608,24 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/restore/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsSearchPost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunShortApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore multiple test runs from the archive
+     *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2TestRunsRestoreBulkPost(opts) {
+      return this.apiV2TestRunsRestoreBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for test runs
@@ -576,10 +636,9 @@ export default class TestRunsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/TestRunFilterApiModel} [testRunFilterApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunShortApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunShortApiResult>} and HTTP response
      */
-    apiV2TestRunsSearchPost(opts, callback) {
+    apiV2TestRunsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testRunFilterApiModel'];
 
@@ -604,25 +663,36 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestRunsUpdateMultiplePost operation.
-     * @callback module:api/TestRunsApi~apiV2TestRunsUpdateMultiplePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search for test runs
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/TestRunFilterApiModel} opts.testRunFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunShortApiResult>}
      */
+    apiV2TestRunsSearchPost(opts) {
+      return this.apiV2TestRunsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update multiple test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateMultipleTestRunsApiModel} [updateMultipleTestRunsApiModel] 
-     * @param {module:api/TestRunsApi~apiV2TestRunsUpdateMultiplePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestRunsUpdateMultiplePost(opts, callback) {
+    apiV2TestRunsUpdateMultiplePostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateMultipleTestRunsApiModel'];
 
@@ -642,25 +712,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/updateMultiple', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the completeTestRun operation.
-     * @callback module:api/TestRunsApi~completeTestRunCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update multiple test runs
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateMultipleTestRunsApiModel} opts.updateMultipleTestRunsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestRunsUpdateMultiplePost(opts) {
+      return this.apiV2TestRunsUpdateMultiplePostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Complete TestRun
      *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
-     * @param {module:api/TestRunsApi~completeTestRunCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    completeTestRun(id, callback) {
+    completeTestRunWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -684,27 +760,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/complete', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createAndFillByAutoTests operation.
-     * @callback module:api/TestRunsApi~createAndFillByAutoTestsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunV2ApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Complete TestRun
+     *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    completeTestRun(id) {
+      return this.completeTestRunWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create test runs based on autotests and configurations
      * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} [createTestRunAndFillByAutoTestsApiModel] 
-     * @param {module:api/TestRunsApi~createAndFillByAutoTestsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunV2ApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
-    createAndFillByAutoTests(opts, callback) {
+    createAndFillByAutoTestsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createTestRunAndFillByAutoTestsApiModel'];
 
@@ -724,27 +805,33 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/byAutoTests', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createAndFillByConfigurations operation.
-     * @callback module:api/TestRunsApi~createAndFillByConfigurationsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunV2ApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create test runs based on autotests and configurations
+     * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} opts.createTestRunAndFillByAutoTestsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
+    createAndFillByAutoTests(opts) {
+      return this.createAndFillByAutoTestsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create test runs picking the needed test points
      * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} [createTestRunAndFillByConfigurationsApiModel] 
-     * @param {module:api/TestRunsApi~createAndFillByConfigurationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunV2ApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
-    createAndFillByConfigurations(opts, callback) {
+    createAndFillByConfigurationsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createTestRunAndFillByConfigurationsApiModel'];
 
@@ -764,27 +851,33 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/byConfigurations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createAndFillByWorkItems operation.
-     * @callback module:api/TestRunsApi~createAndFillByWorkItemsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunV2ApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create test runs picking the needed test points
+     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} opts.createTestRunAndFillByConfigurationsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
+    createAndFillByConfigurations(opts) {
+      return this.createAndFillByConfigurationsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create test run based on configurations and work items
      * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} [createTestRunAndFillByWorkItemsApiModel] 
-     * @param {module:api/TestRunsApi~createAndFillByWorkItemsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunV2ApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
-    createAndFillByWorkItems(opts, callback) {
+    createAndFillByWorkItemsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createTestRunAndFillByWorkItemsApiModel'];
 
@@ -804,27 +897,33 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/byWorkItems', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createEmpty operation.
-     * @callback module:api/TestRunsApi~createEmptyCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunV2ApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create test run based on configurations and work items
+     * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} opts.createTestRunAndFillByWorkItemsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
+    createAndFillByWorkItems(opts) {
+      return this.createAndFillByWorkItemsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create empty TestRun
      *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateEmptyTestRunApiModel} [createEmptyTestRunApiModel] 
-     * @param {module:api/TestRunsApi~createEmptyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunV2ApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
-    createEmpty(opts, callback) {
+    createEmptyWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createEmptyTestRunApiModel'];
 
@@ -844,26 +943,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestRunById operation.
-     * @callback module:api/TestRunsApi~getTestRunByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunV2ApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create empty TestRun
+     *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateEmptyTestRunApiModel} opts.createEmptyTestRunApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
+    createEmpty(opts) {
+      return this.createEmptyWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestRun by Id
      *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
      * @param {String} id Test Run internal identifier (GUID format)
-     * @param {module:api/TestRunsApi~getTestRunByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunV2ApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
-    getTestRunById(id, callback) {
+    getTestRunByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -887,17 +992,23 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the setAutoTestResultsForTestRun operation.
-     * @callback module:api/TestRunsApi~setAutoTestResultsForTestRunCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestRun by Id
+     *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
+    getTestRunById(id) {
+      return this.getTestRunByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send test results to the test runs in the system
@@ -905,10 +1016,9 @@ export default class TestRunsApi {
      * @param {String} id Test Run internal identifier (GUID format)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestResultsForTestRunModel>} [autoTestResultsForTestRunModel] 
-     * @param {module:api/TestRunsApi~setAutoTestResultsForTestRunCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    setAutoTestResultsForTestRun(id, opts, callback) {
+    setAutoTestResultsForTestRunWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['autoTestResultsForTestRunModel'];
       // verify the required parameter 'id' is set
@@ -933,25 +1043,33 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/testResults', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the startTestRun operation.
-     * @callback module:api/TestRunsApi~startTestRunCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Send test results to the test runs in the system
+     * This method sends test results to the test management system.
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/AutoTestResultsForTestRunModel>} opts.autoTestResultsForTestRunModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    setAutoTestResultsForTestRun(id, opts) {
+      return this.setAutoTestResultsForTestRunWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Start TestRun
      *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
-     * @param {module:api/TestRunsApi~startTestRunCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    startTestRun(id, callback) {
+    startTestRunWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -975,25 +1093,31 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/start', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the stopTestRun operation.
-     * @callback module:api/TestRunsApi~stopTestRunCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Start TestRun
+     *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    startTestRun(id) {
+      return this.startTestRunWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Stop TestRun
      *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
-     * @param {module:api/TestRunsApi~stopTestRunCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    stopTestRun(id, callback) {
+    stopTestRunWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1017,26 +1141,32 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns/{id}/stop', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateEmpty operation.
-     * @callback module:api/TestRunsApi~updateEmptyCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Stop TestRun
+     *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    stopTestRun(id) {
+      return this.stopTestRunWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update empty TestRun
      *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateEmptyTestRunApiModel} [updateEmptyTestRunApiModel] 
-     * @param {module:api/TestRunsApi~updateEmptyCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateEmpty(opts, callback) {
+    updateEmptyWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateEmptyTestRunApiModel'];
 
@@ -1056,8 +1186,22 @@ export default class TestRunsApi {
       return this.apiClient.callApi(
         '/api/v2/testRuns', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update empty TestRun
+     *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateEmptyTestRunApiModel} opts.updateEmptyTestRunApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateEmpty(opts) {
+      return this.updateEmptyWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

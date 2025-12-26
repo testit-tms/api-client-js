@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlanTestPoints service.
 * @module api/ProjectTestPlanTestPointsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ProjectTestPlanTestPointsApi {
 
@@ -38,13 +38,6 @@ export default class ProjectTestPlanTestPointsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost operation.
-     * @callback module:api/ProjectTestPlanTestPointsApi~apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Rerun autotests.
@@ -52,9 +45,9 @@ export default class ProjectTestPlanTestPointsApi {
      * @param {String} testPlanId 
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPlanTestPointsAutoTestsRerunApiModel} [testPlanTestPointsAutoTestsRerunApiModel] 
-     * @param {module:api/ProjectTestPlanTestPointsApi~apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost(projectId, testPlanId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostWithHttpInfo(projectId, testPlanId, opts) {
       opts = opts || {};
       let postBody = opts['testPlanTestPointsAutoTestsRerunApiModel'];
       // verify the required parameter 'projectId' is set
@@ -84,17 +77,25 @@ export default class ProjectTestPlanTestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/test-plans/{testPlanId}/test-points/autotests/rerun', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost operation.
-     * @callback module:api/ProjectTestPlanTestPointsApi~apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestRunNameApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Rerun autotests.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsAutoTestsRerunApiModel} opts.testPlanTestPointsAutoTestsRerunApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost(projectId, testPlanId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostWithHttpInfo(projectId, testPlanId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Run autotests.
@@ -102,10 +103,9 @@ export default class ProjectTestPlanTestPointsApi {
      * @param {String} testPlanId 
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPlanTestPointsAutoTestsRunApiModel} [testPlanTestPointsAutoTestsRunApiModel] 
-     * @param {module:api/ProjectTestPlanTestPointsApi~apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestRunNameApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunNameApiResult} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost(projectId, testPlanId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostWithHttpInfo(projectId, testPlanId, opts) {
       opts = opts || {};
       let postBody = opts['testPlanTestPointsAutoTestsRunApiModel'];
       // verify the required parameter 'projectId' is set
@@ -135,8 +135,23 @@ export default class ProjectTestPlanTestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/test-plans/{testPlanId}/test-points/autotests/run', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Run autotests.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsAutoTestsRunApiModel} opts.testPlanTestPointsAutoTestsRunApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunNameApiResult}
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost(projectId, testPlanId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostWithHttpInfo(projectId, testPlanId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

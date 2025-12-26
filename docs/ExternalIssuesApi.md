@@ -29,13 +29,12 @@ let apiInstance = new TestitApiClient.ExternalIssuesApi();
 let opts = {
   'getExternalIssueSuggestionsApiModel': new TestitApiClient.GetExternalIssueSuggestionsApiModel() // GetExternalIssueSuggestionsApiModel | 
 };
-apiInstance.apiV2ExternalIssuesSuggestionsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ExternalIssuesSuggestionsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

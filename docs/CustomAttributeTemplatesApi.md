@@ -37,13 +37,12 @@ let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
   'name': "name_example" // String | 
 };
-apiInstance.apiV2CustomAttributesTemplatesExistsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesTemplatesExistsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -91,13 +90,12 @@ let id = "id_example"; // String | Attribute template internal (UUID) identifier
 let opts = {
   'requestBody': ["null"] // [String] | 
 };
-apiInstance.apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -146,13 +144,12 @@ let id = "id_example"; // String | Attribute template internal (UUID) identifier
 let opts = {
   'requestBody': ["null"] // [String] | 
 };
-apiInstance.apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -198,13 +195,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | Attribute template internal (UUID) identifier
-apiInstance.apiV2CustomAttributesTemplatesIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2CustomAttributesTemplatesIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -249,13 +245,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | CustomAttributeTemplate internal (UUID) identifier
-apiInstance.apiV2CustomAttributesTemplatesIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesTemplatesIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -300,13 +295,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let name = "name_example"; // String | CustomAttributeTemplate name for search
-apiInstance.apiV2CustomAttributesTemplatesNameGet(name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesTemplatesNameGet(name).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -353,13 +347,12 @@ let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
   'customAttributeTemplatePostModel': new TestitApiClient.CustomAttributeTemplatePostModel() // CustomAttributeTemplatePostModel | 
 };
-apiInstance.apiV2CustomAttributesTemplatesPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesTemplatesPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -404,13 +397,12 @@ let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
   'customAttributeTemplatePutModel': new TestitApiClient.CustomAttributeTemplatePutModel() // CustomAttributeTemplatePutModel | 
 };
-apiInstance.apiV2CustomAttributesTemplatesPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2CustomAttributesTemplatesPut(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -462,13 +454,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'customAttributeTemplateSearchQueryModel': new TestitApiClient.CustomAttributeTemplateSearchQueryModel() // CustomAttributeTemplateSearchQueryModel | 
 };
-apiInstance.apiV2CustomAttributesTemplatesSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesTemplatesSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

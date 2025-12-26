@@ -40,22 +40,23 @@ npm install testit-api-client
 var TestitApiClient = require('testit-api-client');
 
 var defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-var Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix['Authorization'] = "Token"
+defaultClient.basePath = 'https://team-xxx.testit.software';
+var auth = defaultClient.authentications['Bearer or PrivateToken'];
+auth.apiKeyPrefix = "PrivateToken"
+auth.apiKey = "xxxxxx"
 
-var api = new TestitApiClient.AttachmentsApi()
-var id = "id_example"; // {String} 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.apiV2AttachmentsIdDelete(id, callback);
+async function get() {
+    var api = new TestitApiClient.ProjectsApi()
+    try {
+        var res = await api.getAllProjects()
+        console.log(res)
+    }
+    catch (e) {
+        console.log(e)
+    }
+}
+
+get()
 
 ```
 

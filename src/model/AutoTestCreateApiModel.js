@@ -19,7 +19,7 @@ import LinkCreateApiModel from './LinkCreateApiModel';
 /**
  * The AutoTestCreateApiModel model module.
  * @module model/AutoTestCreateApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class AutoTestCreateApiModel {
     /**

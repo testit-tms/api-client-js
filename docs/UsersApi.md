@@ -29,13 +29,12 @@ let apiInstance = new TestitApiClient.UsersApi();
 let opts = {
   'userName': "userName_example" // String | 
 };
-apiInstance.apiV2UsersExistsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2UsersExistsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

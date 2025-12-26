@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SectionModel model module.
  * @module model/SectionModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class SectionModel {
     /**

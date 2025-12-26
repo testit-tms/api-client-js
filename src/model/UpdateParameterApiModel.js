@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateParameterApiModel model module.
  * @module model/UpdateParameterApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class UpdateParameterApiModel {
     /**

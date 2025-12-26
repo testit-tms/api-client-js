@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ExternalIssues service.
 * @module api/ExternalIssuesApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ExternalIssuesApi {
 
@@ -37,22 +37,14 @@ export default class ExternalIssuesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ExternalIssuesSuggestionsPost operation.
-     * @callback module:api/ExternalIssuesApi~apiV2ExternalIssuesSuggestionsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ExternalIssueApiFieldSuggestionReply} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Returns list of suggestions from available external issues
      * @param {Object} opts Optional parameters
      * @param {module:model/GetExternalIssueSuggestionsApiModel} [getExternalIssueSuggestionsApiModel] 
-     * @param {module:api/ExternalIssuesApi~apiV2ExternalIssuesSuggestionsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ExternalIssueApiFieldSuggestionReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionReply} and HTTP response
      */
-    apiV2ExternalIssuesSuggestionsPost(opts, callback) {
+    apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['getExternalIssueSuggestionsApiModel'];
 
@@ -72,8 +64,21 @@ export default class ExternalIssuesApi {
       return this.apiClient.callApi(
         '/api/v2/external-issues/suggestions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Returns list of suggestions from available external issues
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GetExternalIssueSuggestionsApiModel} opts.getExternalIssueSuggestionsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalIssueApiFieldSuggestionReply}
+     */
+    apiV2ExternalIssuesSuggestionsPost(opts) {
+      return this.apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

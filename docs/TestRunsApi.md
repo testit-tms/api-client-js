@@ -54,13 +54,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
 };
-apiInstance.apiV2TestRunsDelete(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsDelete(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -103,13 +102,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2TestRunsIdAutoTestsNamespacesGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsIdAutoTestsNamespacesGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -154,13 +152,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | Test run internal (UUID) identifier
-apiInstance.apiV2TestRunsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestRunsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -205,13 +202,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | Test run internal (UUID) identifier
-apiInstance.apiV2TestRunsIdPurgePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestRunsIdPurgePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -257,13 +253,12 @@ let id = "id_example"; // String |
 let opts = {
   'manualRerunSelectTestResultsApiModel': new TestitApiClient.ManualRerunSelectTestResultsApiModel() // ManualRerunSelectTestResultsApiModel | 
 };
-apiInstance.apiV2TestRunsIdRerunsPost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsIdRerunsPost(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -309,13 +304,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | Unique ID of the test run
-apiInstance.apiV2TestRunsIdRestorePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestRunsIdRestorePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -361,13 +355,12 @@ let id = "id_example"; // String | Test run unique ID
 let opts = {
   'testRunStatisticsFilterApiModel': new TestitApiClient.TestRunStatisticsFilterApiModel() // TestRunStatisticsFilterApiModel | 
 };
-apiInstance.apiV2TestRunsIdStatisticsFilterPost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsIdStatisticsFilterPost(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -411,13 +404,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | Test run unique ID
-apiInstance.apiV2TestRunsIdTestPointsResultsGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsIdTestPointsResultsGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -463,13 +455,12 @@ let id = "id_example"; // String | Test run unique ID
 let opts = {
   'testRunTestResultsPartialBulkSetModel': new TestitApiClient.TestRunTestResultsPartialBulkSetModel() // TestRunTestResultsPartialBulkSetModel | 
 };
-apiInstance.apiV2TestRunsIdTestResultsBulkPut(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestRunsIdTestResultsBulkPut(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -513,13 +504,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "id_example"; // String | Test run unique ID
-apiInstance.apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -566,13 +556,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
 };
-apiInstance.apiV2TestRunsPurgeBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsPurgeBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -619,13 +608,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
 };
-apiInstance.apiV2TestRunsRestoreBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsRestoreBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -675,13 +663,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'testRunFilterApiModel': new TestitApiClient.TestRunFilterApiModel() // TestRunFilterApiModel | 
 };
-apiInstance.apiV2TestRunsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestRunsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -731,13 +718,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'updateMultipleTestRunsApiModel': new TestitApiClient.UpdateMultipleTestRunsApiModel() // UpdateMultipleTestRunsApiModel | 
 };
-apiInstance.apiV2TestRunsUpdateMultiplePost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestRunsUpdateMultiplePost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -782,13 +768,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
-apiInstance.completeTestRun(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.completeTestRun(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -835,13 +820,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'createTestRunAndFillByAutoTestsApiModel': new TestitApiClient.CreateTestRunAndFillByAutoTestsApiModel() // CreateTestRunAndFillByAutoTestsApiModel | 
 };
-apiInstance.createAndFillByAutoTests(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createAndFillByAutoTests(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -888,13 +872,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'createTestRunAndFillByConfigurationsApiModel': new TestitApiClient.CreateTestRunAndFillByConfigurationsApiModel() // CreateTestRunAndFillByConfigurationsApiModel | 
 };
-apiInstance.createAndFillByConfigurations(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createAndFillByConfigurations(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -941,13 +924,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'createTestRunAndFillByWorkItemsApiModel': new TestitApiClient.CreateTestRunAndFillByWorkItemsApiModel() // CreateTestRunAndFillByWorkItemsApiModel | 
 };
-apiInstance.createAndFillByWorkItems(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createAndFillByWorkItems(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -994,13 +976,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'createEmptyTestRunApiModel': new TestitApiClient.CreateEmptyTestRunApiModel() // CreateEmptyTestRunApiModel | 
 };
-apiInstance.createEmpty(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createEmpty(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1045,13 +1026,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
-apiInstance.getTestRunById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestRunById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1099,13 +1079,12 @@ let id = "id_example"; // String | Test Run internal identifier (GUID format)
 let opts = {
   'autoTestResultsForTestRunModel': [new TestitApiClient.AutoTestResultsForTestRunModel()] // [AutoTestResultsForTestRunModel] | 
 };
-apiInstance.setAutoTestResultsForTestRun(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.setAutoTestResultsForTestRun(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1151,13 +1130,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
-apiInstance.startTestRun(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.startTestRun(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1202,13 +1180,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestRunsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
-apiInstance.stopTestRun(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.stopTestRun(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1255,13 +1232,12 @@ let apiInstance = new TestitApiClient.TestRunsApi();
 let opts = {
   'updateEmptyTestRunApiModel': new TestitApiClient.UpdateEmptyTestRunApiModel() // UpdateEmptyTestRunApiModel | 
 };
-apiInstance.updateEmpty(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateEmpty(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

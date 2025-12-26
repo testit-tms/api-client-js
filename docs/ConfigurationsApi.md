@@ -40,13 +40,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationByParametersModel': new TestitApiClient.ConfigurationByParametersModel() // ConfigurationByParametersModel | 
 };
-apiInstance.apiV2ConfigurationsCreateByParametersPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ConfigurationsCreateByParametersPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -91,13 +90,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationSelectApiModel': new TestitApiClient.ConfigurationSelectApiModel() // ConfigurationSelectApiModel | 
 };
-apiInstance.apiV2ConfigurationsDeleteBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ConfigurationsDeleteBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -140,13 +138,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ConfigurationsApi();
 let id = "id_example"; // String | Unique or global ID of the configuration
-apiInstance.apiV2ConfigurationsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ConfigurationsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -194,13 +191,12 @@ let id = "id_example"; // String | Unique ID of the configuration
 let opts = {
   'operation': [new TestitApiClient.Operation()] // [Operation] | 
 };
-apiInstance.apiV2ConfigurationsIdPatch(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ConfigurationsIdPatch(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -244,13 +240,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ConfigurationsApi();
 let id = "id_example"; // String | Unique or global ID of the configuration
-apiInstance.apiV2ConfigurationsIdPurgePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ConfigurationsIdPurgePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -293,13 +288,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ConfigurationsApi();
 let id = "id_example"; // String | Unique or global ID of the configuration
-apiInstance.apiV2ConfigurationsIdRestorePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ConfigurationsIdRestorePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -344,13 +338,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationSelectModel': new TestitApiClient.ConfigurationSelectModel() // ConfigurationSelectModel | 
 };
-apiInstance.apiV2ConfigurationsPurgeBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ConfigurationsPurgeBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -395,13 +388,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationPutModel': new TestitApiClient.ConfigurationPutModel() // ConfigurationPutModel | 
 };
-apiInstance.apiV2ConfigurationsPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ConfigurationsPut(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -446,13 +438,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationSelectModel': new TestitApiClient.ConfigurationSelectModel() // ConfigurationSelectModel | 
 };
-apiInstance.apiV2ConfigurationsRestoreBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ConfigurationsRestoreBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -502,13 +493,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'configurationFilterModel': new TestitApiClient.ConfigurationFilterModel() // ConfigurationFilterModel | Model containing all the filters
 };
-apiInstance.apiV2ConfigurationsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ConfigurationsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -560,13 +550,12 @@ let apiInstance = new TestitApiClient.ConfigurationsApi();
 let opts = {
   'configurationPostModel': new TestitApiClient.ConfigurationPostModel() // ConfigurationPostModel | 
 };
-apiInstance.createConfiguration(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createConfiguration(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -611,13 +600,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ConfigurationsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Configuration internal (guid format) or global (integer format) identifier
-apiInstance.getConfigurationById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getConfigurationById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

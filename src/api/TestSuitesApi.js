@@ -30,7 +30,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * TestSuites service.
 * @module api/TestSuitesApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class TestSuitesApi {
 
@@ -46,22 +46,15 @@ export default class TestSuitesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the addTestPointsToTestSuite operation.
-     * @callback module:api/TestSuitesApi~addTestPointsToTestSuiteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add test-points to test suite
      * @param {String} id Test suite internal identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
-     * @param {module:api/TestSuitesApi~addTestPointsToTestSuiteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    addTestPointsToTestSuite(id, opts, callback) {
+    addTestPointsToTestSuiteWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectModel'];
       // verify the required parameter 'id' is set
@@ -86,17 +79,24 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/test-points', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestSuitesIdPatch operation.
-     * @callback module:api/TestSuitesApi~apiV2TestSuitesIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add test-points to test suite
+     * @param {String} id Test suite internal identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemSelectModel} opts.workItemSelectModel Filter object to retrieve work items for test-suite's project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    addTestPointsToTestSuite(id, opts) {
+      return this.addTestPointsToTestSuiteWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Patch test suite
@@ -104,9 +104,9 @@ export default class TestSuitesApi {
      * @param {String} id Test Suite internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/TestSuitesApi~apiV2TestSuitesIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestSuitesIdPatch(id, opts, callback) {
+    apiV2TestSuitesIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -131,24 +131,32 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestSuitesIdRefreshPost operation.
-     * @callback module:api/TestSuitesApi~apiV2TestSuitesIdRefreshPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Patch test suite
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test Suite internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestSuitesIdPatch(id, opts) {
+      return this.apiV2TestSuitesIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Refresh test suite. Only dynamic test suites are supported by this method
      * @param {String} id Test Suite internal (UUID) identifier
-     * @param {module:api/TestSuitesApi~apiV2TestSuitesIdRefreshPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestSuitesIdRefreshPost(id, callback) {
+    apiV2TestSuitesIdRefreshPostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -172,26 +180,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/refresh', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestSuitesIdWorkItemsPost operation.
-     * @callback module:api/TestSuitesApi~apiV2TestSuitesIdWorkItemsPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Refresh test suite. Only dynamic test suites are supported by this method
+     * @param {String} id Test Suite internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestSuitesIdRefreshPost(id) {
+      return this.apiV2TestSuitesIdRefreshPostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set work items for test suite
      * @param {String} id Unique ID of the test suite
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/TestSuitesApi~apiV2TestSuitesIdWorkItemsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestSuitesIdWorkItemsPost(id, opts, callback) {
+    apiV2TestSuitesIdWorkItemsPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -216,26 +229,32 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/workItems', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestSuitesPost operation.
-     * @callback module:api/TestSuitesApi~apiV2TestSuitesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestSuiteV2GetModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Set work items for test suite
+     * @param {String} id Unique ID of the test suite
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestSuitesIdWorkItemsPost(id, opts) {
+      return this.apiV2TestSuitesIdWorkItemsPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create test suite
      * @param {Object} opts Optional parameters
      * @param {module:model/TestSuiteV2PostModel} [testSuiteV2PostModel] 
-     * @param {module:api/TestSuitesApi~apiV2TestSuitesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestSuiteV2GetModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestSuiteV2GetModel} and HTTP response
      */
-    apiV2TestSuitesPost(opts, callback) {
+    apiV2TestSuitesPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testSuiteV2PostModel'];
 
@@ -255,25 +274,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestSuitesPut operation.
-     * @callback module:api/TestSuitesApi~apiV2TestSuitesPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create test suite
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestSuiteV2PostModel} opts.testSuiteV2PostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestSuiteV2GetModel}
      */
+    apiV2TestSuitesPost(opts) {
+      return this.apiV2TestSuitesPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit test suite
      * @param {Object} opts Optional parameters
      * @param {module:model/TestSuiteV2PutModel} [testSuiteV2PutModel] 
-     * @param {module:api/TestSuitesApi~apiV2TestSuitesPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestSuitesPut(opts, callback) {
+    apiV2TestSuitesPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testSuiteV2PutModel'];
 
@@ -293,25 +318,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteTestSuite operation.
-     * @callback module:api/TestSuitesApi~deleteTestSuiteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Edit test suite
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestSuiteV2PutModel} opts.testSuiteV2PutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestSuitesPut(opts) {
+      return this.apiV2TestSuitesPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete TestSuite
      *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
      * @param {String} id Test suite internal (guid format) identifier\"
-     * @param {module:api/TestSuitesApi~deleteTestSuiteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteTestSuite(id, callback) {
+    deleteTestSuiteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -335,26 +366,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getConfigurationsByTestSuiteId operation.
-     * @callback module:api/TestSuitesApi~getConfigurationsByTestSuiteIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ConfigurationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete TestSuite
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteTestSuite(id) {
+      return this.deleteTestSuiteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Configurations By Id
      *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
      * @param {String} id Test suite internal (guid format) identifier\"
-     * @param {module:api/TestSuitesApi~getConfigurationsByTestSuiteIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ConfigurationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
-    getConfigurationsByTestSuiteId(id, callback) {
+    getConfigurationsByTestSuiteIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -378,26 +414,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/configurations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestPointsById operation.
-     * @callback module:api/TestSuitesApi~getTestPointsByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPointByTestSuiteModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Configurations By Id
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */
+    getConfigurationsByTestSuiteId(id) {
+      return this.getConfigurationsByTestSuiteIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPoints By Id
      *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
      * @param {String} id Test suite internal (guid format) identifier\"
-     * @param {module:api/TestSuitesApi~getTestPointsByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPointByTestSuiteModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointByTestSuiteModel>} and HTTP response
      */
-    getTestPointsById(id, callback) {
+    getTestPointsByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -421,26 +462,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/testPoints', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestResultsById operation.
-     * @callback module:api/TestSuitesApi~getTestResultsByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestResultV2ShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestPoints By Id
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointByTestSuiteModel>}
      */
+    getTestPointsById(id) {
+      return this.getTestPointsByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestResults By Id
      *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
      * @param {String} id Test suite internal (guid format) identifier\"
-     * @param {module:api/TestSuitesApi~getTestResultsByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestResultV2ShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultV2ShortModel>} and HTTP response
      */
-    getTestResultsById(id, callback) {
+    getTestResultsByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -464,26 +510,31 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/testResults', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestSuiteById operation.
-     * @callback module:api/TestSuitesApi~getTestSuiteByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestSuiteApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestResults By Id
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultV2ShortModel>}
      */
+    getTestResultsById(id) {
+      return this.getTestResultsByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestSuite by Id
      *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
      * @param {String} id Test suite internal (guid format) identifier\"
-     * @param {module:api/TestSuitesApi~getTestSuiteByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestSuiteApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestSuiteApiResult} and HTTP response
      */
-    getTestSuiteById(id, callback) {
+    getTestSuiteByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -507,17 +558,23 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the searchWorkItems operation.
-     * @callback module:api/TestSuitesApi~searchWorkItemsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestSuite by Id
+     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestSuiteApiResult}
      */
+    getTestSuiteById(id) {
+      return this.getTestSuiteByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search WorkItems
@@ -530,10 +587,9 @@ export default class TestSuitesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/TestSuiteWorkItemsSearchModel} [testSuiteWorkItemsSearchModel] 
-     * @param {module:api/TestSuitesApi~searchWorkItemsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
      */
-    searchWorkItems(id, opts, callback) {
+    searchWorkItemsWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['testSuiteWorkItemsSearchModel'];
       // verify the required parameter 'id' is set
@@ -563,17 +619,30 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/workItems/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the setConfigurationsByTestSuiteId operation.
-     * @callback module:api/TestSuitesApi~setConfigurationsByTestSuiteIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search WorkItems
+     *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/TestSuiteWorkItemsSearchModel} opts.testSuiteWorkItemsSearchModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemShortModel>}
      */
+    searchWorkItems(id, opts) {
+      return this.searchWorkItemsWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set Configurations By TestSuite Id
@@ -581,9 +650,9 @@ export default class TestSuitesApi {
      * @param {String} id Test suite internal (guid format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] Collection of configuration identifiers\"
-     * @param {module:api/TestSuitesApi~setConfigurationsByTestSuiteIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    setConfigurationsByTestSuiteId(id, opts, callback) {
+    setConfigurationsByTestSuiteIdWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -608,8 +677,23 @@ export default class TestSuitesApi {
       return this.apiClient.callApi(
         '/api/v2/testSuites/{id}/configurations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Set Configurations By TestSuite Id
+     *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
+     * @param {String} id Test suite internal (guid format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody Collection of configuration identifiers\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    setConfigurationsByTestSuiteId(id, opts) {
+      return this.setConfigurationsByTestSuiteIdWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

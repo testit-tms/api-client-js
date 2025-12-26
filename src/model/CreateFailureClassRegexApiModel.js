@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateFailureClassRegexApiModel model module.
  * @module model/CreateFailureClassRegexApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class CreateFailureClassRegexApiModel {
     /**

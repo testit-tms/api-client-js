@@ -17,7 +17,7 @@ import WorkItemStepChangeViewModel from './WorkItemStepChangeViewModel';
 /**
  * The WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel model module.
  * @module model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel {
     /**

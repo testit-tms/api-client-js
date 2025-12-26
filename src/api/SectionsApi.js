@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * Sections service.
 * @module api/SectionsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class SectionsApi {
 
@@ -43,13 +43,6 @@ export default class SectionsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2SectionsIdPatch operation.
-     * @callback module:api/SectionsApi~apiV2SectionsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Patch section
@@ -57,9 +50,9 @@ export default class SectionsApi {
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/SectionsApi~apiV2SectionsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2SectionsIdPatch(id, opts, callback) {
+    apiV2SectionsIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -84,27 +77,34 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createSection operation.
-     * @callback module:api/SectionsApi~createSectionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SectionWithStepsModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Patch section
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Section internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2SectionsIdPatch(id, opts) {
+      return this.apiV2SectionsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create section
      *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPostModel} [sectionPostModel] 
-     * @param {module:api/SectionsApi~createSectionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SectionWithStepsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
      */
-    createSection(opts, callback) {
+    createSectionWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['sectionPostModel'];
 
@@ -124,25 +124,32 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteSection operation.
-     * @callback module:api/SectionsApi~deleteSectionCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create section
+     *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SectionPostModel} opts.sectionPostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SectionWithStepsModel}
      */
+    createSection(opts) {
+      return this.createSectionWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete section
      *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
      * @param {String} id Section internal (UUID) identifier
-     * @param {module:api/SectionsApi~deleteSectionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteSection(id, callback) {
+    deleteSectionWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -166,17 +173,23 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getSectionById operation.
-     * @callback module:api/SectionsApi~getSectionByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SectionWithStepsModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete section
+     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
+     * @param {String} id Section internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteSection(id) {
+      return this.deleteSectionWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get section
@@ -184,10 +197,9 @@ export default class SectionsApi {
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/DeletionState} [isDeleted] 
-     * @param {module:api/SectionsApi~getSectionByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SectionWithStepsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
      */
-    getSectionById(id, opts, callback) {
+    getSectionByIdWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -213,17 +225,25 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemsBySectionId operation.
-     * @callback module:api/SectionsApi~getWorkItemsBySectionIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get section
+     *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
+     * @param {String} id Section internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DeletionState} opts.isDeleted 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SectionWithStepsModel}
      */
+    getSectionById(id, opts) {
+      return this.getSectionByIdWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get section work items
@@ -238,10 +258,9 @@ export default class SectionsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/SectionsApi~getWorkItemsBySectionIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
      */
-    getWorkItemsBySectionId(id, opts, callback) {
+    getWorkItemsBySectionIdWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -274,25 +293,40 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/{id}/workItems', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the move operation.
-     * @callback module:api/SectionsApi~moveCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get section work items
+     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
+     * @param {String} id Section internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted Requested section is deleted (default to false)
+     * @param {Array.<String>} opts.tagNames List of work item tags
+     * @param {Boolean} opts.includeIterations  (default to true)
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemShortModel>}
      */
+    getWorkItemsBySectionId(id, opts) {
+      return this.getWorkItemsBySectionIdWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Move section with all work items into another section
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionMoveModel} [sectionMoveModel] 
-     * @param {module:api/SectionsApi~moveCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    move(opts, callback) {
+    moveWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['sectionMoveModel'];
 
@@ -312,26 +346,32 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/move', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the rename operation.
-     * @callback module:api/SectionsApi~renameCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Move section with all work items into another section
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SectionMoveModel} opts.sectionMoveModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    move(opts) {
+      return this.moveWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Rename section
      *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionRenameModel} [sectionRenameModel] 
-     * @param {module:api/SectionsApi~renameCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    rename(opts, callback) {
+    renameWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['sectionRenameModel'];
 
@@ -351,26 +391,33 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections/rename', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateSection operation.
-     * @callback module:api/SectionsApi~updateSectionCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Rename section
+     *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SectionRenameModel} opts.sectionRenameModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    rename(opts) {
+      return this.renameWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update section
      *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPutModel} [sectionPutModel] 
-     * @param {module:api/SectionsApi~updateSectionCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateSection(opts, callback) {
+    updateSectionWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['sectionPutModel'];
 
@@ -390,8 +437,22 @@ export default class SectionsApi {
       return this.apiClient.callApi(
         '/api/v2/sections', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update section
+     *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SectionPutModel} opts.sectionPutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateSection(opts) {
+      return this.updateSectionWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

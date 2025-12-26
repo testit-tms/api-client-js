@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlanAttributes service.
 * @module api/ProjectTestPlanAttributesApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ProjectTestPlanAttributesApi {
 
@@ -39,13 +39,6 @@ export default class ProjectTestPlanAttributesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the createCustomAttributeTestPlanProjectRelations operation.
-     * @callback module:api/ProjectTestPlanAttributesApi~createCustomAttributeTestPlanProjectRelationsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add attributes to project's test plans
@@ -53,9 +46,9 @@ export default class ProjectTestPlanAttributesApi {
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/ProjectTestPlanAttributesApi~createCustomAttributeTestPlanProjectRelationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    createCustomAttributeTestPlanProjectRelations(projectId, opts, callback) {
+    createCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'projectId' is set
@@ -80,26 +73,34 @@ export default class ProjectTestPlanAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/attributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteCustomAttributeTestPlanProjectRelations operation.
-     * @callback module:api/ProjectTestPlanAttributesApi~deleteCustomAttributeTestPlanProjectRelationsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add attributes to project's test plans
+     *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    createCustomAttributeTestPlanProjectRelations(projectId, opts) {
+      return this.createCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete attribute from project's test plans
      *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId 
-     * @param {module:api/ProjectTestPlanAttributesApi~deleteCustomAttributeTestPlanProjectRelationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteCustomAttributeTestPlanProjectRelations(projectId, attributeId, callback) {
+    deleteCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, attributeId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -128,26 +129,32 @@ export default class ProjectTestPlanAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/attributes/{attributeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getCustomAttributeTestPlanProjectRelations operation.
-     * @callback module:api/ProjectTestPlanAttributesApi~getCustomAttributeTestPlanProjectRelationsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CustomAttributeModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete attribute from project's test plans
+     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} attributeId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteCustomAttributeTestPlanProjectRelations(projectId, attributeId) {
+      return this.deleteCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project's test plan attributes
      *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectTestPlanAttributesApi~getCustomAttributeTestPlanProjectRelationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CustomAttributeModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
      */
-    getCustomAttributeTestPlanProjectRelations(projectId, callback) {
+    getCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -171,17 +178,23 @@ export default class ProjectTestPlanAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/attributes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the searchTestPlanAttributesInProject operation.
-     * @callback module:api/ProjectTestPlanAttributesApi~searchTestPlanAttributesInProjectCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CustomAttributeGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get project's test plan attributes
+     *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeModel>}
      */
+    getCustomAttributeTestPlanProjectRelations(projectId) {
+      return this.getCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for attributes used in the project test plans
@@ -193,10 +206,9 @@ export default class ProjectTestPlanAttributesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectAttributesFilterModel} [projectAttributesFilterModel] 
-     * @param {module:api/ProjectTestPlanAttributesApi~searchTestPlanAttributesInProjectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CustomAttributeGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeGetModel>} and HTTP response
      */
-    searchTestPlanAttributesInProject(projectId, opts, callback) {
+    searchTestPlanAttributesInProjectWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['projectAttributesFilterModel'];
       // verify the required parameter 'projectId' is set
@@ -226,17 +238,29 @@ export default class ProjectTestPlanAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/attributes/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateCustomAttributeTestPlanProjectRelations operation.
-     * @callback module:api/ProjectTestPlanAttributesApi~updateCustomAttributeTestPlanProjectRelationsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search for attributes used in the project test plans
+     * @param {String} projectId Unique or global project ID
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ProjectAttributesFilterModel} opts.projectAttributesFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeGetModel>}
      */
+    searchTestPlanAttributesInProject(projectId, opts) {
+      return this.searchTestPlanAttributesInProjectWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update attribute of project's test plans
@@ -244,9 +268,9 @@ export default class ProjectTestPlanAttributesApi {
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel] 
-     * @param {module:api/ProjectTestPlanAttributesApi~updateCustomAttributeTestPlanProjectRelationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateCustomAttributeTestPlanProjectRelations(projectId, opts, callback) {
+    updateCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['customAttributeTestPlanProjectRelationPutModel'];
       // verify the required parameter 'projectId' is set
@@ -271,8 +295,23 @@ export default class ProjectTestPlanAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/attributes', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update attribute of project's test plans
+     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} opts.customAttributeTestPlanProjectRelationPutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateCustomAttributeTestPlanProjectRelations(projectId, opts) {
+      return this.updateCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

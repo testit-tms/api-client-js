@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FailureCategoryGroupApiModel model module.
  * @module model/FailureCategoryGroupApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class FailureCategoryGroupApiModel {
     /**

@@ -36,13 +36,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2WebhooksLogsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksLogsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -90,13 +89,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WebhooksLogsApi();
 let id = "id_example"; // String | Webhook log unique ID
-apiInstance.apiV2WebhooksLogsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WebhooksLogsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -139,13 +137,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WebhooksLogsApi();
 let id = "id_example"; // String | Webhook log unique ID
-apiInstance.apiV2WebhooksLogsIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksLogsIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

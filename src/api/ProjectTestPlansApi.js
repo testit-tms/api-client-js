@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlans service.
 * @module api/ProjectTestPlansApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ProjectTestPlansApi {
 
@@ -38,13 +38,6 @@ export default class ProjectTestPlansApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansAnalyticsGet operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansAnalyticsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanWithAnalyticModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get TestPlans analytics
@@ -58,10 +51,9 @@ export default class ProjectTestPlansApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansAnalyticsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanWithAnalyticModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanWithAnalyticModel>} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansAnalyticsGet(projectId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansAnalyticsGetWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'projectId' is set
@@ -93,27 +85,40 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/analytics', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansDeleteBulkPost operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansDeleteBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestPlans analytics
+     *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
+     * @param {String} projectId Project internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted 
+     * @param {Boolean} opts.mustUpdateCache  (default to false)
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanWithAnalyticModel>}
      */
+    apiV2ProjectsProjectIdTestPlansAnalyticsGet(projectId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansAnalyticsGetWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete multiple test plans
      * @param {String} projectId Unique or global ID of the project
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPlanSelectModel} [testPlanSelectModel] 
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansDeleteBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansDeleteBulkPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['testPlanSelectModel'];
       // verify the required parameter 'projectId' is set
@@ -138,27 +143,33 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/delete/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansNameExistsGet operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansNameExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Boolean} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete multiple test plans
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanSelectModel} opts.testPlanSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansDeleteBulkPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Checks if TestPlan exists with the specified name exists for the project
      *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} name TestPlan name to check
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansNameExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Boolean}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansNameExistsGet(projectId, name, callback) {
+    apiV2ProjectsProjectIdTestPlansNameExistsGetWithHttpInfo(projectId, name) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -187,26 +198,33 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/{name}/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansPurgeBulkPost operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansPurgeBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Checks if TestPlan exists with the specified name exists for the project
+     *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} name TestPlan name to check
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
      */
+    apiV2ProjectsProjectIdTestPlansNameExistsGet(projectId, name) {
+      return this.apiV2ProjectsProjectIdTestPlansNameExistsGetWithHttpInfo(projectId, name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete multiple archived test plans
      * @param {String} projectId Unique or global ID of the project
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPlanSelectModel} [testPlanSelectModel] 
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansPurgeBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansPurgeBulkPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['testPlanSelectModel'];
       // verify the required parameter 'projectId' is set
@@ -231,27 +249,33 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/purge/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansRestoreBulkPost operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansRestoreBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete multiple archived test plans
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanSelectModel} opts.testPlanSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansPurgeBulkPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore multiple test plans
      * @param {String} projectId Unique or global ID of the project
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPlanSelectModel} [testPlanSelectModel] 
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansRestoreBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansRestoreBulkPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['testPlanSelectModel'];
       // verify the required parameter 'projectId' is set
@@ -276,17 +300,24 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/restore/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdTestPlansSearchPost operation.
-     * @callback module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanWithAnalyticModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore multiple test plans
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanSelectModel} opts.testPlanSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansRestoreBulkPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Project TestPlans with analytics
@@ -300,10 +331,9 @@ export default class ProjectTestPlansApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectTestPlansFilterModel} [projectTestPlansFilterModel] 
-     * @param {module:api/ProjectTestPlansApi~apiV2ProjectsProjectIdTestPlansSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanWithAnalyticModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanWithAnalyticModel>} and HTTP response
      */
-    apiV2ProjectsProjectIdTestPlansSearchPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdTestPlansSearchPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['projectTestPlansFilterModel'];
       // verify the required parameter 'projectId' is set
@@ -334,8 +364,29 @@ export default class ProjectTestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/testPlans/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get Project TestPlans with analytics
+     *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.mustUpdateCache  (default to false)
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ProjectTestPlansFilterModel} opts.projectTestPlansFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanWithAnalyticModel>}
+     */
+    apiV2ProjectsProjectIdTestPlansSearchPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansSearchPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

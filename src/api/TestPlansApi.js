@@ -37,7 +37,7 @@ import WorkItemSelectModel from '../model/WorkItemSelectModel';
 /**
 * TestPlans service.
 * @module api/TestPlansApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class TestPlansApi {
 
@@ -53,22 +53,15 @@ export default class TestPlansApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the addTestPointsWithSections operation.
-     * @callback module:api/TestPlansApi~addTestPointsWithSectionsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add test-points to TestPlan with sections
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
-     * @param {module:api/TestPlansApi~addTestPointsWithSectionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    addTestPointsWithSections(id, opts, callback) {
+    addTestPointsWithSectionsWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectModel'];
       // verify the required parameter 'id' is set
@@ -93,17 +86,24 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/test-points/withSections', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the addWorkItemsWithSections operation.
-     * @callback module:api/TestPlansApi~addWorkItemsWithSectionsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Add test-points to TestPlan with sections
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemSelectModel} opts.workItemSelectModel Filter object to retrieve work items for test-suite's project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    addTestPointsWithSections(id, opts) {
+      return this.addTestPointsWithSectionsWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add WorkItems to TestPlan with Sections as TestSuites
@@ -111,9 +111,9 @@ export default class TestPlansApi {
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/TestPlansApi~addWorkItemsWithSectionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    addWorkItemsWithSections(id, opts, callback) {
+    addWorkItemsWithSectionsWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -138,26 +138,33 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/workItems/withSections', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdAnalyticsGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdAnalyticsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPointAnalyticResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add WorkItems to TestPlan with Sections as TestSuites
+     *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    addWorkItemsWithSections(id, opts) {
+      return this.addWorkItemsWithSectionsWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get analytics by TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdAnalyticsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPointAnalyticResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPointAnalyticResult} and HTTP response
      */
-    apiV2TestPlansIdAnalyticsGet(id, callback) {
+    apiV2TestPlansIdAnalyticsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -181,27 +188,32 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/analytics', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdAutobalancePost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdAutobalancePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPlanWithTestSuiteTreeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get analytics by TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPointAnalyticResult}
      */
+    apiV2TestPlansIdAnalyticsGet(id) {
+      return this.apiV2TestPlansIdAnalyticsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Distribute test points between the users
      * @param {String} id Test plan unique or global ID
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [testers] Specifies a project user IDs to distribute
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdAutobalancePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPlanWithTestSuiteTreeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanWithTestSuiteTreeModel} and HTTP response
      */
-    apiV2TestPlansIdAutobalancePost(id, opts, callback) {
+    apiV2TestPlansIdAutobalancePostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -227,26 +239,32 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/autobalance', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdConfigurationsGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdConfigurationsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ConfigurationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Distribute test points between the users
+     * @param {String} id Test plan unique or global ID
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.testers Specifies a project user IDs to distribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanWithTestSuiteTreeModel}
      */
+    apiV2TestPlansIdAutobalancePost(id, opts) {
+      return this.apiV2TestPlansIdAutobalancePostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPlan configurations
      *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdConfigurationsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ConfigurationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
-    apiV2TestPlansIdConfigurationsGet(id, callback) {
+    apiV2TestPlansIdConfigurationsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -270,17 +288,23 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/configurations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdExportTestPointsXlsxPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdExportTestPointsXlsxPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get TestPlan configurations
+     *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */
+    apiV2TestPlansIdConfigurationsGet(id) {
+      return this.apiV2TestPlansIdConfigurationsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Export TestPoints from TestPlan in xls format
@@ -289,9 +313,9 @@ export default class TestPlansApi {
      * @param {Object} opts Optional parameters
      * @param {Number} [timeZoneOffsetInMinutes] 
      * @param {module:model/GetXlsxTestPointsByTestPlanModel} [getXlsxTestPointsByTestPlanModel] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdExportTestPointsXlsxPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdExportTestPointsXlsxPost(id, opts, callback) {
+    apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['getXlsxTestPointsByTestPlanModel'];
       // verify the required parameter 'id' is set
@@ -317,17 +341,26 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/export/testPoints/xlsx', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdExportTestResultHistoryXlsxPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdExportTestResultHistoryXlsxPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Export TestPoints from TestPlan in xls format
+     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.timeZoneOffsetInMinutes 
+     * @param {module:model/GetXlsxTestPointsByTestPlanModel} opts.getXlsxTestPointsByTestPlanModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdExportTestPointsXlsxPost(id, opts) {
+      return this.apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Export TestResults history from TestPlan in xls format
@@ -338,9 +371,9 @@ export default class TestPlansApi {
      * @param {Boolean} [includeSteps] 
      * @param {Boolean} [includeDeletedTestSuites] 
      * @param {Number} [timeZoneOffsetInMinutes] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdExportTestResultHistoryXlsxPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdExportTestResultHistoryXlsxPost(id, opts, callback) {
+    apiV2TestPlansIdExportTestResultHistoryXlsxPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -369,17 +402,28 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/export/testResultHistory/xlsx', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdHistoryGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdHistoryGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanChangeModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Export TestResults history from TestPlan in xls format
+     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.mustReturnOnlyLastTestResult 
+     * @param {Boolean} opts.includeSteps 
+     * @param {Boolean} opts.includeDeletedTestSuites 
+     * @param {Number} opts.timeZoneOffsetInMinutes 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdExportTestResultHistoryXlsxPost(id, opts) {
+      return this.apiV2TestPlansIdExportTestResultHistoryXlsxPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPlan history
@@ -391,10 +435,9 @@ export default class TestPlansApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanChangeModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanChangeModel>} and HTTP response
      */
-    apiV2TestPlansIdHistoryGet(id, opts, callback) {
+    apiV2TestPlansIdHistoryGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -424,17 +467,29 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdLinksGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdLinksGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanLink>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestPlan history
+     *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanChangeModel>}
      */
+    apiV2TestPlansIdHistoryGet(id, opts) {
+      return this.apiV2TestPlansIdHistoryGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Links of TestPlan
@@ -444,10 +499,9 @@ export default class TestPlansApi {
      * @param {Number} [skip] 
      * @param {Number} [take] 
      * @param {String} [orderBy] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdLinksGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanLink>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanLink>} and HTTP response
      */
-    apiV2TestPlansIdLinksGet(id, opts, callback) {
+    apiV2TestPlansIdLinksGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -475,17 +529,27 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/links', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdPatch operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get Links of TestPlan
+     *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip 
+     * @param {Number} opts.take 
+     * @param {String} opts.orderBy 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanLink>}
      */
+    apiV2TestPlansIdLinksGet(id, opts) {
+      return this.apiV2TestPlansIdLinksGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Patch test plan
@@ -493,9 +557,9 @@ export default class TestPlansApi {
      * @param {String} id Unique ID of the test plan
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdPatch(id, opts, callback) {
+    apiV2TestPlansIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -520,26 +584,33 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdSummariesGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdSummariesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPlanSummaryModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Patch test plan
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Unique ID of the test plan
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdPatch(id, opts) {
+      return this.apiV2TestPlansIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get summary by TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdSummariesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPlanSummaryModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanSummaryModel} and HTTP response
      */
-    apiV2TestPlansIdSummariesGet(id, callback) {
+    apiV2TestPlansIdSummariesGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -563,17 +634,23 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/summaries', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestPointsLastResultsGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestPointsLastResultsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPointWithLastResultResponseModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get summary by TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanSummaryModel}
      */
+    apiV2TestPlansIdSummariesGet(id) {
+      return this.apiV2TestPlansIdSummariesGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPoints with last result from TestPlan
@@ -586,10 +663,9 @@ export default class TestPlansApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestPointsLastResultsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPointWithLastResultResponseModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointWithLastResultResponseModel>} and HTTP response
      */
-    apiV2TestPlansIdTestPointsLastResultsGet(id, opts, callback) {
+    apiV2TestPlansIdTestPointsLastResultsGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -620,17 +696,30 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testPoints/lastResults', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestPointsResetPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestPointsResetPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get TestPoints with last result from TestPlan
+     *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.testerId 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointWithLastResultResponseModel>}
      */
+    apiV2TestPlansIdTestPointsLastResultsGet(id, opts) {
+      return this.apiV2TestPlansIdTestPointsLastResultsGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Reset TestPoints status of TestPlan
@@ -638,9 +727,9 @@ export default class TestPlansApi {
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestPointsResetPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdTestPointsResetPost(id, opts, callback) {
+    apiV2TestPlansIdTestPointsResetPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -665,27 +754,34 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testPoints/reset', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestPointsTesterDelete operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestPointsTesterDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Reset TestPoints status of TestPlan
+     *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdTestPointsResetPost(id, opts) {
+      return this.apiV2TestPlansIdTestPointsResetPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Unassign users from multiple test points
      * @param {String} id Unique or global ID of the test plan
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPointSelectModel} [testPointSelectModel] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestPointsTesterDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2TestPlansIdTestPointsTesterDelete(id, opts, callback) {
+    apiV2TestPlansIdTestPointsTesterDeleteWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['testPointSelectModel'];
       // verify the required parameter 'id' is set
@@ -710,17 +806,24 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testPoints/tester', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestPointsTesterUserIdPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestPointsTesterUserIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Unassign users from multiple test points
+     * @param {String} id Unique or global ID of the test plan
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPointSelectModel} opts.testPointSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2TestPlansIdTestPointsTesterDelete(id, opts) {
+      return this.apiV2TestPlansIdTestPointsTesterDeleteWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Assign user as a tester to multiple test points
@@ -728,10 +831,9 @@ export default class TestPlansApi {
      * @param {String} userId Unique ID of the user
      * @param {Object} opts Optional parameters
      * @param {module:model/TestPointSelectModel} [testPointSelectModel] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestPointsTesterUserIdPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2TestPlansIdTestPointsTesterUserIdPost(id, userId, opts, callback) {
+    apiV2TestPlansIdTestPointsTesterUserIdPostWithHttpInfo(id, userId, opts) {
       opts = opts || {};
       let postBody = opts['testPointSelectModel'];
       // verify the required parameter 'id' is set
@@ -761,17 +863,25 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testPoints/tester/{userId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestRunsGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestRunsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Assign user as a tester to multiple test points
+     * @param {String} id Unique or global ID of the test plan
+     * @param {String} userId Unique ID of the user
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPointSelectModel} opts.testPointSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2TestPlansIdTestPointsTesterUserIdPost(id, userId, opts) {
+      return this.apiV2TestPlansIdTestPointsTesterUserIdPostWithHttpInfo(id, userId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestRuns of TestPlan
@@ -787,10 +897,9 @@ export default class TestPlansApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestRunsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
      */
-    apiV2TestPlansIdTestRunsGet(id, opts, callback) {
+    apiV2TestPlansIdTestRunsGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -824,17 +933,33 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testRuns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestRunsSearchPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestRunsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestRuns of TestPlan
+     *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.notStarted 
+     * @param {Boolean} opts.inProgress 
+     * @param {Boolean} opts.stopped 
+     * @param {Boolean} opts.completed 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunApiResult>}
      */
+    apiV2TestPlansIdTestRunsGet(id, opts) {
+      return this.apiV2TestPlansIdTestRunsGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search TestRuns of TestPlan
@@ -847,10 +972,9 @@ export default class TestPlansApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/SearchTestRunsApiModel} [searchTestRunsApiModel] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestRunsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
      */
-    apiV2TestPlansIdTestRunsSearchPost(id, opts, callback) {
+    apiV2TestPlansIdTestRunsSearchPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['searchTestRunsApiModel'];
       // verify the required parameter 'id' is set
@@ -880,24 +1004,37 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testRuns/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search TestRuns of TestPlan
+     *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/SearchTestRunsApiModel} opts.searchTestRunsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunApiResult>}
      */
+    apiV2TestPlansIdTestRunsSearchPost(id, opts) {
+      return this.apiV2TestPlansIdTestRunsSearchPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get last modification date of test plan's test results
      * @param {String} id Internal (UUID) or global (integer) identifier
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet(id, callback) {
+    apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -921,25 +1058,30 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testRuns/testResults/lastModified/modifiedDate', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansIdUnlockRequestPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansIdUnlockRequestPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get last modification date of test plan's test results
+     * @param {String} id Internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet(id) {
+      return this.apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Send unlock TestPlan notification
      *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~apiV2TestPlansIdUnlockRequestPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestPlansIdUnlockRequestPost(id, callback) {
+    apiV2TestPlansIdUnlockRequestPostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -963,17 +1105,23 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/unlock/request', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPlansShortsPost operation.
-     * @callback module:api/TestPlansApi~apiV2TestPlansShortsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Send unlock TestPlan notification
+     *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestPlansIdUnlockRequestPost(id) {
+      return this.apiV2TestPlansIdUnlockRequestPostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPlans short models by Project identifiers
@@ -981,10 +1129,9 @@ export default class TestPlansApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/TestPlansApi~apiV2TestPlansShortsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanShortModel>} and HTTP response
      */
-    apiV2TestPlansShortsPost(opts, callback) {
+    apiV2TestPlansShortsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
 
@@ -1005,26 +1152,33 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/shorts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the clone operation.
-     * @callback module:api/TestPlansApi~cloneCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPlanModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestPlans short models by Project identifiers
+     *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted 
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanShortModel>}
      */
+    apiV2TestPlansShortsPost(opts) {
+      return this.apiV2TestPlansShortsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Clone TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~cloneCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPlanModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
      */
-    clone(id, callback) {
+    cloneWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1048,25 +1202,31 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/clone', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the complete operation.
-     * @callback module:api/TestPlansApi~completeCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Clone TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
      */
+    clone(id) {
+      return this.cloneWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Complete TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~completeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    complete(id, callback) {
+    completeWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1090,27 +1250,32 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/complete', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createTestPlan operation.
-     * @callback module:api/TestPlansApi~createTestPlanCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPlanModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Complete TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    complete(id) {
+      return this.completeWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create TestPlan
      *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestPlanApiModel} [createTestPlanApiModel] 
-     * @param {module:api/TestPlansApi~createTestPlanCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPlanModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
      */
-    createTestPlan(opts, callback) {
+    createTestPlanWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createTestPlanApiModel'];
 
@@ -1130,25 +1295,32 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteTestPlan operation.
-     * @callback module:api/TestPlansApi~deleteTestPlanCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create TestPlan
+     *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTestPlanApiModel} opts.createTestPlanApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
      */
+    createTestPlan(opts) {
+      return this.createTestPlanWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~deleteTestPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteTestPlan(id, callback) {
+    deleteTestPlanWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1172,26 +1344,31 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestPlanById operation.
-     * @callback module:api/TestPlansApi~getTestPlanByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestPlanModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteTestPlan(id) {
+      return this.deleteTestPlanWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestPlan by Id
      *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~getTestPlanByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestPlanModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
      */
-    getTestPlanById(id, callback) {
+    getTestPlanByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1215,26 +1392,31 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestSuitesById operation.
-     * @callback module:api/TestPlansApi~getTestSuitesByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestSuiteHierarchyApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get TestPlan by Id
+     *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
      */
+    getTestPlanById(id) {
+      return this.getTestPlanByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get TestSuites Tree By Id
      *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~getTestSuitesByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestSuiteHierarchyApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>} and HTTP response
      */
-    getTestSuitesById(id, callback) {
+    getTestSuitesByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1258,25 +1440,31 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/testSuites', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the pause operation.
-     * @callback module:api/TestPlansApi~pauseCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get TestSuites Tree By Id
+     *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>}
      */
+    getTestSuitesById(id) {
+      return this.getTestSuitesByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Pause TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~pauseCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    pause(id, callback) {
+    pauseWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1300,24 +1488,30 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/pause', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the purgeTestPlan operation.
-     * @callback module:api/TestPlansApi~purgeTestPlanCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Pause TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    pause(id) {
+      return this.pauseWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete test plan from archive
      * @param {String} id Unique or global ID of the test plan
-     * @param {module:api/TestPlansApi~purgeTestPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    purgeTestPlan(id, callback) {
+    purgeTestPlanWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1341,25 +1535,30 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/purge', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the restoreTestPlan operation.
-     * @callback module:api/TestPlansApi~restoreTestPlanCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete test plan from archive
+     * @param {String} id Unique or global ID of the test plan
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    purgeTestPlan(id) {
+      return this.purgeTestPlanWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~restoreTestPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    restoreTestPlan(id, callback) {
+    restoreTestPlanWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1383,25 +1582,31 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/restore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the start operation.
-     * @callback module:api/TestPlansApi~startCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Restore TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    restoreTestPlan(id) {
+      return this.restoreTestPlanWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Start TestPlan
      *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
-     * @param {module:api/TestPlansApi~startCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    start(id, callback) {
+    startWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1425,26 +1630,32 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans/{id}/start', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateTestPlan operation.
-     * @callback module:api/TestPlansApi~updateTestPlanCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Start TestPlan
+     *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    start(id) {
+      return this.startWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update TestPlan
      *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateTestPlanApiModel} [updateTestPlanApiModel] 
-     * @param {module:api/TestPlansApi~updateTestPlanCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateTestPlan(opts, callback) {
+    updateTestPlanWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateTestPlanApiModel'];
 
@@ -1464,8 +1675,22 @@ export default class TestPlansApi {
       return this.apiClient.callApi(
         '/api/v2/testPlans', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update TestPlan
+     *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateTestPlanApiModel} opts.updateTestPlanApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateTestPlan(opts) {
+      return this.updateTestPlanWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

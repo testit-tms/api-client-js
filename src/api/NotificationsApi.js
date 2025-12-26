@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Notifications service.
 * @module api/NotificationsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class NotificationsApi {
 
@@ -38,23 +38,15 @@ export default class NotificationsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2NotificationsCountGet operation.
-     * @callback module:api/NotificationsApi~apiV2NotificationsCountGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get unread Notifications total in last 7 days
      *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isRead] 
-     * @param {module:api/NotificationsApi~apiV2NotificationsCountGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2NotificationsCountGet(opts, callback) {
+    apiV2NotificationsCountGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -75,17 +67,24 @@ export default class NotificationsApi {
       return this.apiClient.callApi(
         '/api/v2/notifications/count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2NotificationsGet operation.
-     * @callback module:api/NotificationsApi~apiV2NotificationsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/NotificationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get unread Notifications total in last 7 days
+     *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isRead 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2NotificationsCountGet(opts) {
+      return this.apiV2NotificationsCountGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all Notifications for current User
@@ -97,10 +96,9 @@ export default class NotificationsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/NotificationsApi~apiV2NotificationsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/NotificationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/NotificationModel>} and HTTP response
      */
-    apiV2NotificationsGet(opts, callback) {
+    apiV2NotificationsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -126,25 +124,37 @@ export default class NotificationsApi {
       return this.apiClient.callApi(
         '/api/v2/notifications', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2NotificationsIdReadPost operation.
-     * @callback module:api/NotificationsApi~apiV2NotificationsIdReadPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get all Notifications for current User
+     *  Use case  User runs method execution  System returns notifications (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NotificationTypeModel} opts.notificationType 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/NotificationModel>}
      */
+    apiV2NotificationsGet(opts) {
+      return this.apiV2NotificationsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set Notification as read
      *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
      * @param {String} id 
-     * @param {module:api/NotificationsApi~apiV2NotificationsIdReadPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2NotificationsIdReadPost(id, callback) {
+    apiV2NotificationsIdReadPostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -168,24 +178,30 @@ export default class NotificationsApi {
       return this.apiClient.callApi(
         '/api/v2/notifications/{id}/read', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2NotificationsReadPost operation.
-     * @callback module:api/NotificationsApi~apiV2NotificationsReadPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Set Notification as read
+     *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2NotificationsIdReadPost(id) {
+      return this.apiV2NotificationsIdReadPostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set all Notifications as read
      *  Use case  User runs method execution  System set all notifications as read
-     * @param {module:api/NotificationsApi~apiV2NotificationsReadPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2NotificationsReadPost(callback) {
+    apiV2NotificationsReadPostWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -204,17 +220,22 @@ export default class NotificationsApi {
       return this.apiClient.callApi(
         '/api/v2/notifications/read', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2NotificationsSearchPost operation.
-     * @callback module:api/NotificationsApi~apiV2NotificationsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/NotificationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Set all Notifications as read
+     *  Use case  User runs method execution  System set all notifications as read
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2NotificationsReadPost() {
+      return this.apiV2NotificationsReadPostWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search Notifications for current User
@@ -226,10 +247,9 @@ export default class NotificationsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/NotificationQueryFilterModel} [notificationQueryFilterModel] 
-     * @param {module:api/NotificationsApi~apiV2NotificationsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/NotificationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/NotificationModel>} and HTTP response
      */
-    apiV2NotificationsSearchPost(opts, callback) {
+    apiV2NotificationsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['notificationQueryFilterModel'];
 
@@ -254,8 +274,27 @@ export default class NotificationsApi {
       return this.apiClient.callApi(
         '/api/v2/notifications/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Search Notifications for current User
+     *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/NotificationQueryFilterModel} opts.notificationQueryFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/NotificationModel>}
+     */
+    apiV2NotificationsSearchPost(opts) {
+      return this.apiV2NotificationsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

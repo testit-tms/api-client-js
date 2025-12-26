@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * CustomAttributes service.
 * @module api/CustomAttributesApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class CustomAttributesApi {
 
@@ -41,22 +41,14 @@ export default class CustomAttributesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2CustomAttributesExistsGet operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeValidationResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {Object} opts Optional parameters
      * @param {String} [name] 
      * @param {Boolean} [isGlobal] 
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeValidationResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeValidationResult} and HTTP response
      */
-    apiV2CustomAttributesExistsGet(opts, callback) {
+    apiV2CustomAttributesExistsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -78,24 +70,30 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesGlobalIdDelete operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesGlobalIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name 
+     * @param {Boolean} opts.isGlobal 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeValidationResult}
      */
+    apiV2CustomAttributesExistsGet(opts) {
+      return this.apiV2CustomAttributesExistsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete global attribute
      * @param {String} id Unique ID of attribute
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesGlobalIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2CustomAttributesGlobalIdDelete(id, callback) {
+    apiV2CustomAttributesGlobalIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -119,27 +117,31 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/global/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesGlobalIdPut operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesGlobalIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete global attribute
+     * @param {String} id Unique ID of attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2CustomAttributesGlobalIdDelete(id) {
+      return this.apiV2CustomAttributesGlobalIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit global attribute
      * @param {String} id Unique ID of attribute
      * @param {Object} opts Optional parameters
      * @param {module:model/GlobalCustomAttributeUpdateModel} [globalCustomAttributeUpdateModel] 
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesGlobalIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
      */
-    apiV2CustomAttributesGlobalIdPut(id, opts, callback) {
+    apiV2CustomAttributesGlobalIdPutWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['globalCustomAttributeUpdateModel'];
       // verify the required parameter 'id' is set
@@ -164,26 +166,32 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/global/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesGlobalPost operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesGlobalPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Edit global attribute
+     * @param {String} id Unique ID of attribute
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GlobalCustomAttributeUpdateModel} opts.globalCustomAttributeUpdateModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
      */
+    apiV2CustomAttributesGlobalIdPut(id, opts) {
+      return this.apiV2CustomAttributesGlobalIdPutWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create global attribute
      * @param {Object} opts Optional parameters
      * @param {module:model/GlobalCustomAttributePostModel} [globalCustomAttributePostModel] 
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesGlobalPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
      */
-    apiV2CustomAttributesGlobalPost(opts, callback) {
+    apiV2CustomAttributesGlobalPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['globalCustomAttributePostModel'];
 
@@ -203,25 +211,30 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/global', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesIdGet operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create global attribute
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GlobalCustomAttributePostModel} opts.globalCustomAttributePostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
      */
+    apiV2CustomAttributesGlobalPost(opts) {
+      return this.apiV2CustomAttributesGlobalPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get attribute
      * @param {String} id Unique ID of attribute
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
      */
-    apiV2CustomAttributesIdGet(id, callback) {
+    apiV2CustomAttributesIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -245,17 +258,22 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesSearchPost operation.
-     * @callback module:api/CustomAttributesApi~apiV2CustomAttributesSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CustomAttributeSearchResponseModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get attribute
+     * @param {String} id Unique ID of attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
      */
+    apiV2CustomAttributesIdGet(id) {
+      return this.apiV2CustomAttributesIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for attributes
@@ -266,10 +284,9 @@ export default class CustomAttributesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/CustomAttributeSearchQueryModel} [customAttributeSearchQueryModel] 
-     * @param {module:api/CustomAttributesApi~apiV2CustomAttributesSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CustomAttributeSearchResponseModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeSearchResponseModel>} and HTTP response
      */
-    apiV2CustomAttributesSearchPost(opts, callback) {
+    apiV2CustomAttributesSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['customAttributeSearchQueryModel'];
 
@@ -294,8 +311,26 @@ export default class CustomAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Search for attributes
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/CustomAttributeSearchQueryModel} opts.customAttributeSearchQueryModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeSearchResponseModel>}
+     */
+    apiV2CustomAttributesSearchPost(opts) {
+      return this.apiV2CustomAttributesSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

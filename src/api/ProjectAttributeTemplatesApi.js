@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributeTemplates service.
 * @module api/ProjectAttributeTemplatesApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class ProjectAttributeTemplatesApi {
 
@@ -37,13 +37,6 @@ export default class ProjectAttributeTemplatesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdAttributesTemplatesSearchPost operation.
-     * @callback module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ProjectCustomAttributeTemplateGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Search for custom attributes templates
@@ -55,10 +48,9 @@ export default class ProjectAttributeTemplatesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectCustomAttributesTemplatesFilterModel} [projectCustomAttributesTemplatesFilterModel] 
-     * @param {module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ProjectCustomAttributeTemplateGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectCustomAttributeTemplateGetModel>} and HTTP response
      */
-    apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdAttributesTemplatesSearchPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['projectCustomAttributesTemplatesFilterModel'];
       // verify the required parameter 'projectId' is set
@@ -88,26 +80,38 @@ export default class ProjectAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/templates/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete operation.
-     * @callback module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search for custom attributes templates
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ProjectCustomAttributesTemplatesFilterModel} opts.projectCustomAttributesTemplatesFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectCustomAttributeTemplateGetModel>}
      */
+    apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdAttributesTemplatesSearchPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete CustomAttributeTemplate from Project
      *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
-     * @param {module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete(projectId, templateId, callback) {
+    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDeleteWithHttpInfo(projectId, templateId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -136,26 +140,33 @@ export default class ProjectAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/templates/{templateId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost operation.
-     * @callback module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete CustomAttributeTemplate from Project
+     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete(projectId, templateId) {
+      return this.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDeleteWithHttpInfo(projectId, templateId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Add CustomAttributeTemplate to Project
      *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
-     * @param {module:api/ProjectAttributeTemplatesApi~apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost(projectId, templateId, callback) {
+    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPostWithHttpInfo(projectId, templateId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -184,8 +195,22 @@ export default class ProjectAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/templates/{templateId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Add CustomAttributeTemplate to Project
+     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost(projectId, templateId) {
+      return this.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPostWithHttpInfo(projectId, templateId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

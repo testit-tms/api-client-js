@@ -17,7 +17,7 @@ import PeriodViewModel from './PeriodViewModel';
 /**
  * The PeriodViewModelChangedFieldViewModel model module.
  * @module model/PeriodViewModelChangedFieldViewModel
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class PeriodViewModelChangedFieldViewModel {
     /**

@@ -1,8 +1,11 @@
-# Using 7.18.0 
+# Using 7.18.0
 #npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME=swagger.json
-NEW_VERSION="7.0.0-rc1"
+NEW_VERSION="7.0.0"
+
+sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.yml
+
 
 rm -rf new
 openapi-generator-cli generate -i .swagger/$FILE_NAME -g javascript -o new --skip-validate-spec --type-mappings=set=Array -c genConfig.yml
@@ -23,5 +26,35 @@ sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/" package.json
 cp -r new/README.MD README-NEW.MD
 ./update-docs.sh
 
-# npm i
-# npm run test
+npm i -g typescript
+npm i -g npm-dts
+npm-dts generate -L debug
+
+INDEX_DTS_PATH=index.d.ts
+
+# Постобработка index.d.ts
+if [ -f "$INDEX_DTS_PATH" ]; then
+    echo "Постобработка $INDEX_DTS_PATH..."
+
+    # 1. Удаляем строки, соответствующие регулярке export type .* = any;
+    sed -i '/^[[:space:]]*export type .* = any;$/d' "$INDEX_DTS_PATH"
+
+    # 2. Заменяем все <module> на <any>
+    sed -i 's/<module>/<any>/g' "$INDEX_DTS_PATH"
+
+    # 3. Заменяем getActualInstance(): (module: model) => any; на getActualInstance(): (module: any) => any;
+    sed -i 's/getActualInstance(): (module: model) => any;/getActualInstance(): (module: any) => any;/g' "$INDEX_DTS_PATH"
+
+    # 4. Удаляем "| ObjectFunction"
+    sed -i 's/| ObjectFunction//g' "$INDEX_DTS_PATH"
+
+    # 5. Заменяем module: model на module: any
+    sed -i 's/module: model/module: any/g' "$INDEX_DTS_PATH"
+
+    echo "Постобработка $INDEX_DTS_PATH завершена."
+else
+    echo "Файл index.d.ts не найден. Пропуск постобработки."
+fi
+
+npm i
+npm run test

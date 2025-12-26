@@ -19,7 +19,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestResultHistoryReportApiResult model module.
  * @module model/TestResultHistoryReportApiResult
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class TestResultHistoryReportApiResult {
     /**

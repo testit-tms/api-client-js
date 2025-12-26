@@ -5,4 +5,5 @@ licenseName: "Apache-2.0"
 npmRepository: "https://www.npmjs.com/package/testit-api-client"
 supportsES6: true
 platform: node
-projectVersion: "7.0.0-rc1"
+projectVersion: "7.0.0"
+usePromises: true

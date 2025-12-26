@@ -45,13 +45,12 @@ let apiInstance = new TestitApiClient.ParametersApi();
 let opts = {
   'createParameterApiModel': [new TestitApiClient.CreateParameterApiModel()] // [CreateParameterApiModel] | 
 };
-apiInstance.apiV2ParametersBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -98,13 +97,12 @@ let apiInstance = new TestitApiClient.ParametersApi();
 let opts = {
   'updateParameterApiModel': [new TestitApiClient.UpdateParameterApiModel()] // [UpdateParameterApiModel] | 
 };
-apiInstance.apiV2ParametersBulkPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ParametersBulkPut(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -159,13 +157,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2ParametersGroupsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersGroupsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -218,13 +215,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let name = "name_example"; // String | 
-apiInstance.apiV2ParametersKeyNameNameExistsGet(name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersKeyNameNameExistsGet(name).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -269,13 +265,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let key = "SomeKey"; // String | Parameter key (string format)
-apiInstance.apiV2ParametersKeyValuesGet(key, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersKeyValuesGet(key).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -327,13 +322,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2ParametersKeysGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersKeysGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -388,13 +382,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'parameterGroupsFilterApiModel': new TestitApiClient.ParameterGroupsFilterApiModel() // ParameterGroupsFilterApiModel | 
 };
-apiInstance.apiV2ParametersSearchGroupsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersSearchGroupsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -449,13 +442,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'parametersFilterApiModel': new TestitApiClient.ParametersFilterApiModel() // ParametersFilterApiModel | 
 };
-apiInstance.apiV2ParametersSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ParametersSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -507,13 +499,12 @@ let apiInstance = new TestitApiClient.ParametersApi();
 let opts = {
   'createParameterApiModel': new TestitApiClient.CreateParameterApiModel() // CreateParameterApiModel | 
 };
-apiInstance.createParameter(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createParameter(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -558,13 +549,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let name = "name_example"; // String | Name of the parameter
-apiInstance.deleteByName(name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteByName(name).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -609,13 +599,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let keyId = "keyId_example"; // String | Identifier of the parameter key
-apiInstance.deleteByParameterKeyId(keyId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteByParameterKeyId(keyId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -660,13 +649,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let id = "id_example"; // String | Parameter internal (UUID) identifier
-apiInstance.deleteParameter(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteParameter(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -718,13 +706,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getAllParameters(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAllParameters(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -774,13 +761,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ParametersApi();
 let id = "id_example"; // String | Parameter internal (UUID) identifier
-apiInstance.getParameterById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getParameterById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -827,13 +813,12 @@ let apiInstance = new TestitApiClient.ParametersApi();
 let opts = {
   'updateParameterApiModel': new TestitApiClient.UpdateParameterApiModel() // UpdateParameterApiModel | 
 };
-apiInstance.updateParameter(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateParameter(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

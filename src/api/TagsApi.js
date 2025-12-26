@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Tags service.
 * @module api/TagsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class TagsApi {
 
@@ -39,22 +39,15 @@ export default class TagsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2TagsDelete operation.
-     * @callback module:api/TagsApi~apiV2TagsDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete tags
      *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
      * @param {Object} opts Optional parameters
      * @param {module:model/SelectTagsApiModel} [selectTagsApiModel] 
-     * @param {module:api/TagsApi~apiV2TagsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TagsDelete(opts, callback) {
+    apiV2TagsDeleteWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['selectTagsApiModel'];
 
@@ -74,25 +67,32 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TagsIdDelete operation.
-     * @callback module:api/TagsApi~apiV2TagsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete tags
+     *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SelectTagsApiModel} opts.selectTagsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TagsDelete(opts) {
+      return this.apiV2TagsDeleteWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete tag
      *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
      * @param {String} id Tag internal (UUID) identifier
-     * @param {module:api/TagsApi~apiV2TagsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TagsIdDelete(id, callback) {
+    apiV2TagsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -116,27 +116,32 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TagsPost operation.
-     * @callback module:api/TagsApi~apiV2TagsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete tag
+     *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
+     * @param {String} id Tag internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TagsIdDelete(id) {
+      return this.apiV2TagsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create tag
      *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTagApiModel} [createTagApiModel] 
-     * @param {module:api/TagsApi~apiV2TagsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
      */
-    apiV2TagsPost(opts, callback) {
+    apiV2TagsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createTagApiModel'];
 
@@ -156,17 +161,24 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TagsPut operation.
-     * @callback module:api/TagsApi~apiV2TagsPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create tag
+     *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTagApiModel} opts.createTagApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TagApiResult}
      */
+    apiV2TagsPost(opts) {
+      return this.apiV2TagsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update tag
@@ -174,10 +186,9 @@ export default class TagsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [id] 
      * @param {module:model/UpdateTagApiModel} [updateTagApiModel] 
-     * @param {module:api/TagsApi~apiV2TagsPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
      */
-    apiV2TagsPut(opts, callback) {
+    apiV2TagsPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateTagApiModel'];
 
@@ -198,17 +209,25 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TagsSearchGet operation.
-     * @callback module:api/TagsApi~apiV2TagsSearchGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TagApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update tag
+     *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.id 
+     * @param {module:model/UpdateTagApiModel} opts.updateTagApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TagApiResult}
      */
+    apiV2TagsPut(opts) {
+      return this.apiV2TagsPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search tags
@@ -219,10 +238,9 @@ export default class TagsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/TagsApi~apiV2TagsSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TagApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagApiResult>} and HTTP response
      */
-    apiV2TagsSearchGet(opts, callback) {
+    apiV2TagsSearchGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -247,17 +265,28 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags/search', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TagsTestPlansTagsGet operation.
-     * @callback module:api/TagsApi~apiV2TagsTestPlansTagsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TagApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search tags
+     *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TagApiResult>}
      */
+    apiV2TagsSearchGet(opts) {
+      return this.apiV2TagsSearchGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all Tags that are used in TestPlans
@@ -268,10 +297,9 @@ export default class TagsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/TagsApi~apiV2TagsTestPlansTagsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TagApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagApiResult>} and HTTP response
      */
-    apiV2TagsTestPlansTagsGet(opts, callback) {
+    apiV2TagsTestPlansTagsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -296,8 +324,26 @@ export default class TagsApi {
       return this.apiClient.callApi(
         '/api/v2/tags/testPlansTags', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get all Tags that are used in TestPlans
+     *  Use case  User runs method execution  System returns tags (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TagApiResult>}
+     */
+    apiV2TagsTestPlansTagsGet(opts) {
+      return this.apiV2TagsTestPlansTagsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

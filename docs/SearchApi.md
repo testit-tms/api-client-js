@@ -29,13 +29,12 @@ let apiInstance = new TestitApiClient.SearchApi();
 let opts = {
   'globalSearchRequest': new TestitApiClient.GlobalSearchRequest() // GlobalSearchRequest | 
 };
-apiInstance.apiV2SearchGlobalSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2SearchGlobalSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

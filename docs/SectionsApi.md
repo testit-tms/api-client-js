@@ -39,13 +39,12 @@ let id = "id_example"; // String | Section internal (UUID) identifier
 let opts = {
   'operation': [new TestitApiClient.Operation()] // [Operation] | 
 };
-apiInstance.apiV2SectionsIdPatch(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2SectionsIdPatch(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -93,13 +92,12 @@ let apiInstance = new TestitApiClient.SectionsApi();
 let opts = {
   'sectionPostModel': new TestitApiClient.SectionPostModel() // SectionPostModel | 
 };
-apiInstance.createSection(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createSection(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -144,13 +142,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.SectionsApi();
 let id = "id_example"; // String | Section internal (UUID) identifier
-apiInstance.deleteSection(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteSection(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -198,13 +195,12 @@ let id = "id_example"; // String | Section internal (UUID) identifier
 let opts = {
   'isDeleted': new TestitApiClient.DeletionState() // DeletionState | 
 };
-apiInstance.getSectionById(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getSectionById(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -260,13 +256,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getWorkItemsBySectionId(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemsBySectionId(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -319,13 +314,12 @@ let apiInstance = new TestitApiClient.SectionsApi();
 let opts = {
   'sectionMoveModel': new TestitApiClient.SectionMoveModel() // SectionMoveModel | 
 };
-apiInstance.move(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.move(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -372,13 +366,12 @@ let apiInstance = new TestitApiClient.SectionsApi();
 let opts = {
   'sectionRenameModel': new TestitApiClient.SectionRenameModel() // SectionRenameModel | 
 };
-apiInstance.rename(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.rename(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -425,13 +418,12 @@ let apiInstance = new TestitApiClient.SectionsApi();
 let opts = {
   'sectionPutModel': new TestitApiClient.SectionPutModel() // SectionPutModel | 
 };
-apiInstance.updateSection(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateSection(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

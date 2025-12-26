@@ -18,7 +18,7 @@ import ProjectType from './ProjectType';
 /**
  * The ProjectApiResult model module.
  * @module model/ProjectApiResult
- * @version 7.0.0-rc1
+ * @version 7.0.0
  */
 class ProjectApiResult {
     /**

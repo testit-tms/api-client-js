@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Search service.
 * @module api/SearchApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class SearchApi {
 
@@ -37,21 +37,13 @@ export default class SearchApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2SearchGlobalSearchPost operation.
-     * @callback module:api/SearchApi~apiV2SearchGlobalSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GlobalSearchResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/GlobalSearchRequest} [globalSearchRequest] 
-     * @param {module:api/SearchApi~apiV2SearchGlobalSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GlobalSearchResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GlobalSearchResponse} and HTTP response
      */
-    apiV2SearchGlobalSearchPost(opts, callback) {
+    apiV2SearchGlobalSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['globalSearchRequest'];
 
@@ -71,8 +63,20 @@ export default class SearchApi {
       return this.apiClient.callApi(
         '/api/v2/search/globalSearch', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GlobalSearchRequest} opts.globalSearchRequest 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GlobalSearchResponse}
+     */
+    apiV2SearchGlobalSearchPost(opts) {
+      return this.apiV2SearchGlobalSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -22,7 +22,7 @@ import WorkItemCommentPutModel from '../model/WorkItemCommentPutModel';
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class WorkItemsCommentsApi {
 
@@ -38,21 +38,14 @@ export default class WorkItemsCommentsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2WorkItemsCommentsCommentIdDelete operation.
-     * @callback module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsCommentIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete WorkItem comment
      *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
      * @param {String} commentId Comment internal (guid format) identifier
-     * @param {module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsCommentIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WorkItemsCommentsCommentIdDelete(commentId, callback) {
+    apiV2WorkItemsCommentsCommentIdDeleteWithHttpInfo(commentId) {
       let postBody = null;
       // verify the required parameter 'commentId' is set
       if (commentId === undefined || commentId === null) {
@@ -76,27 +69,32 @@ export default class WorkItemsCommentsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/comments/{commentId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsCommentsPost operation.
-     * @callback module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemCommentModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete WorkItem comment
+     *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
+     * @param {String} commentId Comment internal (guid format) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WorkItemsCommentsCommentIdDelete(commentId) {
+      return this.apiV2WorkItemsCommentsCommentIdDeleteWithHttpInfo(commentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create WorkItem comment
      *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemCommentPostModel} [workItemCommentPostModel] 
-     * @param {module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemCommentModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentModel} and HTTP response
      */
-    apiV2WorkItemsCommentsPost(opts, callback) {
+    apiV2WorkItemsCommentsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['workItemCommentPostModel'];
 
@@ -116,25 +114,32 @@ export default class WorkItemsCommentsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/comments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsCommentsPut operation.
-     * @callback module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create WorkItem comment
+     *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemCommentPostModel} opts.workItemCommentPostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemCommentModel}
      */
+    apiV2WorkItemsCommentsPost(opts) {
+      return this.apiV2WorkItemsCommentsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update work item comment
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemCommentPutModel} [workItemCommentPutModel] 
-     * @param {module:api/WorkItemsCommentsApi~apiV2WorkItemsCommentsPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WorkItemsCommentsPut(opts, callback) {
+    apiV2WorkItemsCommentsPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['workItemCommentPutModel'];
 
@@ -154,25 +159,30 @@ export default class WorkItemsCommentsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/comments', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdCommentsCountGet operation.
-     * @callback module:api/WorkItemsCommentsApi~apiV2WorkItemsIdCommentsCountGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update work item comment
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemCommentPutModel} opts.workItemCommentPutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WorkItemsCommentsPut(opts) {
+      return this.apiV2WorkItemsCommentsPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get work item comments count
      * @param {String} id Unique or global ID of the work item
-     * @param {module:api/WorkItemsCommentsApi~apiV2WorkItemsIdCommentsCountGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2WorkItemsIdCommentsCountGet(id, callback) {
+    apiV2WorkItemsIdCommentsCountGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -196,25 +206,29 @@ export default class WorkItemsCommentsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/comments/count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdCommentsGet operation.
-     * @callback module:api/WorkItemsCommentsApi~apiV2WorkItemsIdCommentsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemCommentModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get work item comments count
+     * @param {String} id Unique or global ID of the work item
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2WorkItemsIdCommentsCountGet(id) {
+      return this.apiV2WorkItemsIdCommentsCountGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get work item comments
      * @param {String} id Unique or global ID of the work item
-     * @param {module:api/WorkItemsCommentsApi~apiV2WorkItemsIdCommentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemCommentModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemCommentModel>} and HTTP response
      */
-    apiV2WorkItemsIdCommentsGet(id, callback) {
+    apiV2WorkItemsIdCommentsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -238,8 +252,20 @@ export default class WorkItemsCommentsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/comments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get work item comments
+     * @param {String} id Unique or global ID of the work item
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemCommentModel>}
+     */
+    apiV2WorkItemsIdCommentsGet(id) {
+      return this.apiV2WorkItemsIdCommentsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -20,7 +20,7 @@ import WebhookLogApiResult from '../model/WebhookLogApiResult';
 /**
 * WebhooksLogs service.
 * @module api/WebhooksLogsApi
-* @version 7.0.0-rc1
+* @version 7.0.0
 */
 export default class WebhooksLogsApi {
 
@@ -36,13 +36,6 @@ export default class WebhooksLogsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2WebhooksLogsGet operation.
-     * @callback module:api/WebhooksLogsApi~apiV2WebhooksLogsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WebhookLogApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get last webhook logs
@@ -53,10 +46,9 @@ export default class WebhooksLogsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/WebhooksLogsApi~apiV2WebhooksLogsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WebhookLogApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebhookLogApiResult>} and HTTP response
      */
-    apiV2WebhooksLogsGet(opts, callback) {
+    apiV2WebhooksLogsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -82,24 +74,35 @@ export default class WebhooksLogsApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksLogsIdDelete operation.
-     * @callback module:api/WebhooksLogsApi~apiV2WebhooksLogsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get last webhook logs
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.projectId Project unique ID
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebhookLogApiResult>}
      */
+    apiV2WebhooksLogsGet(opts) {
+      return this.apiV2WebhooksLogsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete webhook log by ID
      * @param {String} id Webhook log unique ID
-     * @param {module:api/WebhooksLogsApi~apiV2WebhooksLogsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WebhooksLogsIdDelete(id, callback) {
+    apiV2WebhooksLogsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -123,25 +126,29 @@ export default class WebhooksLogsApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/logs/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksLogsIdGet operation.
-     * @callback module:api/WebhooksLogsApi~apiV2WebhooksLogsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebhookLogApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete webhook log by ID
+     * @param {String} id Webhook log unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WebhooksLogsIdDelete(id) {
+      return this.apiV2WebhooksLogsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get webhook log by ID
      * @param {String} id Webhook log unique ID
-     * @param {module:api/WebhooksLogsApi~apiV2WebhooksLogsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebhookLogApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebhookLogApiResult} and HTTP response
      */
-    apiV2WebhooksLogsIdGet(id, callback) {
+    apiV2WebhooksLogsIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -165,8 +172,20 @@ export default class WebhooksLogsApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/logs/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get webhook log by ID
+     * @param {String} id Webhook log unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebhookLogApiResult}
+     */
+    apiV2WebhooksLogsIdGet(id) {
+      return this.apiV2WebhooksLogsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 
