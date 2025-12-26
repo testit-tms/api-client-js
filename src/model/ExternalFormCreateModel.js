@@ -19,7 +19,7 @@ import ExternalFormLinkModel from './ExternalFormLinkModel';
 /**
  * The ExternalFormCreateModel model module.
  * @module model/ExternalFormCreateModel
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class ExternalFormCreateModel {
     /**

@@ -24,7 +24,7 @@ import UserNameApiResult from './UserNameApiResult';
 /**
  * The TestPlanTestPointsSearchApiResult model module.
  * @module model/TestPlanTestPointsSearchApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class TestPlanTestPointsSearchApiResult {
     /**

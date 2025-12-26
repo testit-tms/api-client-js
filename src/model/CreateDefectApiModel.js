@@ -17,7 +17,7 @@ import ExternalFormCreateModel from './ExternalFormCreateModel';
 /**
  * The CreateDefectApiModel model module.
  * @module model/CreateDefectApiModel
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class CreateDefectApiModel {
     /**

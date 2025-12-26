@@ -25,7 +25,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The UpdateWorkItemApiModel model module.
  * @module model/UpdateWorkItemApiModel
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class UpdateWorkItemApiModel {
     /**

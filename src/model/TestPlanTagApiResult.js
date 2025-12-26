@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanTagApiResult model module.
  * @module model/TestPlanTagApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class TestPlanTagApiResult {
     /**

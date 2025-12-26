@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ExternalIssues service.
 * @module api/ExternalIssuesApi
-* @version 7.0.0-rc8
+* @version 7.0.0
 */
 export default class ExternalIssuesApi {
 

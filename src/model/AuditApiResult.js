@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AuditApiResult model module.
  * @module model/AuditApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class AuditApiResult {
     /**

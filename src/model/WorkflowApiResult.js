@@ -18,7 +18,7 @@ import WorkflowStatusApiResult from './WorkflowStatusApiResult';
 /**
  * The WorkflowApiResult model module.
  * @module model/WorkflowApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class WorkflowApiResult {
     /**

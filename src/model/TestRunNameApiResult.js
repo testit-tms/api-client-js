@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestRunNameApiResult model module.
  * @module model/TestRunNameApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class TestRunNameApiResult {
     /**

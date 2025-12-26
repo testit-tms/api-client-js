@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestResultsStatisticsStatusesApiResult model module.
  * @module model/TestResultsStatisticsStatusesApiResult
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class TestResultsStatisticsStatusesApiResult {
     /**

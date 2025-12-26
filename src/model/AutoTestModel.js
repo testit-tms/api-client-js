@@ -21,7 +21,7 @@ import TestStatusModel from './TestStatusModel';
 /**
  * The AutoTestModel model module.
  * @module model/AutoTestModel
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class AutoTestModel {
     /**

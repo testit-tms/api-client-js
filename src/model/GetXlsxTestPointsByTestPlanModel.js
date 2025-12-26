@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GetXlsxTestPointsByTestPlanModel model module.
  * @module model/GetXlsxTestPointsByTestPlanModel
- * @version 7.0.0-rc8
+ * @version 7.0.0
  */
 class GetXlsxTestPointsByTestPlanModel {
     /**
