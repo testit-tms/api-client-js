@@ -97,10 +97,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
           file: File;
       }): Promise<any>;
   }
-  //# sourceMappingURL=AttachmentsApi.d.ts.map
-}
-declare module 'testit-api-client/api/AttachmentsApi.d.ts' {
-  {"version":3,"file":"AttachmentsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/AttachmentsApi.js"],"names":[],"mappings":"AAoBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,+DA0BC;IAED;;;;OAIG;IACH,mDAKC;IAGD;;;;;;;;;;OAUG;IACH,uEAgCC;IAED;;;;;;;;;;OAUG;IACH,wCAPG;QAAqB,KAAK;QACL,MAAM;QACgB,UAAU,EAA7C,GAA4B;QACf,eAAe;QACd,OAAO;KAC7B,gBAOF;IAGD;;;;OAIG;IACH,oEA0BC;IAED;;;;OAIG;IACH,wDAKC;IAGD;;;OAGG;IACH,uEAqBC;IAED;;;OAGG;IACH,2DAKC;IAGD;;;;;;OAMG;IACH,0DAuBC;IAED;;;;;;OAMG;IACH,2BAHG;QAAmB,IAAI,EAAf,IAAI;KACZ,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/AutoTestsApi' {
   /**
@@ -572,10 +569,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        */
       updateMultiple(opts: any): Promise<any>;
   }
-  //# sourceMappingURL=AutoTestsApi.d.ts.map
-}
-declare module 'testit-api-client/api/AutoTestsApi.d.ts' {
-  {"version":3,"file":"AutoTestsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/AutoTestsApi.js"],"names":[],"mappings":"AAkCA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,0DAsBC;IAED;;;;;OAKG;IACH,2BAHG;QAAsD,0BAA0B,EAAxE,GAAuC;KAC/C,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,iEA2BC;IAED;;;;;;;;;;;OAWG;IACH,kCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACqB,yBAAyB,EAAtE,GAAsC;KAC9C,gBAOF;IAGD;;;;;;;OAOG;IACH,uEA2BC;IAED;;;;;;;OAOG;IACH,2DAKC;IAGD;;;;;;;;;;;;OAYG;IACH,uFAgCC;IAED;;;;;;;;;;;;OAYG;IACH,wDARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QAC+B,mCAAmC,EAA1F,GAAgD;KACxD,gBAOF;IAGD;;;;;OAKG;IACH,4EA0BC;IAED;;;;;OAKG;IACH,gEAKC;IAGD;;;;;;OAMG;IACH,gHA+BC;IAED;;;;;;OAMG;IACH,oGAKC;IAGD;;;;;;;;;;OAUG;IACH,8DA2BC;IAED;;;;;;;;;;OAUG;IACH,+BARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACkB,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,qBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,wCAKC;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;;;OAOG;IACH,gFA4BC;IAED;;;;;;;OAOG;IACH,iDAHG;QAAqB,UAAU;KAC/B,gBAOF;IAGD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;OA6BG;IACH,qDAgDC;IAED;;;;;;;;;;;;;;;;;;;;;;;;;;;;;OA6BG;IACH,sBA5BG;QAAqB,SAAS;QACT,UAAU;QACV,QAAQ;QACR,SAAS;QACR,eAAe;QACf,sBAAsB;QACvB,SAAS;QACR,eAAe;QACf,sBAAsB;QACtB,SAAS;QACT,OAAO;QACA,MAAM,EAA3B,KAAK,QAAS;QACD,gBAAgB;QAChB,YAAY;QACZ,gBAAgB;QAChB,YAAY;QACX,OAAO;QACP,KAAK;QACL,YAAY;QACZ,aAAa;QACd,WAAW;QACX,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,iEA0BC;IAED;;;;;OAKG;IACH,qDAKC;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;OAKG;IACH,4DA0BC;IAED;;;;;OAKG;IACH,gDAKC;IAGD;;;;;OAKG;IACH,kDA0BC;IAED;;;;;OAKG;IACH,sCAKC;IAGD;;;;;;;;OAQG;IACH,8EA6BC;IAED;;;;;;;;OAQG;IACH,+CAJG;QAAsB,SAAS;QACT,iBAAiB;KACvC,gBAOF;IAGD;;;;;;;OAOG;IACH,wEA2BC;IAED;;;;;;;OAOG;IACH,yCAHG;QAA8C,kBAAkB,EAAxD,GAA+B;KACvC,gBAOF;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,qBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,wCAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/BackgroundJobsApi' {
   /**
@@ -697,10 +691,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
           backgroundJobFilterModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=BackgroundJobsApi.d.ts.map
-}
-declare module 'testit-api-client/api/BackgroundJobsApi.d.ts' {
-  {"version":3,"file":"BackgroundJobsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/BackgroundJobsApi.js"],"names":[],"mappings":"AAqBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;OAGG;IACH,+DAqBC;IAED;;;OAGG;IACH,mDAKC;IAGD;;;;;;;;OAQG;IACH,4DA2BC;IAED;;;;;;;;OAQG;IACH,6BAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;OAIG;IACH,sEA0BC;IAED;;;;OAIG;IACH,0DAKC;IAGD;;;;OAIG;IACH,+DA0BC;IAED;;;;OAIG;IACH,mDAKC;IAGD;;;;OAIG;IACH,qEA0BC;IAED;;;;OAIG;IACH,yDAKC;IAGD;;;;;;;;;;OAUG;IACH,mEA2BC;IAED;;;;;;;;;;OAUG;IACH,oCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACoB,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ConfigurationsApi' {
   /**
@@ -916,10 +907,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        */
       getConfigurationById(id: string): Promise<any>;
   }
-  //# sourceMappingURL=ConfigurationsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ConfigurationsApi.d.ts' {
-  {"version":3,"file":"ConfigurationsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ConfigurationsApi.js"],"names":[],"mappings":"AA0BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,+EAsBC;IAED;;;;;OAKG;IACH,gDAHG;QAA0D,8BAA8B,EAAhF,GAA2C;KACnD,gBAOF;IAGD;;;;;OAKG;IACH,uEAsBC;IAED;;;;;OAKG;IACH,wCAHG;QAAuD,2BAA2B,EAA1E,GAAwC;KAChD,gBAOF;IAGD;;;;OAIG;IACH,kEA0BC;IAED;;;;OAIG;IACH,sDAKC;IAGD;;;;;;;OAOG;IACH,4EA2BC;IAED;;;;;;;OAOG;IACH,gEAKC;IAGD;;;;OAIG;IACH,qEA0BC;IAED;;;;OAIG;IACH,yDAKC;IAGD;;;;OAIG;IACH,uEA0BC;IAED;;;;OAIG;IACH,2DAKC;IAGD;;;;;OAKG;IACH,sEAsBC;IAED;;;;;OAKG;IACH,uCAHG;QAAoD,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;OAKG;IACH,4DAsBC;IAED;;;;;OAKG;IACH,6BAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;OAKG;IACH,wEAsBC;IAED;;;;;OAKG;IACH,yCAHG;QAAoD,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,mEA2BC;IAED;;;;;;;;;;OAUG;IACH,oCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACoB,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;OAMG;IACH,yDAsBC;IAED;;;;;;OAMG;IACH,0BAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;OAKG;IACH,2DA0BC;IAED;;;;;OAKG;IACH,+CAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/CustomAttributesApi' {
   /**
@@ -1044,10 +1032,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
           customAttributeSearchQueryModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=CustomAttributesApi.d.ts.map
-}
-declare module 'testit-api-client/api/CustomAttributesApi.d.ts' {
-  {"version":3,"file":"CustomAttributesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/CustomAttributesApi.js"],"names":[],"mappings":"AAwBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,oEAwBC;IAED;;;;;OAKG;IACH,qCAJG;QAAqB,IAAI;QACH,QAAQ;KAC9B,gBAOF;IAGD;;;;OAIG;IACH,0EA0BC;IAED;;;;OAIG;IACH,8DAKC;IAGD;;;;;;OAMG;IACH,kFA2BC;IAED;;;;;;OAMG;IACH,mDAHG;QAA4D,gCAAgC,EAApF,GAA6C;KACrD,gBAOF;IAGD;;;;;OAKG;IACH,qEAsBC;IAED;;;;;OAKG;IACH,sCAHG;QAA0D,8BAA8B,EAAhF,GAA2C;KACnD,gBAOF;IAGD;;;;OAIG;IACH,iEA0BC;IAED;;;;OAIG;IACH,qDAKC;IAGD;;;;;;;;;;OAUG;IACH,qEA2BC;IAED;;;;;;;;;;OAUG;IACH,sCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QAC2B,+BAA+B,EAAlF,GAA4C;KACpD,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
   /**
@@ -1229,10 +1214,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
           customAttributeTemplateSearchQueryModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=CustomAttributeTemplatesApi.d.ts.map
-}
-declare module 'testit-api-client/api/CustomAttributeTemplatesApi.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplatesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/CustomAttributeTemplatesApi.js"],"names":[],"mappings":"AAwBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,6EAuBC;IAED;;;;OAIG;IACH,8CAHG;QAAqB,IAAI;KACzB,gBAOF;IAGD;;;;;;;OAOG;IACH,6GA2BC;IAED;;;;;;;OAOG;IACH,8EAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;;;OAOG;IACH,6GA2BC;IAED;;;;;;;OAOG;IACH,8EAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;OAKG;IACH,6EA0BC;IAED;;;;;OAKG;IACH,iEAKC;IAGD;;;;;OAKG;IACH,0EA0BC;IAED;;;;;OAKG;IACH,8DAKC;IAGD;;;;;OAKG;IACH,8EA0BC;IAED;;;;;OAKG;IACH,kEAKC;IAGD;;;;;;OAMG;IACH,wEAsBC;IAED;;;;;;OAMG;IACH,yCAHG;QAA4D,gCAAgC,EAApF,GAA6C;KACrD,gBAOF;IAGD;;;;;OAKG;IACH,uEAsBC;IAED;;;;;OAKG;IACH,wCAHG;QAA2D,+BAA+B,EAAlF,GAA4C;KACpD,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,8EA2BC;IAED;;;;;;;;;;;OAWG;IACH,+CARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACmC,uCAAuC,EAAlG,GAAoD;KAC5D,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ExternalIssuesApi' {
   /**
@@ -1267,10 +1249,7 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
           getExternalIssueSuggestionsApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ExternalIssuesApi.d.ts.map
-}
-declare module 'testit-api-client/api/ExternalIssuesApi.d.ts' {
-  {"version":3,"file":"ExternalIssuesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ExternalIssuesApi.js"],"names":[],"mappings":"AAoBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,wEAsBC;IAED;;;;;OAKG;IACH,yCAHG;QAA+D,mCAAmC,EAA1F,GAAgD;KACxD,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/NotificationsApi' {
   /**
@@ -1399,10 +1378,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
           notificationQueryFilterModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=NotificationsApi.d.ts.map
-}
-declare module 'testit-api-client/api/NotificationsApi.d.ts' {
-  {"version":3,"file":"NotificationsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/NotificationsApi.js"],"names":[],"mappings":"AAqBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,gEAuBC;IAED;;;;;;OAMG;IACH,iCAHG;QAAsB,MAAM;KAC5B,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,2DA4BC;IAED;;;;;;;;;;;OAWG;IACH,4BARG;QAAiD,gBAAgB,EAAzD,GAAkC;QACrB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,mEA0BC;IAED;;;;;OAKG;IACH,uDAKC;IAGD;;;;OAIG;IACH,uDAqBC;IAED;;;;OAIG;IACH,2CAKC;IAGD;;;;;;;;;;;OAWG;IACH,kEA2BC;IAED;;;;;;;;;;;OAWG;IACH,mCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACwB,4BAA4B,EAA5E,GAAyC;KACjD,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ParametersApi' {
   /**
@@ -1743,10 +1719,7 @@ declare module 'testit-api-client/api/ParametersApi' {
           updateParameterApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ParametersApi.d.ts.map
-}
-declare module 'testit-api-client/api/ParametersApi.d.ts' {
-  {"version":3,"file":"ParametersApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ParametersApi.js"],"names":[],"mappings":"AAwBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,6DAsBC;IAED;;;;;;OAMG;IACH,iDAKC;IAGD;;;;;;OAMG;IACH,4DAsBC;IAED;;;;;;OAMG;IACH,gDAKC;IAGD;;;;;;;;;;;;;;OAcG;IACH,8DA+BC;IAED;;;;;;;;;;;;;;OAcG;IACH,+BAXG;QAA6B,eAAe,EAApC,KAAK,QAAS;QACD,IAAI;QACH,SAAS;QACF,UAAU,EAA/B,KAAK,QAAS;QACD,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,4EA0BC;IAED;;;;;OAKG;IACH,gEAKC;IAGD;;;;;OAKG;IACH,mEA0BC;IAED;;;;;OAKG;IACH,uDAKC;IAGD;;;;;;;;;;;OAWG;IACH,4DA4BC;IAED;;;;;;;;;;;OAWG;IACH,6BARG;QAA6B,UAAU,EAA/B,KAAK,QAAS;QACD,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,qEA2BC;IAED;;;;;;;;;;OAUG;IACH,sCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACyB,6BAA6B,EAA9E,GAA0C;KAClD,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,+DA2BC;IAED;;;;;;;;;;OAUG;IACH,gCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACoB,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;OAMG;IACH,qDAsBC;IAED;;;;;;OAMG;IACH,sBAHG;QAAmD,uBAAuB,EAAlE,GAAoC;KAC5C,gBAOF;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;OAKG;IACH,gEA0BC;IAED;;;;;OAKG;IACH,oDAKC;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;;;;;;;OAWG;IACH,sDA4BC;IAED;;;;;;;;;;;OAWG;IACH,uBARG;QAAsB,SAAS;QACV,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,uDA0BC;IAED;;;;;OAKG;IACH,2CAKC;IAGD;;;;;;OAMG;IACH,qDAsBC;IAED;;;;;;OAMG;IACH,sBAHG;QAAmD,uBAAuB,EAAlE,GAAoC;KAC5C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectAttributesApi' {
   /**
@@ -1888,10 +1861,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
           customAttributePutModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectAttributesApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectAttributesApi.d.ts' {
-  {"version":3,"file":"ProjectAttributesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectAttributesApi.js"],"names":[],"mappings":"AAwBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,gFA2BC;IAED;;;;;;;OAOG;IACH,iDAHG;QAAoD,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;OAMG;IACH,0FA+BC;IAED;;;;;;OAMG;IACH,8EAKC;IAGD;;;;;;OAMG;IACH,0FA+BC;IAED;;;;;;OAMG;IACH,8EAKC;IAGD;;;;;;;OAOG;IACH,iFA4BC;IAED;;;;;;;OAOG;IACH,kDAHG;QAAyC,SAAS,EAA1C,GAA0B;KAClC,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,kFAgCC;IAED;;;;;;;;;;;OAWG;IACH,mDARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACwB,4BAA4B,EAA5E,GAAyC;KACjD,gBAOF;IAGD;;;;;;OAMG;IACH,gFA2BC;IAED;;;;;;OAMG;IACH,iDAHG;QAAmD,uBAAuB,EAAlE,GAAoC;KAC5C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
   /**
@@ -1975,10 +1945,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
        */
       apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost(projectId: string, templateId: string): Promise<any>;
   }
-  //# sourceMappingURL=ProjectAttributeTemplatesApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectAttributeTemplatesApi.d.ts' {
-  {"version":3,"file":"ProjectAttributeTemplatesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectAttributeTemplatesApi.js"],"names":[],"mappings":"AAoBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;;;;;OAWG;IACH,4GAgCC;IAED;;;;;;;;;;;OAWG;IACH,6EARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACuC,2CAA2C,EAA1G,GAAwD;KAChE,gBAOF;IAGD;;;;;;OAMG;IACH,2HA+BC;IAED;;;;;;OAMG;IACH,+GAKC;IAGD;;;;;;OAMG;IACH,yHA+BC;IAED;;;;;;OAMG;IACH,6GAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectConfigurationsApi' {
   /**
@@ -2011,10 +1978,7 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
        */
       getConfigurationsByProjectId(projectId: string): Promise<any>;
   }
-  //# sourceMappingURL=ProjectConfigurationsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectConfigurationsApi.d.ts' {
-  {"version":3,"file":"ProjectConfigurationsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectConfigurationsApi.js"],"names":[],"mappings":"AAmBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,0EA0BC;IAED;;;;;OAKG;IACH,8DAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectsApi' {
   /**
@@ -2526,10 +2490,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
           updateProjectApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectsApi.d.ts' {
-  {"version":3,"file":"ProjectsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectsApi.js"],"names":[],"mappings":"AAoCA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,8EA2BC;IAED;;;;;;;OAOG;IACH,+CAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;OAEG;IACH,kDAqBC;IAED;;OAEG;IACH,sCAKC;IAGD;;;;OAIG;IACH,4DA0BC;IAED;;;;OAIG;IACH,gDAKC;IAGD;;;;;;OAMG;IACH,kFA4BC;IAED;;;;;;OAMG;IACH,mDAHG;QAAsB,SAAS;KAC/B,gBAOF;IAGD;;;;OAIG;IACH,iEA0BC;IAED;;;;OAIG;IACH,qDAKC;IAGD;;;;;OAKG;IACH,gEA0BC;IAED;;;;;OAKG;IACH,oDAKC;IAGD;;;;;;;OAOG;IACH,sEA2BC;IAED;;;;;;;OAOG;IACH,0DAKC;IAGD;;;;OAIG;IACH,+DA0BC;IAED;;;;OAIG;IACH,mDAKC;IAGD;;;;OAIG;IACH,iEA0BC;IAED;;;;OAIG;IACH,qDAKC;IAGD;;;;;;OAMG;IACH,8GA+BC;IAED;;;;;;OAMG;IACH,kGAKC;IAGD;;;;;;;OAOG;IACH,sFA2BC;IAED;;;;;;;OAOG;IACH,uDAHG;QAA0E,8CAA8C,EAAhH,GAA2D;KACnE,gBAOF;IAGD;;;;;;;;;;;;;;;;;;;;OAoBG;IACH,gFAyCC;IAED;;;;;;;;;;;;;;;;;;;;OAoBG;IACH,iDAhBG;QAAsB,kBAAkB;QAClB,wBAAwB;QACxB,UAAU;QACV,UAAU;QACV,OAAO;QACP,SAAS;QACZ,eAAe,EAA1B,IAAI;QACO,aAAa,EAAxB,IAAI;QACS,UAAU;QACV,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;OAGG;IACH,uEA0BC;IAED;;;OAGG;IACH,2DAKC;IAGD;;;;;OAKG;IACH,gEAsBC;IAED;;;;;OAKG;IACH,iCAHG;QAA8C,kBAAkB,EAAxD,GAA+B;KACvC,gBAOF;IAGD;;;;;OAKG;IACH,kEAsBC;IAED;;;;;OAKG;IACH,mCAHG;QAA8C,kBAAkB,EAAxD,GAA+B;KACvC,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,6DA2BC;IAED;;;;;;;;;;OAUG;IACH,8BARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACe,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;OAMG;IACH,6DAsBC;IAED;;;;;;OAMG;IACH,8BAHG;QAAoD,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;OAMG;IACH,mDAsBC;IAED;;;;;;OAMG;IACH,oBAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;OAIG;IACH,6DA0BC;IAED;;;;OAIG;IACH,iDAKC;IAGD;;;;;;;;;;;;OAYG;IACH,oDA6BC;IAED;;;;;;;;;;;;OAYG;IACH,qBATG;QAAsB,SAAS;QACV,WAAW;QACX,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,6DA0BC;IAED;;;;;OAKG;IACH,iDAKC;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;;;OAOG;IACH,yEA4BC;IAED;;;;;;;OAOG;IACH,0CAHG;QAAsB,SAAS;KAC/B,gBAOF;IAGD;;;;;;;;;;;;;;;;;;OAkBG;IACH,wJAuDC;IAED;;;;;;;;;;;;;;;;;;OAkBG;IACH,yHAVG;QAAmB,eAAe,EAA1B,IAAI;QACO,aAAa,EAAxB,IAAI;QACS,UAAU;QACV,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;OAMG;IACH,mDAsBC;IAED;;;;;;OAMG;IACH,oBAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectSectionsApi' {
   /**
@@ -2580,10 +2541,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
           searchValue: string;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectSectionsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectSectionsApi.d.ts' {
-  {"version":3,"file":"ProjectSectionsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectSectionsApi.js"],"names":[],"mappings":"AAmBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;;;;;OAWG;IACH,+EAgCC;IAED;;;;;;;;;;;OAWG;IACH,gDAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectSettingsApi' {
   /**
@@ -2632,10 +2590,7 @@ declare module 'testit-api-client/api/ProjectSettingsApi' {
        */
       getAutotestProjectSettings(projectId: string): Promise<any>;
   }
-  //# sourceMappingURL=ProjectSettingsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectSettingsApi.d.ts' {
-  {"version":3,"file":"ProjectSettingsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectSettingsApi.js"],"names":[],"mappings":"AAoBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,oGA2BC;IAED;;;;;;OAMG;IACH,qEAHG;QAA2D,+BAA+B,EAAlF,GAA4C;KACpD,gBAOF;IAGD;;;;OAIG;IACH,wEA0BC;IAED;;;;OAIG;IACH,4DAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
   /**
@@ -2757,10 +2712,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
           customAttributeTestPlanProjectRelationPutModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectTestPlanAttributesApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectTestPlanAttributesApi.d.ts' {
-  {"version":3,"file":"ProjectTestPlanAttributesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectTestPlanAttributesApi.js"],"names":[],"mappings":"AAsBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,sGA2BC;IAED;;;;;;;OAOG;IACH,uEAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;;OAMG;IACH,gHA+BC;IAED;;;;;;OAMG;IACH,oGAKC;IAGD;;;;;OAKG;IACH,wFA0BC;IAED;;;;;OAKG;IACH,4EAKC;IAGD;;;;;;;;;;;OAWG;IACH,0FAgCC;IAED;;;;;;;;;;;OAWG;IACH,2DARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACwB,4BAA4B,EAA5E,GAAyC;KACjD,gBAOF;IAGD;;;;;;;OAOG;IACH,sGA2BC;IAED;;;;;;;OAOG;IACH,uEAHG;QAA0E,8CAA8C,EAAhH,GAA2D;KACnE,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectTestPlansApi' {
   /**
@@ -2925,10 +2877,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
           projectTestPlansFilterModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectTestPlansApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectTestPlansApi.d.ts' {
-  {"version":3,"file":"ProjectTestPlansApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectTestPlansApi.js"],"names":[],"mappings":"AAqBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;;;;;;;OAaG;IACH,oGAkCC;IAED;;;;;;;;;;;;;OAaG;IACH,qEATG;QAAsB,SAAS;QACT,eAAe;QAChB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;OAMG;IACH,sGA2BC;IAED;;;;;;OAMG;IACH,uEAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;OAMG;IACH,wGA+BC;IAED;;;;;;OAMG;IACH,4FAKC;IAGD;;;;;;OAMG;IACH,qGA2BC;IAED;;;;;;OAMG;IACH,sEAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;OAMG;IACH,uGA2BC;IAED;;;;;;OAMG;IACH,wEAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;;;;;;;;OAaG;IACH,kGAiCC;IAED;;;;;;;;;;;;;OAaG;IACH,mEATG;QAAsB,eAAe;QAChB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACuB,2BAA2B,EAA1E,GAAwC;KAChD,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
   /**
@@ -2987,10 +2936,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
           testPlanTestPointsAutoTestsRunApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectTestPlanTestPointsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi.d.ts' {
-  {"version":3,"file":"ProjectTestPlanTestPointsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectTestPlanTestPointsApi.js"],"names":[],"mappings":"AAqBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,kJAgCC;IAED;;;;;;;OAOG;IACH,mHAHG;QAAoE,wCAAwC,EAApG,GAAqD;KAC7D,gBAOF;IAGD;;;;;;;OAOG;IACH,gJAgCC;IAED;;;;;;;OAOG;IACH,iHAHG;QAAkE,sCAAsC,EAAhG,GAAmD;KAC3D,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/ProjectWorkItemsApi' {
   /**
@@ -3204,10 +3150,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
           searchValue: string;
       }): Promise<any>;
   }
-  //# sourceMappingURL=ProjectWorkItemsApi.d.ts.map
-}
-declare module 'testit-api-client/api/ProjectWorkItemsApi.d.ts' {
-  {"version":3,"file":"ProjectWorkItemsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/ProjectWorkItemsApi.js"],"names":[],"mappings":"AA0BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;;;;;OAWG;IACH,yGAgCC;IAED;;;;;;;;;;;OAWG;IACH,0EARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACiB,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,oGAgCC;IAED;;;;;;;;;;;OAWG;IACH,qEARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACe,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,kGAgCC;IAED;;;;;;;;;;;OAWG;IACH,mEARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACkB,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;;;;;;;OAYG;IACH,qIAqCC;IAED;;;;;;;;;;;;OAYG;IACH,sGARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACkB,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;;OAOG;IACH,+FA4BC;IAED;;;;;;;OAOG;IACH,gEAHG;QAAsB,SAAS;KAC/B,gBAOF;IAGD;;;;;;;;;;;;;;OAcG;IACH,gFAmCC;IAED;;;;;;;;;;;;;;OAcG;IACH,iDAVG;QAAsB,SAAS;QACF,QAAQ,EAA7B,KAAK,QAAS;QACA,iBAAiB;QAClB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/SearchApi' {
   /**
@@ -3240,10 +3183,7 @@ declare module 'testit-api-client/api/SearchApi' {
           globalSearchRequest: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=SearchApi.d.ts.map
-}
-declare module 'testit-api-client/api/SearchApi.d.ts' {
-  {"version":3,"file":"SearchApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/SearchApi.js"],"names":[],"mappings":"AAoBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,iEAsBC;IAED;;;;OAIG;IACH,kCAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/SectionsApi' {
   /**
@@ -3425,10 +3365,7 @@ declare module 'testit-api-client/api/SectionsApi' {
           sectionPutModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=SectionsApi.d.ts.map
-}
-declare module 'testit-api-client/api/SectionsApi.d.ts' {
-  {"version":3,"file":"SectionsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/SectionsApi.js"],"names":[],"mappings":"AA0BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,sEA2BC;IAED;;;;;;;OAOG;IACH,0DAKC;IAGD;;;;;;OAMG;IACH,mDAsBC;IAED;;;;;;OAMG;IACH,oBAHG;QAA4C,gBAAgB,EAApD,GAA6B;KACrC,gBAOF;IAGD;;;;;OAKG;IACH,oDA0BC;IAED;;;;;OAKG;IACH,wCAKC;IAGD;;;;;;;OAOG;IACH,gEA4BC;IAED;;;;;;;OAOG;IACH,iCAHG;QAAyC,SAAS,EAA1C,GAA0B;KAClC,gBAOF;IAGD;;;;;;;;;;;;;;OAcG;IACH,yEAmCC;IAED;;;;;;;;;;;;;;OAcG;IACH,0CAVG;QAAsB,SAAS;QACF,QAAQ,EAA7B,KAAK,QAAS;QACA,iBAAiB;QAClB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,0CAsBC;IAED;;;;;OAKG;IACH,WAHG;QAA4C,gBAAgB,EAApD,GAA6B;KACrC,gBAOF;IAGD;;;;;;OAMG;IACH,4CAsBC;IAED;;;;;;OAMG;IACH,aAHG;QAA8C,kBAAkB,EAAxD,GAA+B;KACvC,gBAOF;IAGD;;;;;;OAMG;IACH,mDAsBC;IAED;;;;;;OAMG;IACH,oBAHG;QAA2C,eAAe,EAAlD,GAA4B;KACpC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TagsApi' {
   /**
@@ -3578,10 +3515,7 @@ declare module 'testit-api-client/api/TagsApi' {
           searchValue: string;
       }): Promise<any>;
   }
-  //# sourceMappingURL=TagsApi.d.ts.map
-}
-declare module 'testit-api-client/api/TagsApi.d.ts' {
-  {"version":3,"file":"TagsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TagsApi.js"],"names":[],"mappings":"AAsBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,qDAsBC;IAED;;;;;;OAMG;IACH,sBAHG;QAA8C,kBAAkB,EAAxD,GAA+B;KACvC,gBAOF;IAGD;;;;;OAKG;IACH,wDA0BC;IAED;;;;;OAKG;IACH,4CAKC;IAGD;;;;;;OAMG;IACH,mDAsBC;IAED;;;;;;OAMG;IACH,oBAHG;QAA6C,iBAAiB,EAAtD,GAA8B;KACtC,gBAOF;IAGD;;;;;;;OAOG;IACH,kDAuBC;IAED;;;;;;;OAOG;IACH,mBAJG;QAAqB,EAAE;QACsB,iBAAiB,EAAtD,GAA8B;KACtC,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,wDA2BC;IAED;;;;;;;;;;OAUG;IACH,yBAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,+DA2BC;IAED;;;;;;;;;;OAUG;IACH,gCAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TestPlansApi' {
   /**
@@ -4205,10 +4139,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
           updateTestPlanApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=TestPlansApi.d.ts.map
-}
-declare module 'testit-api-client/api/TestPlansApi.d.ts' {
-  {"version":3,"file":"TestPlansApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TestPlansApi.js"],"names":[],"mappings":"AAoCA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,2EA2BC;IAED;;;;;;OAMG;IACH,4CAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;;OAOG;IACH,0EA2BC;IAED;;;;;;;OAOG;IACH,2CAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;OAKG;IACH,mEA0BC;IAED;;;;;OAKG;IACH,uDAKC;IAGD;;;;;;OAMG;IACH,iFA4BC;IAED;;;;;;OAMG;IACH,kDAHG;QAA6B,OAAO,EAA5B,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;OAKG;IACH,wEA0BC;IAED;;;;;OAKG;IACH,4DAKC;IAGD;;;;;;;;OAQG;IACH,0FA4BC;IAED;;;;;;;;OAQG;IACH,2DAJG;QAAqB,uBAAuB;QACgB,gCAAgC,EAApF,GAA6C;KACrD,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,iGA+BC;IAED;;;;;;;;;;OAUG;IACH,kEANG;QAAsB,4BAA4B;QAC5B,YAAY;QACZ,wBAAwB;QACzB,uBAAuB;KAC5C,gBAOF;IAGD;;;;;;;;;;;OAWG;IACH,4EAgCC;IAED;;;;;;;;;;;OAWG;IACH,6CAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;;;;OASG;IACH,0EA8BC;IAED;;;;;;;;;OASG;IACH,2CALG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;KAC5B,gBAOF;IAGD;;;;;;;OAOG;IACH,uEA2BC;IAED;;;;;;;OAOG;IACH,2DAKC;IAGD;;;;;OAKG;IACH,mEA0BC;IAED;;;;;OAKG;IACH,uDAKC;IAGD;;;;;;;;;;;;OAYG;IACH,0FAiCC;IAED;;;;;;;;;;;;OAYG;IACH,2DARG;QAAqB,QAAQ;QACR,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;;OAOG;IACH,qFA2BC;IAED;;;;;;;OAOG;IACH,sDAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;;OAMG;IACH,wFA2BC;IAED;;;;;;OAMG;IACH,yDAHG;QAAgD,oBAAoB,EAA5D,GAAiC;KACzC,gBAOF;IAGD;;;;;;;OAOG;IACH,4GAgCC;IAED;;;;;;;OAOG;IACH,6EAHG;QAAgD,oBAAoB,EAA5D,GAAiC;KACzC,gBAOF;IAGD;;;;;;;;;;;;;;;OAeG;IACH,6EAoCC;IAED;;;;;;;;;;;;;;;OAeG;IACH,8CAXG;QAAsB,UAAU;QACV,UAAU;QACV,OAAO;QACP,SAAS;QACV,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;;;;;;;OAYG;IACH,oFAgCC;IAED;;;;;;;;;;;;OAYG;IACH,qDARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACkB,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;OAIG;IACH,qGA0BC;IAED;;;;OAIG;IACH,yFAKC;IAGD;;;;;OAKG;IACH,wEA0BC;IAED;;;;;OAKG;IACH,4DAKC;IAGD;;;;;;;OAOG;IACH,8DAuBC;IAED;;;;;;;OAOG;IACH,+BAJG;QAAsB,SAAS;QACF,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;OAKG;IACH,4CA0BC;IAED;;;;;OAKG;IACH,gCAKC;IAGD;;;;;OAKG;IACH,+CA0BC;IAED;;;;;OAKG;IACH,mCAKC;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,qBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;OAKG;IACH,wDA0BC;IAED;;;;;OAKG;IACH,4CAKC;IAGD;;;;;OAKG;IACH,4CA0BC;IAED;;;;;OAKG;IACH,gCAKC;IAGD;;;;OAIG;IACH,oDA0BC;IAED;;;;OAIG;IACH,wCAKC;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;OAKG;IACH,4CA0BC;IAED;;;;;OAKG;IACH,gCAKC;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,qBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TestPointsApi' {
   /**
@@ -4313,10 +4244,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
           testPointFilterRequestModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=TestPointsApi.d.ts.map
-}
-declare module 'testit-api-client/api/TestPointsApi.d.ts' {
-  {"version":3,"file":"TestPointsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TestPointsApi.js"],"names":[],"mappings":"AAsBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,mEA0BC;IAED;;;;OAIG;IACH,uDAKC;IAGD;;;;OAIG;IACH,mEA0BC;IAED;;;;OAIG;IACH,uDAKC;IAGD;;;;;;;;;;OAUG;IACH,iEA2BC;IAED;;;;;;;;;;OAUG;IACH,kCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACuB,2BAA2B,EAA1E,GAAwC;KAChD,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,+DA2BC;IAED;;;;;;;;;;OAUG;IACH,gCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACuB,2BAA2B,EAA1E,GAAwC;KAChD,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TestResultsApi' {
   /**
@@ -4594,10 +4522,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        */
       getAttachments(id: string): Promise<any>;
   }
-  //# sourceMappingURL=TestResultsApi.d.ts.map
-}
-declare module 'testit-api-client/api/TestResultsApi.d.ts' {
-  {"version":3,"file":"TestResultsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TestResultsApi.js"],"names":[],"mappings":"AA8BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,0IA2BC;IAED;;;;;OAKG;IACH,2GAHG;QAAqD,yBAAyB,EAAtE,GAAsC;KAC9C,gBAOF;IAGD;;;;;OAKG;IACH,6HA2BC;IAED;;;;;OAKG;IACH,8FAHG;QAAgD,oBAAoB,EAA5D,GAAiC;KACzC,gBAOF;IAGD;;;;OAIG;IACH,sEA0BC;IAED;;;;OAIG;IACH,0DAKC;IAGD;;;;;OAKG;IACH,yGA+BC;IAED;;;;;OAKG;IACH,6FAKC;IAGD;;;;OAIG;IACH,2EA0BC;IAED;;;;OAIG;IACH,+DAKC;IAGD;;;;OAIG;IACH,4DA0BC;IAED;;;;OAIG;IACH,gDAKC;IAGD;;;;;;OAMG;IACH,uEA2BC;IAED;;;;;;OAMG;IACH,wCAHG;QAAqD,yBAAyB,EAAtE,GAAsC;KAC9C,gBAOF;IAGD;;;;OAIG;IACH,kEA0BC;IAED;;;;OAIG;IACH,sDAKC;IAGD;;;;;;;;;;OAUG;IACH,gEA2BC;IAED;;;;;;;;;;OAUG;IACH,iCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACqB,yBAAyB,EAAtE,GAAsC;KAC9C,gBAOF;IAGD;;;;;OAKG;IACH,0EAsBC;IAED;;;;;OAKG;IACH,2CAHG;QAAqD,yBAAyB,EAAtE,GAAsC;KAC9C,gBAOF;IAGD;;;;;;;OAOG;IACH,kEA4BC;IAED;;;;;;;OAOG;IACH,mCAHG;QAAmB,IAAI,EAAf,IAAI;KACZ,gBAOF;IAGD;;;;;;OAMG;IACH,6EA+BC;IAED;;;;;;OAMG;IACH,iEAKC;IAGD;;;;;;;;;;;;OAYG;IACH,0FAqCC;IAED;;;;;;;;;;;;OAYG;IACH,2DAPG;QAAqB,KAAK;QACL,MAAM;QACgB,UAAU,EAA7C,GAA4B;QACf,eAAe;QACd,OAAO;KAC7B,gBAOF;IAGD;;;;;;OAMG;IACH,0EA+BC;IAED;;;;;;OAMG;IACH,8DAKC;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TestRunsApi' {
   /**
@@ -5013,10 +4938,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
           updateEmptyTestRunApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=TestRunsApi.d.ts.map
-}
-declare module 'testit-api-client/api/TestRunsApi.d.ts' {
-  {"version":3,"file":"TestRunsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TestRunsApi.js"],"names":[],"mappings":"AAoCA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,yDAsBC;IAED;;;;;;OAMG;IACH,0BAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;OAIG;IACH,4EA0BC;IAED;;;;OAIG;IACH,gEAKC;IAGD;;;;;OAKG;IACH,4DA0BC;IAED;;;;;OAKG;IACH,gDAKC;IAGD;;;;;OAKG;IACH,+DA0BC;IAED;;;;;OAKG;IACH,mDAKC;IAGD;;;;;;OAMG;IACH,2EA2BC;IAED;;;;;;OAMG;IACH,4CAHG;QAAgE,oCAAoC,EAA5F,GAAiD;KACzD,gBAOF;IAGD;;;;;OAKG;IACH,iEA0BC;IAED;;;;;OAKG;IACH,qDAKC;IAGD;;;;;;OAMG;IACH,qFA2BC;IAED;;;;;;OAMG;IACH,sDAHG;QAA2D,+BAA+B,EAAlF,GAA4C;KACpD,gBAOF;IAGD;;;;OAIG;IACH,0EA0BC;IAED;;;;OAIG;IACH,8DAKC;IAGD;;;;;;OAMG;IACH,mFA2BC;IAED;;;;;;OAMG;IACH,oDAHG;QAAiE,qCAAqC,EAA9F,GAAkD;KAC1D,gBAOF;IAGD;;;;OAIG;IACH,gGA0BC;IAED;;;;OAIG;IACH,oFAKC;IAGD;;;;;;OAMG;IACH,gEAsBC;IAED;;;;;;OAMG;IACH,iCAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;;OAMG;IACH,kEAsBC;IAED;;;;;;OAMG;IACH,mCAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,6DA2BC;IAED;;;;;;;;;;OAUG;IACH,8BARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACiB,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;OAKG;IACH,qEAsBC;IAED;;;;;OAKG;IACH,sCAHG;QAA0D,8BAA8B,EAAhF,GAA2C;KACnD,gBAOF;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;;OAMG;IACH,8DAsBC;IAED;;;;;;OAMG;IACH,+BAHG;QAAmE,uCAAuC,EAAlG,GAAoD;KAC5D,gBAOF;IAGD;;;;;;OAMG;IACH,mEAsBC;IAED;;;;;;OAMG;IACH,oCAHG;QAAwE,4CAA4C,EAA5G,GAAyD;KACjE,gBAOF;IAGD;;;;;;OAMG;IACH,8DAsBC;IAED;;;;;;OAMG;IACH,+BAHG;QAAmE,uCAAuC,EAAlG,GAAoD;KAC5D,gBAOF;IAGD;;;;;;OAMG;IACH,iDAsBC;IAED;;;;;;OAMG;IACH,kBAHG;QAAsD,0BAA0B,EAAxE,GAAuC;KAC/C,gBAOF;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;;;OAOG;IACH,8EA2BC;IAED;;;;;;;OAOG;IACH,kEAKC;IAGD;;;;;OAKG;IACH,mDA0BC;IAED;;;;;OAKG;IACH,uCAKC;IAGD;;;;;OAKG;IACH,kDA0BC;IAED;;;;;OAKG;IACH,sCAKC;IAGD;;;;;;OAMG;IACH,iDAsBC;IAED;;;;;;OAMG;IACH,kBAHG;QAAsD,0BAA0B,EAAxE,GAAuC;KAC/C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/TestSuitesApi' {
   /**
@@ -5258,10 +5180,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
           requestBody: Array<string>;
       }): Promise<any>;
   }
-  //# sourceMappingURL=TestSuitesApi.d.ts.map
-}
-declare module 'testit-api-client/api/TestSuitesApi.d.ts' {
-  {"version":3,"file":"TestSuitesApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/TestSuitesApi.js"],"names":[],"mappings":"AA6BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;OAMG;IACH,0EA2BC;IAED;;;;;;OAMG;IACH,2CAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;;;OAOG;IACH,wEA2BC;IAED;;;;;;;OAOG;IACH,4DAKC;IAGD;;;;OAIG;IACH,mEA0BC;IAED;;;;OAIG;IACH,uDAKC;IAGD;;;;;;OAMG;IACH,gFA2BC;IAED;;;;;;OAMG;IACH,iDAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;IAGD;;;;;OAKG;IACH,yDAsBC;IAED;;;;;OAKG;IACH,0BAHG;QAAgD,oBAAoB,EAA5D,GAAiC;KACzC,gBAOF;IAGD;;;;;OAKG;IACH,wDAsBC;IAED;;;;;OAKG;IACH,yBAHG;QAA+C,mBAAmB,EAA1D,GAAgC;KACxC,gBAOF;IAGD;;;;;OAKG;IACH,sDA0BC;IAED;;;;;OAKG;IACH,0CAKC;IAGD;;;;;OAKG;IACH,qEA0BC;IAED;;;;;OAKG;IACH,yDAKC;IAGD;;;;;OAKG;IACH,wDA0BC;IAED;;;;;OAKG;IACH,4CAKC;IAGD;;;;;OAKG;IACH,yDA0BC;IAED;;;;;OAKG;IACH,6CAKC;IAGD;;;;;OAKG;IACH,uDA0BC;IAED;;;;;OAKG;IACH,2CAKC;IAGD;;;;;;;;;;;;OAYG;IACH,iEAgCC;IAED;;;;;;;;;;;;OAYG;IACH,kCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACyB,6BAA6B,EAA9E,GAA0C;KAClD,gBAOF;IAGD;;;;;;;OAOG;IACH,gFA2BC;IAED;;;;;;;OAOG;IACH,iDAHG;QAA6B,WAAW,EAAhC,KAAK,QAAS;KACtB,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/UsersApi' {
   /**
@@ -5294,10 +5213,7 @@ declare module 'testit-api-client/api/UsersApi' {
           userName: string;
       }): Promise<any>;
   }
-  //# sourceMappingURL=UsersApi.d.ts.map
-}
-declare module 'testit-api-client/api/UsersApi.d.ts' {
-  {"version":3,"file":"UsersApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/UsersApi.js"],"names":[],"mappings":"AAmBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,yDAuBC;IAED;;;;OAIG;IACH,0BAHG;QAAqB,QAAQ;KAC7B,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/WebhooksApi' {
   /**
@@ -5484,10 +5400,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
           webHookTestModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=WebhooksApi.d.ts.map
-}
-declare module 'testit-api-client/api/WebhooksApi.d.ts' {
-  {"version":3,"file":"WebhooksApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/WebhooksApi.js"],"names":[],"mappings":"AA4BA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;OAIG;IACH,yDAsBC;IAED;;;;OAIG;IACH,0BAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;OAKG;IACH,sDAuBC;IAED;;;;;OAKG;IACH,uBAHG;QAAqB,SAAS;KAC9B,gBAOF;IAGD;;;;OAIG;IACH,4DA0BC;IAED;;;;OAIG;IACH,gDAKC;IAGD;;;;OAIG;IACH,yDA0BC;IAED;;;;OAIG;IACH,6CAKC;IAGD;;;;;;OAMG;IACH,oEA2BC;IAED;;;;;;OAMG;IACH,qCAHG;QAA4C,gBAAgB,EAApD,GAA6B;KACrC,gBAOF;IAGD;;;;;OAKG;IACH,uDAsBC;IAED;;;;;OAKG;IACH,wBAHG;QAA4C,gBAAgB,EAApD,GAA6B;KACrC,gBAOF;IAGD;;;;OAIG;IACH,sDAsBC;IAED;;;;OAIG;IACH,uBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,6DA2BC;IAED;;;;;;;;;;OAUG;IACH,8BARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACoB,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;;OAMG;IACH,sEAwBC;IAED;;;;;;OAMG;IACH,uCAJG;QAA4C,SAAS,EAA7C,GAA6B;QACW,aAAa,EAArD,GAAiC;KACzC,gBAOF;IAGD;;;;;OAKG;IACH,2DAsBC;IAED;;;;;OAKG;IACH,4BAHG;QAA4C,gBAAgB,EAApD,GAA6B;KACrC,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/WebhooksLogsApi' {
   /**
@@ -5561,10 +5474,7 @@ declare module 'testit-api-client/api/WebhooksLogsApi' {
        */
       apiV2WebhooksLogsIdGet(id: string): Promise<any>;
   }
-  //# sourceMappingURL=WebhooksLogsApi.d.ts.map
-}
-declare module 'testit-api-client/api/WebhooksLogsApi.d.ts' {
-  {"version":3,"file":"WebhooksLogsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/WebhooksLogsApi.js"],"names":[],"mappings":"AAmBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;;;;OAUG;IACH,0DA4BC;IAED;;;;;;;;;;OAUG;IACH,2BARG;QAAqB,SAAS;QACT,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;OAIG;IACH,gEA0BC;IAED;;;;OAIG;IACH,oDAKC;IAGD;;;;OAIG;IACH,6DA0BC;IAED;;;;OAIG;IACH,iDAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/api/WorkItemsApi' {
   /**
@@ -6126,10 +6036,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
           updateWorkItemApiModel: any;
       }): Promise<any>;
   }
-  //# sourceMappingURL=WorkItemsApi.d.ts.map
-}
-declare module 'testit-api-client/api/WorkItemsApi.d.ts' {
-  {"version":3,"file":"WorkItemsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/WorkItemsApi.js"],"names":[],"mappings":"AAuCA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;;;OAOG;IACH,iFA4BC;IAED;;;;;;;OAOG;IACH,kDAHG;QAAmB,IAAI,EAAf,IAAI;KACZ,gBAOF;IAGD;;;;;OAKG;IACH,uFA0BC;IAED;;;;;OAKG;IACH,2EAKC;IAGD;;;;;;;;;;;OAWG;IACH,4EAgCC;IAED;;;;;;;;;;;OAWG;IACH,6CAPG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;OAKG;IACH,iEA0BC;IAED;;;;;OAKG;IACH,qDAKC;IAGD;;;;;OAKG;IACH,+DA0BC;IAED;;;;;OAKG;IACH,mDAKC;IAGD;;;;;OAKG;IACH,oEA0BC;IAED;;;;;OAKG;IACH,wDAKC;IAGD;;;;;OAKG;IACH,+DA0BC;IAED;;;;;OAKG;IACH,mDAKC;IAGD;;;;;;;;;;;;;;;;;;;;;OAqBG;IACH,uFA0CC;IAED;;;;;;;;;;;;;;;;;;;;;OAqBG;IACH,wDAjBG;QAAmB,IAAI,EAAf,IAAI;QACO,EAAE,EAAb,IAAI;QACiB,gBAAgB,EAArC,KAAK,QAAS;QACO,WAAW,EAAhC,KAAK,QAAS;QACO,OAAO,EAA5B,KAAK,QAAS;QACO,QAAQ,EAA7B,KAAK,QAAS;QACO,WAAW,EAAhC,KAAK,QAAS;QACA,WAAW;QACX,SAAS;QACF,UAAU,EAA/B,KAAK,QAAS;QACD,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;KAChC,gBAOF;IAGD;;;;;;OAMG;IACH,oGA+BC;IAED;;;;;;OAMG;IACH,wFAKC;IAGD;;;;;;;;;OASG;IACH,uEA2BC;IAED;;;;;;;;;OASG;IACH,wCARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACmB,uBAAuB,EAAlE,GAAoC;KAC5C,gBAOF;IAGD;;;;;;OAMG;IACH,4DAsBC;IAED;;;;;;OAMG;IACH,6BAHG;QAAiD,qBAAqB,EAA9D,GAAkC;KAC1C,gBAOF;IAGD;;;;;OAKG;IACH,wDAsBC;IAED;;;;;OAKG;IACH,yBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;;;;;OAUG;IACH,8DA2BC;IAED;;;;;;;;;;OAUG;IACH,+BARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACkB,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;IAGD;;;;;;;;;;;;OAYG;IACH,4GAgCC;IAED;;;;;;;;;;;;OAYG;IACH,6EARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACuC,2CAA2C,EAA1G,GAAwD;KAChE,gBAOF;IAGD;;;;;;;;;;;;OAYG;IACH,6GAgCC;IAED;;;;;;;;;;;;OAYG;IACH,8EARG;QAAqB,IAAI;QACJ,IAAI;QACJ,OAAO;QACP,WAAW;QACX,WAAW;QACgC,oCAAoC,EAA5F,GAAiD;KACzD,gBAOF;IAGD;;;;;OAKG;IACH,mGA0BC;IAED;;;;;OAKG;IACH,uFAKC;IAGD;;;;;OAKG;IACH,qEA0BC;IAED;;;;;OAKG;IACH,yDAKC;IAGD;;;;;OAKG;IACH,qDA0BC;IAED;;;;;OAKG;IACH,yCAKC;IAGD;;;;;OAKG;IACH,8DA0BC;IAED;;;;;OAKG;IACH,kDAKC;IAGD;;;;;;;OAOG;IACH,+DA6BC;IAED;;;;;;;OAOG;IACH,gCAJG;QAAqB,SAAS;QACT,aAAa;KAClC,gBAOF;IAGD;;;;;;;;OAQG;IACH,iEA6BC;IAED;;;;;;;;OAQG;IACH,kCAJG;QAAqB,SAAS;QACT,aAAa;KAClC,gBAOF;IAGD;;;;;OAKG;IACH,4DA0BC;IAED;;;;;OAKG;IACH,gDAKC;IAGD;;;;;;;;OAQG;IACH,qEA6BC;IAED;;;;;;;;OAQG;IACH,sCAJG;QAAqB,iBAAiB;QACjB,aAAa;KAClC,gBAOF;IAGD;;;;OAIG;IACH,oDA0BC;IAED;;;;OAIG;IACH,wCAKC;IAGD;;;;OAIG;IACH,sDA0BC;IAED;;;;OAIG;IACH,0CAKC;IAGD;;;;;;OAMG;IACH,oDAsBC;IAED;;;;;;OAMG;IACH,qBAHG;QAAkD,sBAAsB,EAAhE,GAAmC;KAC3C,gBAOF;CAGJ"}
+
 }
 declare module 'testit-api-client/api/WorkItemsCommentsApi' {
   /**
@@ -6220,10 +6127,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
        */
       apiV2WorkItemsIdCommentsGet(id: string): Promise<any>;
   }
-  //# sourceMappingURL=WorkItemsCommentsApi.d.ts.map
-}
-declare module 'testit-api-client/api/WorkItemsCommentsApi.d.ts' {
-  {"version":3,"file":"WorkItemsCommentsApi.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/api/WorkItemsCommentsApi.js"],"names":[],"mappings":"AAqBA;;;;EAIE;AACF;IAEI;;;;;;MAME;IACF,wBAHU,GAAgB,EAKzB;IADG,eAAgD;IAKpD;;;;;OAKG;IACH,mFA0BC;IAED;;;;;OAKG;IACH,uEAKC;IAGD;;;;;;OAMG;IACH,gEAsBC;IAED;;;;;;OAMG;IACH,iCAHG;QAAoD,wBAAwB,EAApE,GAAqC;KAC7C,gBAOF;IAGD;;;;;OAKG;IACH,+DAsBC;IAED;;;;;OAKG;IACH,gCAHG;QAAmD,uBAAuB,EAAlE,GAAoC;KAC5C,gBAOF;IAGD;;;;OAIG;IACH,uEA0BC;IAED;;;;OAIG;IACH,2DAKC;IAGD;;;;OAIG;IACH,kEA0BC;IAED;;;;OAIG;IACH,sDAKC;CAGJ"}
+
 }
 declare module 'testit-api-client/ApiClient' {
   export default ApiClient;
@@ -6434,10 +6338,7 @@ declare module 'testit-api-client/ApiClient' {
       type CollectionFormatEnum = string;
       let instance: any;
   }
-  //# sourceMappingURL=ApiClient.d.ts.map
-}
-declare module 'testit-api-client/ApiClient.d.ts' {
-  {"version":3,"file":"ApiClient.d.ts","sourceRoot":"","sources":["../../../../../../../D/work/testit/adapters/js/api-client-js/src/ApiClient.js"],"names":[],"mappings":";AAgBA;;;EAGE;AAEF;;;;;;EAME;AACF;IAsGI;;;;MAIE;IACF,yCASC;IAmYD;;;;MAIE;IACF,+BAFY,IAAI,CAOf;IAED;;;;;;;;MAQE;IACF,2BAPU,CAAC,YAAa,CAAC,QACf,CAAC,SAAO,KAAK,QAAS,iBAAiC,CAAC,OA+DjE;IA2CD;;;;MAIE;IACF,iCAHe,WAAY,OACb,WAAY,uBAczB;IAhoBD;;;;OAIG;IACH,+BAmEC;IAlEG;;;;OAIG;IACH,iBAA4C;IAE5C;;;OAGG;IACH,iBAFU,KAAK,QAAS,CAIvB;IAER;;;;WAIU;IACH,gBAHU,KAAK,QAAS,CAKvB;IAED;;;;OAIG;IACH,gBAAoB;IAEpB;;;;;OAKG;IACH,eAAiB;IAExB;;;;WAIU;IACH,uBAA0B;IAOxB,WAAmC;IAMpC,kBAAwB;IAKzB,aAAmB;IAGnB,4BAA8B;IAGlC;;;OAGG;IACH,kCAEC;IAED;;;;MAIE;IACF,kCAYC;IAkBF;;;;;;;OAOG;IACF,qEAwBC;IAED;;;;;;;;;;MAUE;IACF,yCAEC;IAED;;;;MAIE;IACF,gCAHU,KAAK,QAAS,UAWvB;IAED;;;;MAIE;IACF,iCA4BC;IAED;;;;;;;;;MASE;IACF,kCAcC;IAED;;;;;;MAME;IACF,qDAJU,GAAqC,GACnC,cAAY,CAwBvB;IAED;;;;MAIE;IACF,4CAFU,KAAK,QAAS,QAgDvB;IAEF;;;;;;;;OAQG;IACF,uCANU,CAAC,SAAO,KAAK,QAAS,iBAAiC,CAAC,OAoBjE;IAGF;;;;;;;;;;;;;;;;OAgBG;IACF,4IARU,KAAK,QAAS,gBACd,KAAK,QAAS,WACd,KAAK,QAAS,cACd,CAAC,iBAAa,cAAc,CAAC,qCAyItC;IAkFH;;;QAGI;IACF;;;QAOC;IAED,4DA0BC;CAoBJ;;;;;;;;;;;;;kBAyCQ,GAAgB"}
+
 }
 declare module 'testit-api-client/index' {
   import ApiClient from 'testit-api-client/ApiClient';
@@ -6982,10 +6883,7 @@ declare module 'testit-api-client/index' {
   import WorkItemsApi from 'testit-api-client/api/WorkItemsApi';
   import WorkItemsCommentsApi from 'testit-api-client/api/WorkItemsCommentsApi';
   export { ApiClient, AIServiceModelApiResult, AIServiceModelApiResultReply, ActionUpdate, ApiExternalServiceCategory, AssignAttachmentApiModel, AssignIterationApiModel, AttachmentApiResult, AttachmentChangeViewModel, AttachmentChangeViewModelArrayChangedFieldViewModel, AttachmentModel, AttachmentPutModel, AttachmentPutModelAutoTestStepResultsModel, AttachmentUpdateRequest, AuditApiResult, AutoTest, AutoTestApiResult, AutoTestAverageDurationApiResult, AutoTestBulkDeleteApiModel, AutoTestBulkDeleteApiResult, AutoTestChangeViewModel, AutoTestChangeViewModelArrayChangedFieldViewModel, AutoTestClassCountApiModel, AutoTestCreateApiModel, AutoTestExtractionApiModel, AutoTestFilterApiModel, AutoTestFilterModel, AutoTestFlakyBulkApiModel, AutoTestIdModel, AutoTestModel, AutoTestModelV2GetModel, AutoTestNamespaceApiResult, AutoTestNamespaceCountApiModel, AutoTestNamespacesCountResponse, AutoTestOutcome, AutoTestProjectSettingsApiModel, AutoTestProjectSettingsApiResult, AutoTestResultHistoryApiResult, AutoTestResultHistorySelectApiModel, AutoTestResultReasonShort, AutoTestResultReasonsCountItemModel, AutoTestResultReasonsCountModel, AutoTestResultsForTestRunModel, AutoTestSearchApiModel, AutoTestSearchIncludeApiModel, AutoTestSelectApiModel, AutoTestSelectModel, AutoTestShortApiResult, AutoTestStep, AutoTestStepApiModel, AutoTestStepApiResult, AutoTestStepModel, AutoTestStepResult, AutoTestStepResultUpdateRequest, AutoTestStepResultsApiResult, AutoTestUpdateApiModel, AutoTestWorkItemIdentifierApiResult, AutoTestsExtractionModel, AutotestResultOutcome, AutotestResultReasonFilterModel, AutotestResultReasonShortGetModel, AvailableFailureCategory, AvailableTestResultOutcome, BackgroundJobAttachmentModel, BackgroundJobFilterModel, BackgroundJobGetModel, BackgroundJobState, BackgroundJobType, BooleanChangedFieldViewModel, BooleanNullableChangedFieldViewModel, CollectionFilter, CollectionOperator, CompositeFilter, ConfigurationByParametersModel, ConfigurationExtractionApiModel, ConfigurationExtractionModel, ConfigurationFilterApiModel, ConfigurationFilterModel, ConfigurationModel, ConfigurationPostModel, ConfigurationPutModel, ConfigurationSelectApiModel, ConfigurationSelectModel, ConfigurationShort, ConfigurationShortApiResult, ConfigurationShortModel, CreateDefectApiModel, CreateEmptyTestRunApiModel, CreateFailureCategoryApiModel, CreateFailureClassRegexApiModel, CreateLinkApiModel, CreateParameterApiModel, CreateProjectApiModel, CreateProjectFailureCategoryApiModel, CreateStepApiModel, CreateTagApiModel, CreateTestPlanApiModel, CreateTestRunAndFillByAutoTestsApiModel, CreateTestRunAndFillByConfigurationsApiModel, CreateTestRunAndFillByWorkItemsApiModel, CreateTestStatusApiModel, CreateWorkItemApiModel, CreateWorkItemPreviewsApiModel, CreateWorkflowApiModel, CustomAttributeApiResult, CustomAttributeChangeModel, CustomAttributeGetModel, CustomAttributeModel, CustomAttributeOptionApiResult, CustomAttributeOptionModel, CustomAttributeOptionPostModel, CustomAttributePostModel, CustomAttributePutModel, CustomAttributeSearchQueryModel, CustomAttributeSearchResponseModel, CustomAttributeTemplateModel, CustomAttributeTemplatePostModel, CustomAttributeTemplatePutModel, CustomAttributeTemplateSearchQueryModel, CustomAttributeTemplateValidationResult, CustomAttributeTestPlanProjectRelationPutModel, CustomAttributeType, CustomAttributeTypesEnum, CustomAttributeValidationResult, DateTimeRangeSelectorModel, DefectApiModel, DeletionState, DemoProjectApiResult, EnableProjectExternalServiceApiModel, ExternalFormAllowedValueModel, ExternalFormCreateModel, ExternalFormFieldModel, ExternalFormLinkModel, ExternalFormModel, ExternalIssueApiField, ExternalIssueApiFieldSuggestion, ExternalIssueApiFieldSuggestionReply, ExternalIssueApiMetadata, ExternalIssueApiPriority, ExternalIssueApiResult, ExternalIssueApiType, ExternalIssueExternalServiceApiResult, ExternalIssueMetadataModel, ExternalIssueModel, ExternalIssuePriorityModel, ExternalIssueTypeModel, ExternalLinkModel, ExternalServiceMetadataApiResult, ExternalServicesMetadataApiResult, FailureCategory, FailureCategoryApiResult, FailureCategoryGroupApiModel, FailureCategoryGroupApiResult, FailureCategoryGroupItemApiResult, FailureCategoryGroupItemApiResultReply, FailureCategoryGroupSearchApiModel, FailureCategoryItemApiResult, FailureCategoryModel, FailureClassRegexApiResult, Filter, FilterModel, FilterOperator, GenerateWorkItemPreviewsApiModel, GenerateWorkItemPreviewsApiResult, GetAIServiceModelsApiModel, GetExternalFormApiResult, GetExternalIssueSuggestionsApiModel, GetShortProjectsApiModel, GetXlsxTestPointsByTestPlanModel, GlobalCustomAttributePostModel, GlobalCustomAttributeUpdateModel, GlobalSearchItemResult, GlobalSearchRequest, GlobalSearchResponse, GuidChangedFieldViewModel, GuidExtractionModel, IFilter, ImageResizeType, Inquiry, Int32ChangedFieldViewModel, Int32RangeSelectorModel, Int64ChangedFieldViewModel, Int64RangeSelectorModel, IterationApiResult, IterationModel, Label, LabelApiModel, LabelApiResult, LabelShortModel, LastTestResultApiResult, LastTestResultModel, Link, LinkApiResult, LinkCreateApiModel, LinkModel, LinkPostModel, LinkPutModel, LinkShort, LinkShortApiResult, LinkShortModel, LinkType, LinkUpdateApiModel, ListSortDirection, LogicalOperator, ManualRerunApiResult, ManualRerunSelectTestResultsApiModel, ManualRerunTestResultApiModel, NamedEntityApiModel, NotificationModel, NotificationQueryFilterModel, NotificationTypeModel, Operation, Order, Page, ParameterApiResult, ParameterGroupApiResult, ParameterGroupsFilterApiModel, ParameterIterationModel, ParameterShortApiResult, ParameterShortModel, ParametersFilterApiModel, PeriodViewModel, PeriodViewModelChangedFieldViewModel, PreviewsIssueLinkApiModel, PreviewsIssueLinkApiResult, ProblemDetails, ProjectApiResult, ProjectAttributesFilterModel, ProjectCustomAttributeTemplateGetModel, ProjectCustomAttributesTemplatesFilterModel, ProjectDetailedFailureCategoryApiResult, ProjectExternalServiceApiResult, ProjectExternalServiceSettingsApiResult, ProjectExternalServicesApiResult, ProjectExtractionModel, ProjectFailureCategoryApiResult, ProjectFailureCategoryGroupItemApiResult, ProjectFailureCategoryGroupItemApiResultReply, ProjectModel, ProjectNameApiResult, ProjectSelectModel, ProjectShortApiResult, ProjectShortApiResultReply, ProjectShortModel, ProjectShortestModel, ProjectTestPlansFilterModel, ProjectType, ProjectTypeModel, ProjectsFilterModel, ReplaceProjectExternalServiceApiModel, RequestType, RequestTypeApiModel, RequestTypeModel, RerunTestResultApiResult, RerunTestResultModel, RerunsModel, SearchCustomAttributeTemplateGetModel, SearchExternalIssuesApiModel, SearchTestRunsApiModel, SearchTestStatusesApiModel, SearchWebhooksQueryModel, SearchWorkItemLinkUrlsApiResult, SearchWorkflowProjectsApiModel, SearchWorkflowsApiModel, SectionModel, SectionMoveModel, SectionPostModel, SectionPutModel, SectionRenameModel, SectionWithStepsModel, SelectTagsApiModel, SharedStepChangeViewModel, SharedStepModel, SharedStepReferenceModel, SharedStepReferenceSectionModel, SharedStepReferenceSectionsQueryFilterModel, SharedStepReferencesQueryFilterModel, SharedStepResultApiModel, ShortConfiguration, StepCommentApiModel, StepModel, StepPostModel, StepPutModel, StepResultApiModel, StringArrayChangedFieldViewModel, StringChangedFieldViewModel, StringChangedFieldWithDiffsViewModel, StringExtractionModel, TagApiModel, TagApiResult, TagModel, TagShortApiResult, TagsExtractionApiModel, TagsFilterApiModel, TestPlanApiResult, TestPlanChangeModel, TestPlanChangedFieldsViewModel, TestPlanExtractionModel, TestPlanGroupByStatus, TestPlanGroupByStatusCode, TestPlanGroupByStatusType, TestPlanGroupByTestSuite, TestPlanGroupByTester, TestPlanGroupByTesterAndStatus, TestPlanGroupByTesterAndStatusCode, TestPlanLink, TestPlanModel, TestPlanSelectModel, TestPlanShortModel, TestPlanStatus, TestPlanStatusModel, TestPlanSummaryModel, TestPlanTagApiResult, TestPlanTestPointsAnalyticsApiModel, TestPlanTestPointsAnalyticsApiResult, TestPlanTestPointsApiModel, TestPlanTestPointsAutoTestsRerunApiModel, TestPlanTestPointsAutoTestsRunApiModel, TestPlanTestPointsExtractionApiModel, TestPlanTestPointsGroupApiModel, TestPlanTestPointsGroupApiResult, TestPlanTestPointsGroupSearchApiResult, TestPlanTestPointsGroupSearchItemApiResult, TestPlanTestPointsInquiryApiModel, TestPlanTestPointsSearchApiModel, TestPlanTestPointsSearchApiResult, TestPlanTestPointsSearchStatusCountersApiResult, TestPlanTestPointsSectionSearchApiResult, TestPlanTestPointsSetTestersApiModel, TestPlanTestPointsStatusCodeGroupApiResult, TestPlanTestPointsStatusGroupApiResult, TestPlanTestPointsStatusTypeGroupApiResult, TestPlanTestPointsTestSuiteSearchApiResult, TestPlanTestPointsTesterAndStatusGroupApiResult, TestPlanTestPointsTesterAndStatusTypeGroupApiResult, TestPlanTestPointsTesterGroupApiResult, TestPlanTestPointsWorkItemSearchApiResult, TestPlanWithAnalyticModel, TestPlanWithTestSuiteTreeModel, TestPoint, TestPointAnalyticResult, TestPointByTestSuiteModel, TestPointChangeViewModel, TestPointChangeViewModelChangedFieldViewModel, TestPointFilterModel, TestPointFilterRequestModel, TestPointResultApiResult, TestPointSelectModel, TestPointSelector, TestPointShortApiResult, TestPointShortModel, TestPointShortResponseModel, TestPointStatus, TestPointWithLastResultResponseModel, TestPointsExtractionModel, TestResultApiResult, TestResultChangeViewModel, TestResultChangeViewModelChangedFieldViewModel, TestResultChronologyModel, TestResultFailureClassApiResult, TestResultHistoryReportApiResult, TestResultOutcome, TestResultResponse, TestResultShortApiResult, TestResultShortResponse, TestResultStepCommentUpdateRequest, TestResultUpdateV2Request, TestResultV2GetModel, TestResultV2ShortModel, TestResultsExtractionApiModel, TestResultsFilterApiModel, TestResultsLocalFilterModel, TestResultsSelectApiModel, TestResultsStatisticsApiResult, TestResultsStatisticsFailureCategoriesApiResult, TestResultsStatisticsStatusesApiResult, TestRunAnalyticApiResult, TestRunApiResult, TestRunByAutoTestApiResult, TestRunExtractionApiModel, TestRunFilterApiModel, TestRunGroupByFailureClassApiResult, TestRunGroupByStatusApiResult, TestRunGroupByStatusTypeApiResult, TestRunNameApiResult, TestRunSelectApiModel, TestRunShortApiResult, TestRunState, TestRunStatisticsFilterApiModel, TestRunTestResultsPartialBulkSetModel, TestRunTestResultsSelectModel, TestRunV2ApiResult, TestStatusApiResult, TestStatusApiResultReply, TestStatusApiType, TestStatusModel, TestStatusShortApiResult, TestStatusType, TestSuiteApiResult, TestSuiteChangeViewModel, TestSuiteChangeViewModelChangedFieldViewModel, TestSuiteHierarchyApiResult, TestSuiteTestPlanApiModel, TestSuiteType, TestSuiteTypeApiResult, TestSuiteV2GetModel, TestSuiteV2PostModel, TestSuiteV2PutModel, TestSuiteWithChildrenModel, TestSuiteWorkItemsSearchModel, UpdateEmptyTestRunApiModel, UpdateFailureCategoryApiModel, UpdateFailureCategoryProjectApiModel, UpdateFailureClassRegexApiModel, UpdateLinkApiModel, UpdateMultipleAttachmentsApiModel, UpdateMultipleLinksApiModel, UpdateMultipleTestRunsApiModel, UpdateParameterApiModel, UpdateProjectApiModel, UpdateStepApiModel, UpdateTagApiModel, UpdateTestPlanApiModel, UpdateTestStatusApiModel, UpdateWorkItemApiModel, UpdateWorkflowApiModel, UserCustomNameValidationResponse, UserNameApiResult, UserRankModel, UserWithRankModel, ValidationProblemDetails, WebHookEventType, WebHookEventTypeModel, WebHookEventTypeRequest, WebHookModel, WebHookPostModel, WebHookTestModel, WebhookBulkUpdateApiModel, WebhookLogApiResult, WebhookResponse, WebhookVariablesType, WebhooksDeleteApiModel, WebhooksDeleteFilterApiModel, WebhooksExtractionApiModel, WebhooksFilterApiModel, WebhooksUpdateApiModel, WebhooksUpdateApiResult, WorkItemApiResult, WorkItemChangeModel, WorkItemChangedAttributeViewModel, WorkItemChangedFieldsViewModel, WorkItemCommentModel, WorkItemCommentPostModel, WorkItemCommentPutModel, WorkItemEntityTypeApiModel, WorkItemEntityTypes, WorkItemExternalMetadataFieldFilterApiModel, WorkItemExternalMetadataFieldFilterModel, WorkItemExternalMetadataFilterApiModel, WorkItemExternalMetadataFilterModel, WorkItemExtractionApiModel, WorkItemExtractionModel, WorkItemFilterApiModel, WorkItemFilterModel, WorkItemGroupGetModel, WorkItemGroupModel, WorkItemGroupType, WorkItemIdApiModel, WorkItemIndexApiResult, WorkItemLikeModel, WorkItemLinkChangeViewModel, WorkItemLinkChangeViewModelArrayChangedFieldViewModel, WorkItemLinkExtractionApiModel, WorkItemLinkFilterApiModel, WorkItemLinkFilterModel, WorkItemLinkUrlApiModel, WorkItemLinkUrlApiResult, WorkItemLinkUrlFilterApiModel, WorkItemLocalFilterModel, WorkItemLocalSelectModel, WorkItemModel, WorkItemMovePostModel, WorkItemPreviewApiModel, WorkItemPreviewStepApiModel, WorkItemPriority, WorkItemPriorityApiModel, WorkItemPriorityModel, WorkItemSearchQueryModel, WorkItemSelectApiModel, WorkItemSelectModel, WorkItemShortApiResult, WorkItemShortModel, WorkItemSourceTypeApiModel, WorkItemSourceTypeModel, WorkItemState, WorkItemStateApiModel, WorkItemStates, WorkItemStepChangeViewModel, WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel, WorkItemVersionModel, WorkflowApiResult, WorkflowExistsByNameApiResult, WorkflowProjectApiResult, WorkflowProjectApiResultApiCollectionPreview, WorkflowProjectApiResultReply, WorkflowShortApiResult, WorkflowShortApiResultReply, WorkflowStatusApiModel, WorkflowStatusApiResult, AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, ExternalIssuesApi, NotificationsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlanTestPointsApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestSuitesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi };
-  //# sourceMappingURL=index.d.ts.map
-}
-declare module 'testit-api-client/index.d.ts' {
-  {"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../../../../D/work/testit/adapters/js/api-client-js/src/index.js"],"names":[],"mappings":"sBAcsB,aAAa;oCACC,iCAAiC;yCAC5B,sCAAsC;yBACtD,sBAAsB;uCACR,oCAAoC;qCACtC,kCAAkC;oCACnC,iCAAiC;gCACrC,6BAA6B;sCACvB,mCAAmC;gEACT,6DAA6D;4BACjG,yBAAyB;+BACtB,4BAA4B;uDACJ,oDAAoD;oCACvE,iCAAiC;2BAC1C,wBAAwB;qBAC9B,kBAAkB;8BACT,2BAA2B;6CACZ,0CAA0C;uCAChD,oCAAoC;wCACnC,qCAAqC;oCACzC,iCAAiC;8DACP,2DAA2D;uCAClF,oCAAoC;mCACxC,gCAAgC;uCAC5B,oCAAoC;mCACxC,gCAAgC;gCACnC,6BAA6B;sCACvB,mCAAmC;4BAC7C,yBAAyB;0BAC3B,uBAAuB;oCACb,iCAAiC;uCAC9B,oCAAoC;2CAChC,wCAAwC;4CACvC,yCAAyC;4BACzD,yBAAyB;4CACT,yCAAyC;6CACxC,0CAA0C;2CAC5C,wCAAwC;gDACnC,6CAA6C;sCACvD,mCAAmC;gDACzB,6CAA6C;4CACjD,yCAAyC;2CAC1C,wCAAwC;mCAChD,gCAAgC;0CACzB,uCAAuC;mCAC9C,gCAAgC;gCACnC,6BAA6B;mCAC1B,gCAAgC;yBAC1C,sBAAsB;iCACd,8BAA8B;kCAC7B,+BAA+B;8BACnC,2BAA2B;+BAC1B,4BAA4B;4CACf,yCAAyC;yCAC5C,sCAAsC;mCAC5C,gCAAgC;gDACnB,6CAA6C;qCACxD,kCAAkC;kCACrC,+BAA+B;4CACrB,yCAAyC;8CACvC,2CAA2C;qCACpD,kCAAkC;uCAChC,oCAAoC;yCAClC,sCAAsC;qCAC1C,kCAAkC;kCACrC,+BAA+B;+BAClC,4BAA4B;8BAC7B,2BAA2B;yCAChB,sCAAsC;iDAC9B,8CAA8C;6BAClE,0BAA0B;+BACxB,4BAA4B;4BAC/B,yBAAyB;2CACV,wCAAwC;4CACvC,yCAAyC;yCAC5C,sCAAsC;wCACvC,qCAAqC;qCACxC,kCAAkC;+BACxC,4BAA4B;mCACxB,gCAAgC;kCACjC,+BAA+B;wCACzB,qCAAqC;qCACxC,kCAAkC;+BACxC,4BAA4B;wCACnB,qCAAqC;oCACzC,iCAAiC;iCACpC,8BAA8B;uCACxB,oCAAoC;0CACjC,uCAAuC;4CACrC,yCAAyC;+BACtD,4BAA4B;oCACvB,iCAAiC;kCACnC,+BAA+B;iDAChB,8CAA8C;+BAChE,4BAA4B;8BAC7B,2BAA2B;mCACtB,gCAAgC;oDACf,iDAAiD;yDAC5C,sDAAsD;oDAC3D,iDAAiD;qCAChE,kCAAkC;mCACpC,gCAAgC;2CACxB,wCAAwC;mCAChD,gCAAgC;qCAC9B,kCAAkC;uCAChC,oCAAoC;oCACvC,iCAAiC;iCACpC,8BAA8B;2CACpB,wCAAwC;uCAC5C,oCAAoC;2CAChC,wCAAwC;qCAC9C,kCAAkC;oCACnC,iCAAiC;4CACzB,yCAAyC;+CACtC,4CAA4C;yCAClD,sCAAsC;6CAClC,0CAA0C;4CAC3C,yCAAyC;oDACjC,iDAAiD;oDACjD,iDAAiD;2DAC1C,wDAAwD;gCACnF,6BAA6B;qCACxB,kCAAkC;4CAC3B,yCAAyC;uCAC9C,oCAAoC;2BAChD,wBAAwB;0BACzB,uBAAuB;iCAChB,8BAA8B;iDACd,8CAA8C;0CACrD,uCAAuC;oCAC7C,iCAAiC;mCAClC,gCAAgC;kCACjC,+BAA+B;8BACnC,2BAA2B;kCACvB,+BAA+B;4CACrB,yCAAyC;iDACpC,8CAA8C;qCAC1D,kCAAkC;qCAClC,kCAAkC;mCACpC,gCAAgC;iCAClC,8BAA8B;kDACb,+CAA+C;uCAC1D,oCAAoC;+BAC5C,4BAA4B;uCACpB,oCAAoC;mCACxC,gCAAgC;8BACrC,2BAA2B;6CACZ,0CAA0C;8CACzC,2CAA2C;4BAC7D,yBAAyB;qCAChB,kCAAkC;yCAC9B,sCAAsC;0CACrC,uCAAuC;8CACnC,2CAA2C;mDACtC,gDAAgD;+CACpD,4CAA4C;yCAClD,sCAAsC;iCAC9C,8BAA8B;uCACxB,oCAAoC;mBACxD,gBAAgB;wBACX,qBAAqB;2BAClB,wBAAwB;6CACN,0CAA0C;8CACzC,2CAA2C;uCAClD,oCAAoC;qCACtC,kCAAkC;gDACvB,6CAA6C;qCACxD,kCAAkC;6CAC1B,0CAA0C;2CAC5C,wCAAwC;6CACtC,0CAA0C;mCACpD,gCAAgC;gCACnC,6BAA6B;iCAC5B,8BAA8B;sCACzB,mCAAmC;gCACzC,6BAA6B;oBACzC,iBAAiB;4BACT,yBAAyB;oBACjC,iBAAiB;uCACE,oCAAoC;oCACvC,iCAAiC;uCAC9B,oCAAoC;oCACvC,iCAAiC;+BACtC,4BAA4B;2BAChC,wBAAwB;kBACjC,eAAe;0BACP,uBAAuB;2BACtB,wBAAwB;4BACvB,yBAAyB;oCACjB,iCAAiC;gCACrC,6BAA6B;iBAC5C,cAAc;0BACL,uBAAuB;+BAClB,4BAA4B;sBACrC,mBAAmB;0BACf,uBAAuB;yBACxB,sBAAsB;sBACzB,mBAAmB;+BACV,4BAA4B;2BAChC,wBAAwB;qBAC9B,kBAAkB;+BACR,4BAA4B;8BAC7B,2BAA2B;4BAC7B,yBAAyB;iCACpB,8BAA8B;iDACd,8CAA8C;0CACrD,uCAAuC;gCACjD,6BAA6B;8BAC/B,2BAA2B;yCAChB,sCAAsC;kCAC7C,+BAA+B;sBAC3C,mBAAmB;kBACvB,eAAe;iBAChB,cAAc;+BACA,4BAA4B;oCACvB,iCAAiC;0CAC3B,uCAAuC;oCAC7C,iCAAiC;oCACjC,iCAAiC;gCACrC,6BAA6B;qCACxB,kCAAkC;4BAC3C,yBAAyB;iDACJ,8CAA8C;sCACzD,mCAAmC;uCAClC,oCAAoC;2BAChD,wBAAwB;6BACtB,0BAA0B;yCACd,sCAAsC;mDAC5B,gDAAgD;wDAC3C,qDAAqD;oDACzD,iDAAiD;4CACzD,yCAAyC;oDACjC,iDAAiD;6CACxD,0CAA0C;mCACpD,gCAAgC;4CACvB,yCAAyC;qDAChC,kDAAkD;0DAC7C,uDAAuD;yBACxF,sBAAsB;iCACd,8BAA8B;+BAChC,4BAA4B;kCACzB,+BAA+B;uCAC1B,oCAAoC;8BAC7C,2BAA2B;iCACxB,8BAA8B;wCACvB,qCAAqC;wBACrD,qBAAqB;6BAChB,0BAA0B;gCACvB,6BAA6B;kDACX,+CAA+C;wBACzE,qBAAqB;gCACb,6BAA6B;6BAChC,0BAA0B;qCAClB,kCAAkC;iCACtC,8BAA8B;wBACvC,qBAAqB;kDACK,+CAA+C;yCACxD,sCAAsC;mCAC5C,gCAAgC;uCAC5B,oCAAoC;qCACtC,kCAAkC;4CAC3B,yCAAyC;2CAC1C,wCAAwC;oCAC/C,iCAAiC;yBAC5C,sBAAsB;6BAClB,0BAA0B;6BAC1B,0BAA0B;4BAC3B,yBAAyB;+BACtB,4BAA4B;kCACzB,+BAA+B;+BAClC,4BAA4B;sCACrB,mCAAmC;4BAC7C,yBAAyB;qCAChB,kCAAkC;4CAC3B,yCAAyC;wDAC7B,qDAAqD;iDAC5D,8CAA8C;qCAC1D,kCAAkC;+BACxC,4BAA4B;gCAC3B,6BAA6B;sBACvC,mBAAmB;0BACf,uBAAuB;yBACxB,sBAAsB;+BAChB,4BAA4B;6CACd,0CAA0C;wCAC/C,qCAAqC;iDAC5B,8CAA8C;kCAC7D,+BAA+B;wBACzC,qBAAqB;yBACpB,sBAAsB;qBAC1B,kBAAkB;8BACT,2BAA2B;mCACtB,gCAAgC;+BACpC,4BAA4B;8BAC7B,2BAA2B;gCACzB,6BAA6B;2CAClB,wCAAwC;oCAC/C,iCAAiC;kCACnC,+BAA+B;sCAC3B,mCAAmC;sCACnC,mCAAmC;qCACpC,kCAAkC;kCACrC,+BAA+B;2CACtB,wCAAwC;+CACpC,4CAA4C;yBAClE,sBAAsB;0BACrB,uBAAuB;gCACjB,6BAA6B;+BAC9B,4BAA4B;2BAChC,wBAAwB;gCACnB,6BAA6B;iCAC5B,8BAA8B;iCAC9B,8BAA8B;gDACf,6CAA6C;iDAC5C,8CAA8C;uCACxD,oCAAoC;qDACtB,kDAAkD;mDACpD,gDAAgD;iDAClD,8CAA8C;4CACnD,yCAAyC;6CACxC,0CAA0C;mDACpC,gDAAgD;uDAC5C,oDAAoD;8CAC7D,2CAA2C;6CAC5C,0CAA0C;8CACzC,2CAA2C;4DAC7B,yDAAyD;qDAChE,kDAAkD;iDACtD,8CAA8C;uDACxC,oDAAoD;mDACxD,gDAAgD;uDAC5C,oDAAoD;uDACpD,oDAAoD;4DAC/C,yDAAyD;gEACrD,6DAA6D;mDAC1E,gDAAgD;sDAC7C,mDAAmD;sCACnE,mCAAmC;2CAC9B,wCAAwC;sBAC7D,mBAAmB;oCACL,iCAAiC;sCAC/B,mCAAmC;qCACpC,kCAAkC;0DACb,uDAAuD;iCAChF,8BAA8B;wCACvB,qCAAqC;qCACxC,kCAAkC;iCACtC,8BAA8B;8BACjC,2BAA2B;oCACrB,iCAAiC;gCACrC,6BAA6B;wCACrB,qCAAqC;4BACjD,yBAAyB;iDACJ,8CAA8C;sCACzD,mCAAmC;gCACzC,6BAA6B;sCACvB,mCAAmC;2DACd,wDAAwD;sCAC7E,mCAAmC;4CAC7B,yCAAyC;6CACxC,0CAA0C;8BACzD,2BAA2B;+BAC1B,4BAA4B;qCACtB,kCAAkC;oCACnC,iCAAiC;+CACtB,4CAA4C;sCACrD,mCAAmC;iCACxC,8BAA8B;mCAC5B,gCAAgC;0CACzB,uCAAuC;sCAC3C,mCAAmC;wCACjC,qCAAqC;sCACvC,mCAAmC;2CAC9B,wCAAwC;4DACvB,yDAAyD;mDAClE,gDAAgD;qCAC9D,kCAAkC;6BAC1C,0BAA0B;uCAChB,oCAAoC;sCACrC,mCAAmC;kCACvC,+BAA+B;gDACjB,6CAA6C;0CACnD,uCAAuC;8CACnC,2CAA2C;iCACxD,8BAA8B;kCAC7B,+BAA+B;kCAC/B,+BAA+B;yBACxC,sBAAsB;4CACH,yCAAyC;kDACnC,+CAA+C;0CACvD,uCAAuC;+BAClD,4BAA4B;gCAC3B,6BAA6B;qCACxB,kCAAkC;8BACzC,2BAA2B;4BAC7B,yBAAyB;qCAChB,kCAAkC;2BAC5C,wBAAwB;+BACpB,4BAA4B;qCACtB,kCAAkC;0DACb,uDAAuD;wCACzE,qCAAqC;sCACvC,mCAAmC;0BAC/C,uBAAuB;mCACd,gCAAgC;gCACnC,6BAA6B;iCAC5B,8BAA8B;gCAC/B,6BAA6B;uCACtB,oCAAoC;0CACjC,uCAAuC;uCAC1C,oCAAoC;0CACjC,uCAAuC;iDAChC,8CAA8C;4CACnD,yCAAyC;+BACtD,4BAA4B;8CACb,2CAA2C;wCACjD,qCAAqC;2CAClC,wCAAwC;oCAC/C,iCAAiC;kCACnC,+BAA+B;+BAClC,4BAA4B;8BAC7B,2BAA2B;mCACtB,gCAAgC;qCAC9B,kCAAkC;mCACpC,gCAAgC;mCAChC,gCAAgC;6CACtB,0CAA0C;8BACzD,2BAA2B;0BAC/B,uBAAuB;8BACnB,2BAA2B;qCACpB,kCAAkC;6BAC1C,0BAA0B;kCACrB,+BAA+B;oCAC7B,iCAAiC;yBAC5C,sBAAsB;6BAClB,0BAA0B;6BAC1B,0BAA0B;sCACjB,mCAAmC;gCACzC,6BAA6B;4BACjC,yBAAyB;iCACpB,8BAA8B;mCAC5B,gCAAgC;yCAC1B,sCAAsC;uCACxC,oCAAoC;mCACxC,gCAAgC;mCAChC,gCAAgC;oCAC/B,iCAAiC;8BACvC,2BAA2B;gCACzB,6BAA6B;8CACf,2CAA2C;2CAC9C,wCAAwC;iCAClD,8BAA8B;qCAC1B,kCAAkC;oCACnC,iCAAiC;uCAC9B,oCAAoC;gCAC3C,6BAA6B;wDACL,qDAAqD;qDACxD,kDAAkD;mDACpD,gDAAgD;gDACnD,6CAA6C;uCACtD,oCAAoC;oCACvC,iCAAiC;mCAClC,gCAAgC;gCACnC,6BAA6B;kCAC3B,+BAA+B;+BAClC,4BAA4B;8BAC7B,2BAA2B;+BAC1B,4BAA4B;mCACxB,gCAAgC;8BACrC,2BAA2B;wCACjB,qCAAqC;kEACX,+DAA+D;2CACtF,wCAAwC;uCAC5C,oCAAoC;oCACvC,iCAAiC;oCACjC,iCAAiC;qCAChC,kCAAkC;0CAC7B,uCAAuC;qCAC5C,kCAAkC;qCAClC,kCAAkC;0BAC7C,uBAAuB;kCACf,+BAA+B;oCAC7B,iCAAiC;wCAC7B,qCAAqC;6BAChD,0BAA0B;qCAClB,kCAAkC;kCACrC,+BAA+B;qCAC5B,kCAAkC;mCACpC,gCAAgC;gCACnC,6BAA6B;mCAC1B,gCAAgC;+BACpC,4BAA4B;uCACpB,oCAAoC;oCACvC,iCAAiC;0BAC3C,uBAAuB;kCACf,+BAA+B;2BACtC,wBAAwB;wCACX,qCAAqC;2EACF,wEAAwE;iCAClH,8BAA8B;8BACjC,2BAA2B;0CACf,uCAAuC;qCAC5C,kCAAkC;yDACd,sDAAsD;0CACrE,uCAAuC;mCAC9C,gCAAgC;wCAC3B,qCAAqC;mCAC1C,gCAAgC;oCAC/B,iCAAiC;2BAC1C,sBAAsB;yBACxB,oBAAoB;8BACf,yBAAyB;8BACzB,yBAAyB;wCACf,mCAAmC;gCAC3C,2BAA2B;8BAC7B,yBAAyB;6BAC1B,wBAAwB;0BAC3B,qBAAqB;yCACN,oCAAoC;iCAC5C,4BAA4B;qCACxB,gCAAgC;+BACtC,0BAA0B;+BAC1B,0BAA0B;yCAChB,oCAAoC;yCACpC,oCAAoC;gCAC7C,2BAA2B;gCAC3B,2BAA2B;wBACnC,mBAAmB;sBACrB,iBAAiB;wBACf,mBAAmB;oBACvB,eAAe;yBACV,oBAAoB;0BACnB,qBAAqB;2BACpB,sBAAsB;wBACzB,mBAAmB;0BACjB,qBAAqB;qBAC1B,gBAAgB;wBACb,mBAAmB;4BACf,uBAAuB;yBAC1B,oBAAoB;iCACZ,4BAA4B"}
+
 }
 declare module 'testit-api-client/model/ActionUpdate' {
   /**
@@ -7025,10 +6923,7 @@ declare module 'testit-api-client/model/ActionUpdate' {
    * *
    */
   export type ActionUpdate = any;
-  //# sourceMappingURL=ActionUpdate.d.ts.map
-}
-declare module 'testit-api-client/model/ActionUpdate.d.ts' {
-  {"version":3,"file":"ActionUpdate.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ActionUpdate.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAAyB,CAInC;IApCG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,iBAAwB;CAY/B"}
+
 }
 declare module 'testit-api-client/model/AIServiceModelApiResult' {
   export default AIServiceModelApiResult;
@@ -7071,10 +6966,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
   namespace AIServiceModelApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AIServiceModelApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AIServiceModelApiResult.d.ts' {
-  {"version":3,"file":"AIServiceModelApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AIServiceModelApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
   export default AIServiceModelApiResultReply;
@@ -7117,10 +7009,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
   namespace AIServiceModelApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AIServiceModelApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/AIServiceModelApiResultReply.d.ts' {
-  {"version":3,"file":"AIServiceModelApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AIServiceModelApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAcpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ApiExternalServiceCategory' {
   /**
@@ -7150,10 +7039,7 @@ declare module 'testit-api-client/model/ApiExternalServiceCategory' {
    * *
    */
   export type ApiExternalServiceCategory = any;
-  //# sourceMappingURL=ApiExternalServiceCategory.d.ts.map
-}
-declare module 'testit-api-client/model/ApiExternalServiceCategory.d.ts' {
-  {"version":3,"file":"ApiExternalServiceCategory.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ApiExternalServiceCategory.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAAuC,CAIjD;IAtBG;;;OAGG;IACH,WAAY;IAGZ;;;OAGG;IACH,qBAAgC;CAYvC"}
+
 }
 declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   export default AssignAttachmentApiModel;
@@ -7194,10 +7080,7 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   namespace AssignAttachmentApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AssignAttachmentApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AssignAttachmentApiModel.d.ts' {
-  {"version":3,"file":"AssignAttachmentApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AssignAttachmentApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAWhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AssignIterationApiModel' {
   export default AssignIterationApiModel;
@@ -7240,10 +7123,7 @@ declare module 'testit-api-client/model/AssignIterationApiModel' {
   namespace AssignIterationApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AssignIterationApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AssignIterationApiModel.d.ts' {
-  {"version":3,"file":"AssignIterationApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AssignIterationApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IAtED;;;;;OAKG;IACH,wBAHsB,KAAK,CAAE,MAAM,CAAA,cAMlC;;;CAgEJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentApiResult' {
   export default AttachmentApiResult;
@@ -7298,10 +7178,7 @@ declare module 'testit-api-client/model/AttachmentApiResult' {
   namespace AttachmentApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AttachmentApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentApiResult.d.ts' {
-  {"version":3,"file":"AttachmentApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,6HAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAmC3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA/GD;;;;;;;;;;OAUG;IACH,iFAJuB,IAAI,qCAO1B;;;;;;;;;;CAoGJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentChangeViewModel' {
   export default AttachmentChangeViewModel;
@@ -7346,10 +7223,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModel' {
   namespace AttachmentChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AttachmentChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentChangeViewModel.d.ts' {
-  {"version":3,"file":"AttachmentChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentChangeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAoBjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA1ED;;;;;OAKG;IACH,sCAGC;;;;;CAoEJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFieldViewModel' {
   export default AttachmentChangeViewModelArrayChangedFieldViewModel;
@@ -7382,10 +7256,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFie
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=AttachmentChangeViewModelArrayChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"AttachmentChangeViewModelArrayChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentChangeViewModelArrayChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgE,GAC/D,GAAgE,CAc3E;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentModel' {
   export default AttachmentModel;
@@ -7440,10 +7311,7 @@ declare module 'testit-api-client/model/AttachmentModel' {
   namespace AttachmentModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AttachmentModel.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentModel.d.ts' {
-  {"version":3,"file":"AttachmentModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,6HAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAmCvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA/GD;;;;;;;;;;OAUG;IACH,qEALuB,IAAI,iDAQ1B;;;;;;;;;;CAoGJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentPutModel' {
   export default AttachmentPutModel;
@@ -7484,10 +7352,7 @@ declare module 'testit-api-client/model/AttachmentPutModel' {
   namespace AttachmentPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AttachmentPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentPutModel.d.ts' {
-  {"version":3,"file":"AttachmentPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentPutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAW1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsModel' {
   export default AttachmentPutModelAutoTestStepResultsModel;
@@ -7528,10 +7393,7 @@ declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsMod
       attachments: any;
       parameters: any;
   }
-  //# sourceMappingURL=AttachmentPutModelAutoTestStepResultsModel.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsModel.d.ts' {
-  {"version":3,"file":"AttachmentPutModelAutoTestStepResultsModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentPutModelAutoTestStepResultsModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuD,GACtD,GAAuD,CAsClE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AttachmentUpdateRequest' {
   export default AttachmentUpdateRequest;
@@ -7572,10 +7434,7 @@ declare module 'testit-api-client/model/AttachmentUpdateRequest' {
   namespace AttachmentUpdateRequest {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AttachmentUpdateRequest.d.ts.map
-}
-declare module 'testit-api-client/model/AttachmentUpdateRequest.d.ts' {
-  {"version":3,"file":"AttachmentUpdateRequest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AttachmentUpdateRequest.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAW/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AuditApiResult' {
   export default AuditApiResult;
@@ -7619,10 +7478,7 @@ declare module 'testit-api-client/model/AuditApiResult' {
   namespace AuditApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AuditApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AuditApiResult.d.ts' {
-  {"version":3,"file":"AuditApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AuditApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CAiBtC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,sCAFoB,IAAI,EAKvB;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/AutoTest' {
   export default AutoTest;
@@ -7698,10 +7554,7 @@ declare module 'testit-api-client/model/AutoTest' {
   namespace AutoTest {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTest.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTest.d.ts' {
-  {"version":3,"file":"AutoTest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTest.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,+KAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqB,GACpB,GAAqB,CA4FhC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6HlB;IAtQD;;;;;;;;;;;;OAYG;IACH,yJAHuB,IAAI,uBAM1B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAyPJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestApiResult' {
   export default AutoTestApiResult;
@@ -7778,10 +7631,7 @@ declare module 'testit-api-client/model/AutoTestApiResult' {
   namespace AutoTestApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestApiResult.d.ts' {
-  {"version":3,"file":"AutoTestApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestApiResult.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,4KAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CA+FzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiIlB;IA7QD;;;;;;;;;;;;OAYG;IACH,uJAHuB,IAAI,uBAM1B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAgQJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
   export default AutoTestAverageDurationApiResult;
@@ -7824,10 +7674,7 @@ declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
   namespace AutoTestAverageDurationApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestAverageDurationApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestAverageDurationApiResult.d.ts' {
-  {"version":3,"file":"AutoTestAverageDurationApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestAverageDurationApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0FAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAcxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,0EAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
   export default AutoTestBulkDeleteApiModel;
@@ -7868,10 +7715,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
   namespace AutoTestBulkDeleteApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestBulkDeleteApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel.d.ts' {
-  {"version":3,"file":"AutoTestBulkDeleteApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestBulkDeleteApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,uDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAWlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,4BAF0B,GAAgC,EAKzD;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   export default AutoTestBulkDeleteApiResult;
@@ -7914,10 +7758,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   namespace AutoTestBulkDeleteApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestBulkDeleteApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult.d.ts' {
-  {"version":3,"file":"AutoTestBulkDeleteApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestBulkDeleteApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2EAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,2DAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestChangeViewModel' {
   export default AutoTestChangeViewModel;
@@ -7964,10 +7805,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModel' {
   namespace AutoTestChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestChangeViewModel.d.ts' {
-  {"version":3,"file":"AutoTestChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestChangeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,2FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,iFAGC;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedFieldViewModel' {
   export default AutoTestChangeViewModelArrayChangedFieldViewModel;
@@ -8000,10 +7838,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedField
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=AutoTestChangeViewModelArrayChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"AutoTestChangeViewModelArrayChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestChangeViewModelArrayChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8D,GAC7D,GAA8D,CAczE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
   export default AutoTestClassCountApiModel;
@@ -8045,10 +7880,7 @@ declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
   namespace AutoTestClassCountApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestClassCountApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestClassCountApiModel.d.ts' {
-  {"version":3,"file":"AutoTestClassCountApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestClassCountApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA1DD;;;;OAIG;IACH,2BAGC;;;CAqDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestCreateApiModel' {
   export default AutoTestCreateApiModel;
@@ -8108,10 +7940,7 @@ declare module 'testit-api-client/model/AutoTestCreateApiModel' {
   namespace AutoTestCreateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestCreateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestCreateApiModel.d.ts' {
-  {"version":3,"file":"AutoTestCreateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestCreateApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,8EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA8D9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqGlB;IApMD;;;;;;OAMG;IACH,iEAGC;;;;;;;;;;;;;;;;;;;CA6LJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
   export default AutoTestExtractionApiModel;
@@ -8143,10 +7972,7 @@ declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=AutoTestExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestExtractionApiModel.d.ts' {
-  {"version":3,"file":"AutoTestExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAWlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestFilterApiModel' {
   export default AutoTestFilterApiModel;
@@ -8197,10 +8023,7 @@ declare module 'testit-api-client/model/AutoTestFilterApiModel' {
       externalKey: any;
       lastTestResultConfigurationIds: any;
   }
-  //# sourceMappingURL=AutoTestFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestFilterApiModel.d.ts' {
-  {"version":3,"file":"AutoTestFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestFilterApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAoE9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestFilterModel' {
   export default AutoTestFilterModel;
@@ -8251,10 +8074,7 @@ declare module 'testit-api-client/model/AutoTestFilterModel' {
       externalKey: any;
       lastTestResultConfigurationIds: any;
   }
-  //# sourceMappingURL=AutoTestFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestFilterModel.d.ts' {
-  {"version":3,"file":"AutoTestFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestFilterModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAoE3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
   export default AutoTestFlakyBulkApiModel;
@@ -8297,10 +8117,7 @@ declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
   namespace AutoTestFlakyBulkApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestFlakyBulkApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel.d.ts' {
-  {"version":3,"file":"AutoTestFlakyBulkApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestFlakyBulkApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,mEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,4BAH0B,GAAmC,kBAM5D;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestIdModel' {
   export default AutoTestIdModel;
@@ -8341,10 +8158,7 @@ declare module 'testit-api-client/model/AutoTestIdModel' {
   namespace AutoTestIdModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestIdModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestIdModel.d.ts' {
-  {"version":3,"file":"AutoTestIdModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestIdModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAWvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestModel' {
   export default AutoTestModel;
@@ -8421,10 +8235,7 @@ declare module 'testit-api-client/model/AutoTestModel' {
   namespace AutoTestModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestModel.d.ts' {
-  {"version":3,"file":"AutoTestModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,+KAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CA+FrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiIlB;IA7QD;;;;;;;;;;;;OAYG;IACH,oGANuB,IAAI,4EAS1B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAgQJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
   export default AutoTestModelV2GetModel;
@@ -8488,10 +8299,7 @@ declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
   namespace AutoTestModelV2GetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestModelV2GetModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestModelV2GetModel.d.ts' {
-  {"version":3,"file":"AutoTestModelV2GetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestModelV2GetModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,wIAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CA8D/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiGlB;IAxMD;;;;;;;;;;OAUG;IACH,wIAGC;;;;;;;;;;;;;;;;;;;CA6LJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
   export default AutoTestNamespaceApiResult;
@@ -8533,10 +8341,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
   namespace AutoTestNamespaceApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestNamespaceApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestNamespaceApiResult.d.ts' {
-  {"version":3,"file":"AutoTestNamespaceApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestNamespaceApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,gDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,qBAFmB,KAAK,QAAS,EAKhC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
   export default AutoTestNamespaceCountApiModel;
@@ -8580,10 +8385,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
   namespace AutoTestNamespaceCountApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestNamespaceCountApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel.d.ts' {
-  {"version":3,"file":"AutoTestNamespaceCountApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestNamespaceCountApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAiBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IAzED;;;;;OAKG;IACH,oCAFmB,KAAK,CAAE,MAAM,CAAA,EAK/B;;;;CAmEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
   export default AutoTestNamespacesCountResponse;
@@ -8624,10 +8426,7 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
   namespace AutoTestNamespacesCountResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestNamespacesCountResponse.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestNamespacesCountResponse.d.ts' {
-  {"version":3,"file":"AutoTestNamespacesCountResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestNamespacesCountResponse.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,mDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IA7DD;;;;OAIG;IACH,wBAFsB,KAAK,CAAE,MAAM,CAAA,EAKlC;;CAwDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestOutcome' {
   /**
@@ -8667,10 +8466,7 @@ declare module 'testit-api-client/model/AutoTestOutcome' {
    * *
    */
   export type AutoTestOutcome = any;
-  //# sourceMappingURL=AutoTestOutcome.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestOutcome.d.ts' {
-  {"version":3,"file":"AutoTestOutcome.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestOutcome.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAA4B,CAItC;IApCG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
   export default AutoTestProjectSettingsApiModel;
@@ -8716,10 +8512,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
   namespace AutoTestProjectSettingsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestProjectSettingsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel.d.ts' {
-  {"version":3,"file":"AutoTestProjectSettingsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestProjectSettingsApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8EAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAuBvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IApED;;;;;OAKG;IACH,+DAGC;;;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
   export default AutoTestProjectSettingsApiResult;
@@ -8770,10 +8563,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
   namespace AutoTestProjectSettingsApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestProjectSettingsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult.d.ts' {
-  {"version":3,"file":"AutoTestProjectSettingsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestProjectSettingsApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,uKAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CA0BxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAhFD;;;;;;;;;OASG;IACH,qKAGC;;;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
   export default AutoTestResultHistoryApiResult;
@@ -8841,10 +8631,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
   namespace AutoTestResultHistoryApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestResultHistoryApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultHistoryApiResult.d.ts' {
-  {"version":3,"file":"AutoTestResultHistoryApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultHistoryApiResult.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAoBI;;;;OAIG;IACH,gNAWC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAiEtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqElB;IArLD;;;;;;;;;;;;;OAaG;IACH,wGAPmB,GAAkC,UACnC,GAAgC,wCAEtB,KAAK,CAAE,MAAM,CAAA,eAClB,IAAI,uBAM1B;;;;;;;;;;;;;;;;;;;;CAuKJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
   export default AutoTestResultHistorySelectApiModel;
@@ -8883,10 +8670,7 @@ declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
       userIds: any;
       duration: any;
   }
-  //# sourceMappingURL=AutoTestResultHistorySelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel.d.ts' {
-  {"version":3,"file":"AutoTestResultHistorySelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultHistorySelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAgC3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutotestResultOutcome' {
   /**
@@ -8931,10 +8715,7 @@ declare module 'testit-api-client/model/AutotestResultOutcome' {
    * *
    */
   export type AutotestResultOutcome = any;
-  //# sourceMappingURL=AutotestResultOutcome.d.ts.map
-}
-declare module 'testit-api-client/model/AutotestResultOutcome.d.ts' {
-  {"version":3,"file":"AutotestResultOutcome.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutotestResultOutcome.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IA3CG;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
   export default AutotestResultReasonFilterModel;
@@ -8969,10 +8750,7 @@ declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
       regexCount: any;
       isDeleted: any;
   }
-  //# sourceMappingURL=AutotestResultReasonFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutotestResultReasonFilterModel.d.ts' {
-  {"version":3,"file":"AutotestResultReasonFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutotestResultReasonFilterModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAoBvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultReasonsCountItemModel' {
   export default AutoTestResultReasonsCountItemModel;
@@ -9015,10 +8793,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonsCountItemModel' {
   namespace AutoTestResultReasonsCountItemModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestResultReasonsCountItemModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultReasonsCountItemModel.d.ts' {
-  {"version":3,"file":"AutoTestResultReasonsCountItemModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultReasonsCountItemModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,oEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAc3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,6BAH2B,GAAqC,iBAM/D;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultReasonsCountModel' {
   export default AutoTestResultReasonsCountModel;
@@ -9059,10 +8834,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonsCountModel' {
   namespace AutoTestResultReasonsCountModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestResultReasonsCountModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultReasonsCountModel.d.ts' {
-  {"version":3,"file":"AutoTestResultReasonsCountModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultReasonsCountModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IA7DD;;;;OAIG;IACH,kBAFgB,KAAK,CAAE,MAAM,CAAA,EAK5B;;CAwDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultReasonShort' {
   export default AutoTestResultReasonShort;
@@ -9105,10 +8877,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonShort' {
   namespace AutoTestResultReasonShort {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestResultReasonShort.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultReasonShort.d.ts' {
-  {"version":3,"file":"AutoTestResultReasonShort.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultReasonShort.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,mEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,6BAH2B,GAAiC,gBAM3D;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
   export default AutotestResultReasonShortGetModel;
@@ -9164,10 +8933,7 @@ declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
   namespace AutotestResultReasonShortGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutotestResultReasonShortGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutotestResultReasonShortGetModel.d.ts' {
-  {"version":3,"file":"AutotestResultReasonShortGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutotestResultReasonShortGetModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,8JAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAsCzD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA1GD;;;;;;;;;;OAUG;IACH,iDAP2B,GAAqC,0EAIzC,IAAI,uBAM1B;;;;;;;;;;;CA+FJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
   export default AutoTestResultsForTestRunModel;
@@ -9225,10 +8991,7 @@ declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
   namespace AutoTestResultsForTestRunModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestResultsForTestRunModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestResultsForTestRunModel.d.ts' {
-  {"version":3,"file":"AutoTestResultsForTestRunModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestResultsForTestRunModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,iFAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CA2DtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqFlB;IA/KD;;;;;OAKG;IACH,iEAGC;;;;;;;;;;;;;;;;;;CAyKJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestSearchApiModel' {
   export default AutoTestSearchApiModel;
@@ -9261,10 +9024,7 @@ declare module 'testit-api-client/model/AutoTestSearchApiModel' {
       filter: any;
       includes: any;
   }
-  //# sourceMappingURL=AutoTestSearchApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestSearchApiModel.d.ts' {
-  {"version":3,"file":"AutoTestSearchApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestSearchApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
   export default AutoTestSearchIncludeApiModel;
@@ -9298,10 +9058,7 @@ declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
       includeLinks: any;
       includeLabels: any;
   }
-  //# sourceMappingURL=AutoTestSearchIncludeApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel.d.ts' {
-  {"version":3,"file":"AutoTestSearchIncludeApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestSearchIncludeApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAiBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestSelectApiModel' {
   export default AutoTestSelectApiModel;
@@ -9334,10 +9091,7 @@ declare module 'testit-api-client/model/AutoTestSelectApiModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=AutoTestSelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestSelectApiModel.d.ts' {
-  {"version":3,"file":"AutoTestSelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestSelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestSelectModel' {
   export default AutoTestSelectModel;
@@ -9379,10 +9133,7 @@ declare module 'testit-api-client/model/AutoTestSelectModel' {
   namespace AutoTestSelectModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestSelectModel.d.ts' {
-  {"version":3,"file":"AutoTestSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAc3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,oBAFkB,GAAgC,EAKjD;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestsExtractionModel' {
   export default AutoTestsExtractionModel;
@@ -9414,10 +9165,7 @@ declare module 'testit-api-client/model/AutoTestsExtractionModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=AutoTestsExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestsExtractionModel.d.ts' {
-  {"version":3,"file":"AutoTestsExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestsExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAWhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestShortApiResult' {
   export default AutoTestShortApiResult;
@@ -9466,10 +9214,7 @@ declare module 'testit-api-client/model/AutoTestShortApiResult' {
   namespace AutoTestShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestShortApiResult.d.ts' {
-  {"version":3,"file":"AutoTestShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestShortApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,sGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAuB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAvFD;;;;;;;;OAQG;IACH,+FAGC;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStep' {
   export default AutoTestStep;
@@ -9512,10 +9257,7 @@ declare module 'testit-api-client/model/AutoTestStep' {
   namespace AutoTestStep {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestStep.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStep.d.ts' {
-  {"version":3,"file":"AutoTestStep.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStep.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CAiBpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA3ED;;;;OAIG;IACH,2BAGC;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepApiModel' {
   export default AutoTestStepApiModel;
@@ -9558,10 +9300,7 @@ declare module 'testit-api-client/model/AutoTestStepApiModel' {
   namespace AutoTestStepApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestStepApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepApiModel.d.ts' {
-  {"version":3,"file":"AutoTestStepApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAiB5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA3ED;;;;OAIG;IACH,2BAGC;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepApiResult' {
   export default AutoTestStepApiResult;
@@ -9604,10 +9343,7 @@ declare module 'testit-api-client/model/AutoTestStepApiResult' {
   namespace AutoTestStepApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestStepApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepApiResult.d.ts' {
-  {"version":3,"file":"AutoTestStepApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAiB7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA3ED;;;;OAIG;IACH,2BAGC;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepModel' {
   export default AutoTestStepModel;
@@ -9650,10 +9386,7 @@ declare module 'testit-api-client/model/AutoTestStepModel' {
   namespace AutoTestStepModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestStepModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepModel.d.ts' {
-  {"version":3,"file":"AutoTestStepModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAiBzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA3ED;;;;OAIG;IACH,2BAGC;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepResult' {
   export default AutoTestStepResult;
@@ -9694,10 +9427,7 @@ declare module 'testit-api-client/model/AutoTestStepResult' {
       attachments: any;
       parameters: any;
   }
-  //# sourceMappingURL=AutoTestStepResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepResult.d.ts' {
-  {"version":3,"file":"AutoTestStepResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAsC1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
   export default AutoTestStepResultsApiResult;
@@ -9738,10 +9468,7 @@ declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
       attachments: any;
       parameters: any;
   }
-  //# sourceMappingURL=AutoTestStepResultsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepResultsApiResult.d.ts' {
-  {"version":3,"file":"AutoTestStepResultsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepResultsApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAsCpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
   export default AutoTestStepResultUpdateRequest;
@@ -9782,10 +9509,7 @@ declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
       attachments: any;
       parameters: any;
   }
-  //# sourceMappingURL=AutoTestStepResultUpdateRequest.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest.d.ts' {
-  {"version":3,"file":"AutoTestStepResultUpdateRequest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestStepResultUpdateRequest.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAsCvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
   export default AutoTestUpdateApiModel;
@@ -9844,10 +9568,7 @@ declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
   namespace AutoTestUpdateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestUpdateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestUpdateApiModel.d.ts' {
-  {"version":3,"file":"AutoTestUpdateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestUpdateApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,8EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA2D9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyGlB;IArMD;;;;;;OAMG;IACH,iEAGC;;;;;;;;;;;;;;;;;;CA8LJ"}
+
 }
 declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
   export default AutoTestWorkItemIdentifierApiResult;
@@ -9890,10 +9611,7 @@ declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
   namespace AutoTestWorkItemIdentifierApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=AutoTestWorkItemIdentifierApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult.d.ts' {
-  {"version":3,"file":"AutoTestWorkItemIdentifierApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AutoTestWorkItemIdentifierApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAc3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,0CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/AvailableFailureCategory' {
   /**
@@ -9928,10 +9646,7 @@ declare module 'testit-api-client/model/AvailableFailureCategory' {
    * *
    */
   export type AvailableFailureCategory = any;
-  //# sourceMappingURL=AvailableFailureCategory.d.ts.map
-}
-declare module 'testit-api-client/model/AvailableFailureCategory.d.ts' {
-  {"version":3,"file":"AvailableFailureCategory.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AvailableFailureCategory.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAqC,CAI/C;IA7BG;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,sBAAkC;IAGlC;;;OAGG;IACH,mBAA4B;CAYnC"}
+
 }
 declare module 'testit-api-client/model/AvailableTestResultOutcome' {
   /**
@@ -9971,10 +9686,7 @@ declare module 'testit-api-client/model/AvailableTestResultOutcome' {
    * *
    */
   export type AvailableTestResultOutcome = any;
-  //# sourceMappingURL=AvailableTestResultOutcome.d.ts.map
-}
-declare module 'testit-api-client/model/AvailableTestResultOutcome.d.ts' {
-  {"version":3,"file":"AvailableTestResultOutcome.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/AvailableTestResultOutcome.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAAuC,CAIjD;IApCG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
   export default BackgroundJobAttachmentModel;
@@ -10021,10 +9733,7 @@ declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
   namespace BackgroundJobAttachmentModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=BackgroundJobAttachmentModel.d.ts.map
-}
-declare module 'testit-api-client/model/BackgroundJobAttachmentModel.d.ts' {
-  {"version":3,"file":"BackgroundJobAttachmentModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BackgroundJobAttachmentModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,4EAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAoBpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,kEAGC;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/BackgroundJobFilterModel' {
   export default BackgroundJobFilterModel;
@@ -10060,10 +9769,7 @@ declare module 'testit-api-client/model/BackgroundJobFilterModel' {
       startDate: any;
       endDate: any;
   }
-  //# sourceMappingURL=BackgroundJobFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/BackgroundJobFilterModel.d.ts' {
-  {"version":3,"file":"BackgroundJobFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BackgroundJobFilterModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAuBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/BackgroundJobGetModel' {
   export default BackgroundJobGetModel;
@@ -10121,10 +9827,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
   namespace BackgroundJobGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=BackgroundJobGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/BackgroundJobGetModel.d.ts' {
-  {"version":3,"file":"BackgroundJobGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BackgroundJobGetModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,oJASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAyC7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiClB;IArHD;;;;;;;;;;;OAWG;IACH,gDAPmB,GAA8B,SAChC,GAA+B,qDAGzB,IAAI,eACJ,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;;;;;CAyGJ"}
+
 }
 declare module 'testit-api-client/model/BackgroundJobState' {
   /**
@@ -10169,10 +9872,7 @@ declare module 'testit-api-client/model/BackgroundJobState' {
    * *
    */
   export type BackgroundJobState = any;
-  //# sourceMappingURL=BackgroundJobState.d.ts.map
-}
-declare module 'testit-api-client/model/BackgroundJobState.d.ts' {
-  {"version":3,"file":"BackgroundJobState.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BackgroundJobState.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA+B,CAIzC;IA3CG;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,iBAAwB;CAY/B"}
+
 }
 declare module 'testit-api-client/model/BackgroundJobType' {
   /**
@@ -10282,10 +9982,7 @@ declare module 'testit-api-client/model/BackgroundJobType' {
    * *
    */
   export type BackgroundJobType = any;
-  //# sourceMappingURL=BackgroundJobType.d.ts.map
-}
-declare module 'testit-api-client/model/BackgroundJobType.d.ts' {
-  {"version":3,"file":"BackgroundJobType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BackgroundJobType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiII;;;;MAIE;IACF,yCAFW,GAA8B,CAIxC;IAtIG;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,qCAAgE;IAGhE;;;OAGG;IACH,uCAAoE;IAGpE;;;OAGG;IACH,gCAAsD;IAGtD;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,uCAAoE;IAGpE;;;OAGG;IACH,sCAAkE;IAGlE;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,qBAAgC;IAGhC;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,sBAAkC;IAGlC;;;OAGG;IACH,4BAA8C;IAG9C;;;OAGG;IACH,qBAAgC;CAYvC"}
+
 }
 declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
   export default BooleanChangedFieldViewModel;
@@ -10328,10 +10025,7 @@ declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
   namespace BooleanChangedFieldViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=BooleanChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/BooleanChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"BooleanChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BooleanChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,gEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAcpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,kDAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
   export default BooleanNullableChangedFieldViewModel;
@@ -10364,10 +10058,7 @@ declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=BooleanNullableChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"BooleanNullableChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/BooleanNullableChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAc5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/CollectionFilter' {
   export default CollectionFilter;
@@ -10412,10 +10103,7 @@ declare module 'testit-api-client/model/CollectionFilter' {
   namespace CollectionFilter {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CollectionFilter.d.ts.map
-}
-declare module 'testit-api-client/model/CollectionFilter.d.ts' {
-  {"version":3,"file":"CollectionFilter.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CollectionFilter.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,0EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAiBxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,sBAJoB,GAA+B,UACjC,GAAoB,iBAMrC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/CollectionOperator' {
   /**
@@ -10445,10 +10133,7 @@ declare module 'testit-api-client/model/CollectionOperator' {
    * *
    */
   export type CollectionOperator = any;
-  //# sourceMappingURL=CollectionOperator.d.ts.map
-}
-declare module 'testit-api-client/model/CollectionOperator.d.ts' {
-  {"version":3,"file":"CollectionOperator.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CollectionOperator.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAA+B,CAIzC;IAtBG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,YAAc;CAYrB"}
+
 }
 declare module 'testit-api-client/model/CompositeFilter' {
   export default CompositeFilter;
@@ -10491,10 +10176,7 @@ declare module 'testit-api-client/model/CompositeFilter' {
   namespace CompositeFilter {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CompositeFilter.d.ts.map
-}
-declare module 'testit-api-client/model/CompositeFilter.d.ts' {
-  {"version":3,"file":"CompositeFilter.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CompositeFilter.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAcvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,qBAHmB,KAAK,CAAE,MAAM,CAAA,YACZ,GAA4B,EAK/C;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationByParametersModel' {
   export default ConfigurationByParametersModel;
@@ -10537,10 +10219,7 @@ declare module 'testit-api-client/model/ConfigurationByParametersModel' {
   namespace ConfigurationByParametersModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationByParametersModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationByParametersModel.d.ts' {
-  {"version":3,"file":"ConfigurationByParametersModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationByParametersModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,qEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CActD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,6CAFwB,KAAK,QAAS,EAKrC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
   export default ConfigurationExtractionApiModel;
@@ -10573,10 +10252,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
       ids: any;
       projectIds: any;
   }
-  //# sourceMappingURL=ConfigurationExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationExtractionApiModel.d.ts' {
-  {"version":3,"file":"ConfigurationExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAcvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationExtractionModel' {
   export default ConfigurationExtractionModel;
@@ -10609,10 +10285,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionModel' {
       ids: any;
       projectIds: any;
   }
-  //# sourceMappingURL=ConfigurationExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationExtractionModel.d.ts' {
-  {"version":3,"file":"ConfigurationExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAcpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
   export default ConfigurationFilterApiModel;
@@ -10647,10 +10320,7 @@ declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
       isDeleted: any;
       globalIds: any;
   }
-  //# sourceMappingURL=ConfigurationFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationFilterApiModel.d.ts' {
-  {"version":3,"file":"ConfigurationFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationFilterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAoBnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationFilterModel' {
   export default ConfigurationFilterModel;
@@ -10685,10 +10355,7 @@ declare module 'testit-api-client/model/ConfigurationFilterModel' {
       isDeleted: any;
       globalIds: any;
   }
-  //# sourceMappingURL=ConfigurationFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationFilterModel.d.ts' {
-  {"version":3,"file":"ConfigurationFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationFilterModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAoBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationModel' {
   export default ConfigurationModel;
@@ -10746,10 +10413,7 @@ declare module 'testit-api-client/model/ConfigurationModel' {
   namespace ConfigurationModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationModel.d.ts' {
-  {"version":3,"file":"ConfigurationModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,8IAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CA4C1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IAxHD;;;;;;;;;;OAUG;IACH,gEANuB,IAAI,yEAS1B;;;;;;;;;;;;;CA6GJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationPostModel' {
   export default ConfigurationPostModel;
@@ -10797,10 +10461,7 @@ declare module 'testit-api-client/model/ConfigurationPostModel' {
   namespace ConfigurationPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationPostModel.d.ts' {
-  {"version":3,"file":"ConfigurationPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationPostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,8FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAuB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAjFD;;;;;;;OAOG;IACH,kFAGC;;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationPutModel' {
   export default ConfigurationPutModel;
@@ -10850,10 +10511,7 @@ declare module 'testit-api-client/model/ConfigurationPutModel' {
   namespace ConfigurationPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationPutModel.d.ts' {
-  {"version":3,"file":"ConfigurationPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationPutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,uGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CA0B7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA1FD;;;;;;;;OAQG;IACH,8FAGC;;;;;;;CAiFJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
   export default ConfigurationSelectApiModel;
@@ -10886,10 +10544,7 @@ declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=ConfigurationSelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationSelectApiModel.d.ts' {
-  {"version":3,"file":"ConfigurationSelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationSelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationSelectModel' {
   export default ConfigurationSelectModel;
@@ -10922,10 +10577,7 @@ declare module 'testit-api-client/model/ConfigurationSelectModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=ConfigurationSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationSelectModel.d.ts' {
-  {"version":3,"file":"ConfigurationSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationShort' {
   export default ConfigurationShort;
@@ -10968,10 +10620,7 @@ declare module 'testit-api-client/model/ConfigurationShort' {
   namespace ConfigurationShort {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationShort.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationShort.d.ts' {
-  {"version":3,"file":"ConfigurationShort.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationShort.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationShortApiResult' {
   export default ConfigurationShortApiResult;
@@ -11014,10 +10663,7 @@ declare module 'testit-api-client/model/ConfigurationShortApiResult' {
   namespace ConfigurationShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationShortApiResult.d.ts' {
-  {"version":3,"file":"ConfigurationShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationShortApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ConfigurationShortModel' {
   export default ConfigurationShortModel;
@@ -11060,10 +10706,7 @@ declare module 'testit-api-client/model/ConfigurationShortModel' {
   namespace ConfigurationShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ConfigurationShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/ConfigurationShortModel.d.ts' {
-  {"version":3,"file":"ConfigurationShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ConfigurationShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/CreateDefectApiModel' {
   export default CreateDefectApiModel;
@@ -11106,10 +10749,7 @@ declare module 'testit-api-client/model/CreateDefectApiModel' {
   namespace CreateDefectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateDefectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateDefectApiModel.d.ts' {
-  {"version":3,"file":"CreateDefectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateDefectApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,iEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAc5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,2BAHyB,KAAK,QAAS,QACvB,GAAoC,EAKnD;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
   export default CreateEmptyTestRunApiModel;
@@ -11155,10 +10795,7 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
   namespace CreateEmptyTestRunApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateEmptyTestRunApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateEmptyTestRunApiModel.d.ts' {
-  {"version":3,"file":"CreateEmptyTestRunApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateEmptyTestRunApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CA0BlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IAtGD;;;;OAIG;IACH,+BAGC;;;;;;;CAiGJ"}
+
 }
 declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
   export default CreateFailureCategoryApiModel;
@@ -11203,10 +10840,7 @@ declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
   namespace CreateFailureCategoryApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateFailureCategoryApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateFailureCategoryApiModel.d.ts' {
-  {"version":3,"file":"CreateFailureCategoryApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateFailureCategoryApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,mEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAoBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAhFD;;;;;OAKG;IACH,2CAF2B,GAA4B,EAKtD;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
   export default CreateFailureClassRegexApiModel;
@@ -11247,10 +10881,7 @@ declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
   namespace CreateFailureClassRegexApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateFailureClassRegexApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateFailureClassRegexApiModel.d.ts' {
-  {"version":3,"file":"CreateFailureClassRegexApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateFailureClassRegexApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,+BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/CreateLinkApiModel' {
   export default CreateLinkApiModel;
@@ -11296,10 +10927,7 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
   namespace CreateLinkApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateLinkApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateLinkApiModel.d.ts' {
-  {"version":3,"file":"CreateLinkApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateLinkApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAuB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA7ED;;;;;OAKG;IACH,2CAGC;;;;;;CAuEJ"}
+
 }
 declare module 'testit-api-client/model/CreateParameterApiModel' {
   export default CreateParameterApiModel;
@@ -11343,10 +10971,7 @@ declare module 'testit-api-client/model/CreateParameterApiModel' {
   namespace CreateParameterApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateParameterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateParameterApiModel.d.ts' {
-  {"version":3,"file":"CreateParameterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateParameterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,yDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAiB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAvED;;;;;OAKG;IACH,yCAGC;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/CreateProjectApiModel' {
   export default CreateProjectApiModel;
@@ -11390,10 +11015,7 @@ declare module 'testit-api-client/model/CreateProjectApiModel' {
   namespace CreateProjectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateProjectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateProjectApiModel.d.ts' {
-  {"version":3,"file":"CreateProjectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateProjectApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAoB7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAxED;;;;OAIG;IACH,0BAGC;;;;;CAmEJ"}
+
 }
 declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
   export default CreateProjectFailureCategoryApiModel;
@@ -11437,10 +11059,7 @@ declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
   namespace CreateProjectFailureCategoryApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateProjectFailureCategoryApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel.d.ts' {
-  {"version":3,"file":"CreateProjectFailureCategoryApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateProjectFailureCategoryApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,mEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAiB5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IAzED;;;;;OAKG;IACH,2CAF2B,GAA4B,EAKtD;;;;CAmEJ"}
+
 }
 declare module 'testit-api-client/model/CreateStepApiModel' {
   export default CreateStepApiModel;
@@ -11476,10 +11095,7 @@ declare module 'testit-api-client/model/CreateStepApiModel' {
       comments: any;
       workItemId: any;
   }
-  //# sourceMappingURL=CreateStepApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateStepApiModel.d.ts' {
-  {"version":3,"file":"CreateStepApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateStepApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAuB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/CreateTagApiModel' {
   export default CreateTagApiModel;
@@ -11520,10 +11136,7 @@ declare module 'testit-api-client/model/CreateTagApiModel' {
   namespace CreateTagApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTagApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTagApiModel.d.ts' {
-  {"version":3,"file":"CreateTagApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTagApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAWzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/CreateTestPlanApiModel' {
   export default CreateTestPlanApiModel;
@@ -11576,10 +11189,7 @@ declare module 'testit-api-client/model/CreateTestPlanApiModel' {
   namespace CreateTestPlanApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTestPlanApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTestPlanApiModel.d.ts' {
-  {"version":3,"file":"CreateTestPlanApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTestPlanApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,8EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAyC9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6ClB;IAvHD;;;;;;OAMG;IACH,8DAGC;;;;;;;;;;;;CAgHJ"}
+
 }
 declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel' {
   export default CreateTestRunAndFillByAutoTestsApiModel;
@@ -11629,10 +11239,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel'
   namespace CreateTestRunAndFillByAutoTestsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTestRunAndFillByAutoTestsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel.d.ts' {
-  {"version":3,"file":"CreateTestRunAndFillByAutoTestsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTestRunAndFillByAutoTestsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,mGAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAgC/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;IAxHD;;;;;;OAMG;IACH,iDAH4B,KAAK,QAAS,uBACX,KAAK,QAAS,EAK5C;;;;;;;;;CAiHJ"}
+
 }
 declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiModel' {
   export default CreateTestRunAndFillByConfigurationsApiModel;
@@ -11682,10 +11289,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
   namespace CreateTestRunAndFillByConfigurationsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTestRunAndFillByConfigurationsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiModel.d.ts' {
-  {"version":3,"file":"CreateTestRunAndFillByConfigurationsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTestRunAndFillByConfigurationsApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,4FAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyD,GACxD,GAAyD,CAgCpE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;IA9HD;;;;;;OAMG;IACH,uEAF8B,KAAK,CAAE,MAAM,CAAA,EAK1C;;;;;;;;;CAuHJ"}
+
 }
 declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel' {
   export default CreateTestRunAndFillByWorkItemsApiModel;
@@ -11737,10 +11341,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel'
   namespace CreateTestRunAndFillByWorkItemsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTestRunAndFillByWorkItemsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel.d.ts' {
-  {"version":3,"file":"CreateTestRunAndFillByWorkItemsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTestRunAndFillByWorkItemsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,4GAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAmC/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2DlB;IAjID;;;;;;;OAOG;IACH,qEAH4B,KAAK,QAAS,eACnB,KAAK,QAAS,EAKpC;;;;;;;;;;CAyHJ"}
+
 }
 declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   export default CreateTestStatusApiModel;
@@ -11786,10 +11387,7 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   namespace CreateTestStatusApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateTestStatusApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateTestStatusApiModel.d.ts' {
-  {"version":3,"file":"CreateTestStatusApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateTestStatusApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,mEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAoBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA5ED;;;;;;OAMG;IACH,gCAHgB,GAA8B,gBAM7C;;;;;CAqEJ"}
+
 }
 declare module 'testit-api-client/model/CreateWorkflowApiModel' {
   export default CreateWorkflowApiModel;
@@ -11834,10 +11432,7 @@ declare module 'testit-api-client/model/CreateWorkflowApiModel' {
   namespace CreateWorkflowApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateWorkflowApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateWorkflowApiModel.d.ts' {
-  {"version":3,"file":"CreateWorkflowApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateWorkflowApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAoB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAhFD;;;;;OAKG;IACH,oCAFoB,KAAK,CAAE,MAAM,CAAA,EAKhC;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/CreateWorkItemApiModel' {
   export default CreateWorkItemApiModel;
@@ -11905,10 +11500,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
   namespace CreateWorkItemApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateWorkItemApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateWorkItemApiModel.d.ts' {
-  {"version":3,"file":"CreateWorkItemApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateWorkItemApiModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAsBI;;;;OAIG;IACH,iOAaC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA2D9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2GlB;IAzND;;;;;;;;;;;;;;;OAeG;IACH,6DAX0B,GAAuC,2BAEhD,GAAkC,YAC/B,GAAqC,yBAEzC,KAAK,CAAE,MAAM,CAAA,qBACA,KAAK,CAAE,MAAM,CAAA,SACzB,KAAK,CAAE,MAAM,CAAA,sBACA,KAAK,CAAE,MAAM,CAAA,SAC1B,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;;;;;;;;;;;;;;;CAyMJ"}
+
 }
 declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
   export default CreateWorkItemPreviewsApiModel;
@@ -11953,10 +11545,7 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
   namespace CreateWorkItemPreviewsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CreateWorkItemPreviewsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel.d.ts' {
-  {"version":3,"file":"CreateWorkItemPreviewsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CreateWorkItemPreviewsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,iEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAoBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAhFD;;;;;OAKG;IACH,yCAFoB,KAAK,CAAE,MAAM,CAAA,EAKhC;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeApiResult' {
   export default CustomAttributeApiResult;
@@ -12011,10 +11600,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
   namespace CustomAttributeApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeApiResult.d.ts' {
-  {"version":3,"file":"CustomAttributeApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,+IASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAgChD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAxGD;;;;;;;;;;;OAWG;IACH,iCARmB,KAAK,CAAE,MAAM,CAAA,QAChB,GAAgC,gGAU/C;;;;;;;;;CA4FJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeChangeModel' {
   export default CustomAttributeChangeModel;
@@ -12050,10 +11636,7 @@ declare module 'testit-api-client/model/CustomAttributeChangeModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=CustomAttributeChangeModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeChangeModel.d.ts' {
-  {"version":3,"file":"CustomAttributeChangeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeChangeModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAuBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeGetModel' {
   export default CustomAttributeGetModel;
@@ -12108,10 +11691,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
   namespace CustomAttributeGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeGetModel.d.ts' {
-  {"version":3,"file":"CustomAttributeGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeGetModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,+IASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAgC/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAxGD;;;;;;;;;;;OAWG;IACH,iCARmB,KAAK,CAAE,MAAM,CAAA,QAChB,GAAqC,gGAUpD;;;;;;;;;CA4FJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeModel' {
   export default CustomAttributeModel;
@@ -12166,10 +11746,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
   namespace CustomAttributeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeModel.d.ts' {
-  {"version":3,"file":"CustomAttributeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,+IASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAgC5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAxGD;;;;;;;;;;;OAWG;IACH,iCARmB,KAAK,CAAE,MAAM,CAAA,QAChB,GAAqC,gGAUpD;;;;;;;;;CA4FJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
   export default CustomAttributeOptionApiResult;
@@ -12215,10 +11792,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
   namespace CustomAttributeOptionApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeOptionApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeOptionApiResult.d.ts' {
-  {"version":3,"file":"CustomAttributeOptionApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeOptionApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,2EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAoBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAxED;;;;;;OAMG;IACH,gEAGC;;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeOptionModel' {
   export default CustomAttributeOptionModel;
@@ -12264,10 +11838,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionModel' {
   namespace CustomAttributeOptionModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeOptionModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeOptionModel.d.ts' {
-  {"version":3,"file":"CustomAttributeOptionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeOptionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,2EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAoBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAxED;;;;;;OAMG;IACH,gEAGC;;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
   export default CustomAttributeOptionPostModel;
@@ -12309,10 +11880,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
   namespace CustomAttributeOptionPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeOptionPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeOptionPostModel.d.ts' {
-  {"version":3,"file":"CustomAttributeOptionPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeOptionPostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CActD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA1DD;;;;OAIG;IACH,gCAGC;;;CAqDJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributePostModel' {
   export default CustomAttributePostModel;
@@ -12362,10 +11930,7 @@ declare module 'testit-api-client/model/CustomAttributePostModel' {
   namespace CustomAttributePostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributePostModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributePostModel.d.ts' {
-  {"version":3,"file":"CustomAttributePostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributePostModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,wGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CA0BhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IAxFD;;;;;;;;OAQG;IACH,kBANgB,GAAqC,4EASpD;;;;;;;CA+EJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributePutModel' {
   export default CustomAttributePutModel;
@@ -12419,10 +11984,7 @@ declare module 'testit-api-client/model/CustomAttributePutModel' {
   namespace CustomAttributePutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributePutModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributePutModel.d.ts' {
-  {"version":3,"file":"CustomAttributePutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributePutModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,iIAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAgC/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAtGD;;;;;;;;;;OAUG;IACH,8BAPgB,GAAqC,gGAUpD;;;;;;;;;CA2FJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
   export default CustomAttributeSearchQueryModel;
@@ -12459,10 +12021,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
       isGlobal: any;
       isDeleted: any;
   }
-  //# sourceMappingURL=CustomAttributeSearchQueryModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeSearchQueryModel.d.ts' {
-  {"version":3,"file":"CustomAttributeSearchQueryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeSearchQueryModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CA0BvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
   export default CustomAttributeSearchResponseModel;
@@ -12521,10 +12080,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
   namespace CustomAttributeSearchResponseModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeSearchResponseModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeSearchResponseModel.d.ts' {
-  {"version":3,"file":"CustomAttributeSearchResponseModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeSearchResponseModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAoBI;;;;OAIG;IACH,uLAWC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+C,GAC9C,GAA+C,CAsC1D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiDlB;IAtID;;;;;;;;;;;;;OAaG;IACH,2BAXyB,KAAK,CAAE,MAAM,CAAA,iBACb,KAAK,CAAE,MAAM,CAAA,uBAEnB,KAAK,CAAE,MAAM,CAAA,QAChB,GAAqC,gGAUpD;;;;;;;;;;;CAwHJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
   export default CustomAttributeTemplateModel;
@@ -12569,10 +12125,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
   namespace CustomAttributeTemplateModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeTemplateModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTemplateModel.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplateModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTemplateModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,sEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAiBpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,0DAGC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
   export default CustomAttributeTemplatePostModel;
@@ -12614,10 +12167,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
   namespace CustomAttributeTemplatePostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeTemplatePostModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTemplatePostModel.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplatePostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTemplatePostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAcxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
   export default CustomAttributeTemplatePutModel;
@@ -12661,10 +12211,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
   namespace CustomAttributeTemplatePutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeTemplatePutModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTemplatePutModel.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplatePutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTemplatePutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAiBvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAvED;;;;;OAKG;IACH,sCAGC;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel' {
   export default CustomAttributeTemplateSearchQueryModel;
@@ -12699,10 +12246,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel'
       customAttributeTypes: any;
       isDeleted: any;
   }
-  //# sourceMappingURL=CustomAttributeTemplateSearchQueryModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplateSearchQueryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTemplateSearchQueryModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAoB/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult' {
   export default CustomAttributeTemplateValidationResult;
@@ -12743,10 +12287,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult'
   namespace CustomAttributeTemplateValidationResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeTemplateValidationResult.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult.d.ts' {
-  {"version":3,"file":"CustomAttributeTemplateValidationResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTemplateValidationResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAW/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,6BAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPutModel' {
   export default CustomAttributeTestPlanProjectRelationPutModel;
@@ -12791,10 +12332,7 @@ declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPu
   namespace CustomAttributeTestPlanProjectRelationPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeTestPlanProjectRelationPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPutModel.d.ts' {
-  {"version":3,"file":"CustomAttributeTestPlanProjectRelationPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTestPlanProjectRelationPutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,4EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2D,GAC1D,GAA2D,CAiBtE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAjED;;;;;;OAMG;IACH,iEAGC;;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeType' {
   /**
@@ -12844,10 +12382,7 @@ declare module 'testit-api-client/model/CustomAttributeType' {
    * *
    */
   export type CustomAttributeType = any;
-  //# sourceMappingURL=CustomAttributeType.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeType.d.ts' {
-  {"version":3,"file":"CustomAttributeType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA6CI;;;;MAIE;IACF,yCAFW,GAAgC,CAI1C;IAlDG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,iBAAwB;CAY/B"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
   /**
@@ -12897,10 +12432,7 @@ declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
    * *
    */
   export type CustomAttributeTypesEnum = any;
-  //# sourceMappingURL=CustomAttributeTypesEnum.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeTypesEnum.d.ts' {
-  {"version":3,"file":"CustomAttributeTypesEnum.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeTypesEnum.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA6CI;;;;MAIE;IACF,yCAFW,GAAqC,CAI/C;IAlDG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,iBAAwB;CAY/B"}
+
 }
 declare module 'testit-api-client/model/CustomAttributeValidationResult' {
   export default CustomAttributeValidationResult;
@@ -12941,10 +12473,7 @@ declare module 'testit-api-client/model/CustomAttributeValidationResult' {
   namespace CustomAttributeValidationResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=CustomAttributeValidationResult.d.ts.map
-}
-declare module 'testit-api-client/model/CustomAttributeValidationResult.d.ts' {
-  {"version":3,"file":"CustomAttributeValidationResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/CustomAttributeValidationResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,6BAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
   export default DateTimeRangeSelectorModel;
@@ -12977,10 +12506,7 @@ declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
       from: any;
       to: any;
   }
-  //# sourceMappingURL=DateTimeRangeSelectorModel.d.ts.map
-}
-declare module 'testit-api-client/model/DateTimeRangeSelectorModel.d.ts' {
-  {"version":3,"file":"DateTimeRangeSelectorModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/DateTimeRangeSelectorModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/DefectApiModel' {
   export default DefectApiModel;
@@ -13021,10 +12547,7 @@ declare module 'testit-api-client/model/DefectApiModel' {
   namespace DefectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=DefectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/DefectApiModel.d.ts' {
-  {"version":3,"file":"DefectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/DefectApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,oDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CAWtC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,iCAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/DeletionState' {
   /**
@@ -13059,10 +12582,7 @@ declare module 'testit-api-client/model/DeletionState' {
    * *
    */
   export type DeletionState = any;
-  //# sourceMappingURL=DeletionState.d.ts.map
-}
-declare module 'testit-api-client/model/DeletionState.d.ts' {
-  {"version":3,"file":"DeletionState.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/DeletionState.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAA0B,CAIpC;IA7BG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,mBAA4B;CAYnC"}
+
 }
 declare module 'testit-api-client/model/DemoProjectApiResult' {
   export default DemoProjectApiResult;
@@ -13103,10 +12623,7 @@ declare module 'testit-api-client/model/DemoProjectApiResult' {
   namespace DemoProjectApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=DemoProjectApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/DemoProjectApiResult.d.ts' {
-  {"version":3,"file":"DemoProjectApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/DemoProjectApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAW5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,2BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
   export default EnableProjectExternalServiceApiModel;
@@ -13147,10 +12664,7 @@ declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
   namespace EnableProjectExternalServiceApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=EnableProjectExternalServiceApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel.d.ts' {
-  {"version":3,"file":"EnableProjectExternalServiceApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/EnableProjectExternalServiceApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,iDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAW5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,2BAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
   export default ExternalFormAllowedValueModel;
@@ -13194,10 +12708,7 @@ declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
   namespace ExternalFormAllowedValueModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalFormAllowedValueModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalFormAllowedValueModel.d.ts' {
-  {"version":3,"file":"ExternalFormAllowedValueModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalFormAllowedValueModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,oDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAoBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAxED;;;;OAIG;IACH,kCAGC;;;;;CAmEJ"}
+
 }
 declare module 'testit-api-client/model/ExternalFormCreateModel' {
   export default ExternalFormCreateModel;
@@ -13244,10 +12755,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
   namespace ExternalFormCreateModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalFormCreateModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalFormCreateModel.d.ts' {
-  {"version":3,"file":"ExternalFormCreateModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalFormCreateModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,6FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IAtFD;;;;;;;OAOG;IACH,yCAJkB,KAAK,CAAE,MAAM,CAAA,SACd,KAAK,CAAE,MAAM,CAAA,eAM7B;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/ExternalFormFieldModel' {
   export default ExternalFormFieldModel;
@@ -13301,10 +12809,7 @@ declare module 'testit-api-client/model/ExternalFormFieldModel' {
   namespace ExternalFormFieldModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalFormFieldModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalFormFieldModel.d.ts' {
-  {"version":3,"file":"ExternalFormFieldModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalFormFieldModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6DAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAkD9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuClB;IAtHD;;;;OAIG;IACH,2CAGC;;;;;;;;;;;;;;;CAiHJ"}
+
 }
 declare module 'testit-api-client/model/ExternalFormLinkModel' {
   export default ExternalFormLinkModel;
@@ -13347,10 +12852,7 @@ declare module 'testit-api-client/model/ExternalFormLinkModel' {
   namespace ExternalFormLinkModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalFormLinkModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalFormLinkModel.d.ts' {
-  {"version":3,"file":"ExternalFormLinkModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalFormLinkModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,uDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAc7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,uCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ExternalFormModel' {
   export default ExternalFormModel;
@@ -13393,10 +12895,7 @@ declare module 'testit-api-client/model/ExternalFormModel' {
   namespace ExternalFormModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalFormModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalFormModel.d.ts' {
-  {"version":3,"file":"ExternalFormModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalFormModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,oEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAczC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,oBAHkB,KAAK,CAAE,MAAM,CAAA,uBAM9B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiField' {
   /**
@@ -13441,10 +12940,7 @@ declare module 'testit-api-client/model/ExternalIssueApiField' {
    * *
    */
   export type ExternalIssueApiField = any;
-  //# sourceMappingURL=ExternalIssueApiField.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiField.d.ts' {
-  {"version":3,"file":"ExternalIssueApiField.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiField.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IA3CG;;;OAGG;IACH,WAAY;IAGZ;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,iBAAwB;CAY/B"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   export default ExternalIssueApiFieldSuggestion;
@@ -13487,10 +12983,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   namespace ExternalIssueApiFieldSuggestion {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiFieldSuggestion.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion.d.ts' {
-  {"version":3,"file":"ExternalIssueApiFieldSuggestion.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiFieldSuggestion.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,oEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAcvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,4CAF2B,GAAkD,EAK5E;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
   export default ExternalIssueApiFieldSuggestionReply;
@@ -13533,10 +13026,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
   namespace ExternalIssueApiFieldSuggestionReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiFieldSuggestionReply.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply.d.ts' {
-  {"version":3,"file":"ExternalIssueApiFieldSuggestionReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiFieldSuggestionReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAc5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
   export default ExternalIssueApiMetadata;
@@ -13585,10 +13075,7 @@ declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
   namespace ExternalIssueApiMetadata {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiMetadata.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiMetadata.d.ts' {
-  {"version":3,"file":"ExternalIssueApiMetadata.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiMetadata.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,uDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAgChD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2ClB;IA1GD;;;;;OAKG;IACH,uCAGC;;;;;;;;;CAoGJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiPriority' {
   export default ExternalIssueApiPriority;
@@ -13630,10 +13117,7 @@ declare module 'testit-api-client/model/ExternalIssueApiPriority' {
   namespace ExternalIssueApiPriority {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiPriority.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiPriority.d.ts' {
-  {"version":3,"file":"ExternalIssueApiPriority.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiPriority.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiResult' {
   export default ExternalIssueApiResult;
@@ -13680,10 +13164,7 @@ declare module 'testit-api-client/model/ExternalIssueApiResult' {
   namespace ExternalIssueApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiResult.d.ts' {
-  {"version":3,"file":"ExternalIssueApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,qFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAoB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAlFD;;;;;;;OAOG;IACH,mEAFoB,GAAqC,EAKxD;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueApiType' {
   export default ExternalIssueApiType;
@@ -13725,10 +13206,7 @@ declare module 'testit-api-client/model/ExternalIssueApiType' {
   namespace ExternalIssueApiType {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueApiType.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueApiType.d.ts' {
-  {"version":3,"file":"ExternalIssueApiType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueApiType.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAc5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
   export default ExternalIssueExternalServiceApiResult;
@@ -13771,10 +13249,7 @@ declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
   namespace ExternalIssueExternalServiceApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueExternalServiceApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult.d.ts' {
-  {"version":3,"file":"ExternalIssueExternalServiceApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueExternalServiceApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkD,GACjD,GAAkD,CAc7D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
   export default ExternalIssueMetadataModel;
@@ -13823,10 +13298,7 @@ declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
   namespace ExternalIssueMetadataModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueMetadataModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueMetadataModel.d.ts' {
-  {"version":3,"file":"ExternalIssueMetadataModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueMetadataModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,uDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAgClD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2ClB;IA1GD;;;;;OAKG;IACH,uCAGC;;;;;;;;;CAoGJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueModel' {
   export default ExternalIssueModel;
@@ -13873,10 +13345,7 @@ declare module 'testit-api-client/model/ExternalIssueModel' {
   namespace ExternalIssueModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueModel.d.ts' {
-  {"version":3,"file":"ExternalIssueModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,qFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAoB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAlFD;;;;;;;OAOG;IACH,mEAFoB,GAAuC,EAK1D;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
   export default ExternalIssuePriorityModel;
@@ -13918,10 +13387,7 @@ declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
   namespace ExternalIssuePriorityModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssuePriorityModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssuePriorityModel.d.ts' {
-  {"version":3,"file":"ExternalIssuePriorityModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssuePriorityModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/ExternalIssueTypeModel' {
   export default ExternalIssueTypeModel;
@@ -13963,10 +13429,7 @@ declare module 'testit-api-client/model/ExternalIssueTypeModel' {
   namespace ExternalIssueTypeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalIssueTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalIssueTypeModel.d.ts' {
-  {"version":3,"file":"ExternalIssueTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalIssueTypeModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/ExternalLinkModel' {
   export default ExternalLinkModel;
@@ -14005,10 +13468,7 @@ declare module 'testit-api-client/model/ExternalLinkModel' {
       statusName: any;
       assigneeDisplayName: any;
   }
-  //# sourceMappingURL=ExternalLinkModel.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalLinkModel.d.ts' {
-  {"version":3,"file":"ExternalLinkModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalLinkModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAgCzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
   export default ExternalServiceMetadataApiResult;
@@ -14055,10 +13515,7 @@ declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
   namespace ExternalServiceMetadataApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalServiceMetadataApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalServiceMetadataApiResult.d.ts' {
-  {"version":3,"file":"ExternalServiceMetadataApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalServiceMetadataApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,qFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAoBxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,mEAFoB,GAAuC,EAK1D;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
   export default ExternalServicesMetadataApiResult;
@@ -14099,10 +13556,7 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
   namespace ExternalServicesMetadataApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ExternalServicesMetadataApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ExternalServicesMetadataApiResult.d.ts' {
-  {"version":3,"file":"ExternalServicesMetadataApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ExternalServicesMetadataApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAWzD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IA7DD;;;;OAIG;IACH,kBAFgB,KAAK,CAAE,MAAM,CAAA,EAK5B;;CAwDJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategory' {
   /**
@@ -14147,10 +13601,7 @@ declare module 'testit-api-client/model/FailureCategory' {
    * *
    */
   export type FailureCategory = any;
-  //# sourceMappingURL=FailureCategory.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategory.d.ts' {
-  {"version":3,"file":"FailureCategory.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategory.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA4B,CAItC;IA3CG;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,sBAAkC;IAGlC;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,oBAA8B;CAYrC"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryApiResult' {
   export default FailureCategoryApiResult;
@@ -14206,10 +13657,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
   namespace FailureCategoryApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryApiResult.d.ts' {
-  {"version":3,"file":"FailureCategoryApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryApiResult.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,8JAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAsChD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IA9HD;;;;;;;;;;OAUG;IACH,6DAN2B,GAA4B,eAChC,IAAI,iCAEP,KAAK,CAAE,MAAM,CAAA,uBACF,KAAK,CAAE,MAAM,CAAA,EAK3C;;;;;;;;;;;CAmHJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
   export default FailureCategoryGroupApiModel;
@@ -14251,10 +13699,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
   namespace FailureCategoryGroupApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryGroupApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryGroupApiModel.d.ts' {
-  {"version":3,"file":"FailureCategoryGroupApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryGroupApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAcpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,2BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
   export default FailureCategoryGroupApiResult;
@@ -14297,10 +13742,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
   namespace FailureCategoryGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryGroupApiResult.d.ts' {
-  {"version":3,"file":"FailureCategoryGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAiBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAzDD;;;;OAIG;IACH,2BAGC;;;;CAoDJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
   export default FailureCategoryGroupItemApiResult;
@@ -14342,10 +13784,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
   namespace FailureCategoryGroupItemApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryGroupItemApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult.d.ts' {
-  {"version":3,"file":"FailureCategoryGroupItemApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryGroupItemApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAczD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,mBAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' {
   export default FailureCategoryGroupItemApiResultReply;
@@ -14388,10 +13827,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
   namespace FailureCategoryGroupItemApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryGroupItemApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply.d.ts' {
-  {"version":3,"file":"FailureCategoryGroupItemApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryGroupItemApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAc9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
   export default FailureCategoryGroupSearchApiModel;
@@ -14433,10 +13869,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
   namespace FailureCategoryGroupSearchApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryGroupSearchApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel.d.ts' {
-  {"version":3,"file":"FailureCategoryGroupSearchApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryGroupSearchApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,gDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+C,GAC9C,GAA+C,CAc1D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,qBAFmB,GAAoB,EAKtC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
   export default FailureCategoryItemApiResult;
@@ -14494,10 +13927,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
   namespace FailureCategoryItemApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureCategoryItemApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryItemApiResult.d.ts' {
-  {"version":3,"file":"FailureCategoryItemApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryItemApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,8KASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAyCpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyClB;IA7HD;;;;;;;;;;;OAWG;IACH,yCAR2B,GAA4B,eAChC,IAAI,gFAIP,KAAK,CAAE,MAAM,CAAA,cACX,KAAK,QAAS,EAKnC;;;;;;;;;;;;CAiHJ"}
+
 }
 declare module 'testit-api-client/model/FailureCategoryModel' {
   /**
@@ -14542,10 +13972,7 @@ declare module 'testit-api-client/model/FailureCategoryModel' {
    * *
    */
   export type FailureCategoryModel = any;
-  //# sourceMappingURL=FailureCategoryModel.d.ts.map
-}
-declare module 'testit-api-client/model/FailureCategoryModel.d.ts' {
-  {"version":3,"file":"FailureCategoryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureCategoryModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAAiC,CAI3C;IA3CG;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,sBAAkC;IAGlC;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,oBAA8B;CAYrC"}
+
 }
 declare module 'testit-api-client/model/FailureClassRegexApiResult' {
   export default FailureClassRegexApiResult;
@@ -14592,10 +14019,7 @@ declare module 'testit-api-client/model/FailureClassRegexApiResult' {
   namespace FailureClassRegexApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FailureClassRegexApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/FailureClassRegexApiResult.d.ts' {
-  {"version":3,"file":"FailureClassRegexApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FailureClassRegexApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,gGAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAoBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,uFAGC;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/Filter' {
   export default Filter;
@@ -14639,10 +14063,7 @@ declare module 'testit-api-client/model/Filter' {
   namespace Filter {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Filter.d.ts.map
-}
-declare module 'testit-api-client/model/Filter.d.ts' {
-  {"version":3,"file":"Filter.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Filter.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,6DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmB,GAClB,GAAmB,CAiB9B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,sBAHoB,GAA2B,iBAM9C;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/FilterModel' {
   export default FilterModel;
@@ -14697,10 +14118,7 @@ declare module 'testit-api-client/model/FilterModel' {
   namespace FilterModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=FilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/FilterModel.d.ts' {
-  {"version":3,"file":"FilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,0HAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwB,GACvB,GAAwB,CAsCnC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IAhHD;;;;;;;;;OASG;IACH,yBAPuB,IAAI,wFAU1B;;;;;;;;;;;CAsGJ"}
+
 }
 declare module 'testit-api-client/model/FilterOperator' {
   /**
@@ -14770,10 +14188,7 @@ declare module 'testit-api-client/model/FilterOperator' {
    * *
    */
   export type FilterOperator = any;
-  //# sourceMappingURL=FilterOperator.d.ts.map
-}
-declare module 'testit-api-client/model/FilterOperator.d.ts' {
-  {"version":3,"file":"FilterOperator.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/FilterOperator.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAyEI;;;;MAIE;IACF,yCAFW,GAA2B,CAIrC;IA9EG;;;OAGG;IACH,cAAc;IAGd;;;OAGG;IACH,kBAAmB;IAGnB;;;OAGG;IACH,cAAc;IAGd;;;OAGG;IACH,aAAY;IAGZ;;;OAGG;IACH,kBAAkB;IAGlB;;;OAGG;IACH,8BAA+B;IAG/B;;;OAGG;IACH,qBAAqB;IAGrB;;;OAGG;IACH,iCAAkC;IAGlC;;;OAGG;IACH,aAAa;IAGb;;;OAGG;IACH,aAAY;CAYnB"}
+
 }
 declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
   export default GenerateWorkItemPreviewsApiModel;
@@ -14818,10 +14233,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
   namespace GenerateWorkItemPreviewsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GenerateWorkItemPreviewsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel.d.ts' {
-  {"version":3,"file":"GenerateWorkItemPreviewsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GenerateWorkItemPreviewsApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,wFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAiBxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAzED;;;;;;OAMG;IACH,2EAGC;;;;CAkEJ"}
+
 }
 declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
   export default GenerateWorkItemPreviewsApiResult;
@@ -14863,10 +14275,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
   namespace GenerateWorkItemPreviewsApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GenerateWorkItemPreviewsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult.d.ts' {
-  {"version":3,"file":"GenerateWorkItemPreviewsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GenerateWorkItemPreviewsApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,iDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAczD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,sBAFoB,KAAK,CAAE,MAAM,CAAA,EAKhC;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
   export default GetAIServiceModelsApiModel;
@@ -14898,10 +14307,7 @@ declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
       static validateJSON(data: any): boolean;
       inquiry: any;
   }
-  //# sourceMappingURL=GetAIServiceModelsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/GetAIServiceModelsApiModel.d.ts' {
-  {"version":3,"file":"GetAIServiceModelsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GetAIServiceModelsApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAWlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/GetExternalFormApiResult' {
   export default GetExternalFormApiResult;
@@ -14944,10 +14350,7 @@ declare module 'testit-api-client/model/GetExternalFormApiResult' {
   namespace GetExternalFormApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GetExternalFormApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/GetExternalFormApiResult.d.ts' {
-  {"version":3,"file":"GetExternalFormApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GetExternalFormApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,iEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,2BAHyB,KAAK,QAAS,QACvB,GAA8B,EAK7C;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
   export default GetExternalIssueSuggestionsApiModel;
@@ -14990,10 +14393,7 @@ declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
   namespace GetExternalIssueSuggestionsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GetExternalIssueSuggestionsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel.d.ts' {
-  {"version":3,"file":"GetExternalIssueSuggestionsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GetExternalIssueSuggestionsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAiB3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAjED;;;;OAIG;IACH,mBAFiB,GAAkC,EAKlD;;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/GetShortProjectsApiModel' {
   export default GetShortProjectsApiModel;
@@ -15027,10 +14427,7 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
       permissionName: any;
       permissionType: any;
   }
-  //# sourceMappingURL=GetShortProjectsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/GetShortProjectsApiModel.d.ts' {
-  {"version":3,"file":"GetShortProjectsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GetShortProjectsApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
   export default GetXlsxTestPointsByTestPlanModel;
@@ -15097,10 +14494,7 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
   namespace GetXlsxTestPointsByTestPlanModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GetXlsxTestPointsByTestPlanModel.d.ts.map
-}
-declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel.d.ts' {
-  {"version":3,"file":"GetXlsxTestPointsByTestPlanModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GetXlsxTestPointsByTestPlanModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAuBI;;;;OAIG;IACH,sUAcC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAqDxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA7HD;;;;;;;;;;;;;;;;OAgBG;IACH,oWAGC;;;;;;;;;;;;;;;;CA4GJ"}
+
 }
 declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
   export default GlobalCustomAttributePostModel;
@@ -15146,10 +14540,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
   namespace GlobalCustomAttributePostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GlobalCustomAttributePostModel.d.ts.map
-}
-declare module 'testit-api-client/model/GlobalCustomAttributePostModel.d.ts' {
-  {"version":3,"file":"GlobalCustomAttributePostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GlobalCustomAttributePostModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,wDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAuBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IA/ED;;;;;OAKG;IACH,gCAFgB,GAAqC,EAKpD;;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   export default GlobalCustomAttributeUpdateModel;
@@ -15193,10 +14584,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   namespace GlobalCustomAttributeUpdateModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GlobalCustomAttributeUpdateModel.d.ts.map
-}
-declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel.d.ts' {
-  {"version":3,"file":"GlobalCustomAttributeUpdateModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GlobalCustomAttributeUpdateModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAoBxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IA1ED;;;;OAIG;IACH,0BAGC;;;;;CAqEJ"}
+
 }
 declare module 'testit-api-client/model/GlobalSearchItemResult' {
   export default GlobalSearchItemResult;
@@ -15244,10 +14632,7 @@ declare module 'testit-api-client/model/GlobalSearchItemResult' {
   namespace GlobalSearchItemResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GlobalSearchItemResult.d.ts.map
-}
-declare module 'testit-api-client/model/GlobalSearchItemResult.d.ts' {
-  {"version":3,"file":"GlobalSearchItemResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GlobalSearchItemResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,uGAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAuB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAjFD;;;;;;;OAOG;IACH,6FAGC;;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/GlobalSearchRequest' {
   export default GlobalSearchRequest;
@@ -15293,10 +14678,7 @@ declare module 'testit-api-client/model/GlobalSearchRequest' {
   namespace GlobalSearchRequest {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GlobalSearchRequest.d.ts.map
-}
-declare module 'testit-api-client/model/GlobalSearchRequest.d.ts' {
-  {"version":3,"file":"GlobalSearchRequest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GlobalSearchRequest.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,oEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAoB3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAxED;;;;;;OAMG;IACH,uDAGC;;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/GlobalSearchResponse' {
   export default GlobalSearchResponse;
@@ -15341,10 +14723,7 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
   namespace GlobalSearchResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GlobalSearchResponse.d.ts.map
-}
-declare module 'testit-api-client/model/GlobalSearchResponse.d.ts' {
-  {"version":3,"file":"GlobalSearchResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GlobalSearchResponse.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,wGAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAiB5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IA3ED;;;;;;OAMG;IACH,qBAJmB,KAAK,CAAE,MAAM,CAAA,yDAEE,KAAK,QAAS,EAK/C;;;;CAoEJ"}
+
 }
 declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
   export default GuidChangedFieldViewModel;
@@ -15387,10 +14766,7 @@ declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
   namespace GuidChangedFieldViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=GuidChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/GuidChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"GuidChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GuidChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,gEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,gDAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/GuidExtractionModel' {
   export default GuidExtractionModel;
@@ -15423,10 +14799,7 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
       include: any;
       exclude: any;
   }
-  //# sourceMappingURL=GuidExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/GuidExtractionModel.d.ts' {
-  {"version":3,"file":"GuidExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/GuidExtractionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAc3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/IFilter' {
   export default IFilter;
@@ -15481,10 +14854,7 @@ declare module 'testit-api-client/model/IFilter' {
   namespace IFilter {
       let OneOf: string[];
   }
-  //# sourceMappingURL=IFilter.d.ts.map
-}
-declare module 'testit-api-client/model/IFilter.d.ts' {
-  {"version":3,"file":"IFilter.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/IFilter.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAwEI;;;;;;OAMG;IACH,2CAHW,GAAoB,GACnB,GAAoB,CAI/B;IA0BD;;;;OAIG;IACH,kBAA2B,aAHhB,MAG2B,KAF1B,GAAoB,CAI/B;IAjHD;;;;OAIG;IACH,4BAgEC;IA9DO,oBAA0B;IA2ElC;;;OAGG;IACH,qBAFY,CAAC,MAAM,EAAC,KAAK,KAAA,GAAA,CAIxB;IAED;;;OAGG;IACH,kCAEC;IAED;;;OAGG;IACH,cAFY,MAAM,CAIjB;;;;;;CAUJ"}
+
 }
 declare module 'testit-api-client/model/ImageResizeType' {
   /**
@@ -15514,10 +14884,7 @@ declare module 'testit-api-client/model/ImageResizeType' {
    * *
    */
   export type ImageResizeType = any;
-  //# sourceMappingURL=ImageResizeType.d.ts.map
-}
-declare module 'testit-api-client/model/ImageResizeType.d.ts' {
-  {"version":3,"file":"ImageResizeType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ImageResizeType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAA4B,CAItC;IAtBG;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,6BAAgD;CAYvD"}
+
 }
 declare module 'testit-api-client/model/Inquiry' {
   export default Inquiry;
@@ -15560,10 +14927,7 @@ declare module 'testit-api-client/model/Inquiry' {
   namespace Inquiry {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Inquiry.d.ts.map
-}
-declare module 'testit-api-client/model/Inquiry.d.ts' {
-  {"version":3,"file":"Inquiry.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Inquiry.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoB,GACnB,GAAoB,CAiB/B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA3ED;;;;OAIG;IACH,mBAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
   export default Int32ChangedFieldViewModel;
@@ -15606,10 +14970,7 @@ declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
   namespace Int32ChangedFieldViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Int32ChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/Int32ChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"Int32ChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Int32ChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,gEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,gDAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/Int32RangeSelectorModel' {
   export default Int32RangeSelectorModel;
@@ -15642,10 +15003,7 @@ declare module 'testit-api-client/model/Int32RangeSelectorModel' {
       from: any;
       to: any;
   }
-  //# sourceMappingURL=Int32RangeSelectorModel.d.ts.map
-}
-declare module 'testit-api-client/model/Int32RangeSelectorModel.d.ts' {
-  {"version":3,"file":"Int32RangeSelectorModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Int32RangeSelectorModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
   export default Int64ChangedFieldViewModel;
@@ -15688,10 +15046,7 @@ declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
   namespace Int64ChangedFieldViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Int64ChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/Int64ChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"Int64ChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Int64ChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,gEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,gDAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/Int64RangeSelectorModel' {
   export default Int64RangeSelectorModel;
@@ -15724,10 +15079,7 @@ declare module 'testit-api-client/model/Int64RangeSelectorModel' {
       from: any;
       to: any;
   }
-  //# sourceMappingURL=Int64RangeSelectorModel.d.ts.map
-}
-declare module 'testit-api-client/model/Int64RangeSelectorModel.d.ts' {
-  {"version":3,"file":"Int64RangeSelectorModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Int64RangeSelectorModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/IterationApiResult' {
   export default IterationApiResult;
@@ -15769,10 +15121,7 @@ declare module 'testit-api-client/model/IterationApiResult' {
   namespace IterationApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=IterationApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/IterationApiResult.d.ts' {
-  {"version":3,"file":"IterationApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/IterationApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,wBAGC;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/IterationModel' {
   export default IterationModel;
@@ -15814,10 +15163,7 @@ declare module 'testit-api-client/model/IterationModel' {
   namespace IterationModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=IterationModel.d.ts.map
-}
-declare module 'testit-api-client/model/IterationModel.d.ts' {
-  {"version":3,"file":"IterationModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/IterationModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CActC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,wBAGC;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/Label' {
   export default Label;
@@ -15860,10 +15206,7 @@ declare module 'testit-api-client/model/Label' {
   namespace Label {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Label.d.ts.map
-}
-declare module 'testit-api-client/model/Label.d.ts' {
-  {"version":3,"file":"Label.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Label.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkB,GACjB,GAAkB,CAc7B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,4CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/LabelApiModel' {
   export default LabelApiModel;
@@ -15904,10 +15247,7 @@ declare module 'testit-api-client/model/LabelApiModel' {
   namespace LabelApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LabelApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/LabelApiModel.d.ts' {
-  {"version":3,"file":"LabelApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LabelApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CAWrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/LabelApiResult' {
   export default LabelApiResult;
@@ -15950,10 +15290,7 @@ declare module 'testit-api-client/model/LabelApiResult' {
   namespace LabelApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LabelApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/LabelApiResult.d.ts' {
-  {"version":3,"file":"LabelApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LabelApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CActC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,4CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/LabelShortModel' {
   export default LabelShortModel;
@@ -15996,10 +15333,7 @@ declare module 'testit-api-client/model/LabelShortModel' {
   namespace LabelShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LabelShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/LabelShortModel.d.ts' {
-  {"version":3,"file":"LabelShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LabelShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAcvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,4CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/LastTestResultApiResult' {
   export default LastTestResultApiResult;
@@ -16049,10 +15383,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
   namespace LastTestResultApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LastTestResultApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/LastTestResultApiResult.d.ts' {
-  {"version":3,"file":"LastTestResultApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LastTestResultApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,yFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CA6B/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmDlB;IAnHD;;;;;;;OAOG;IACH,kDAHiB,KAAK,CAAE,MAAM,CAAA,eACP,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;CA2GJ"}
+
 }
 declare module 'testit-api-client/model/LastTestResultModel' {
   export default LastTestResultModel;
@@ -16101,10 +15432,7 @@ declare module 'testit-api-client/model/LastTestResultModel' {
   namespace LastTestResultModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LastTestResultModel.d.ts.map
-}
-declare module 'testit-api-client/model/LastTestResultModel.d.ts' {
-  {"version":3,"file":"LastTestResultModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LastTestResultModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,mFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CA6B3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmDlB;IAjHD;;;;;;OAMG;IACH,sEAGC;;;;;;;;CA0GJ"}
+
 }
 declare module 'testit-api-client/model/Link' {
   export default Link;
@@ -16151,10 +15479,7 @@ declare module 'testit-api-client/model/Link' {
   namespace Link {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Link.d.ts.map
-}
-declare module 'testit-api-client/model/Link.d.ts' {
-  {"version":3,"file":"Link.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Link.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiB,GAChB,GAAiB,CA0B5B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/LinkApiResult' {
   export default LinkApiResult;
@@ -16201,10 +15526,7 @@ declare module 'testit-api-client/model/LinkApiResult' {
   namespace LinkApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/LinkApiResult.d.ts' {
-  {"version":3,"file":"LinkApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CA0BrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/LinkCreateApiModel' {
   export default LinkCreateApiModel;
@@ -16250,10 +15572,7 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
   namespace LinkCreateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkCreateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkCreateApiModel.d.ts' {
-  {"version":3,"file":"LinkCreateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkCreateApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAuB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA7ED;;;;;OAKG;IACH,2CAGC;;;;;;CAuEJ"}
+
 }
 declare module 'testit-api-client/model/LinkModel' {
   export default LinkModel;
@@ -16300,10 +15619,7 @@ declare module 'testit-api-client/model/LinkModel' {
   namespace LinkModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkModel.d.ts' {
-  {"version":3,"file":"LinkModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsB,GACrB,GAAsB,CA0BjC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/LinkPostModel' {
   export default LinkPostModel;
@@ -16349,10 +15665,7 @@ declare module 'testit-api-client/model/LinkPostModel' {
   namespace LinkPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkPostModel.d.ts' {
-  {"version":3,"file":"LinkPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkPostModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CAuBrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA7ED;;;;;OAKG;IACH,2CAGC;;;;;;CAuEJ"}
+
 }
 declare module 'testit-api-client/model/LinkPutModel' {
   export default LinkPutModel;
@@ -16399,10 +15712,7 @@ declare module 'testit-api-client/model/LinkPutModel' {
   namespace LinkPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkPutModel.d.ts' {
-  {"version":3,"file":"LinkPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkPutModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CA0BpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/LinkShort' {
   export default LinkShort;
@@ -16445,10 +15755,7 @@ declare module 'testit-api-client/model/LinkShort' {
   namespace LinkShort {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkShort.d.ts.map
-}
-declare module 'testit-api-client/model/LinkShort.d.ts' {
-  {"version":3,"file":"LinkShort.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkShort.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,uDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsB,GACrB,GAAsB,CAcjC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,uCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/LinkShortApiResult' {
   export default LinkShortApiResult;
@@ -16495,10 +15802,7 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
   namespace LinkShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/LinkShortApiResult.d.ts' {
-  {"version":3,"file":"LinkShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkShortApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,4EAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAoB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAlFD;;;;;;;OAOG;IACH,kEAGC;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/LinkShortModel' {
   export default LinkShortModel;
@@ -16544,10 +15848,7 @@ declare module 'testit-api-client/model/LinkShortModel' {
   namespace LinkShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkShortModel.d.ts' {
-  {"version":3,"file":"LinkShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,iEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CAoBtC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAhFD;;;;;;OAMG;IACH,oDAGC;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/LinkType' {
   /**
@@ -16597,10 +15898,7 @@ declare module 'testit-api-client/model/LinkType' {
    * *
    */
   export type LinkType = any;
-  //# sourceMappingURL=LinkType.d.ts.map
-}
-declare module 'testit-api-client/model/LinkType.d.ts' {
-  {"version":3,"file":"LinkType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA6CI;;;;MAIE;IACF,yCAFW,GAAqB,CAI/B;IAlDG;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,cAAkB;IAGlB;;;OAGG;IACH,oBAA8B;IAG9B;;;OAGG;IACH,mBAA4B;CAYnC"}
+
 }
 declare module 'testit-api-client/model/LinkUpdateApiModel' {
   export default LinkUpdateApiModel;
@@ -16647,10 +15945,7 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
   namespace LinkUpdateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=LinkUpdateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/LinkUpdateApiModel.d.ts' {
-  {"version":3,"file":"LinkUpdateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LinkUpdateApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CA0B1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/ListSortDirection' {
   /**
@@ -16680,10 +15975,7 @@ declare module 'testit-api-client/model/ListSortDirection' {
    * *
    */
   export type ListSortDirection = any;
-  //# sourceMappingURL=ListSortDirection.d.ts.map
-}
-declare module 'testit-api-client/model/ListSortDirection.d.ts' {
-  {"version":3,"file":"ListSortDirection.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ListSortDirection.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAA8B,CAIxC;IAtBG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,mBAA4B;CAYnC"}
+
 }
 declare module 'testit-api-client/model/LogicalOperator' {
   /**
@@ -16713,10 +16005,7 @@ declare module 'testit-api-client/model/LogicalOperator' {
    * *
    */
   export type LogicalOperator = any;
-  //# sourceMappingURL=LogicalOperator.d.ts.map
-}
-declare module 'testit-api-client/model/LogicalOperator.d.ts' {
-  {"version":3,"file":"LogicalOperator.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/LogicalOperator.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAA4B,CAItC;IAtBG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,WAAY;CAYnB"}
+
 }
 declare module 'testit-api-client/model/ManualRerunApiResult' {
   export default ManualRerunApiResult;
@@ -16757,10 +16046,7 @@ declare module 'testit-api-client/model/ManualRerunApiResult' {
   namespace ManualRerunApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ManualRerunApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ManualRerunApiResult.d.ts' {
-  {"version":3,"file":"ManualRerunApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ManualRerunApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,yDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAW5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,sCAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
   export default ManualRerunSelectTestResultsApiModel;
@@ -16794,10 +16080,7 @@ declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
       extractionModel: any;
       webhookIds: any;
   }
-  //# sourceMappingURL=ManualRerunSelectTestResultsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel.d.ts' {
-  {"version":3,"file":"ManualRerunSelectTestResultsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ManualRerunSelectTestResultsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAiB5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
   export default ManualRerunTestResultApiModel;
@@ -16829,10 +16112,7 @@ declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
       static validateJSON(data: any): boolean;
       testResultIds: any;
   }
-  //# sourceMappingURL=ManualRerunTestResultApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ManualRerunTestResultApiModel.d.ts' {
-  {"version":3,"file":"ManualRerunTestResultApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ManualRerunTestResultApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAWrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/NamedEntityApiModel' {
   export default NamedEntityApiModel;
@@ -16875,10 +16155,7 @@ declare module 'testit-api-client/model/NamedEntityApiModel' {
   namespace NamedEntityApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=NamedEntityApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/NamedEntityApiModel.d.ts' {
-  {"version":3,"file":"NamedEntityApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/NamedEntityApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAc3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/NotificationModel' {
   export default NotificationModel;
@@ -16940,10 +16217,7 @@ declare module 'testit-api-client/model/NotificationModel' {
   namespace NotificationModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=NotificationModel.d.ts.map
-}
-declare module 'testit-api-client/model/NotificationModel.d.ts' {
-  {"version":3,"file":"NotificationModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/NotificationModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,2LAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAkDzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2ClB;IA1ID;;;;;;;;;;;;OAYG;IACH,6EAP4B,GAAkC,8GAU7D;;;;;;;;;;;;;;;CA6HJ"}
+
 }
 declare module 'testit-api-client/model/NotificationQueryFilterModel' {
   export default NotificationQueryFilterModel;
@@ -16977,10 +16251,7 @@ declare module 'testit-api-client/model/NotificationQueryFilterModel' {
       isRead: any;
       createdDate: any;
   }
-  //# sourceMappingURL=NotificationQueryFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/NotificationQueryFilterModel.d.ts' {
-  {"version":3,"file":"NotificationQueryFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/NotificationQueryFilterModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAiBpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/NotificationTypeModel' {
   /**
@@ -17020,10 +16291,7 @@ declare module 'testit-api-client/model/NotificationTypeModel' {
    * *
    */
   export type NotificationTypeModel = any;
-  //# sourceMappingURL=NotificationTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/NotificationTypeModel.d.ts' {
-  {"version":3,"file":"NotificationTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/NotificationTypeModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IApCG;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,8BAAkD;CAYzD"}
+
 }
 declare module 'testit-api-client/model/Operation' {
   export default Operation;
@@ -17058,10 +16326,7 @@ declare module 'testit-api-client/model/Operation' {
       op: any;
       from: any;
   }
-  //# sourceMappingURL=Operation.d.ts.map
-}
-declare module 'testit-api-client/model/Operation.d.ts' {
-  {"version":3,"file":"Operation.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Operation.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsB,GACrB,GAAsB,CAoBjC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/Order' {
   export default Order;
@@ -17104,10 +16369,7 @@ declare module 'testit-api-client/model/Order' {
   namespace Order {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Order.d.ts.map
-}
-declare module 'testit-api-client/model/Order.d.ts' {
-  {"version":3,"file":"Order.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Order.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkB,GACjB,GAAkB,CAc7B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,sCAFqB,GAA8B,EAKlD;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/Page' {
   export default Page;
@@ -17150,10 +16412,7 @@ declare module 'testit-api-client/model/Page' {
   namespace Page {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=Page.d.ts.map
-}
-declare module 'testit-api-client/model/Page.d.ts' {
-  {"version":3,"file":"Page.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/Page.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,wDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiB,GAChB,GAAiB,CAc5B;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,wCAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/ParameterApiResult' {
   export default ParameterApiResult;
@@ -17210,10 +16469,7 @@ declare module 'testit-api-client/model/ParameterApiResult' {
   namespace ParameterApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ParameterApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterApiResult.d.ts' {
-  {"version":3,"file":"ParameterApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,4JASC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAsC1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuClB;IAxHD;;;;;;;;;;;OAWG;IACH,0FALuB,IAAI,uDAGL,KAAK,QAAS,EAKnC;;;;;;;;;;;CA4GJ"}
+
 }
 declare module 'testit-api-client/model/ParameterGroupApiResult' {
   export default ParameterGroupApiResult;
@@ -17260,10 +16516,7 @@ declare module 'testit-api-client/model/ParameterGroupApiResult' {
   namespace ParameterGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ParameterGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterGroupApiResult.d.ts' {
-  {"version":3,"file":"ParameterGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,gGAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,2EAFsB,KAAK,QAAS,EAKnC;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
   export default ParameterGroupsFilterApiModel;
@@ -17298,10 +16551,7 @@ declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
       isDeleted: any;
       projectIds: any;
   }
-  //# sourceMappingURL=ParameterGroupsFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterGroupsFilterApiModel.d.ts' {
-  {"version":3,"file":"ParameterGroupsFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterGroupsFilterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAoBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ParameterIterationModel' {
   export default ParameterIterationModel;
@@ -17342,10 +16592,7 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
   namespace ParameterIterationModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ParameterIterationModel.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterIterationModel.d.ts' {
-  {"version":3,"file":"ParameterIterationModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterIterationModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAW/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/ParametersFilterApiModel' {
   export default ParametersFilterApiModel;
@@ -17379,10 +16626,7 @@ declare module 'testit-api-client/model/ParametersFilterApiModel' {
       isDeleted: any;
       projectIds: any;
   }
-  //# sourceMappingURL=ParametersFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ParametersFilterApiModel.d.ts' {
-  {"version":3,"file":"ParametersFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParametersFilterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ParameterShortApiResult' {
   export default ParameterShortApiResult;
@@ -17429,10 +16673,7 @@ declare module 'testit-api-client/model/ParameterShortApiResult' {
   namespace ParameterShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ParameterShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterShortApiResult.d.ts' {
-  {"version":3,"file":"ParameterShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterShortApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,uFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAlFD;;;;;;;OAOG;IACH,6EAGC;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/ParameterShortModel' {
   export default ParameterShortModel;
@@ -17481,10 +16722,7 @@ declare module 'testit-api-client/model/ParameterShortModel' {
   namespace ParameterShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ParameterShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/ParameterShortModel.d.ts' {
-  {"version":3,"file":"ParameterShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ParameterShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,wGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAuB3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IA3FD;;;;;;;;OAQG;IACH,yFAFsB,KAAK,QAAS,EAKnC;;;;;;CAkFJ"}
+
 }
 declare module 'testit-api-client/model/PeriodViewModel' {
   export default PeriodViewModel;
@@ -17517,10 +16755,7 @@ declare module 'testit-api-client/model/PeriodViewModel' {
       startDate: any;
       endDate: any;
   }
-  //# sourceMappingURL=PeriodViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/PeriodViewModel.d.ts' {
-  {"version":3,"file":"PeriodViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/PeriodViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAcvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
   export default PeriodViewModelChangedFieldViewModel;
@@ -17553,10 +16788,7 @@ declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=PeriodViewModelChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"PeriodViewModelChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/PeriodViewModelChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAc5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
   export default PreviewsIssueLinkApiModel;
@@ -17599,10 +16831,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
   namespace PreviewsIssueLinkApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=PreviewsIssueLinkApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/PreviewsIssueLinkApiModel.d.ts' {
-  {"version":3,"file":"PreviewsIssueLinkApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/PreviewsIssueLinkApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,wDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,wCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
   export default PreviewsIssueLinkApiResult;
@@ -17645,10 +16874,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
   namespace PreviewsIssueLinkApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=PreviewsIssueLinkApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/PreviewsIssueLinkApiResult.d.ts' {
-  {"version":3,"file":"PreviewsIssueLinkApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/PreviewsIssueLinkApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,wDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,wCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ProblemDetails' {
   export default ProblemDetails;
@@ -17684,10 +16910,7 @@ declare module 'testit-api-client/model/ProblemDetails' {
       detail: any;
       instance: any;
   }
-  //# sourceMappingURL=ProblemDetails.d.ts.map
-}
-declare module 'testit-api-client/model/ProblemDetails.d.ts' {
-  {"version":3,"file":"ProblemDetails.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProblemDetails.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2B,GAC1B,GAA2B,CA0BtC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectApiResult' {
   export default ProjectApiResult;
@@ -17754,10 +16977,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
   namespace ProjectApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectApiResult.d.ts' {
-  {"version":3,"file":"ProjectApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,sKAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAiExC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;IArKD;;;;;;;;;;;;OAYG;IACH,4FANuB,IAAI,+CAGX,GAAwB,sBAMvC;;;;;;;;;;;;;;;;;;;;CAwJJ"}
+
 }
 declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
   export default ProjectAttributesFilterModel;
@@ -17803,10 +17023,7 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
   namespace ProjectAttributesFilterModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectAttributesFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectAttributesFilterModel.d.ts' {
-  {"version":3,"file":"ProjectAttributesFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectAttributesFilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,yDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAuBpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAzED;;;;;OAKG;IACH,iCAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;;;CAmEJ"}
+
 }
 declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterModel' {
   export default ProjectCustomAttributesTemplatesFilterModel;
@@ -17839,10 +17056,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterMo
       name: any;
       customAttributeTypes: any;
   }
-  //# sourceMappingURL=ProjectCustomAttributesTemplatesFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterModel.d.ts' {
-  {"version":3,"file":"ProjectCustomAttributesTemplatesFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectCustomAttributesTemplatesFilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwD,GACvD,GAAwD,CAcnE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' {
   export default ProjectCustomAttributeTemplateGetModel;
@@ -17889,10 +17103,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
   namespace ProjectCustomAttributeTemplateGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectCustomAttributeTemplateGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel.d.ts' {
-  {"version":3,"file":"ProjectCustomAttributeTemplateGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectCustomAttributeTemplateGetModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,kGAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAoB9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IApFD;;;;;;;OAOG;IACH,iFAFiC,KAAK,CAAE,MAAM,CAAA,EAK7C;;;;;CA4EJ"}
+
 }
 declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult' {
   export default ProjectDetailedFailureCategoryApiResult;
@@ -17948,10 +17159,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
   namespace ProjectDetailedFailureCategoryApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectDetailedFailureCategoryApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult.d.ts' {
-  {"version":3,"file":"ProjectDetailedFailureCategoryApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectDetailedFailureCategoryApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,mKAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAsC/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;IApHD;;;;;;;;;;OAUG;IACH,6DAN2B,GAA4B,eAChC,IAAI,4CAEI,KAAK,CAAE,MAAM,CAAA,yBAM3C;;;;;;;;;;;CAyGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
   export default ProjectExternalServiceApiResult;
@@ -17998,10 +17206,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
   namespace ProjectExternalServiceApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectExternalServiceApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectExternalServiceApiResult.d.ts' {
-  {"version":3,"file":"ProjectExternalServiceApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectExternalServiceApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,mFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAoBvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,gDAHoB,GAA6C,oBAMhE;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
   export default ProjectExternalServicesApiResult;
@@ -18042,10 +17247,7 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
   namespace ProjectExternalServicesApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectExternalServicesApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectExternalServicesApiResult.d.ts' {
-  {"version":3,"file":"ProjectExternalServicesApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectExternalServicesApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAWxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IA7DD;;;;OAIG;IACH,kBAFgB,KAAK,CAAE,MAAM,CAAA,EAK5B;;CAwDJ"}
+
 }
 declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult' {
   export default ProjectExternalServiceSettingsApiResult;
@@ -18077,10 +17279,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult'
       static validateJSON(data: any): boolean;
       settings: any;
   }
-  //# sourceMappingURL=ProjectExternalServiceSettingsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult.d.ts' {
-  {"version":3,"file":"ProjectExternalServiceSettingsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectExternalServiceSettingsApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoD,GACnD,GAAoD,CAW/D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAKlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectExtractionModel' {
   export default ProjectExtractionModel;
@@ -18112,10 +17311,7 @@ declare module 'testit-api-client/model/ProjectExtractionModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=ProjectExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectExtractionModel.d.ts' {
-  {"version":3,"file":"ProjectExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAW9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
   export default ProjectFailureCategoryApiResult;
@@ -18171,10 +17367,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
   namespace ProjectFailureCategoryApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectFailureCategoryApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectFailureCategoryApiResult.d.ts' {
-  {"version":3,"file":"ProjectFailureCategoryApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectFailureCategoryApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,kKAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAsCvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA1GD;;;;;;;;;;OAUG;IACH,yCAP2B,GAA4B,eAChC,IAAI,6FAS1B;;;;;;;;;;;CA+FJ"}
+
 }
 declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult' {
   export default ProjectFailureCategoryGroupItemApiResult;
@@ -18216,10 +17409,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   namespace ProjectFailureCategoryGroupItemApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectFailureCategoryGroupItemApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult.d.ts' {
-  {"version":3,"file":"ProjectFailureCategoryGroupItemApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectFailureCategoryGroupItemApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqD,GACpD,GAAqD,CAchE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,mBAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResultReply' {
   export default ProjectFailureCategoryGroupItemApiResultReply;
@@ -18262,10 +17452,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   namespace ProjectFailureCategoryGroupItemApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectFailureCategoryGroupItemApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResultReply.d.ts' {
-  {"version":3,"file":"ProjectFailureCategoryGroupItemApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectFailureCategoryGroupItemApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0D,GACzD,GAA0D,CAcrE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ProjectModel' {
   export default ProjectModel;
@@ -18332,10 +17519,7 @@ declare module 'testit-api-client/model/ProjectModel' {
   namespace ProjectModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectModel.d.ts' {
-  {"version":3,"file":"ProjectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,sKAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CAiEpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;IArKD;;;;;;;;;;;;OAYG;IACH,4FANuB,IAAI,+CAGX,GAA6B,sBAM5C;;;;;;;;;;;;;;;;;;;;CAwJJ"}
+
 }
 declare module 'testit-api-client/model/ProjectNameApiResult' {
   export default ProjectNameApiResult;
@@ -18378,10 +17562,7 @@ declare module 'testit-api-client/model/ProjectNameApiResult' {
   namespace ProjectNameApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectNameApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectNameApiResult.d.ts' {
-  {"version":3,"file":"ProjectNameApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectNameApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAc5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ProjectSelectModel' {
   export default ProjectSelectModel;
@@ -18414,10 +17595,7 @@ declare module 'testit-api-client/model/ProjectSelectModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=ProjectSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectSelectModel.d.ts' {
-  {"version":3,"file":"ProjectSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectsFilterModel' {
   export default ProjectsFilterModel;
@@ -18459,10 +17637,7 @@ declare module 'testit-api-client/model/ProjectsFilterModel' {
       createdByIds: any;
       types: any;
   }
-  //# sourceMappingURL=ProjectsFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectsFilterModel.d.ts' {
-  {"version":3,"file":"ProjectsFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectsFilterModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAyC3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyClB;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectShortApiResult' {
   export default ProjectShortApiResult;
@@ -18513,10 +17688,7 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
   namespace ProjectShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectShortApiResult.d.ts' {
-  {"version":3,"file":"ProjectShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectShortApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,iHAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CA0B7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IApFD;;;;;;;;;OASG;IACH,kFAHgB,GAAwB,uBAMvC;;;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/ProjectShortApiResultReply' {
   export default ProjectShortApiResultReply;
@@ -18559,10 +17731,7 @@ declare module 'testit-api-client/model/ProjectShortApiResultReply' {
   namespace ProjectShortApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectShortApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectShortApiResultReply.d.ts' {
-  {"version":3,"file":"ProjectShortApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectShortApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAclD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/ProjectShortestModel' {
   export default ProjectShortestModel;
@@ -18611,10 +17780,7 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
   namespace ProjectShortestModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectShortestModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectShortestModel.d.ts' {
-  {"version":3,"file":"ProjectShortestModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectShortestModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,gGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAuB5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA/ED;;;;;;;;OAQG;IACH,kFAFgB,GAA6B,EAK5C;;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/ProjectShortModel' {
   export default ProjectShortModel;
@@ -18679,10 +17845,7 @@ declare module 'testit-api-client/model/ProjectShortModel' {
   namespace ProjectShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ProjectShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectShortModel.d.ts' {
-  {"version":3,"file":"ProjectShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectShortModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,sKAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CA2DzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA3ID;;;;;;;;;;;;OAYG;IACH,4FANuB,IAAI,+CAGX,GAA6B,sBAM5C;;;;;;;;;;;;;;;;;;CA8HJ"}
+
 }
 declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
   export default ProjectTestPlansFilterModel;
@@ -18730,10 +17893,7 @@ declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
       attributes: any;
       isDeleted: any;
   }
-  //# sourceMappingURL=ProjectTestPlansFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectTestPlansFilterModel.d.ts' {
-  {"version":3,"file":"ProjectTestPlansFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectTestPlansFilterModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CA2DnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/ProjectType' {
   /**
@@ -18763,10 +17923,7 @@ declare module 'testit-api-client/model/ProjectType' {
    * *
    */
   export type ProjectType = any;
-  //# sourceMappingURL=ProjectType.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectType.d.ts' {
-  {"version":3,"file":"ProjectType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAAwB,CAIlC;IAtBG;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;CAYvB"}
+
 }
 declare module 'testit-api-client/model/ProjectTypeModel' {
   /**
@@ -18796,10 +17953,7 @@ declare module 'testit-api-client/model/ProjectTypeModel' {
    * *
    */
   export type ProjectTypeModel = any;
-  //# sourceMappingURL=ProjectTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/ProjectTypeModel.d.ts' {
-  {"version":3,"file":"ProjectTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ProjectTypeModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAA6B,CAIvC;IAtBG;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;CAYvB"}
+
 }
 declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
   export default ReplaceProjectExternalServiceApiModel;
@@ -18842,10 +17996,7 @@ declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
   namespace ReplaceProjectExternalServiceApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ReplaceProjectExternalServiceApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel.d.ts' {
-  {"version":3,"file":"ReplaceProjectExternalServiceApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ReplaceProjectExternalServiceApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,4EAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkD,GACjD,GAAkD,CAc7D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,yDAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/RequestType' {
   /**
@@ -18880,10 +18031,7 @@ declare module 'testit-api-client/model/RequestType' {
    * *
    */
   export type RequestType = any;
-  //# sourceMappingURL=RequestType.d.ts.map
-}
-declare module 'testit-api-client/model/RequestType.d.ts' {
-  {"version":3,"file":"RequestType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RequestType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAwB,CAIlC;IA7BG;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;CAY3B"}
+
 }
 declare module 'testit-api-client/model/RequestTypeApiModel' {
   /**
@@ -18918,10 +18066,7 @@ declare module 'testit-api-client/model/RequestTypeApiModel' {
    * *
    */
   export type RequestTypeApiModel = any;
-  //# sourceMappingURL=RequestTypeApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/RequestTypeApiModel.d.ts' {
-  {"version":3,"file":"RequestTypeApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RequestTypeApiModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAgC,CAI1C;IA7BG;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;CAY3B"}
+
 }
 declare module 'testit-api-client/model/RequestTypeModel' {
   /**
@@ -18956,10 +18101,7 @@ declare module 'testit-api-client/model/RequestTypeModel' {
    * *
    */
   export type RequestTypeModel = any;
-  //# sourceMappingURL=RequestTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/RequestTypeModel.d.ts' {
-  {"version":3,"file":"RequestTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RequestTypeModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAA6B,CAIvC;IA7BG;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;CAY3B"}
+
 }
 declare module 'testit-api-client/model/RerunsModel' {
   export default RerunsModel;
@@ -19002,10 +18144,7 @@ declare module 'testit-api-client/model/RerunsModel' {
   namespace RerunsModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=RerunsModel.d.ts.map
-}
-declare module 'testit-api-client/model/RerunsModel.d.ts' {
-  {"version":3,"file":"RerunsModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RerunsModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0EAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwB,GACvB,GAAwB,CAcnC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kDAF4B,KAAK,CAAE,MAAM,CAAA,EAKxC;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/RerunTestResultApiResult' {
   export default RerunTestResultApiResult;
@@ -19052,10 +18191,7 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
   namespace RerunTestResultApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=RerunTestResultApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/RerunTestResultApiResult.d.ts' {
-  {"version":3,"file":"RerunTestResultApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RerunTestResultApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,sFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAoBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,iDAHkB,GAAgC,qBAMjD;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/RerunTestResultModel' {
   export default RerunTestResultModel;
@@ -19099,10 +18235,7 @@ declare module 'testit-api-client/model/RerunTestResultModel' {
   namespace RerunTestResultModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=RerunTestResultModel.d.ts.map
-}
-declare module 'testit-api-client/model/RerunTestResultModel.d.ts' {
-  {"version":3,"file":"RerunTestResultModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/RerunTestResultModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAiB5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,2CAGC;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
   export default SearchCustomAttributeTemplateGetModel;
@@ -19151,10 +18284,7 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
   namespace SearchCustomAttributeTemplateGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SearchCustomAttributeTemplateGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel.d.ts' {
-  {"version":3,"file":"SearchCustomAttributeTemplateGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchCustomAttributeTemplateGetModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,8HAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkD,GACjD,GAAkD,CAuB7D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuClB;IAnGD;;;;;;;;OAQG;IACH,iFAHiC,KAAK,CAAE,MAAM,CAAA,yBACb,KAAK,CAAE,MAAM,CAAA,EAK7C;;;;;;CA0FJ"}
+
 }
 declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
   export default SearchExternalIssuesApiModel;
@@ -19195,10 +18325,7 @@ declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
   namespace SearchExternalIssuesApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SearchExternalIssuesApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchExternalIssuesApiModel.d.ts' {
-  {"version":3,"file":"SearchExternalIssuesApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchExternalIssuesApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,4CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAWpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,yBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/SearchTestRunsApiModel' {
   export default SearchTestRunsApiModel;
@@ -19236,10 +18363,7 @@ declare module 'testit-api-client/model/SearchTestRunsApiModel' {
       createdByIds: any;
       modifiedByIds: any;
   }
-  //# sourceMappingURL=SearchTestRunsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchTestRunsApiModel.d.ts' {
-  {"version":3,"file":"SearchTestRunsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchTestRunsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA6B9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiClB;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
   export default SearchTestStatusesApiModel;
@@ -19271,10 +18395,7 @@ declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
       static validateJSON(data: any): boolean;
       inquiry: any;
   }
-  //# sourceMappingURL=SearchTestStatusesApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchTestStatusesApiModel.d.ts' {
-  {"version":3,"file":"SearchTestStatusesApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchTestStatusesApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAWlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
   export default SearchWebhooksQueryModel;
@@ -19310,10 +18431,7 @@ declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
       projectIds: any;
       isEnabled: any;
   }
-  //# sourceMappingURL=SearchWebhooksQueryModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchWebhooksQueryModel.d.ts' {
-  {"version":3,"file":"SearchWebhooksQueryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchWebhooksQueryModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAuBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
   export default SearchWorkflowProjectsApiModel;
@@ -19345,10 +18463,7 @@ declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
       static validateJSON(data: any): boolean;
       inquiry: any;
   }
-  //# sourceMappingURL=SearchWorkflowProjectsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel.d.ts' {
-  {"version":3,"file":"SearchWorkflowProjectsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchWorkflowProjectsApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAWtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
   export default SearchWorkflowsApiModel;
@@ -19380,10 +18495,7 @@ declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
       static validateJSON(data: any): boolean;
       inquiry: any;
   }
-  //# sourceMappingURL=SearchWorkflowsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SearchWorkflowsApiModel.d.ts' {
-  {"version":3,"file":"SearchWorkflowsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchWorkflowsApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAW/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
   export default SearchWorkItemLinkUrlsApiResult;
@@ -19424,10 +18536,7 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
   namespace SearchWorkItemLinkUrlsApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SearchWorkItemLinkUrlsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult.d.ts' {
-  {"version":3,"file":"SearchWorkItemLinkUrlsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SearchWorkItemLinkUrlsApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IA7DD;;;;OAIG;IACH,kBAFgB,KAAK,CAAE,MAAM,CAAA,EAK5B;;CAwDJ"}
+
 }
 declare module 'testit-api-client/model/SectionModel' {
   export default SectionModel;
@@ -19480,10 +18589,7 @@ declare module 'testit-api-client/model/SectionModel' {
   namespace SectionModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionModel.d.ts' {
-  {"version":3,"file":"SectionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,0GAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CAmCpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA3GD;;;;;;;;OAQG;IACH,yDAJuB,IAAI,qCAO1B;;;;;;;;;;CAkGJ"}
+
 }
 declare module 'testit-api-client/model/SectionMoveModel' {
   export default SectionMoveModel;
@@ -19529,10 +18635,7 @@ declare module 'testit-api-client/model/SectionMoveModel' {
   namespace SectionMoveModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionMoveModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionMoveModel.d.ts' {
-  {"version":3,"file":"SectionMoveModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionMoveModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,4EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAoBxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAhFD;;;;;;OAMG;IACH,+DAGC;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/SectionPostModel' {
   export default SectionPostModel;
@@ -19580,10 +18683,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
   namespace SectionPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionPostModel.d.ts' {
-  {"version":3,"file":"SectionPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionPostModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,+EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CA0BxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqDlB;IAhHD;;;;;;OAMG;IACH,0DAFuB,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;CAyGJ"}
+
 }
 declare module 'testit-api-client/model/SectionPutModel' {
   export default SectionPutModel;
@@ -19633,10 +18733,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
   namespace SectionPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionPutModel.d.ts' {
-  {"version":3,"file":"SectionPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionPutModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,wFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CA6BvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyDlB;IAzHD;;;;;;;OAOG;IACH,sEAFuB,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;CAiHJ"}
+
 }
 declare module 'testit-api-client/model/SectionRenameModel' {
   export default SectionRenameModel;
@@ -19679,10 +18776,7 @@ declare module 'testit-api-client/model/SectionRenameModel' {
   namespace SectionRenameModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionRenameModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionRenameModel.d.ts' {
-  {"version":3,"file":"SectionRenameModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionRenameModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/SectionWithStepsModel' {
   export default SectionWithStepsModel;
@@ -19738,10 +18832,7 @@ declare module 'testit-api-client/model/SectionWithStepsModel' {
   namespace SectionWithStepsModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SectionWithStepsModel.d.ts.map
-}
-declare module 'testit-api-client/model/SectionWithStepsModel.d.ts' {
-  {"version":3,"file":"SectionWithStepsModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SectionWithStepsModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,0GAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CA4C7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiElB;IAlJD;;;;;;;;OAQG;IACH,yDAJuB,IAAI,qCAO1B;;;;;;;;;;;;;CAyIJ"}
+
 }
 declare module 'testit-api-client/model/SelectTagsApiModel' {
   export default SelectTagsApiModel;
@@ -19774,10 +18865,7 @@ declare module 'testit-api-client/model/SelectTagsApiModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=SelectTagsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SelectTagsApiModel.d.ts' {
-  {"version":3,"file":"SelectTagsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SelectTagsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepChangeViewModel' {
   export default SharedStepChangeViewModel;
@@ -19824,10 +18912,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
   namespace SharedStepChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SharedStepChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepChangeViewModel.d.ts' {
-  {"version":3,"file":"SharedStepChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepChangeViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,iFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAoBjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IApFD;;;;;;;OAOG;IACH,+DAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;;CA4EJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepModel' {
   export default SharedStepModel;
@@ -19876,10 +18961,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
   namespace SharedStepModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SharedStepModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepModel.d.ts' {
-  {"version":3,"file":"SharedStepModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,wGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CAuBvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAzFD;;;;;;;;OAQG;IACH,sEAHiB,KAAK,CAAE,MAAM,CAAA,sBAM7B;;;;;;CAgFJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepReferenceModel' {
   export default SharedStepReferenceModel;
@@ -19952,10 +19034,7 @@ declare module 'testit-api-client/model/SharedStepReferenceModel' {
   namespace SharedStepReferenceModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SharedStepReferenceModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepReferenceModel.d.ts' {
-  {"version":3,"file":"SharedStepReferenceModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepReferenceModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAyBI;;;;OAIG;IACH,qUAgBC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiEhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqDlB;IA/KD;;;;;;;;;;;;;;;;;;OAkBG;IACH,qPAPoB,GAAkC,cAChC,GAAoC,kFASzD;;;;;;;;;;;;;;;;;;;;CA4JJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
   export default SharedStepReferenceSectionModel;
@@ -20009,10 +19088,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
   namespace SharedStepReferenceSectionModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SharedStepReferenceSectionModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepReferenceSectionModel.d.ts' {
-  {"version":3,"file":"SharedStepReferenceSectionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepReferenceSectionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,qKAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAmCvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IArGD;;;;;;;;;OASG;IACH,oKAGC;;;;;;;;;;CA2FJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterModel' {
   export default SharedStepReferenceSectionsQueryFilterModel;
@@ -20048,10 +19124,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterMo
       createdDate: any;
       modifiedDate: any;
   }
-  //# sourceMappingURL=SharedStepReferenceSectionsQueryFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterModel.d.ts' {
-  {"version":3,"file":"SharedStepReferenceSectionsQueryFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepReferenceSectionsQueryFilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwD,GACvD,GAAwD,CAuBnE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
   export default SharedStepReferencesQueryFilterModel;
@@ -20094,10 +19167,7 @@ declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
       isAutomated: any;
       tags: any;
   }
-  //# sourceMappingURL=SharedStepReferencesQueryFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel.d.ts' {
-  {"version":3,"file":"SharedStepReferencesQueryFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepReferencesQueryFilterModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CA4C5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiDlB;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/SharedStepResultApiModel' {
   export default SharedStepResultApiModel;
@@ -20140,10 +19210,7 @@ declare module 'testit-api-client/model/SharedStepResultApiModel' {
   namespace SharedStepResultApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=SharedStepResultApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/SharedStepResultApiModel.d.ts' {
-  {"version":3,"file":"SharedStepResultApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/SharedStepResultApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,6DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,6CAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/ShortConfiguration' {
   export default ShortConfiguration;
@@ -20186,10 +19253,7 @@ declare module 'testit-api-client/model/ShortConfiguration' {
   namespace ShortConfiguration {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ShortConfiguration.d.ts.map
-}
-declare module 'testit-api-client/model/ShortConfiguration.d.ts' {
-  {"version":3,"file":"ShortConfiguration.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ShortConfiguration.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAc1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/StepCommentApiModel' {
   export default StepCommentApiModel;
@@ -20244,10 +19308,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
   namespace StepCommentApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=StepCommentApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/StepCommentApiModel.d.ts' {
-  {"version":3,"file":"StepCommentApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StepCommentApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,iIAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAsC3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiDlB;IA9HD;;;;;;;;;OASG;IACH,qDALuB,KAAK,CAAE,MAAM,CAAA,0DAGb,IAAI,EAK1B;;;;;;;;;;;CAoHJ"}
+
 }
 declare module 'testit-api-client/model/StepModel' {
   export default StepModel;
@@ -20294,10 +19355,7 @@ declare module 'testit-api-client/model/StepModel' {
   namespace StepModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=StepModel.d.ts.map
-}
-declare module 'testit-api-client/model/StepModel.d.ts' {
-  {"version":3,"file":"StepModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StepModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsB,GACrB,GAAsB,CA6BjC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuClB;IAjGD;;;;OAIG;IACH,wBAGC;;;;;;;;CA4FJ"}
+
 }
 declare module 'testit-api-client/model/StepPostModel' {
   export default StepPostModel;
@@ -20333,10 +19391,7 @@ declare module 'testit-api-client/model/StepPostModel' {
       comments: any;
       workItemId: any;
   }
-  //# sourceMappingURL=StepPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/StepPostModel.d.ts' {
-  {"version":3,"file":"StepPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StepPostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CAuBrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/StepPutModel' {
   export default StepPutModel;
@@ -20382,10 +19437,7 @@ declare module 'testit-api-client/model/StepPutModel' {
   namespace StepPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=StepPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/StepPutModel.d.ts' {
-  {"version":3,"file":"StepPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StepPutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CA0BpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA1FD;;;;OAIG;IACH,wBAGC;;;;;;;CAqFJ"}
+
 }
 declare module 'testit-api-client/model/StepResultApiModel' {
   export default StepResultApiModel;
@@ -20431,10 +19483,7 @@ declare module 'testit-api-client/model/StepResultApiModel' {
   namespace StepResultApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=StepResultApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/StepResultApiModel.d.ts' {
-  {"version":3,"file":"StepResultApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StepResultApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,6DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAuB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;IA3FD;;;;;OAKG;IACH,6CAGC;;;;;;CAqFJ"}
+
 }
 declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
   export default StringArrayChangedFieldViewModel;
@@ -20467,10 +19516,7 @@ declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=StringArrayChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/StringArrayChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"StringArrayChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StringArrayChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAcxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/StringChangedFieldViewModel' {
   export default StringChangedFieldViewModel;
@@ -20503,10 +19549,7 @@ declare module 'testit-api-client/model/StringChangedFieldViewModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=StringChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/StringChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"StringChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StringChangedFieldViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
   export default StringChangedFieldWithDiffsViewModel;
@@ -20540,10 +19583,7 @@ declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=StringChangedFieldWithDiffsViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel.d.ts' {
-  {"version":3,"file":"StringChangedFieldWithDiffsViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StringChangedFieldWithDiffsViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAiB5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/StringExtractionModel' {
   export default StringExtractionModel;
@@ -20576,10 +19616,7 @@ declare module 'testit-api-client/model/StringExtractionModel' {
       include: any;
       exclude: any;
   }
-  //# sourceMappingURL=StringExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/StringExtractionModel.d.ts' {
-  {"version":3,"file":"StringExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/StringExtractionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAc7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TagApiModel' {
   export default TagApiModel;
@@ -20620,10 +19657,7 @@ declare module 'testit-api-client/model/TagApiModel' {
   namespace TagApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TagApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TagApiModel.d.ts' {
-  {"version":3,"file":"TagApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwB,GACvB,GAAwB,CAWnC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/TagApiResult' {
   export default TagApiResult;
@@ -20672,10 +19706,7 @@ declare module 'testit-api-client/model/TagApiResult' {
   namespace TagApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TagApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TagApiResult.d.ts' {
-  {"version":3,"file":"TagApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,0FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CA0BpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAxFD;;;;;;;OAOG;IACH,mDAHuB,IAAI,uBAM1B;;;;;;;CAgFJ"}
+
 }
 declare module 'testit-api-client/model/TagModel' {
   export default TagModel;
@@ -20716,10 +19747,7 @@ declare module 'testit-api-client/model/TagModel' {
   namespace TagModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TagModel.d.ts.map
-}
-declare module 'testit-api-client/model/TagModel.d.ts' {
-  {"version":3,"file":"TagModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqB,GACpB,GAAqB,CAWhC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/TagsExtractionApiModel' {
   export default TagsExtractionApiModel;
@@ -20751,10 +19779,7 @@ declare module 'testit-api-client/model/TagsExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TagsExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TagsExtractionApiModel.d.ts' {
-  {"version":3,"file":"TagsExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagsExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAW9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TagsFilterApiModel' {
   export default TagsFilterApiModel;
@@ -20788,10 +19813,7 @@ declare module 'testit-api-client/model/TagsFilterApiModel' {
       createdDate: any;
       createdByIds: any;
   }
-  //# sourceMappingURL=TagsFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TagsFilterApiModel.d.ts' {
-  {"version":3,"file":"TagsFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagsFilterApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAiB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TagShortApiResult' {
   export default TagShortApiResult;
@@ -20832,10 +19854,7 @@ declare module 'testit-api-client/model/TagShortApiResult' {
   namespace TagShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TagShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TagShortApiResult.d.ts' {
-  {"version":3,"file":"TagShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TagShortApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAWzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanApiResult' {
   export default TestPlanApiResult;
@@ -20904,10 +19923,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
   namespace TestPlanApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanApiResult.d.ts' {
-  {"version":3,"file":"TestPlanApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,gJASC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CA0EzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyDlB;IA9KD;;;;;;;;;;;OAWG;IACH,8CAPkB,GAA2B,QAC7B,KAAK,CAAE,MAAM,CAAA,8EAS5B;;;;;;;;;;;;;;;;;;;;;;;CAkKJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
   export default TestPlanChangedFieldsViewModel;
@@ -20951,10 +19967,7 @@ declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
       hasAutomaticDurationTimer: any;
       attributes: any;
   }
-  //# sourceMappingURL=TestPlanChangedFieldsViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel.d.ts' {
-  {"version":3,"file":"TestPlanChangedFieldsViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanChangedFieldsViewModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CA+CtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqDlB;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanChangeModel' {
   export default TestPlanChangeModel;
@@ -21002,10 +20015,7 @@ declare module 'testit-api-client/model/TestPlanChangeModel' {
   namespace TestPlanChangeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanChangeModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanChangeModel.d.ts' {
-  {"version":3,"file":"TestPlanChangeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanChangeModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,0GAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAuB3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IArFD;;;;;;;OAOG;IACH,mEAHiC,GAA2C,uBAM3E;;;;;;CA6EJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanExtractionModel' {
   export default TestPlanExtractionModel;
@@ -21037,10 +20047,7 @@ declare module 'testit-api-client/model/TestPlanExtractionModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TestPlanExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanExtractionModel.d.ts' {
-  {"version":3,"file":"TestPlanExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAW/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByStatus' {
   export default TestPlanGroupByStatus;
@@ -21083,10 +20090,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatus' {
   namespace TestPlanGroupByStatus {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByStatus.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByStatus.d.ts' {
-  {"version":3,"file":"TestPlanGroupByStatus.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByStatus.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAc7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,2CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
   export default TestPlanGroupByStatusCode;
@@ -21129,10 +20133,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
   namespace TestPlanGroupByStatusCode {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByStatusCode.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByStatusCode.d.ts' {
-  {"version":3,"file":"TestPlanGroupByStatusCode.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByStatusCode.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,+CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
   export default TestPlanGroupByStatusType;
@@ -21175,10 +20176,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
   namespace TestPlanGroupByStatusType {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByStatusType.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByStatusType.d.ts' {
-  {"version":3,"file":"TestPlanGroupByStatusType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByStatusType.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,wBAHsB,GAA2B,iBAMhD;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByTester' {
   export default TestPlanGroupByTester;
@@ -21220,10 +20218,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTester' {
   namespace TestPlanGroupByTester {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByTester.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByTester.d.ts' {
-  {"version":3,"file":"TestPlanGroupByTester.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByTester.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAc7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA1DD;;;;OAIG;IACH,2BAGC;;;CAqDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
   export default TestPlanGroupByTesterAndStatus;
@@ -21267,10 +20262,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
   namespace TestPlanGroupByTesterAndStatus {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByTesterAndStatus.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus.d.ts' {
-  {"version":3,"file":"TestPlanGroupByTesterAndStatus.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByTesterAndStatus.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAiBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,2CAGC;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
   export default TestPlanGroupByTesterAndStatusCode;
@@ -21314,10 +20306,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
   namespace TestPlanGroupByTesterAndStatusCode {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByTesterAndStatusCode.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode.d.ts' {
-  {"version":3,"file":"TestPlanGroupByTesterAndStatusCode.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByTesterAndStatusCode.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+C,GAC9C,GAA+C,CAiB1D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,+CAGC;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanGroupByTestSuite' {
   export default TestPlanGroupByTestSuite;
@@ -21362,10 +20351,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTestSuite' {
   namespace TestPlanGroupByTestSuite {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanGroupByTestSuite.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanGroupByTestSuite.d.ts' {
-  {"version":3,"file":"TestPlanGroupByTestSuite.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanGroupByTestSuite.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,oFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,uEAGC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanLink' {
   export default TestPlanLink;
@@ -21403,10 +20389,7 @@ declare module 'testit-api-client/model/TestPlanLink' {
       comment: any;
       info: any;
   }
-  //# sourceMappingURL=TestPlanLink.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanLink.d.ts' {
-  {"version":3,"file":"TestPlanLink.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanLink.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CA6BpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanModel' {
   export default TestPlanModel;
@@ -21475,10 +20458,7 @@ declare module 'testit-api-client/model/TestPlanModel' {
   namespace TestPlanModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanModel.d.ts' {
-  {"version":3,"file":"TestPlanModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,qJASC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CA0ErC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyDlB;IA9KD;;;;;;;;;;;OAWG;IACH,oBATkB,GAAgC,2HAYjD;;;;;;;;;;;;;;;;;;;;;;;CAkKJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanSelectModel' {
   export default TestPlanSelectModel;
@@ -21520,10 +20500,7 @@ declare module 'testit-api-client/model/TestPlanSelectModel' {
   namespace TestPlanSelectModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanSelectModel.d.ts' {
-  {"version":3,"file":"TestPlanSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAc3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,oBAFkB,GAAwC,EAKzD;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanShortModel' {
   export default TestPlanShortModel;
@@ -21568,10 +20545,7 @@ declare module 'testit-api-client/model/TestPlanShortModel' {
   namespace TestPlanShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanShortModel.d.ts' {
-  {"version":3,"file":"TestPlanShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,sEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAiB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAzED;;;;;;OAMG;IACH,yDAGC;;;;CAkEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanStatus' {
   /**
@@ -21611,10 +20585,7 @@ declare module 'testit-api-client/model/TestPlanStatus' {
    * *
    */
   export type TestPlanStatus = any;
-  //# sourceMappingURL=TestPlanStatus.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanStatus.d.ts' {
-  {"version":3,"file":"TestPlanStatus.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanStatus.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAA2B,CAIrC;IApCG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,kBAA0B;CAYjC"}
+
 }
 declare module 'testit-api-client/model/TestPlanStatusModel' {
   /**
@@ -21654,10 +20625,7 @@ declare module 'testit-api-client/model/TestPlanStatusModel' {
    * *
    */
   export type TestPlanStatusModel = any;
-  //# sourceMappingURL=TestPlanStatusModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanStatusModel.d.ts' {
-  {"version":3,"file":"TestPlanStatusModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanStatusModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAAgC,CAI1C;IApCG;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,kBAA0B;CAYjC"}
+
 }
 declare module 'testit-api-client/model/TestPlanSummaryModel' {
   export default TestPlanSummaryModel;
@@ -21709,10 +20677,7 @@ declare module 'testit-api-client/model/TestPlanSummaryModel' {
   namespace TestPlanSummaryModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanSummaryModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanSummaryModel.d.ts' {
-  {"version":3,"file":"TestPlanSummaryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanSummaryModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,0MAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CA6B5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IA/ED;;;;;;;;;OASG;IACH,sMAGC;;;;;;;;CAqEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTagApiResult' {
   export default TestPlanTagApiResult;
@@ -21753,10 +20718,7 @@ declare module 'testit-api-client/model/TestPlanTagApiResult' {
   namespace TestPlanTagApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTagApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTagApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTagApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTagApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAW5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
   export default TestPlanTestPointsAnalyticsApiModel;
@@ -21789,10 +20751,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=TestPlanTestPointsAnalyticsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsAnalyticsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsAnalyticsApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAc3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
   export default TestPlanTestPointsAnalyticsApiResult;
@@ -21843,10 +20802,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
   namespace TestPlanTestPointsAnalyticsApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsAnalyticsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsAnalyticsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsAnalyticsApiResult.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,gNAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CA0B5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuElB;IAxID;;;;;;;;;OASG;IACH,gCAP8B,KAAK,CAAE,MAAM,CAAA,+BACJ,KAAK,CAAE,MAAM,CAAA,oBACxB,KAAK,CAAE,MAAM,CAAA,sBACX,KAAK,CAAE,MAAM,CAAA,0BACT,KAAK,CAAE,MAAM,CAAA,mCACJ,KAAK,CAAE,MAAM,CAAA,EAKvD;;;;;;;CA8HJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
   export default TestPlanTestPointsApiModel;
@@ -21880,10 +20836,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
       group: any;
       inquiry: any;
   }
-  //# sourceMappingURL=TestPlanTestPointsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAiBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel' {
   export default TestPlanTestPointsAutoTestsRerunApiModel;
@@ -21917,10 +20870,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel
       extractionModel: any;
       webhookIds: any;
   }
-  //# sourceMappingURL=TestPlanTestPointsAutoTestsRerunApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsAutoTestsRerunApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsAutoTestsRerunApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqD,GACpD,GAAqD,CAiBhE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' {
   export default TestPlanTestPointsAutoTestsRunApiModel;
@@ -21966,10 +20916,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' 
   namespace TestPlanTestPointsAutoTestsRunApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsAutoTestsRunApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsAutoTestsRunApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsAutoTestsRunApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2FAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAuB9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAjFD;;;;;OAKG;IACH,wBAHsB,KAAK,QAAS,8CAMnC;;;;;;CA2EJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
   export default TestPlanTestPointsExtractionApiModel;
@@ -22001,10 +20948,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TestPlanTestPointsExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAW5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
   export default TestPlanTestPointsGroupApiModel;
@@ -22046,10 +20990,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
   namespace TestPlanTestPointsGroupApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsGroupApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsGroupApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsGroupApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAcvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,2BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
   export default TestPlanTestPointsGroupApiResult;
@@ -22094,10 +21035,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
   namespace TestPlanTestPointsGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,uFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAiBxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IA7DD;;;;;;OAMG;IACH,oEAGC;;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' {
   export default TestPlanTestPointsGroupSearchApiResult;
@@ -22142,10 +21080,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
   namespace TestPlanTestPointsGroupSearchApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsGroupSearchApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsGroupSearchApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsGroupSearchApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,mFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAiB9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IA3ED;;;;;;OAMG;IACH,kBAJgB,KAAK,CAAE,MAAM,CAAA,sCAEH,GAA4D,EAKrF;;;;CAoEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResult' {
   export default TestPlanTestPointsGroupSearchItemApiResult;
@@ -22188,10 +21123,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
   namespace TestPlanTestPointsGroupSearchItemApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsGroupSearchItemApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsGroupSearchItemApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsGroupSearchItemApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuD,GACtD,GAAuD,CAclE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IAtED;;;;;OAKG;IACH,mBAHiB,GAA6C,SAC7C,KAAK,CAAE,MAAM,CAAA,EAK7B;;;CAgEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
   export default TestPlanTestPointsInquiryApiModel;
@@ -22233,10 +21165,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
   namespace TestPlanTestPointsInquiryApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsInquiryApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsInquiryApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsInquiryApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAczD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IApED;;;;OAIG;IACH,mBAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
   export default TestPlanTestPointsSearchApiModel;
@@ -22290,10 +21219,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
       workItemModifiedDate: any;
       workItemModifiedByIds: any;
   }
-  //# sourceMappingURL=TestPlanTestPointsSearchApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsSearchApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsSearchApiModel.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CA6ExD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyFlB;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
   export default TestPlanTestPointsSearchApiResult;
@@ -22353,10 +21279,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
   namespace TestPlanTestPointsSearchApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsSearchApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsSearchApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsSearchApiResult.js"],"names":[],"mappings":";AAuBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,6KAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CA4CzD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;IAtJD;;;;;;;;;;;;OAYG;IACH,iCATmB,GAA2B,+BAEvB,GAAqC,sCAEnC,GAAwC,aAC5C,GAAuD,YACxD,GAAsD,cACpD,KAAK,CAAE,MAAM,CAAA,EAKlC;;;;;;;;;;;;;CAyIJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersApiResult' {
   export default TestPlanTestPointsSearchStatusCountersApiResult;
@@ -22403,10 +21326,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersAp
   namespace TestPlanTestPointsSearchStatusCountersApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsSearchStatusCountersApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsSearchStatusCountersApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsSearchStatusCountersApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,2KAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4D,GAC3D,GAA4D,CAoBvE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAlED;;;;;;;OAOG;IACH,iKAGC;;;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult' {
   export default TestPlanTestPointsSectionSearchApiResult;
@@ -22450,10 +21370,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult
   namespace TestPlanTestPointsSectionSearchApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsSectionSearchApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsSectionSearchApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsSectionSearchApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqD,GACpD,GAAqD,CAiBhE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAvED;;;;;OAKG;IACH,2CAGC;;;;CAiEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
   export default TestPlanTestPointsSetTestersApiModel;
@@ -22496,10 +21413,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
   namespace TestPlanTestPointsSetTestersApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsSetTestersApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsSetTestersApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsSetTestersApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAiB5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IArED;;;;OAIG;IACH,uBAFqB,KAAK,QAAS,EAKlC;;;;CAgEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResult' {
   export default TestPlanTestPointsStatusCodeGroupApiResult;
@@ -22544,10 +21458,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResu
   namespace TestPlanTestPointsStatusCodeGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsStatusCodeGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsStatusCodeGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsStatusCodeGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,gFAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuD,GACtD,GAAuD,CAiBlE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,mEAGC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' {
   export default TestPlanTestPointsStatusGroupApiResult;
@@ -22590,10 +21501,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' 
   namespace TestPlanTestPointsStatusGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsStatusGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsStatusGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsStatusGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAc9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,2CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResult' {
   export default TestPlanTestPointsStatusTypeGroupApiResult;
@@ -22636,10 +21544,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
   namespace TestPlanTestPointsStatusTypeGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsStatusTypeGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsStatusTypeGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsStatusTypeGroupApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,kEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuD,GACtD,GAAuD,CAclE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,wBAHsB,GAA8B,YAChC,KAAK,CAAE,MAAM,CAAA,EAKhC;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupApiResult' {
   export default TestPlanTestPointsTesterAndStatusGroupApiResult;
@@ -22684,10 +21589,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupAp
   namespace TestPlanTestPointsTesterAndStatusGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsTesterAndStatusGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsTesterAndStatusGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsTesterAndStatusGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,wEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4D,GAC3D,GAA4D,CAiBvE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,2DAGC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult' {
   export default TestPlanTestPointsTesterAndStatusTypeGroupApiResult;
@@ -22732,10 +21634,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
   namespace TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsTesterAndStatusTypeGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsTesterAndStatusTypeGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,+EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgE,GAC/D,GAAgE,CAiB3E;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;IA3ED;;;;;;OAMG;IACH,wCAHsB,GAA8B,YAChC,KAAK,CAAE,MAAM,CAAA,EAKhC;;;;CAoEJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' {
   export default TestPlanTestPointsTesterGroupApiResult;
@@ -22778,10 +21677,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' 
   namespace TestPlanTestPointsTesterGroupApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsTesterGroupApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsTesterGroupApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsTesterGroupApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAc9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,2CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResult' {
   export default TestPlanTestPointsTestSuiteSearchApiResult;
@@ -22824,10 +21720,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResu
   namespace TestPlanTestPointsTestSuiteSearchApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsTestSuiteSearchApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsTestSuiteSearchApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsTestSuiteSearchApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuD,GACtD,GAAuD,CAclE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResult' {
   export default TestPlanTestPointsWorkItemSearchApiResult;
@@ -22896,10 +21789,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResul
   namespace TestPlanTestPointsWorkItemSearchApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanTestPointsWorkItemSearchApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResult.d.ts' {
-  {"version":3,"file":"TestPlanTestPointsWorkItemSearchApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanTestPointsWorkItemSearchApiResult.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAuBI;;;;OAIG;IACH,6NAcC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsD,GACrD,GAAsD,CA2DjE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2ClB;IA3JD;;;;;;;;;;;;;;;;OAgBG;IACH,6GATiB,GAA0B,QAC3B,KAAK,QAAS,iEAIV,GAA6B,WAC9B,GAAqD,WACrD,GAA2B,EAK7C;;;;;;;;;;;;;;;;;;CA0IJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
   export default TestPlanWithAnalyticModel;
@@ -22970,10 +21860,7 @@ declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
   namespace TestPlanWithAnalyticModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanWithAnalyticModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanWithAnalyticModel.d.ts' {
-  {"version":3,"file":"TestPlanWithAnalyticModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanWithAnalyticModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,oKAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CA6EjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;IAvLD;;;;;;;;;;;;OAYG;IACH,sBAVoB,GAAoC,UACtC,GAAgC,2HAYjD;;;;;;;;;;;;;;;;;;;;;;;;CA0KJ"}
+
 }
 declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
   export default TestPlanWithTestSuiteTreeModel;
@@ -23044,10 +21931,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
   namespace TestPlanWithTestSuiteTreeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPlanWithTestSuiteTreeModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel.d.ts' {
-  {"version":3,"file":"TestPlanWithTestSuiteTreeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPlanWithTestSuiteTreeModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,sKAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CA6EtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmElB;IA7LD;;;;;;;;;;;;OAYG;IACH,wBAVsB,KAAK,CAAE,MAAM,CAAA,UACjB,GAAgC,2HAYjD;;;;;;;;;;;;;;;;;;;;;;;;CAgLJ"}
+
 }
 declare module 'testit-api-client/model/TestPoint' {
   export default TestPoint;
@@ -23100,10 +21984,7 @@ declare module 'testit-api-client/model/TestPoint' {
   namespace TestPoint {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPoint.d.ts.map
-}
-declare module 'testit-api-client/model/TestPoint.d.ts' {
-  {"version":3,"file":"TestPoint.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPoint.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,+FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsB,GACrB,GAAsB,CAsCjC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IAxHD;;;;;;;OAOG;IACH,sFAGC;;;;;;;;;;;CAgHJ"}
+
 }
 declare module 'testit-api-client/model/TestPointAnalyticResult' {
   export default TestPointAnalyticResult;
@@ -23158,10 +22039,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
   namespace TestPointAnalyticResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointAnalyticResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointAnalyticResult.d.ts' {
-  {"version":3,"file":"TestPointAnalyticResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointAnalyticResult.js"],"names":[],"mappings":";AAsBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,yQASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAgC/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2FlB;IAtKD;;;;;;;;;;;OAWG;IACH,gCAT8B,KAAK,CAAE,MAAM,CAAA,oBACf,KAAK,CAAE,MAAM,CAAA,sBACX,KAAK,CAAE,MAAM,CAAA,yBACV,KAAK,CAAE,MAAM,CAAA,+BACP,KAAK,CAAE,MAAM,CAAA,0BAClB,KAAK,CAAE,MAAM,CAAA,mCACJ,KAAK,CAAE,MAAM,CAAA,0BACtB,KAAK,CAAE,MAAM,CAAA,EAK9C;;;;;;;;;CA0JJ"}
+
 }
 declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
   export default TestPointByTestSuiteModel;
@@ -23210,10 +22088,7 @@ declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
   namespace TestPointByTestSuiteModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointByTestSuiteModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointByTestSuiteModel.d.ts' {
-  {"version":3,"file":"TestPointByTestSuiteModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointByTestSuiteModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,6DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAgCjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuClB;IAtGD;;;;;OAKG;IACH,6CAGC;;;;;;;;;CAgGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointChangeViewModel' {
   export default TestPointChangeViewModel;
@@ -23257,10 +22132,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModel' {
   namespace TestPointChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointChangeViewModel.d.ts' {
-  {"version":3,"file":"TestPointChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointChangeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,oEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAnED;;;;;OAKG;IACH,oDAGC;;;;CA6DJ"}
+
 }
 declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldViewModel' {
   export default TestPointChangeViewModelChangedFieldViewModel;
@@ -23293,10 +22165,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldView
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=TestPointChangeViewModelChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"TestPointChangeViewModelChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointChangeViewModelChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0D,GACzD,GAA0D,CAcrE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointFilterModel' {
   export default TestPointFilterModel;
@@ -23352,10 +22221,7 @@ declare module 'testit-api-client/model/TestPointFilterModel' {
       workItemModifiedDate: any;
       workItemModifiedByIds: any;
   }
-  //# sourceMappingURL=TestPointFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointFilterModel.d.ts' {
-  {"version":3,"file":"TestPointFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointFilterModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAmF5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6FlB;;;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointFilterRequestModel' {
   export default TestPointFilterRequestModel;
@@ -23411,10 +22277,7 @@ declare module 'testit-api-client/model/TestPointFilterRequestModel' {
       workItemModifiedDate: any;
       workItemModifiedByIds: any;
   }
-  //# sourceMappingURL=TestPointFilterRequestModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointFilterRequestModel.d.ts' {
-  {"version":3,"file":"TestPointFilterRequestModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointFilterRequestModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAmFnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6FlB;;;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointResultApiResult' {
   export default TestPointResultApiResult;
@@ -23461,10 +22324,7 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
   namespace TestPointResultApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointResultApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointResultApiResult.d.ts' {
-  {"version":3,"file":"TestPointResultApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointResultApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,oDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CA6BhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyClB;IAnGD;;;;OAIG;IACH,yBAFuB,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;CA8FJ"}
+
 }
 declare module 'testit-api-client/model/TestPointSelectModel' {
   export default TestPointSelectModel;
@@ -23497,10 +22357,7 @@ declare module 'testit-api-client/model/TestPointSelectModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=TestPointSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointSelectModel.d.ts' {
-  {"version":3,"file":"TestPointSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAc5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointSelector' {
   export default TestPointSelector;
@@ -23543,10 +22400,7 @@ declare module 'testit-api-client/model/TestPointSelector' {
   namespace TestPointSelector {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointSelector.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointSelector.d.ts' {
-  {"version":3,"file":"TestPointSelector.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointSelector.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0EAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAczC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,kDAFuB,KAAK,QAAS,EAKpC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestPointsExtractionModel' {
   export default TestPointsExtractionModel;
@@ -23578,10 +22432,7 @@ declare module 'testit-api-client/model/TestPointsExtractionModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TestPointsExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointsExtractionModel.d.ts' {
-  {"version":3,"file":"TestPointsExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointsExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAWjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointShortApiResult' {
   export default TestPointShortApiResult;
@@ -23636,10 +22487,7 @@ declare module 'testit-api-client/model/TestPointShortApiResult' {
   namespace TestPointShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointShortApiResult.d.ts' {
-  {"version":3,"file":"TestPointShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointShortApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,iHAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAyC/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IA7HD;;;;;;;;OAQG;IACH,yDAJuB,GAAgC,4CAOtD;;;;;;;;;;;;CAoHJ"}
+
 }
 declare module 'testit-api-client/model/TestPointShortModel' {
   export default TestPointShortModel;
@@ -23690,10 +22538,7 @@ declare module 'testit-api-client/model/TestPointShortModel' {
   namespace TestPointShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointShortModel.d.ts' {
-  {"version":3,"file":"TestPointShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointShortModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,+EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAmC3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2ClB;IA/GD;;;;;;OAMG;IACH,kEAGC;;;;;;;;;;CAwGJ"}
+
 }
 declare module 'testit-api-client/model/TestPointShortResponseModel' {
   export default TestPointShortResponseModel;
@@ -23793,10 +22638,7 @@ declare module 'testit-api-client/model/TestPointShortResponseModel' {
   namespace TestPointShortResponseModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointShortResponseModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointShortResponseModel.d.ts' {
-  {"version":3,"file":"TestPointShortResponseModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointShortResponseModel.js"],"names":[],"mappings":";AAqBA;;;;GAIG;AACH;IAoCI;;;;OAIG;IACH,ofA2BC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAiHnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2FlB;IA3RD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;OA6BG;IACH,qCA1BuB,IAAI,8CAGX,KAAK,QAAS,SACb,KAAK,QAAS,8JAOb,GAA4B,eACvB,GAAgC,YACnC,GAAkC,cAChC,GAAoC,2JAQjC,GAA0B,oDAEpB,IAAI,EAKlC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CA6PJ"}
+
 }
 declare module 'testit-api-client/model/TestPointStatus' {
   /**
@@ -23846,10 +22688,7 @@ declare module 'testit-api-client/model/TestPointStatus' {
    * *
    */
   export type TestPointStatus = any;
-  //# sourceMappingURL=TestPointStatus.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointStatus.d.ts' {
-  {"version":3,"file":"TestPointStatus.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointStatus.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA6CI;;;;MAIE;IACF,yCAFW,GAA4B,CAItC;IAlDG;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,kBAA0B;CAYjC"}
+
 }
 declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
   export default TestPointWithLastResultResponseModel;
@@ -23923,10 +22762,7 @@ declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
   namespace TestPointWithLastResultResponseModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestPointWithLastResultResponseModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestPointWithLastResultResponseModel.d.ts' {
-  {"version":3,"file":"TestPointWithLastResultResponseModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestPointWithLastResultResponseModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,iLAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAsF5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ElB;IAlND;;;;;;;;;;;;OAYG;IACH,2JAHoB,GAAkC,cAChC,GAAoC,EAKzD;;;;;;;;;;;;;;;;;;;;;;;;;;;CAqMJ"}
+
 }
 declare module 'testit-api-client/model/TestResultApiResult' {
   export default TestResultApiResult;
@@ -24009,10 +22845,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
   namespace TestResultApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultApiResult.d.ts' {
-  {"version":3,"file":"TestResultApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultApiResult.js"],"names":[],"mappings":";AAuBA;;;;GAIG;AACH;IAqBI;;;;OAIG;IACH,mNAYC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CA2G3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqJlB;IAjTD;;;;;;;;;;;;;;OAcG;IACH,6FARkB,GAAgC,eAC3B,KAAK,CAAE,MAAM,CAAA,SACnB,KAAK,CAAE,MAAM,CAAA,kBACJ,KAAK,CAAE,MAAM,CAAA,eAChB,IAAI,2CAO1B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAkSJ"}
+
 }
 declare module 'testit-api-client/model/TestResultChangeViewModel' {
   export default TestResultChangeViewModel;
@@ -24053,10 +22886,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModel' {
   namespace TestResultChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultChangeViewModel.d.ts' {
-  {"version":3,"file":"TestResultChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultChangeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,uDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAWjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,oCAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldViewModel' {
   export default TestResultChangeViewModelChangedFieldViewModel;
@@ -24089,10 +22919,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldVie
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=TestResultChangeViewModelChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"TestResultChangeViewModelChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultChangeViewModelChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2D,GAC1D,GAA2D,CActE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestResultChronologyModel' {
   export default TestResultChronologyModel;
@@ -24134,10 +22961,7 @@ declare module 'testit-api-client/model/TestResultChronologyModel' {
   namespace TestResultChronologyModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultChronologyModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultChronologyModel.d.ts' {
-  {"version":3,"file":"TestResultChronologyModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultChronologyModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,8CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA1DD;;;;OAIG;IACH,2BAGC;;;CAqDJ"}
+
 }
 declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
   export default TestResultFailureClassApiResult;
@@ -24178,10 +23002,7 @@ declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
   namespace TestResultFailureClassApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultFailureClassApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultFailureClassApiResult.d.ts' {
-  {"version":3,"file":"TestResultFailureClassApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultFailureClassApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,wDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAWvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,6BAF2B,GAA4B,EAKtD;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
   export default TestResultHistoryReportApiResult;
@@ -24254,10 +23075,7 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
   namespace TestResultHistoryReportApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultHistoryReportApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultHistoryReportApiResult.d.ts' {
-  {"version":3,"file":"TestResultHistoryReportApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultHistoryReportApiResult.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,iJAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAyFxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+FlB;IAjOD;;;;;;;;;;OAUG;IACH,qCAPuB,IAAI,gDAGT,GAAgC,wCAEvB,KAAK,QAAS,EAKxC;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAsNJ"}
+
 }
 declare module 'testit-api-client/model/TestResultOutcome' {
   /**
@@ -24302,10 +23120,7 @@ declare module 'testit-api-client/model/TestResultOutcome' {
    * *
    */
   export type TestResultOutcome = any;
-  //# sourceMappingURL=TestResultOutcome.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultOutcome.d.ts' {
-  {"version":3,"file":"TestResultOutcome.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultOutcome.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA8B,CAIxC;IA3CG;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/TestResultResponse' {
   export default TestResultResponse;
@@ -24386,10 +23201,7 @@ declare module 'testit-api-client/model/TestResultResponse' {
   namespace TestResultResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultResponse.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultResponse.d.ts' {
-  {"version":3,"file":"TestResultResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultResponse.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,qLASC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CA8G1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyJlB;IAlTD;;;;;;;;;;;OAWG;IACH,qCARuB,IAAI,wCAEA,KAAK,QAAS,8FASxC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAsSJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
   export default TestResultsExtractionApiModel;
@@ -24421,10 +23233,7 @@ declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TestResultsExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsExtractionApiModel.d.ts' {
-  {"version":3,"file":"TestResultsExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAWrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsFilterApiModel' {
   export default TestResultsFilterApiModel;
@@ -24470,10 +23279,7 @@ declare module 'testit-api-client/model/TestResultsFilterApiModel' {
       resultReasons: any;
       testRunIds: any;
   }
-  //# sourceMappingURL=TestResultsFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsFilterApiModel.d.ts' {
-  {"version":3,"file":"TestResultsFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsFilterApiModel.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAqDjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiElB;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestResultShortApiResult' {
   export default TestResultShortApiResult;
@@ -24527,10 +23333,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
   namespace TestResultShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultShortApiResult.d.ts' {
-  {"version":3,"file":"TestResultShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultShortApiResult.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,0GAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAsChD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqDlB;IAhID;;;;;;;;OAQG;IACH,iDAJkB,GAAgC,eAC3B,IAAI,eACJ,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;;;;CAuHJ"}
+
 }
 declare module 'testit-api-client/model/TestResultShortResponse' {
   export default TestResultShortResponse;
@@ -24602,10 +23405,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
   namespace TestResultShortResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultShortResponse.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultShortResponse.d.ts' {
-  {"version":3,"file":"TestResultShortResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultShortResponse.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAuBI;;;;OAIG;IACH,iQAcC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoE/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6ElB;IAtMD;;;;;;;;;;;;;;;;OAgBG;IACH,+IARkB,GAAgC,iBACzB,KAAK,CAAE,MAAM,CAAA,QACtB,IAAI,eACG,IAAI,SACV,KAAK,CAAE,MAAM,CAAA,eACP,KAAK,CAAE,MAAM,CAAA,+BAMnC;;;;;;;;;;;;;;;;;;;;;CAqLJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
   export default TestResultsLocalFilterModel;
@@ -24642,10 +23442,7 @@ declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
       namespace: any;
       className: any;
   }
-  //# sourceMappingURL=TestResultsLocalFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsLocalFilterModel.d.ts' {
-  {"version":3,"file":"TestResultsLocalFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsLocalFilterModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CA0BnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsSelectApiModel' {
   export default TestResultsSelectApiModel;
@@ -24688,10 +23485,7 @@ declare module 'testit-api-client/model/TestResultsSelectApiModel' {
   namespace TestResultsSelectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultsSelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsSelectApiModel.d.ts' {
-  {"version":3,"file":"TestResultsSelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsSelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,qEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAcjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,oBAHkB,GAAsC,mBAC7B,GAA0C,EAKpE;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
   export default TestResultsStatisticsApiResult;
@@ -24734,10 +23528,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
   namespace TestResultsStatisticsApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultsStatisticsApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsStatisticsApiResult.d.ts' {
-  {"version":3,"file":"TestResultsStatisticsApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsStatisticsApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,yEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CActD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sBAHoB,GAAmD,qBAC1C,GAA4D,EAKxF;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesApiResult' {
   export default TestResultsStatisticsFailureCategoriesApiResult;
@@ -24782,10 +23573,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesAp
   namespace TestResultsStatisticsFailureCategoriesApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultsStatisticsFailureCategoriesApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesApiResult.d.ts' {
-  {"version":3,"file":"TestResultsStatisticsFailureCategoriesApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsStatisticsFailureCategoriesApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,kGAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4D,GAC3D,GAA4D,CAiBvE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IA7DD;;;;;;OAMG;IACH,qFAGC;;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' {
   export default TestResultsStatisticsStatusesApiResult;
@@ -24838,10 +23626,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' 
   namespace TestResultsStatisticsStatusesApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultsStatisticsStatusesApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult.d.ts' {
-  {"version":3,"file":"TestResultsStatisticsStatusesApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultsStatisticsStatusesApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,0IAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CA6B9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAjFD;;;;;;;;;;OAUG;IACH,yIAGC;;;;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
   export default TestResultStepCommentUpdateRequest;
@@ -24889,10 +23674,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
   namespace TestResultStepCommentUpdateRequest {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultStepCommentUpdateRequest.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest.d.ts' {
-  {"version":3,"file":"TestResultStepCommentUpdateRequest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultStepCommentUpdateRequest.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,qFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+C,GAC9C,GAA+C,CAuB1D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;IA/FD;;;;;;;OAOG;IACH,mEAFuB,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;CAuFJ"}
+
 }
 declare module 'testit-api-client/model/TestResultUpdateV2Request' {
   export default TestResultUpdateV2Request;
@@ -24937,10 +23719,7 @@ declare module 'testit-api-client/model/TestResultUpdateV2Request' {
       message: any;
       trace: any;
   }
-  //# sourceMappingURL=TestResultUpdateV2Request.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultUpdateV2Request.d.ts' {
-  {"version":3,"file":"TestResultUpdateV2Request.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultUpdateV2Request.js"],"names":[],"mappings":";AAqBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAkDjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqFlB;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestResultV2GetModel' {
   export default TestResultV2GetModel;
@@ -25005,10 +23784,7 @@ declare module 'testit-api-client/model/TestResultV2GetModel' {
   namespace TestResultV2GetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultV2GetModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultV2GetModel.d.ts' {
-  {"version":3,"file":"TestResultV2GetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultV2GetModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,uHAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAuE5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2FlB;IAvMD;;;;;;;;OAQG;IACH,gHAGC;;;;;;;;;;;;;;;;;;;;;;CA8LJ"}
+
 }
 declare module 'testit-api-client/model/TestResultV2ShortModel' {
   export default TestResultV2ShortModel;
@@ -25071,10 +23847,7 @@ declare module 'testit-api-client/model/TestResultV2ShortModel' {
   namespace TestResultV2ShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestResultV2ShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestResultV2ShortModel.d.ts' {
-  {"version":3,"file":"TestResultV2ShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestResultV2ShortModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,uHAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAiE9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmFlB;IAzLD;;;;;;;;OAQG;IACH,gHAGC;;;;;;;;;;;;;;;;;;;;CAgLJ"}
+
 }
 declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
   export default TestRunAnalyticApiResult;
@@ -25119,10 +23892,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
   namespace TestRunAnalyticApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunAnalyticApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunAnalyticApiResult.d.ts' {
-  {"version":3,"file":"TestRunAnalyticApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunAnalyticApiResult.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,uHAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAiBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyClB;IA3FD;;;;;;OAMG;IACH,gCAJ8B,KAAK,CAAE,MAAM,CAAA,0BACT,KAAK,CAAE,MAAM,CAAA,4BACX,KAAK,CAAE,MAAM,CAAA,EAKhD;;;;CAoFJ"}
+
 }
 declare module 'testit-api-client/model/TestRunApiResult' {
   export default TestRunApiResult;
@@ -25201,10 +23971,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
   namespace TestRunApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunApiResult.d.ts' {
-  {"version":3,"file":"TestRunApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunApiResult.js"],"names":[],"mappings":";AAqBA;;;;GAIG;AACH;IAwBI;;;;OAIG;IACH,mQAeC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAsFxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+FlB;IA5OD;;;;;;;;;;;;;;;;;OAiBG;IACH,sEAZqB,GAAyB,UAC5B,GAAgC,gCAE7B,KAAK,CAAE,MAAM,CAAA,wCAEV,KAAK,QAAS,kCAElB,GAAqC,eAClC,KAAK,CAAE,MAAM,CAAA,eACb,IAAI,uBAM1B;;;;;;;;;;;;;;;;;;;;;;;;;;;CA0NJ"}
+
 }
 declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
   export default TestRunByAutoTestApiResult;
@@ -25256,10 +24023,7 @@ declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
   namespace TestRunByAutoTestApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunByAutoTestApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunByAutoTestApiResult.d.ts' {
-  {"version":3,"file":"TestRunByAutoTestApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunByAutoTestApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,wGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAgClD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IAxGD;;;;;;;;OAQG;IACH,uDAJqB,GAAyB,UAC5B,GAAgC,qBAMjD;;;;;;;;;CA+FJ"}
+
 }
 declare module 'testit-api-client/model/TestRunExtractionApiModel' {
   export default TestRunExtractionApiModel;
@@ -25291,10 +24055,7 @@ declare module 'testit-api-client/model/TestRunExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=TestRunExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunExtractionApiModel.d.ts' {
-  {"version":3,"file":"TestRunExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAWjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestRunFilterApiModel' {
   export default TestRunFilterApiModel;
@@ -25340,10 +24101,7 @@ declare module 'testit-api-client/model/TestRunFilterApiModel' {
       completedDate: any;
       testResultsConfigurationIds: any;
   }
-  //# sourceMappingURL=TestRunFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunFilterApiModel.d.ts' {
-  {"version":3,"file":"TestRunFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunFilterApiModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAqD7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6DlB;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
   export default TestRunGroupByFailureClassApiResult;
@@ -25386,10 +24144,7 @@ declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
   namespace TestRunGroupByFailureClassApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunGroupByFailureClassApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult.d.ts' {
-  {"version":3,"file":"TestRunGroupByFailureClassApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunGroupByFailureClassApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,oEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAc3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,oDAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
   export default TestRunGroupByStatusApiResult;
@@ -25432,10 +24187,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
   namespace TestRunGroupByStatusApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunGroupByStatusApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunGroupByStatusApiResult.d.ts' {
-  {"version":3,"file":"TestRunGroupByStatusApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunGroupByStatusApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAcrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,2CAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
   export default TestRunGroupByStatusTypeApiResult;
@@ -25478,10 +24230,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
   namespace TestRunGroupByStatusTypeApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunGroupByStatusTypeApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult.d.ts' {
-  {"version":3,"file":"TestRunGroupByStatusTypeApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunGroupByStatusTypeApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,yDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAczD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,yCAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/TestRunNameApiResult' {
   export default TestRunNameApiResult;
@@ -25524,10 +24273,7 @@ declare module 'testit-api-client/model/TestRunNameApiResult' {
   namespace TestRunNameApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunNameApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunNameApiResult.d.ts' {
-  {"version":3,"file":"TestRunNameApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunNameApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAc5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestRunSelectApiModel' {
   export default TestRunSelectApiModel;
@@ -25571,10 +24317,7 @@ declare module 'testit-api-client/model/TestRunSelectApiModel' {
   namespace TestRunSelectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunSelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunSelectApiModel.d.ts' {
-  {"version":3,"file":"TestRunSelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunSelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,qEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAc7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAjED;;;;;;OAMG;IACH,oBAHkB,GAAkC,mBACzB,GAAsC,EAKhE;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/TestRunShortApiResult' {
   export default TestRunShortApiResult;
@@ -25636,10 +24379,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
   namespace TestRunShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunShortApiResult.d.ts' {
-  {"version":3,"file":"TestRunShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunShortApiResult.js"],"names":[],"mappings":";AAmBA;;;;GAIG;AACH;IAoBI;;;;OAIG;IACH,yMAWC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CA+C7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6ClB;IA3ID;;;;;;;;;;;;;OAaG;IACH,6CATiB,GAAyB,UACxB,GAAgC,eAC3B,IAAI,+EAIL,GAA2C,6BAC5B,KAAK,CAAE,MAAM,CAAA,EAKjD;;;;;;;;;;;;;;CA6HJ"}
+
 }
 declare module 'testit-api-client/model/TestRunState' {
   /**
@@ -25679,10 +24419,7 @@ declare module 'testit-api-client/model/TestRunState' {
    * *
    */
   export type TestRunState = any;
-  //# sourceMappingURL=TestRunState.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunState.d.ts' {
-  {"version":3,"file":"TestRunState.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunState.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA+BI;;;;MAIE;IACF,yCAFW,GAAyB,CAInC;IApCG;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,kBAA0B;CAYjC"}
+
 }
 declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
   export default TestRunStatisticsFilterApiModel;
@@ -25719,10 +24456,7 @@ declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
       namespace: any;
       className: any;
   }
-  //# sourceMappingURL=TestRunStatisticsFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel.d.ts' {
-  {"version":3,"file":"TestRunStatisticsFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunStatisticsFilterApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CA0BvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
   export default TestRunTestResultsPartialBulkSetModel;
@@ -25758,10 +24492,7 @@ declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
       comment: any;
       attachmentIds: any;
   }
-  //# sourceMappingURL=TestRunTestResultsPartialBulkSetModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel.d.ts' {
-  {"version":3,"file":"TestRunTestResultsPartialBulkSetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunTestResultsPartialBulkSetModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkD,GACjD,GAAkD,CAuB7D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
   export default TestRunTestResultsSelectModel;
@@ -25794,10 +24525,7 @@ declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
       filter: any;
       testResultIdsExtractionModel: any;
   }
-  //# sourceMappingURL=TestRunTestResultsSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunTestResultsSelectModel.d.ts' {
-  {"version":3,"file":"TestRunTestResultsSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunTestResultsSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAcrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestRunV2ApiResult' {
   export default TestRunV2ApiResult;
@@ -25868,10 +24596,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
   namespace TestRunV2ApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestRunV2ApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestRunV2ApiResult.d.ts' {
-  {"version":3,"file":"TestRunV2ApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestRunV2ApiResult.js"],"names":[],"mappings":";AAqBA;;;;GAIG;AACH;IAqBI;;;;OAIG;IACH,mMAYC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAuE1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2FlB;IAnND;;;;;;;;;;;;;;OAcG;IACH,iDAVqB,GAAyB,UAC5B,GAAgC,kCAE3B,IAAI,oCAEJ,KAAK,CAAE,MAAM,CAAA,SACnB,KAAK,CAAE,MAAM,CAAA,YACV,KAAK,CAAE,MAAM,CAAA,oBAMhC;;;;;;;;;;;;;;;;;;;;;;CAoMJ"}
+
 }
 declare module 'testit-api-client/model/TestStatusApiResult' {
   export default TestStatusApiResult;
@@ -25921,10 +24646,7 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
   namespace TestStatusApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestStatusApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusApiResult.d.ts' {
-  {"version":3,"file":"TestStatusApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,2FAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CA0B3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA1FD;;;;;;;;OAQG;IACH,4CAJgB,GAA8B,mCAO7C;;;;;;;CAiFJ"}
+
 }
 declare module 'testit-api-client/model/TestStatusApiResultReply' {
   export default TestStatusApiResultReply;
@@ -25967,10 +24689,7 @@ declare module 'testit-api-client/model/TestStatusApiResultReply' {
   namespace TestStatusApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestStatusApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusApiResultReply.d.ts' {
-  {"version":3,"file":"TestStatusApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/TestStatusApiType' {
   /**
@@ -26015,10 +24734,7 @@ declare module 'testit-api-client/model/TestStatusApiType' {
    * *
    */
   export type TestStatusApiType = any;
-  //# sourceMappingURL=TestStatusApiType.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusApiType.d.ts' {
-  {"version":3,"file":"TestStatusApiType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusApiType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA8B,CAIxC;IA3CG;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,mBAA4B;CAYnC"}
+
 }
 declare module 'testit-api-client/model/TestStatusModel' {
   export default TestStatusModel;
@@ -26068,10 +24784,7 @@ declare module 'testit-api-client/model/TestStatusModel' {
   namespace TestStatusModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestStatusModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusModel.d.ts' {
-  {"version":3,"file":"TestStatusModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,2FAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CA0BvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA1FD;;;;;;;;OAQG;IACH,4CAJgB,GAA2B,mCAO1C;;;;;;;CAiFJ"}
+
 }
 declare module 'testit-api-client/model/TestStatusShortApiResult' {
   export default TestStatusShortApiResult;
@@ -26118,10 +24831,7 @@ declare module 'testit-api-client/model/TestStatusShortApiResult' {
   namespace TestStatusShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestStatusShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusShortApiResult.d.ts' {
-  {"version":3,"file":"TestStatusShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusShortApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,4EAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAoBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA9ED;;;;;;;OAOG;IACH,0DAFgB,GAA8B,EAK7C;;;;;CAsEJ"}
+
 }
 declare module 'testit-api-client/model/TestStatusType' {
   /**
@@ -26166,10 +24876,7 @@ declare module 'testit-api-client/model/TestStatusType' {
    * *
    */
   export type TestStatusType = any;
-  //# sourceMappingURL=TestStatusType.d.ts.map
-}
-declare module 'testit-api-client/model/TestStatusType.d.ts' {
-  {"version":3,"file":"TestStatusType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestStatusType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA2B,CAIrC;IA3CG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/TestSuiteApiResult' {
   export default TestSuiteApiResult;
@@ -26224,10 +24931,7 @@ declare module 'testit-api-client/model/TestSuiteApiResult' {
   namespace TestSuiteApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteApiResult.d.ts' {
-  {"version":3,"file":"TestSuiteApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,yJASC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAgC1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAtGD;;;;;;;;;;;OAWG;IACH,4CAPgB,GAAmC,6DAG5B,IAAI,wCAO1B;;;;;;;;;CA0FJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
   export default TestSuiteChangeViewModel;
@@ -26273,10 +24977,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
   namespace TestSuiteChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteChangeViewModel.d.ts' {
-  {"version":3,"file":"TestSuiteChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteChangeViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,0EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAoBhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAlFD;;;;;;OAMG;IACH,6DAGC;;;;;CA2EJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldViewModel' {
   export default TestSuiteChangeViewModelChangedFieldViewModel;
@@ -26309,10 +25010,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldView
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=TestSuiteChangeViewModelChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"TestSuiteChangeViewModelChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteChangeViewModelChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0D,GACzD,GAA0D,CAcrE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
   export default TestSuiteHierarchyApiResult;
@@ -26368,10 +25066,7 @@ declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
   namespace TestSuiteHierarchyApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteHierarchyApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteHierarchyApiResult.d.ts' {
-  {"version":3,"file":"TestSuiteHierarchyApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteHierarchyApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAkBI;;;;OAIG;IACH,yJASC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAmCnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqClB;IAnHD;;;;;;;;;;;OAWG;IACH,4CAPgB,GAAmC,6DAG5B,IAAI,wCAO1B;;;;;;;;;;CAuGJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
   export default TestSuiteTestPlanApiModel;
@@ -26417,10 +25112,7 @@ declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
   namespace TestSuiteTestPlanApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteTestPlanApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteTestPlanApiModel.d.ts' {
-  {"version":3,"file":"TestSuiteTestPlanApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteTestPlanApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,qEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAuBjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA7ED;;;;;OAKG;IACH,6CAF6B,GAAgC,EAK5D;;;;;;CAuEJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteType' {
   /**
@@ -26455,10 +25147,7 @@ declare module 'testit-api-client/model/TestSuiteType' {
    * *
    */
   export type TestSuiteType = any;
-  //# sourceMappingURL=TestSuiteType.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteType.d.ts' {
-  {"version":3,"file":"TestSuiteType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAA0B,CAIpC;IA7BG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;CAYvB"}
+
 }
 declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
   /**
@@ -26493,10 +25182,7 @@ declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
    * *
    */
   export type TestSuiteTypeApiResult = any;
-  //# sourceMappingURL=TestSuiteTypeApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteTypeApiResult.d.ts' {
-  {"version":3,"file":"TestSuiteTypeApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteTypeApiResult.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAmC,CAI7C;IA7BG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,aAAgB;CAYvB"}
+
 }
 declare module 'testit-api-client/model/TestSuiteV2GetModel' {
   export default TestSuiteV2GetModel;
@@ -26546,10 +25232,7 @@ declare module 'testit-api-client/model/TestSuiteV2GetModel' {
   namespace TestSuiteV2GetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteV2GetModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteV2GetModel.d.ts' {
-  {"version":3,"file":"TestSuiteV2GetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteV2GetModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,uEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAgC3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA5FD;;;;;;OAMG;IACH,0DAGC;;;;;;;;;CAqFJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteV2PostModel' {
   export default TestSuiteV2PostModel;
@@ -26596,10 +25279,7 @@ declare module 'testit-api-client/model/TestSuiteV2PostModel' {
   namespace TestSuiteV2PostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteV2PostModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteV2PostModel.d.ts' {
-  {"version":3,"file":"TestSuiteV2PostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteV2PostModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CA0B5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAhFD;;;;;OAKG;IACH,8CAGC;;;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteV2PutModel' {
   export default TestSuiteV2PutModel;
@@ -26646,10 +25326,7 @@ declare module 'testit-api-client/model/TestSuiteV2PutModel' {
   namespace TestSuiteV2PutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteV2PutModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteV2PutModel.d.ts' {
-  {"version":3,"file":"TestSuiteV2PutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteV2PutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,sEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAuB3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IA/ED;;;;;;OAMG;IACH,0DAGC;;;;;;CAwEJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
   export default TestSuiteWithChildrenModel;
@@ -26699,10 +25376,7 @@ declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
   namespace TestSuiteWithChildrenModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=TestSuiteWithChildrenModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteWithChildrenModel.d.ts' {
-  {"version":3,"file":"TestSuiteWithChildrenModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteWithChildrenModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,uFAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CA6BlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyClB;IAzGD;;;;;;;OAOG;IACH,8EAGC;;;;;;;;CAiGJ"}
+
 }
 declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
   export default TestSuiteWorkItemsSearchModel;
@@ -26762,10 +25436,7 @@ declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
       autoTestIds: any;
       workItemVersionIds: any;
   }
-  //# sourceMappingURL=TestSuiteWorkItemsSearchModel.d.ts.map
-}
-declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel.d.ts' {
-  {"version":3,"file":"TestSuiteWorkItemsSearchModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/TestSuiteWorkItemsSearchModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CA+FrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6GlB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
   export default UpdateEmptyTestRunApiModel;
@@ -26812,10 +25483,7 @@ declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
   namespace UpdateEmptyTestRunApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateEmptyTestRunApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel.d.ts' {
-  {"version":3,"file":"UpdateEmptyTestRunApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateEmptyTestRunApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CA0BlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IAxGD;;;;;OAKG;IACH,sCAGC;;;;;;;CAkGJ"}
+
 }
 declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
   export default UpdateFailureCategoryApiModel;
@@ -26862,10 +25530,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
   namespace UpdateFailureCategoryApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateFailureCategoryApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateFailureCategoryApiModel.d.ts' {
-  {"version":3,"file":"UpdateFailureCategoryApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateFailureCategoryApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,4EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAuBrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiClB;IAzFD;;;;;;OAMG;IACH,uDAF2B,GAA4B,EAKtD;;;;;;CAkFJ"}
+
 }
 declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
   export default UpdateFailureCategoryProjectApiModel;
@@ -26911,10 +25576,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
   namespace UpdateFailureCategoryProjectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateFailureCategoryProjectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel.d.ts' {
-  {"version":3,"file":"UpdateFailureCategoryProjectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateFailureCategoryProjectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,4EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiD,GAChD,GAAiD,CAoB5D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IAlFD;;;;;;OAMG;IACH,uDAF2B,GAA4B,EAKtD;;;;;CA2EJ"}
+
 }
 declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
   export default UpdateFailureClassRegexApiModel;
@@ -26957,10 +25619,7 @@ declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
   namespace UpdateFailureClassRegexApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateFailureClassRegexApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel.d.ts' {
-  {"version":3,"file":"UpdateFailureClassRegexApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateFailureClassRegexApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,2DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4C,GAC3C,GAA4C,CAcvD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,2CAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/UpdateLinkApiModel' {
   export default UpdateLinkApiModel;
@@ -27007,10 +25666,7 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
   namespace UpdateLinkApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateLinkApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateLinkApiModel.d.ts' {
-  {"version":3,"file":"UpdateLinkApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateLinkApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,0DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CA0B1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IApFD;;;;;OAKG;IACH,2CAGC;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
   export default UpdateMultipleAttachmentsApiModel;
@@ -27052,10 +25708,7 @@ declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
   namespace UpdateMultipleAttachmentsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateMultipleAttachmentsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel.d.ts' {
-  {"version":3,"file":"UpdateMultipleAttachmentsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateMultipleAttachmentsApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAczD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA1DD;;;;OAIG;IACH,oBAFkB,GAAyB,EAK1C;;;CAqDJ"}
+
 }
 declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
   export default UpdateMultipleLinksApiModel;
@@ -27097,10 +25750,7 @@ declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
   namespace UpdateMultipleLinksApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateMultipleLinksApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateMultipleLinksApiModel.d.ts' {
-  {"version":3,"file":"UpdateMultipleLinksApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateMultipleLinksApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAhED;;;;OAIG;IACH,oBAFkB,GAAyB,EAK1C;;;CA2DJ"}
+
 }
 declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
   export default UpdateMultipleTestRunsApiModel;
@@ -27144,10 +25794,7 @@ declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
   namespace UpdateMultipleTestRunsApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateMultipleTestRunsApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel.d.ts' {
-  {"version":3,"file":"UpdateMultipleTestRunsApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateMultipleTestRunsApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,oDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAoBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA5ED;;;;OAIG;IACH,yBAFuB,GAAkC,EAKxD;;;;;CAuEJ"}
+
 }
 declare module 'testit-api-client/model/UpdateParameterApiModel' {
   export default UpdateParameterApiModel;
@@ -27193,10 +25840,7 @@ declare module 'testit-api-client/model/UpdateParameterApiModel' {
   namespace UpdateParameterApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateParameterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateParameterApiModel.d.ts' {
-  {"version":3,"file":"UpdateParameterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateParameterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,kEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAhFD;;;;;;OAMG;IACH,qDAGC;;;;;CAyEJ"}
+
 }
 declare module 'testit-api-client/model/UpdateProjectApiModel' {
   export default UpdateProjectApiModel;
@@ -27242,10 +25886,7 @@ declare module 'testit-api-client/model/UpdateProjectApiModel' {
   namespace UpdateProjectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateProjectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateProjectApiModel.d.ts' {
-  {"version":3,"file":"UpdateProjectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateProjectApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAuB7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAjFD;;;;;OAKG;IACH,sCAGC;;;;;;CA2EJ"}
+
 }
 declare module 'testit-api-client/model/UpdateStepApiModel' {
   export default UpdateStepApiModel;
@@ -27291,10 +25932,7 @@ declare module 'testit-api-client/model/UpdateStepApiModel' {
   namespace UpdateStepApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateStepApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateStepApiModel.d.ts' {
-  {"version":3,"file":"UpdateStepApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateStepApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CA0B1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IA1FD;;;;OAIG;IACH,wBAGC;;;;;;;CAqFJ"}
+
 }
 declare module 'testit-api-client/model/UpdateTagApiModel' {
   export default UpdateTagApiModel;
@@ -27335,10 +25973,7 @@ declare module 'testit-api-client/model/UpdateTagApiModel' {
   namespace UpdateTagApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateTagApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateTagApiModel.d.ts' {
-  {"version":3,"file":"UpdateTagApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateTagApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAWzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,0BAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
   export default UpdateTestPlanApiModel;
@@ -27392,10 +26027,7 @@ declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
   namespace UpdateTestPlanApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateTestPlanApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateTestPlanApiModel.d.ts' {
-  {"version":3,"file":"UpdateTestPlanApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateTestPlanApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,sEAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA4C9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiDlB;IA9HD;;;;;;OAMG;IACH,yDAGC;;;;;;;;;;;;;CAuHJ"}
+
 }
 declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
   export default UpdateTestStatusApiModel;
@@ -27437,10 +26069,7 @@ declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
   namespace UpdateTestStatusApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateTestStatusApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateTestStatusApiModel.d.ts' {
-  {"version":3,"file":"UpdateTestStatusApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateTestStatusApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,6CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,0BAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
   export default UpdateWorkflowApiModel;
@@ -27487,10 +26116,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
   namespace UpdateWorkflowApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateWorkflowApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateWorkflowApiModel.d.ts' {
-  {"version":3,"file":"UpdateWorkflowApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateWorkflowApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,6FAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAoB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IApFD;;;;;;;OAOG;IACH,wDAHoB,KAAK,CAAE,MAAM,CAAA,cACX,KAAK,QAAS,EAKnC;;;;;CA4EJ"}
+
 }
 declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
   export default UpdateWorkItemApiModel;
@@ -27559,10 +26185,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
   namespace UpdateWorkItemApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UpdateWorkItemApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/UpdateWorkItemApiModel.d.ts' {
-  {"version":3,"file":"UpdateWorkItemApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UpdateWorkItemApiModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAuBI;;;;OAIG;IACH,uOAcC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CA2D9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2GlB;IA3ND;;;;;;;;;;;;;;;;OAgBG;IACH,kDAZiB,GAA2B,YACxB,GAAkC,SACrC,KAAK,CAAE,MAAM,CAAA,qBACD,KAAK,CAAE,MAAM,CAAA,sBACZ,KAAK,CAAE,MAAM,CAAA,2CAG3B,KAAK,CAAE,MAAM,CAAA,SACZ,KAAK,CAAE,MAAM,CAAA,6BAEP,KAAK,CAAE,MAAM,CAAA,EAKnC;;;;;;;;;;;;;;;;;;CA0MJ"}
+
 }
 declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
   export default UserCustomNameValidationResponse;
@@ -27603,10 +26226,7 @@ declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
   namespace UserCustomNameValidationResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UserCustomNameValidationResponse.d.ts.map
-}
-declare module 'testit-api-client/model/UserCustomNameValidationResponse.d.ts' {
-  {"version":3,"file":"UserCustomNameValidationResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UserCustomNameValidationResponse.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6C,GAC5C,GAA6C,CAWxD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,6BAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/UserNameApiResult' {
   export default UserNameApiResult;
@@ -27648,10 +26268,7 @@ declare module 'testit-api-client/model/UserNameApiResult' {
   namespace UserNameApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UserNameApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/UserNameApiResult.d.ts' {
-  {"version":3,"file":"UserNameApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UserNameApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAczC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,wBAGC;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/UserRankModel' {
   export default UserRankModel;
@@ -27708,10 +26325,7 @@ declare module 'testit-api-client/model/UserRankModel' {
   namespace UserRankModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UserRankModel.d.ts.map
-}
-declare module 'testit-api-client/model/UserRankModel.d.ts' {
-  {"version":3,"file":"UserRankModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UserRankModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,iPAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CAmCrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IA3FD;;;;;;;;;;;;OAYG;IACH,uPAGC;;;;;;;;;;CA8EJ"}
+
 }
 declare module 'testit-api-client/model/UserWithRankModel' {
   export default UserWithRankModel;
@@ -27777,10 +26391,7 @@ declare module 'testit-api-client/model/UserWithRankModel' {
   namespace UserWithRankModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=UserWithRankModel.d.ts.map
-}
-declare module 'testit-api-client/model/UserWithRankModel.d.ts' {
-  {"version":3,"file":"UserWithRankModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/UserWithRankModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAuBI;;;;OAIG;IACH,6PAcC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAkDzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;IA9JD;;;;;;;;;;;;;;;;OAgBG;IACH,yQAFoB,GAA0B,EAK7C;;;;;;;;;;;;;;;CA6IJ"}
+
 }
 declare module 'testit-api-client/model/ValidationProblemDetails' {
   export default ValidationProblemDetails;
@@ -27827,10 +26438,7 @@ declare module 'testit-api-client/model/ValidationProblemDetails' {
   namespace ValidationProblemDetails {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=ValidationProblemDetails.d.ts.map
-}
-declare module 'testit-api-client/model/ValidationProblemDetails.d.ts' {
-  {"version":3,"file":"ValidationProblemDetails.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/ValidationProblemDetails.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CA6BhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAtFD;;;;;OAKG;IACH,yBAGC;;;;;;;CAgFJ"}
+
 }
 declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
   export default WebhookBulkUpdateApiModel;
@@ -27871,10 +26479,7 @@ declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
   namespace WebhookBulkUpdateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhookBulkUpdateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhookBulkUpdateApiModel.d.ts' {
-  {"version":3,"file":"WebhookBulkUpdateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhookBulkUpdateApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAsC,GACrC,GAAsC,CAWjD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,gCAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/WebHookEventType' {
   /**
@@ -27979,10 +26584,7 @@ declare module 'testit-api-client/model/WebHookEventType' {
    * *
    */
   export type WebHookEventType = any;
-  //# sourceMappingURL=WebHookEventType.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookEventType.d.ts' {
-  {"version":3,"file":"WebHookEventType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookEventType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA0HI;;;;MAIE;IACF,yCAFW,GAA6B,CAIvC;IA/HG;;;OAGG;IACH,gCAAsD;IAGtD;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,mCAA4D;IAG5D;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,8BAAkD;IAGlD;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,wBAAsC;CAY7C"}
+
 }
 declare module 'testit-api-client/model/WebHookEventTypeModel' {
   /**
@@ -28087,10 +26689,7 @@ declare module 'testit-api-client/model/WebHookEventTypeModel' {
    * *
    */
   export type WebHookEventTypeModel = any;
-  //# sourceMappingURL=WebHookEventTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookEventTypeModel.d.ts' {
-  {"version":3,"file":"WebHookEventTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookEventTypeModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA0HI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IA/HG;;;OAGG;IACH,gCAAsD;IAGtD;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,mCAA4D;IAG5D;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,8BAAkD;IAGlD;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,wBAAsC;CAY7C"}
+
 }
 declare module 'testit-api-client/model/WebHookEventTypeRequest' {
   /**
@@ -28195,10 +26794,7 @@ declare module 'testit-api-client/model/WebHookEventTypeRequest' {
    * *
    */
   export type WebHookEventTypeRequest = any;
-  //# sourceMappingURL=WebHookEventTypeRequest.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookEventTypeRequest.d.ts' {
-  {"version":3,"file":"WebHookEventTypeRequest.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookEventTypeRequest.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IA0HI;;;;MAIE;IACF,yCAFW,GAAoC,CAI9C;IA/HG;;;OAGG;IACH,gCAAsD;IAGtD;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,0BAA0C;IAG1C;;;OAGG;IACH,mCAA4D;IAG5D;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,+BAAoD;IAGpD;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,8BAAkD;IAGlD;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,wCAAsE;IAGtE;;;OAGG;IACH,iCAAwD;IAGxD;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,6BAAgD;IAGhD;;;OAGG;IACH,uBAAoC;IAGpC;;;OAGG;IACH,wBAAsC;CAY7C"}
+
 }
 declare module 'testit-api-client/model/WebhookLogApiResult' {
   export default WebhookLogApiResult;
@@ -28264,10 +26860,7 @@ declare module 'testit-api-client/model/WebhookLogApiResult' {
   namespace WebhookLogApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhookLogApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WebhookLogApiResult.d.ts' {
-  {"version":3,"file":"WebhookLogApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhookLogApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAoBI;;;;OAIG;IACH,oMAWC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CA2D3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;IAjKD;;;;;;;;;;;;;OAaG;IACH,4EARqB,GAA6B,8FAK3B,GAAwB,uBAM9C;;;;;;;;;;;;;;;;;;CAmJJ"}
+
 }
 declare module 'testit-api-client/model/WebHookModel' {
   export default WebHookModel;
@@ -28341,10 +26934,7 @@ declare module 'testit-api-client/model/WebHookModel' {
   namespace WebHookModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebHookModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookModel.d.ts' {
-  {"version":3,"file":"WebHookModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAwBI;;;;OAIG;IACH,iSAeC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyB,GACxB,GAAyB,CAuEpC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IA7KD;;;;;;;;;;;;;;;;;OAiBG;IACH,qCAdqB,GAAkC,4BAEhC,GAA6B,8JAM7B,IAAI,0EAS1B;;;;;;;;;;;;;;;;;;;;;;CA2JJ"}
+
 }
 declare module 'testit-api-client/model/WebHookPostModel' {
   export default WebHookPostModel;
@@ -28409,10 +26999,7 @@ declare module 'testit-api-client/model/WebHookPostModel' {
   namespace WebHookPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebHookPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookPostModel.d.ts' {
-  {"version":3,"file":"WebHookPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookPostModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAsBI;;;;OAIG;IACH,wQAaC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAkDxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IApID;;;;;;;;;;;;;;;OAeG;IACH,0CAZqB,GAAkC,4BAEhC,GAA6B,mMAanD;;;;;;;;;;;;;;;CAoHJ"}
+
 }
 declare module 'testit-api-client/model/WebhookResponse' {
   export default WebhookResponse;
@@ -28461,10 +27048,7 @@ declare module 'testit-api-client/model/WebhookResponse' {
   namespace WebhookResponse {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhookResponse.d.ts.map
-}
-declare module 'testit-api-client/model/WebhookResponse.d.ts' {
-  {"version":3,"file":"WebhookResponse.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhookResponse.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAcI;;;;OAIG;IACH,2GAKC;IAED;;;;;;OAMG;IACH,2CAHW,GAA4B,GAC3B,GAA4B,CA0BvC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IA5FD;;;;;;;OAOG;IACH,iGAGC;;;;;;;CAoFJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
   export default WebhooksDeleteApiModel;
@@ -28507,10 +27091,7 @@ declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
   namespace WebhooksDeleteApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhooksDeleteApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksDeleteApiModel.d.ts' {
-  {"version":3,"file":"WebhooksDeleteApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksDeleteApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,oBAHkB,GAAyC,aACtC,GAAuC,EAK3D;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
   export default WebhooksDeleteFilterApiModel;
@@ -28546,10 +27127,7 @@ declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
       projectIds: any;
       isEnabled: any;
   }
-  //# sourceMappingURL=WebhooksDeleteFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel.d.ts' {
-  {"version":3,"file":"WebhooksDeleteFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksDeleteFilterApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyC,GACxC,GAAyC,CAuBpD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
   export default WebhooksExtractionApiModel;
@@ -28581,10 +27159,7 @@ declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
       static validateJSON(data: any): boolean;
       ids: any;
   }
-  //# sourceMappingURL=WebhooksExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksExtractionApiModel.d.ts' {
-  {"version":3,"file":"WebhooksExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAWlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CASlB;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksFilterApiModel' {
   export default WebhooksFilterApiModel;
@@ -28619,10 +27194,7 @@ declare module 'testit-api-client/model/WebhooksFilterApiModel' {
       methods: any;
       projectIds: any;
   }
-  //# sourceMappingURL=WebhooksFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksFilterApiModel.d.ts' {
-  {"version":3,"file":"WebhooksFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksFilterApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAoB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
   export default WebhooksUpdateApiModel;
@@ -28667,10 +27239,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
   namespace WebhooksUpdateApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhooksUpdateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksUpdateApiModel.d.ts' {
-  {"version":3,"file":"WebhooksUpdateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksUpdateApiModel.js"],"names":[],"mappings":";AAkBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,2EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAiB9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAzED;;;;;;OAMG;IACH,oBAJkB,GAAmC,SACpC,GAAsC,aAClC,GAAuC,EAK3D;;;;CAkEJ"}
+
 }
 declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
   export default WebhooksUpdateApiResult;
@@ -28711,10 +27280,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
   namespace WebhooksUpdateApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebhooksUpdateApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WebhooksUpdateApiResult.d.ts' {
-  {"version":3,"file":"WebhooksUpdateApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhooksUpdateApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,qDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAW/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,kCAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/WebHookTestModel' {
   export default WebHookTestModel;
@@ -28757,10 +27323,7 @@ declare module 'testit-api-client/model/WebHookTestModel' {
   namespace WebHookTestModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WebHookTestModel.d.ts.map
-}
-declare module 'testit-api-client/model/WebHookTestModel.d.ts' {
-  {"version":3,"file":"WebHookTestModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebHookTestModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA6B,GAC5B,GAA6B,CAcxC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,yBAHuB,GAA6B,eAMnD;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/WebhookVariablesType' {
   /**
@@ -28795,10 +27358,7 @@ declare module 'testit-api-client/model/WebhookVariablesType' {
    * *
    */
   export type WebhookVariablesType = any;
-  //# sourceMappingURL=WebhookVariablesType.d.ts.map
-}
-declare module 'testit-api-client/model/WebhookVariablesType.d.ts' {
-  {"version":3,"file":"WebhookVariablesType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WebhookVariablesType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAiC,CAI3C;IA7BG;;;OAGG;IACH,wBAAsC;IAGtC;;;OAGG;IACH,4BAA8C;IAG9C;;;OAGG;IACH,yBAAwC;CAY/C"}
+
 }
 declare module 'testit-api-client/model/WorkflowApiResult' {
   export default WorkflowApiResult;
@@ -28857,10 +27417,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
   namespace WorkflowApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowApiResult.d.ts' {
-  {"version":3,"file":"WorkflowApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowApiResult.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAoBI;;;;OAIG;IACH,6LAWC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAsCzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+ClB;IApID;;;;;;;;;;;;;OAaG;IACH,0FAPuB,IAAI,qCAEH,IAAI,kCAER,KAAK,CAAE,MAAM,CAAA,YACb,KAAK,CAAE,MAAM,CAAA,EAKhC;;;;;;;;;;;CAsHJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
   export default WorkflowExistsByNameApiResult;
@@ -28901,10 +27458,7 @@ declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
   namespace WorkflowExistsByNameApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowExistsByNameApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowExistsByNameApiResult.d.ts' {
-  {"version":3,"file":"WorkflowExistsByNameApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowExistsByNameApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAWrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAnDD;;;;OAIG;IACH,6BAGC;;CA8CJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowProjectApiResult' {
   export default WorkflowProjectApiResult;
@@ -28945,10 +27499,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResult' {
   namespace WorkflowProjectApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowProjectApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowProjectApiResult.d.ts' {
-  {"version":3,"file":"WorkflowProjectApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowProjectApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAWhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPreview' {
   export default WorkflowProjectApiResultApiCollectionPreview;
@@ -28991,10 +27542,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
   namespace WorkflowProjectApiResultApiCollectionPreview {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowProjectApiResultApiCollectionPreview.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPreview.d.ts' {
-  {"version":3,"file":"WorkflowProjectApiResultApiCollectionPreview.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowProjectApiResultApiCollectionPreview.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAyD,GACxD,GAAyD,CAcpE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
   export default WorkflowProjectApiResultReply;
@@ -29037,10 +27585,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
   namespace WorkflowProjectApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowProjectApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowProjectApiResultReply.d.ts' {
-  {"version":3,"file":"WorkflowProjectApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowProjectApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAcrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowShortApiResult' {
   export default WorkflowShortApiResult;
@@ -29097,10 +27642,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
   namespace WorkflowShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowShortApiResult.d.ts' {
-  {"version":3,"file":"WorkflowShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowShortApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAmBI;;;;OAIG;IACH,8KAUC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAmC9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IA/GD;;;;;;;;;;;;OAYG;IACH,0FANuB,IAAI,qCAEH,IAAI,kCAER,GAAyD,EAK5E;;;;;;;;;;CAkGJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
   export default WorkflowShortApiResultReply;
@@ -29143,10 +27685,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
   namespace WorkflowShortApiResultReply {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowShortApiResultReply.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowShortApiResultReply.d.ts' {
-  {"version":3,"file":"WorkflowShortApiResultReply.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowShortApiResultReply.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAcnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IAlED;;;;;OAKG;IACH,kBAHgB,KAAK,CAAE,MAAM,CAAA,sBAM5B;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowStatusApiModel' {
   export default WorkflowStatusApiModel;
@@ -29189,10 +27728,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiModel' {
   namespace WorkflowStatusApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowStatusApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowStatusApiModel.d.ts' {
-  {"version":3,"file":"WorkflowStatusApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowStatusApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,gEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IA5DD;;;;;OAKG;IACH,gDAGC;;;CAsDJ"}
+
 }
 declare module 'testit-api-client/model/WorkflowStatusApiResult' {
   export default WorkflowStatusApiResult;
@@ -29245,10 +27781,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiResult' {
   namespace WorkflowStatusApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkflowStatusApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkflowStatusApiResult.d.ts' {
-  {"version":3,"file":"WorkflowStatusApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkflowStatusApiResult.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAiBI;;;;OAIG;IACH,4HAQC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CA6B/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IAjGD;;;;;;;;;;OAUG;IACH,0DALgB,GAA8B,4DAQ7C;;;;;;;;CAsFJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemApiResult' {
   export default WorkItemApiResult;
@@ -29348,10 +27881,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
   namespace WorkItemApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemApiResult.d.ts' {
-  {"version":3,"file":"WorkItemApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemApiResult.js"],"names":[],"mappings":";AA0BA;;;;GAIG;AACH;IAuCI;;;;OAIG;IACH,giBA8BC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CAwGzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyJlB;IAtVD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;OAgCG;IACH,oJAvBsB,GAAuC,kBACnC,GAAuC,mDAGhD,GAAkC,YAC/B,GAAqC,+CAGzC,KAAK,CAAE,MAAM,CAAA,4BACO,KAAK,CAAE,MAAM,CAAA,6BACZ,KAAK,CAAE,MAAM,CAAA,qBACrB,KAAK,CAAE,MAAM,CAAA,SACzB,KAAK,CAAE,MAAM,CAAA,sBACA,KAAK,CAAE,MAAM,CAAA,cACrB,KAAK,CAAE,MAAM,CAAA,aACd,KAAK,CAAE,MAAM,CAAA,eACX,KAAK,CAAE,MAAM,CAAA,SACnB,KAAK,CAAE,MAAM,CAAA,kBACJ,KAAK,CAAE,MAAM,CAAA,eAChB,IAAI,2CAO1B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAqTJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
   export default WorkItemChangedAttributeViewModel;
@@ -29400,10 +27930,7 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
   namespace WorkItemChangedAttributeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemChangedAttributeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel.d.ts' {
-  {"version":3,"file":"WorkItemChangedAttributeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemChangedAttributeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,yHAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8C,GAC7C,GAA8C,CAuBzD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuBlB;IAnFD;;;;;;;;OAQG;IACH,4GAGC;;;;;;CA0EJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
   export default WorkItemChangedFieldsViewModel;
@@ -29480,10 +28007,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
   namespace WorkItemChangedFieldsViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemChangedFieldsViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel.d.ts' {
-  {"version":3,"file":"WorkItemChangedFieldsViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemChangedFieldsViewModel.js"],"names":[],"mappings":";AA2BA;;;;GAIG;AACH;IA4BI;;;;OAIG;IACH,6UAmBC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAoEtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuFlB;IA1ND;;;;;;;;;;;;;;;;;;;;;OAqBG;IACH,uBAnBqB,GAAyC,aACzC,GAAsC,eACpC,GAAyC,aAC3C,GAAsC,SAC1C,GAAwC,YACrC,GAAwC,YACxC,GAAuC,0BAE1C,GAA2E,qBAC/D,GAA2E,sBAC1E,GAA2E,aACpF,GAA8D,eAC5D,GAAgE,QACvE,GAA6C,SAC5C,GAAkE,YAC/D,GAAuC,iBAClC,GAAuC,kBACtC,GAAwC,EAKjE;;;;;;;;;;;;;;;;;;;;;CAoMJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemChangeModel' {
   export default WorkItemChangeModel;
@@ -29535,10 +28059,7 @@ declare module 'testit-api-client/model/WorkItemChangeModel' {
   namespace WorkItemChangeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemChangeModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemChangeModel.d.ts' {
-  {"version":3,"file":"WorkItemChangeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemChangeModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,gJAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CA6B3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IAvGD;;;;;;;;;OASG;IACH,+GAHiC,GAA2C,uBAM3E;;;;;;;;CA6FJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemCommentModel' {
   export default WorkItemCommentModel;
@@ -29589,10 +28110,7 @@ declare module 'testit-api-client/model/WorkItemCommentModel' {
   namespace WorkItemCommentModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemCommentModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemCommentModel.d.ts' {
-  {"version":3,"file":"WorkItemCommentModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemCommentModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,qGAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CA6B5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IAjGD;;;;;;;;OAQG;IACH,4CAJgB,GAA8B,oCAEvB,IAAI,EAK1B;;;;;;;;CAwFJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemCommentPostModel' {
   export default WorkItemCommentPostModel;
@@ -29635,10 +28153,7 @@ declare module 'testit-api-client/model/WorkItemCommentPostModel' {
   namespace WorkItemCommentPostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemCommentPostModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemCommentPostModel.d.ts' {
-  {"version":3,"file":"WorkItemCommentPostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemCommentPostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,8CAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemCommentPutModel' {
   export default WorkItemCommentPutModel;
@@ -29681,10 +28196,7 @@ declare module 'testit-api-client/model/WorkItemCommentPutModel' {
   namespace WorkItemCommentPutModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemCommentPutModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemCommentPutModel.d.ts' {
-  {"version":3,"file":"WorkItemCommentPutModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemCommentPutModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sDAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sCAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemEntityTypeApiModel' {
   /**
@@ -29719,10 +28231,7 @@ declare module 'testit-api-client/model/WorkItemEntityTypeApiModel' {
    * *
    */
   export type WorkItemEntityTypeApiModel = any;
-  //# sourceMappingURL=WorkItemEntityTypeApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemEntityTypeApiModel.d.ts' {
-  {"version":3,"file":"WorkItemEntityTypeApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemEntityTypeApiModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAuC,CAIjD;IA7BG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,oBAA8B;CAYrC"}
+
 }
 declare module 'testit-api-client/model/WorkItemEntityTypes' {
   /**
@@ -29757,10 +28266,7 @@ declare module 'testit-api-client/model/WorkItemEntityTypes' {
    * *
    */
   export type WorkItemEntityTypes = any;
-  //# sourceMappingURL=WorkItemEntityTypes.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemEntityTypes.d.ts' {
-  {"version":3,"file":"WorkItemEntityTypes.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemEntityTypes.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAgC,CAI1C;IA7BG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,oBAA8B;CAYrC"}
+
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel' {
   export default WorkItemExternalMetadataFieldFilterApiModel;
@@ -29803,10 +28309,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiMo
   namespace WorkItemExternalMetadataFieldFilterApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemExternalMetadataFieldFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel.d.ts' {
-  {"version":3,"file":"WorkItemExternalMetadataFieldFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExternalMetadataFieldFilterApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwD,GACvD,GAAwD,CAcnE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sDAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel' {
   export default WorkItemExternalMetadataFieldFilterModel;
@@ -29849,10 +28352,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel
   namespace WorkItemExternalMetadataFieldFilterModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemExternalMetadataFieldFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel.d.ts' {
-  {"version":3,"file":"WorkItemExternalMetadataFieldFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExternalMetadataFieldFilterModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqD,GACpD,GAAqD,CAchE;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,sDAGC;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' {
   export default WorkItemExternalMetadataFilterApiModel;
@@ -29888,10 +28388,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' 
       statuses: any;
       assignees: any;
   }
-  //# sourceMappingURL=WorkItemExternalMetadataFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel.d.ts' {
-  {"version":3,"file":"WorkItemExternalMetadataFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExternalMetadataFilterApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmD,GAClD,GAAmD,CAuB9D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
   export default WorkItemExternalMetadataFilterModel;
@@ -29927,10 +28424,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
       statuses: any;
       assignees: any;
   }
-  //# sourceMappingURL=WorkItemExternalMetadataFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel.d.ts' {
-  {"version":3,"file":"WorkItemExternalMetadataFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExternalMetadataFilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgD,GAC/C,GAAgD,CAuB3D;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuDlB;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
   export default WorkItemExtractionApiModel;
@@ -29964,10 +28458,7 @@ declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
       ids: any;
       sectionIds: any;
   }
-  //# sourceMappingURL=WorkItemExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExtractionApiModel.d.ts' {
-  {"version":3,"file":"WorkItemExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExtractionApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAiBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemExtractionModel' {
   export default WorkItemExtractionModel;
@@ -30001,10 +28492,7 @@ declare module 'testit-api-client/model/WorkItemExtractionModel' {
       ids: any;
       sectionIds: any;
   }
-  //# sourceMappingURL=WorkItemExtractionModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemExtractionModel.d.ts' {
-  {"version":3,"file":"WorkItemExtractionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemExtractionModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAiB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemFilterApiModel' {
   export default WorkItemFilterApiModel;
@@ -30062,10 +28550,7 @@ declare module 'testit-api-client/model/WorkItemFilterApiModel' {
       links: any;
       externalMetadata: any;
   }
-  //# sourceMappingURL=WorkItemFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemFilterApiModel.d.ts' {
-  {"version":3,"file":"WorkItemFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemFilterApiModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAyF9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqGlB;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemFilterModel' {
   export default WorkItemFilterModel;
@@ -30123,10 +28608,7 @@ declare module 'testit-api-client/model/WorkItemFilterModel' {
       autoTestIds: any;
       workItemVersionIds: any;
   }
-  //# sourceMappingURL=WorkItemFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemFilterModel.d.ts' {
-  {"version":3,"file":"WorkItemFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemFilterModel.js"],"names":[],"mappings":";AAwBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAyF3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqGlB;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemGroupGetModel' {
   export default WorkItemGroupGetModel;
@@ -30169,10 +28651,7 @@ declare module 'testit-api-client/model/WorkItemGroupGetModel' {
   namespace WorkItemGroupGetModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemGroupGetModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemGroupGetModel.d.ts' {
-  {"version":3,"file":"WorkItemGroupGetModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemGroupGetModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kDAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAiB7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAjED;;;;OAIG;IACH,uBAFqB,GAA8B,EAKlD;;;;CA4DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemGroupModel' {
   export default WorkItemGroupModel;
@@ -30216,10 +28695,7 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
   namespace WorkItemGroupModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemGroupModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemGroupModel.d.ts' {
-  {"version":3,"file":"WorkItemGroupModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemGroupModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,6DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAiB1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqBlB;IArED;;;;;OAKG;IACH,qCAFqB,KAAK,CAAE,MAAM,CAAA,EAKjC;;;;CA+DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemGroupType' {
   /**
@@ -30274,10 +28750,7 @@ declare module 'testit-api-client/model/WorkItemGroupType' {
    * *
    */
   export type WorkItemGroupType = any;
-  //# sourceMappingURL=WorkItemGroupType.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemGroupType.d.ts' {
-  {"version":3,"file":"WorkItemGroupType.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemGroupType.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAoDI;;;;MAIE;IACF,yCAFW,GAA8B,CAIxC;IAzDG;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,yBAAwC;IAGxC;;;OAGG;IACH,gBAAsB;IAGtB;;;OAGG;IACH,mBAA4B;IAG5B;;;OAGG;IACH,wBAAsC;CAY7C"}
+
 }
 declare module 'testit-api-client/model/WorkItemIdApiModel' {
   export default WorkItemIdApiModel;
@@ -30318,10 +28791,7 @@ declare module 'testit-api-client/model/WorkItemIdApiModel' {
   namespace WorkItemIdApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemIdApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemIdApiModel.d.ts' {
-  {"version":3,"file":"WorkItemIdApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemIdApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,2CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAW1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,wBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemIndexApiResult' {
   export default WorkItemIndexApiResult;
@@ -30364,10 +28834,7 @@ declare module 'testit-api-client/model/WorkItemIndexApiResult' {
   namespace WorkItemIndexApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemIndexApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemIndexApiResult.d.ts' {
-  {"version":3,"file":"WorkItemIndexApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemIndexApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAWlB;IAxDD;;;;;OAKG;IACH,sDAGC;;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLikeModel' {
   export default WorkItemLikeModel;
@@ -30418,10 +28885,7 @@ declare module 'testit-api-client/model/WorkItemLikeModel' {
   namespace WorkItemLikeModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemLikeModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLikeModel.d.ts' {
-  {"version":3,"file":"WorkItemLikeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLikeModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAeI;;;;OAIG;IACH,gHAMC;IAED;;;;;;OAMG;IACH,2CAHW,GAA8B,GAC7B,GAA8B,CA6BzC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA7FD;;;;;;;;OAQG;IACH,6CALuB,IAAI,uDAQ1B;;;;;;;;CAoFJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
   export default WorkItemLinkChangeViewModel;
@@ -30472,10 +28936,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
   namespace WorkItemLinkChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemLinkChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkChangeViewModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkChangeViewModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,4GAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CA0BnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA+BlB;IAhGD;;;;;;;;;OASG;IACH,yGAGC;;;;;;;CAsFJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel' {
   export default WorkItemLinkChangeViewModelArrayChangedFieldViewModel;
@@ -30508,10 +28969,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedF
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=WorkItemLinkChangeViewModelArrayChangedFieldViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkChangeViewModelArrayChangedFieldViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkE,GACjE,GAAkE,CAc7E;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyBlB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
   export default WorkItemLinkExtractionApiModel;
@@ -30545,10 +29003,7 @@ declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
       workItemIds: any;
       linkUrls: any;
   }
-  //# sourceMappingURL=WorkItemLinkExtractionApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkExtractionApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkExtractionApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2C,GAC1C,GAA2C,CAiBtD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
   export default WorkItemLinkFilterApiModel;
@@ -30583,10 +29038,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
       urls: any;
       onlyWithoutLinks: any;
   }
-  //# sourceMappingURL=WorkItemLinkFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkFilterApiModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkFilterApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAuC,GACtC,GAAuC,CAoBlD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
   export default WorkItemLinkFilterModel;
@@ -30621,10 +29073,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
       urls: any;
       onlyWithoutLinks: any;
   }
-  //# sourceMappingURL=WorkItemLinkFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkFilterModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkFilterModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAoB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAiBlB;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
   export default WorkItemLinkUrlApiModel;
@@ -30667,10 +29116,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
   namespace WorkItemLinkUrlApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemLinkUrlApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkUrlApiModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkUrlApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkUrlApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,qEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAc/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAhED;;;;;OAKG;IACH,oBAHkB,GAA0C,mBACjC,GAA2C,EAKrE;;;CA0DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
   export default WorkItemLinkUrlApiResult;
@@ -30711,10 +29157,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
   namespace WorkItemLinkUrlApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemLinkUrlApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkUrlApiResult.d.ts' {
-  {"version":3,"file":"WorkItemLinkUrlApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkUrlApiResult.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,4CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAWhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAelB;IAvDD;;;;OAIG;IACH,yBAGC;;CAkDJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
   export default WorkItemLinkUrlFilterApiModel;
@@ -30747,10 +29190,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
       types: any;
       searchUrl: any;
   }
-  //# sourceMappingURL=WorkItemLinkUrlFilterApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel.d.ts' {
-  {"version":3,"file":"WorkItemLinkUrlFilterApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLinkUrlFilterApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0C,GACzC,GAA0C,CAcrD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
   export default WorkItemLocalFilterModel;
@@ -30802,10 +29242,7 @@ declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
       autoTestIds: any;
       workItemVersionIds: any;
   }
-  //# sourceMappingURL=WorkItemLocalFilterModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLocalFilterModel.d.ts' {
-  {"version":3,"file":"WorkItemLocalFilterModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLocalFilterModel.js"],"names":[],"mappings":";AAsBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAuEhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6ElB;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
   export default WorkItemLocalSelectModel;
@@ -30838,10 +29275,7 @@ declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
       filter: any;
       extractionModel: any;
   }
-  //# sourceMappingURL=WorkItemLocalSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemLocalSelectModel.d.ts' {
-  {"version":3,"file":"WorkItemLocalSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemLocalSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CAchD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAalB;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemModel' {
   export default WorkItemModel;
@@ -30936,10 +29370,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
   namespace WorkItemModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemModel.d.ts' {
-  {"version":3,"file":"WorkItemModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemModel.js"],"names":[],"mappings":";AA0BA;;;;GAIG;AACH;IAkCI;;;;OAIG;IACH,8aAyBC;IAED;;;;;;OAMG;IACH,2CAHW,GAA0B,GACzB,GAA0B,CAwGrC;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAyJlB;IA5UD;;;;;;;;;;;;;;;;;;;;;;;;;;;OA2BG;IACH,8GArB0B,GAAgC,4DAGnC,IAAI,yDAGD,KAAK,CAAE,MAAM,CAAA,wCAGtB,GAA2B,YACxB,GAAkC,cAChC,GAAoC,SACzC,KAAK,CAAE,MAAM,CAAA,qBACD,KAAK,CAAE,MAAM,CAAA,sBACZ,KAAK,CAAE,MAAM,CAAA,2CAG3B,KAAK,CAAE,MAAM,CAAA,SACZ,KAAK,CAAE,MAAM,CAAA,gBAM7B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CAgTJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemMovePostModel' {
   export default WorkItemMovePostModel;
@@ -30984,10 +29415,7 @@ declare module 'testit-api-client/model/WorkItemMovePostModel' {
   namespace WorkItemMovePostModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemMovePostModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemMovePostModel.d.ts' {
-  {"version":3,"file":"WorkItemMovePostModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemMovePostModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,8DAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAkC,GACjC,GAAkC,CAoB7C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA2BlB;IA9ED;;;;;OAKG;IACH,8CAGC;;;;;CAwEJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
   export default WorkItemPreviewApiModel;
@@ -31032,10 +29460,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
   namespace WorkItemPreviewApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemPreviewApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemPreviewApiModel.d.ts' {
-  {"version":3,"file":"WorkItemPreviewApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemPreviewApiModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,2EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAoC,GACnC,GAAoC,CAiB/C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CA6BlB;IA/ED;;;;;;OAMG;IACH,sDAFiB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;CAwEJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
   export default WorkItemPreviewStepApiModel;
@@ -31080,10 +29505,7 @@ declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
   namespace WorkItemPreviewStepApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemPreviewStepApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemPreviewStepApiModel.d.ts' {
-  {"version":3,"file":"WorkItemPreviewStepApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemPreviewStepApiModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAaI;;;;OAIG;IACH,2EAIC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CAiBnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IArED;;;;;;OAMG;IACH,8DAGC;;;;CA8DJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemPriority' {
   /**
@@ -31128,10 +29550,7 @@ declare module 'testit-api-client/model/WorkItemPriority' {
    * *
    */
   export type WorkItemPriority = any;
-  //# sourceMappingURL=WorkItemPriority.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemPriority.d.ts' {
-  {"version":3,"file":"WorkItemPriority.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemPriority.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAA6B,CAIvC;IA3CG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
   /**
@@ -31176,10 +29595,7 @@ declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
    * *
    */
   export type WorkItemPriorityApiModel = any;
-  //# sourceMappingURL=WorkItemPriorityApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemPriorityApiModel.d.ts' {
-  {"version":3,"file":"WorkItemPriorityApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemPriorityApiModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAAqC,CAI/C;IA3CG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/WorkItemPriorityModel' {
   /**
@@ -31224,10 +29640,7 @@ declare module 'testit-api-client/model/WorkItemPriorityModel' {
    * *
    */
   export type WorkItemPriorityModel = any;
-  //# sourceMappingURL=WorkItemPriorityModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemPriorityModel.d.ts' {
-  {"version":3,"file":"WorkItemPriorityModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemPriorityModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAsCI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IA3CG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,YAAc;IAGd;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,aAAgB;IAGhB;;;OAGG;IACH,gBAAsB;CAY7B"}
+
 }
 declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
   export default WorkItemSearchQueryModel;
@@ -31281,10 +29694,7 @@ declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
       autoTestIds: any;
       workItemVersionIds: any;
   }
-  //# sourceMappingURL=WorkItemSearchQueryModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemSearchQueryModel.d.ts' {
-  {"version":3,"file":"WorkItemSearchQueryModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemSearchQueryModel.js"],"names":[],"mappings":";AAuBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAAqC,GACpC,GAAqC,CA6EhD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAqFlB;;;;;;;;;;;;;;;;;;;;;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemSelectApiModel' {
   export default WorkItemSelectApiModel;
@@ -31326,10 +29736,7 @@ declare module 'testit-api-client/model/WorkItemSelectApiModel' {
   namespace WorkItemSelectApiModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemSelectApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemSelectApiModel.d.ts' {
-  {"version":3,"file":"WorkItemSelectApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemSelectApiModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAWI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAc9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA9DD;;;;OAIG;IACH,oBAFkB,GAAmC,EAKpD;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemSelectModel' {
   export default WorkItemSelectModel;
@@ -31372,10 +29779,7 @@ declare module 'testit-api-client/model/WorkItemSelectModel' {
   namespace WorkItemSelectModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemSelectModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemSelectModel.d.ts' {
-  {"version":3,"file":"WorkItemSelectModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemSelectModel.js"],"names":[],"mappings":";AAiBA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,+CAEC;IAED;;;;;;OAMG;IACH,2CAHW,GAAgC,GAC/B,GAAgC,CAc3C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IA/DD;;;;;OAKG;IACH,oBAFkB,GAAgC,EAKjD;;;CAyDJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemShortApiResult' {
   export default WorkItemShortApiResult;
@@ -31456,10 +29860,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
   namespace WorkItemShortApiResult {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemShortApiResult.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemShortApiResult.d.ts' {
-  {"version":3,"file":"WorkItemShortApiResult.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemShortApiResult.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IA4BI;;;;OAIG;IACH,4TAmBC;IAED;;;;;;OAMG;IACH,2CAHW,GAAmC,GAClC,GAAmC,CAgF9C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuElB;IAtND;;;;;;;;;;;;;;;;;;;;;OAqBG;IACH,yPAPiB,GAA2B,YACxB,GAAkC,cAChC,GAAoC,kCAEpC,KAAK,CAAE,MAAM,CAAA,SAClB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;;;;;;;;;;;;;;;;;;;;;;CAgMJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemShortModel' {
   export default WorkItemShortModel;
@@ -31540,10 +29941,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
   namespace WorkItemShortModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemShortModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemShortModel.d.ts' {
-  {"version":3,"file":"WorkItemShortModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemShortModel.js"],"names":[],"mappings":";AAoBA;;;;GAIG;AACH;IA4BI;;;;OAIG;IACH,4TAmBC;IAED;;;;;;OAMG;IACH,2CAHW,GAA+B,GAC9B,GAA+B,CAgF1C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAuElB;IAtND;;;;;;;;;;;;;;;;;;;;;OAqBG;IACH,yPAPiB,GAA2B,YACxB,GAAkC,cAChC,GAAoC,kCAEpC,KAAK,CAAE,MAAM,CAAA,SAClB,KAAK,CAAE,MAAM,CAAA,EAK7B;;;;;;;;;;;;;;;;;;;;;;;;;CAgMJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemSourceTypeApiModel' {
   /**
@@ -31573,10 +29971,7 @@ declare module 'testit-api-client/model/WorkItemSourceTypeApiModel' {
    * *
    */
   export type WorkItemSourceTypeApiModel = any;
-  //# sourceMappingURL=WorkItemSourceTypeApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemSourceTypeApiModel.d.ts' {
-  {"version":3,"file":"WorkItemSourceTypeApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemSourceTypeApiModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAAuC,CAIjD;IAtBG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,WAAY;CAYnB"}
+
 }
 declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
   /**
@@ -31606,10 +30001,7 @@ declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
    * *
    */
   export type WorkItemSourceTypeModel = any;
-  //# sourceMappingURL=WorkItemSourceTypeModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemSourceTypeModel.d.ts' {
-  {"version":3,"file":"WorkItemSourceTypeModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemSourceTypeModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAiBI;;;;MAIE;IACF,yCAFW,GAAoC,CAI9C;IAtBG;;;OAGG;IACH,eAAoB;IAGpB;;;OAGG;IACH,WAAY;CAYnB"}
+
 }
 declare module 'testit-api-client/model/WorkItemState' {
   /**
@@ -31644,10 +30036,7 @@ declare module 'testit-api-client/model/WorkItemState' {
    * *
    */
   export type WorkItemState = any;
-  //# sourceMappingURL=WorkItemState.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemState.d.ts' {
-  {"version":3,"file":"WorkItemState.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemState.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAA0B,CAIpC;IA7BG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,cAAkB;CAYzB"}
+
 }
 declare module 'testit-api-client/model/WorkItemStateApiModel' {
   /**
@@ -31682,10 +30071,7 @@ declare module 'testit-api-client/model/WorkItemStateApiModel' {
    * *
    */
   export type WorkItemStateApiModel = any;
-  //# sourceMappingURL=WorkItemStateApiModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemStateApiModel.d.ts' {
-  {"version":3,"file":"WorkItemStateApiModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemStateApiModel.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAAkC,CAI5C;IA7BG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,cAAkB;CAYzB"}
+
 }
 declare module 'testit-api-client/model/WorkItemStates' {
   /**
@@ -31720,10 +30106,7 @@ declare module 'testit-api-client/model/WorkItemStates' {
    * *
    */
   export type WorkItemStates = any;
-  //# sourceMappingURL=WorkItemStates.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemStates.d.ts' {
-  {"version":3,"file":"WorkItemStates.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemStates.js"],"names":[],"mappings":"AAcA;;;;EAIE;AACF;IAwBI;;;;MAIE;IACF,yCAFW,GAA2B,CAIrC;IA7BG;;;OAGG;IACH,kBAA0B;IAG1B;;;OAGG;IACH,iBAAwB;IAGxB;;;OAGG;IACH,cAAkB;CAYzB"}
+
 }
 declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
   export default WorkItemStepChangeViewModel;
@@ -31775,10 +30158,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
   namespace WorkItemStepChangeViewModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemStepChangeViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemStepChangeViewModel.d.ts' {
-  {"version":3,"file":"WorkItemStepChangeViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemStepChangeViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAgBI;;;;OAIG;IACH,uHAOC;IAED;;;;;;OAMG;IACH,2CAHW,GAAwC,GACvC,GAAwC,CA6BnD;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;IAvGD;;;;;;;;;OASG;IACH,2GAFoB,GAAsC,EAKzD;;;;;;;;CA6FJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel' {
   export default WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel;
@@ -31812,10 +30192,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
       oldValue: any;
       newValue: any;
   }
-  //# sourceMappingURL=WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.d.ts' {
-  {"version":3,"file":"WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.js"],"names":[],"mappings":";AAgBA;;;;GAIG;AACH;IAUI;;;;OAIG;IACH,kCACC;IAED;;;;;;OAMG;IACH,2CAHW,GAA2E,GAC1E,GAA2E,CAiBtF;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmClB;;;;CAGJ"}
+
 }
 declare module 'testit-api-client/model/WorkItemVersionModel' {
   export default WorkItemVersionModel;
@@ -31860,10 +30237,7 @@ declare module 'testit-api-client/model/WorkItemVersionModel' {
   namespace WorkItemVersionModel {
       let RequiredProperties: string[];
   }
-  //# sourceMappingURL=WorkItemVersionModel.d.ts.map
-}
-declare module 'testit-api-client/model/WorkItemVersionModel.d.ts' {
-  {"version":3,"file":"WorkItemVersionModel.d.ts","sourceRoot":"","sources":["../../../../../../../../D/work/testit/adapters/js/api-client-js/src/model/WorkItemVersionModel.js"],"names":[],"mappings":";AAeA;;;;GAIG;AACH;IAYI;;;;OAIG;IACH,sEAGC;IAED;;;;;;OAMG;IACH,2CAHW,GAAiC,GAChC,GAAiC,CAoB5C;IAED;;;;OAIG;IACH,gCAFY,OAAO,CAmBlB;IAtED;;;;;OAKG;IACH,sDAGC;;;;;CAgEJ"}
+
 }
 declare module 'testit-api-client' {
   import main = require('testit-api-client/index');
