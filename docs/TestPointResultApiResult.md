@@ -1,15 +1,15 @@
-# TestPointResultApiResult
+# TestitApiClient.TestPointResultApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **testPointId** | **UUID** |  | [optional] [default to null] |
-| **aggregatedOutcome** | **String** |  | [optional] [default to null] |
-| **aggregatedStatus** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
-| **workItemGlobalId** | **Long** |  | [optional] [default to null] |
-| **workItemName** | **String** |  | [optional] [default to null] |
-| **configurationName** | **String** |  | [optional] [default to null] |
-| **testResults** | [**List**](TestResultShortApiResult.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**testPointId** | **String** |  | [optional] 
+**aggregatedOutcome** | **String** |  | [optional] 
+**aggregatedStatus** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
+**workItemGlobalId** | **Number** |  | [optional] 
+**workItemName** | **String** |  | [optional] 
+**configurationName** | **String** |  | [optional] 
+**testResults** | [**[TestResultShortApiResult]**](TestResultShortApiResult.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

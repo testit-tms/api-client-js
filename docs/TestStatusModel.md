@@ -1,14 +1,14 @@
-# TestStatusModel
+# TestitApiClient.TestStatusModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
-| **type** | [**TestStatusType**](TestStatusType.md) |  | [default to null] |
-| **isSystem** | **Boolean** |  | [default to null] |
-| **code** | **String** |  | [default to null] |
-| **description** | **String** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**name** | **String** |  | 
+**type** | [**TestStatusType**](TestStatusType.md) |  | 
+**isSystem** | **Boolean** |  | 
+**code** | **String** |  | 
+**description** | **String** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

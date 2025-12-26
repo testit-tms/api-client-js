@@ -1,13 +1,13 @@
-# IFilter
+# TestitApiClient.IFilter
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **filters** | [**List**](IFilter.md) |  | [default to null] |
-| **operator** | [**CollectionOperator**](CollectionOperator.md) |  | [default to null] |
-| **value** | **String** |  | [optional] [default to null] |
-| **field** | **String** |  | [default to null] |
-| **filter** | [**IFilter**](IFilter.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**filters** | [**[IFilter]**](IFilter.md) |  | 
+**operator** | [**CollectionOperator**](CollectionOperator.md) |  | 
+**value** | **String** |  | [optional] 
+**field** | **String** |  | [readonly] 
+**filter** | [**IFilter**](IFilter.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

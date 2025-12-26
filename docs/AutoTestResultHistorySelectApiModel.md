@@ -1,16 +1,16 @@
-# AutoTestResultHistorySelectApiModel
+# TestitApiClient.AutoTestResultHistorySelectApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **outcomes** | [**Set**](AutotestResultOutcome.md) |  | [optional] [default to null] |
-| **statusCodes** | **Set** |  | [optional] [default to null] |
-| **testPlanIds** | **Set** |  | [optional] [default to null] |
-| **testRunIds** | **Set** |  | [optional] [default to null] |
-| **configurationIds** | **Set** |  | [optional] [default to null] |
-| **launchSource** | **String** |  | [optional] [default to null] |
-| **userIds** | **Set** |  | [optional] [default to null] |
-| **duration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**outcomes** | [**[AutotestResultOutcome]**](AutotestResultOutcome.md) |  | [optional] 
+**statusCodes** | **[String]** |  | [optional] 
+**testPlanIds** | **[String]** |  | [optional] 
+**testRunIds** | **[String]** |  | [optional] 
+**configurationIds** | **[String]** |  | [optional] 
+**launchSource** | **String** |  | [optional] 
+**userIds** | **[String]** |  | [optional] 
+**duration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

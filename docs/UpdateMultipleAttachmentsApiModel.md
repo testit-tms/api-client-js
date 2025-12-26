@@ -1,10 +1,10 @@
-# UpdateMultipleAttachmentsApiModel
+# TestitApiClient.UpdateMultipleAttachmentsApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **action** | [**ActionUpdate**](ActionUpdate.md) |  | [default to null] |
-| **attachmentIds** | **List** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | [**ActionUpdate**](ActionUpdate.md) |  | 
+**attachmentIds** | **[String]** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

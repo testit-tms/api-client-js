@@ -1,15 +1,15 @@
-# SectionPutModel
+# TestitApiClient.SectionPutModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
-| **projectId** | **UUID** |  | [default to null] |
-| **parentId** | **UUID** |  | [optional] [default to null] |
-| **preconditionSteps** | [**List**](StepPutModel.md) |  | [optional] [default to null] |
-| **postconditionSteps** | [**List**](StepPutModel.md) |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentPutModel.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**name** | **String** |  | 
+**projectId** | **String** |  | 
+**parentId** | **String** |  | [optional] 
+**preconditionSteps** | [**[StepPutModel]**](StepPutModel.md) |  | [optional] 
+**postconditionSteps** | [**[StepPutModel]**](StepPutModel.md) |  | [optional] 
+**attachments** | [**[AttachmentPutModel]**](AttachmentPutModel.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,11 +1,11 @@
-# CustomAttributeTemplatePutModel
+# TestitApiClient.CustomAttributeTemplatePutModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Unique ID of the attribute template | [default to null] |
-| **customAttributeIds** | **Set** | Collection of attribute IDs | [optional] [default to null] |
-| **name** | **String** | Custom attributes template name | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique ID of the attribute template | 
+**customAttributeIds** | **[String]** | Collection of attribute IDs | [optional] 
+**name** | **String** | Custom attributes template name | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

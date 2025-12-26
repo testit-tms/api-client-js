@@ -1,12 +1,12 @@
-# TestSuiteChangeViewModel
+# TestitApiClient.TestSuiteChangeViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
-| **configurations** | [**List**](ShortConfiguration.md) |  | [optional] [default to null] |
-| **workItemCount** | **Long** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**name** | **String** |  | 
+**configurations** | [**[ShortConfiguration]**](ShortConfiguration.md) |  | [optional] 
+**workItemCount** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

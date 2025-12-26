@@ -1,32 +1,58 @@
-# WebhooksApi
+# TestitApiClient.WebhooksApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2WebhooksDelete**](WebhooksApi.md#apiV2WebhooksDelete) | **DELETE** /api/v2/webhooks |  |
-| [**apiV2WebhooksGet**](WebhooksApi.md#apiV2WebhooksGet) | **GET** /api/v2/webhooks | Get all webhooks |
-| [**apiV2WebhooksIdDelete**](WebhooksApi.md#apiV2WebhooksIdDelete) | **DELETE** /api/v2/webhooks/{id} | Delete webhook by ID |
-| [**apiV2WebhooksIdGet**](WebhooksApi.md#apiV2WebhooksIdGet) | **GET** /api/v2/webhooks/{id} | Get webhook by ID |
-| [**apiV2WebhooksIdPut**](WebhooksApi.md#apiV2WebhooksIdPut) | **PUT** /api/v2/webhooks/{id} | Edit webhook by ID |
-| [**apiV2WebhooksPost**](WebhooksApi.md#apiV2WebhooksPost) | **POST** /api/v2/webhooks | Create webhook |
-| [**apiV2WebhooksPut**](WebhooksApi.md#apiV2WebhooksPut) | **PUT** /api/v2/webhooks |  |
-| [**apiV2WebhooksSearchPost**](WebhooksApi.md#apiV2WebhooksSearchPost) | **POST** /api/v2/webhooks/search | Search for webhooks |
-| [**apiV2WebhooksSpecialVariablesGet**](WebhooksApi.md#apiV2WebhooksSpecialVariablesGet) | **GET** /api/v2/webhooks/specialVariables | Get special variables for webhook event type |
-| [**apiV2WebhooksTestPost**](WebhooksApi.md#apiV2WebhooksTestPost) | **POST** /api/v2/webhooks/test | Test webhook&#39;s url |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2WebhooksDelete**](WebhooksApi.md#apiV2WebhooksDelete) | **DELETE** /api/v2/webhooks | 
+[**apiV2WebhooksGet**](WebhooksApi.md#apiV2WebhooksGet) | **GET** /api/v2/webhooks | Get all webhooks
+[**apiV2WebhooksIdDelete**](WebhooksApi.md#apiV2WebhooksIdDelete) | **DELETE** /api/v2/webhooks/{id} | Delete webhook by ID
+[**apiV2WebhooksIdGet**](WebhooksApi.md#apiV2WebhooksIdGet) | **GET** /api/v2/webhooks/{id} | Get webhook by ID
+[**apiV2WebhooksIdPut**](WebhooksApi.md#apiV2WebhooksIdPut) | **PUT** /api/v2/webhooks/{id} | Edit webhook by ID
+[**apiV2WebhooksPost**](WebhooksApi.md#apiV2WebhooksPost) | **POST** /api/v2/webhooks | Create webhook
+[**apiV2WebhooksPut**](WebhooksApi.md#apiV2WebhooksPut) | **PUT** /api/v2/webhooks | 
+[**apiV2WebhooksSearchPost**](WebhooksApi.md#apiV2WebhooksSearchPost) | **POST** /api/v2/webhooks/search | Search for webhooks
+[**apiV2WebhooksSpecialVariablesGet**](WebhooksApi.md#apiV2WebhooksSpecialVariablesGet) | **GET** /api/v2/webhooks/specialVariables | Get special variables for webhook event type
+[**apiV2WebhooksTestPost**](WebhooksApi.md#apiV2WebhooksTestPost) | **POST** /api/v2/webhooks/test | Test webhook&#39;s url
 
 
-<a name="apiV2WebhooksDelete"></a>
-# **apiV2WebhooksDelete**
-> apiV2WebhooksDelete(WebhooksDeleteApiModel)
+
+## apiV2WebhooksDelete
+
+> apiV2WebhooksDelete(opts)
 
 
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'webhooksDeleteApiModel': new TestitApiClient.WebhooksDeleteApiModel() // WebhooksDeleteApiModel | 
+};
+apiInstance.apiV2WebhooksDelete(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **WebhooksDeleteApiModel** | [**WebhooksDeleteApiModel**](../Models/WebhooksDeleteApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhooksDeleteApiModel** | [**WebhooksDeleteApiModel**](WebhooksDeleteApiModel.md)|  | [optional] 
 
 ### Return type
 
@@ -41,21 +67,47 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2WebhooksGet"></a>
-# **apiV2WebhooksGet**
-> List apiV2WebhooksGet(projectId)
+
+## apiV2WebhooksGet
+
+> [WebHookModel] apiV2WebhooksGet(opts)
 
 Get all webhooks
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'projectId': "projectId_example" // String | Project unique ID
+};
+apiInstance.apiV2WebhooksGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **projectId** | **UUID**| Project unique ID | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Project unique ID | [optional] 
 
 ### Return type
 
-[**List**](../Models/WebHookModel.md)
+[**[WebHookModel]**](WebHookModel.md)
 
 ### Authorization
 
@@ -66,17 +118,41 @@ Get all webhooks
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksIdDelete"></a>
-# **apiV2WebhooksIdDelete**
+
+## apiV2WebhooksIdDelete
+
 > apiV2WebhooksIdDelete(id)
 
 Delete webhook by ID
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let id = "id_example"; // String | Webhook unique ID
+apiInstance.apiV2WebhooksIdDelete(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Webhook unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Webhook unique ID | 
 
 ### Return type
 
@@ -91,21 +167,45 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksIdGet"></a>
-# **apiV2WebhooksIdGet**
+
+## apiV2WebhooksIdGet
+
 > WebHookModel apiV2WebhooksIdGet(id)
 
 Get webhook by ID
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let id = "id_example"; // String | Webhook unique ID
+apiInstance.apiV2WebhooksIdGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Webhook unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Webhook unique ID | 
 
 ### Return type
 
-[**WebHookModel**](../Models/WebHookModel.md)
+[**WebHookModel**](WebHookModel.md)
 
 ### Authorization
 
@@ -116,22 +216,49 @@ Get webhook by ID
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksIdPut"></a>
-# **apiV2WebhooksIdPut**
-> WebHookModel apiV2WebhooksIdPut(id, WebHookPostModel)
+
+## apiV2WebhooksIdPut
+
+> WebHookModel apiV2WebhooksIdPut(id, opts)
 
 Edit webhook by ID
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let id = "id_example"; // String | Webhook unique ID
+let opts = {
+  'webHookPostModel': new TestitApiClient.WebHookPostModel() // WebHookPostModel | 
+};
+apiInstance.apiV2WebhooksIdPut(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Webhook unique ID | [default to null] |
-| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Webhook unique ID | 
+ **webHookPostModel** | [**WebHookPostModel**](WebHookPostModel.md)|  | [optional] 
 
 ### Return type
 
-[**WebHookModel**](../Models/WebHookModel.md)
+[**WebHookModel**](WebHookModel.md)
 
 ### Authorization
 
@@ -142,21 +269,47 @@ Edit webhook by ID
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2WebhooksPost"></a>
-# **apiV2WebhooksPost**
-> WebHookModel apiV2WebhooksPost(WebHookPostModel)
+
+## apiV2WebhooksPost
+
+> WebHookModel apiV2WebhooksPost(opts)
 
 Create webhook
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'webHookPostModel': new TestitApiClient.WebHookPostModel() // WebHookPostModel | 
+};
+apiInstance.apiV2WebhooksPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **WebHookPostModel** | [**WebHookPostModel**](../Models/WebHookPostModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webHookPostModel** | [**WebHookPostModel**](WebHookPostModel.md)|  | [optional] 
 
 ### Return type
 
-[**WebHookModel**](../Models/WebHookModel.md)
+[**WebHookModel**](WebHookModel.md)
 
 ### Authorization
 
@@ -167,21 +320,47 @@ Create webhook
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2WebhooksPut"></a>
-# **apiV2WebhooksPut**
-> WebhooksUpdateApiResult apiV2WebhooksPut(WebhooksUpdateApiModel)
+
+## apiV2WebhooksPut
+
+> WebhooksUpdateApiResult apiV2WebhooksPut(opts)
 
 
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'webhooksUpdateApiModel': new TestitApiClient.WebhooksUpdateApiModel() // WebhooksUpdateApiModel | 
+};
+apiInstance.apiV2WebhooksPut(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **WebhooksUpdateApiModel** | [**WebhooksUpdateApiModel**](../Models/WebhooksUpdateApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhooksUpdateApiModel** | [**WebhooksUpdateApiModel**](WebhooksUpdateApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**WebhooksUpdateApiResult**](../Models/WebhooksUpdateApiResult.md)
+[**WebhooksUpdateApiResult**](WebhooksUpdateApiResult.md)
 
 ### Authorization
 
@@ -192,26 +371,57 @@ Create webhook
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2WebhooksSearchPost"></a>
-# **apiV2WebhooksSearchPost**
-> List apiV2WebhooksSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, SearchWebhooksQueryModel)
+
+## apiV2WebhooksSearchPost
+
+> [WebHookModel] apiV2WebhooksSearchPost(opts)
 
 Search for webhooks
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example", // String | Value for searching
+  'searchWebhooksQueryModel': new TestitApiClient.SearchWebhooksQueryModel() // SearchWebhooksQueryModel | 
+};
+apiInstance.apiV2WebhooksSearchPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **SearchWebhooksQueryModel** | [**SearchWebhooksQueryModel**](../Models/SearchWebhooksQueryModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
+ **searchWebhooksQueryModel** | [**SearchWebhooksQueryModel**](SearchWebhooksQueryModel.md)|  | [optional] 
 
 ### Return type
 
-[**List**](../Models/WebHookModel.md)
+[**[WebHookModel]**](WebHookModel.md)
 
 ### Authorization
 
@@ -222,22 +432,49 @@ Search for webhooks
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2WebhooksSpecialVariablesGet"></a>
-# **apiV2WebhooksSpecialVariablesGet**
-> List apiV2WebhooksSpecialVariablesGet(eventType, variablesType)
+
+## apiV2WebhooksSpecialVariablesGet
+
+> [String] apiV2WebhooksSpecialVariablesGet(opts)
 
 Get special variables for webhook event type
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'eventType': new TestitApiClient.WebHookEventType(), // WebHookEventType | Webhook event type
+  'variablesType': new TestitApiClient.WebhookVariablesType() // WebhookVariablesType | 
+};
+apiInstance.apiV2WebhooksSpecialVariablesGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **eventType** | [**WebHookEventType**](../Models/.md)| Webhook event type | [optional] [default to null] [enum: AutomatedTestRunCreated, TestPlansStatusChanged, TestRunStopped, TestPointAssigned, TestResultJiraIssueCreated, AutoTestFinished, UserMentionedInComment, UserSelectedInWorkItemAttribute, AllTestPointsFinished, AllAutoTestsFinished, AutoTestChanged, WorkItemAutoTestRelationChanged, WorkItemAttributeChanged, WorkItemChanged, ConfigurationChanged, ProjectChanged, TestPlanChanged] |
-| **variablesType** | [**WebhookVariablesType**](../Models/.md)|  | [optional] [default to VariablesForUrl] [enum: VariablesForUrl, VariablesForHeaders, VariablesForBody] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventType** | [**WebHookEventType**](.md)| Webhook event type | [optional] 
+ **variablesType** | [**WebhookVariablesType**](.md)|  | [optional] 
 
 ### Return type
 
-**List**
+**[String]**
 
 ### Authorization
 
@@ -248,21 +485,47 @@ Get special variables for webhook event type
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksTestPost"></a>
-# **apiV2WebhooksTestPost**
-> WebhookResponse apiV2WebhooksTestPost(WebHookTestModel)
+
+## apiV2WebhooksTestPost
+
+> WebhookResponse apiV2WebhooksTestPost(opts)
 
 Test webhook&#39;s url
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksApi();
+let opts = {
+  'webHookTestModel': new TestitApiClient.WebHookTestModel() // WebHookTestModel | 
+};
+apiInstance.apiV2WebhooksTestPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **WebHookTestModel** | [**WebHookTestModel**](../Models/WebHookTestModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webHookTestModel** | [**WebHookTestModel**](WebHookTestModel.md)|  | [optional] 
 
 ### Return type
 
-[**WebhookResponse**](../Models/WebhookResponse.md)
+[**WebhookResponse**](WebhookResponse.md)
 
 ### Authorization
 

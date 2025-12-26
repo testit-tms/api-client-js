@@ -1,11 +1,11 @@
-# WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
+# TestitApiClient.WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **diffValue** | [**List**](WorkItemStepChangeViewModel.md) |  | [optional] [default to null] |
-| **oldValue** | [**List**](WorkItemStepChangeViewModel.md) |  | [optional] [default to null] |
-| **newValue** | [**List**](WorkItemStepChangeViewModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**diffValue** | [**[WorkItemStepChangeViewModel]**](WorkItemStepChangeViewModel.md) |  | [optional] 
+**oldValue** | [**[WorkItemStepChangeViewModel]**](WorkItemStepChangeViewModel.md) |  | [optional] 
+**newValue** | [**[WorkItemStepChangeViewModel]**](WorkItemStepChangeViewModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

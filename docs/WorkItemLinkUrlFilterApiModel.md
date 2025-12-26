@@ -1,10 +1,10 @@
-# WorkItemLinkUrlFilterApiModel
+# TestitApiClient.WorkItemLinkUrlFilterApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **types** | [**Set**](WorkItemEntityTypes.md) |  | [optional] [default to null] |
-| **searchUrl** | **String** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**types** | [**[WorkItemEntityTypes]**](WorkItemEntityTypes.md) |  | [optional] 
+**searchUrl** | **String** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

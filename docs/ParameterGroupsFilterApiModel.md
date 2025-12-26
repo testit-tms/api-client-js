@@ -1,12 +1,12 @@
-# ParameterGroupsFilterApiModel
+# TestitApiClient.ParameterGroupsFilterApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **parameterKeyIds** | **Set** |  | [optional] [default to null] |
-| **name** | **String** |  | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [optional] [default to null] |
-| **projectIds** | **List** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**parameterKeyIds** | **[String]** |  | [optional] 
+**name** | **String** |  | [optional] 
+**isDeleted** | **Boolean** |  | [optional] 
+**projectIds** | **[String]** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

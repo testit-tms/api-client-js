@@ -1,50 +1,77 @@
-# ProjectsApi
+# TestitApiClient.ProjectsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**addGlobalAttributesToProject**](ProjectsApi.md#addGlobalAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project |
-| [**apiV2ProjectsDemoPost**](ProjectsApi.md#apiV2ProjectsDemoPost) | **POST** /api/v2/projects/demo |  |
-| [**apiV2ProjectsIdDelete**](ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project |
-| [**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes |
-| [**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite |
-| [**apiV2ProjectsIdFiltersGet**](ProjectsApi.md#apiV2ProjectsIdFiltersGet) | **GET** /api/v2/projects/{id}/filters | Get Project filters |
-| [**apiV2ProjectsIdPatch**](ProjectsApi.md#apiV2ProjectsIdPatch) | **PATCH** /api/v2/projects/{id} | Patch project |
-| [**apiV2ProjectsIdPurgePost**](ProjectsApi.md#apiV2ProjectsIdPurgePost) | **POST** /api/v2/projects/{id}/purge | Purge the project |
-| [**apiV2ProjectsIdRestorePost**](ProjectsApi.md#apiV2ProjectsIdRestorePost) | **POST** /api/v2/projects/{id}/restore | Restore archived project |
-| [**apiV2ProjectsIdTestPlansAttributeAttributeIdDelete**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributeAttributeIdDelete) | **DELETE** /api/v2/projects/{id}/testPlans/attribute/{attributeId} | Delete attribute from project&#39;s test plans |
-| [**apiV2ProjectsIdTestPlansAttributePut**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributePut) | **PUT** /api/v2/projects/{id}/testPlans/attribute | Update attribute of project&#39;s test plans |
-| [**apiV2ProjectsIdTestRunsFullGet**](ProjectsApi.md#apiV2ProjectsIdTestRunsFullGet) | **GET** /api/v2/projects/{id}/testRuns/full | Get Project TestRuns full models |
-| [**apiV2ProjectsNameNameExistsGet**](ProjectsApi.md#apiV2ProjectsNameNameExistsGet) | **GET** /api/v2/projects/name/{name}/exists |  |
-| [**apiV2ProjectsPurgeBulkPost**](ProjectsApi.md#apiV2ProjectsPurgeBulkPost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects |
-| [**apiV2ProjectsRestoreBulkPost**](ProjectsApi.md#apiV2ProjectsRestoreBulkPost) | **POST** /api/v2/projects/restore/bulk | Restore multiple projects |
-| [**apiV2ProjectsSearchPost**](ProjectsApi.md#apiV2ProjectsSearchPost) | **POST** /api/v2/projects/search | Search for projects |
-| [**apiV2ProjectsShortsPost**](ProjectsApi.md#apiV2ProjectsShortsPost) | **POST** /api/v2/projects/shorts | Get projects short models |
-| [**createProject**](ProjectsApi.md#createProject) | **POST** /api/v2/projects | Create project |
-| [**deleteProjectAutoTests**](ProjectsApi.md#deleteProjectAutoTests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete all autotests from project |
-| [**getAllProjects**](ProjectsApi.md#getAllProjects) | **GET** /api/v2/projects | Get all projects |
-| [**getAutoTestsNamespaces**](ProjectsApi.md#getAutoTestsNamespaces) | **GET** /api/v2/projects/{id}/autoTestsNamespaces | Get namespaces of autotests in project |
-| [**getProjectById**](ProjectsApi.md#getProjectById) | **GET** /api/v2/projects/{id} | Get project by ID |
-| [**getTestPlansByProjectId**](ProjectsApi.md#getTestPlansByProjectId) | **GET** /api/v2/projects/{id}/testPlans | Get project test plans |
-| [**getTestRunsByProjectId**](ProjectsApi.md#getTestRunsByProjectId) | **GET** /api/v2/projects/{id}/testRuns | Get project test runs |
-| [**updateProject**](ProjectsApi.md#updateProject) | **PUT** /api/v2/projects | Update project |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**addGlobalAttributesToProject**](ProjectsApi.md#addGlobalAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project
+[**apiV2ProjectsDemoPost**](ProjectsApi.md#apiV2ProjectsDemoPost) | **POST** /api/v2/projects/demo | 
+[**apiV2ProjectsIdDelete**](ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project
+[**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes
+[**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite
+[**apiV2ProjectsIdFiltersGet**](ProjectsApi.md#apiV2ProjectsIdFiltersGet) | **GET** /api/v2/projects/{id}/filters | Get Project filters
+[**apiV2ProjectsIdPatch**](ProjectsApi.md#apiV2ProjectsIdPatch) | **PATCH** /api/v2/projects/{id} | Patch project
+[**apiV2ProjectsIdPurgePost**](ProjectsApi.md#apiV2ProjectsIdPurgePost) | **POST** /api/v2/projects/{id}/purge | Purge the project
+[**apiV2ProjectsIdRestorePost**](ProjectsApi.md#apiV2ProjectsIdRestorePost) | **POST** /api/v2/projects/{id}/restore | Restore archived project
+[**apiV2ProjectsIdTestPlansAttributeAttributeIdDelete**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributeAttributeIdDelete) | **DELETE** /api/v2/projects/{id}/testPlans/attribute/{attributeId} | Delete attribute from project&#39;s test plans
+[**apiV2ProjectsIdTestPlansAttributePut**](ProjectsApi.md#apiV2ProjectsIdTestPlansAttributePut) | **PUT** /api/v2/projects/{id}/testPlans/attribute | Update attribute of project&#39;s test plans
+[**apiV2ProjectsIdTestRunsFullGet**](ProjectsApi.md#apiV2ProjectsIdTestRunsFullGet) | **GET** /api/v2/projects/{id}/testRuns/full | Get Project TestRuns full models
+[**apiV2ProjectsNameNameExistsGet**](ProjectsApi.md#apiV2ProjectsNameNameExistsGet) | **GET** /api/v2/projects/name/{name}/exists | 
+[**apiV2ProjectsPurgeBulkPost**](ProjectsApi.md#apiV2ProjectsPurgeBulkPost) | **POST** /api/v2/projects/purge/bulk | Purge multiple projects
+[**apiV2ProjectsRestoreBulkPost**](ProjectsApi.md#apiV2ProjectsRestoreBulkPost) | **POST** /api/v2/projects/restore/bulk | Restore multiple projects
+[**apiV2ProjectsSearchPost**](ProjectsApi.md#apiV2ProjectsSearchPost) | **POST** /api/v2/projects/search | Search for projects
+[**apiV2ProjectsShortsPost**](ProjectsApi.md#apiV2ProjectsShortsPost) | **POST** /api/v2/projects/shorts | Get projects short models
+[**createProject**](ProjectsApi.md#createProject) | **POST** /api/v2/projects | Create project
+[**deleteProjectAutoTests**](ProjectsApi.md#deleteProjectAutoTests) | **DELETE** /api/v2/projects/{id}/autoTests | Delete all autotests from project
+[**getAllProjects**](ProjectsApi.md#getAllProjects) | **GET** /api/v2/projects | Get all projects
+[**getAutoTestsNamespaces**](ProjectsApi.md#getAutoTestsNamespaces) | **GET** /api/v2/projects/{id}/autoTestsNamespaces | Get namespaces of autotests in project
+[**getProjectById**](ProjectsApi.md#getProjectById) | **GET** /api/v2/projects/{id} | Get project by ID
+[**getTestPlansByProjectId**](ProjectsApi.md#getTestPlansByProjectId) | **GET** /api/v2/projects/{id}/testPlans | Get project test plans
+[**getTestRunsByProjectId**](ProjectsApi.md#getTestRunsByProjectId) | **GET** /api/v2/projects/{id}/testRuns | Get project test runs
+[**updateProject**](ProjectsApi.md#updateProject) | **PUT** /api/v2/projects | Update project
 
 
-<a name="addGlobalAttributesToProject"></a>
-# **addGlobalAttributesToProject**
-> addGlobalAttributesToProject(id, request\_body)
+
+## addGlobalAttributesToProject
+
+> addGlobalAttributesToProject(id, opts)
 
 Add global attributes to project
 
-     Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+ Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let opts = {
+  'requestBody': ["null"] // [String] | 
+};
+apiInstance.addGlobalAttributesToProject(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **request\_body** | [**Set**](../Models/UUID.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **requestBody** | [**[String]**](String.md)|  | [optional] 
 
 ### Return type
 
@@ -59,18 +86,41 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsDemoPost"></a>
-# **apiV2ProjectsDemoPost**
+
+## apiV2ProjectsDemoPost
+
 > DemoProjectApiResult apiV2ProjectsDemoPost()
 
 
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+apiInstance.apiV2ProjectsDemoPost((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-[**DemoProjectApiResult**](../Models/DemoProjectApiResult.md)
+[**DemoProjectApiResult**](DemoProjectApiResult.md)
 
 ### Authorization
 
@@ -81,17 +131,41 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdDelete"></a>
-# **apiV2ProjectsIdDelete**
+
+## apiV2ProjectsIdDelete
+
 > apiV2ProjectsIdDelete(id)
 
 Archive project
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global ID of the project
+apiInstance.apiV2ProjectsIdDelete(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global ID of the project | 
 
 ### Return type
 
@@ -106,22 +180,49 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdFailureClassesGet"></a>
-# **apiV2ProjectsIdFailureClassesGet**
-> List apiV2ProjectsIdFailureClassesGet(id, isDeleted)
+
+## apiV2ProjectsIdFailureClassesGet
+
+> [FailureCategoryApiResult] apiV2ProjectsIdFailureClassesGet(id, opts)
 
 Get failure classes
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global ID of the project
+let opts = {
+  'isDeleted': true // Boolean | 
+};
+apiInstance.apiV2ProjectsIdFailureClassesGet(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Unique or global ID of the project | [default to null] |
-| **isDeleted** | **Boolean**|  | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global ID of the project | 
+ **isDeleted** | **Boolean**|  | [optional] 
 
 ### Return type
 
-[**List**](../Models/FailureCategoryApiResult.md)
+[**[FailureCategoryApiResult]**](FailureCategoryApiResult.md)
 
 ### Authorization
 
@@ -132,17 +233,41 @@ Get failure classes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdFavoritePut"></a>
-# **apiV2ProjectsIdFavoritePut**
+
+## apiV2ProjectsIdFavoritePut
+
 > apiV2ProjectsIdFavoritePut(id)
 
 Mark Project as favorite
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+apiInstance.apiV2ProjectsIdFavoritePut(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
 
 ### Return type
 
@@ -157,23 +282,47 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdFiltersGet"></a>
-# **apiV2ProjectsIdFiltersGet**
-> List apiV2ProjectsIdFiltersGet(id)
+
+## apiV2ProjectsIdFiltersGet
+
+> [FilterModel] apiV2ProjectsIdFiltersGet(id)
 
 Get Project filters
 
-     Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+ Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+apiInstance.apiV2ProjectsIdFiltersGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
 
 ### Return type
 
-[**List**](../Models/FilterModel.md)
+[**[FilterModel]**](FilterModel.md)
 
 ### Authorization
 
@@ -184,20 +333,47 @@ Get Project filters
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdPatch"></a>
-# **apiV2ProjectsIdPatch**
-> apiV2ProjectsIdPatch(id, Operation)
+
+## apiV2ProjectsIdPatch
+
+> apiV2ProjectsIdPatch(id, opts)
 
 Patch project
 
-    See &lt;a href&#x3D;\&quot;https://www.rfc-editor.org/rfc/rfc6902\&quot; target&#x3D;\&quot;_blank\&quot;&gt;RFC 6902: JavaScript Object Notation (JSON) Patch&lt;/a&gt; for details
+See &lt;a href&#x3D;\&quot;https://www.rfc-editor.org/rfc/rfc6902\&quot; target&#x3D;\&quot;_blank\&quot;&gt;RFC 6902: JavaScript Object Notation (JSON) Patch&lt;/a&gt; for details
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global Id of project
+let opts = {
+  'operation': [new TestitApiClient.Operation()] // [Operation] | 
+};
+apiInstance.apiV2ProjectsIdPatch(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Unique or global Id of project | [default to null] |
-| **Operation** | [**List**](../Models/Operation.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global Id of project | 
+ **operation** | [**[Operation]**](Operation.md)|  | [optional] 
 
 ### Return type
 
@@ -212,17 +388,41 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdPurgePost"></a>
-# **apiV2ProjectsIdPurgePost**
+
+## apiV2ProjectsIdPurgePost
+
 > apiV2ProjectsIdPurgePost(id)
 
 Purge the project
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global ID of the project
+apiInstance.apiV2ProjectsIdPurgePost(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global ID of the project | 
 
 ### Return type
 
@@ -237,17 +437,41 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdRestorePost"></a>
-# **apiV2ProjectsIdRestorePost**
+
+## apiV2ProjectsIdRestorePost
+
 > apiV2ProjectsIdRestorePost(id)
 
 Restore archived project
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global ID of the project
+apiInstance.apiV2ProjectsIdRestorePost(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global ID of the project | 
 
 ### Return type
 
@@ -262,20 +486,45 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdTestPlansAttributeAttributeIdDelete"></a>
-# **apiV2ProjectsIdTestPlansAttributeAttributeIdDelete**
+
+## apiV2ProjectsIdTestPlansAttributeAttributeIdDelete
+
 > apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId)
 
 Delete attribute from project&#39;s test plans
 
-     Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+ Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let attributeId = "attributeId_example"; // String | 
+apiInstance.apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **attributeId** | **UUID**|  | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **attributeId** | **String**|  | 
 
 ### Return type
 
@@ -290,20 +539,47 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdTestPlansAttributePut"></a>
-# **apiV2ProjectsIdTestPlansAttributePut**
-> apiV2ProjectsIdTestPlansAttributePut(id, CustomAttributeTestPlanProjectRelationPutModel)
+
+## apiV2ProjectsIdTestPlansAttributePut
+
+> apiV2ProjectsIdTestPlansAttributePut(id, opts)
 
 Update attribute of project&#39;s test plans
 
-     Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+ Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let opts = {
+  'customAttributeTestPlanProjectRelationPutModel': new TestitApiClient.CustomAttributeTestPlanProjectRelationPutModel() // CustomAttributeTestPlanProjectRelationPutModel | 
+};
+apiInstance.apiV2ProjectsIdTestPlansAttributePut(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **CustomAttributeTestPlanProjectRelationPutModel** | [**CustomAttributeTestPlanProjectRelationPutModel**](../Models/CustomAttributeTestPlanProjectRelationPutModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **customAttributeTestPlanProjectRelationPutModel** | [**CustomAttributeTestPlanProjectRelationPutModel**](CustomAttributeTestPlanProjectRelationPutModel.md)|  | [optional] 
 
 ### Return type
 
@@ -318,37 +594,77 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsIdTestRunsFullGet"></a>
-# **apiV2ProjectsIdTestRunsFullGet**
-> List apiV2ProjectsIdTestRunsFullGet(id, includeTestResults, mustAggregateTestResults, notStarted, inProgress, stopped, completed, createdDateFrom, createdDateTo, testPlanId, Skip, Take, OrderBy, SearchField, SearchValue)
+
+## apiV2ProjectsIdTestRunsFullGet
+
+> [TestRunApiResult] apiV2ProjectsIdTestRunsFullGet(id, opts)
 
 Get Project TestRuns full models
 
-     Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+ Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let opts = {
+  'includeTestResults': true, // Boolean | 
+  'mustAggregateTestResults': true, // Boolean | 
+  'notStarted': true, // Boolean | 
+  'inProgress': true, // Boolean | 
+  'stopped': true, // Boolean | 
+  'completed': true, // Boolean | 
+  'createdDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'createdDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'testPlanId': "testPlanId_example", // String | 
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example" // String | Value for searching
+};
+apiInstance.apiV2ProjectsIdTestRunsFullGet(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **includeTestResults** | **Boolean**|  | [optional] [default to null] |
-| **mustAggregateTestResults** | **Boolean**|  | [optional] [default to null] |
-| **notStarted** | **Boolean**|  | [optional] [default to null] |
-| **inProgress** | **Boolean**|  | [optional] [default to null] |
-| **stopped** | **Boolean**|  | [optional] [default to null] |
-| **completed** | **Boolean**|  | [optional] [default to null] |
-| **createdDateFrom** | **Date**|  | [optional] [default to null] |
-| **createdDateTo** | **Date**|  | [optional] [default to null] |
-| **testPlanId** | **UUID**|  | [optional] [default to null] |
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **includeTestResults** | **Boolean**|  | [optional] 
+ **mustAggregateTestResults** | **Boolean**|  | [optional] 
+ **notStarted** | **Boolean**|  | [optional] 
+ **inProgress** | **Boolean**|  | [optional] 
+ **stopped** | **Boolean**|  | [optional] 
+ **completed** | **Boolean**|  | [optional] 
+ **createdDateFrom** | **Date**|  | [optional] 
+ **createdDateTo** | **Date**|  | [optional] 
+ **testPlanId** | **String**|  | [optional] 
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
 
 ### Return type
 
-[**List**](../Models/TestRunApiResult.md)
+[**[TestRunApiResult]**](TestRunApiResult.md)
 
 ### Authorization
 
@@ -359,17 +675,41 @@ Get Project TestRuns full models
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsNameNameExistsGet"></a>
-# **apiV2ProjectsNameNameExistsGet**
+
+## apiV2ProjectsNameNameExistsGet
+
 > Boolean apiV2ProjectsNameNameExistsGet(name)
 
 
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let name = "name_example"; // String | 
+apiInstance.apiV2ProjectsNameNameExistsGet(name, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **name** | **String**|  | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | 
 
 ### Return type
 
@@ -384,21 +724,47 @@ Get Project TestRuns full models
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2ProjectsPurgeBulkPost"></a>
-# **apiV2ProjectsPurgeBulkPost**
-> Long apiV2ProjectsPurgeBulkPost(ProjectSelectModel)
+
+## apiV2ProjectsPurgeBulkPost
+
+> Number apiV2ProjectsPurgeBulkPost(opts)
 
 Purge multiple projects
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'projectSelectModel': new TestitApiClient.ProjectSelectModel() // ProjectSelectModel | 
+};
+apiInstance.apiV2ProjectsPurgeBulkPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ProjectSelectModel** | [**ProjectSelectModel**](../Models/ProjectSelectModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectSelectModel** | [**ProjectSelectModel**](ProjectSelectModel.md)|  | [optional] 
 
 ### Return type
 
-**Long**
+**Number**
 
 ### Authorization
 
@@ -409,21 +775,47 @@ Purge multiple projects
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsRestoreBulkPost"></a>
-# **apiV2ProjectsRestoreBulkPost**
-> Long apiV2ProjectsRestoreBulkPost(ProjectSelectModel)
+
+## apiV2ProjectsRestoreBulkPost
+
+> Number apiV2ProjectsRestoreBulkPost(opts)
 
 Restore multiple projects
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'projectSelectModel': new TestitApiClient.ProjectSelectModel() // ProjectSelectModel | 
+};
+apiInstance.apiV2ProjectsRestoreBulkPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **ProjectSelectModel** | [**ProjectSelectModel**](../Models/ProjectSelectModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectSelectModel** | [**ProjectSelectModel**](ProjectSelectModel.md)|  | [optional] 
 
 ### Return type
 
-**Long**
+**Number**
 
 ### Authorization
 
@@ -434,26 +826,57 @@ Restore multiple projects
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsSearchPost"></a>
-# **apiV2ProjectsSearchPost**
-> List apiV2ProjectsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, ProjectsFilterModel)
+
+## apiV2ProjectsSearchPost
+
+> [ProjectShortModel] apiV2ProjectsSearchPost(opts)
 
 Search for projects
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example", // String | Value for searching
+  'projectsFilterModel': new TestitApiClient.ProjectsFilterModel() // ProjectsFilterModel | 
+};
+apiInstance.apiV2ProjectsSearchPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **ProjectsFilterModel** | [**ProjectsFilterModel**](../Models/ProjectsFilterModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
+ **projectsFilterModel** | [**ProjectsFilterModel**](ProjectsFilterModel.md)|  | [optional] 
 
 ### Return type
 
-[**List**](../Models/ProjectShortModel.md)
+[**[ProjectShortModel]**](ProjectShortModel.md)
 
 ### Authorization
 
@@ -464,23 +887,49 @@ Search for projects
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2ProjectsShortsPost"></a>
-# **apiV2ProjectsShortsPost**
-> ProjectShortApiResultReply apiV2ProjectsShortsPost(GetShortProjectsApiModel)
+
+## apiV2ProjectsShortsPost
+
+> ProjectShortApiResultReply apiV2ProjectsShortsPost(opts)
 
 Get projects short models
 
-     Use case  User sets query params  User runs method execution  System return projects short models
+ Use case  User sets query params  User runs method execution  System return projects short models
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'getShortProjectsApiModel': new TestitApiClient.GetShortProjectsApiModel() // GetShortProjectsApiModel | 
+};
+apiInstance.apiV2ProjectsShortsPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **GetShortProjectsApiModel** | [**GetShortProjectsApiModel**](../Models/GetShortProjectsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getShortProjectsApiModel** | [**GetShortProjectsApiModel**](GetShortProjectsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**ProjectShortApiResultReply**](../Models/ProjectShortApiResultReply.md)
+[**ProjectShortApiResultReply**](ProjectShortApiResultReply.md)
 
 ### Authorization
 
@@ -491,23 +940,49 @@ Get projects short models
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="createProject"></a>
-# **createProject**
-> ProjectApiResult createProject(CreateProjectApiModel)
+
+## createProject
+
+> ProjectApiResult createProject(opts)
 
 Create project
 
-     Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+ Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'createProjectApiModel': new TestitApiClient.CreateProjectApiModel() // CreateProjectApiModel | 
+};
+apiInstance.createProject(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateProjectApiModel** | [**CreateProjectApiModel**](../Models/CreateProjectApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createProjectApiModel** | [**CreateProjectApiModel**](CreateProjectApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**ProjectApiResult**](../Models/ProjectApiResult.md)
+[**ProjectApiResult**](ProjectApiResult.md)
 
 ### Authorization
 
@@ -518,17 +993,41 @@ Create project
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="deleteProjectAutoTests"></a>
-# **deleteProjectAutoTests**
+
+## deleteProjectAutoTests
+
 > deleteProjectAutoTests(id)
 
 Delete all autotests from project
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Unique or global ID of the project
+apiInstance.deleteProjectAutoTests(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Unique or global ID of the project | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique or global ID of the project | 
 
 ### Return type
 
@@ -543,29 +1042,61 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="getAllProjects"></a>
-# **getAllProjects**
-> List getAllProjects(isDeleted, projectName, Skip, Take, OrderBy, SearchField, SearchValue)
+
+## getAllProjects
+
+> [ProjectShortModel] getAllProjects(opts)
 
 Get all projects
 
-     Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+ Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'isDeleted': true, // Boolean | If result must consist of only actual/deleted parameters
+  'projectName': "projectName_example", // String | 
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example" // String | Value for searching
+};
+apiInstance.getAllProjects(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **isDeleted** | **Boolean**| If result must consist of only actual/deleted parameters | [optional] [default to null] |
-| **projectName** | **String**|  | [optional] [default to null] |
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **isDeleted** | **Boolean**| If result must consist of only actual/deleted parameters | [optional] 
+ **projectName** | **String**|  | [optional] 
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
 
 ### Return type
 
-[**List**](../Models/ProjectShortModel.md)
+[**[ProjectShortModel]**](ProjectShortModel.md)
 
 ### Authorization
 
@@ -576,23 +1107,47 @@ Get all projects
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="getAutoTestsNamespaces"></a>
-# **getAutoTestsNamespaces**
-> List getAutoTestsNamespaces(id)
+
+## getAutoTestsNamespaces
+
+> [AutoTestNamespaceApiResult] getAutoTestsNamespaces(id)
 
 Get namespaces of autotests in project
 
-     Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+ Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+apiInstance.getAutoTestsNamespaces(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
 
 ### Return type
 
-[**List**](../Models/AutoTestNamespaceApiResult.md)
+[**[AutoTestNamespaceApiResult]**](AutoTestNamespaceApiResult.md)
 
 ### Authorization
 
@@ -603,23 +1158,47 @@ Get namespaces of autotests in project
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="getProjectById"></a>
-# **getProjectById**
+
+## getProjectById
+
 > ProjectModel getProjectById(id)
 
 Get project by ID
 
-     Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+ Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+apiInstance.getProjectById(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
 
 ### Return type
 
-[**ProjectModel**](../Models/ProjectModel.md)
+[**ProjectModel**](ProjectModel.md)
 
 ### Authorization
 
@@ -630,24 +1209,51 @@ Get project by ID
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="getTestPlansByProjectId"></a>
-# **getTestPlansByProjectId**
-> List getTestPlansByProjectId(id, isDeleted)
+
+## getTestPlansByProjectId
+
+> [TestPlanModel] getTestPlansByProjectId(id, opts)
 
 Get project test plans
 
-     Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+ Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let opts = {
+  'isDeleted': true // Boolean | If result must consist of only actual/archived test plans
+};
+apiInstance.getTestPlansByProjectId(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **isDeleted** | **Boolean**| If result must consist of only actual/archived test plans | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **isDeleted** | **Boolean**| If result must consist of only actual/archived test plans | [optional] 
 
 ### Return type
 
-[**List**](../Models/TestPlanModel.md)
+[**[TestPlanModel]**](TestPlanModel.md)
 
 ### Authorization
 
@@ -658,35 +1264,73 @@ Get project test plans
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="getTestRunsByProjectId"></a>
-# **getTestRunsByProjectId**
-> List getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, createdDateFrom, createdDateTo, testPlanId, Skip, Take, OrderBy, SearchField, SearchValue)
+
+## getTestRunsByProjectId
+
+> [TestRunV2ApiResult] getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts)
 
 Get project test runs
 
-     Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+ Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
+let notStarted = true; // Boolean | 
+let inProgress = true; // Boolean | 
+let stopped = true; // Boolean | 
+let completed = true; // Boolean | 
+let opts = {
+  'createdDateFrom': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'createdDateTo': new Date("2013-10-20T19:20:30+01:00"), // Date | 
+  'testPlanId': "testPlanId_example", // String | 
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example" // String | Value for searching
+};
+apiInstance.getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **String**| Project internal (UUID) or global (integer) identifier | [default to null] |
-| **notStarted** | **Boolean**|  | [default to null] |
-| **inProgress** | **Boolean**|  | [default to null] |
-| **stopped** | **Boolean**|  | [default to null] |
-| **completed** | **Boolean**|  | [default to null] |
-| **createdDateFrom** | **Date**|  | [optional] [default to null] |
-| **createdDateTo** | **Date**|  | [optional] [default to null] |
-| **testPlanId** | **UUID**|  | [optional] [default to null] |
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Project internal (UUID) or global (integer) identifier | 
+ **notStarted** | **Boolean**|  | 
+ **inProgress** | **Boolean**|  | 
+ **stopped** | **Boolean**|  | 
+ **completed** | **Boolean**|  | 
+ **createdDateFrom** | **Date**|  | [optional] 
+ **createdDateTo** | **Date**|  | [optional] 
+ **testPlanId** | **String**|  | [optional] 
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
 
 ### Return type
 
-[**List**](../Models/TestRunV2ApiResult.md)
+[**[TestRunV2ApiResult]**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -697,19 +1341,45 @@ Get project test runs
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="updateProject"></a>
-# **updateProject**
-> updateProject(UpdateProjectApiModel)
+
+## updateProject
+
+> updateProject(opts)
 
 Update project
 
-     Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+ Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectsApi();
+let opts = {
+  'updateProjectApiModel': new TestitApiClient.UpdateProjectApiModel() // UpdateProjectApiModel | 
+};
+apiInstance.updateProject(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **UpdateProjectApiModel** | [**UpdateProjectApiModel**](../Models/UpdateProjectApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateProjectApiModel** | [**UpdateProjectApiModel**](UpdateProjectApiModel.md)|  | [optional] 
 
 ### Return type
 

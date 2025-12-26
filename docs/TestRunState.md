@@ -1,8 +1,14 @@
-# TestRunState
-## Properties
+# TestitApiClient.TestRunState
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `NotStarted` (value: `"NotStarted"`)
+
+* `InProgress` (value: `"InProgress"`)
+
+* `Stopped` (value: `"Stopped"`)
+
+* `Completed` (value: `"Completed"`)
+
 

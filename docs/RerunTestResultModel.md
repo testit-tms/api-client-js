@@ -1,11 +1,11 @@
-# RerunTestResultModel
+# TestitApiClient.RerunTestResultModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **outcome** | **String** |  | [optional] [default to null] |
-| **runNumber** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**outcome** | **String** |  | [optional] 
+**runNumber** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

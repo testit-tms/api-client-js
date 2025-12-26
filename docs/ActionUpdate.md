@@ -1,8 +1,14 @@
-# ActionUpdate
-## Properties
+# TestitApiClient.ActionUpdate
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Add` (value: `"Add"`)
+
+* `Replace` (value: `"Replace"`)
+
+* `ToRemove` (value: `"ToRemove"`)
+
+* `ClearAll` (value: `"ClearAll"`)
+
 

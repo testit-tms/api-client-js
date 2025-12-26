@@ -1,34 +1,34 @@
-# TestPointWithLastResultResponseModel
+# TestitApiClient.TestPointWithLastResultResponseModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **workItemName** | **String** |  | [optional] [default to null] |
-| **isAutomated** | **Boolean** |  | [default to null] |
-| **testerId** | **UUID** |  | [optional] [default to null] |
-| **workItemId** | **UUID** |  | [default to null] |
-| **configurationId** | **UUID** |  | [optional] [default to null] |
-| **testSuiteId** | **UUID** |  | [default to null] |
-| **lastTestResult** | [**LastTestResultModel**](LastTestResultModel.md) |  | [optional] [default to null] |
-| **status** | **String** |  | [optional] [default to null] |
-| **statusModel** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
-| **workItemGlobalId** | **Long** |  | [optional] [default to null] |
-| **workItemEntityTypeName** | **String** |  | [optional] [default to null] |
-| **sectionId** | **UUID** |  | [default to null] |
-| **sectionName** | **String** |  | [optional] [default to null] |
-| **createdDate** | **Date** |  | [optional] [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **attributes** | [**Map**](AnyType.md) |  | [optional] [default to null] |
-| **tagNames** | **List** |  | [optional] [default to null] |
-| **duration** | **Integer** |  | [default to null] |
-| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
-| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [default to null] |
-| **testSuiteNameBreadCrumbs** | **List** |  | [optional] [default to null] |
-| **groupCount** | **Integer** |  | [optional] [default to null] |
-| **iteration** | [**IterationModel**](IterationModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**workItemName** | **String** |  | [optional] 
+**isAutomated** | **Boolean** |  | 
+**testerId** | **String** |  | [optional] 
+**workItemId** | **String** |  | 
+**configurationId** | **String** |  | [optional] 
+**testSuiteId** | **String** |  | 
+**lastTestResult** | [**LastTestResultModel**](LastTestResultModel.md) |  | [optional] 
+**status** | **String** |  | [optional] 
+**statusModel** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
+**workItemGlobalId** | **Number** |  | [optional] 
+**workItemEntityTypeName** | **String** |  | [optional] 
+**sectionId** | **String** |  | 
+**sectionName** | **String** |  | [optional] 
+**createdDate** | **Date** |  | [optional] 
+**modifiedDate** | **Date** |  | [optional] 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**attributes** | **{String: Object}** |  | [optional] 
+**tagNames** | **[String]** |  | [optional] 
+**duration** | **Number** |  | 
+**priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | 
+**sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | 
+**testSuiteNameBreadCrumbs** | **[String]** |  | [optional] 
+**groupCount** | **Number** |  | [optional] 
+**iteration** | [**IterationModel**](IterationModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

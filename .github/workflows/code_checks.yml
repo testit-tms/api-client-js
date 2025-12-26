@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [windows-latest, macos-latest]
         node-version: [18]
     steps:
       - name: Get repository code
@@ -63,6 +63,5 @@ jobs:
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependecies
         run: npm install
-      - run: npm install -g typescript
-      - name: Build application
-        run: npm run build
+      - name: Run tests
+        run: npm run test

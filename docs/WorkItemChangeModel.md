@@ -1,15 +1,15 @@
-# WorkItemChangeModel
+# TestitApiClient.WorkItemChangeModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **workItemId** | **UUID** |  | [default to null] |
-| **oldVersionId** | **UUID** |  | [default to null] |
-| **newVersionId** | **UUID** |  | [default to null] |
-| **workItemChangedFields** | [**WorkItemChangedFieldsViewModel**](WorkItemChangedFieldsViewModel.md) |  | [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **createdDate** | **Date** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**workItemId** | **String** |  | 
+**oldVersionId** | **String** |  | 
+**newVersionId** | **String** |  | 
+**workItemChangedFields** | [**WorkItemChangedFieldsViewModel**](WorkItemChangedFieldsViewModel.md) |  | 
+**createdById** | **String** |  | 
+**createdDate** | **Date** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

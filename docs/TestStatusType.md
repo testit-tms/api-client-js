@@ -1,8 +1,16 @@
-# TestStatusType
-## Properties
+# TestitApiClient.TestStatusType
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Failed` (value: `"Failed"`)
+
+* `InProgress` (value: `"InProgress"`)
+
+* `Incomplete` (value: `"Incomplete"`)
+
+* `Succeeded` (value: `"Succeeded"`)
+
+* `Pending` (value: `"Pending"`)
+
 

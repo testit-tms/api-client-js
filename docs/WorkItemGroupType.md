@@ -1,8 +1,20 @@
-# WorkItemGroupType
-## Properties
+# TestitApiClient.WorkItemGroupType
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Type` (value: `"Type"`)
+
+* `Priority` (value: `"Priority"`)
+
+* `Status` (value: `"Status"`)
+
+* `AutomationStatus` (value: `"AutomationStatus"`)
+
+* `Creator` (value: `"Creator"`)
+
+* `LastEditor` (value: `"LastEditor"`)
+
+* `CustomAttribute` (value: `"CustomAttribute"`)
+
 

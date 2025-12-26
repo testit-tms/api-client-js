@@ -1,25 +1,52 @@
-# ProjectSettingsApi
+# TestitApiClient.ProjectSettingsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2ProjectsProjectIdSettingsAutotestsPost**](ProjectSettingsApi.md#apiV2ProjectsProjectIdSettingsAutotestsPost) | **POST** /api/v2/projects/{projectId}/settings/autotests | Set autotest project settings. |
-| [**getAutotestProjectSettings**](ProjectSettingsApi.md#getAutotestProjectSettings) | **GET** /api/v2/projects/{projectId}/settings/autotests | Get autotest project settings. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2ProjectsProjectIdSettingsAutotestsPost**](ProjectSettingsApi.md#apiV2ProjectsProjectIdSettingsAutotestsPost) | **POST** /api/v2/projects/{projectId}/settings/autotests | Set autotest project settings.
+[**getAutotestProjectSettings**](ProjectSettingsApi.md#getAutotestProjectSettings) | **GET** /api/v2/projects/{projectId}/settings/autotests | Get autotest project settings.
 
 
-<a name="apiV2ProjectsProjectIdSettingsAutotestsPost"></a>
-# **apiV2ProjectsProjectIdSettingsAutotestsPost**
-> apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, AutoTestProjectSettingsApiModel)
+
+## apiV2ProjectsProjectIdSettingsAutotestsPost
+
+> apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts)
 
 Set autotest project settings.
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectSettingsApi();
+let projectId = "projectId_example"; // String | Internal (UUID) or global (integer) identifier
+let opts = {
+  'autoTestProjectSettingsApiModel': new TestitApiClient.AutoTestProjectSettingsApiModel() // AutoTestProjectSettingsApiModel | 
+};
+apiInstance.apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
-| **AutoTestProjectSettingsApiModel** | [**AutoTestProjectSettingsApiModel**](../Models/AutoTestProjectSettingsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Internal (UUID) or global (integer) identifier | 
+ **autoTestProjectSettingsApiModel** | [**AutoTestProjectSettingsApiModel**](AutoTestProjectSettingsApiModel.md)|  | [optional] 
 
 ### Return type
 
@@ -34,21 +61,45 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="getAutotestProjectSettings"></a>
-# **getAutotestProjectSettings**
+
+## getAutotestProjectSettings
+
 > AutoTestProjectSettingsApiResult getAutotestProjectSettings(projectId)
 
 Get autotest project settings.
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ProjectSettingsApi();
+let projectId = "projectId_example"; // String | Internal (UUID) or global (integer) identifier
+apiInstance.getAutotestProjectSettings(projectId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **projectId** | **String**| Internal (UUID) or global (integer) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Internal (UUID) or global (integer) identifier | 
 
 ### Return type
 
-[**AutoTestProjectSettingsApiResult**](../Models/AutoTestProjectSettingsApiResult.md)
+[**AutoTestProjectSettingsApiResult**](AutoTestProjectSettingsApiResult.md)
 
 ### Authorization
 

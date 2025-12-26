@@ -1,8 +1,16 @@
-# TestResultOutcome
-## Properties
+# TestitApiClient.TestResultOutcome
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `InProgress` (value: `"InProgress"`)
+
+* `Passed` (value: `"Passed"`)
+
+* `Failed` (value: `"Failed"`)
+
+* `Skipped` (value: `"Skipped"`)
+
+* `Blocked` (value: `"Blocked"`)
+
 

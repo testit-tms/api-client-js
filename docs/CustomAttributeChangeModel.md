@@ -1,13 +1,13 @@
-# CustomAttributeChangeModel
+# TestitApiClient.CustomAttributeChangeModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **type** | **String** |  | [optional] [default to null] |
-| **oldAttributeName** | **String** |  | [optional] [default to null] |
-| **newAttributeName** | **String** |  | [optional] [default to null] |
-| **oldValue** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |
-| **newValue** | [**oas_any_type_not_mapped**](.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | **String** |  | [optional] 
+**oldAttributeName** | **String** |  | [optional] 
+**newAttributeName** | **String** |  | [optional] 
+**oldValue** | **Object** |  | [optional] 
+**newValue** | **Object** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

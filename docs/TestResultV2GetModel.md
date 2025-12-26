@@ -1,29 +1,29 @@
-# TestResultV2GetModel
+# TestitApiClient.TestResultV2GetModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **configuration** | [**ConfigurationModel**](ConfigurationModel.md) |  | [optional] [default to null] |
-| **autoTest** | [**AutoTestModelV2GetModel**](AutoTestModelV2GetModel.md) |  | [optional] [default to null] |
-| **id** | **UUID** |  | [default to null] |
-| **configurationId** | **UUID** |  | [default to null] |
-| **workItemVersionId** | **UUID** |  | [default to null] |
-| **autoTestId** | **UUID** |  | [optional] [default to null] |
-| **message** | **String** |  | [optional] [default to null] |
-| **traces** | **String** |  | [optional] [default to null] |
-| **startedOn** | **Date** |  | [optional] [default to null] |
-| **completedOn** | **Date** |  | [optional] [default to null] |
-| **runByUserId** | **UUID** |  | [optional] [default to null] |
-| **stoppedByUserId** | **UUID** |  | [optional] [default to null] |
-| **testPointId** | **UUID** |  | [optional] [default to null] |
-| **testPoint** | [**TestPointShortModel**](TestPointShortModel.md) |  | [optional] [default to null] |
-| **testRunId** | **UUID** |  | [default to null] |
-| **outcome** | **String** | Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped | [default to null] |
-| **comment** | **String** |  | [optional] [default to null] |
-| **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentModel.md) |  | [optional] [default to null] |
-| **parameters** | **Map** |  | [optional] [default to null] |
-| **properties** | **Map** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**configuration** | [**ConfigurationModel**](ConfigurationModel.md) |  | [optional] 
+**autoTest** | [**AutoTestModelV2GetModel**](AutoTestModelV2GetModel.md) |  | [optional] 
+**id** | **String** |  | 
+**configurationId** | **String** |  | 
+**workItemVersionId** | **String** |  | 
+**autoTestId** | **String** |  | [optional] 
+**message** | **String** |  | [optional] 
+**traces** | **String** |  | [optional] 
+**startedOn** | **Date** |  | [optional] 
+**completedOn** | **Date** |  | [optional] 
+**runByUserId** | **String** |  | [optional] 
+**stoppedByUserId** | **String** |  | [optional] 
+**testPointId** | **String** |  | [optional] 
+**testPoint** | [**TestPointShortModel**](TestPointShortModel.md) |  | [optional] 
+**testRunId** | **String** |  | 
+**outcome** | **String** | Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped | 
+**comment** | **String** |  | [optional] 
+**links** | [**[LinkModel]**](LinkModel.md) |  | [optional] 
+**attachments** | [**[AttachmentModel]**](AttachmentModel.md) |  | [optional] 
+**parameters** | **{String: String}** |  | [optional] 
+**properties** | **{String: String}** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

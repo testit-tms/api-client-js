@@ -1,27 +1,27 @@
-# SharedStepReferenceModel
+# TestitApiClient.SharedStepReferenceModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **globalId** | **Long** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
-| **entityTypeName** | **String** |  | [default to null] |
-| **hasThisSharedStepAsStep** | **Boolean** |  | [default to null] |
-| **hasThisSharedStepAsPrecondition** | **Boolean** |  | [default to null] |
-| **hasThisSharedStepAsPostcondition** | **Boolean** |  | [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **createdDate** | **Date** |  | [optional] [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **state** | **String** |  | [default to null] |
-| **priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | [default to null] |
-| **sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [default to null] |
-| **isDeleted** | **Boolean** |  | [default to null] |
-| **versionId** | **UUID** | used for versioning changes in workitem | [default to null] |
-| **isAutomated** | **Boolean** |  | [default to null] |
-| **sectionId** | **UUID** |  | [default to null] |
-| **tags** | [**List**](TagModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**globalId** | **Number** |  | 
+**name** | **String** |  | 
+**entityTypeName** | **String** |  | 
+**hasThisSharedStepAsStep** | **Boolean** |  | 
+**hasThisSharedStepAsPrecondition** | **Boolean** |  | 
+**hasThisSharedStepAsPostcondition** | **Boolean** |  | 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**createdDate** | **Date** |  | [optional] 
+**modifiedDate** | **Date** |  | [optional] 
+**state** | **String** |  | 
+**priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | 
+**sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | 
+**isDeleted** | **Boolean** |  | 
+**versionId** | **String** | used for versioning changes in workitem | 
+**isAutomated** | **Boolean** |  | 
+**sectionId** | **String** |  | 
+**tags** | [**[TagModel]**](TagModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

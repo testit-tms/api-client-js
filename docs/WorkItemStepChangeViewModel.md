@@ -1,15 +1,15 @@
-# WorkItemStepChangeViewModel
+# TestitApiClient.WorkItemStepChangeViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **action** | **String** |  | [default to null] |
-| **expected** | **String** |  | [default to null] |
-| **comments** | **String** |  | [default to null] |
-| **testData** | **String** |  | [default to null] |
-| **index** | **Integer** |  | [default to null] |
-| **workItemId** | **UUID** |  | [optional] [default to null] |
-| **workItem** | [**SharedStepChangeViewModel**](SharedStepChangeViewModel.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **String** |  | 
+**expected** | **String** |  | 
+**comments** | **String** |  | 
+**testData** | **String** |  | 
+**index** | **Number** |  | 
+**workItemId** | **String** |  | [optional] 
+**workItem** | [**SharedStepChangeViewModel**](SharedStepChangeViewModel.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

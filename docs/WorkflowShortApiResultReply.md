@@ -1,10 +1,10 @@
-# WorkflowShortApiResultReply
+# TestitApiClient.WorkflowShortApiResultReply
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **data** | [**List**](WorkflowShortApiResult.md) |  | [default to null] |
-| **totalCount** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[WorkflowShortApiResult]**](WorkflowShortApiResult.md) |  | 
+**totalCount** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

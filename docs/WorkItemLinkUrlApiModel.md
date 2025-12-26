@@ -1,10 +1,10 @@
-# WorkItemLinkUrlApiModel
+# TestitApiClient.WorkItemLinkUrlApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **filter** | [**WorkItemLinkUrlFilterApiModel**](WorkItemLinkUrlFilterApiModel.md) |  | [default to null] |
-| **extractionModel** | [**WorkItemLinkExtractionApiModel**](WorkItemLinkExtractionApiModel.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**filter** | [**WorkItemLinkUrlFilterApiModel**](WorkItemLinkUrlFilterApiModel.md) |  | 
+**extractionModel** | [**WorkItemLinkExtractionApiModel**](WorkItemLinkExtractionApiModel.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

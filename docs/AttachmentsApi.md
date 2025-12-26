@@ -1,27 +1,51 @@
-# AttachmentsApi
+# TestitApiClient.AttachmentsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2AttachmentsIdDelete**](AttachmentsApi.md#apiV2AttachmentsIdDelete) | **DELETE** /api/v2/attachments/{id} | Delete attachment file |
-| [**apiV2AttachmentsIdGet**](AttachmentsApi.md#apiV2AttachmentsIdGet) | **GET** /api/v2/attachments/{id} | Download attachment file |
-| [**apiV2AttachmentsIdMetadataGet**](AttachmentsApi.md#apiV2AttachmentsIdMetadataGet) | **GET** /api/v2/attachments/{id}/metadata | Get attachment metadata |
-| [**apiV2AttachmentsOccupiedFileStorageSizeGet**](AttachmentsApi.md#apiV2AttachmentsOccupiedFileStorageSizeGet) | **GET** /api/v2/attachments/occupiedFileStorageSize | Get size of attachments storage in bytes |
-| [**apiV2AttachmentsPost**](AttachmentsApi.md#apiV2AttachmentsPost) | **POST** /api/v2/attachments | Upload new attachment file |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2AttachmentsIdDelete**](AttachmentsApi.md#apiV2AttachmentsIdDelete) | **DELETE** /api/v2/attachments/{id} | Delete attachment file
+[**apiV2AttachmentsIdGet**](AttachmentsApi.md#apiV2AttachmentsIdGet) | **GET** /api/v2/attachments/{id} | Download attachment file
+[**apiV2AttachmentsIdMetadataGet**](AttachmentsApi.md#apiV2AttachmentsIdMetadataGet) | **GET** /api/v2/attachments/{id}/metadata | Get attachment metadata
+[**apiV2AttachmentsOccupiedFileStorageSizeGet**](AttachmentsApi.md#apiV2AttachmentsOccupiedFileStorageSizeGet) | **GET** /api/v2/attachments/occupiedFileStorageSize | Get size of attachments storage in bytes
+[**apiV2AttachmentsPost**](AttachmentsApi.md#apiV2AttachmentsPost) | **POST** /api/v2/attachments | Upload new attachment file
 
 
-<a name="apiV2AttachmentsIdDelete"></a>
-# **apiV2AttachmentsIdDelete**
+
+## apiV2AttachmentsIdDelete
+
 > apiV2AttachmentsIdDelete(id)
 
 Delete attachment file
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.AttachmentsApi();
+let id = "id_example"; // String | 
+apiInstance.apiV2AttachmentsIdDelete(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**|  | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
 
 ### Return type
 
@@ -36,22 +60,53 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2AttachmentsIdGet"></a>
-# **apiV2AttachmentsIdGet**
-> apiV2AttachmentsIdGet(id, width, height, resizeType, backgroundColor, preview)
+
+## apiV2AttachmentsIdGet
+
+> apiV2AttachmentsIdGet(id, opts)
 
 Download attachment file
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.AttachmentsApi();
+let id = "id_example"; // String | 
+let opts = {
+  'width': 56, // Number | Width of the result image
+  'height': 56, // Number | Height of the result image
+  'resizeType': new TestitApiClient.ImageResizeType(), // ImageResizeType | Type of resizing to apply to the result image
+  'backgroundColor': "backgroundColor_example", // String | Color of the background if the `resizeType` is `AddBackgroundStripes`
+  'preview': true // Boolean | If image must be converted to a preview (lower quality, no animation)
+};
+apiInstance.apiV2AttachmentsIdGet(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**|  | [default to null] |
-| **width** | **Integer**| Width of the result image | [optional] [default to null] |
-| **height** | **Integer**| Height of the result image | [optional] [default to null] |
-| **resizeType** | [**ImageResizeType**](../Models/.md)| Type of resizing to apply to the result image | [optional] [default to null] [enum: Crop, AddBackgroundStripes] |
-| **backgroundColor** | **String**| Color of the background if the &#x60;resizeType&#x60; is &#x60;AddBackgroundStripes&#x60; | [optional] [default to null] |
-| **preview** | **Boolean**| If image must be converted to a preview (lower quality, no animation) | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **width** | **Number**| Width of the result image | [optional] 
+ **height** | **Number**| Height of the result image | [optional] 
+ **resizeType** | [**ImageResizeType**](.md)| Type of resizing to apply to the result image | [optional] 
+ **backgroundColor** | **String**| Color of the background if the &#x60;resizeType&#x60; is &#x60;AddBackgroundStripes&#x60; | [optional] 
+ **preview** | **Boolean**| If image must be converted to a preview (lower quality, no animation) | [optional] 
 
 ### Return type
 
@@ -66,21 +121,45 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2AttachmentsIdMetadataGet"></a>
-# **apiV2AttachmentsIdMetadataGet**
+
+## apiV2AttachmentsIdMetadataGet
+
 > AttachmentModel apiV2AttachmentsIdMetadataGet(id)
 
 Get attachment metadata
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.AttachmentsApi();
+let id = "id_example"; // String | 
+apiInstance.apiV2AttachmentsIdMetadataGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**|  | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
 
 ### Return type
 
-[**AttachmentModel**](../Models/AttachmentModel.md)
+[**AttachmentModel**](AttachmentModel.md)
 
 ### Authorization
 
@@ -91,18 +170,41 @@ Get attachment metadata
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2AttachmentsOccupiedFileStorageSizeGet"></a>
-# **apiV2AttachmentsOccupiedFileStorageSizeGet**
-> Long apiV2AttachmentsOccupiedFileStorageSizeGet()
+
+## apiV2AttachmentsOccupiedFileStorageSizeGet
+
+> Number apiV2AttachmentsOccupiedFileStorageSizeGet()
 
 Get size of attachments storage in bytes
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.AttachmentsApi();
+apiInstance.apiV2AttachmentsOccupiedFileStorageSizeGet((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
 
-**Long**
+**Number**
 
 ### Authorization
 
@@ -113,23 +215,49 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2AttachmentsPost"></a>
-# **apiV2AttachmentsPost**
-> AttachmentModel apiV2AttachmentsPost(file)
+
+## apiV2AttachmentsPost
+
+> AttachmentModel apiV2AttachmentsPost(opts)
 
 Upload new attachment file
 
-    File size is restricted to 50 MB (52 428 800 bytes)
+File size is restricted to 50 MB (52 428 800 bytes)
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.AttachmentsApi();
+let opts = {
+  'file': "/path/to/file" // File | 
+};
+apiInstance.apiV2AttachmentsPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **file** | **File**|  | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | **File**|  | [optional] 
 
 ### Return type
 
-[**AttachmentModel**](../Models/AttachmentModel.md)
+[**AttachmentModel**](AttachmentModel.md)
 
 ### Authorization
 

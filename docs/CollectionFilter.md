@@ -1,11 +1,11 @@
-# CollectionFilter
+# TestitApiClient.CollectionFilter
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **operator** | [**CollectionOperator**](CollectionOperator.md) |  | [default to null] |
-| **filter** | [**IFilter**](IFilter.md) |  | [default to null] |
-| **field** | **String** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**operator** | [**CollectionOperator**](CollectionOperator.md) |  | 
+**filter** | [**IFilter**](IFilter.md) |  | 
+**field** | **String** |  | [readonly] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

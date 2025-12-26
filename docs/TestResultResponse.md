@@ -1,42 +1,42 @@
-# TestResultResponse
+# TestitApiClient.TestResultResponse
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **createdDate** | **Date** |  | [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **stepComments** | [**List**](StepCommentApiModel.md) |  | [optional] [default to null] |
-| **failureClassIds** | **List** |  | [default to null] |
-| **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] [default to null] |
-| **status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
-| **comment** | **String** |  | [optional] [default to null] |
-| **links** | [**List**](Link.md) |  | [optional] [default to null] |
-| **stepResults** | [**List**](StepResultApiModel.md) |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentApiResult.md) |  | [optional] [default to null] |
-| **autoTestId** | **UUID** |  | [optional] [default to null] |
-| **configurationId** | **UUID** |  | [default to null] |
-| **startedOn** | **Date** |  | [optional] [default to null] |
-| **completedOn** | **Date** |  | [optional] [default to null] |
-| **durationInMs** | **Long** |  | [optional] [default to null] |
-| **traces** | **String** |  | [optional] [default to null] |
-| **failureType** | **String** |  | [optional] [default to null] |
-| **message** | **String** |  | [optional] [default to null] |
-| **runByUserId** | **UUID** |  | [optional] [default to null] |
-| **stoppedByUserId** | **UUID** |  | [optional] [default to null] |
-| **testPointId** | **UUID** |  | [default to null] |
-| **testRunId** | **UUID** |  | [default to null] |
-| **testPoint** | [**TestPoint**](TestPoint.md) |  | [optional] [default to null] |
-| **autoTest** | [**AutoTest**](AutoTest.md) |  | [optional] [default to null] |
-| **autoTestStepResults** | [**List**](AutoTestStepResult.md) |  | [optional] [default to null] |
-| **setupResults** | [**List**](AutoTestStepResult.md) |  | [optional] [default to null] |
-| **teardownResults** | [**List**](AutoTestStepResult.md) |  | [optional] [default to null] |
-| **workItemVersionId** | **UUID** |  | [default to null] |
-| **workItemVersionNumber** | **Integer** |  | [optional] [default to null] |
-| **parameters** | **Map** |  | [optional] [default to null] |
-| **properties** | **Map** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**createdDate** | **Date** |  | 
+**modifiedDate** | **Date** |  | [optional] 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**stepComments** | [**[StepCommentApiModel]**](StepCommentApiModel.md) |  | [optional] 
+**failureClassIds** | **[String]** |  | 
+**outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] 
+**status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
+**comment** | **String** |  | [optional] 
+**links** | [**[Link]**](Link.md) |  | [optional] 
+**stepResults** | [**[StepResultApiModel]**](StepResultApiModel.md) |  | [optional] 
+**attachments** | [**[AttachmentApiResult]**](AttachmentApiResult.md) |  | [optional] 
+**autoTestId** | **String** |  | [optional] 
+**configurationId** | **String** |  | 
+**startedOn** | **Date** |  | [optional] 
+**completedOn** | **Date** |  | [optional] 
+**durationInMs** | **Number** |  | [optional] 
+**traces** | **String** |  | [optional] 
+**failureType** | **String** |  | [optional] 
+**message** | **String** |  | [optional] 
+**runByUserId** | **String** |  | [optional] 
+**stoppedByUserId** | **String** |  | [optional] 
+**testPointId** | **String** |  | 
+**testRunId** | **String** |  | 
+**testPoint** | [**TestPoint**](TestPoint.md) |  | [optional] 
+**autoTest** | [**AutoTest**](AutoTest.md) |  | [optional] 
+**autoTestStepResults** | [**[AutoTestStepResult]**](AutoTestStepResult.md) |  | [optional] 
+**setupResults** | [**[AutoTestStepResult]**](AutoTestStepResult.md) |  | [optional] 
+**teardownResults** | [**[AutoTestStepResult]**](AutoTestStepResult.md) |  | [optional] 
+**workItemVersionId** | **String** |  | 
+**workItemVersionNumber** | **Number** |  | [optional] 
+**parameters** | **{String: String}** |  | [optional] 
+**properties** | **{String: String}** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

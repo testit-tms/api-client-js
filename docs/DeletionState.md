@@ -1,8 +1,12 @@
-# DeletionState
-## Properties
+# TestitApiClient.DeletionState
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Any` (value: `"Any"`)
+
+* `Deleted` (value: `"Deleted"`)
+
+* `NotDeleted` (value: `"NotDeleted"`)
+
 

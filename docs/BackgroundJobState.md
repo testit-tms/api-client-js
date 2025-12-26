@@ -1,8 +1,16 @@
-# BackgroundJobState
-## Properties
+# TestitApiClient.BackgroundJobState
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Enqueued` (value: `"Enqueued"`)
+
+* `InProgress` (value: `"InProgress"`)
+
+* `Completed` (value: `"Completed"`)
+
+* `Failed` (value: `"Failed"`)
+
+* `Canceled` (value: `"Canceled"`)
+
 

@@ -1,10 +1,10 @@
-# AutoTestBulkDeleteApiResult
+# TestitApiClient.AutoTestBulkDeleteApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **deletedCount** | **Integer** |  | [default to null] |
-| **inProgressCount** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**deletedCount** | **Number** |  | 
+**inProgressCount** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

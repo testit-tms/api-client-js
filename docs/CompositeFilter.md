@@ -1,10 +1,10 @@
-# CompositeFilter
+# TestitApiClient.CompositeFilter
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **filters** | [**List**](IFilter.md) |  | [default to null] |
-| **operator** | [**LogicalOperator**](LogicalOperator.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**filters** | [**[IFilter]**](IFilter.md) |  | 
+**operator** | [**LogicalOperator**](LogicalOperator.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

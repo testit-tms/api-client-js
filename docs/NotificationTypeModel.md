@@ -1,8 +1,14 @@
-# NotificationTypeModel
-## Properties
+# TestitApiClient.NotificationTypeModel
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `MentionInComment` (value: `"MentionInComment"`)
+
+* `TestPointIsSetInTestPlan` (value: `"TestPointIsSetInTestPlan"`)
+
+* `MentionInCustomAttribute` (value: `"MentionInCustomAttribute"`)
+
+* `TestPlanUnlockRequest` (value: `"TestPlanUnlockRequest"`)
+
 

@@ -1,21 +1,21 @@
-# TestRunShortApiResult
+# TestitApiClient.TestRunShortApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Unique ID of the test run | [default to null] |
-| **name** | **String** | Name of the test run | [default to null] |
-| **state** | [**TestRunState**](TestRunState.md) | Current state of the test run | [default to null] |
-| **status** | [**TestStatusApiResult**](TestStatusApiResult.md) | Current status of the test run | [default to null] |
-| **createdDate** | **Date** | Date when the test run was created | [default to null] |
-| **startedDate** | **Date** | Date when the test run was started | [optional] [default to null] |
-| **completedDate** | **Date** | Completion date of the test run | [optional] [default to null] |
-| **createdById** | **UUID** | Unique ID of user who created the test run | [default to null] |
-| **modifiedById** | **UUID** | Unique ID of user who modified the test run last time | [optional] [default to null] |
-| **isDeleted** | **Boolean** | Is the test run is deleted | [default to null] |
-| **autoTestsCount** | **Integer** | Number of AutoTests run in the test run | [default to null] |
-| **statistics** | [**TestResultsStatisticsApiResult**](TestResultsStatisticsApiResult.md) | Statistics of the test run | [default to null] |
-| **testResultsConfigurations** | [**List**](ConfigurationShortApiResult.md) | Test results configurations | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique ID of the test run | 
+**name** | **String** | Name of the test run | 
+**state** | [**TestRunState**](TestRunState.md) | Current state of the test run | 
+**status** | [**TestStatusApiResult**](TestStatusApiResult.md) | Current status of the test run | 
+**createdDate** | **Date** | Date when the test run was created | 
+**startedDate** | **Date** | Date when the test run was started | [optional] 
+**completedDate** | **Date** | Completion date of the test run | [optional] 
+**createdById** | **String** | Unique ID of user who created the test run | 
+**modifiedById** | **String** | Unique ID of user who modified the test run last time | [optional] 
+**isDeleted** | **Boolean** | Is the test run is deleted | 
+**autoTestsCount** | **Number** | Number of AutoTests run in the test run | 
+**statistics** | [**TestResultsStatisticsApiResult**](TestResultsStatisticsApiResult.md) | Statistics of the test run | 
+**testResultsConfigurations** | [**[ConfigurationShortApiResult]**](ConfigurationShortApiResult.md) | Test results configurations | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,34 +1,65 @@
-# WebhooksLogsApi
+# TestitApiClient.WebhooksLogsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2WebhooksLogsGet**](WebhooksLogsApi.md#apiV2WebhooksLogsGet) | **GET** /api/v2/webhooks/logs | Get last webhook logs |
-| [**apiV2WebhooksLogsIdDelete**](WebhooksLogsApi.md#apiV2WebhooksLogsIdDelete) | **DELETE** /api/v2/webhooks/logs/{id} | Delete webhook log by ID |
-| [**apiV2WebhooksLogsIdGet**](WebhooksLogsApi.md#apiV2WebhooksLogsIdGet) | **GET** /api/v2/webhooks/logs/{id} | Get webhook log by ID |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2WebhooksLogsGet**](WebhooksLogsApi.md#apiV2WebhooksLogsGet) | **GET** /api/v2/webhooks/logs | Get last webhook logs
+[**apiV2WebhooksLogsIdDelete**](WebhooksLogsApi.md#apiV2WebhooksLogsIdDelete) | **DELETE** /api/v2/webhooks/logs/{id} | Delete webhook log by ID
+[**apiV2WebhooksLogsIdGet**](WebhooksLogsApi.md#apiV2WebhooksLogsIdGet) | **GET** /api/v2/webhooks/logs/{id} | Get webhook log by ID
 
 
-<a name="apiV2WebhooksLogsGet"></a>
-# **apiV2WebhooksLogsGet**
-> List apiV2WebhooksLogsGet(projectId, Skip, Take, OrderBy, SearchField, SearchValue)
+
+## apiV2WebhooksLogsGet
+
+> [WebhookLogApiResult] apiV2WebhooksLogsGet(opts)
 
 Get last webhook logs
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksLogsApi();
+let opts = {
+  'projectId': "projectId_example", // String | Project unique ID
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example" // String | Value for searching
+};
+apiInstance.apiV2WebhooksLogsGet(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **projectId** | **UUID**| Project unique ID | [optional] [default to null] |
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Project unique ID | [optional] 
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
 
 ### Return type
 
-[**List**](../Models/WebhookLogApiResult.md)
+[**[WebhookLogApiResult]**](WebhookLogApiResult.md)
 
 ### Authorization
 
@@ -39,17 +70,41 @@ Get last webhook logs
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksLogsIdDelete"></a>
-# **apiV2WebhooksLogsIdDelete**
+
+## apiV2WebhooksLogsIdDelete
+
 > apiV2WebhooksLogsIdDelete(id)
 
 Delete webhook log by ID
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksLogsApi();
+let id = "id_example"; // String | Webhook log unique ID
+apiInstance.apiV2WebhooksLogsIdDelete(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Webhook log unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Webhook log unique ID | 
 
 ### Return type
 
@@ -64,21 +119,45 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2WebhooksLogsIdGet"></a>
-# **apiV2WebhooksLogsIdGet**
+
+## apiV2WebhooksLogsIdGet
+
 > WebhookLogApiResult apiV2WebhooksLogsIdGet(id)
 
 Get webhook log by ID
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.WebhooksLogsApi();
+let id = "id_example"; // String | Webhook log unique ID
+apiInstance.apiV2WebhooksLogsIdGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Webhook log unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Webhook log unique ID | 
 
 ### Return type
 
-[**WebhookLogApiResult**](../Models/WebhookLogApiResult.md)
+[**WebhookLogApiResult**](WebhookLogApiResult.md)
 
 ### Authorization
 

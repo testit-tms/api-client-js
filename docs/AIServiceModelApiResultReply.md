@@ -1,10 +1,10 @@
-# AIServiceModelApiResultReply
+# TestitApiClient.AIServiceModelApiResultReply
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **data** | [**List**](AIServiceModelApiResult.md) |  | [default to null] |
-| **totalCount** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[AIServiceModelApiResult]**](AIServiceModelApiResult.md) |  | 
+**totalCount** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

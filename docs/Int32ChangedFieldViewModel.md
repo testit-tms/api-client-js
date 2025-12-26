@@ -1,10 +1,10 @@
-# Int32ChangedFieldViewModel
+# TestitApiClient.Int32ChangedFieldViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **oldValue** | **Integer** |  | [default to null] |
-| **newValue** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**oldValue** | **Number** |  | 
+**newValue** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,10 +1,10 @@
-# ConfigurationByParametersModel
+# TestitApiClient.ConfigurationByParametersModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **projectId** | **UUID** | This property is used to link configuration with project | [default to null] |
-| **parameterIds** | **Set** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**projectId** | **String** | This property is used to link configuration with project | 
+**parameterIds** | **[String]** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
