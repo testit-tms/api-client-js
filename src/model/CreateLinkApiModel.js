@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The CreateLinkApiModel model module.
  * @module model/CreateLinkApiModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class CreateLinkApiModel {
     /**

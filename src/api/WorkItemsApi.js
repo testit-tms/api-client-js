@@ -40,7 +40,7 @@ import WorkItemVersionModel from '../model/WorkItemVersionModel';
 /**
 * WorkItems service.
 * @module api/WorkItemsApi
-* @version 7.0.0-rc2
+* @version 7.0.0-rc3
 */
 export default class WorkItemsApi {
 

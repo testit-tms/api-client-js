@@ -18,7 +18,7 @@ import TestResultsFilterApiModel from './TestResultsFilterApiModel';
 /**
  * The TestResultsSelectApiModel model module.
  * @module model/TestResultsSelectApiModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class TestResultsSelectApiModel {
     /**

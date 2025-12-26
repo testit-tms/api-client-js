@@ -17,7 +17,7 @@ import WorkflowStatusApiModel from './WorkflowStatusApiModel';
 /**
  * The CreateWorkflowApiModel model module.
  * @module model/CreateWorkflowApiModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class CreateWorkflowApiModel {
     /**

@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Users service.
 * @module api/UsersApi
-* @version 7.0.0-rc2
+* @version 7.0.0-rc3
 */
 export default class UsersApi {
 

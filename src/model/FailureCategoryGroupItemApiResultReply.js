@@ -17,7 +17,7 @@ import FailureCategoryGroupItemApiResult from './FailureCategoryGroupItemApiResu
 /**
  * The FailureCategoryGroupItemApiResultReply model module.
  * @module model/FailureCategoryGroupItemApiResultReply
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class FailureCategoryGroupItemApiResultReply {
     /**

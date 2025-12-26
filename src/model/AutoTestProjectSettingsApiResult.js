@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestProjectSettingsApiResult model module.
  * @module model/AutoTestProjectSettingsApiResult
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class AutoTestProjectSettingsApiResult {
     /**

@@ -18,7 +18,7 @@ import WebHookEventTypeRequest from './WebHookEventTypeRequest';
 /**
  * The WebhooksDeleteFilterApiModel model module.
  * @module model/WebhooksDeleteFilterApiModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class WebhooksDeleteFilterApiModel {
     /**

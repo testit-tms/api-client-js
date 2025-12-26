@@ -22,7 +22,7 @@ import TestResultStepCommentUpdateRequest from './TestResultStepCommentUpdateReq
 /**
  * The TestResultUpdateV2Request model module.
  * @module model/TestResultUpdateV2Request
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class TestResultUpdateV2Request {
     /**

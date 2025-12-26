@@ -37,7 +37,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Projects service.
 * @module api/ProjectsApi
-* @version 7.0.0-rc2
+* @version 7.0.0-rc3
 */
 export default class ProjectsApi {
 

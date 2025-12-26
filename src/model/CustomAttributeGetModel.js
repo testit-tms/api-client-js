@@ -18,7 +18,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributeGetModel model module.
  * @module model/CustomAttributeGetModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class CustomAttributeGetModel {
     /**

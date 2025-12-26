@@ -17,7 +17,7 @@ import WorkItemLinkChangeViewModel from './WorkItemLinkChangeViewModel';
 /**
  * The WorkItemLinkChangeViewModelArrayChangedFieldViewModel model module.
  * @module model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class WorkItemLinkChangeViewModelArrayChangedFieldViewModel {
     /**

@@ -17,7 +17,7 @@ import ParameterShortApiResult from './ParameterShortApiResult';
 /**
  * The IterationApiResult model module.
  * @module model/IterationApiResult
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class IterationApiResult {
     /**

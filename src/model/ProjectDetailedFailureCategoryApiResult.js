@@ -18,7 +18,7 @@ import FailureClassRegexApiResult from './FailureClassRegexApiResult';
 /**
  * The ProjectDetailedFailureCategoryApiResult model module.
  * @module model/ProjectDetailedFailureCategoryApiResult
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class ProjectDetailedFailureCategoryApiResult {
     /**

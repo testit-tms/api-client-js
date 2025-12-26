@@ -18,7 +18,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunByAutoTestApiResult model module.
  * @module model/TestRunByAutoTestApiResult
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class TestRunByAutoTestApiResult {
     /**

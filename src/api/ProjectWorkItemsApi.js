@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * ProjectWorkItems service.
 * @module api/ProjectWorkItemsApi
-* @version 7.0.0-rc2
+* @version 7.0.0-rc3
 */
 export default class ProjectWorkItemsApi {
 

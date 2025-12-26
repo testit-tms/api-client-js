@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhookBulkUpdateApiModel model module.
  * @module model/WebhookBulkUpdateApiModel
- * @version 7.0.0-rc2
+ * @version 7.0.0-rc3
  */
 class WebhookBulkUpdateApiModel {
     /**
