@@ -31,13 +31,12 @@ let projectId = "projectId_example"; // String | Internal (UUID) or global (inte
 let opts = {
   'autoTestProjectSettingsApiModel': new TestitApiClient.AutoTestProjectSettingsApiModel() // AutoTestProjectSettingsApiModel | 
 };
-apiInstance.apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -81,13 +80,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectSettingsApi();
 let projectId = "projectId_example"; // String | Internal (UUID) or global (integer) identifier
-apiInstance.getAutotestProjectSettings(projectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutotestProjectSettings(projectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

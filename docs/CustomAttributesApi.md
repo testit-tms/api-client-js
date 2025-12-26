@@ -35,13 +35,12 @@ let opts = {
   'name': "name_example", // String | 
   'isGlobal': true // Boolean | 
 };
-apiInstance.apiV2CustomAttributesExistsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesExistsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -85,13 +84,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.CustomAttributesApi();
 let id = "id_example"; // String | Unique ID of attribute
-apiInstance.apiV2CustomAttributesGlobalIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2CustomAttributesGlobalIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -137,13 +135,12 @@ let id = "id_example"; // String | Unique ID of attribute
 let opts = {
   'globalCustomAttributeUpdateModel': new TestitApiClient.GlobalCustomAttributeUpdateModel() // GlobalCustomAttributeUpdateModel | 
 };
-apiInstance.apiV2CustomAttributesGlobalIdPut(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesGlobalIdPut(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -189,13 +186,12 @@ let apiInstance = new TestitApiClient.CustomAttributesApi();
 let opts = {
   'globalCustomAttributePostModel': new TestitApiClient.GlobalCustomAttributePostModel() // GlobalCustomAttributePostModel | 
 };
-apiInstance.apiV2CustomAttributesGlobalPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesGlobalPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -238,13 +234,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.CustomAttributesApi();
 let id = "id_example"; // String | Unique ID of attribute
-apiInstance.apiV2CustomAttributesIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -294,13 +289,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'customAttributeSearchQueryModel': new TestitApiClient.CustomAttributeSearchQueryModel() // CustomAttributeSearchQueryModel | 
 };
-apiInstance.apiV2CustomAttributesSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2CustomAttributesSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

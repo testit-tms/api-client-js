@@ -56,13 +56,12 @@ let id = "id_example"; // String | Project internal (UUID) or global (integer) i
 let opts = {
   'requestBody': ["null"] // [String] | 
 };
-apiInstance.addGlobalAttributesToProject(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.addGlobalAttributesToProject(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -105,13 +104,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 //Bearer or PrivateToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
-apiInstance.apiV2ProjectsDemoPost((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsDemoPost().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -151,13 +149,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Unique or global ID of the project
-apiInstance.apiV2ProjectsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -203,13 +200,12 @@ let id = "id_example"; // String | Unique or global ID of the project
 let opts = {
   'isDeleted': true // Boolean | 
 };
-apiInstance.apiV2ProjectsIdFailureClassesGet(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsIdFailureClassesGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -253,13 +249,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.apiV2ProjectsIdFavoritePut(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdFavoritePut(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -304,13 +299,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.apiV2ProjectsIdFiltersGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsIdFiltersGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -358,13 +352,12 @@ let id = "id_example"; // String | Unique or global Id of project
 let opts = {
   'operation': [new TestitApiClient.Operation()] // [Operation] | 
 };
-apiInstance.apiV2ProjectsIdPatch(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdPatch(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -408,13 +401,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Unique or global ID of the project
-apiInstance.apiV2ProjectsIdPurgePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdPurgePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -457,13 +449,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Unique or global ID of the project
-apiInstance.apiV2ProjectsIdRestorePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdRestorePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -509,13 +500,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
 let attributeId = "attributeId_example"; // String | 
-apiInstance.apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -564,13 +554,12 @@ let id = "id_example"; // String | Project internal (UUID) or global (integer) i
 let opts = {
   'customAttributeTestPlanProjectRelationPutModel': new TestitApiClient.CustomAttributeTestPlanProjectRelationPutModel() // CustomAttributeTestPlanProjectRelationPutModel | 
 };
-apiInstance.apiV2ProjectsIdTestPlansAttributePut(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsIdTestPlansAttributePut(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -632,13 +621,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2ProjectsIdTestRunsFullGet(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsIdTestRunsFullGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -695,13 +683,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let name = "name_example"; // String | 
-apiInstance.apiV2ProjectsNameNameExistsGet(name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsNameNameExistsGet(name).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -746,13 +733,12 @@ let apiInstance = new TestitApiClient.ProjectsApi();
 let opts = {
   'projectSelectModel': new TestitApiClient.ProjectSelectModel() // ProjectSelectModel | 
 };
-apiInstance.apiV2ProjectsPurgeBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsPurgeBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -797,13 +783,12 @@ let apiInstance = new TestitApiClient.ProjectsApi();
 let opts = {
   'projectSelectModel': new TestitApiClient.ProjectSelectModel() // ProjectSelectModel | 
 };
-apiInstance.apiV2ProjectsRestoreBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsRestoreBulkPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -853,13 +838,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'projectsFilterModel': new TestitApiClient.ProjectsFilterModel() // ProjectsFilterModel | 
 };
-apiInstance.apiV2ProjectsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -911,13 +895,12 @@ let apiInstance = new TestitApiClient.ProjectsApi();
 let opts = {
   'getShortProjectsApiModel': new TestitApiClient.GetShortProjectsApiModel() // GetShortProjectsApiModel | 
 };
-apiInstance.apiV2ProjectsShortsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsShortsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -964,13 +947,12 @@ let apiInstance = new TestitApiClient.ProjectsApi();
 let opts = {
   'createProjectApiModel': new TestitApiClient.CreateProjectApiModel() // CreateProjectApiModel | 
 };
-apiInstance.createProject(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createProject(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1013,13 +995,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Unique or global ID of the project
-apiInstance.deleteProjectAutoTests(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteProjectAutoTests(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1072,13 +1053,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getAllProjects(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAllProjects(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1129,13 +1109,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.getAutoTestsNamespaces(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutoTestsNamespaces(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1180,13 +1159,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectsApi();
 let id = "id_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.getProjectById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getProjectById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1234,13 +1212,12 @@ let id = "id_example"; // String | Project internal (UUID) or global (integer) i
 let opts = {
   'isDeleted': true // Boolean | If result must consist of only actual/archived test plans
 };
-apiInstance.getTestPlansByProjectId(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestPlansByProjectId(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1300,13 +1277,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1365,13 +1341,12 @@ let apiInstance = new TestitApiClient.ProjectsApi();
 let opts = {
   'updateProjectApiModel': new TestitApiClient.UpdateProjectApiModel() // UpdateProjectApiModel | 
 };
-apiInstance.updateProject(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateProject(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

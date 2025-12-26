@@ -40,13 +40,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemGroupGetModel': new TestitApiClient.WorkItemGroupGetModel() // WorkItemGroupGetModel | 
 };
-apiInstance.apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -103,13 +102,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemSelectModel': new TestitApiClient.WorkItemSelectModel() // WorkItemSelectModel | 
 };
-apiInstance.apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -166,13 +164,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemSelectApiModel': new TestitApiClient.WorkItemSelectApiModel() // WorkItemSelectApiModel | 
 };
-apiInstance.apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -230,13 +227,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemSelectApiModel': new TestitApiClient.WorkItemSelectApiModel() // WorkItemSelectApiModel | 
 };
-apiInstance.apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -291,13 +287,12 @@ let projectId = "projectId_example"; // String | Project internal (UUID) identif
 let opts = {
   'isDeleted': true // Boolean | 
 };
-apiInstance.apiV2ProjectsProjectIdWorkItemsTagsGet(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdWorkItemsTagsGet(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -353,13 +348,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getWorkItemsByProjectId(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemsByProjectId(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

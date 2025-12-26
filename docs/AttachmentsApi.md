@@ -31,13 +31,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AttachmentsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2AttachmentsIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2AttachmentsIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -87,13 +86,12 @@ let opts = {
   'backgroundColor': "backgroundColor_example", // String | Color of the background if the `resizeType` is `AddBackgroundStripes`
   'preview': true // Boolean | If image must be converted to a preview (lower quality, no animation)
 };
-apiInstance.apiV2AttachmentsIdGet(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2AttachmentsIdGet(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -141,13 +139,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AttachmentsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2AttachmentsIdMetadataGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AttachmentsIdMetadataGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -189,13 +186,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 //Bearer or PrivateToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.AttachmentsApi();
-apiInstance.apiV2AttachmentsOccupiedFileStorageSizeGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AttachmentsOccupiedFileStorageSizeGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -239,13 +235,12 @@ let apiInstance = new TestitApiClient.AttachmentsApi();
 let opts = {
   'file': "/path/to/file" // File | 
 };
-apiInstance.apiV2AttachmentsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AttachmentsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -29,13 +29,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectConfigurationsApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.getConfigurationsByProjectId(projectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getConfigurationsByProjectId(projectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

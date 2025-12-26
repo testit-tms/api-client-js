@@ -37,13 +37,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'projectCustomAttributesTemplatesFilterModel': new TestitApiClient.ProjectCustomAttributesTemplatesFilterModel() // ProjectCustomAttributesTemplatesFilterModel | 
 };
-apiInstance.apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdAttributesTemplatesSearchPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -95,13 +94,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.ProjectAttributeTemplatesApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
 let templateId = "templateId_example"; // String | CustomAttributeTemplate internal (UUID) identifier
-apiInstance.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete(projectId, templateId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete(projectId, templateId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -148,13 +146,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.ProjectAttributeTemplatesApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
 let templateId = "templateId_example"; // String | CustomAttributeTemplate internal (UUID) identifier
-apiInstance.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost(projectId, templateId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPost(projectId, templateId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

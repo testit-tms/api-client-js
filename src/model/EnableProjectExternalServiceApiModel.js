@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EnableProjectExternalServiceApiModel model module.
  * @module model/EnableProjectExternalServiceApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class EnableProjectExternalServiceApiModel {
     /**

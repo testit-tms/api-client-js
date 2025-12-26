@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributes service.
 * @module api/ProjectAttributesApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ProjectAttributesApi {
 
@@ -41,13 +41,6 @@ export default class ProjectAttributesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the createProjectsAttribute operation.
-     * @callback module:api/ProjectAttributesApi~createProjectsAttributeCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create project attribute
@@ -55,10 +48,9 @@ export default class ProjectAttributesApi {
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributePostModel} [customAttributePostModel] 
-     * @param {module:api/ProjectAttributesApi~createProjectsAttributeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
      */
-    createProjectsAttribute(projectId, opts, callback) {
+    createProjectsAttributeWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['customAttributePostModel'];
       // verify the required parameter 'projectId' is set
@@ -83,26 +75,34 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteProjectsAttribute operation.
-     * @callback module:api/ProjectAttributesApi~deleteProjectsAttributeCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create project attribute
+     *  Use case  User sets attribute parameters (listed in request example) and runs method execution  System search project  System creates attribute and relates it to the project  System returns project attribute properties (example listed in response parameters)
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributePostModel} opts.customAttributePostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
      */
+    createProjectsAttribute(projectId, opts) {
+      return this.createProjectsAttributeWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete project attribute
      *  Use case  User sets project identifier and runs method execution  User sets attribute identifier  User runs method execution  System search project  System search and delete attribute  System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId Project attribute internal (UUID)
-     * @param {module:api/ProjectAttributesApi~deleteProjectsAttributeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteProjectsAttribute(projectId, attributeId, callback) {
+    deleteProjectsAttributeWithHttpInfo(projectId, attributeId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -131,27 +131,33 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/{attributeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAttributeByProjectId operation.
-     * @callback module:api/ProjectAttributesApi~getAttributeByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete project attribute
+     *  Use case  User sets project identifier and runs method execution  User sets attribute identifier  User runs method execution  System search project  System search and delete attribute  System returns no content response
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} attributeId Project attribute internal (UUID)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteProjectsAttribute(projectId, attributeId) {
+      return this.deleteProjectsAttributeWithHttpInfo(projectId, attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project attribute
      *  Use case  User sets project internal or global identifier  User sets project attribute identifier  User runs method execution  System search project  System search project attribute  System returns project attribute (listed in response model)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId Project attribute internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectAttributesApi~getAttributeByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
      */
-    getAttributeByProjectId(projectId, attributeId, callback) {
+    getAttributeByProjectIdWithHttpInfo(projectId, attributeId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -180,17 +186,24 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/{attributeId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAttributesByProjectId operation.
-     * @callback module:api/ProjectAttributesApi~getAttributesByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CustomAttributeModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get project attribute
+     *  Use case  User sets project internal or global identifier  User sets project attribute identifier  User runs method execution  System search project  System search project attribute  System returns project attribute (listed in response model)
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {String} attributeId Project attribute internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
      */
+    getAttributeByProjectId(projectId, attributeId) {
+      return this.getAttributeByProjectIdWithHttpInfo(projectId, attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project attributes
@@ -198,10 +211,9 @@ export default class ProjectAttributesApi {
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/DeletionState} [isDeleted] 
-     * @param {module:api/ProjectAttributesApi~getAttributesByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CustomAttributeModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
      */
-    getAttributesByProjectId(projectId, opts, callback) {
+    getAttributesByProjectIdWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'projectId' is set
@@ -227,17 +239,25 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the searchAttributesInProject operation.
-     * @callback module:api/ProjectAttributesApi~searchAttributesInProjectCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CustomAttributeGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get project attributes
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project  [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all attributes related to project  System returns array of found attributes (listed in response model)
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DeletionState} opts.isDeleted 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeModel>}
      */
+    getAttributesByProjectId(projectId, opts) {
+      return this.getAttributesByProjectIdWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for attributes used in the project
@@ -249,10 +269,9 @@ export default class ProjectAttributesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectAttributesFilterModel} [projectAttributesFilterModel] 
-     * @param {module:api/ProjectAttributesApi~searchAttributesInProjectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CustomAttributeGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeGetModel>} and HTTP response
      */
-    searchAttributesInProject(projectId, opts, callback) {
+    searchAttributesInProjectWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['projectAttributesFilterModel'];
       // verify the required parameter 'projectId' is set
@@ -282,26 +301,38 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateProjectsAttribute operation.
-     * @callback module:api/ProjectAttributesApi~updateProjectsAttributeCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search for attributes used in the project
+     * @param {String} projectId Unique or global project ID
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ProjectAttributesFilterModel} opts.projectAttributesFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeGetModel>}
      */
+    searchAttributesInProject(projectId, opts) {
+      return this.searchAttributesInProjectWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit attribute of the project
      * @param {String} projectId Unique or global project ID
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributePutModel} [customAttributePutModel] 
-     * @param {module:api/ProjectAttributesApi~updateProjectsAttributeCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateProjectsAttribute(projectId, opts, callback) {
+    updateProjectsAttributeWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['customAttributePutModel'];
       // verify the required parameter 'projectId' is set
@@ -326,8 +357,22 @@ export default class ProjectAttributesApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Edit attribute of the project
+     * @param {String} projectId Unique or global project ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributePutModel} opts.customAttributePutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateProjectsAttribute(projectId, opts) {
+      return this.updateProjectsAttributeWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Parameters service.
 * @module api/ParametersApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ParametersApi {
 
@@ -41,23 +41,15 @@ export default class ParametersApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ParametersBulkPost operation.
-     * @callback module:api/ParametersApi~apiV2ParametersBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ParameterApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create multiple parameters
      *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/CreateParameterApiModel>} [createParameterApiModel] 
-     * @param {module:api/ParametersApi~apiV2ParametersBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ParameterApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
      */
-    apiV2ParametersBulkPost(opts, callback) {
+    apiV2ParametersBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createParameterApiModel'];
 
@@ -77,26 +69,33 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersBulkPut operation.
-     * @callback module:api/ParametersApi~apiV2ParametersBulkPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create multiple parameters
+     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/CreateParameterApiModel>} opts.createParameterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
      */
+    apiV2ParametersBulkPost(opts) {
+      return this.apiV2ParametersBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update multiple parameters
      *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/UpdateParameterApiModel>} [updateParameterApiModel] 
-     * @param {module:api/ParametersApi~apiV2ParametersBulkPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ParametersBulkPut(opts, callback) {
+    apiV2ParametersBulkPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateParameterApiModel'];
 
@@ -116,17 +115,24 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/bulk', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersGroupsGet operation.
-     * @callback module:api/ParametersApi~apiV2ParametersGroupsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ParameterGroupApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update multiple parameters
+     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/UpdateParameterApiModel>} opts.updateParameterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ParametersBulkPut(opts) {
+      return this.apiV2ParametersBulkPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get parameters as group
@@ -141,10 +147,9 @@ export default class ParametersApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ParametersApi~apiV2ParametersGroupsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ParameterGroupApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterGroupApiResult>} and HTTP response
      */
-    apiV2ParametersGroupsGet(opts, callback) {
+    apiV2ParametersGroupsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -173,26 +178,40 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/groups', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersKeyNameNameExistsGet operation.
-     * @callback module:api/ParametersApi~apiV2ParametersKeyNameNameExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Boolean} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get parameters as group
+     *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.parameterKeyIds 
+     * @param {String} opts.name 
+     * @param {Boolean} opts.isDeleted 
+     * @param {Array.<String>} opts.projectIds 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterGroupApiResult>}
      */
+    apiV2ParametersGroupsGet(opts) {
+      return this.apiV2ParametersGroupsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Check existence parameter key in system
      *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
      * @param {String} name 
-     * @param {module:api/ParametersApi~apiV2ParametersKeyNameNameExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Boolean}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
      */
-    apiV2ParametersKeyNameNameExistsGet(name, callback) {
+    apiV2ParametersKeyNameNameExistsGetWithHttpInfo(name) {
       let postBody = null;
       // verify the required parameter 'name' is set
       if (name === undefined || name === null) {
@@ -216,26 +235,31 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/key/name/{name}/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersKeyValuesGet operation.
-     * @callback module:api/ParametersApi~apiV2ParametersKeyValuesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Check existence parameter key in system
+     *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
+     * @param {String} name 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
      */
+    apiV2ParametersKeyNameNameExistsGet(name) {
+      return this.apiV2ParametersKeyNameNameExistsGetWithHttpInfo(name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all parameter key values
      *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
      * @param {String} key Parameter key (string format)
-     * @param {module:api/ParametersApi~apiV2ParametersKeyValuesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ParametersKeyValuesGet(key, callback) {
+    apiV2ParametersKeyValuesGetWithHttpInfo(key) {
       let postBody = null;
       // verify the required parameter 'key' is set
       if (key === undefined || key === null) {
@@ -259,17 +283,23 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/{key}/values', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersKeysGet operation.
-     * @callback module:api/ParametersApi~apiV2ParametersKeysGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all parameter key values
+     *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
+     * @param {String} key Parameter key (string format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ParametersKeyValuesGet(key) {
+      return this.apiV2ParametersKeyValuesGetWithHttpInfo(key)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all parameter keys
@@ -281,10 +311,9 @@ export default class ParametersApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ParametersApi~apiV2ParametersKeysGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ParametersKeysGet(opts, callback) {
+    apiV2ParametersKeysGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -310,17 +339,29 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/keys', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersSearchGroupsPost operation.
-     * @callback module:api/ParametersApi~apiV2ParametersSearchGroupsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ParameterGroupApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all parameter keys
+     *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.projectIds 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ParametersKeysGet(opts) {
+      return this.apiV2ParametersKeysGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for parameters as group
@@ -331,10 +372,9 @@ export default class ParametersApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ParameterGroupsFilterApiModel} [parameterGroupsFilterApiModel] 
-     * @param {module:api/ParametersApi~apiV2ParametersSearchGroupsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ParameterGroupApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterGroupApiResult>} and HTTP response
      */
-    apiV2ParametersSearchGroupsPost(opts, callback) {
+    apiV2ParametersSearchGroupsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['parameterGroupsFilterApiModel'];
 
@@ -359,17 +399,28 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/search/groups', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ParametersSearchPost operation.
-     * @callback module:api/ParametersApi~apiV2ParametersSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ParameterApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for parameters as group
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ParameterGroupsFilterApiModel} opts.parameterGroupsFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterGroupApiResult>}
      */
+    apiV2ParametersSearchGroupsPost(opts) {
+      return this.apiV2ParametersSearchGroupsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for parameters
@@ -380,10 +431,9 @@ export default class ParametersApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ParametersFilterApiModel} [parametersFilterApiModel] 
-     * @param {module:api/ParametersApi~apiV2ParametersSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ParameterApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
      */
-    apiV2ParametersSearchPost(opts, callback) {
+    apiV2ParametersSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['parametersFilterApiModel'];
 
@@ -408,27 +458,37 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createParameter operation.
-     * @callback module:api/ParametersApi~createParameterCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ParameterApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for parameters
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ParametersFilterApiModel} opts.parametersFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
      */
+    apiV2ParametersSearchPost(opts) {
+      return this.apiV2ParametersSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create parameter
      *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateParameterApiModel} [createParameterApiModel] 
-     * @param {module:api/ParametersApi~createParameterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ParameterApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
      */
-    createParameter(opts, callback) {
+    createParameterWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createParameterApiModel'];
 
@@ -448,25 +508,32 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteByName operation.
-     * @callback module:api/ParametersApi~deleteByNameCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create parameter
+     *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateParameterApiModel} opts.createParameterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
      */
+    createParameter(opts) {
+      return this.createParameterWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete parameter by name
      * Deletes parameter and all it's values
      * @param {String} name Name of the parameter
-     * @param {module:api/ParametersApi~deleteByNameCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteByName(name, callback) {
+    deleteByNameWithHttpInfo(name) {
       let postBody = null;
       // verify the required parameter 'name' is set
       if (name === undefined || name === null) {
@@ -490,25 +557,31 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/name/{name}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteByParameterKeyId operation.
-     * @callback module:api/ParametersApi~deleteByParameterKeyIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete parameter by name
+     * Deletes parameter and all it's values
+     * @param {String} name Name of the parameter
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteByName(name) {
+      return this.deleteByNameWithHttpInfo(name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete parameters by parameter key identifier
      * Deletes parameter and all it's values by parameter key identifier
      * @param {String} keyId Identifier of the parameter key
-     * @param {module:api/ParametersApi~deleteByParameterKeyIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteByParameterKeyId(keyId, callback) {
+    deleteByParameterKeyIdWithHttpInfo(keyId) {
       let postBody = null;
       // verify the required parameter 'keyId' is set
       if (keyId === undefined || keyId === null) {
@@ -532,25 +605,31 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/keyId/{keyId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteParameter operation.
-     * @callback module:api/ParametersApi~deleteParameterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete parameters by parameter key identifier
+     * Deletes parameter and all it's values by parameter key identifier
+     * @param {String} keyId Identifier of the parameter key
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteByParameterKeyId(keyId) {
+      return this.deleteByParameterKeyIdWithHttpInfo(keyId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete parameter
      *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
      * @param {String} id Parameter internal (UUID) identifier
-     * @param {module:api/ParametersApi~deleteParameterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteParameter(id, callback) {
+    deleteParameterWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -574,17 +653,23 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAllParameters operation.
-     * @callback module:api/ParametersApi~getAllParametersCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ParameterApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete parameter
+     *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
+     * @param {String} id Parameter internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteParameter(id) {
+      return this.deleteParameterWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all parameters
@@ -596,10 +681,9 @@ export default class ParametersApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ParametersApi~getAllParametersCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ParameterApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
      */
-    getAllParameters(opts, callback) {
+    getAllParametersWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -625,26 +709,37 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getParameterById operation.
-     * @callback module:api/ParametersApi~getParameterByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ParameterApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all parameters
+     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
      */
+    getAllParameters(opts) {
+      return this.getAllParametersWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get parameter by ID
      *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
      * @param {String} id Parameter internal (UUID) identifier
-     * @param {module:api/ParametersApi~getParameterByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ParameterApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
      */
-    getParameterById(id, callback) {
+    getParameterByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -668,26 +763,32 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateParameter operation.
-     * @callback module:api/ParametersApi~updateParameterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get parameter by ID
+     *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
+     * @param {String} id Parameter internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
      */
+    getParameterById(id) {
+      return this.getParameterByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update parameter
      *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateParameterApiModel} [updateParameterApiModel] 
-     * @param {module:api/ParametersApi~updateParameterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateParameter(opts, callback) {
+    updateParameterWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateParameterApiModel'];
 
@@ -707,8 +808,22 @@ export default class ParametersApi {
       return this.apiClient.callApi(
         '/api/v2/parameters', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update parameter
+     *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateParameterApiModel} opts.updateParameterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateParameter(opts) {
+      return this.updateParameterWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

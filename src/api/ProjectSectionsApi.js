@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectSections service.
 * @module api/ProjectSectionsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ProjectSectionsApi {
 
@@ -36,13 +36,6 @@ export default class ProjectSectionsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the getSectionsByProjectId operation.
-     * @callback module:api/ProjectSectionsApi~getSectionsByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SectionModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get project sections
@@ -54,10 +47,9 @@ export default class ProjectSectionsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectSectionsApi~getSectionsByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SectionModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SectionModel>} and HTTP response
      */
-    getSectionsByProjectId(projectId, opts, callback) {
+    getSectionsByProjectIdWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'projectId' is set
@@ -87,8 +79,27 @@ export default class ProjectSectionsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/sections', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get project sections
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SectionModel>}
+     */
+    getSectionsByProjectId(projectId, opts) {
+      return this.getSectionsByProjectIdWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

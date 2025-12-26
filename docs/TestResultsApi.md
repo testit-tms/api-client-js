@@ -44,13 +44,12 @@ let externalProjectId = "externalProjectId_example"; // String |
 let opts = {
   'testResultsSelectApiModel': new TestitApiClient.TestResultsSelectApiModel() // TestResultsSelectApiModel | 
 };
-apiInstance.apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost(externalProjectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost(externalProjectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -97,13 +96,12 @@ let externalProjectId = "externalProjectId_example"; // String |
 let opts = {
   'createDefectApiModel': new TestitApiClient.CreateDefectApiModel() // CreateDefectApiModel | 
 };
-apiInstance.apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost(externalProjectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost(externalProjectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -147,13 +145,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "id_example"; // String | Test result unique ID
-apiInstance.apiV2TestResultsIdAggregatedGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsIdAggregatedGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -197,13 +194,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "id_example"; // String | Test result unique ID
 let attachmentId = "attachmentId_example"; // String | Attachment unique ID
-apiInstance.apiV2TestResultsIdAttachmentsAttachmentIdPut(id, attachmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestResultsIdAttachmentsAttachmentIdPut(id, attachmentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -247,13 +243,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "id_example"; // String | Test result unique ID
-apiInstance.apiV2TestResultsIdAttachmentsInfoGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsIdAttachmentsInfoGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -296,13 +291,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "id_example"; // String | Test result unique ID
-apiInstance.apiV2TestResultsIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -348,13 +342,12 @@ let id = "id_example"; // String | Test result unique ID
 let opts = {
   'testResultUpdateV2Request': new TestitApiClient.TestResultUpdateV2Request() // TestResultUpdateV2Request | 
 };
-apiInstance.apiV2TestResultsIdPut(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestResultsIdPut(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -398,13 +391,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "id_example"; // String | Test result unique ID
-apiInstance.apiV2TestResultsIdRerunsGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsIdRerunsGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -454,13 +446,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'testResultsFilterApiModel': new TestitApiClient.TestResultsFilterApiModel() // TestResultsFilterApiModel | 
 };
-apiInstance.apiV2TestResultsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -510,13 +501,12 @@ let apiInstance = new TestitApiClient.TestResultsApi();
 let opts = {
   'testResultsFilterApiModel': new TestitApiClient.TestResultsFilterApiModel() // TestResultsFilterApiModel | 
 };
-apiInstance.apiV2TestResultsStatisticsFilterPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestResultsStatisticsFilterPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -564,13 +554,12 @@ let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test result interna
 let opts = {
   'file': "/path/to/file" // File | Select file
 };
-apiInstance.createAttachment(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.createAttachment(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -617,13 +606,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test result internal identifier (guid format)
 let attachmentId = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Attachment internal identifier (guid format)
-apiInstance.deleteAttachment(id, attachmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteAttachment(id, attachmentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -677,13 +665,12 @@ let opts = {
   'backgroundColor': "backgroundColor_example", // String | Color of the background if the `resizeType` is `AddBackgroundStripes`
   'preview': true // Boolean | If image must be converted to a preview (lower quality, no animation)
 };
-apiInstance.downloadAttachment(attachmentId, id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.downloadAttachment(attachmentId, id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -735,13 +722,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test result internal identifier (guid format)
 let attachmentId = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Attachment internal identifier (guid format)
-apiInstance.getAttachment(id, attachmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAttachment(id, attachmentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -787,13 +773,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestResultsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test result internal identifier (guid format)
-apiInstance.getAttachments(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAttachments(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -38,13 +38,12 @@ let apiInstance = new TestitApiClient.WebhooksApi();
 let opts = {
   'webhooksDeleteApiModel': new TestitApiClient.WebhooksDeleteApiModel() // WebhooksDeleteApiModel | 
 };
-apiInstance.apiV2WebhooksDelete(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WebhooksDelete(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -89,13 +88,12 @@ let apiInstance = new TestitApiClient.WebhooksApi();
 let opts = {
   'projectId': "projectId_example" // String | Project unique ID
 };
-apiInstance.apiV2WebhooksGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -138,13 +136,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WebhooksApi();
 let id = "id_example"; // String | Webhook unique ID
-apiInstance.apiV2WebhooksIdDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WebhooksIdDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -187,13 +184,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WebhooksApi();
 let id = "id_example"; // String | Webhook unique ID
-apiInstance.apiV2WebhooksIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -239,13 +235,12 @@ let id = "id_example"; // String | Webhook unique ID
 let opts = {
   'webHookPostModel': new TestitApiClient.WebHookPostModel() // WebHookPostModel | 
 };
-apiInstance.apiV2WebhooksIdPut(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksIdPut(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -291,13 +286,12 @@ let apiInstance = new TestitApiClient.WebhooksApi();
 let opts = {
   'webHookPostModel': new TestitApiClient.WebHookPostModel() // WebHookPostModel | 
 };
-apiInstance.apiV2WebhooksPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -342,13 +336,12 @@ let apiInstance = new TestitApiClient.WebhooksApi();
 let opts = {
   'webhooksUpdateApiModel': new TestitApiClient.WebhooksUpdateApiModel() // WebhooksUpdateApiModel | 
 };
-apiInstance.apiV2WebhooksPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksPut(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -398,13 +391,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'searchWebhooksQueryModel': new TestitApiClient.SearchWebhooksQueryModel() // SearchWebhooksQueryModel | 
 };
-apiInstance.apiV2WebhooksSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -455,13 +447,12 @@ let opts = {
   'eventType': new TestitApiClient.WebHookEventType(), // WebHookEventType | Webhook event type
   'variablesType': new TestitApiClient.WebhookVariablesType() // WebhookVariablesType | 
 };
-apiInstance.apiV2WebhooksSpecialVariablesGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksSpecialVariablesGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -507,13 +498,12 @@ let apiInstance = new TestitApiClient.WebhooksApi();
 let opts = {
   'webHookTestModel': new TestitApiClient.WebHookTestModel() // WebHookTestModel | 
 };
-apiInstance.apiV2WebhooksTestPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WebhooksTestPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

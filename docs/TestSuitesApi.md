@@ -42,13 +42,12 @@ let id = "1ed608bf-8ac9-4ffd-b91e-ebdbbdce6132"; // String | Test suite internal
 let opts = {
   'workItemSelectModel': new TestitApiClient.WorkItemSelectModel() // WorkItemSelectModel | Filter object to retrieve work items for test-suite's project
 };
-apiInstance.addTestPointsToTestSuite(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.addTestPointsToTestSuite(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -97,13 +96,12 @@ let id = "id_example"; // String | Test Suite internal (UUID) identifier
 let opts = {
   'operation': [new TestitApiClient.Operation()] // [Operation] | 
 };
-apiInstance.apiV2TestSuitesIdPatch(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestSuitesIdPatch(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -147,13 +145,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "id_example"; // String | Test Suite internal (UUID) identifier
-apiInstance.apiV2TestSuitesIdRefreshPost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestSuitesIdRefreshPost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -199,13 +196,12 @@ let id = "id_example"; // String | Unique ID of the test suite
 let opts = {
   'requestBody': ["null"] // [String] | 
 };
-apiInstance.apiV2TestSuitesIdWorkItemsPost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestSuitesIdWorkItemsPost(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -251,13 +247,12 @@ let apiInstance = new TestitApiClient.TestSuitesApi();
 let opts = {
   'testSuiteV2PostModel': new TestitApiClient.TestSuiteV2PostModel() // TestSuiteV2PostModel | 
 };
-apiInstance.apiV2TestSuitesPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestSuitesPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -302,13 +297,12 @@ let apiInstance = new TestitApiClient.TestSuitesApi();
 let opts = {
   'testSuiteV2PutModel': new TestitApiClient.TestSuiteV2PutModel() // TestSuiteV2PutModel | 
 };
-apiInstance.apiV2TestSuitesPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2TestSuitesPut(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -353,13 +347,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
-apiInstance.deleteTestSuite(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteTestSuite(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -404,13 +397,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
-apiInstance.getConfigurationsByTestSuiteId(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getConfigurationsByTestSuiteId(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -455,13 +447,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
-apiInstance.getTestPointsById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestPointsById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -506,13 +497,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
-apiInstance.getTestResultsById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestResultsById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -557,13 +547,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
-apiInstance.getTestSuiteById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestSuiteById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -616,13 +605,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'testSuiteWorkItemsSearchModel': new TestitApiClient.TestSuiteWorkItemsSearchModel() // TestSuiteWorkItemsSearchModel | 
 };
-apiInstance.searchWorkItems(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.searchWorkItems(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -676,13 +664,12 @@ let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal
 let opts = {
   'requestBody': ["null"] // [String] | Collection of configuration identifiers\"
 };
-apiInstance.setConfigurationsByTestSuiteId(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.setConfigurationsByTestSuiteId(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

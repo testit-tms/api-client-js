@@ -37,7 +37,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Projects service.
 * @module api/ProjectsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ProjectsApi {
 
@@ -53,13 +53,6 @@ export default class ProjectsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the addGlobalAttributesToProject operation.
-     * @callback module:api/ProjectsApi~addGlobalAttributesToProjectCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Add global attributes to project
@@ -67,9 +60,9 @@ export default class ProjectsApi {
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/ProjectsApi~addGlobalAttributesToProjectCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    addGlobalAttributesToProject(id, opts, callback) {
+    addGlobalAttributesToProjectWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -94,23 +87,30 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/globalAttributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsDemoPost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsDemoPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DemoProjectApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add global attributes to project
+     *  Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    addGlobalAttributesToProject(id, opts) {
+      return this.addGlobalAttributesToProjectWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
-     * @param {module:api/ProjectsApi~apiV2ProjectsDemoPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DemoProjectApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DemoProjectApiResult} and HTTP response
      */
-    apiV2ProjectsDemoPost(callback) {
+    apiV2ProjectsDemoPostWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -129,24 +129,27 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/demo', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdDelete operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DemoProjectApiResult}
      */
+    apiV2ProjectsDemoPost() {
+      return this.apiV2ProjectsDemoPostWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Archive project
      * @param {String} id Unique or global ID of the project
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdDelete(id, callback) {
+    apiV2ProjectsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -170,27 +173,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdFailureClassesGet operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdFailureClassesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/FailureCategoryApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Archive project
+     * @param {String} id Unique or global ID of the project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdDelete(id) {
+      return this.apiV2ProjectsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get failure classes
      * @param {String} id Unique or global ID of the project
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdFailureClassesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/FailureCategoryApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FailureCategoryApiResult>} and HTTP response
      */
-    apiV2ProjectsIdFailureClassesGet(id, opts, callback) {
+    apiV2ProjectsIdFailureClassesGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -216,24 +223,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/failureClasses', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdFavoritePut operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdFavoritePutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get failure classes
+     * @param {String} id Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/FailureCategoryApiResult>}
      */
+    apiV2ProjectsIdFailureClassesGet(id, opts) {
+      return this.apiV2ProjectsIdFailureClassesGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Mark Project as favorite
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdFavoritePutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdFavoritePut(id, callback) {
+    apiV2ProjectsIdFavoritePutWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -257,26 +271,30 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/favorite', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdFiltersGet operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdFiltersGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/FilterModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Mark Project as favorite
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdFavoritePut(id) {
+      return this.apiV2ProjectsIdFavoritePutWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Project filters
      *  Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdFiltersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/FilterModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FilterModel>} and HTTP response
      */
-    apiV2ProjectsIdFiltersGet(id, callback) {
+    apiV2ProjectsIdFiltersGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -300,17 +318,23 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/filters', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdPatch operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get Project filters
+     *  Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/FilterModel>}
      */
+    apiV2ProjectsIdFiltersGet(id) {
+      return this.apiV2ProjectsIdFiltersGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Patch project
@@ -318,9 +342,9 @@ export default class ProjectsApi {
      * @param {String} id Unique or global Id of project
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdPatch(id, opts, callback) {
+    apiV2ProjectsIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -345,24 +369,32 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdPurgePost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdPurgePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Patch project
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Unique or global Id of project
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdPatch(id, opts) {
+      return this.apiV2ProjectsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Purge the project
      * @param {String} id Unique or global ID of the project
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdPurgePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdPurgePost(id, callback) {
+    apiV2ProjectsIdPurgePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -386,24 +418,29 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/purge', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdRestorePost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdRestorePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Purge the project
+     * @param {String} id Unique or global ID of the project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdPurgePost(id) {
+      return this.apiV2ProjectsIdPurgePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore archived project
      * @param {String} id Unique or global ID of the project
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdRestorePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdRestorePost(id, callback) {
+    apiV2ProjectsIdRestorePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -427,26 +464,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/restore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdTestPlansAttributeAttributeIdDelete operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdTestPlansAttributeAttributeIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Restore archived project
+     * @param {String} id Unique or global ID of the project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdRestorePost(id) {
+      return this.apiV2ProjectsIdRestorePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete attribute from project's test plans
      *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId 
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdTestPlansAttributeAttributeIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId, callback) {
+    apiV2ProjectsIdTestPlansAttributeAttributeIdDeleteWithHttpInfo(id, attributeId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -475,17 +517,24 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/testPlans/attribute/{attributeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdTestPlansAttributePut operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdTestPlansAttributePutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete attribute from project's test plans
+     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {String} attributeId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id, attributeId) {
+      return this.apiV2ProjectsIdTestPlansAttributeAttributeIdDeleteWithHttpInfo(id, attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update attribute of project's test plans
@@ -493,9 +542,9 @@ export default class ProjectsApi {
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdTestPlansAttributePutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsIdTestPlansAttributePut(id, opts, callback) {
+    apiV2ProjectsIdTestPlansAttributePutWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['customAttributeTestPlanProjectRelationPutModel'];
       // verify the required parameter 'id' is set
@@ -520,17 +569,25 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/testPlans/attribute', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsIdTestRunsFullGet operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsIdTestRunsFullGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update attribute of project's test plans
+     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} opts.customAttributeTestPlanProjectRelationPutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsIdTestPlansAttributePut(id, opts) {
+      return this.apiV2ProjectsIdTestPlansAttributePutWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Project TestRuns full models
@@ -551,10 +608,9 @@ export default class ProjectsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectsApi~apiV2ProjectsIdTestRunsFullGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
      */
-    apiV2ProjectsIdTestRunsFullGet(id, opts, callback) {
+    apiV2ProjectsIdTestRunsFullGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -593,24 +649,44 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/testRuns/full', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsNameNameExistsGet operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsNameNameExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Boolean} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Project TestRuns full models
+     *  Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.includeTestResults 
+     * @param {Boolean} opts.mustAggregateTestResults 
+     * @param {Boolean} opts.notStarted 
+     * @param {Boolean} opts.inProgress 
+     * @param {Boolean} opts.stopped 
+     * @param {Boolean} opts.completed 
+     * @param {Date} opts.createdDateFrom 
+     * @param {Date} opts.createdDateTo 
+     * @param {String} opts.testPlanId 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunApiResult>}
      */
+    apiV2ProjectsIdTestRunsFullGet(id, opts) {
+      return this.apiV2ProjectsIdTestRunsFullGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} name 
-     * @param {module:api/ProjectsApi~apiV2ProjectsNameNameExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Boolean}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
      */
-    apiV2ProjectsNameNameExistsGet(name, callback) {
+    apiV2ProjectsNameNameExistsGetWithHttpInfo(name) {
       let postBody = null;
       // verify the required parameter 'name' is set
       if (name === undefined || name === null) {
@@ -634,26 +710,29 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/name/{name}/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsPurgeBulkPost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsPurgeBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} name 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
      */
+    apiV2ProjectsNameNameExistsGet(name) {
+      return this.apiV2ProjectsNameNameExistsGetWithHttpInfo(name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Purge multiple projects
      * @param {Object} opts Optional parameters
      * @param {module:model/ProjectSelectModel} [projectSelectModel] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsPurgeBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2ProjectsPurgeBulkPost(opts, callback) {
+    apiV2ProjectsPurgeBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['projectSelectModel'];
 
@@ -673,26 +752,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/purge/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsRestoreBulkPost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsRestoreBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Purge multiple projects
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ProjectSelectModel} opts.projectSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2ProjectsPurgeBulkPost(opts) {
+      return this.apiV2ProjectsPurgeBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore multiple projects
      * @param {Object} opts Optional parameters
      * @param {module:model/ProjectSelectModel} [projectSelectModel] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsRestoreBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2ProjectsRestoreBulkPost(opts, callback) {
+    apiV2ProjectsRestoreBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['projectSelectModel'];
 
@@ -712,17 +796,23 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/restore/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsSearchPost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ProjectShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Restore multiple projects
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ProjectSelectModel} opts.projectSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2ProjectsRestoreBulkPost(opts) {
+      return this.apiV2ProjectsRestoreBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for projects
@@ -733,10 +823,9 @@ export default class ProjectsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectsFilterModel} [projectsFilterModel] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ProjectShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
      */
-    apiV2ProjectsSearchPost(opts, callback) {
+    apiV2ProjectsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['projectsFilterModel'];
 
@@ -761,27 +850,37 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsShortsPost operation.
-     * @callback module:api/ProjectsApi~apiV2ProjectsShortsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProjectShortApiResultReply} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for projects
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/ProjectsFilterModel} opts.projectsFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
      */
+    apiV2ProjectsSearchPost(opts) {
+      return this.apiV2ProjectsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get projects short models
      *  Use case  User sets query params  User runs method execution  System return projects short models
      * @param {Object} opts Optional parameters
      * @param {module:model/GetShortProjectsApiModel} [getShortProjectsApiModel] 
-     * @param {module:api/ProjectsApi~apiV2ProjectsShortsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProjectShortApiResultReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultReply} and HTTP response
      */
-    apiV2ProjectsShortsPost(opts, callback) {
+    apiV2ProjectsShortsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['getShortProjectsApiModel'];
 
@@ -801,27 +900,33 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/shorts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createProject operation.
-     * @callback module:api/ProjectsApi~createProjectCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProjectApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get projects short models
+     *  Use case  User sets query params  User runs method execution  System return projects short models
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GetShortProjectsApiModel} opts.getShortProjectsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectShortApiResultReply}
      */
+    apiV2ProjectsShortsPost(opts) {
+      return this.apiV2ProjectsShortsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create project
      *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateProjectApiModel} [createProjectApiModel] 
-     * @param {module:api/ProjectsApi~createProjectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProjectApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectApiResult} and HTTP response
      */
-    createProject(opts, callback) {
+    createProjectWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createProjectApiModel'];
 
@@ -841,24 +946,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteProjectAutoTests operation.
-     * @callback module:api/ProjectsApi~deleteProjectAutoTestsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create project
+     *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateProjectApiModel} opts.createProjectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectApiResult}
      */
+    createProject(opts) {
+      return this.createProjectWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete all autotests from project
      * @param {String} id Unique or global ID of the project
-     * @param {module:api/ProjectsApi~deleteProjectAutoTestsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteProjectAutoTests(id, callback) {
+    deleteProjectAutoTestsWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -882,17 +994,22 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/autoTests', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAllProjects operation.
-     * @callback module:api/ProjectsApi~getAllProjectsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ProjectShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete all autotests from project
+     * @param {String} id Unique or global ID of the project
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteProjectAutoTests(id) {
+      return this.deleteProjectAutoTestsWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all projects
@@ -905,10 +1022,9 @@ export default class ProjectsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectsApi~getAllProjectsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ProjectShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
      */
-    getAllProjects(opts, callback) {
+    getAllProjectsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -935,26 +1051,38 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutoTestsNamespaces operation.
-     * @callback module:api/ProjectsApi~getAutoTestsNamespacesCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestNamespaceApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all projects
+     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted parameters
+     * @param {String} opts.projectName 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
      */
+    getAllProjects(opts) {
+      return this.getAllProjectsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get namespaces of autotests in project
      *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectsApi~getAutoTestsNamespacesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestNamespaceApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestNamespaceApiResult>} and HTTP response
      */
-    getAutoTestsNamespaces(id, callback) {
+    getAutoTestsNamespacesWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -978,26 +1106,31 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/autoTestsNamespaces', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getProjectById operation.
-     * @callback module:api/ProjectsApi~getProjectByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ProjectModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get namespaces of autotests in project
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestNamespaceApiResult>}
      */
+    getAutoTestsNamespaces(id) {
+      return this.getAutoTestsNamespacesWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project by ID
      *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectsApi~getProjectByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProjectModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectModel} and HTTP response
      */
-    getProjectById(id, callback) {
+    getProjectByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1021,17 +1154,23 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestPlansByProjectId operation.
-     * @callback module:api/ProjectsApi~getTestPlansByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPlanModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get project by ID
+     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectModel}
      */
+    getProjectById(id) {
+      return this.getProjectByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project test plans
@@ -1039,10 +1178,9 @@ export default class ProjectsApi {
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] If result must consist of only actual/archived test plans
-     * @param {module:api/ProjectsApi~getTestPlansByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPlanModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanModel>} and HTTP response
      */
-    getTestPlansByProjectId(id, opts, callback) {
+    getTestPlansByProjectIdWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -1068,17 +1206,25 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/testPlans', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestRunsByProjectId operation.
-     * @callback module:api/ProjectsApi~getTestRunsByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunV2ApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get project test plans
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted If result must consist of only actual/archived test plans
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPlanModel>}
      */
+    getTestPlansByProjectId(id, opts) {
+      return this.getTestPlansByProjectIdWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project test runs
@@ -1097,10 +1243,9 @@ export default class ProjectsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectsApi~getTestRunsByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunV2ApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunV2ApiResult>} and HTTP response
      */
-    getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts, callback) {
+    getTestRunsByProjectIdWithHttpInfo(id, notStarted, inProgress, stopped, completed, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -1153,26 +1298,45 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{id}/testRuns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateProject operation.
-     * @callback module:api/ProjectsApi~updateProjectCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get project test runs
+     *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+     * @param {String} id Project internal (UUID) or global (integer) identifier
+     * @param {Boolean} notStarted 
+     * @param {Boolean} inProgress 
+     * @param {Boolean} stopped 
+     * @param {Boolean} completed 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.createdDateFrom 
+     * @param {Date} opts.createdDateTo 
+     * @param {String} opts.testPlanId 
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunV2ApiResult>}
      */
+    getTestRunsByProjectId(id, notStarted, inProgress, stopped, completed, opts) {
+      return this.getTestRunsByProjectIdWithHttpInfo(id, notStarted, inProgress, stopped, completed, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update project
      *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateProjectApiModel} [updateProjectApiModel] 
-     * @param {module:api/ProjectsApi~updateProjectCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateProject(opts, callback) {
+    updateProjectWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateProjectApiModel'];
 
@@ -1192,8 +1356,22 @@ export default class ProjectsApi {
       return this.apiClient.callApi(
         '/api/v2/projects', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update project
+     *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateProjectApiModel} opts.updateProjectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateProject(opts) {
+      return this.updateProjectWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

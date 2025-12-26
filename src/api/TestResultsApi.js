@@ -31,7 +31,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestResults service.
 * @module api/TestResultsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class TestResultsApi {
 
@@ -47,22 +47,14 @@ export default class TestResultsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GetExternalFormApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {String} externalProjectId 
      * @param {Object} opts Optional parameters
      * @param {module:model/TestResultsSelectApiModel} [testResultsSelectApiModel] 
-     * @param {module:api/TestResultsApi~apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetExternalFormApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExternalFormApiResult} and HTTP response
      */
-    apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost(externalProjectId, opts, callback) {
+    apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostWithHttpInfo(externalProjectId, opts) {
       opts = opts || {};
       let postBody = opts['testResultsSelectApiModel'];
       // verify the required parameter 'externalProjectId' is set
@@ -87,26 +79,31 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/external-projects/{externalProjectId}/defects/external-forms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DefectApiModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} externalProjectId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestResultsSelectApiModel} opts.testResultsSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GetExternalFormApiResult}
      */
+    apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPost(externalProjectId, opts) {
+      return this.apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostWithHttpInfo(externalProjectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} externalProjectId 
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateDefectApiModel} [createDefectApiModel] 
-     * @param {module:api/TestResultsApi~apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DefectApiModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DefectApiModel} and HTTP response
      */
-    apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost(externalProjectId, opts, callback) {
+    apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostWithHttpInfo(externalProjectId, opts) {
       opts = opts || {};
       let postBody = opts['createDefectApiModel'];
       // verify the required parameter 'externalProjectId' is set
@@ -131,25 +128,30 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/external-projects/{externalProjectId}/defects', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdAggregatedGet operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdAggregatedGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestResultResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} externalProjectId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateDefectApiModel} opts.createDefectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DefectApiModel}
      */
+    apiV2TestResultsExternalProjectsExternalProjectIdDefectsPost(externalProjectId, opts) {
+      return this.apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostWithHttpInfo(externalProjectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test result by ID aggregated with previous results
      * @param {String} id Test result unique ID
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdAggregatedGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestResultResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultResponse} and HTTP response
      */
-    apiV2TestResultsIdAggregatedGet(id, callback) {
+    apiV2TestResultsIdAggregatedGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -173,25 +175,30 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/aggregated', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdAttachmentsAttachmentIdPut operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdAttachmentsAttachmentIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get test result by ID aggregated with previous results
+     * @param {String} id Test result unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResultResponse}
      */
+    apiV2TestResultsIdAggregatedGet(id) {
+      return this.apiV2TestResultsIdAggregatedGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Attach file to the test result
      * @param {String} id Test result unique ID
      * @param {String} attachmentId Attachment unique ID
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdAttachmentsAttachmentIdPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestResultsIdAttachmentsAttachmentIdPut(id, attachmentId, callback) {
+    apiV2TestResultsIdAttachmentsAttachmentIdPutWithHttpInfo(id, attachmentId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -220,25 +227,30 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments/{attachmentId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdAttachmentsInfoGet operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdAttachmentsInfoGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AttachmentApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Attach file to the test result
+     * @param {String} id Test result unique ID
+     * @param {String} attachmentId Attachment unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestResultsIdAttachmentsAttachmentIdPut(id, attachmentId) {
+      return this.apiV2TestResultsIdAttachmentsAttachmentIdPutWithHttpInfo(id, attachmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test result attachments meta-information
      * @param {String} id Test result unique ID
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdAttachmentsInfoGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AttachmentApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AttachmentApiResult>} and HTTP response
      */
-    apiV2TestResultsIdAttachmentsInfoGet(id, callback) {
+    apiV2TestResultsIdAttachmentsInfoGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -262,25 +274,29 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments/info', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdGet operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestResultResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get test result attachments meta-information
+     * @param {String} id Test result unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AttachmentApiResult>}
      */
+    apiV2TestResultsIdAttachmentsInfoGet(id) {
+      return this.apiV2TestResultsIdAttachmentsInfoGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test result by ID
      * @param {String} id Test result unique ID
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestResultResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultResponse} and HTTP response
      */
-    apiV2TestResultsIdGet(id, callback) {
+    apiV2TestResultsIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -304,26 +320,31 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdPut operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get test result by ID
+     * @param {String} id Test result unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResultResponse}
      */
+    apiV2TestResultsIdGet(id) {
+      return this.apiV2TestResultsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit test result by ID
      * @param {String} id Test result unique ID
      * @param {Object} opts Optional parameters
      * @param {module:model/TestResultUpdateV2Request} [testResultUpdateV2Request] 
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2TestResultsIdPut(id, opts, callback) {
+    apiV2TestResultsIdPutWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['testResultUpdateV2Request'];
       // verify the required parameter 'id' is set
@@ -348,25 +369,31 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsIdRerunsGet operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsIdRerunsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/RerunsModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Edit test result by ID
+     * @param {String} id Test result unique ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestResultUpdateV2Request} opts.testResultUpdateV2Request 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2TestResultsIdPut(id, opts) {
+      return this.apiV2TestResultsIdPutWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get reruns
      * @param {String} id Test result unique ID
-     * @param {module:api/TestResultsApi~apiV2TestResultsIdRerunsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/RerunsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RerunsModel} and HTTP response
      */
-    apiV2TestResultsIdRerunsGet(id, callback) {
+    apiV2TestResultsIdRerunsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -390,17 +417,22 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/reruns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsSearchPost operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestResultShortResponse>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get reruns
+     * @param {String} id Test result unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RerunsModel}
      */
+    apiV2TestResultsIdRerunsGet(id) {
+      return this.apiV2TestResultsIdRerunsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for test results
@@ -411,10 +443,9 @@ export default class TestResultsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/TestResultsFilterApiModel} [testResultsFilterApiModel] 
-     * @param {module:api/TestResultsApi~apiV2TestResultsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestResultShortResponse>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultShortResponse>} and HTTP response
      */
-    apiV2TestResultsSearchPost(opts, callback) {
+    apiV2TestResultsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testResultsFilterApiModel'];
 
@@ -439,26 +470,36 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestResultsStatisticsFilterPost operation.
-     * @callback module:api/TestResultsApi~apiV2TestResultsStatisticsFilterPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TestResultsStatisticsApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for test results
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/TestResultsFilterApiModel} opts.testResultsFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultShortResponse>}
      */
+    apiV2TestResultsSearchPost(opts) {
+      return this.apiV2TestResultsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for test results and extract statistics
      * @param {Object} opts Optional parameters
      * @param {module:model/TestResultsFilterApiModel} [testResultsFilterApiModel] 
-     * @param {module:api/TestResultsApi~apiV2TestResultsStatisticsFilterPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TestResultsStatisticsApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultsStatisticsApiResult} and HTTP response
      */
-    apiV2TestResultsStatisticsFilterPost(opts, callback) {
+    apiV2TestResultsStatisticsFilterPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testResultsFilterApiModel'];
 
@@ -478,17 +519,23 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/statistics/filter', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createAttachment operation.
-     * @callback module:api/TestResultsApi~createAttachmentCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Search for test results and extract statistics
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestResultsFilterApiModel} opts.testResultsFilterApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestResultsStatisticsApiResult}
      */
+    apiV2TestResultsStatisticsFilterPost(opts) {
+      return this.apiV2TestResultsStatisticsFilterPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Upload and link attachment to TestResult
@@ -496,9 +543,9 @@ export default class TestResultsApi {
      * @param {String} id Test result internal identifier (guid format)
      * @param {Object} opts Optional parameters
      * @param {File} [file] Select file
-     * @param {module:api/TestResultsApi~createAttachmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    createAttachment(id, opts, callback) {
+    createAttachmentWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -524,26 +571,34 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAttachment operation.
-     * @callback module:api/TestResultsApi~deleteAttachmentCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Upload and link attachment to TestResult
+     *  Use case  User sets testResultId  User attaches a file  System creates attachment and links it to the test result  System returns attachment identifier
+     * @param {String} id Test result internal identifier (guid format)
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.file Select file
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    createAttachment(id, opts) {
+      return this.createAttachmentWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Remove attachment and unlink from TestResult
      *  Use case  User sets testResultId and attachmentId  User attaches a file  User runs method execution  System deletes attachment and unlinks it from the test result  System returns attachment identifier
      * @param {String} id Test result internal identifier (guid format)
      * @param {String} attachmentId Attachment internal identifier (guid format)
-     * @param {module:api/TestResultsApi~deleteAttachmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteAttachment(id, attachmentId, callback) {
+    deleteAttachmentWithHttpInfo(id, attachmentId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -572,17 +627,24 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments/{attachmentId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the downloadAttachment operation.
-     * @callback module:api/TestResultsApi~downloadAttachmentCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Remove attachment and unlink from TestResult
+     *  Use case  User sets testResultId and attachmentId  User attaches a file  User runs method execution  System deletes attachment and unlinks it from the test result  System returns attachment identifier
+     * @param {String} id Test result internal identifier (guid format)
+     * @param {String} attachmentId Attachment internal identifier (guid format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteAttachment(id, attachmentId) {
+      return this.deleteAttachmentWithHttpInfo(id, attachmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get attachment of TestResult
@@ -595,9 +657,9 @@ export default class TestResultsApi {
      * @param {module:model/ImageResizeType} [resizeType] Type of resizing to apply to the result image
      * @param {String} [backgroundColor] Color of the background if the `resizeType` is `AddBackgroundStripes`
      * @param {Boolean} [preview] If image must be converted to a preview (lower quality, no animation)
-     * @param {module:api/TestResultsApi~downloadAttachmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    downloadAttachment(attachmentId, id, opts, callback) {
+    downloadAttachmentWithHttpInfo(attachmentId, id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'attachmentId' is set
@@ -632,27 +694,39 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments/{attachmentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAttachment operation.
-     * @callback module:api/TestResultsApi~getAttachmentCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttachmentApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get attachment of TestResult
+     *  Use case  User sets attachmentId and testResultId  [Optional] User sets resize configuration  User runs method execution  System search attachments by the attachmentId and the testResultId  [Optional] If resize configuration is set, System resizes the attachment according to the resize                     configuration  [Optional] Otherwise, System does not resize the attachment  System returns attachment as a file
+     * @param {String} attachmentId Attachment internal identifier (guid format)
+     * @param {String} id Test result internal identifier (guid format)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.width Width of the result image
+     * @param {Number} opts.height Height of the result image
+     * @param {module:model/ImageResizeType} opts.resizeType Type of resizing to apply to the result image
+     * @param {String} opts.backgroundColor Color of the background if the `resizeType` is `AddBackgroundStripes`
+     * @param {Boolean} opts.preview If image must be converted to a preview (lower quality, no animation)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    downloadAttachment(attachmentId, id, opts) {
+      return this.downloadAttachmentWithHttpInfo(attachmentId, id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Metadata of TestResult's attachment
      *  Use case  User sets attachmentId and testResultId  User runs method execution  System search attachment by the attachmentId and the testResultId  System returns attachment data
      * @param {String} id Test result internal identifier (guid format)
      * @param {String} attachmentId Attachment internal identifier (guid format)
-     * @param {module:api/TestResultsApi~getAttachmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttachmentApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentApiResult} and HTTP response
      */
-    getAttachment(id, attachmentId, callback) {
+    getAttachmentWithHttpInfo(id, attachmentId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -681,26 +755,32 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments/{attachmentId}/info', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAttachments operation.
-     * @callback module:api/TestResultsApi~getAttachmentsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AttachmentApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Metadata of TestResult's attachment
+     *  Use case  User sets attachmentId and testResultId  User runs method execution  System search attachment by the attachmentId and the testResultId  System returns attachment data
+     * @param {String} id Test result internal identifier (guid format)
+     * @param {String} attachmentId Attachment internal identifier (guid format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentApiResult}
      */
+    getAttachment(id, attachmentId) {
+      return this.getAttachmentWithHttpInfo(id, attachmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all attachments of TestResult
      *  Use case  User sets testResultId  User runs method execution  System search all attachments of the test result  System returns attachments enumeration
      * @param {String} id Test result internal identifier (guid format)
-     * @param {module:api/TestResultsApi~getAttachmentsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AttachmentApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AttachmentApiResult>} and HTTP response
      */
-    getAttachments(id, callback) {
+    getAttachmentsWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -724,8 +804,21 @@ export default class TestResultsApi {
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/attachments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get all attachments of TestResult
+     *  Use case  User sets testResultId  User runs method execution  System search all attachments of the test result  System returns attachments enumeration
+     * @param {String} id Test result internal identifier (guid format)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AttachmentApiResult>}
+     */
+    getAttachments(id) {
+      return this.getAttachmentsWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

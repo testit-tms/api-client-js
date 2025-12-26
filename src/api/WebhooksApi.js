@@ -29,7 +29,7 @@ import WebhooksUpdateApiResult from '../model/WebhooksUpdateApiResult';
 /**
 * Webhooks service.
 * @module api/WebhooksApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class WebhooksApi {
 
@@ -45,20 +45,13 @@ export default class WebhooksApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2WebhooksDelete operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/WebhooksDeleteApiModel} [webhooksDeleteApiModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WebhooksDelete(opts, callback) {
+    apiV2WebhooksDeleteWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['webhooksDeleteApiModel'];
 
@@ -78,26 +71,30 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksGet operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WebHookModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebhooksDeleteApiModel} opts.webhooksDeleteApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WebhooksDelete(opts) {
+      return this.apiV2WebhooksDeleteWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all webhooks
      * @param {Object} opts Optional parameters
      * @param {String} [projectId] Project unique ID
-     * @param {module:api/WebhooksApi~apiV2WebhooksGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WebHookModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookModel>} and HTTP response
      */
-    apiV2WebhooksGet(opts, callback) {
+    apiV2WebhooksGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -118,24 +115,30 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksIdDelete operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get all webhooks
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.projectId Project unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHookModel>}
      */
+    apiV2WebhooksGet(opts) {
+      return this.apiV2WebhooksGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete webhook by ID
      * @param {String} id Webhook unique ID
-     * @param {module:api/WebhooksApi~apiV2WebhooksIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WebhooksIdDelete(id, callback) {
+    apiV2WebhooksIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -159,25 +162,29 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksIdGet operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebHookModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete webhook by ID
+     * @param {String} id Webhook unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WebhooksIdDelete(id) {
+      return this.apiV2WebhooksIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get webhook by ID
      * @param {String} id Webhook unique ID
-     * @param {module:api/WebhooksApi~apiV2WebhooksIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebHookModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookModel} and HTTP response
      */
-    apiV2WebhooksIdGet(id, callback) {
+    apiV2WebhooksIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -201,27 +208,31 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksIdPut operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebHookModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get webhook by ID
+     * @param {String} id Webhook unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHookModel}
      */
+    apiV2WebhooksIdGet(id) {
+      return this.apiV2WebhooksIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Edit webhook by ID
      * @param {String} id Webhook unique ID
      * @param {Object} opts Optional parameters
      * @param {module:model/WebHookPostModel} [webHookPostModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebHookModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookModel} and HTTP response
      */
-    apiV2WebhooksIdPut(id, opts, callback) {
+    apiV2WebhooksIdPutWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['webHookPostModel'];
       // verify the required parameter 'id' is set
@@ -246,26 +257,32 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/{id}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksPost operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebHookModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Edit webhook by ID
+     * @param {String} id Webhook unique ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebHookPostModel} opts.webHookPostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHookModel}
      */
+    apiV2WebhooksIdPut(id, opts) {
+      return this.apiV2WebhooksIdPutWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create webhook
      * @param {Object} opts Optional parameters
      * @param {module:model/WebHookPostModel} [webHookPostModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebHookModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookModel} and HTTP response
      */
-    apiV2WebhooksPost(opts, callback) {
+    apiV2WebhooksPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['webHookPostModel'];
 
@@ -285,25 +302,30 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksPut operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebhooksUpdateApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create webhook
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebHookPostModel} opts.webHookPostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebHookModel}
      */
+    apiV2WebhooksPost(opts) {
+      return this.apiV2WebhooksPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/WebhooksUpdateApiModel} [webhooksUpdateApiModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebhooksUpdateApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebhooksUpdateApiResult} and HTTP response
      */
-    apiV2WebhooksPut(opts, callback) {
+    apiV2WebhooksPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['webhooksUpdateApiModel'];
 
@@ -323,17 +345,22 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksSearchPost operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WebHookModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebhooksUpdateApiModel} opts.webhooksUpdateApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebhooksUpdateApiResult}
      */
+    apiV2WebhooksPut(opts) {
+      return this.apiV2WebhooksPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for webhooks
@@ -344,10 +371,9 @@ export default class WebhooksApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/SearchWebhooksQueryModel} [searchWebhooksQueryModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WebHookModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookModel>} and HTTP response
      */
-    apiV2WebhooksSearchPost(opts, callback) {
+    apiV2WebhooksSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['searchWebhooksQueryModel'];
 
@@ -372,27 +398,37 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksSpecialVariablesGet operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksSpecialVariablesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for webhooks
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/SearchWebhooksQueryModel} opts.searchWebhooksQueryModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WebHookModel>}
      */
+    apiV2WebhooksSearchPost(opts) {
+      return this.apiV2WebhooksSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get special variables for webhook event type
      * @param {Object} opts Optional parameters
      * @param {module:model/WebHookEventType} [eventType] Webhook event type
      * @param {module:model/WebhookVariablesType} [variablesType] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksSpecialVariablesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2WebhooksSpecialVariablesGet(opts, callback) {
+    apiV2WebhooksSpecialVariablesGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -414,26 +450,32 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/specialVariables', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WebhooksTestPost operation.
-     * @callback module:api/WebhooksApi~apiV2WebhooksTestPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WebhookResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get special variables for webhook event type
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebHookEventType} opts.eventType Webhook event type
+     * @param {module:model/WebhookVariablesType} opts.variablesType 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2WebhooksSpecialVariablesGet(opts) {
+      return this.apiV2WebhooksSpecialVariablesGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Test webhook's url
      * @param {Object} opts Optional parameters
      * @param {module:model/WebHookTestModel} [webHookTestModel] 
-     * @param {module:api/WebhooksApi~apiV2WebhooksTestPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WebhookResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebhookResponse} and HTTP response
      */
-    apiV2WebhooksTestPost(opts, callback) {
+    apiV2WebhooksTestPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['webHookTestModel'];
 
@@ -453,8 +495,21 @@ export default class WebhooksApi {
       return this.apiClient.callApi(
         '/api/v2/webhooks/test', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Test webhook's url
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WebHookTestModel} opts.webHookTestModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WebhookResponse}
+     */
+    apiV2WebhooksTestPost(opts) {
+      return this.apiV2WebhooksTestPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

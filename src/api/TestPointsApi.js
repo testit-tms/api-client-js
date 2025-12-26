@@ -23,7 +23,7 @@ import WorkItemModel from '../model/WorkItemModel';
 /**
 * TestPoints service.
 * @module api/TestPointsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class TestPointsApi {
 
@@ -39,21 +39,13 @@ export default class TestPointsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2TestPointsIdTestRunsGet operation.
-     * @callback module:api/TestPointsApi~apiV2TestPointsIdTestRunsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all test runs which use test point
      * @param {String} id Test point unique ID
-     * @param {module:api/TestPointsApi~apiV2TestPointsIdTestRunsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
      */
-    apiV2TestPointsIdTestRunsGet(id, callback) {
+    apiV2TestPointsIdTestRunsGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -77,25 +69,29 @@ export default class TestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/testPoints/{id}/testRuns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPointsIdWorkItemGet operation.
-     * @callback module:api/TestPointsApi~apiV2TestPointsIdWorkItemGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all test runs which use test point
+     * @param {String} id Test point unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunApiResult>}
      */
+    apiV2TestPointsIdTestRunsGet(id) {
+      return this.apiV2TestPointsIdTestRunsGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get work item represented by test point
      * @param {String} id Test point unique ID
-     * @param {module:api/TestPointsApi~apiV2TestPointsIdWorkItemGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
      */
-    apiV2TestPointsIdWorkItemGet(id, callback) {
+    apiV2TestPointsIdWorkItemGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -119,17 +115,22 @@ export default class TestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/testPoints/{id}/workItem', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPointsSearchIdPost operation.
-     * @callback module:api/TestPointsApi~apiV2TestPointsSearchIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get work item represented by test point
+     * @param {String} id Test point unique ID
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
      */
+    apiV2TestPointsIdWorkItemGet(id) {
+      return this.apiV2TestPointsIdWorkItemGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for test points and extract IDs only
@@ -140,10 +141,9 @@ export default class TestPointsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/TestPointFilterRequestModel} [testPointFilterRequestModel] 
-     * @param {module:api/TestPointsApi~apiV2TestPointsSearchIdPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2TestPointsSearchIdPost(opts, callback) {
+    apiV2TestPointsSearchIdPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testPointFilterRequestModel'];
 
@@ -168,17 +168,28 @@ export default class TestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/testPoints/search/id', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2TestPointsSearchPost operation.
-     * @callback module:api/TestPointsApi~apiV2TestPointsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestPointShortResponseModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for test points and extract IDs only
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/TestPointFilterRequestModel} opts.testPointFilterRequestModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2TestPointsSearchIdPost(opts) {
+      return this.apiV2TestPointsSearchIdPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for test points
@@ -189,10 +200,9 @@ export default class TestPointsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/TestPointFilterRequestModel} [testPointFilterRequestModel] 
-     * @param {module:api/TestPointsApi~apiV2TestPointsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestPointShortResponseModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointShortResponseModel>} and HTTP response
      */
-    apiV2TestPointsSearchPost(opts, callback) {
+    apiV2TestPointsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['testPointFilterRequestModel'];
 
@@ -217,8 +227,26 @@ export default class TestPointsApi {
       return this.apiClient.callApi(
         '/api/v2/testPoints/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Search for test points
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/TestPointFilterRequestModel} opts.testPointFilterRequestModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointShortResponseModel>}
+     */
+    apiV2TestPointsSearchPost(opts) {
+      return this.apiV2TestPointsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

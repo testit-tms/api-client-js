@@ -31,13 +31,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 //Bearer or PrivateToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.BackgroundJobsApi();
-apiInstance.apiV2BackgroundJobsCompletedDelete((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2BackgroundJobsCompletedDelete().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -83,13 +82,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2BackgroundJobsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2BackgroundJobsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -136,13 +134,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.BackgroundJobsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2BackgroundJobsIdCancelPost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2BackgroundJobsIdCancelPost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -185,13 +182,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.BackgroundJobsApi();
 let id = "id_example"; // String | Unique ID of the background job
-apiInstance.apiV2BackgroundJobsIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2BackgroundJobsIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -234,13 +230,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.BackgroundJobsApi();
 let id = "id_example"; // String | Unique ID of the background job
-apiInstance.apiV2BackgroundJobsIdStatusGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2BackgroundJobsIdStatusGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -290,13 +285,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'backgroundJobFilterModel': new TestitApiClient.BackgroundJobFilterModel() // BackgroundJobFilterModel | 
 };
-apiInstance.apiV2BackgroundJobsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2BackgroundJobsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
