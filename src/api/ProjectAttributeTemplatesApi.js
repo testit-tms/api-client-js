@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributeTemplates service.
 * @module api/ProjectAttributeTemplatesApi
-* @version 7.0.0-rc3
+* @version 7.0.0-rc4
 */
 export default class ProjectAttributeTemplatesApi {
 

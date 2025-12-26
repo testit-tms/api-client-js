@@ -17,7 +17,7 @@ import AvailableFailureCategory from './AvailableFailureCategory';
 /**
  * The AutoTestResultReasonsCountItemModel model module.
  * @module model/AutoTestResultReasonsCountItemModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class AutoTestResultReasonsCountItemModel {
     /**

@@ -23,7 +23,7 @@ import WorkItemModel from '../model/WorkItemModel';
 /**
 * TestPoints service.
 * @module api/TestPointsApi
-* @version 7.0.0-rc3
+* @version 7.0.0-rc4
 */
 export default class TestPointsApi {
 

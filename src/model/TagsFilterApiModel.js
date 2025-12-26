@@ -17,7 +17,7 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 /**
  * The TagsFilterApiModel model module.
  * @module model/TagsFilterApiModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class TagsFilterApiModel {
     /**

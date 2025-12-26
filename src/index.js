@@ -584,7 +584,7 @@ import WorkItemsCommentsApi from './api/WorkItemsCommentsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.0.0-rc3
+* @version 7.0.0-rc4
 */
 export {
     /**

@@ -19,7 +19,7 @@ import TestSuiteWithChildrenModel from './TestSuiteWithChildrenModel';
 /**
  * The TestPlanWithTestSuiteTreeModel model module.
  * @module model/TestPlanWithTestSuiteTreeModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class TestPlanWithTestSuiteTreeModel {
     /**

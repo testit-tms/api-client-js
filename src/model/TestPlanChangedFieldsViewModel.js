@@ -25,7 +25,7 @@ import TestSuiteChangeViewModelChangedFieldViewModel from './TestSuiteChangeView
 /**
  * The TestPlanChangedFieldsViewModel model module.
  * @module model/TestPlanChangedFieldsViewModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class TestPlanChangedFieldsViewModel {
     /**

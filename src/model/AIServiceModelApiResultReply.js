@@ -17,7 +17,7 @@ import AIServiceModelApiResult from './AIServiceModelApiResult';
 /**
  * The AIServiceModelApiResultReply model module.
  * @module model/AIServiceModelApiResultReply
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class AIServiceModelApiResultReply {
     /**

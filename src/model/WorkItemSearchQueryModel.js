@@ -24,7 +24,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemSearchQueryModel model module.
  * @module model/WorkItemSearchQueryModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class WorkItemSearchQueryModel {
     /**

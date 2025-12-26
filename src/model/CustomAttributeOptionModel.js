@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeOptionModel model module.
  * @module model/CustomAttributeOptionModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class CustomAttributeOptionModel {
     /**

@@ -46,7 +46,7 @@ class ApiClient {
          */
         this.authentications = {
             'Bearer': {type: 'apiKey', 'in': 'header', name: 'Authorization'},
-            'PrivateToken': {type: 'bearer', 'in': 'header', name: 'Authorization'},
+            'PrivateToken': {type: 'apiKey', 'in': 'header', name: 'Authorization'},
         }
 
 	/**

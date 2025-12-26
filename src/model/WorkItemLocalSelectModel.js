@@ -18,7 +18,7 @@ import WorkItemLocalFilterModel from './WorkItemLocalFilterModel';
 /**
  * The WorkItemLocalSelectModel model module.
  * @module model/WorkItemLocalSelectModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class WorkItemLocalSelectModel {
     /**

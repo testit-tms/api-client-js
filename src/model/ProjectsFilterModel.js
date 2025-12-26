@@ -19,7 +19,7 @@ import ProjectTypeModel from './ProjectTypeModel';
 /**
  * The ProjectsFilterModel model module.
  * @module model/ProjectsFilterModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class ProjectsFilterModel {
     /**

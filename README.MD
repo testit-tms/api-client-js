@@ -41,10 +41,9 @@ var TestitApiClient = require('testit-api-client');
 
 var defaultClient = TestitApiClient.ApiClient.instance;
 // Configure API key authorization: Bearer or PrivateToken
-var auth = defaultClient.authentications['Bearer'];
+var auth = defaultClient.authentications['Bearer or PrivateToken'];
 auth.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//auth.apiKeyPrefix['Authorization'] = "Token"
+auth.apiKeyPrefix = "PrivateToken"
 
 var api = new TestitApiClient.AttachmentsApi()
 var id = "id_example"; // {String} 

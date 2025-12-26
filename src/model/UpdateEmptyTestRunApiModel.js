@@ -18,7 +18,7 @@ import UpdateLinkApiModel from './UpdateLinkApiModel';
 /**
  * The UpdateEmptyTestRunApiModel model module.
  * @module model/UpdateEmptyTestRunApiModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class UpdateEmptyTestRunApiModel {
     /**

@@ -18,7 +18,7 @@ import ProjectTypeModel from './ProjectTypeModel';
 /**
  * The ProjectModel model module.
  * @module model/ProjectModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class ProjectModel {
     /**

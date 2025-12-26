@@ -18,7 +18,7 @@ import TestPlanTestPointsSearchStatusCountersApiResult from './TestPlanTestPoint
 /**
  * The TestPlanTestPointsGroupSearchApiResult model module.
  * @module model/TestPlanTestPointsGroupSearchApiResult
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class TestPlanTestPointsGroupSearchApiResult {
     /**

@@ -17,7 +17,7 @@ import UserWithRankModel from './UserWithRankModel';
 /**
  * The WorkItemCommentModel model module.
  * @module model/WorkItemCommentModel
- * @version 7.0.0-rc3
+ * @version 7.0.0-rc4
  */
 class WorkItemCommentModel {
     /**
