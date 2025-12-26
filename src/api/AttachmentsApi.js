@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Attachments service.
 * @module api/AttachmentsApi
-* @version 7.0.0-rc4
+* @version 7.0.0-rc5
 */
 export default class AttachmentsApi {
 

@@ -18,7 +18,7 @@ import ProjectFailureCategoryApiResult from './ProjectFailureCategoryApiResult';
 /**
  * The ProjectFailureCategoryGroupItemApiResult model module.
  * @module model/ProjectFailureCategoryGroupItemApiResult
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class ProjectFailureCategoryGroupItemApiResult {
     /**

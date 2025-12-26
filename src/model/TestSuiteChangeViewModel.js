@@ -17,7 +17,7 @@ import ShortConfiguration from './ShortConfiguration';
 /**
  * The TestSuiteChangeViewModel model module.
  * @module model/TestSuiteChangeViewModel
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class TestSuiteChangeViewModel {
     /**

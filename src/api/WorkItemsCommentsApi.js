@@ -22,7 +22,7 @@ import WorkItemCommentPutModel from '../model/WorkItemCommentPutModel';
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.0.0-rc4
+* @version 7.0.0-rc5
 */
 export default class WorkItemsCommentsApi {
 

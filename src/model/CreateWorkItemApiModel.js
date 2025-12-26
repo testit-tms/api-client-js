@@ -25,7 +25,7 @@ import WorkItemStateApiModel from './WorkItemStateApiModel';
 /**
  * The CreateWorkItemApiModel model module.
  * @module model/CreateWorkItemApiModel
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class CreateWorkItemApiModel {
     /**

@@ -17,7 +17,7 @@ import TestSuiteTypeApiResult from './TestSuiteTypeApiResult';
 /**
  * The TestSuiteHierarchyApiResult model module.
  * @module model/TestSuiteHierarchyApiResult
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class TestSuiteHierarchyApiResult {
     /**

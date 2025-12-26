@@ -19,7 +19,7 @@ import TestPointShortModel from './TestPointShortModel';
 /**
  * The TestResultV2ShortModel model module.
  * @module model/TestResultV2ShortModel
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class TestResultV2ShortModel {
     /**

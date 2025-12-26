@@ -18,7 +18,7 @@ import TestPlanStatusModel from './TestPlanStatusModel';
 /**
  * The TestPlanModel model module.
  * @module model/TestPlanModel
- * @version 7.0.0-rc4
+ * @version 7.0.0-rc5
  */
 class TestPlanModel {
     /**
