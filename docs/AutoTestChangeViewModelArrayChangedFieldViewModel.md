@@ -1,10 +1,10 @@
-# AutoTestChangeViewModelArrayChangedFieldViewModel
+# TestitApiClient.AutoTestChangeViewModelArrayChangedFieldViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **oldValue** | [**List**](AutoTestChangeViewModel.md) |  | [optional] [default to null] |
-| **newValue** | [**List**](AutoTestChangeViewModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**oldValue** | [**[AutoTestChangeViewModel]**](AutoTestChangeViewModel.md) |  | [optional] 
+**newValue** | [**[AutoTestChangeViewModel]**](AutoTestChangeViewModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

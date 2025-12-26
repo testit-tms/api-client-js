@@ -1,8 +1,16 @@
-# ExternalIssueApiField
-## Properties
+# TestitApiClient.ExternalIssueApiField
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Id` (value: `"Id"`)
+
+* `Type` (value: `"Type"`)
+
+* `Priority` (value: `"Priority"`)
+
+* `Status` (value: `"Status"`)
+
+* `Assignee` (value: `"Assignee"`)
+
 

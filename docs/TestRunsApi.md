@@ -1,52 +1,78 @@
-# TestRunsApi
+# TestitApiClient.TestRunsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2TestRunsDelete**](TestRunsApi.md#apiV2TestRunsDelete) | **DELETE** /api/v2/testRuns | Delete multiple test runs |
-| [**apiV2TestRunsIdAutoTestsNamespacesGet**](TestRunsApi.md#apiV2TestRunsIdAutoTestsNamespacesGet) | **GET** /api/v2/testRuns/{id}/autoTestsNamespaces | Get autotest classes and namespaces in test run |
-| [**apiV2TestRunsIdDelete**](TestRunsApi.md#apiV2TestRunsIdDelete) | **DELETE** /api/v2/testRuns/{id} | Delete test run |
-| [**apiV2TestRunsIdPurgePost**](TestRunsApi.md#apiV2TestRunsIdPurgePost) | **POST** /api/v2/testRuns/{id}/purge | Permanently delete test run from archive |
-| [**apiV2TestRunsIdRerunsPost**](TestRunsApi.md#apiV2TestRunsIdRerunsPost) | **POST** /api/v2/testRuns/{id}/reruns | Manual autotests rerun in test run |
-| [**apiV2TestRunsIdRestorePost**](TestRunsApi.md#apiV2TestRunsIdRestorePost) | **POST** /api/v2/testRuns/{id}/restore | Restore test run from the archive |
-| [**apiV2TestRunsIdStatisticsFilterPost**](TestRunsApi.md#apiV2TestRunsIdStatisticsFilterPost) | **POST** /api/v2/testRuns/{id}/statistics/filter | Search for the test run test results and build statistics |
-| [**apiV2TestRunsIdTestPointsResultsGet**](TestRunsApi.md#apiV2TestRunsIdTestPointsResultsGet) | **GET** /api/v2/testRuns/{id}/testPoints/results | Get test results from the test run grouped by test points |
-| [**apiV2TestRunsIdTestResultsBulkPut**](TestRunsApi.md#apiV2TestRunsIdTestResultsBulkPut) | **PUT** /api/v2/testRuns/{id}/testResults/bulk | Partial edit of multiple test results in the test run |
-| [**apiV2TestRunsIdTestResultsLastModifiedModificationDateGet**](TestRunsApi.md#apiV2TestRunsIdTestResultsLastModifiedModificationDateGet) | **GET** /api/v2/testRuns/{id}/testResults/lastModified/modificationDate | Get modification date of last test result of the test run |
-| [**apiV2TestRunsPurgeBulkPost**](TestRunsApi.md#apiV2TestRunsPurgeBulkPost) | **POST** /api/v2/testRuns/purge/bulk | Permanently delete multiple test runs from archive |
-| [**apiV2TestRunsRestoreBulkPost**](TestRunsApi.md#apiV2TestRunsRestoreBulkPost) | **POST** /api/v2/testRuns/restore/bulk | Restore multiple test runs from the archive |
-| [**apiV2TestRunsSearchPost**](TestRunsApi.md#apiV2TestRunsSearchPost) | **POST** /api/v2/testRuns/search | Search for test runs |
-| [**apiV2TestRunsUpdateMultiplePost**](TestRunsApi.md#apiV2TestRunsUpdateMultiplePost) | **POST** /api/v2/testRuns/updateMultiple | Update multiple test runs |
-| [**completeTestRun**](TestRunsApi.md#completeTestRun) | **POST** /api/v2/testRuns/{id}/complete | Complete TestRun |
-| [**createAndFillByAutoTests**](TestRunsApi.md#createAndFillByAutoTests) | **POST** /api/v2/testRuns/byAutoTests | Create test runs based on autotests and configurations |
-| [**createAndFillByConfigurations**](TestRunsApi.md#createAndFillByConfigurations) | **POST** /api/v2/testRuns/byConfigurations | Create test runs picking the needed test points |
-| [**createAndFillByWorkItems**](TestRunsApi.md#createAndFillByWorkItems) | **POST** /api/v2/testRuns/byWorkItems | Create test run based on configurations and work items |
-| [**createEmpty**](TestRunsApi.md#createEmpty) | **POST** /api/v2/testRuns | Create empty TestRun |
-| [**getTestRunById**](TestRunsApi.md#getTestRunById) | **GET** /api/v2/testRuns/{id} | Get TestRun by Id |
-| [**setAutoTestResultsForTestRun**](TestRunsApi.md#setAutoTestResultsForTestRun) | **POST** /api/v2/testRuns/{id}/testResults | Send test results to the test runs in the system |
-| [**startTestRun**](TestRunsApi.md#startTestRun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun |
-| [**stopTestRun**](TestRunsApi.md#stopTestRun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun |
-| [**updateEmpty**](TestRunsApi.md#updateEmpty) | **PUT** /api/v2/testRuns | Update empty TestRun |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2TestRunsDelete**](TestRunsApi.md#apiV2TestRunsDelete) | **DELETE** /api/v2/testRuns | Delete multiple test runs
+[**apiV2TestRunsIdAutoTestsNamespacesGet**](TestRunsApi.md#apiV2TestRunsIdAutoTestsNamespacesGet) | **GET** /api/v2/testRuns/{id}/autoTestsNamespaces | Get autotest classes and namespaces in test run
+[**apiV2TestRunsIdDelete**](TestRunsApi.md#apiV2TestRunsIdDelete) | **DELETE** /api/v2/testRuns/{id} | Delete test run
+[**apiV2TestRunsIdPurgePost**](TestRunsApi.md#apiV2TestRunsIdPurgePost) | **POST** /api/v2/testRuns/{id}/purge | Permanently delete test run from archive
+[**apiV2TestRunsIdRerunsPost**](TestRunsApi.md#apiV2TestRunsIdRerunsPost) | **POST** /api/v2/testRuns/{id}/reruns | Manual autotests rerun in test run
+[**apiV2TestRunsIdRestorePost**](TestRunsApi.md#apiV2TestRunsIdRestorePost) | **POST** /api/v2/testRuns/{id}/restore | Restore test run from the archive
+[**apiV2TestRunsIdStatisticsFilterPost**](TestRunsApi.md#apiV2TestRunsIdStatisticsFilterPost) | **POST** /api/v2/testRuns/{id}/statistics/filter | Search for the test run test results and build statistics
+[**apiV2TestRunsIdTestPointsResultsGet**](TestRunsApi.md#apiV2TestRunsIdTestPointsResultsGet) | **GET** /api/v2/testRuns/{id}/testPoints/results | Get test results from the test run grouped by test points
+[**apiV2TestRunsIdTestResultsBulkPut**](TestRunsApi.md#apiV2TestRunsIdTestResultsBulkPut) | **PUT** /api/v2/testRuns/{id}/testResults/bulk | Partial edit of multiple test results in the test run
+[**apiV2TestRunsIdTestResultsLastModifiedModificationDateGet**](TestRunsApi.md#apiV2TestRunsIdTestResultsLastModifiedModificationDateGet) | **GET** /api/v2/testRuns/{id}/testResults/lastModified/modificationDate | Get modification date of last test result of the test run
+[**apiV2TestRunsPurgeBulkPost**](TestRunsApi.md#apiV2TestRunsPurgeBulkPost) | **POST** /api/v2/testRuns/purge/bulk | Permanently delete multiple test runs from archive
+[**apiV2TestRunsRestoreBulkPost**](TestRunsApi.md#apiV2TestRunsRestoreBulkPost) | **POST** /api/v2/testRuns/restore/bulk | Restore multiple test runs from the archive
+[**apiV2TestRunsSearchPost**](TestRunsApi.md#apiV2TestRunsSearchPost) | **POST** /api/v2/testRuns/search | Search for test runs
+[**apiV2TestRunsUpdateMultiplePost**](TestRunsApi.md#apiV2TestRunsUpdateMultiplePost) | **POST** /api/v2/testRuns/updateMultiple | Update multiple test runs
+[**completeTestRun**](TestRunsApi.md#completeTestRun) | **POST** /api/v2/testRuns/{id}/complete | Complete TestRun
+[**createAndFillByAutoTests**](TestRunsApi.md#createAndFillByAutoTests) | **POST** /api/v2/testRuns/byAutoTests | Create test runs based on autotests and configurations
+[**createAndFillByConfigurations**](TestRunsApi.md#createAndFillByConfigurations) | **POST** /api/v2/testRuns/byConfigurations | Create test runs picking the needed test points
+[**createAndFillByWorkItems**](TestRunsApi.md#createAndFillByWorkItems) | **POST** /api/v2/testRuns/byWorkItems | Create test run based on configurations and work items
+[**createEmpty**](TestRunsApi.md#createEmpty) | **POST** /api/v2/testRuns | Create empty TestRun
+[**getTestRunById**](TestRunsApi.md#getTestRunById) | **GET** /api/v2/testRuns/{id} | Get TestRun by Id
+[**setAutoTestResultsForTestRun**](TestRunsApi.md#setAutoTestResultsForTestRun) | **POST** /api/v2/testRuns/{id}/testResults | Send test results to the test runs in the system
+[**startTestRun**](TestRunsApi.md#startTestRun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun
+[**stopTestRun**](TestRunsApi.md#stopTestRun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun
+[**updateEmpty**](TestRunsApi.md#updateEmpty) | **PUT** /api/v2/testRuns | Update empty TestRun
 
 
-<a name="apiV2TestRunsDelete"></a>
-# **apiV2TestRunsDelete**
-> Integer apiV2TestRunsDelete(TestRunSelectApiModel)
+
+## apiV2TestRunsDelete
+
+> Number apiV2TestRunsDelete(opts)
 
 Delete multiple test runs
 
-     Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+ Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
+};
+apiInstance.apiV2TestRunsDelete(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **testRunSelectApiModel** | [**TestRunSelectApiModel**](TestRunSelectApiModel.md)|  | [optional] 
 
 ### Return type
 
-**Integer**
+**Number**
 
 ### Authorization
 
@@ -57,21 +83,45 @@ Delete multiple test runs
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdAutoTestsNamespacesGet"></a>
-# **apiV2TestRunsIdAutoTestsNamespacesGet**
+
+## apiV2TestRunsIdAutoTestsNamespacesGet
+
 > AutoTestNamespacesCountResponse apiV2TestRunsIdAutoTestsNamespacesGet(id)
 
 Get autotest classes and namespaces in test run
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | 
+apiInstance.apiV2TestRunsIdAutoTestsNamespacesGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**|  | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
 
 ### Return type
 
-[**AutoTestNamespacesCountResponse**](../Models/AutoTestNamespacesCountResponse.md)
+[**AutoTestNamespacesCountResponse**](AutoTestNamespacesCountResponse.md)
 
 ### Authorization
 
@@ -82,19 +132,43 @@ Get autotest classes and namespaces in test run
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdDelete"></a>
-# **apiV2TestRunsIdDelete**
+
+## apiV2TestRunsIdDelete
+
 > apiV2TestRunsIdDelete(id)
 
 Delete test run
 
-     Use case  User sets test run internal (guid format) identifier  System search and delete test run
+ Use case  User sets test run internal (guid format) identifier  System search and delete test run
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run internal (UUID) identifier
+apiInstance.apiV2TestRunsIdDelete(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run internal (UUID) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run internal (UUID) identifier | 
 
 ### Return type
 
@@ -109,19 +183,43 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdPurgePost"></a>
-# **apiV2TestRunsIdPurgePost**
+
+## apiV2TestRunsIdPurgePost
+
 > apiV2TestRunsIdPurgePost(id)
 
 Permanently delete test run from archive
 
-     Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+ Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run internal (UUID) identifier
+apiInstance.apiV2TestRunsIdPurgePost(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run internal (UUID) identifier | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run internal (UUID) identifier | 
 
 ### Return type
 
@@ -136,22 +234,49 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdRerunsPost"></a>
-# **apiV2TestRunsIdRerunsPost**
-> ManualRerunApiResult apiV2TestRunsIdRerunsPost(id, ManualRerunSelectTestResultsApiModel)
+
+## apiV2TestRunsIdRerunsPost
+
+> ManualRerunApiResult apiV2TestRunsIdRerunsPost(id, opts)
 
 Manual autotests rerun in test run
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | 
+let opts = {
+  'manualRerunSelectTestResultsApiModel': new TestitApiClient.ManualRerunSelectTestResultsApiModel() // ManualRerunSelectTestResultsApiModel | 
+};
+apiInstance.apiV2TestRunsIdRerunsPost(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**|  | [default to null] |
-| **ManualRerunSelectTestResultsApiModel** | [**ManualRerunSelectTestResultsApiModel**](../Models/ManualRerunSelectTestResultsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **manualRerunSelectTestResultsApiModel** | [**ManualRerunSelectTestResultsApiModel**](ManualRerunSelectTestResultsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**ManualRerunApiResult**](../Models/ManualRerunApiResult.md)
+[**ManualRerunApiResult**](ManualRerunApiResult.md)
 
 ### Authorization
 
@@ -162,19 +287,43 @@ Manual autotests rerun in test run
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdRestorePost"></a>
-# **apiV2TestRunsIdRestorePost**
+
+## apiV2TestRunsIdRestorePost
+
 > apiV2TestRunsIdRestorePost(id)
 
 Restore test run from the archive
 
-     Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+ Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Unique ID of the test run
+apiInstance.apiV2TestRunsIdRestorePost(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Unique ID of the test run | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Unique ID of the test run | 
 
 ### Return type
 
@@ -189,22 +338,49 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdStatisticsFilterPost"></a>
-# **apiV2TestRunsIdStatisticsFilterPost**
-> TestResultsStatisticsApiResult apiV2TestRunsIdStatisticsFilterPost(id, TestRunStatisticsFilterApiModel)
+
+## apiV2TestRunsIdStatisticsFilterPost
+
+> TestResultsStatisticsApiResult apiV2TestRunsIdStatisticsFilterPost(id, opts)
 
 Search for the test run test results and build statistics
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run unique ID
+let opts = {
+  'testRunStatisticsFilterApiModel': new TestitApiClient.TestRunStatisticsFilterApiModel() // TestRunStatisticsFilterApiModel | 
+};
+apiInstance.apiV2TestRunsIdStatisticsFilterPost(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run unique ID | [default to null] |
-| **TestRunStatisticsFilterApiModel** | [**TestRunStatisticsFilterApiModel**](../Models/TestRunStatisticsFilterApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run unique ID | 
+ **testRunStatisticsFilterApiModel** | [**TestRunStatisticsFilterApiModel**](TestRunStatisticsFilterApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**TestResultsStatisticsApiResult**](../Models/TestResultsStatisticsApiResult.md)
+[**TestResultsStatisticsApiResult**](TestResultsStatisticsApiResult.md)
 
 ### Authorization
 
@@ -215,21 +391,45 @@ Search for the test run test results and build statistics
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdTestPointsResultsGet"></a>
-# **apiV2TestRunsIdTestPointsResultsGet**
-> List apiV2TestRunsIdTestPointsResultsGet(id)
+
+## apiV2TestRunsIdTestPointsResultsGet
+
+> [TestPointResultApiResult] apiV2TestRunsIdTestPointsResultsGet(id)
 
 Get test results from the test run grouped by test points
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run unique ID
+apiInstance.apiV2TestRunsIdTestPointsResultsGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run unique ID | 
 
 ### Return type
 
-[**List**](../Models/TestPointResultApiResult.md)
+[**[TestPointResultApiResult]**](TestPointResultApiResult.md)
 
 ### Authorization
 
@@ -240,18 +440,45 @@ Get test results from the test run grouped by test points
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdTestResultsBulkPut"></a>
-# **apiV2TestRunsIdTestResultsBulkPut**
-> apiV2TestRunsIdTestResultsBulkPut(id, TestRunTestResultsPartialBulkSetModel)
+
+## apiV2TestRunsIdTestResultsBulkPut
+
+> apiV2TestRunsIdTestResultsBulkPut(id, opts)
 
 Partial edit of multiple test results in the test run
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run unique ID
+let opts = {
+  'testRunTestResultsPartialBulkSetModel': new TestitApiClient.TestRunTestResultsPartialBulkSetModel() // TestRunTestResultsPartialBulkSetModel | 
+};
+apiInstance.apiV2TestRunsIdTestResultsBulkPut(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run unique ID | [default to null] |
-| **TestRunTestResultsPartialBulkSetModel** | [**TestRunTestResultsPartialBulkSetModel**](../Models/TestRunTestResultsPartialBulkSetModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run unique ID | 
+ **testRunTestResultsPartialBulkSetModel** | [**TestRunTestResultsPartialBulkSetModel**](TestRunTestResultsPartialBulkSetModel.md)|  | [optional] 
 
 ### Return type
 
@@ -266,17 +493,41 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsIdTestResultsLastModifiedModificationDateGet"></a>
-# **apiV2TestRunsIdTestResultsLastModifiedModificationDateGet**
+
+## apiV2TestRunsIdTestResultsLastModifiedModificationDateGet
+
 > Date apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id)
 
 Get modification date of last test result of the test run
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test run unique ID
+apiInstance.apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test run unique ID | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test run unique ID | 
 
 ### Return type
 
@@ -291,23 +542,49 @@ Get modification date of last test result of the test run
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="apiV2TestRunsPurgeBulkPost"></a>
-# **apiV2TestRunsPurgeBulkPost**
-> Integer apiV2TestRunsPurgeBulkPost(TestRunSelectApiModel)
+
+## apiV2TestRunsPurgeBulkPost
+
+> Number apiV2TestRunsPurgeBulkPost(opts)
 
 Permanently delete multiple test runs from archive
 
-     Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+ Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
+};
+apiInstance.apiV2TestRunsPurgeBulkPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **testRunSelectApiModel** | [**TestRunSelectApiModel**](TestRunSelectApiModel.md)|  | [optional] 
 
 ### Return type
 
-**Integer**
+**Number**
 
 ### Authorization
 
@@ -318,23 +595,49 @@ Permanently delete multiple test runs from archive
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsRestoreBulkPost"></a>
-# **apiV2TestRunsRestoreBulkPost**
-> Integer apiV2TestRunsRestoreBulkPost(TestRunSelectApiModel)
+
+## apiV2TestRunsRestoreBulkPost
+
+> Number apiV2TestRunsRestoreBulkPost(opts)
 
 Restore multiple test runs from the archive
 
-     Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+ Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'testRunSelectApiModel': new TestitApiClient.TestRunSelectApiModel() // TestRunSelectApiModel | 
+};
+apiInstance.apiV2TestRunsRestoreBulkPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **TestRunSelectApiModel** | [**TestRunSelectApiModel**](../Models/TestRunSelectApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **testRunSelectApiModel** | [**TestRunSelectApiModel**](TestRunSelectApiModel.md)|  | [optional] 
 
 ### Return type
 
-**Integer**
+**Number**
 
 ### Authorization
 
@@ -345,26 +648,57 @@ Restore multiple test runs from the archive
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsSearchPost"></a>
-# **apiV2TestRunsSearchPost**
-> List apiV2TestRunsSearchPost(Skip, Take, OrderBy, SearchField, SearchValue, TestRunFilterApiModel)
+
+## apiV2TestRunsSearchPost
+
+> [TestRunShortApiResult] apiV2TestRunsSearchPost(opts)
 
 Search for test runs
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'skip': 56, // Number | Amount of items to be skipped (offset)
+  'take': 56, // Number | Amount of items to be taken (limit)
+  'orderBy': "orderBy_example", // String | SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+  'searchField': "searchField_example", // String | Property name for searching
+  'searchValue': "searchValue_example", // String | Value for searching
+  'testRunFilterApiModel': new TestitApiClient.TestRunFilterApiModel() // TestRunFilterApiModel | 
+};
+apiInstance.apiV2TestRunsSearchPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **Skip** | **Integer**| Amount of items to be skipped (offset) | [optional] [default to null] |
-| **Take** | **Integer**| Amount of items to be taken (limit) | [optional] [default to null] |
-| **OrderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] [default to null] |
-| **SearchField** | **String**| Property name for searching | [optional] [default to null] |
-| **SearchValue** | **String**| Value for searching | [optional] [default to null] |
-| **TestRunFilterApiModel** | [**TestRunFilterApiModel**](../Models/TestRunFilterApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **skip** | **Number**| Amount of items to be skipped (offset) | [optional] 
+ **take** | **Number**| Amount of items to be taken (limit) | [optional] 
+ **orderBy** | **String**| SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC) | [optional] 
+ **searchField** | **String**| Property name for searching | [optional] 
+ **searchValue** | **String**| Value for searching | [optional] 
+ **testRunFilterApiModel** | [**TestRunFilterApiModel**](TestRunFilterApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**List**](../Models/TestRunShortApiResult.md)
+[**[TestRunShortApiResult]**](TestRunShortApiResult.md)
 
 ### Authorization
 
@@ -375,17 +709,43 @@ Search for test runs
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="apiV2TestRunsUpdateMultiplePost"></a>
-# **apiV2TestRunsUpdateMultiplePost**
-> apiV2TestRunsUpdateMultiplePost(UpdateMultipleTestRunsApiModel)
+
+## apiV2TestRunsUpdateMultiplePost
+
+> apiV2TestRunsUpdateMultiplePost(opts)
 
 Update multiple test runs
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'updateMultipleTestRunsApiModel': new TestitApiClient.UpdateMultipleTestRunsApiModel() // UpdateMultipleTestRunsApiModel | 
+};
+apiInstance.apiV2TestRunsUpdateMultiplePost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **UpdateMultipleTestRunsApiModel** | [**UpdateMultipleTestRunsApiModel**](../Models/UpdateMultipleTestRunsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateMultipleTestRunsApiModel** | [**UpdateMultipleTestRunsApiModel**](UpdateMultipleTestRunsApiModel.md)|  | [optional] 
 
 ### Return type
 
@@ -400,19 +760,43 @@ null (empty response body)
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="completeTestRun"></a>
-# **completeTestRun**
+
+## completeTestRun
+
 > completeTestRun(id)
 
 Complete TestRun
 
-     Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+ Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
+apiInstance.completeTestRun(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test Run internal identifier (GUID format) | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test Run internal identifier (GUID format) | 
 
 ### Return type
 
@@ -427,23 +811,49 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="createAndFillByAutoTests"></a>
-# **createAndFillByAutoTests**
-> TestRunV2ApiResult createAndFillByAutoTests(CreateTestRunAndFillByAutoTestsApiModel)
+
+## createAndFillByAutoTests
+
+> TestRunV2ApiResult createAndFillByAutoTests(opts)
 
 Create test runs based on autotests and configurations
 
-    This method creates a test run based on an autotest and a configuration. The difference between the &#x60;POST /api/v2/testRuns/byWorkItems&#x60; and &#x60;POST /api/v2/testRuns/byConfigurations&#x60; methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+This method creates a test run based on an autotest and a configuration. The difference between the &#x60;POST /api/v2/testRuns/byWorkItems&#x60; and &#x60;POST /api/v2/testRuns/byConfigurations&#x60; methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'createTestRunAndFillByAutoTestsApiModel': new TestitApiClient.CreateTestRunAndFillByAutoTestsApiModel() // CreateTestRunAndFillByAutoTestsApiModel | 
+};
+apiInstance.createAndFillByAutoTests(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateTestRunAndFillByAutoTestsApiModel** | [**CreateTestRunAndFillByAutoTestsApiModel**](../Models/CreateTestRunAndFillByAutoTestsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createTestRunAndFillByAutoTestsApiModel** | [**CreateTestRunAndFillByAutoTestsApiModel**](CreateTestRunAndFillByAutoTestsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
+[**TestRunV2ApiResult**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -454,23 +864,49 @@ Create test runs based on autotests and configurations
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="createAndFillByConfigurations"></a>
-# **createAndFillByConfigurations**
-> TestRunV2ApiResult createAndFillByConfigurations(CreateTestRunAndFillByConfigurationsApiModel)
+
+## createAndFillByConfigurations
+
+> TestRunV2ApiResult createAndFillByConfigurations(opts)
 
 Create test runs picking the needed test points
 
-    This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the &#x60;POST /api/v2/testRuns/byWorkItems&#x60; method because of the ability to send a jagged array within the \&quot;&lt;b&gt;testPointSelectors&lt;/b&gt;\&quot; parameter.
+This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the &#x60;POST /api/v2/testRuns/byWorkItems&#x60; method because of the ability to send a jagged array within the \&quot;&lt;b&gt;testPointSelectors&lt;/b&gt;\&quot; parameter.
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'createTestRunAndFillByConfigurationsApiModel': new TestitApiClient.CreateTestRunAndFillByConfigurationsApiModel() // CreateTestRunAndFillByConfigurationsApiModel | 
+};
+apiInstance.createAndFillByConfigurations(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateTestRunAndFillByConfigurationsApiModel** | [**CreateTestRunAndFillByConfigurationsApiModel**](../Models/CreateTestRunAndFillByConfigurationsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createTestRunAndFillByConfigurationsApiModel** | [**CreateTestRunAndFillByConfigurationsApiModel**](CreateTestRunAndFillByConfigurationsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
+[**TestRunV2ApiResult**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -481,23 +917,49 @@ Create test runs picking the needed test points
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="createAndFillByWorkItems"></a>
-# **createAndFillByWorkItems**
-> TestRunV2ApiResult createAndFillByWorkItems(CreateTestRunAndFillByWorkItemsApiModel)
+
+## createAndFillByWorkItems
+
+> TestRunV2ApiResult createAndFillByWorkItems(opts)
 
 Create test run based on configurations and work items
 
-    This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'createTestRunAndFillByWorkItemsApiModel': new TestitApiClient.CreateTestRunAndFillByWorkItemsApiModel() // CreateTestRunAndFillByWorkItemsApiModel | 
+};
+apiInstance.createAndFillByWorkItems(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateTestRunAndFillByWorkItemsApiModel** | [**CreateTestRunAndFillByWorkItemsApiModel**](../Models/CreateTestRunAndFillByWorkItemsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createTestRunAndFillByWorkItemsApiModel** | [**CreateTestRunAndFillByWorkItemsApiModel**](CreateTestRunAndFillByWorkItemsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
+[**TestRunV2ApiResult**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -508,23 +970,49 @@ Create test run based on configurations and work items
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="createEmpty"></a>
-# **createEmpty**
-> TestRunV2ApiResult createEmpty(CreateEmptyTestRunApiModel)
+
+## createEmpty
+
+> TestRunV2ApiResult createEmpty(opts)
 
 Create empty TestRun
 
-     Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+ Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'createEmptyTestRunApiModel': new TestitApiClient.CreateEmptyTestRunApiModel() // CreateEmptyTestRunApiModel | 
+};
+apiInstance.createEmpty(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **CreateEmptyTestRunApiModel** | [**CreateEmptyTestRunApiModel**](../Models/CreateEmptyTestRunApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createEmptyTestRunApiModel** | [**CreateEmptyTestRunApiModel**](CreateEmptyTestRunApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
+[**TestRunV2ApiResult**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -535,23 +1023,47 @@ Create empty TestRun
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="getTestRunById"></a>
-# **getTestRunById**
+
+## getTestRunById
+
 > TestRunV2ApiResult getTestRunById(id)
 
 Get TestRun by Id
 
-     Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+ Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
+apiInstance.getTestRunById(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test Run internal identifier (GUID format) | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test Run internal identifier (GUID format) | 
 
 ### Return type
 
-[**TestRunV2ApiResult**](../Models/TestRunV2ApiResult.md)
+[**TestRunV2ApiResult**](TestRunV2ApiResult.md)
 
 ### Authorization
 
@@ -562,24 +1074,51 @@ Get TestRun by Id
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="setAutoTestResultsForTestRun"></a>
-# **setAutoTestResultsForTestRun**
-> List setAutoTestResultsForTestRun(id, AutoTestResultsForTestRunModel)
+
+## setAutoTestResultsForTestRun
+
+> [String] setAutoTestResultsForTestRun(id, opts)
 
 Send test results to the test runs in the system
 
-    This method sends test results to the test management system.
+This method sends test results to the test management system.
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "id_example"; // String | Test Run internal identifier (GUID format)
+let opts = {
+  'autoTestResultsForTestRunModel': [new TestitApiClient.AutoTestResultsForTestRunModel()] // [AutoTestResultsForTestRunModel] | 
+};
+apiInstance.setAutoTestResultsForTestRun(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test Run internal identifier (GUID format) | [default to null] |
-| **AutoTestResultsForTestRunModel** | [**List**](../Models/AutoTestResultsForTestRunModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test Run internal identifier (GUID format) | 
+ **autoTestResultsForTestRunModel** | [**[AutoTestResultsForTestRunModel]**](AutoTestResultsForTestRunModel.md)|  | [optional] 
 
 ### Return type
 
-**List**
+**[String]**
 
 ### Authorization
 
@@ -590,19 +1129,43 @@ Send test results to the test runs in the system
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-<a name="startTestRun"></a>
-# **startTestRun**
+
+## startTestRun
+
 > startTestRun(id)
 
 Start TestRun
 
-     Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+ Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
+apiInstance.startTestRun(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test Run internal identifier (GUID format) | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test Run internal identifier (GUID format) | 
 
 ### Return type
 
@@ -617,19 +1180,43 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="stopTestRun"></a>
-# **stopTestRun**
+
+## stopTestRun
+
 > stopTestRun(id)
 
 Stop TestRun
 
-     Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+ Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test Run internal identifier (GUID format)
+apiInstance.stopTestRun(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **id** | **UUID**| Test Run internal identifier (GUID format) | [default to null] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Test Run internal identifier (GUID format) | 
 
 ### Return type
 
@@ -644,19 +1231,45 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-<a name="updateEmpty"></a>
-# **updateEmpty**
-> updateEmpty(UpdateEmptyTestRunApiModel)
+
+## updateEmpty
+
+> updateEmpty(opts)
 
 Update empty TestRun
 
-     Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+ Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.TestRunsApi();
+let opts = {
+  'updateEmptyTestRunApiModel': new TestitApiClient.UpdateEmptyTestRunApiModel() // UpdateEmptyTestRunApiModel | 
+};
+apiInstance.updateEmpty(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
 
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **UpdateEmptyTestRunApiModel** | [**UpdateEmptyTestRunApiModel**](../Models/UpdateEmptyTestRunApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateEmptyTestRunApiModel** | [**UpdateEmptyTestRunApiModel**](UpdateEmptyTestRunApiModel.md)|  | [optional] 
 
 ### Return type
 

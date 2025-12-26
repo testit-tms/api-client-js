@@ -1,27 +1,53 @@
-# ExternalIssuesApi
+# TestitApiClient.ExternalIssuesApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**apiV2ExternalIssuesSuggestionsPost**](ExternalIssuesApi.md#apiV2ExternalIssuesSuggestionsPost) | **POST** /api/v2/external-issues/suggestions | Returns list of suggestions from available external issues |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV2ExternalIssuesSuggestionsPost**](ExternalIssuesApi.md#apiV2ExternalIssuesSuggestionsPost) | **POST** /api/v2/external-issues/suggestions | Returns list of suggestions from available external issues
 
 
-<a name="apiV2ExternalIssuesSuggestionsPost"></a>
-# **apiV2ExternalIssuesSuggestionsPost**
-> ExternalIssueApiFieldSuggestionReply apiV2ExternalIssuesSuggestionsPost(GetExternalIssueSuggestionsApiModel)
+
+## apiV2ExternalIssuesSuggestionsPost
+
+> ExternalIssueApiFieldSuggestionReply apiV2ExternalIssuesSuggestionsPost(opts)
 
 Returns list of suggestions from available external issues
 
+### Example
+
+```javascript
+import TestitApiClient from 'testit-api-client';
+let defaultClient = TestitApiClient.ApiClient.instance;
+// Configure API key authorization: Bearer or PrivateToken
+let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
+Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+
+let apiInstance = new TestitApiClient.ExternalIssuesApi();
+let opts = {
+  'getExternalIssueSuggestionsApiModel': new TestitApiClient.GetExternalIssueSuggestionsApiModel() // GetExternalIssueSuggestionsApiModel | 
+};
+apiInstance.apiV2ExternalIssuesSuggestionsPost(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
 ### Parameters
 
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **GetExternalIssueSuggestionsApiModel** | [**GetExternalIssueSuggestionsApiModel**](../Models/GetExternalIssueSuggestionsApiModel.md)|  | [optional] |
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getExternalIssueSuggestionsApiModel** | [**GetExternalIssueSuggestionsApiModel**](GetExternalIssueSuggestionsApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**ExternalIssueApiFieldSuggestionReply**](../Models/ExternalIssueApiFieldSuggestionReply.md)
+[**ExternalIssueApiFieldSuggestionReply**](ExternalIssueApiFieldSuggestionReply.md)
 
 ### Authorization
 

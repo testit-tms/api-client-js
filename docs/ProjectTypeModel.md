@@ -1,8 +1,10 @@
-# ProjectTypeModel
-## Properties
+# TestitApiClient.ProjectTypeModel
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `Regular` (value: `"Regular"`)
+
+* `Demo` (value: `"Demo"`)
+
 

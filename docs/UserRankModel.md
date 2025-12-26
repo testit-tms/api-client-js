@@ -1,17 +1,17 @@
-# UserRankModel
+# TestitApiClient.UserRankModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **score** | **Integer** |  | [default to null] |
-| **workItemsCreated** | **Integer** |  | [default to null] |
-| **passedTestPoints** | **Integer** |  | [default to null] |
-| **failedTestPoints** | **Integer** |  | [default to null] |
-| **skippedTestPoints** | **Integer** |  | [default to null] |
-| **blockedTestPoints** | **Integer** |  | [default to null] |
-| **levelAvatarEnabled** | **Boolean** |  | [default to null] |
-| **succeededTestPoints** | **Integer** |  | [default to null] |
-| **incompleteTestPoints** | **Integer** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**score** | **Number** |  | 
+**workItemsCreated** | **Number** |  | 
+**passedTestPoints** | **Number** |  | 
+**failedTestPoints** | **Number** |  | 
+**skippedTestPoints** | **Number** |  | 
+**blockedTestPoints** | **Number** |  | 
+**levelAvatarEnabled** | **Boolean** |  | 
+**succeededTestPoints** | **Number** |  | 
+**incompleteTestPoints** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

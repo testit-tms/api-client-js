@@ -1,10 +1,10 @@
-# UpdateMultipleLinksApiModel
+# TestitApiClient.UpdateMultipleLinksApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **action** | [**ActionUpdate**](ActionUpdate.md) |  | [default to null] |
-| **links** | [**List**](CreateLinkApiModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | [**ActionUpdate**](ActionUpdate.md) |  | 
+**links** | [**[CreateLinkApiModel]**](CreateLinkApiModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

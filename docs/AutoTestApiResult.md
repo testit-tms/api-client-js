@@ -1,37 +1,37 @@
-# AutoTestApiResult
+# TestitApiClient.AutoTestApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **projectId** | **UUID** |  | [default to null] |
-| **externalId** | **String** |  | [optional] [default to null] |
-| **name** | **String** |  | [default to null] |
-| **namespace** | **String** |  | [optional] [default to null] |
-| **classname** | **String** |  | [optional] [default to null] |
-| **steps** | [**List**](AutoTestStepApiResult.md) |  | [optional] [default to null] |
-| **setup** | [**List**](AutoTestStepApiResult.md) |  | [optional] [default to null] |
-| **teardown** | [**List**](AutoTestStepApiResult.md) |  | [optional] [default to null] |
-| **title** | **String** |  | [optional] [default to null] |
-| **description** | **String** |  | [optional] [default to null] |
-| **isFlaky** | **Boolean** |  | [default to null] |
-| **externalKey** | **String** |  | [optional] [default to null] |
-| **globalId** | **Long** |  | [default to null] |
-| **isDeleted** | **Boolean** |  | [default to null] |
-| **mustBeApproved** | **Boolean** |  | [default to null] |
-| **createdDate** | **Date** |  | [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **lastTestRunId** | **UUID** |  | [optional] [default to null] |
-| **lastTestRunName** | **String** |  | [optional] [default to null] |
-| **lastTestResultId** | **UUID** |  | [optional] [default to null] |
-| **lastTestResultConfiguration** | [**ConfigurationShortApiResult**](ConfigurationShortApiResult.md) |  | [optional] [default to null] |
-| **lastTestResultOutcome** | **String** |  | [optional] [default to null] |
-| **lastTestResultStatus** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] [default to null] |
-| **stabilityPercentage** | **Long** |  | [optional] [default to null] |
-| **links** | [**List**](LinkApiResult.md) |  | [optional] [default to null] |
-| **labels** | [**List**](LabelApiResult.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**projectId** | **String** |  | 
+**externalId** | **String** |  | [optional] 
+**name** | **String** |  | 
+**namespace** | **String** |  | [optional] 
+**classname** | **String** |  | [optional] 
+**steps** | [**[AutoTestStepApiResult]**](AutoTestStepApiResult.md) |  | [optional] 
+**setup** | [**[AutoTestStepApiResult]**](AutoTestStepApiResult.md) |  | [optional] 
+**teardown** | [**[AutoTestStepApiResult]**](AutoTestStepApiResult.md) |  | [optional] 
+**title** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**isFlaky** | **Boolean** |  | 
+**externalKey** | **String** |  | [optional] 
+**globalId** | **Number** |  | 
+**isDeleted** | **Boolean** |  | 
+**mustBeApproved** | **Boolean** |  | 
+**createdDate** | **Date** |  | 
+**modifiedDate** | **Date** |  | [optional] 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**lastTestRunId** | **String** |  | [optional] 
+**lastTestRunName** | **String** |  | [optional] 
+**lastTestResultId** | **String** |  | [optional] 
+**lastTestResultConfiguration** | [**ConfigurationShortApiResult**](ConfigurationShortApiResult.md) |  | [optional] 
+**lastTestResultOutcome** | **String** |  | [optional] 
+**lastTestResultStatus** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
+**stabilityPercentage** | **Number** |  | [optional] 
+**links** | [**[LinkApiResult]**](LinkApiResult.md) |  | [optional] 
+**labels** | [**[LabelApiResult]**](LabelApiResult.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

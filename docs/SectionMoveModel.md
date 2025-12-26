@@ -1,12 +1,12 @@
-# SectionMoveModel
+# TestitApiClient.SectionMoveModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Unique ID of the section | [default to null] |
-| **oldParentId** | **UUID** | Unique ID of the section&#39;s current parent section | [default to null] |
-| **parentId** | **UUID** | Unique ID of the section&#39;s target parent section | [default to null] |
-| **nextSectionId** | **UUID** | Unique ID of the section&#39;s following section | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique ID of the section | 
+**oldParentId** | **String** | Unique ID of the section&#39;s current parent section | 
+**parentId** | **String** | Unique ID of the section&#39;s target parent section | 
+**nextSectionId** | **String** | Unique ID of the section&#39;s following section | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

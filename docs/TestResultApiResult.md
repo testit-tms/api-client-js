@@ -1,41 +1,41 @@
-# TestResultApiResult
+# TestitApiClient.TestResultApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **startedOn** | **Date** |  | [optional] [default to null] |
-| **completedOn** | **Date** |  | [optional] [default to null] |
-| **durationInMs** | **Long** |  | [optional] [default to null] |
-| **traces** | **String** |  | [optional] [default to null] |
-| **failureType** | **String** |  | [optional] [default to null] |
-| **message** | **String** |  | [optional] [default to null] |
-| **runByUserId** | **UUID** |  | [optional] [default to null] |
-| **stoppedByUserId** | **UUID** |  | [optional] [default to null] |
-| **outcome** | **String** |  | [default to null] |
-| **autoTestId** | **UUID** |  | [optional] [default to null] |
-| **testPointId** | **UUID** |  | [optional] [default to null] |
-| **testRunId** | **UUID** |  | [default to null] |
-| **configurationId** | **UUID** |  | [default to null] |
-| **status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [default to null] |
-| **testPoint** | [**TestPointShortApiResult**](TestPointShortApiResult.md) |  | [optional] [default to null] |
-| **autoTest** | [**AutoTestApiResult**](AutoTestApiResult.md) |  | [optional] [default to null] |
-| **autoTestStepResults** | [**List**](AutoTestStepResultsApiResult.md) |  | [optional] [default to null] |
-| **setupResults** | [**List**](AutoTestStepResultsApiResult.md) |  | [optional] [default to null] |
-| **teardownResults** | [**List**](AutoTestStepResultsApiResult.md) |  | [optional] [default to null] |
-| **workItemVersionId** | **UUID** |  | [optional] [default to null] |
-| **workItemVersionNumber** | **Integer** |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentApiResult.md) |  | [default to null] |
-| **links** | [**List**](LinkApiResult.md) |  | [default to null] |
-| **failureClasses** | [**List**](TestResultFailureClassApiResult.md) |  | [default to null] |
-| **stepComments** | [**List**](StepCommentApiModel.md) |  | [optional] [default to null] |
-| **parameters** | **Map** |  | [optional] [default to null] |
-| **properties** | **Map** |  | [optional] [default to null] |
-| **createdDate** | **Date** |  | [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**startedOn** | **Date** |  | [optional] 
+**completedOn** | **Date** |  | [optional] 
+**durationInMs** | **Number** |  | [optional] 
+**traces** | **String** |  | [optional] 
+**failureType** | **String** |  | [optional] 
+**message** | **String** |  | [optional] 
+**runByUserId** | **String** |  | [optional] 
+**stoppedByUserId** | **String** |  | [optional] 
+**outcome** | **String** |  | 
+**autoTestId** | **String** |  | [optional] 
+**testPointId** | **String** |  | [optional] 
+**testRunId** | **String** |  | 
+**configurationId** | **String** |  | 
+**status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | 
+**testPoint** | [**TestPointShortApiResult**](TestPointShortApiResult.md) |  | [optional] 
+**autoTest** | [**AutoTestApiResult**](AutoTestApiResult.md) |  | [optional] 
+**autoTestStepResults** | [**[AutoTestStepResultsApiResult]**](AutoTestStepResultsApiResult.md) |  | [optional] 
+**setupResults** | [**[AutoTestStepResultsApiResult]**](AutoTestStepResultsApiResult.md) |  | [optional] 
+**teardownResults** | [**[AutoTestStepResultsApiResult]**](AutoTestStepResultsApiResult.md) |  | [optional] 
+**workItemVersionId** | **String** |  | [optional] 
+**workItemVersionNumber** | **Number** |  | [optional] 
+**attachments** | [**[AttachmentApiResult]**](AttachmentApiResult.md) |  | 
+**links** | [**[LinkApiResult]**](LinkApiResult.md) |  | 
+**failureClasses** | [**[TestResultFailureClassApiResult]**](TestResultFailureClassApiResult.md) |  | 
+**stepComments** | [**[StepCommentApiModel]**](StepCommentApiModel.md) |  | [optional] 
+**parameters** | **{String: String}** |  | [optional] 
+**properties** | **{String: String}** |  | [optional] 
+**createdDate** | **Date** |  | 
+**modifiedDate** | **Date** |  | [optional] 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**isDeleted** | **Boolean** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

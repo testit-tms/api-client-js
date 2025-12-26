@@ -1,12 +1,12 @@
-# UpdateWorkflowApiModel
+# TestitApiClient.UpdateWorkflowApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **name** | **String** |  | [default to null] |
-| **isDefault** | **Boolean** |  | [default to null] |
-| **statuses** | [**List**](WorkflowStatusApiModel.md) |  | [default to null] |
-| **projectIds** | **List** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** |  | 
+**isDefault** | **Boolean** |  | 
+**statuses** | [**[WorkflowStatusApiModel]**](WorkflowStatusApiModel.md) |  | 
+**projectIds** | **[String]** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

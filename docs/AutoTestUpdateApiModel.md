@@ -1,25 +1,25 @@
-# AutoTestUpdateApiModel
+# TestitApiClient.AutoTestUpdateApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** | Autotest unique internal identifier | [optional] [default to null] |
-| **externalId** | **String** | External ID of the autotest | [default to null] |
-| **externalKey** | **String** | External key of the autotest | [optional] [default to null] |
-| **projectId** | **UUID** | Unique ID of the autotest project | [default to null] |
-| **name** | **String** | Name of the autotest | [default to null] |
-| **namespace** | **String** | Name of the autotest namespace | [optional] [default to null] |
-| **classname** | **String** | Name of the autotest class | [optional] [default to null] |
-| **steps** | [**List**](AutoTestStepApiModel.md) | Collection of the autotest steps | [optional] [default to null] |
-| **setup** | [**List**](AutoTestStepApiModel.md) | Collection of the autotest setup steps | [optional] [default to null] |
-| **teardown** | [**List**](AutoTestStepApiModel.md) | Collection of the autotest teardown steps | [optional] [default to null] |
-| **title** | **String** | Name of the autotest in autotest&#39;s card | [optional] [default to null] |
-| **description** | **String** | Description of the autotest in autotest&#39;s card | [optional] [default to null] |
-| **labels** | [**List**](LabelApiModel.md) | Collection of the autotest labels | [optional] [default to null] |
-| **links** | [**List**](LinkUpdateApiModel.md) | Collection of the autotest links | [optional] [default to null] |
-| **isFlaky** | **Boolean** | Indicates if the autotest is marked as flaky | [optional] [default to null] |
-| **workItemIdsForLinkWithAutoTest** | **List** | Specifies the IDs of work items to link your autotest to. You can specify several IDs. | [optional] [default to null] |
-| **workItemIds** | **List** | Specifies the IDs of work items to link your autotest to. You can specify several IDs. | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Autotest unique internal identifier | [optional] 
+**externalId** | **String** | External ID of the autotest | 
+**externalKey** | **String** | External key of the autotest | [optional] 
+**projectId** | **String** | Unique ID of the autotest project | 
+**name** | **String** | Name of the autotest | 
+**namespace** | **String** | Name of the autotest namespace | [optional] 
+**classname** | **String** | Name of the autotest class | [optional] 
+**steps** | [**[AutoTestStepApiModel]**](AutoTestStepApiModel.md) | Collection of the autotest steps | [optional] 
+**setup** | [**[AutoTestStepApiModel]**](AutoTestStepApiModel.md) | Collection of the autotest setup steps | [optional] 
+**teardown** | [**[AutoTestStepApiModel]**](AutoTestStepApiModel.md) | Collection of the autotest teardown steps | [optional] 
+**title** | **String** | Name of the autotest in autotest&#39;s card | [optional] 
+**description** | **String** | Description of the autotest in autotest&#39;s card | [optional] 
+**labels** | [**[LabelApiModel]**](LabelApiModel.md) | Collection of the autotest labels | [optional] 
+**links** | [**[LinkUpdateApiModel]**](LinkUpdateApiModel.md) | Collection of the autotest links | [optional] 
+**isFlaky** | **Boolean** | Indicates if the autotest is marked as flaky | [optional] 
+**workItemIdsForLinkWithAutoTest** | **[String]** | Specifies the IDs of work items to link your autotest to. You can specify several IDs. | [optional] 
+**workItemIds** | **[String]** | Specifies the IDs of work items to link your autotest to. You can specify several IDs. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

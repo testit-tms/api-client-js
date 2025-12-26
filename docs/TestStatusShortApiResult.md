@@ -1,12 +1,12 @@
-# TestStatusShortApiResult
+# TestitApiClient.TestStatusShortApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
-| **code** | **String** |  | [default to null] |
-| **type** | [**TestStatusApiType**](TestStatusApiType.md) | Collection of possible status types | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**name** | **String** |  | 
+**code** | **String** |  | 
+**type** | [**TestStatusApiType**](TestStatusApiType.md) | Collection of possible status types | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

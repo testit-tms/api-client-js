@@ -1,35 +1,35 @@
-# WorkItemFilterModel
+# TestitApiClient.WorkItemFilterModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **nameOrId** | **String** | Name or identifier (UUID) of work item | [optional] [default to null] |
-| **includeIds** | **Set** | Collection of identifiers of work items which need to be included in result regardless of filtering | [optional] [default to null] |
-| **excludeIds** | **Set** | Collection of identifiers of work items which need to be excluded from result regardless of filtering | [optional] [default to null] |
-| **externalMetadata** | [**WorkItemExternalMetadataFilterModel**](WorkItemExternalMetadataFilterModel.md) | Specifies work item filter by its external metadata | [optional] [default to null] |
-| **projectIds** | **Set** | Collection of project identifiers | [optional] [default to null] |
-| **links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] [default to null] |
-| **name** | **String** | Name of work item | [optional] [default to null] |
-| **ids** | **Set** | Specifies a work item unique IDs to search for | [optional] [default to null] |
-| **globalIds** | **Set** | Collection of global (integer) identifiers | [optional] [default to null] |
-| **attributes** | [**Map**](set.md) | Custom attributes of work item | [optional] [default to null] |
-| **isDeleted** | **Boolean** | Is result must consist of only actual/deleted work items | [optional] [default to null] |
-| **sectionIds** | **Set** | Collection of section identifiers | [optional] [default to null] |
-| **createdByIds** | **Set** | Collection of identifiers of users who created work item | [optional] [default to null] |
-| **modifiedByIds** | **Set** | Collection of identifiers of users who applied last modification to work item | [optional] [default to null] |
-| **states** | [**Set**](WorkItemStates.md) | Collection of states of work item | [optional] [default to null] |
-| **priorities** | [**Set**](WorkItemPriorityModel.md) | Collection of priorities of work item | [optional] [default to null] |
-| **sourceTypes** | [**Set**](WorkItemSourceTypeModel.md) | Collection of priorities of work item | [optional] [default to null] |
-| **types** | [**Set**](WorkItemEntityTypes.md) | Collection of types of work item | [optional] [default to null] |
-| **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of creation date to search for | [optional] [default to null] |
-| **modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of last modification date to search for | [optional] [default to null] |
-| **duration** | [**Int32RangeSelectorModel**](Int32RangeSelectorModel.md) | Specifies a work item duration range to search for | [optional] [default to null] |
-| **medianDuration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) | Specifies a work item median duration range to search for | [optional] [default to null] |
-| **isAutomated** | **Boolean** | Is result must consist of only manual/automated work items | [optional] [default to null] |
-| **tags** | **Set** | Collection of tags | [optional] [default to null] |
-| **excludeTags** | **Set** | Collection of tags to exclude | [optional] [default to null] |
-| **autoTestIds** | **Set** | Collection of identifiers of linked autotests | [optional] [default to null] |
-| **workItemVersionIds** | **List** | Collection of identifiers work items versions. | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nameOrId** | **String** | Name or identifier (UUID) of work item | [optional] 
+**includeIds** | **[String]** | Collection of identifiers of work items which need to be included in result regardless of filtering | [optional] 
+**excludeIds** | **[String]** | Collection of identifiers of work items which need to be excluded from result regardless of filtering | [optional] 
+**externalMetadata** | [**WorkItemExternalMetadataFilterModel**](WorkItemExternalMetadataFilterModel.md) | Specifies work item filter by its external metadata | [optional] 
+**projectIds** | **[String]** | Collection of project identifiers | [optional] 
+**links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] 
+**name** | **String** | Name of work item | [optional] 
+**ids** | **[String]** | Specifies a work item unique IDs to search for | [optional] 
+**globalIds** | **[Number]** | Collection of global (integer) identifiers | [optional] 
+**attributes** | **{String: [String]}** | Custom attributes of work item | [optional] 
+**isDeleted** | **Boolean** | Is result must consist of only actual/deleted work items | [optional] 
+**sectionIds** | **[String]** | Collection of section identifiers | [optional] 
+**createdByIds** | **[String]** | Collection of identifiers of users who created work item | [optional] 
+**modifiedByIds** | **[String]** | Collection of identifiers of users who applied last modification to work item | [optional] 
+**states** | [**[WorkItemStates]**](WorkItemStates.md) | Collection of states of work item | [optional] 
+**priorities** | [**[WorkItemPriorityModel]**](WorkItemPriorityModel.md) | Collection of priorities of work item | [optional] 
+**sourceTypes** | [**[WorkItemSourceTypeModel]**](WorkItemSourceTypeModel.md) | Collection of priorities of work item | [optional] 
+**types** | [**[WorkItemEntityTypes]**](WorkItemEntityTypes.md) | Collection of types of work item | [optional] 
+**createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of creation date to search for | [optional] 
+**modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Specifies a work item range of last modification date to search for | [optional] 
+**duration** | [**Int32RangeSelectorModel**](Int32RangeSelectorModel.md) | Specifies a work item duration range to search for | [optional] 
+**medianDuration** | [**Int64RangeSelectorModel**](Int64RangeSelectorModel.md) | Specifies a work item median duration range to search for | [optional] 
+**isAutomated** | **Boolean** | Is result must consist of only manual/automated work items | [optional] 
+**tags** | **[String]** | Collection of tags | [optional] 
+**excludeTags** | **[String]** | Collection of tags to exclude | [optional] 
+**autoTestIds** | **[String]** | Collection of identifiers of linked autotests | [optional] 
+**workItemVersionIds** | **[String]** | Collection of identifiers work items versions. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

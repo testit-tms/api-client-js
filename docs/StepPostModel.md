@@ -1,13 +1,13 @@
-# StepPostModel
+# TestitApiClient.StepPostModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **action** | **String** |  | [optional] [default to null] |
-| **expected** | **String** |  | [optional] [default to null] |
-| **testData** | **String** |  | [optional] [default to null] |
-| **comments** | **String** |  | [optional] [default to null] |
-| **workItemId** | **UUID** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**action** | **String** |  | [optional] 
+**expected** | **String** |  | [optional] 
+**testData** | **String** |  | [optional] 
+**comments** | **String** |  | [optional] 
+**workItemId** | **String** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

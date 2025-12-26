@@ -1,10 +1,10 @@
-# PreviewsIssueLinkApiModel
+# TestitApiClient.PreviewsIssueLinkApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **title** | **String** |  | [default to null] |
-| **url** | **String** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**title** | **String** |  | 
+**url** | **String** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

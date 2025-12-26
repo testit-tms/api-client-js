@@ -1,11 +1,11 @@
-# TestRunAnalyticApiResult
+# TestitApiClient.TestRunAnalyticApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **countGroupByStatus** | [**List**](TestRunGroupByStatusApiResult.md) |  | [default to null] |
-| **countGroupByStatusType** | [**List**](TestRunGroupByStatusTypeApiResult.md) |  | [default to null] |
-| **countGroupByFailureClass** | [**List**](TestRunGroupByFailureClassApiResult.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**countGroupByStatus** | [**[TestRunGroupByStatusApiResult]**](TestRunGroupByStatusApiResult.md) |  | 
+**countGroupByStatusType** | [**[TestRunGroupByStatusTypeApiResult]**](TestRunGroupByStatusTypeApiResult.md) |  | 
+**countGroupByFailureClass** | [**[TestRunGroupByFailureClassApiResult]**](TestRunGroupByFailureClassApiResult.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,9 +1,9 @@
-# WebhookBulkUpdateApiModel
+# TestitApiClient.WebhookBulkUpdateApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **isEnabled** | **Boolean** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**isEnabled** | **Boolean** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

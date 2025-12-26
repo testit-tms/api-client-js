@@ -1,11 +1,11 @@
-# TestPlanGroupByTesterAndStatus
+# TestitApiClient.TestPlanGroupByTesterAndStatus
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **userId** | **UUID** |  | [optional] [default to null] |
-| **status** | **String** |  | [default to null] |
-| **value** | **Long** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**userId** | **String** |  | [optional] 
+**status** | **String** |  | 
+**value** | **Number** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

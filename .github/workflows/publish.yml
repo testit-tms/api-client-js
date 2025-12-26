@@ -26,9 +26,8 @@ jobs:
           key: node-modules-${{ hashFiles('**/package-lock.json') }}
       - name: Install dependecies
         run: npm install
-      - run: npm install -g typescript
-      - name: Build application
-        run: npm run build
+      - name: Run tests
+        run: npm run test
       - name: Publish package
         run: npm publish --tag latest
       

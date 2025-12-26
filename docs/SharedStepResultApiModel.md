@@ -1,10 +1,10 @@
-# SharedStepResultApiModel
+# TestitApiClient.SharedStepResultApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **stepId** | **UUID** |  | [default to null] |
-| **outcome** | **String** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**stepId** | **String** |  | 
+**outcome** | **String** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

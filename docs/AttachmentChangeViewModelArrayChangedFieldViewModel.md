@@ -1,10 +1,10 @@
-# AttachmentChangeViewModelArrayChangedFieldViewModel
+# TestitApiClient.AttachmentChangeViewModelArrayChangedFieldViewModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **oldValue** | [**List**](AttachmentChangeViewModel.md) |  | [optional] [default to null] |
-| **newValue** | [**List**](AttachmentChangeViewModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**oldValue** | [**[AttachmentChangeViewModel]**](AttachmentChangeViewModel.md) |  | [optional] 
+**newValue** | [**[AttachmentChangeViewModel]**](AttachmentChangeViewModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

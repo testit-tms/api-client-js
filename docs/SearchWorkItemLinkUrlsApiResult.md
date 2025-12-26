@@ -1,9 +1,9 @@
-# SearchWorkItemLinkUrlsApiResult
+# TestitApiClient.SearchWorkItemLinkUrlsApiResult
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **data** | [**List**](WorkItemLinkUrlApiResult.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**[WorkItemLinkUrlApiResult]**](WorkItemLinkUrlApiResult.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

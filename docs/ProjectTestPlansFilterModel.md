@@ -1,25 +1,25 @@
-# ProjectTestPlansFilterModel
+# TestitApiClient.ProjectTestPlansFilterModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **name** | **String** |  | [optional] [default to null] |
-| **description** | **String** |  | [optional] [default to null] |
-| **build** | **String** |  | [optional] [default to null] |
-| **productName** | **String** |  | [optional] [default to null] |
-| **status** | [**Set**](TestPlanStatusModel.md) |  | [optional] [default to null] |
-| **globalIds** | **Set** |  | [optional] [default to null] |
-| **isLocked** | **Boolean** |  | [optional] [default to null] |
-| **lockedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **automaticDurationTimer** | **Set** |  | [optional] [default to null] |
-| **createdByIds** | **Set** |  | [optional] [default to null] |
-| **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **startDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **endDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] [default to null] |
-| **tagNames** | **Set** |  | [optional] [default to null] |
-| **excludeTagNames** | **Set** |  | [optional] [default to null] |
-| **attributes** | [**Map**](set.md) |  | [optional] [default to null] |
-| **isDeleted** | **Boolean** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**build** | **String** |  | [optional] 
+**productName** | **String** |  | [optional] 
+**status** | [**[TestPlanStatusModel]**](TestPlanStatusModel.md) |  | [optional] 
+**globalIds** | **[Number]** |  | [optional] 
+**isLocked** | **Boolean** |  | [optional] 
+**lockedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] 
+**automaticDurationTimer** | **[Boolean]** |  | [optional] 
+**createdByIds** | **[String]** |  | [optional] 
+**createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] 
+**startDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] 
+**endDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] 
+**tagNames** | **[String]** |  | [optional] 
+**excludeTagNames** | **[String]** |  | [optional] 
+**attributes** | **{String: [String]}** |  | [optional] 
+**isDeleted** | **Boolean** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

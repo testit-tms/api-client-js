@@ -1,11 +1,11 @@
-# AutoTestNamespaceCountApiModel
+# TestitApiClient.AutoTestNamespaceCountApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **name** | **String** |  | [optional] [default to null] |
-| **count** | **Long** |  | [default to null] |
-| **classes** | [**List**](AutoTestClassCountApiModel.md) |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** |  | [optional] 
+**count** | **Number** |  | 
+**classes** | [**[AutoTestClassCountApiModel]**](AutoTestClassCountApiModel.md) |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

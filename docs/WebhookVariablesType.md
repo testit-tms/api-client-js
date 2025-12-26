@@ -1,8 +1,12 @@
-# WebhookVariablesType
-## Properties
+# TestitApiClient.WebhookVariablesType
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `VariablesForUrl` (value: `"VariablesForUrl"`)
+
+* `VariablesForHeaders` (value: `"VariablesForHeaders"`)
+
+* `VariablesForBody` (value: `"VariablesForBody"`)
+
 

@@ -1,8 +1,16 @@
-# FailureCategoryModel
-## Properties
+# TestitApiClient.FailureCategoryModel
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
+## Enum
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+* `InfrastructureDefect` (value: `"InfrastructureDefect"`)
+
+* `ProductDefect` (value: `"ProductDefect"`)
+
+* `TestDefect` (value: `"TestDefect"`)
+
+* `NoDefect` (value: `"NoDefect"`)
+
+* `NoAnalytics` (value: `"NoAnalytics"`)
+
 

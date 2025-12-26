@@ -1,13 +1,13 @@
-# SharedStepReferenceSectionsQueryFilterModel
+# TestitApiClient.SharedStepReferenceSectionsQueryFilterModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **name** | **String** | Name of section | [optional] [default to null] |
-| **createdByIds** | **Set** | Collection of identifiers of users who created work item | [optional] [default to null] |
-| **modifiedByIds** | **Set** | Collection of identifiers of users who applied last modification to work item | [optional] [default to null] |
-| **createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Date and time of work item creation | [optional] [default to null] |
-| **modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Date and time of work item last modification | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | Name of section | [optional] 
+**createdByIds** | **[String]** | Collection of identifiers of users who created work item | [optional] 
+**modifiedByIds** | **[String]** | Collection of identifiers of users who applied last modification to work item | [optional] 
+**createdDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Date and time of work item creation | [optional] 
+**modifiedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) | Date and time of work item last modification | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

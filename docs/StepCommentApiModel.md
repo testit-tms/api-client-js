@@ -1,18 +1,18 @@
-# StepCommentApiModel
+# TestitApiClient.StepCommentApiModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **text** | **String** |  | [optional] [default to null] |
-| **stepId** | **UUID** |  | [default to null] |
-| **parentStepId** | **UUID** |  | [optional] [default to null] |
-| **attachments** | [**List**](AttachmentApiResult.md) |  | [default to null] |
-| **testResultId** | **UUID** |  | [default to null] |
-| **createdById** | **UUID** |  | [default to null] |
-| **modifiedById** | **UUID** |  | [optional] [default to null] |
-| **createdDate** | **Date** |  | [default to null] |
-| **modifiedDate** | **Date** |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**text** | **String** |  | [optional] 
+**stepId** | **String** |  | 
+**parentStepId** | **String** |  | [optional] 
+**attachments** | [**[AttachmentApiResult]**](AttachmentApiResult.md) |  | 
+**testResultId** | **String** |  | 
+**createdById** | **String** |  | 
+**modifiedById** | **String** |  | [optional] 
+**createdDate** | **Date** |  | 
+**modifiedDate** | **Date** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

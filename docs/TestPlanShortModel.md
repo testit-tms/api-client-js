@@ -1,11 +1,11 @@
-# TestPlanShortModel
+# TestitApiClient.TestPlanShortModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **projectId** | **UUID** |  | [default to null] |
-| **name** | **String** |  | [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**projectId** | **String** |  | 
+**name** | **String** |  | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

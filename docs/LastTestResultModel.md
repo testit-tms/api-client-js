@@ -1,15 +1,15 @@
-# LastTestResultModel
+# TestitApiClient.LastTestResultModel
+
 ## Properties
 
-| Name | Type | Description | Notes |
-|------------ | ------------- | ------------- | -------------|
-| **id** | **UUID** |  | [default to null] |
-| **testRunId** | **UUID** |  | [default to null] |
-| **autoTestId** | **UUID** |  | [optional] [default to null] |
-| **comment** | **String** |  | [optional] [default to null] |
-| **links** | [**List**](LinkModel.md) |  | [optional] [default to null] |
-| **workItemVersionId** | **UUID** |  | [default to null] |
-| **attachments** | [**List**](AttachmentModel.md) |  | [optional] [default to null] |
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  | 
+**testRunId** | **String** |  | 
+**autoTestId** | **String** |  | [optional] 
+**comment** | **String** |  | [optional] 
+**links** | [**[LinkModel]**](LinkModel.md) |  | [optional] 
+**workItemVersionId** | **String** |  | 
+**attachments** | [**[AttachmentModel]**](AttachmentModel.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
