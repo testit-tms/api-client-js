@@ -3,6 +3,7 @@
   "version": "7.0.0-rc1",
   "description": "Api client for Test IT TMS",
   "license": "Apache-2.0",
+  "author": "Integration team",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
@@ -12,9 +13,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/testit-tms/api-client-js.git"
-  },
-  "publishConfig":{
-    "registry":"https://www.npmjs.com/package/testit-api-client"
   },
   "dependencies": {
     "@babel/cli": "^7.0.0",
