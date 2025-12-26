@@ -17,7 +17,7 @@ import SharedStepModel from './SharedStepModel';
 /**
  * The StepModel model module.
  * @module model/StepModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class StepModel {
     /**

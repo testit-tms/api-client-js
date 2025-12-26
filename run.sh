@@ -2,7 +2,7 @@
 #npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME=swagger.json
-NEW_VERSION="7.0.0-rc5"
+NEW_VERSION="7.0.0"
 
 sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.yml
 
@@ -26,5 +26,5 @@ sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/" package.json
 cp -r new/README.MD README-NEW.MD
 ./update-docs.sh
 
-# npm i
-# npm run test
+npm i
+npm run test

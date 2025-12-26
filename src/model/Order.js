@@ -17,7 +17,7 @@ import ListSortDirection from './ListSortDirection';
 /**
  * The Order model module.
  * @module model/Order
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class Order {
     /**

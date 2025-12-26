@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ManualRerunApiResult model module.
  * @module model/ManualRerunApiResult
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class ManualRerunApiResult {
     /**

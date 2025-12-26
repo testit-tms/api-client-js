@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SearchExternalIssuesApiModel model module.
  * @module model/SearchExternalIssuesApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class SearchExternalIssuesApiModel {
     /**

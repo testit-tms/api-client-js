@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PeriodViewModel model module.
  * @module model/PeriodViewModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class PeriodViewModel {
     /**

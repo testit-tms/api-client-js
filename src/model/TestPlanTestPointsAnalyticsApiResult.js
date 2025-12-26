@@ -21,7 +21,7 @@ import TestPlanTestPointsTesterGroupApiResult from './TestPlanTestPointsTesterGr
 /**
  * The TestPlanTestPointsAnalyticsApiResult model module.
  * @module model/TestPlanTestPointsAnalyticsApiResult
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class TestPlanTestPointsAnalyticsApiResult {
     /**

@@ -18,7 +18,7 @@ import AutoTestsExtractionModel from './AutoTestsExtractionModel';
 /**
  * The AutoTestSelectModel model module.
  * @module model/AutoTestSelectModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class AutoTestSelectModel {
     /**

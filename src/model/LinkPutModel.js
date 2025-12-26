@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The LinkPutModel model module.
  * @module model/LinkPutModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class LinkPutModel {
     /**

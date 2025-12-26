@@ -18,7 +18,7 @@ import ExternalIssueApiType from './ExternalIssueApiType';
 /**
  * The ExternalIssueApiMetadata model module.
  * @module model/ExternalIssueApiMetadata
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class ExternalIssueApiMetadata {
     /**

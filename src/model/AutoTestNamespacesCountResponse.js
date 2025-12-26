@@ -17,7 +17,7 @@ import AutoTestNamespaceCountApiModel from './AutoTestNamespaceCountApiModel';
 /**
  * The AutoTestNamespacesCountResponse model module.
  * @module model/AutoTestNamespacesCountResponse
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class AutoTestNamespacesCountResponse {
     /**

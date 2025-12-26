@@ -1,6 +1,6 @@
 {
   "name": "testit-api-client",
-  "version": "7.0.0-rc5",
+  "version": "7.0.0",
   "description": "Api client for Test IT TMS",
   "license": "Apache-2.0",
   "author": "Integration team",

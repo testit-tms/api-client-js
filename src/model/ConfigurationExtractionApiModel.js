@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The ConfigurationExtractionApiModel model module.
  * @module model/ConfigurationExtractionApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class ConfigurationExtractionApiModel {
     /**

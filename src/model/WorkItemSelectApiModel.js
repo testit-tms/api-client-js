@@ -18,7 +18,7 @@ import WorkItemFilterApiModel from './WorkItemFilterApiModel';
 /**
  * The WorkItemSelectApiModel model module.
  * @module model/WorkItemSelectApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class WorkItemSelectApiModel {
     /**

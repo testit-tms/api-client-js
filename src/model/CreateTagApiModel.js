@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateTagApiModel model module.
  * @module model/CreateTagApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class CreateTagApiModel {
     /**

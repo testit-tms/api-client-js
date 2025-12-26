@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestClassCountApiModel model module.
  * @module model/AutoTestClassCountApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class AutoTestClassCountApiModel {
     /**

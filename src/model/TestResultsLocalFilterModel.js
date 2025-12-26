@@ -18,7 +18,7 @@ import TestResultOutcome from './TestResultOutcome';
 /**
  * The TestResultsLocalFilterModel model module.
  * @module model/TestResultsLocalFilterModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class TestResultsLocalFilterModel {
     /**

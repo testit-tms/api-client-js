@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowStatusApiModel model module.
  * @module model/WorkflowStatusApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class WorkflowStatusApiModel {
     /**

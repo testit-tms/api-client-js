@@ -17,7 +17,7 @@ import ProjectExternalServiceApiResult from './ProjectExternalServiceApiResult';
 /**
  * The ProjectExternalServicesApiResult model module.
  * @module model/ProjectExternalServicesApiResult
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class ProjectExternalServicesApiResult {
     /**

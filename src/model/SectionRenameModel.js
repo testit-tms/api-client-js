@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SectionRenameModel model module.
  * @module model/SectionRenameModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class SectionRenameModel {
     /**

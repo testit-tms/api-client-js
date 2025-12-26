@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The WorkItemExtractionApiModel model module.
  * @module model/WorkItemExtractionApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class WorkItemExtractionApiModel {
     /**

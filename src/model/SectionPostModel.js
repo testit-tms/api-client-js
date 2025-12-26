@@ -18,7 +18,7 @@ import StepPostModel from './StepPostModel';
 /**
  * The SectionPostModel model module.
  * @module model/SectionPostModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class SectionPostModel {
     /**

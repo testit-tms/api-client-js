@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The ManualRerunTestResultApiModel model module.
  * @module model/ManualRerunTestResultApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class ManualRerunTestResultApiModel {
     /**

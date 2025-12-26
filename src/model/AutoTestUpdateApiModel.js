@@ -19,7 +19,7 @@ import LinkUpdateApiModel from './LinkUpdateApiModel';
 /**
  * The AutoTestUpdateApiModel model module.
  * @module model/AutoTestUpdateApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class AutoTestUpdateApiModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GenerateWorkItemPreviewsApiModel model module.
  * @module model/GenerateWorkItemPreviewsApiModel
- * @version 7.0.0-rc5
+ * @version 7.0.0
  */
 class GenerateWorkItemPreviewsApiModel {
     /**

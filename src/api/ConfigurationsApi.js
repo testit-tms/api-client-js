@@ -27,7 +27,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Configurations service.
 * @module api/ConfigurationsApi
-* @version 7.0.0-rc5
+* @version 7.0.0
 */
 export default class ConfigurationsApi {
 
