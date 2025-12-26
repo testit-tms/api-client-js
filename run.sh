@@ -2,7 +2,7 @@
 #npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME=swagger.json
-NEW_VERSION="7.0.0"
+NEW_VERSION="7.0.0-rc6"
 
 sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.yml
 
@@ -25,6 +25,10 @@ sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/" package.json
 
 cp -r new/README.MD README-NEW.MD
 ./update-docs.sh
+
+npm i -g typescript
+npm i -g npm-dts
+npm-dts generate -L debug
 
 npm i
 npm run test
