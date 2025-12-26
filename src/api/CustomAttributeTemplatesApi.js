@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * CustomAttributeTemplates service.
 * @module api/CustomAttributeTemplatesApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class CustomAttributeTemplatesApi {
 
@@ -41,21 +41,13 @@ export default class CustomAttributeTemplatesApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesExistsGet operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeTemplateValidationResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {Object} opts Optional parameters
      * @param {String} [name] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeTemplateValidationResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateValidationResult} and HTTP response
      */
-    apiV2CustomAttributesTemplatesExistsGet(opts, callback) {
+    apiV2CustomAttributesTemplatesExistsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -76,17 +68,22 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateValidationResult}
      */
+    apiV2CustomAttributesTemplatesExistsGet(opts) {
+      return this.apiV2CustomAttributesTemplatesExistsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Exclude CustomAttributes from CustomAttributeTemplate
@@ -94,9 +91,9 @@ export default class CustomAttributeTemplatesApi {
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost(id, opts, callback) {
+    apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -121,17 +118,25 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/{id}/customAttributes/exclude', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Exclude CustomAttributes from CustomAttributeTemplate
+     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+     * @param {String} id Attribute template internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2CustomAttributesTemplatesIdCustomAttributesExcludePost(id, opts) {
+      return this.apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Include CustomAttributes to CustomAttributeTemplate
@@ -139,9 +144,9 @@ export default class CustomAttributeTemplatesApi {
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost(id, opts, callback) {
+    apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['requestBody'];
       // verify the required parameter 'id' is set
@@ -166,25 +171,33 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/{id}/customAttributes/include', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesIdDelete operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Include CustomAttributes to CustomAttributeTemplate
+     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+     * @param {String} id Attribute template internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.requestBody 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2CustomAttributesTemplatesIdCustomAttributesIncludePost(id, opts) {
+      return this.apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete CustomAttributeTemplate
      *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
      * @param {String} id Attribute template internal (UUID) identifier
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2CustomAttributesTemplatesIdDelete(id, callback) {
+    apiV2CustomAttributesTemplatesIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -208,26 +221,31 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesIdGet operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeTemplateModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete CustomAttributeTemplate
+     *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+     * @param {String} id Attribute template internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2CustomAttributesTemplatesIdDelete(id) {
+      return this.apiV2CustomAttributesTemplatesIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get CustomAttributeTemplate by ID
      *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
      * @param {String} id CustomAttributeTemplate internal (UUID) identifier
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeTemplateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
      */
-    apiV2CustomAttributesTemplatesIdGet(id, callback) {
+    apiV2CustomAttributesTemplatesIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -251,26 +269,31 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesNameGet operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesNameGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeTemplateModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get CustomAttributeTemplate by ID
+     *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+     * @param {String} id CustomAttributeTemplate internal (UUID) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
      */
+    apiV2CustomAttributesTemplatesIdGet(id) {
+      return this.apiV2CustomAttributesTemplatesIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get CustomAttributeTemplate by name
      *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
      * @param {String} name CustomAttributeTemplate name for search
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesNameGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeTemplateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
      */
-    apiV2CustomAttributesTemplatesNameGet(name, callback) {
+    apiV2CustomAttributesTemplatesNameGetWithHttpInfo(name) {
       let postBody = null;
       // verify the required parameter 'name' is set
       if (name === undefined || name === null) {
@@ -294,27 +317,32 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/{name}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesPost operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CustomAttributeTemplateModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get CustomAttributeTemplate by name
+     *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+     * @param {String} name CustomAttributeTemplate name for search
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
      */
+    apiV2CustomAttributesTemplatesNameGet(name) {
+      return this.apiV2CustomAttributesTemplatesNameGetWithHttpInfo(name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create CustomAttributeTemplate
      *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTemplatePostModel} [customAttributeTemplatePostModel] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomAttributeTemplateModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
      */
-    apiV2CustomAttributesTemplatesPost(opts, callback) {
+    apiV2CustomAttributesTemplatesPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['customAttributeTemplatePostModel'];
 
@@ -334,25 +362,32 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesPut operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create CustomAttributeTemplate
+     *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributeTemplatePostModel} opts.customAttributeTemplatePostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
      */
+    apiV2CustomAttributesTemplatesPost(opts) {
+      return this.apiV2CustomAttributesTemplatesPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update custom attributes template
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTemplatePutModel} [customAttributeTemplatePutModel] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2CustomAttributesTemplatesPut(opts, callback) {
+    apiV2CustomAttributesTemplatesPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['customAttributeTemplatePutModel'];
 
@@ -372,17 +407,23 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2CustomAttributesTemplatesSearchPost operation.
-     * @callback module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SearchCustomAttributeTemplateGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update custom attributes template
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CustomAttributeTemplatePutModel} opts.customAttributeTemplatePutModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2CustomAttributesTemplatesPut(opts) {
+      return this.apiV2CustomAttributesTemplatesPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search CustomAttributeTemplates
@@ -394,10 +435,9 @@ export default class CustomAttributeTemplatesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/CustomAttributeTemplateSearchQueryModel} [customAttributeTemplateSearchQueryModel] 
-     * @param {module:api/CustomAttributeTemplatesApi~apiV2CustomAttributesTemplatesSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SearchCustomAttributeTemplateGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SearchCustomAttributeTemplateGetModel>} and HTTP response
      */
-    apiV2CustomAttributesTemplatesSearchPost(opts, callback) {
+    apiV2CustomAttributesTemplatesSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['customAttributeTemplateSearchQueryModel'];
 
@@ -422,8 +462,27 @@ export default class CustomAttributeTemplatesApi {
       return this.apiClient.callApi(
         '/api/v2/customAttributes/templates/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Search CustomAttributeTemplates
+     *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/CustomAttributeTemplateSearchQueryModel} opts.customAttributeTemplateSearchQueryModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SearchCustomAttributeTemplateGetModel>}
+     */
+    apiV2CustomAttributesTemplatesSearchPost(opts) {
+      return this.apiV2CustomAttributesTemplatesSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

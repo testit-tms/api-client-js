@@ -40,7 +40,7 @@ import WorkItemVersionModel from '../model/WorkItemVersionModel';
 /**
 * WorkItems service.
 * @module api/WorkItemsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class WorkItemsApi {
 
@@ -56,13 +56,6 @@ export default class WorkItemsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2WorkItemsIdAttachmentsPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdAttachmentsPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Upload and link attachment to WorkItem
@@ -70,9 +63,9 @@ export default class WorkItemsApi {
      * @param {String} id Work item internal identifier (guid format)
      * @param {Object} opts Optional parameters
      * @param {File} [file] Select file
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdAttachmentsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WorkItemsIdAttachmentsPost(id, opts, callback) {
+    apiV2WorkItemsIdAttachmentsPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -98,26 +91,33 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/attachments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdCheckListTransformToTestCasePost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdCheckListTransformToTestCasePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Upload and link attachment to WorkItem
+     *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
+     * @param {String} id Work item internal identifier (guid format)
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.file Select file
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WorkItemsIdAttachmentsPost(id, opts) {
+      return this.apiV2WorkItemsIdAttachmentsPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Transform CheckList to TestCase
      *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
      * @param {String} id 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdCheckListTransformToTestCasePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
      */
-    apiV2WorkItemsIdCheckListTransformToTestCasePost(id, callback) {
+    apiV2WorkItemsIdCheckListTransformToTestCasePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -141,17 +141,23 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/checkList/transformTo/testCase', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdHistoryGet operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdHistoryGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemChangeModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Transform CheckList to TestCase
+     *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
      */
+    apiV2WorkItemsIdCheckListTransformToTestCasePost(id) {
+      return this.apiV2WorkItemsIdCheckListTransformToTestCasePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get change history of WorkItem
@@ -163,10 +169,9 @@ export default class WorkItemsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemChangeModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemChangeModel>} and HTTP response
      */
-    apiV2WorkItemsIdHistoryGet(id, opts, callback) {
+    apiV2WorkItemsIdHistoryGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -196,25 +201,37 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdLikeDelete operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdLikeDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get change history of WorkItem
+     *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemChangeModel>}
      */
+    apiV2WorkItemsIdHistoryGet(id, opts) {
+      return this.apiV2WorkItemsIdHistoryGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete like from WorkItem
      *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
      * @param {String} id 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdLikeDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WorkItemsIdLikeDelete(id, callback) {
+    apiV2WorkItemsIdLikeDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -238,25 +255,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/like', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdLikePost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdLikePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete like from WorkItem
+     *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WorkItemsIdLikeDelete(id) {
+      return this.apiV2WorkItemsIdLikeDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set like to WorkItem
      *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
      * @param {String} id 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdLikePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2WorkItemsIdLikePost(id, callback) {
+    apiV2WorkItemsIdLikePostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -280,26 +303,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/like', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdLikesCountGet operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdLikesCountGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Set like to WorkItem
+     *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2WorkItemsIdLikePost(id) {
+      return this.apiV2WorkItemsIdLikePostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get likes count of WorkItem
      *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
      * @param {String} id 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdLikesCountGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2WorkItemsIdLikesCountGet(id, callback) {
+    apiV2WorkItemsIdLikesCountGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -323,26 +351,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/likes/count', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdLikesGet operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdLikesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemLikeModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get likes count of WorkItem
+     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2WorkItemsIdLikesCountGet(id) {
+      return this.apiV2WorkItemsIdLikesCountGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get likes of WorkItem
      *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
      * @param {String} id 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdLikesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemLikeModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemLikeModel>} and HTTP response
      */
-    apiV2WorkItemsIdLikesGet(id, callback) {
+    apiV2WorkItemsIdLikesGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -366,17 +399,23 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/likes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdTestResultsHistoryGet operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdTestResultsHistoryGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestResultHistoryReportApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get likes of WorkItem
+     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemLikeModel>}
      */
+    apiV2WorkItemsIdLikesGet(id) {
+      return this.apiV2WorkItemsIdLikesGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test results history of WorkItem
@@ -398,10 +437,9 @@ export default class WorkItemsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdTestResultsHistoryGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestResultHistoryReportApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultHistoryReportApiResult>} and HTTP response
      */
-    apiV2WorkItemsIdTestResultsHistoryGet(id, opts, callback) {
+    apiV2WorkItemsIdTestResultsHistoryGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -441,27 +479,48 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/testResults/history', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsIdVersionVersionIdActualPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsIdVersionVersionIdActualPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get test results history of WorkItem
+     *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.from Take results from this date
+     * @param {Date} opts.to Take results until this date
+     * @param {Array.<String>} opts.configurationIds Identifiers of test result configurations
+     * @param {Array.<String>} opts.testPlanIds Identifiers of test plans which contain test results
+     * @param {Array.<String>} opts.userIds Identifiers of users who set test results
+     * @param {Array.<String>} opts.outcomes List of outcomes of test results
+     * @param {Array.<String>} opts.statusCodes List of status codes of test results
+     * @param {Boolean} opts.isAutomated OBSOLETE: Use `Automated` instead
+     * @param {Boolean} opts.automated If result must consist of only manual/automated test results
+     * @param {Array.<String>} opts.testRunIds Identifiers of test runs which contain test results
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultHistoryReportApiResult>}
      */
+    apiV2WorkItemsIdTestResultsHistoryGet(id, opts) {
+      return this.apiV2WorkItemsIdTestResultsHistoryGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set WorkItem as actual
      *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
      * @param {String} id 
      * @param {String} versionId 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsIdVersionVersionIdActualPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
      */
-    apiV2WorkItemsIdVersionVersionIdActualPost(id, versionId, callback) {
+    apiV2WorkItemsIdVersionVersionIdActualPostWithHttpInfo(id, versionId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -490,17 +549,24 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/version/{versionId}/actual', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsLinksUrlsSearchPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsLinksUrlsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SearchWorkItemLinkUrlsApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Set WorkItem as actual
+     *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
+     * @param {String} id 
+     * @param {String} versionId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
      */
+    apiV2WorkItemsIdVersionVersionIdActualPost(id, versionId) {
+      return this.apiV2WorkItemsIdVersionVersionIdActualPostWithHttpInfo(id, versionId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {Object} opts Optional parameters
@@ -510,10 +576,9 @@ export default class WorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemLinkUrlApiModel} [workItemLinkUrlApiModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsLinksUrlsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SearchWorkItemLinkUrlsApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchWorkItemLinkUrlsApiResult} and HTTP response
      */
-    apiV2WorkItemsLinksUrlsSearchPost(opts, callback) {
+    apiV2WorkItemsLinksUrlsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['workItemLinkUrlApiModel'];
 
@@ -538,27 +603,36 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/links/urls/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsMovePost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsMovePostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemShortModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemLinkUrlApiModel} opts.workItemLinkUrlApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchWorkItemLinkUrlsApiResult}
      */
+    apiV2WorkItemsLinksUrlsSearchPost(opts) {
+      return this.apiV2WorkItemsLinksUrlsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Move WorkItem to another section
      *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemMovePostModel} [workItemMovePostModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsMovePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemShortModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemShortModel} and HTTP response
      */
-    apiV2WorkItemsMovePost(opts, callback) {
+    apiV2WorkItemsMovePostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['workItemMovePostModel'];
 
@@ -578,26 +652,32 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/move', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Move WorkItem to another section
+     *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemMovePostModel} opts.workItemMovePostModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemShortModel}
      */
+    apiV2WorkItemsMovePost(opts) {
+      return this.apiV2WorkItemsMovePostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates work item
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateWorkItemApiModel} [createWorkItemApiModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemApiResult} and HTTP response
      */
-    apiV2WorkItemsPost(opts, callback) {
+    apiV2WorkItemsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['createWorkItemApiModel'];
 
@@ -617,17 +697,23 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsSearchPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemShortApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Creates work item
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateWorkItemApiModel} opts.createWorkItemApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemApiResult}
      */
+    apiV2WorkItemsPost(opts) {
+      return this.apiV2WorkItemsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for work items
@@ -638,10 +724,9 @@ export default class WorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemShortApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortApiResult>} and HTTP response
      */
-    apiV2WorkItemsSearchPost(opts, callback) {
+    apiV2WorkItemsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectApiModel'];
 
@@ -666,17 +751,28 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsSharedStepIdReferencesSectionsPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsSharedStepIdReferencesSectionsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SharedStepReferenceSectionModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for work items
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemSelectApiModel} opts.workItemSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemShortApiResult>}
      */
+    apiV2WorkItemsSearchPost(opts) {
+      return this.apiV2WorkItemsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get SharedStep references in sections
@@ -689,10 +785,9 @@ export default class WorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/SharedStepReferenceSectionsQueryFilterModel} [sharedStepReferenceSectionsQueryFilterModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsSharedStepIdReferencesSectionsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SharedStepReferenceSectionModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceSectionModel>} and HTTP response
      */
-    apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, opts, callback) {
+    apiV2WorkItemsSharedStepIdReferencesSectionsPostWithHttpInfo(sharedStepId, opts) {
       opts = opts || {};
       let postBody = opts['sharedStepReferenceSectionsQueryFilterModel'];
       // verify the required parameter 'sharedStepId' is set
@@ -722,17 +817,30 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{sharedStepId}/references/sections', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsSharedStepIdReferencesWorkItemsPost operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsSharedStepIdReferencesWorkItemsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SharedStepReferenceModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get SharedStep references in sections
+     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     * @param {String} sharedStepId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/SharedStepReferenceSectionsQueryFilterModel} opts.sharedStepReferenceSectionsQueryFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SharedStepReferenceSectionModel>}
      */
+    apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, opts) {
+      return this.apiV2WorkItemsSharedStepIdReferencesSectionsPostWithHttpInfo(sharedStepId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get SharedStep references in work items
@@ -745,10 +853,9 @@ export default class WorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/SharedStepReferencesQueryFilterModel} [sharedStepReferencesQueryFilterModel] 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsSharedStepIdReferencesWorkItemsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SharedStepReferenceModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceModel>} and HTTP response
      */
-    apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, opts, callback) {
+    apiV2WorkItemsSharedStepIdReferencesWorkItemsPostWithHttpInfo(sharedStepId, opts) {
       opts = opts || {};
       let postBody = opts['sharedStepReferencesQueryFilterModel'];
       // verify the required parameter 'sharedStepId' is set
@@ -778,26 +885,38 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{sharedStepId}/references/workItems', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2WorkItemsSharedStepsSharedStepIdReferencesGet operation.
-     * @callback module:api/WorkItemsApi~apiV2WorkItemsSharedStepsSharedStepIdReferencesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/SharedStepReferenceModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get SharedStep references in work items
+     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     * @param {String} sharedStepId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/SharedStepReferencesQueryFilterModel} opts.sharedStepReferencesQueryFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SharedStepReferenceModel>}
      */
+    apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, opts) {
+      return this.apiV2WorkItemsSharedStepIdReferencesWorkItemsPostWithHttpInfo(sharedStepId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get SharedStep references
      *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
      * @param {String} sharedStepId 
-     * @param {module:api/WorkItemsApi~apiV2WorkItemsSharedStepsSharedStepIdReferencesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/SharedStepReferenceModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceModel>} and HTTP response
      */
-    apiV2WorkItemsSharedStepsSharedStepIdReferencesGet(sharedStepId, callback) {
+    apiV2WorkItemsSharedStepsSharedStepIdReferencesGetWithHttpInfo(sharedStepId) {
       let postBody = null;
       // verify the required parameter 'sharedStepId' is set
       if (sharedStepId === undefined || sharedStepId === null) {
@@ -821,25 +940,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/sharedSteps/{sharedStepId}/references', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAllWorkItemsFromAutoTest operation.
-     * @callback module:api/WorkItemsApi~deleteAllWorkItemsFromAutoTestCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get SharedStep references
+     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     * @param {String} sharedStepId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SharedStepReferenceModel>}
      */
+    apiV2WorkItemsSharedStepsSharedStepIdReferencesGet(sharedStepId) {
+      return this.apiV2WorkItemsSharedStepsSharedStepIdReferencesGetWithHttpInfo(sharedStepId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete all links AutoTests from WorkItem by Id or GlobalId
      *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
      * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
-     * @param {module:api/WorkItemsApi~deleteAllWorkItemsFromAutoTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteAllWorkItemsFromAutoTest(id, callback) {
+    deleteAllWorkItemsFromAutoTestWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -863,25 +988,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/autoTests', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteWorkItem operation.
-     * @callback module:api/WorkItemsApi~deleteWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete all links AutoTests from WorkItem by Id or GlobalId
+     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteAllWorkItemsFromAutoTest(id) {
+      return this.deleteAllWorkItemsFromAutoTestWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete Test Case, Checklist or Shared Step by Id or GlobalId
      *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
      * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
-     * @param {module:api/WorkItemsApi~deleteWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteWorkItem(id, callback) {
+    deleteWorkItemWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -905,26 +1036,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutoTestsForWorkItem operation.
-     * @callback module:api/WorkItemsApi~getAutoTestsForWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete Test Case, Checklist or Shared Step by Id or GlobalId
+     *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteWorkItem(id) {
+      return this.deleteWorkItemWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get all AutoTests linked to WorkItem by Id or GlobalId
      *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
      * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
-     * @param {module:api/WorkItemsApi~getAutoTestsForWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestModel>} and HTTP response
      */
-    getAutoTestsForWorkItem(id, callback) {
+    getAutoTestsForWorkItemWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -948,17 +1084,23 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/autoTests', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getIterations operation.
-     * @callback module:api/WorkItemsApi~getIterationsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/IterationModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all AutoTests linked to WorkItem by Id or GlobalId
+     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestModel>}
      */
+    getAutoTestsForWorkItem(id) {
+      return this.getAutoTestsForWorkItemWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get iterations by work item Id or GlobalId
@@ -966,10 +1108,9 @@ export default class WorkItemsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [versionId] WorkItem version (guid format) identifier
      * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
-     * @param {module:api/WorkItemsApi~getIterationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/IterationModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/IterationModel>} and HTTP response
      */
-    getIterations(id, opts, callback) {
+    getIterationsWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -996,17 +1137,25 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/iterations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemById operation.
-     * @callback module:api/WorkItemsApi~getWorkItemByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get iterations by work item Id or GlobalId
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.versionId WorkItem version (guid format) identifier
+     * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/IterationModel>}
      */
+    getIterations(id, opts) {
+      return this.getIterationsWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get Test Case, Checklist or Shared Step by Id or GlobalId
@@ -1015,10 +1164,9 @@ export default class WorkItemsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [versionId] WorkItem version (guid format) identifier\"
      * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
-     * @param {module:api/WorkItemsApi~getWorkItemByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
      */
-    getWorkItemById(id, opts, callback) {
+    getWorkItemByIdWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -1045,26 +1193,34 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemChronology operation.
-     * @callback module:api/WorkItemsApi~getWorkItemChronologyCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestResultChronologyModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Test Case, Checklist or Shared Step by Id or GlobalId
+     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.versionId WorkItem version (guid format) identifier\"
+     * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
      */
+    getWorkItemById(id, opts) {
+      return this.getWorkItemByIdWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get WorkItem chronology by Id or GlobalId
      *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
      * @param {String} id Internal (UUID) or global (integer) identifier
-     * @param {module:api/WorkItemsApi~getWorkItemChronologyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestResultChronologyModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
      */
-    getWorkItemChronology(id, callback) {
+    getWorkItemChronologyWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1088,17 +1244,23 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/chronology', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemVersions operation.
-     * @callback module:api/WorkItemsApi~getWorkItemVersionsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemVersionModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get WorkItem chronology by Id or GlobalId
+     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
+     * @param {String} id Internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
      */
+    getWorkItemChronology(id) {
+      return this.getWorkItemChronologyWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get WorkItem versions
@@ -1107,10 +1269,9 @@ export default class WorkItemsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [workItemVersionId] WorkItem version (guid format) identifier\"
      * @param {Number} [versionNumber] WorkItem version (integer format) number\"
-     * @param {module:api/WorkItemsApi~getWorkItemVersionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemVersionModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemVersionModel>} and HTTP response
      */
-    getWorkItemVersions(id, opts, callback) {
+    getWorkItemVersionsWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -1137,24 +1298,33 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/versions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the purgeWorkItem operation.
-     * @callback module:api/WorkItemsApi~purgeWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get WorkItem versions
+     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.workItemVersionId WorkItem version (guid format) identifier\"
+     * @param {Number} opts.versionNumber WorkItem version (integer format) number\"
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemVersionModel>}
      */
+    getWorkItemVersions(id, opts) {
+      return this.getWorkItemVersionsWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Permanently delete test case, checklist or shared steps from archive
      * @param {String} id Unique or global ID of the work item
-     * @param {module:api/WorkItemsApi~purgeWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    purgeWorkItem(id, callback) {
+    purgeWorkItemWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1178,24 +1348,29 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/purge', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the restoreWorkItem operation.
-     * @callback module:api/WorkItemsApi~restoreWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Permanently delete test case, checklist or shared steps from archive
+     * @param {String} id Unique or global ID of the work item
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    purgeWorkItem(id) {
+      return this.purgeWorkItemWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Restore test case, checklist or shared steps from archive
      * @param {String} id Unique or global ID of the work item
-     * @param {module:api/WorkItemsApi~restoreWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    restoreWorkItem(id, callback) {
+    restoreWorkItemWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -1219,26 +1394,31 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/restore', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateWorkItem operation.
-     * @callback module:api/WorkItemsApi~updateWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Restore test case, checklist or shared steps from archive
+     * @param {String} id Unique or global ID of the work item
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    restoreWorkItem(id) {
+      return this.restoreWorkItemWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update Test Case, Checklist or Shared Step
      *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel] 
-     * @param {module:api/WorkItemsApi~updateWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateWorkItem(opts, callback) {
+    updateWorkItemWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['updateWorkItemApiModel'];
 
@@ -1258,8 +1438,22 @@ export default class WorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/workItems', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update Test Case, Checklist or Shared Step
+     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateWorkItem(opts) {
+      return this.updateWorkItemWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

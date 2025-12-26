@@ -17,7 +17,7 @@ import ExternalFormModel from './ExternalFormModel';
 /**
  * The GetExternalFormApiResult model module.
  * @module model/GetExternalFormApiResult
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class GetExternalFormApiResult {
     /**

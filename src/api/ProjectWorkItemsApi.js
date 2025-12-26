@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * ProjectWorkItems service.
 * @module api/ProjectWorkItemsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ProjectWorkItemsApi {
 
@@ -43,13 +43,6 @@ export default class ProjectWorkItemsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdWorkItemsSearchGroupedPost operation.
-     * @callback module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchGroupedPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemGroupModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Search for work items and group results by attribute
@@ -61,10 +54,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemGroupGetModel} [workItemGroupGetModel] 
-     * @param {module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchGroupedPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemGroupModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemGroupModel>} and HTTP response
      */
-    apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdWorkItemsSearchGroupedPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['workItemGroupGetModel'];
       // verify the required parameter 'projectId' is set
@@ -94,17 +86,29 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems/search/grouped', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdWorkItemsSearchIdPost operation.
-     * @callback module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for work items and group results by attribute
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemGroupGetModel} opts.workItemGroupGetModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemGroupModel>}
      */
+    apiV2ProjectsProjectIdWorkItemsSearchGroupedPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsSearchGroupedPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for work items and extract IDs only
@@ -116,10 +120,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemSelectModel} [workItemSelectModel] 
-     * @param {module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchIdPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdWorkItemsSearchIdPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectModel'];
       // verify the required parameter 'projectId' is set
@@ -149,17 +152,29 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems/search/id', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdWorkItemsSearchPost operation.
-     * @callback module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemShortApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for work items and extract IDs only
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemSelectModel} opts.workItemSelectModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2ProjectsProjectIdWorkItemsSearchIdPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsSearchIdPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for work items
@@ -171,10 +186,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel] 
-     * @param {module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemShortApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortApiResult>} and HTTP response
      */
-    apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdWorkItemsSearchPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectApiModel'];
       // verify the required parameter 'projectId' is set
@@ -204,17 +218,29 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost operation.
-     * @callback module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WorkItemIndexApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for work items
+     * @param {String} projectId Unique or global ID of the project
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemSelectApiModel} opts.workItemSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemShortApiResult>}
      */
+    apiV2ProjectsProjectIdWorkItemsSearchPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsSearchPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get work item index (position) in a collection by its id.
@@ -227,10 +253,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel] 
-     * @param {module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WorkItemIndexApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemIndexApiResult} and HTTP response
      */
-    apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, opts, callback) {
+    apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostWithHttpInfo(projectId, workItemId, opts) {
       opts = opts || {};
       let postBody = opts['workItemSelectApiModel'];
       // verify the required parameter 'projectId' is set
@@ -265,17 +290,30 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems/search/{workItemId}/index', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdWorkItemsTagsGet operation.
-     * @callback module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsTagsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TagShortApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get work item index (position) in a collection by its id.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} workItemId 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/WorkItemSelectApiModel} opts.workItemSelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemIndexApiResult}
      */
+    apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPost(projectId, workItemId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostWithHttpInfo(projectId, workItemId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get WorkItems Tags
@@ -283,10 +321,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} projectId Project internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
-     * @param {module:api/ProjectWorkItemsApi~apiV2ProjectsProjectIdWorkItemsTagsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TagShortApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagShortApiResult>} and HTTP response
      */
-    apiV2ProjectsProjectIdWorkItemsTagsGet(projectId, opts, callback) {
+    apiV2ProjectsProjectIdWorkItemsTagsGetWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'projectId' is set
@@ -312,17 +349,25 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems/tags', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemsByProjectId operation.
-     * @callback module:api/ProjectWorkItemsApi~getWorkItemsByProjectIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/WorkItemShortModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get WorkItems Tags
+     *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+     * @param {String} projectId Project internal (UUID) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TagShortApiResult>}
      */
+    apiV2ProjectsProjectIdWorkItemsTagsGet(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsTagsGetWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get project work items
@@ -337,10 +382,9 @@ export default class ProjectWorkItemsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/ProjectWorkItemsApi~getWorkItemsByProjectIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/WorkItemShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
      */
-    getWorkItemsByProjectId(projectId, opts, callback) {
+    getWorkItemsByProjectIdWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'projectId' is set
@@ -373,8 +417,30 @@ export default class ProjectWorkItemsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/workItems', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get project work items
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+     * @param {String} projectId Project internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted work items (default to false)
+     * @param {Array.<String>} opts.tagNames List of tags to filter by
+     * @param {Boolean} opts.includeIterations  (default to true)
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemShortModel>}
+     */
+    getWorkItemsByProjectId(projectId, opts) {
+      return this.getWorkItemsByProjectIdWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

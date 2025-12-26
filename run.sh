@@ -2,7 +2,10 @@
 #npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME=swagger.json
-NEW_VERSION="7.0.0-rc1"
+NEW_VERSION="7.0.0-rc2"
+
+sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.yml
+
 
 rm -rf new
 openapi-generator-cli generate -i .swagger/$FILE_NAME -g javascript -o new --skip-validate-spec --type-mappings=set=Array -c genConfig.yml

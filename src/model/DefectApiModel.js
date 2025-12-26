@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DefectApiModel model module.
  * @module model/DefectApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class DefectApiModel {
     /**

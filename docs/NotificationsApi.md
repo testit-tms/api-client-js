@@ -35,13 +35,12 @@ let apiInstance = new TestitApiClient.NotificationsApi();
 let opts = {
   'isRead': true // Boolean | 
 };
-apiInstance.apiV2NotificationsCountGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2NotificationsCountGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -93,13 +92,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2NotificationsGet(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2NotificationsGet(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -149,13 +147,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2NotificationsIdReadPost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2NotificationsIdReadPost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -199,13 +196,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 //Bearer or PrivateToken.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
-apiInstance.apiV2NotificationsReadPost((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2NotificationsReadPost().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -254,13 +250,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'notificationQueryFilterModel': new TestitApiClient.NotificationQueryFilterModel() // NotificationQueryFilterModel | 
 };
-apiInstance.apiV2NotificationsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2NotificationsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

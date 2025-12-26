@@ -43,13 +43,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2ProjectsProjectIdTestPlansAnalyticsGet(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansAnalyticsGet(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -102,13 +101,12 @@ let projectId = "projectId_example"; // String | Unique or global ID of the proj
 let opts = {
   'testPlanSelectModel': new TestitApiClient.TestPlanSelectModel() // TestPlanSelectModel | 
 };
-apiInstance.apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansDeleteBulkPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -155,13 +153,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.ProjectTestPlansApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
 let name = "name_example"; // String | TestPlan name to check
-apiInstance.apiV2ProjectsProjectIdTestPlansNameExistsGet(projectId, name, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansNameExistsGet(projectId, name).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -208,13 +205,12 @@ let projectId = "projectId_example"; // String | Unique or global ID of the proj
 let opts = {
   'testPlanSelectModel': new TestitApiClient.TestPlanSelectModel() // TestPlanSelectModel | 
 };
-apiInstance.apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansPurgeBulkPost(projectId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -261,13 +257,12 @@ let projectId = "projectId_example"; // String | Unique or global ID of the proj
 let opts = {
   'testPlanSelectModel': new TestitApiClient.TestPlanSelectModel() // TestPlanSelectModel | 
 };
-apiInstance.apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansRestoreBulkPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -322,13 +317,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'projectTestPlansFilterModel': new TestitApiClient.ProjectTestPlansFilterModel() // ProjectTestPlansFilterModel | 
 };
-apiInstance.apiV2ProjectsProjectIdTestPlansSearchPost(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2ProjectsProjectIdTestPlansSearchPost(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

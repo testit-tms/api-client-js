@@ -17,7 +17,7 @@ import UserRankModel from './UserRankModel';
 /**
  * The UserWithRankModel model module.
  * @module model/UserWithRankModel
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class UserWithRankModel {
     /**

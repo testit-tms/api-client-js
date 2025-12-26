@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ShortConfiguration model module.
  * @module model/ShortConfiguration
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class ShortConfiguration {
     /**

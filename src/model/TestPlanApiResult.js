@@ -18,7 +18,7 @@ import TestPlanTagApiResult from './TestPlanTagApiResult';
 /**
  * The TestPlanApiResult model module.
  * @module model/TestPlanApiResult
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class TestPlanApiResult {
     /**

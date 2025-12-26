@@ -57,13 +57,12 @@ let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Work item internal 
 let opts = {
   'file': "/path/to/file" // File | Select file
 };
-apiInstance.apiV2WorkItemsIdAttachmentsPost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WorkItemsIdAttachmentsPost(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -109,13 +108,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2WorkItemsIdCheckListTransformToTestCasePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdCheckListTransformToTestCasePost(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -167,13 +165,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2WorkItemsIdHistoryGet(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdHistoryGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -223,13 +220,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2WorkItemsIdLikeDelete(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WorkItemsIdLikeDelete(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -274,13 +270,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2WorkItemsIdLikePost(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WorkItemsIdLikePost(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -325,13 +320,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2WorkItemsIdLikesCountGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdLikesCountGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -376,13 +370,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2WorkItemsIdLikesGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdLikesGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -444,13 +437,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.apiV2WorkItemsIdTestResultsHistoryGet(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdTestResultsHistoryGet(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -511,13 +503,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | 
 let versionId = "versionId_example"; // String | 
-apiInstance.apiV2WorkItemsIdVersionVersionIdActualPost(id, versionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdVersionVersionIdActualPost(id, versionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -568,13 +559,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemLinkUrlApiModel': new TestitApiClient.WorkItemLinkUrlApiModel() // WorkItemLinkUrlApiModel | 
 };
-apiInstance.apiV2WorkItemsLinksUrlsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsLinksUrlsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -626,13 +616,12 @@ let apiInstance = new TestitApiClient.WorkItemsApi();
 let opts = {
   'workItemMovePostModel': new TestitApiClient.WorkItemMovePostModel() // WorkItemMovePostModel | 
 };
-apiInstance.apiV2WorkItemsMovePost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsMovePost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -677,13 +666,12 @@ let apiInstance = new TestitApiClient.WorkItemsApi();
 let opts = {
   'createWorkItemApiModel': new TestitApiClient.CreateWorkItemApiModel() // CreateWorkItemApiModel | 
 };
-apiInstance.apiV2WorkItemsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -733,13 +721,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'workItemSelectApiModel': new TestitApiClient.WorkItemSelectApiModel() // WorkItemSelectApiModel | 
 };
-apiInstance.apiV2WorkItemsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -797,13 +784,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'sharedStepReferenceSectionsQueryFilterModel': new TestitApiClient.SharedStepReferenceSectionsQueryFilterModel() // SharedStepReferenceSectionsQueryFilterModel | 
 };
-apiInstance.apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsSharedStepIdReferencesSectionsPost(sharedStepId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -862,13 +848,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'sharedStepReferencesQueryFilterModel': new TestitApiClient.SharedStepReferencesQueryFilterModel() // SharedStepReferencesQueryFilterModel | 
 };
-apiInstance.apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsSharedStepIdReferencesWorkItemsPost(sharedStepId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -919,13 +904,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let sharedStepId = "sharedStepId_example"; // String | 
-apiInstance.apiV2WorkItemsSharedStepsSharedStepIdReferencesGet(sharedStepId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsSharedStepsSharedStepIdReferencesGet(sharedStepId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -970,13 +954,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | WorkItem internal (guid format) or global(integer format) identifier\"
-apiInstance.deleteAllWorkItemsFromAutoTest(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteAllWorkItemsFromAutoTest(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1021,13 +1004,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | WorkItem internal (guid format) or global(integer format) identifier\"
-apiInstance.deleteWorkItem(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteWorkItem(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1072,13 +1054,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | WorkItem internal (guid format) or global(integer format) identifier\"
-apiInstance.getAutoTestsForWorkItem(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutoTestsForWorkItem(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1125,13 +1106,12 @@ let opts = {
   'versionId': "00000000-0000-0000-0000-000000000000", // String | WorkItem version (guid format) identifier
   'versionNumber': 0 // Number | WorkItem version number (0 is the last version)\"
 };
-apiInstance.getIterations(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getIterations(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1182,13 +1162,12 @@ let opts = {
   'versionId': "00000000-0000-0000-0000-000000000000", // String | WorkItem version (guid format) identifier\"
   'versionNumber': 0 // Number | WorkItem version number (0 is the last version)\"
 };
-apiInstance.getWorkItemById(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemById(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1235,13 +1214,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | Internal (UUID) or global (integer) identifier
-apiInstance.getWorkItemChronology(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemChronology(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1290,13 +1268,12 @@ let opts = {
   'workItemVersionId': "3fa85f64-5717-4562-b3fc-2c963f66afa6", // String | WorkItem version (guid format) identifier\"
   'versionNumber': 1 // Number | WorkItem version (integer format) number\"
 };
-apiInstance.getWorkItemVersions(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemVersions(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1341,13 +1318,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | Unique or global ID of the work item
-apiInstance.purgeWorkItem(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.purgeWorkItem(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1390,13 +1366,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsApi();
 let id = "id_example"; // String | Unique or global ID of the work item
-apiInstance.restoreWorkItem(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.restoreWorkItem(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1443,13 +1418,12 @@ let apiInstance = new TestitApiClient.WorkItemsApi();
 let opts = {
   'updateWorkItemApiModel': new TestitApiClient.UpdateWorkItemApiModel() // UpdateWorkItemApiModel | 
 };
-apiInstance.updateWorkItem(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateWorkItem(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

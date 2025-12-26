@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Attachments service.
 * @module api/AttachmentsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class AttachmentsApi {
 
@@ -37,20 +37,13 @@ export default class AttachmentsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2AttachmentsIdDelete operation.
-     * @callback module:api/AttachmentsApi~apiV2AttachmentsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete attachment file
      * @param {String} id 
-     * @param {module:api/AttachmentsApi~apiV2AttachmentsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2AttachmentsIdDelete(id, callback) {
+    apiV2AttachmentsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -74,17 +67,22 @@ export default class AttachmentsApi {
       return this.apiClient.callApi(
         '/api/v2/attachments/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AttachmentsIdGet operation.
-     * @callback module:api/AttachmentsApi~apiV2AttachmentsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete attachment file
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2AttachmentsIdDelete(id) {
+      return this.apiV2AttachmentsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Download attachment file
@@ -95,9 +93,9 @@ export default class AttachmentsApi {
      * @param {module:model/ImageResizeType} [resizeType] Type of resizing to apply to the result image
      * @param {String} [backgroundColor] Color of the background if the `resizeType` is `AddBackgroundStripes`
      * @param {Boolean} [preview] If image must be converted to a preview (lower quality, no animation)
-     * @param {module:api/AttachmentsApi~apiV2AttachmentsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2AttachmentsIdGet(id, opts, callback) {
+    apiV2AttachmentsIdGetWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -127,25 +125,35 @@ export default class AttachmentsApi {
       return this.apiClient.callApi(
         '/api/v2/attachments/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AttachmentsIdMetadataGet operation.
-     * @callback module:api/AttachmentsApi~apiV2AttachmentsIdMetadataGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttachmentModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Download attachment file
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.width Width of the result image
+     * @param {Number} opts.height Height of the result image
+     * @param {module:model/ImageResizeType} opts.resizeType Type of resizing to apply to the result image
+     * @param {String} opts.backgroundColor Color of the background if the `resizeType` is `AddBackgroundStripes`
+     * @param {Boolean} opts.preview If image must be converted to a preview (lower quality, no animation)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2AttachmentsIdGet(id, opts) {
+      return this.apiV2AttachmentsIdGetWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get attachment metadata
      * @param {String} id 
-     * @param {module:api/AttachmentsApi~apiV2AttachmentsIdMetadataGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttachmentModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentModel} and HTTP response
      */
-    apiV2AttachmentsIdMetadataGet(id, callback) {
+    apiV2AttachmentsIdMetadataGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -169,24 +177,28 @@ export default class AttachmentsApi {
       return this.apiClient.callApi(
         '/api/v2/attachments/{id}/metadata', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AttachmentsOccupiedFileStorageSizeGet operation.
-     * @callback module:api/AttachmentsApi~apiV2AttachmentsOccupiedFileStorageSizeGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Number} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get attachment metadata
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentModel}
      */
+    apiV2AttachmentsIdMetadataGet(id) {
+      return this.apiV2AttachmentsIdMetadataGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get size of attachments storage in bytes
-     * @param {module:api/AttachmentsApi~apiV2AttachmentsOccupiedFileStorageSizeGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Number}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
-    apiV2AttachmentsOccupiedFileStorageSizeGet(callback) {
+    apiV2AttachmentsOccupiedFileStorageSizeGetWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -205,27 +217,30 @@ export default class AttachmentsApi {
       return this.apiClient.callApi(
         '/api/v2/attachments/occupiedFileStorageSize', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AttachmentsPost operation.
-     * @callback module:api/AttachmentsApi~apiV2AttachmentsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttachmentModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get size of attachments storage in bytes
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
+    apiV2AttachmentsOccupiedFileStorageSizeGet() {
+      return this.apiV2AttachmentsOccupiedFileStorageSizeGetWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Upload new attachment file
      * File size is restricted to 50 MB (52 428 800 bytes)
      * @param {Object} opts Optional parameters
      * @param {File} [file] 
-     * @param {module:api/AttachmentsApi~apiV2AttachmentsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttachmentModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentModel} and HTTP response
      */
-    apiV2AttachmentsPost(opts, callback) {
+    apiV2AttachmentsPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -246,8 +261,22 @@ export default class AttachmentsApi {
       return this.apiClient.callApi(
         '/api/v2/attachments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Upload new attachment file
+     * File size is restricted to 50 MB (52 428 800 bytes)
+     * @param {Object} opts Optional parameters
+     * @param {File} opts.file 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentModel}
+     */
+    apiV2AttachmentsPost(opts) {
+      return this.apiV2AttachmentsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

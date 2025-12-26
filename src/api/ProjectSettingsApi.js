@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectSettings service.
 * @module api/ProjectSettingsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class ProjectSettingsApi {
 
@@ -37,22 +37,15 @@ export default class ProjectSettingsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2ProjectsProjectIdSettingsAutotestsPost operation.
-     * @callback module:api/ProjectSettingsApi~apiV2ProjectsProjectIdSettingsAutotestsPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Set autotest project settings.
      * @param {String} projectId Internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestProjectSettingsApiModel} [autoTestProjectSettingsApiModel] 
-     * @param {module:api/ProjectSettingsApi~apiV2ProjectsProjectIdSettingsAutotestsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts, callback) {
+    apiV2ProjectsProjectIdSettingsAutotestsPostWithHttpInfo(projectId, opts) {
       opts = opts || {};
       let postBody = opts['autoTestProjectSettingsApiModel'];
       // verify the required parameter 'projectId' is set
@@ -77,25 +70,31 @@ export default class ProjectSettingsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/settings/autotests', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutotestProjectSettings operation.
-     * @callback module:api/ProjectSettingsApi~getAutotestProjectSettingsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestProjectSettingsApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Set autotest project settings.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AutoTestProjectSettingsApiModel} opts.autoTestProjectSettingsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2ProjectsProjectIdSettingsAutotestsPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdSettingsAutotestsPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get autotest project settings.
      * @param {String} projectId Internal (UUID) or global (integer) identifier
-     * @param {module:api/ProjectSettingsApi~getAutotestProjectSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestProjectSettingsApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestProjectSettingsApiResult} and HTTP response
      */
-    getAutotestProjectSettings(projectId, callback) {
+    getAutotestProjectSettingsWithHttpInfo(projectId) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
@@ -119,8 +118,20 @@ export default class ProjectSettingsApi {
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/settings/autotests', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get autotest project settings.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestProjectSettingsApiResult}
+     */
+    getAutotestProjectSettings(projectId) {
+      return this.getAutotestProjectSettingsWithHttpInfo(projectId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

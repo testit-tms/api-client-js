@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * BackgroundJobs service.
 * @module api/BackgroundJobsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class BackgroundJobsApi {
 
@@ -38,19 +38,12 @@ export default class BackgroundJobsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2BackgroundJobsCompletedDelete operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsCompletedDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete all completed background jobs
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsCompletedDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2BackgroundJobsCompletedDelete(callback) {
+    apiV2BackgroundJobsCompletedDeleteWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -69,17 +62,21 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs/completed', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2BackgroundJobsGet operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/BackgroundJobGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete all completed background jobs
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2BackgroundJobsCompletedDelete() {
+      return this.apiV2BackgroundJobsCompletedDeleteWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {Object} opts Optional parameters
@@ -88,10 +85,9 @@ export default class BackgroundJobsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/BackgroundJobGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BackgroundJobGetModel>} and HTTP response
      */
-    apiV2BackgroundJobsGet(opts, callback) {
+    apiV2BackgroundJobsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -116,24 +112,33 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2BackgroundJobsIdCancelPost operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsIdCancelPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BackgroundJobGetModel>}
      */
+    apiV2BackgroundJobsGet(opts) {
+      return this.apiV2BackgroundJobsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Cancel current user background job
      * @param {String} id 
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsIdCancelPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2BackgroundJobsIdCancelPost(id, callback) {
+    apiV2BackgroundJobsIdCancelPostWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -157,25 +162,29 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs/{id}/cancel', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2BackgroundJobsIdGet operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BackgroundJobGetModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Cancel current user background job
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2BackgroundJobsIdCancelPost(id) {
+      return this.apiV2BackgroundJobsIdCancelPostWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get background job by ID
      * @param {String} id Unique ID of the background job
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BackgroundJobGetModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BackgroundJobGetModel} and HTTP response
      */
-    apiV2BackgroundJobsIdGet(id, callback) {
+    apiV2BackgroundJobsIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -199,25 +208,29 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2BackgroundJobsIdStatusGet operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsIdStatusGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BackgroundJobState} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get background job by ID
+     * @param {String} id Unique ID of the background job
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BackgroundJobGetModel}
      */
+    apiV2BackgroundJobsIdGet(id) {
+      return this.apiV2BackgroundJobsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get background job status by job ID
      * @param {String} id Unique ID of the background job
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsIdStatusGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BackgroundJobState}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BackgroundJobState} and HTTP response
      */
-    apiV2BackgroundJobsIdStatusGet(id, callback) {
+    apiV2BackgroundJobsIdStatusGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -241,17 +254,22 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs/{id}/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2BackgroundJobsSearchPost operation.
-     * @callback module:api/BackgroundJobsApi~apiV2BackgroundJobsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/BackgroundJobGetModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get background job status by job ID
+     * @param {String} id Unique ID of the background job
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BackgroundJobState}
      */
+    apiV2BackgroundJobsIdStatusGet(id) {
+      return this.apiV2BackgroundJobsIdStatusGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for user background jobs
@@ -262,10 +280,9 @@ export default class BackgroundJobsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/BackgroundJobFilterModel} [backgroundJobFilterModel] 
-     * @param {module:api/BackgroundJobsApi~apiV2BackgroundJobsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/BackgroundJobGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BackgroundJobGetModel>} and HTTP response
      */
-    apiV2BackgroundJobsSearchPost(opts, callback) {
+    apiV2BackgroundJobsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['backgroundJobFilterModel'];
 
@@ -290,8 +307,26 @@ export default class BackgroundJobsApi {
       return this.apiClient.callApi(
         '/api/v2/backgroundJobs/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Search for user background jobs
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/BackgroundJobFilterModel} opts.backgroundJobFilterModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/BackgroundJobGetModel>}
+     */
+    apiV2BackgroundJobsSearchPost(opts) {
+      return this.apiV2BackgroundJobsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -17,7 +17,7 @@ import WorkflowProjectApiResult from './WorkflowProjectApiResult';
 /**
  * The WorkflowProjectApiResultApiCollectionPreview model module.
  * @module model/WorkflowProjectApiResultApiCollectionPreview
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class WorkflowProjectApiResultApiCollectionPreview {
     /**

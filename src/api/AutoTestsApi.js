@@ -35,7 +35,7 @@ import WorkItemIdApiModel from '../model/WorkItemIdApiModel';
 /**
 * AutoTests service.
 * @module api/AutoTestsApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class AutoTestsApi {
 
@@ -51,22 +51,14 @@ export default class AutoTestsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2AutoTestsDelete operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestBulkDeleteApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete autotests
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestBulkDeleteApiModel} [autoTestBulkDeleteApiModel] 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestBulkDeleteApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestBulkDeleteApiResult} and HTTP response
      */
-    apiV2AutoTestsDelete(opts, callback) {
+    apiV2AutoTestsDeleteWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestBulkDeleteApiModel'];
 
@@ -86,17 +78,23 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsFlakyBulkPost operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsFlakyBulkPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete autotests
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AutoTestBulkDeleteApiModel} opts.autoTestBulkDeleteApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestBulkDeleteApiResult}
      */
+    apiV2AutoTestsDelete(opts) {
+      return this.apiV2AutoTestsDeleteWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Set \"Flaky\" status for multiple autotests
@@ -108,9 +106,9 @@ export default class AutoTestsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/AutoTestFlakyBulkApiModel} [autoTestFlakyBulkApiModel] 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsFlakyBulkPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2AutoTestsFlakyBulkPost(opts, callback) {
+    apiV2AutoTestsFlakyBulkPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestFlakyBulkApiModel'];
 
@@ -135,17 +133,29 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/flaky/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsIdPatch operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Set \"Flaky\" status for multiple autotests
+     * User permissions for project: - Read only - Execute - Write - Full control
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/AutoTestFlakyBulkApiModel} opts.autoTestFlakyBulkApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2AutoTestsFlakyBulkPost(opts) {
+      return this.apiV2AutoTestsFlakyBulkPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Patch auto test
@@ -153,9 +163,9 @@ export default class AutoTestsApi {
      * @param {String} id Global Id of auto test
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/Operation>} [operation] 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2AutoTestsIdPatch(id, opts, callback) {
+    apiV2AutoTestsIdPatchWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['operation'];
       // verify the required parameter 'id' is set
@@ -180,17 +190,25 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsIdTestResultsSearchPost operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsIdTestResultsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestResultHistoryApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Patch auto test
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Global Id of auto test
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2AutoTestsIdPatch(id, opts) {
+      return this.apiV2AutoTestsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get test results history for autotest
@@ -203,10 +221,9 @@ export default class AutoTestsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/AutoTestResultHistorySelectApiModel} [autoTestResultHistorySelectApiModel] 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsIdTestResultsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestResultHistoryApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestResultHistoryApiResult>} and HTTP response
      */
-    apiV2AutoTestsIdTestResultsSearchPost(id, opts, callback) {
+    apiV2AutoTestsIdTestResultsSearchPostWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['autoTestResultHistorySelectApiModel'];
       // verify the required parameter 'id' is set
@@ -236,26 +253,38 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/testResults/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsIdWorkItemsChangedIdGet operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsIdWorkItemsChangedIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<String>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get test results history for autotest
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
+     * @param {String} id Autotest identifier
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/AutoTestResultHistorySelectApiModel} opts.autoTestResultHistorySelectApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestResultHistoryApiResult>}
      */
+    apiV2AutoTestsIdTestResultsSearchPost(id, opts) {
+      return this.apiV2AutoTestsIdTestResultsSearchPostWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get identifiers of changed linked work items
      * User permissions for project: - Read only - Execute - Write - Full control
      * @param {String} id 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsIdWorkItemsChangedIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<String>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
-    apiV2AutoTestsIdWorkItemsChangedIdGet(id, callback) {
+    apiV2AutoTestsIdWorkItemsChangedIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -279,26 +308,32 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/workItems/changed/id', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get identifiers of changed linked work items
+     * User permissions for project: - Read only - Execute - Write - Full control
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
+    apiV2AutoTestsIdWorkItemsChangedIdGet(id) {
+      return this.apiV2AutoTestsIdWorkItemsChangedIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Approve changes to work items linked to autotest
      * User permissions for project: - Read only - Execute - Write - Full control
      * @param {String} id 
      * @param {String} workItemId 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost(id, workItemId, callback) {
+    apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePostWithHttpInfo(id, workItemId) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -327,17 +362,24 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/workItems/changed/{workItemId}/approve', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the apiV2AutoTestsSearchPost operation.
-     * @callback module:api/AutoTestsApi~apiV2AutoTestsSearchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Approve changes to work items linked to autotest
+     * User permissions for project: - Read only - Execute - Write - Full control
+     * @param {String} id 
+     * @param {String} workItemId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost(id, workItemId) {
+      return this.apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePostWithHttpInfo(id, workItemId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Search for autotests
@@ -348,10 +390,9 @@ export default class AutoTestsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/AutoTestSearchApiModel} [autoTestSearchApiModel] 
-     * @param {module:api/AutoTestsApi~apiV2AutoTestsSearchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
      */
-    apiV2AutoTestsSearchPost(opts, callback) {
+    apiV2AutoTestsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestSearchApiModel'];
 
@@ -376,27 +417,37 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createAutoTest operation.
-     * @callback module:api/AutoTestsApi~createAutoTestCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Search for autotests
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @param {module:model/AutoTestSearchApiModel} opts.autoTestSearchApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestApiResult>}
      */
+    apiV2AutoTestsSearchPost(opts) {
+      return this.apiV2AutoTestsSearchPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create autotest
      *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestCreateApiModel} [autoTestCreateApiModel] 
-     * @param {module:api/AutoTestsApi~createAutoTestCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
      */
-    createAutoTest(opts, callback) {
+    createAutoTestWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestCreateApiModel'];
 
@@ -416,27 +467,33 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the createMultiple operation.
-     * @callback module:api/AutoTestsApi~createMultipleCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create autotest
+     *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AutoTestCreateApiModel} opts.autoTestCreateApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
      */
+    createAutoTest(opts) {
+      return this.createAutoTestWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create multiple autotests
      *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestCreateApiModel>} [autoTestCreateApiModel] 
-     * @param {module:api/AutoTestsApi~createMultipleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
      */
-    createMultiple(opts, callback) {
+    createMultipleWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestCreateApiModel'];
 
@@ -456,25 +513,32 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/bulk', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAutoTest operation.
-     * @callback module:api/AutoTestsApi~deleteAutoTestCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Create multiple autotests
+     *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/AutoTestCreateApiModel>} opts.autoTestCreateApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestApiResult>}
      */
+    createMultiple(opts) {
+      return this.createMultipleWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete autotest
      *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~deleteAutoTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteAutoTest(id, callback) {
+    deleteAutoTestWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -498,17 +562,23 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the deleteAutoTestLinkFromWorkItem operation.
-     * @callback module:api/AutoTestsApi~deleteAutoTestLinkFromWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Delete autotest
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteAutoTest(id) {
+      return this.deleteAutoTestWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Unlink autotest from work item
@@ -516,9 +586,9 @@ export default class AutoTestsApi {
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {String} [workItemId] Work item internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~deleteAutoTestLinkFromWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    deleteAutoTestLinkFromWorkItem(id, opts, callback) {
+    deleteAutoTestLinkFromWorkItemWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -544,17 +614,25 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/workItems', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAllAutoTests operation.
-     * @callback module:api/AutoTestsApi~getAllAutoTestsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Unlink autotest from work item
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.workItemId Work item internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    deleteAutoTestLinkFromWorkItem(id, opts) {
+      return this.deleteAutoTestLinkFromWorkItemWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {Object} opts Optional parameters
@@ -584,10 +662,9 @@ export default class AutoTestsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @param {module:api/AutoTestsApi~getAllAutoTestsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestModel>} and HTTP response
      */
-    getAllAutoTests(opts, callback) {
+    getAllAutoTestsWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -633,26 +710,55 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutoTestAverageDuration operation.
-     * @callback module:api/AutoTestsApi~getAutoTestAverageDurationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestAverageDurationApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.projectId Project internal ID
+     * @param {String} opts.externalId Autotest external ID
+     * @param {Number} opts.globalId Autotest global ID
+     * @param {String} opts.namespace Namespace in which autotest is located
+     * @param {Boolean} opts.isNamespaceNull OBSOLETE: Use `includeEmptyNamespaces` instead
+     * @param {Boolean} opts.includeEmptyNamespaces If result must contain autotests without namespace
+     * @param {String} opts.className Name of class in which autotest is located
+     * @param {Boolean} opts.isClassnameNull OBSOLETE: Use `includeEmptyClassNames` instead
+     * @param {Boolean} opts.includeEmptyClassNames If result must contain autotests without class
+     * @param {Boolean} opts.isDeleted OBSOLETE: Use `deleted` instead
+     * @param {Boolean} opts.deleted Is autotest deleted
+     * @param {Array.<String>} opts.labels Include only autotests with provided labels
+     * @param {Number} opts.stabilityMinimal OBSOLETE: Use `minStability` instead
+     * @param {Number} opts.minStability Minimum stability value of autotest
+     * @param {Number} opts.stabilityMaximal OBSOLETE: Use `maxStability` instead
+     * @param {Number} opts.maxStability Maximum stability value of autotest
+     * @param {Boolean} opts.isFlaky OBSOLETE: Use `flaky` instead
+     * @param {Boolean} opts.flaky Is autotest marked as \"Flaky\"
+     * @param {Boolean} opts.includeSteps If result must also include autotest steps
+     * @param {Boolean} opts.includeLabels If result must also include autotest labels
+     * @param {String} opts.externalKey External key of autotest
+     * @param {Number} opts.skip Amount of items to be skipped (offset)
+     * @param {Number} opts.take Amount of items to be taken (limit)
+     * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+     * @param {String} opts.searchField Property name for searching
+     * @param {String} opts.searchValue Value for searching
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestModel>}
      */
+    getAllAutoTests(opts) {
+      return this.getAllAutoTestsWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get average autotest duration
      *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~getAutoTestAverageDurationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestAverageDurationApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestAverageDurationApiResult} and HTTP response
      */
-    getAutoTestAverageDuration(id, callback) {
+    getAutoTestAverageDurationWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -676,26 +782,31 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/averageDuration', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutoTestById operation.
-     * @callback module:api/AutoTestsApi~getAutoTestByIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AutoTestApiResult} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get average autotest duration
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestAverageDurationApiResult}
      */
+    getAutoTestAverageDuration(id) {
+      return this.getAutoTestAverageDurationWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get autotest by internal or global ID
      *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~getAutoTestByIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AutoTestApiResult}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
      */
-    getAutoTestById(id, callback) {
+    getAutoTestByIdWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -719,26 +830,31 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getAutoTestChronology operation.
-     * @callback module:api/AutoTestsApi~getAutoTestChronologyCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestResultChronologyModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get autotest by internal or global ID
+     *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
      */
+    getAutoTestById(id) {
+      return this.getAutoTestByIdWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get autotest chronology
      *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~getAutoTestChronologyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestResultChronologyModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
      */
-    getAutoTestChronology(id, callback) {
+    getAutoTestChronologyWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -762,26 +878,31 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/chronology', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getTestRuns operation.
-     * @callback module:api/AutoTestsApi~getTestRunsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/TestRunByAutoTestApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get autotest chronology
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
      */
+    getAutoTestChronology(id) {
+      return this.getAutoTestChronologyWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get completed tests runs for autotests
      *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
-     * @param {module:api/AutoTestsApi~getTestRunsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/TestRunByAutoTestApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunByAutoTestApiResult>} and HTTP response
      */
-    getTestRuns(id, callback) {
+    getTestRunsWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -805,17 +926,23 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/testRuns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getWorkItemsLinkedToAutoTest operation.
-     * @callback module:api/AutoTestsApi~getWorkItemsLinkedToAutoTestCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/AutoTestWorkItemIdentifierApiResult>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get completed tests runs for autotests
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunByAutoTestApiResult>}
      */
+    getTestRuns(id) {
+      return this.getTestRunsWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get work items linked to autotest
@@ -824,10 +951,9 @@ export default class AutoTestsApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] Specifies that a test is deleted or still relevant.
      * @param {Boolean} [isWorkItemDeleted = false)] OBSOLETE: Use `isDeleted` instead
-     * @param {module:api/AutoTestsApi~getWorkItemsLinkedToAutoTestCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/AutoTestWorkItemIdentifierApiResult>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestWorkItemIdentifierApiResult>} and HTTP response
      */
-    getWorkItemsLinkedToAutoTest(id, opts, callback) {
+    getWorkItemsLinkedToAutoTestWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'id' is set
@@ -854,17 +980,26 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/workItems', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the linkAutoTestToWorkItem operation.
-     * @callback module:api/AutoTestsApi~linkAutoTestToWorkItemCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get work items linked to autotest
+     *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
+     * @param {String} id Specifies the autotest entity ID.  You can copy it from the address bar in your web browser or use autotest GUID.
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.isDeleted Specifies that a test is deleted or still relevant.
+     * @param {Boolean} opts.isWorkItemDeleted OBSOLETE: Use `isDeleted` instead (default to false)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestWorkItemIdentifierApiResult>}
      */
+    getWorkItemsLinkedToAutoTest(id, opts) {
+      return this.getWorkItemsLinkedToAutoTestWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Link autotest with work items
@@ -872,9 +1007,9 @@ export default class AutoTestsApi {
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemIdApiModel} [workItemIdApiModel] 
-     * @param {module:api/AutoTestsApi~linkAutoTestToWorkItemCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    linkAutoTestToWorkItem(id, opts, callback) {
+    linkAutoTestToWorkItemWithHttpInfo(id, opts) {
       opts = opts || {};
       let postBody = opts['workItemIdApiModel'];
       // verify the required parameter 'id' is set
@@ -899,26 +1034,34 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/{id}/workItems', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateAutoTest operation.
-     * @callback module:api/AutoTestsApi~updateAutoTestCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Link autotest with work items
+     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
+     * @param {String} id Autotest internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WorkItemIdApiModel} opts.workItemIdApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    linkAutoTestToWorkItem(id, opts) {
+      return this.linkAutoTestToWorkItemWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update autotest
      *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestUpdateApiModel} [autoTestUpdateApiModel] 
-     * @param {module:api/AutoTestsApi~updateAutoTestCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateAutoTest(opts, callback) {
+    updateAutoTestWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestUpdateApiModel'];
 
@@ -938,26 +1081,33 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateMultiple operation.
-     * @callback module:api/AutoTestsApi~updateMultipleCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update autotest
+     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AutoTestUpdateApiModel} opts.autoTestUpdateApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    updateAutoTest(opts) {
+      return this.updateAutoTestWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update multiple autotests
      *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestUpdateApiModel>} [autoTestUpdateApiModel] 
-     * @param {module:api/AutoTestsApi~updateMultipleCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateMultiple(opts, callback) {
+    updateMultipleWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['autoTestUpdateApiModel'];
 
@@ -977,8 +1127,22 @@ export default class AutoTestsApi {
       return this.apiClient.callApi(
         '/api/v2/autoTests/bulk', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update multiple autotests
+     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/AutoTestUpdateApiModel>} opts.autoTestUpdateApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    updateMultiple(opts) {
+      return this.updateMultipleWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

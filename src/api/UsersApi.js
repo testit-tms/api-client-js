@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Users service.
 * @module api/UsersApi
-* @version 7.0.0-rc1
+* @version 7.0.0-rc2
 */
 export default class UsersApi {
 
@@ -36,21 +36,13 @@ export default class UsersApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the apiV2UsersExistsGet operation.
-     * @callback module:api/UsersApi~apiV2UsersExistsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserCustomNameValidationResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {Object} opts Optional parameters
      * @param {String} [userName] 
-     * @param {module:api/UsersApi~apiV2UsersExistsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserCustomNameValidationResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserCustomNameValidationResponse} and HTTP response
      */
-    apiV2UsersExistsGet(opts, callback) {
+    apiV2UsersExistsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -71,8 +63,20 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/api/v2/users/exists', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.userName 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserCustomNameValidationResponse}
+     */
+    apiV2UsersExistsGet(opts) {
+      return this.apiV2UsersExistsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -18,7 +18,7 @@ import Page from './Page';
 /**
  * The TestPlanTestPointsInquiryApiModel model module.
  * @module model/TestPlanTestPointsInquiryApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class TestPlanTestPointsInquiryApiModel {
     /**

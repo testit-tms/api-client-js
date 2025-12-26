@@ -18,7 +18,7 @@ import TagsFilterApiModel from './TagsFilterApiModel';
 /**
  * The SelectTagsApiModel model module.
  * @module model/SelectTagsApiModel
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class SelectTagsApiModel {
     /**

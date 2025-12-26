@@ -30,13 +30,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestPointsApi();
 let id = "id_example"; // String | Test point unique ID
-apiInstance.apiV2TestPointsIdTestRunsGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestPointsIdTestRunsGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -79,13 +78,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.TestPointsApi();
 let id = "id_example"; // String | Test point unique ID
-apiInstance.apiV2TestPointsIdWorkItemGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestPointsIdWorkItemGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -135,13 +133,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'testPointFilterRequestModel': new TestitApiClient.TestPointFilterRequestModel() // TestPointFilterRequestModel | 
 };
-apiInstance.apiV2TestPointsSearchIdPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestPointsSearchIdPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -196,13 +193,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'testPointFilterRequestModel': new TestitApiClient.TestPointFilterRequestModel() // TestPointFilterRequestModel | 
 };
-apiInstance.apiV2TestPointsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2TestPointsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

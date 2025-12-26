@@ -33,13 +33,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let commentId = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Comment internal (guid format) identifier
-apiInstance.apiV2WorkItemsCommentsCommentIdDelete(commentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WorkItemsCommentsCommentIdDelete(commentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -86,13 +85,12 @@ let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let opts = {
   'workItemCommentPostModel': new TestitApiClient.WorkItemCommentPostModel() // WorkItemCommentPostModel | 
 };
-apiInstance.apiV2WorkItemsCommentsPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsCommentsPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -137,13 +135,12 @@ let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let opts = {
   'workItemCommentPutModel': new TestitApiClient.WorkItemCommentPutModel() // WorkItemCommentPutModel | 
 };
-apiInstance.apiV2WorkItemsCommentsPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2WorkItemsCommentsPut(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -186,13 +183,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let id = "id_example"; // String | Unique or global ID of the work item
-apiInstance.apiV2WorkItemsIdCommentsCountGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdCommentsCountGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -235,13 +231,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let id = "id_example"; // String | Unique or global ID of the work item
-apiInstance.apiV2WorkItemsIdCommentsGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2WorkItemsIdCommentsGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

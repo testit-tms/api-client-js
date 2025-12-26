@@ -48,13 +48,12 @@ let apiInstance = new TestitApiClient.AutoTestsApi();
 let opts = {
   'autoTestBulkDeleteApiModel': new TestitApiClient.AutoTestBulkDeleteApiModel() // AutoTestBulkDeleteApiModel | 
 };
-apiInstance.apiV2AutoTestsDelete(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AutoTestsDelete(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -106,13 +105,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'autoTestFlakyBulkApiModel': new TestitApiClient.AutoTestFlakyBulkApiModel() // AutoTestFlakyBulkApiModel | 
 };
-apiInstance.apiV2AutoTestsFlakyBulkPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2AutoTestsFlakyBulkPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -165,13 +163,12 @@ let id = "id_example"; // String | Global Id of auto test
 let opts = {
   'operation': [new TestitApiClient.Operation()] // [Operation] | 
 };
-apiInstance.apiV2AutoTestsIdPatch(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2AutoTestsIdPatch(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -225,13 +222,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'autoTestResultHistorySelectApiModel': new TestitApiClient.AutoTestResultHistorySelectApiModel() // AutoTestResultHistorySelectApiModel | 
 };
-apiInstance.apiV2AutoTestsIdTestResultsSearchPost(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AutoTestsIdTestResultsSearchPost(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -282,13 +278,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | 
-apiInstance.apiV2AutoTestsIdWorkItemsChangedIdGet(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AutoTestsIdWorkItemsChangedIdGet(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -334,13 +329,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | 
 let workItemId = "workItemId_example"; // String | 
-apiInstance.apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost(id, workItemId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePost(id, workItemId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -391,13 +385,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'autoTestSearchApiModel': new TestitApiClient.AutoTestSearchApiModel() // AutoTestSearchApiModel | 
 };
-apiInstance.apiV2AutoTestsSearchPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.apiV2AutoTestsSearchPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -449,13 +442,12 @@ let apiInstance = new TestitApiClient.AutoTestsApi();
 let opts = {
   'autoTestCreateApiModel': new TestitApiClient.AutoTestCreateApiModel() // AutoTestCreateApiModel | 
 };
-apiInstance.createAutoTest(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createAutoTest(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -502,13 +494,12 @@ let apiInstance = new TestitApiClient.AutoTestsApi();
 let opts = {
   'autoTestCreateApiModel': [new TestitApiClient.AutoTestCreateApiModel()] // [AutoTestCreateApiModel] | 
 };
-apiInstance.createMultiple(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.createMultiple(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -553,13 +544,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | Autotest internal (UUID) or global (integer) identifier
-apiInstance.deleteAutoTest(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteAutoTest(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -607,13 +597,12 @@ let id = "id_example"; // String | Autotest internal (UUID) or global (integer) 
 let opts = {
   'workItemId': "workItemId_example" // String | Work item internal (UUID) or global (integer) identifier
 };
-apiInstance.deleteAutoTestLinkFromWorkItem(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteAutoTestLinkFromWorkItem(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -684,13 +673,12 @@ let opts = {
   'searchField': "searchField_example", // String | Property name for searching
   'searchValue': "searchValue_example" // String | Value for searching
 };
-apiInstance.getAllAutoTests(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAllAutoTests(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -760,13 +748,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | Autotest internal (UUID) or global (integer) identifier
-apiInstance.getAutoTestAverageDuration(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutoTestAverageDuration(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -811,13 +798,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | Autotest internal (UUID) or global (integer) identifier
-apiInstance.getAutoTestById(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutoTestById(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -862,13 +848,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | Autotest internal (UUID) or global (integer) identifier
-apiInstance.getAutoTestChronology(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getAutoTestChronology(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -913,13 +898,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.AutoTestsApi();
 let id = "id_example"; // String | Autotest internal (UUID) or global (integer) identifier
-apiInstance.getTestRuns(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getTestRuns(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -968,13 +952,12 @@ let opts = {
   'isDeleted': true, // Boolean | Specifies that a test is deleted or still relevant.
   'isWorkItemDeleted': false // Boolean | OBSOLETE: Use `isDeleted` instead
 };
-apiInstance.getWorkItemsLinkedToAutoTest(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getWorkItemsLinkedToAutoTest(id, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1024,13 +1007,12 @@ let id = "id_example"; // String | Autotest internal (UUID) or global (integer) 
 let opts = {
   'workItemIdApiModel': new TestitApiClient.WorkItemIdApiModel() // WorkItemIdApiModel | 
 };
-apiInstance.linkAutoTestToWorkItem(id, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.linkAutoTestToWorkItem(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1078,13 +1060,12 @@ let apiInstance = new TestitApiClient.AutoTestsApi();
 let opts = {
   'autoTestUpdateApiModel': new TestitApiClient.AutoTestUpdateApiModel() // AutoTestUpdateApiModel | 
 };
-apiInstance.updateAutoTest(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateAutoTest(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1131,13 +1112,12 @@ let apiInstance = new TestitApiClient.AutoTestsApi();
 let opts = {
   'autoTestUpdateApiModel': [new TestitApiClient.AutoTestUpdateApiModel()] // [AutoTestUpdateApiModel] | 
 };
-apiInstance.updateMultiple(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateMultiple(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

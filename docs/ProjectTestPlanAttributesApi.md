@@ -36,13 +36,12 @@ let projectId = "projectId_example"; // String | Project internal (UUID) or glob
 let opts = {
   'requestBody': ["null"] // [String] | 
 };
-apiInstance.createCustomAttributeTestPlanProjectRelations(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.createCustomAttributeTestPlanProjectRelations(projectId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -89,13 +88,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 let apiInstance = new TestitApiClient.ProjectTestPlanAttributesApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
 let attributeId = "attributeId_example"; // String | 
-apiInstance.deleteCustomAttributeTestPlanProjectRelations(projectId, attributeId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteCustomAttributeTestPlanProjectRelations(projectId, attributeId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -141,13 +139,12 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.ProjectTestPlanAttributesApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
-apiInstance.getCustomAttributeTestPlanProjectRelations(projectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getCustomAttributeTestPlanProjectRelations(projectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -198,13 +195,12 @@ let opts = {
   'searchValue': "searchValue_example", // String | Value for searching
   'projectAttributesFilterModel': new TestitApiClient.ProjectAttributesFilterModel() // ProjectAttributesFilterModel | 
 };
-apiInstance.searchTestPlanAttributesInProject(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.searchTestPlanAttributesInProject(projectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -258,13 +254,12 @@ let projectId = "projectId_example"; // String | Project internal (UUID) or glob
 let opts = {
   'customAttributeTestPlanProjectRelationPutModel': new TestitApiClient.CustomAttributeTestPlanProjectRelationPutModel() // CustomAttributeTestPlanProjectRelationPutModel | 
 };
-apiInstance.updateCustomAttributeTestPlanProjectRelations(projectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateCustomAttributeTestPlanProjectRelations(projectId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

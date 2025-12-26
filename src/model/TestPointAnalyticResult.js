@@ -23,7 +23,7 @@ import TestPlanGroupByTesterAndStatusCode from './TestPlanGroupByTesterAndStatus
 /**
  * The TestPointAnalyticResult model module.
  * @module model/TestPointAnalyticResult
- * @version 7.0.0-rc1
+ * @version 7.0.0-rc2
  */
 class TestPointAnalyticResult {
     /**
