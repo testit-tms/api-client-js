@@ -18,7 +18,7 @@ import StepCommentApiModel from './StepCommentApiModel';
 /**
  * The StepResultApiModel model module.
  * @module model/StepResultApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class StepResultApiModel {
     /**

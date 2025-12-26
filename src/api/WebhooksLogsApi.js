@@ -20,7 +20,7 @@ import WebhookLogApiResult from '../model/WebhookLogApiResult';
 /**
 * WebhooksLogs service.
 * @module api/WebhooksLogsApi
-* @version 7.0.0
+* @version 7.0.0-rc8
 */
 export default class WebhooksLogsApi {
 

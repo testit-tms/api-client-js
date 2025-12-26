@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WebhooksUpdateApiResult model module.
  * @module model/WebhooksUpdateApiResult
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class WebhooksUpdateApiResult {
     /**

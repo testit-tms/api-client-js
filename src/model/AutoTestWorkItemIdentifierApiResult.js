@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestWorkItemIdentifierApiResult model module.
  * @module model/AutoTestWorkItemIdentifierApiResult
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class AutoTestWorkItemIdentifierApiResult {
     /**

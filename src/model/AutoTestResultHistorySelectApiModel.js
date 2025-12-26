@@ -18,7 +18,7 @@ import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 /**
  * The AutoTestResultHistorySelectApiModel model module.
  * @module model/AutoTestResultHistorySelectApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class AutoTestResultHistorySelectApiModel {
     /**

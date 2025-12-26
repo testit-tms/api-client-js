@@ -18,7 +18,7 @@ import Inquiry from './Inquiry';
 /**
  * The GetExternalIssueSuggestionsApiModel model module.
  * @module model/GetExternalIssueSuggestionsApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class GetExternalIssueSuggestionsApiModel {
     /**

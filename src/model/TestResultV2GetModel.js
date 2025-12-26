@@ -21,7 +21,7 @@ import TestPointShortModel from './TestPointShortModel';
 /**
  * The TestResultV2GetModel model module.
  * @module model/TestResultV2GetModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class TestResultV2GetModel {
     /**

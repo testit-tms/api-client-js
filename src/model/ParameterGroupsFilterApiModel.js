@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterGroupsFilterApiModel model module.
  * @module model/ParameterGroupsFilterApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class ParameterGroupsFilterApiModel {
     /**

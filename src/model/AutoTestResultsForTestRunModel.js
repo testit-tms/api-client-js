@@ -21,7 +21,7 @@ import LinkPostModel from './LinkPostModel';
 /**
  * The AutoTestResultsForTestRunModel model module.
  * @module model/AutoTestResultsForTestRunModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class AutoTestResultsForTestRunModel {
     /**

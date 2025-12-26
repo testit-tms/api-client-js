@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ValidationProblemDetails model module.
  * @module model/ValidationProblemDetails
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class ValidationProblemDetails {
     /**

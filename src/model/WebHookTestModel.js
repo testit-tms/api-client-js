@@ -17,7 +17,7 @@ import RequestTypeModel from './RequestTypeModel';
 /**
  * The WebHookTestModel model module.
  * @module model/WebHookTestModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class WebHookTestModel {
     /**

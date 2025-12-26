@@ -18,7 +18,7 @@ import LogicalOperator from './LogicalOperator';
 /**
  * The CompositeFilter model module.
  * @module model/CompositeFilter
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class CompositeFilter {
     /**

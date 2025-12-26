@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationPostModel model module.
  * @module model/ConfigurationPostModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class ConfigurationPostModel {
     /**

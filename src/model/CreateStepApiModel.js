@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateStepApiModel model module.
  * @module model/CreateStepApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class CreateStepApiModel {
     /**

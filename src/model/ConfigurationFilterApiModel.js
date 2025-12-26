@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationFilterApiModel model module.
  * @module model/ConfigurationFilterApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class ConfigurationFilterApiModel {
     /**

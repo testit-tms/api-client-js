@@ -22,7 +22,7 @@ import WorkItemState from './WorkItemState';
 /**
  * The TestPointShortResponseModel model module.
  * @module model/TestPointShortResponseModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class TestPointShortResponseModel {
     /**

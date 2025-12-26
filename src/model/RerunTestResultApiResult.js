@@ -17,7 +17,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The RerunTestResultApiResult model module.
  * @module model/RerunTestResultApiResult
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class RerunTestResultApiResult {
     /**

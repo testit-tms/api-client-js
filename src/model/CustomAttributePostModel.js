@@ -18,7 +18,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributePostModel model module.
  * @module model/CustomAttributePostModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class CustomAttributePostModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AssignAttachmentApiModel model module.
  * @module model/AssignAttachmentApiModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class AssignAttachmentApiModel {
     /**

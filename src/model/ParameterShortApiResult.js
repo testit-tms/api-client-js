@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterShortApiResult model module.
  * @module model/ParameterShortApiResult
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class ParameterShortApiResult {
     /**

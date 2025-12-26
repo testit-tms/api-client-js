@@ -2,7 +2,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
   /**
   * Attachments service.
   * @module api/AttachmentsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class AttachmentsApi {
       /**
@@ -103,7 +103,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
   /**
   * AutoTests service.
   * @module api/AutoTestsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class AutoTestsApi {
       /**
@@ -575,7 +575,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
   /**
   * BackgroundJobs service.
   * @module api/BackgroundJobsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class BackgroundJobsApi {
       /**
@@ -697,7 +697,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
   /**
   * Configurations service.
   * @module api/ConfigurationsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ConfigurationsApi {
       /**
@@ -913,7 +913,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
   /**
   * CustomAttributes service.
   * @module api/CustomAttributesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class CustomAttributesApi {
       /**
@@ -1038,7 +1038,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
   /**
   * CustomAttributeTemplates service.
   * @module api/CustomAttributeTemplatesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class CustomAttributeTemplatesApi {
       /**
@@ -1220,7 +1220,7 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
   /**
   * ExternalIssues service.
   * @module api/ExternalIssuesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ExternalIssuesApi {
       /**
@@ -1255,7 +1255,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
   /**
   * Notifications service.
   * @module api/NotificationsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class NotificationsApi {
       /**
@@ -1384,7 +1384,7 @@ declare module 'testit-api-client/api/ParametersApi' {
   /**
   * Parameters service.
   * @module api/ParametersApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ParametersApi {
       /**
@@ -1725,7 +1725,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
   /**
   * ProjectAttributes service.
   * @module api/ProjectAttributesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectAttributesApi {
       /**
@@ -1867,7 +1867,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
   /**
   * ProjectAttributeTemplates service.
   * @module api/ProjectAttributeTemplatesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectAttributeTemplatesApi {
       /**
@@ -1951,7 +1951,7 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
   /**
   * ProjectConfigurations service.
   * @module api/ProjectConfigurationsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectConfigurationsApi {
       /**
@@ -1984,7 +1984,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
   /**
   * Projects service.
   * @module api/ProjectsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectsApi {
       /**
@@ -2496,7 +2496,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
   /**
   * ProjectSections service.
   * @module api/ProjectSectionsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectSectionsApi {
       /**
@@ -2547,7 +2547,7 @@ declare module 'testit-api-client/api/ProjectSettingsApi' {
   /**
   * ProjectSettings service.
   * @module api/ProjectSettingsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectSettingsApi {
       /**
@@ -2596,7 +2596,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
   /**
   * ProjectTestPlanAttributes service.
   * @module api/ProjectTestPlanAttributesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectTestPlanAttributesApi {
       /**
@@ -2718,7 +2718,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
   /**
   * ProjectTestPlans service.
   * @module api/ProjectTestPlansApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectTestPlansApi {
       /**
@@ -2883,7 +2883,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
   /**
   * ProjectTestPlanTestPoints service.
   * @module api/ProjectTestPlanTestPointsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectTestPlanTestPointsApi {
       /**
@@ -2942,7 +2942,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
   /**
   * ProjectWorkItems service.
   * @module api/ProjectWorkItemsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class ProjectWorkItemsApi {
       /**
@@ -3156,7 +3156,7 @@ declare module 'testit-api-client/api/SearchApi' {
   /**
   * Search service.
   * @module api/SearchApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class SearchApi {
       /**
@@ -3189,7 +3189,7 @@ declare module 'testit-api-client/api/SectionsApi' {
   /**
   * Sections service.
   * @module api/SectionsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class SectionsApi {
       /**
@@ -3371,7 +3371,7 @@ declare module 'testit-api-client/api/TagsApi' {
   /**
   * Tags service.
   * @module api/TagsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TagsApi {
       /**
@@ -3521,7 +3521,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
   /**
   * TestPlans service.
   * @module api/TestPlansApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TestPlansApi {
       /**
@@ -4145,7 +4145,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
   /**
   * TestPoints service.
   * @module api/TestPointsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TestPointsApi {
       /**
@@ -4250,7 +4250,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
   /**
   * TestResults service.
   * @module api/TestResultsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TestResultsApi {
       /**
@@ -4528,7 +4528,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
   /**
   * TestRuns service.
   * @module api/TestRunsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TestRunsApi {
       /**
@@ -4944,7 +4944,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
   /**
   * TestSuites service.
   * @module api/TestSuitesApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class TestSuitesApi {
       /**
@@ -5186,7 +5186,7 @@ declare module 'testit-api-client/api/UsersApi' {
   /**
   * Users service.
   * @module api/UsersApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class UsersApi {
       /**
@@ -5219,7 +5219,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
   /**
   * Webhooks service.
   * @module api/WebhooksApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class WebhooksApi {
       /**
@@ -5406,7 +5406,7 @@ declare module 'testit-api-client/api/WebhooksLogsApi' {
   /**
   * WebhooksLogs service.
   * @module api/WebhooksLogsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class WebhooksLogsApi {
       /**
@@ -5480,7 +5480,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
   /**
   * WorkItems service.
   * @module api/WorkItemsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class WorkItemsApi {
       /**
@@ -6042,7 +6042,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
   /**
   * WorkItemsComments service.
   * @module api/WorkItemsCommentsApi
-  * @version 7.0.0
+  * @version 7.0.0-rc8
   */
   export default class WorkItemsCommentsApi {
       /**
@@ -6313,7 +6313,7 @@ declare module 'testit-api-client/ApiClient' {
        * @param {String} apiBasePath base path defined in the operation/path level to override the default one
        * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
        */
-      callApi(path: string, httpMethod: string, pathParams: any, queryParams: any, headerParams: any, formParams: any, bodyParam: any, authNames: Array<string>, contentTypes: Array<string>, accepts: Array<string>, returnType: (string | any[] | ObjectFunction), apiBasePath: string): Promise<any>;
+      callApi(path: string, httpMethod: string, pathParams: any, queryParams: any, headerParams: any, formParams: any, bodyParam: any, authNames: Array<string>, contentTypes: Array<string>, accepts: Array<string>, returnType: (string | any[] ), apiBasePath: string): Promise<any>;
       /**
         * Gets an array of host settings
         * @returns An array of host settings
@@ -6922,7 +6922,6 @@ declare module 'testit-api-client/model/ActionUpdate' {
   /**
    * *
    */
-  export type ActionUpdate = any;
 
 }
 declare module 'testit-api-client/model/AIServiceModelApiResult' {
@@ -6930,7 +6929,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
   /**
    * The AIServiceModelApiResult model module.
    * @module model/AIServiceModelApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AIServiceModelApiResult {
       /**
@@ -6973,7 +6972,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
   /**
    * The AIServiceModelApiResultReply model module.
    * @module model/AIServiceModelApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AIServiceModelApiResultReply {
       /**
@@ -7002,7 +7001,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
        * @param data {Array.<module:model/AIServiceModelApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -7038,7 +7037,6 @@ declare module 'testit-api-client/model/ApiExternalServiceCategory' {
   /**
    * *
    */
-  export type ApiExternalServiceCategory = any;
 
 }
 declare module 'testit-api-client/model/AssignAttachmentApiModel' {
@@ -7046,7 +7044,7 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   /**
    * The AssignAttachmentApiModel model module.
    * @module model/AssignAttachmentApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AssignAttachmentApiModel {
       /**
@@ -7087,7 +7085,7 @@ declare module 'testit-api-client/model/AssignIterationApiModel' {
   /**
    * The AssignIterationApiModel model module.
    * @module model/AssignIterationApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AssignIterationApiModel {
       /**
@@ -7116,7 +7114,7 @@ declare module 'testit-api-client/model/AssignIterationApiModel' {
        * @param parameters {Array.<module:model/ParameterIterationModel>}
        * @param id {String} Iteration identifier, must be empty for new or changed iteration
        */
-      constructor(parameters: Array<module>, id: string);
+      constructor(parameters: Array<any>, id: string);
       parameters: any;
       id: any;
   }
@@ -7130,7 +7128,7 @@ declare module 'testit-api-client/model/AttachmentApiResult' {
   /**
    * The AttachmentApiResult model module.
    * @module model/AttachmentApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentApiResult {
       /**
@@ -7185,7 +7183,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModel' {
   /**
    * The AttachmentChangeViewModel model module.
    * @module model/AttachmentChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentChangeViewModel {
       /**
@@ -7230,7 +7228,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFie
   /**
    * The AttachmentChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AttachmentChangeViewModelArrayChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -7263,7 +7261,7 @@ declare module 'testit-api-client/model/AttachmentModel' {
   /**
    * The AttachmentModel model module.
    * @module model/AttachmentModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentModel {
       /**
@@ -7318,7 +7316,7 @@ declare module 'testit-api-client/model/AttachmentPutModel' {
   /**
    * The AttachmentPutModel model module.
    * @module model/AttachmentPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentPutModel {
       /**
@@ -7359,7 +7357,7 @@ declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsMod
   /**
    * The AttachmentPutModelAutoTestStepResultsModel model module.
    * @module model/AttachmentPutModelAutoTestStepResultsModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentPutModelAutoTestStepResultsModel {
       /**
@@ -7400,7 +7398,7 @@ declare module 'testit-api-client/model/AttachmentUpdateRequest' {
   /**
    * The AttachmentUpdateRequest model module.
    * @module model/AttachmentUpdateRequest
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AttachmentUpdateRequest {
       /**
@@ -7441,7 +7439,7 @@ declare module 'testit-api-client/model/AuditApiResult' {
   /**
    * The AuditApiResult model module.
    * @module model/AuditApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AuditApiResult {
       /**
@@ -7485,7 +7483,7 @@ declare module 'testit-api-client/model/AutoTest' {
   /**
    * The AutoTest model module.
    * @module model/AutoTest
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTest {
       /**
@@ -7561,7 +7559,7 @@ declare module 'testit-api-client/model/AutoTestApiResult' {
   /**
    * The AutoTestApiResult model module.
    * @module model/AutoTestApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestApiResult {
       /**
@@ -7638,7 +7636,7 @@ declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
   /**
    * The AutoTestAverageDurationApiResult model module.
    * @module model/AutoTestAverageDurationApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestAverageDurationApiResult {
       /**
@@ -7681,7 +7679,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
   /**
    * The AutoTestBulkDeleteApiModel model module.
    * @module model/AutoTestBulkDeleteApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestBulkDeleteApiModel {
       /**
@@ -7722,7 +7720,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   /**
    * The AutoTestBulkDeleteApiResult model module.
    * @module model/AutoTestBulkDeleteApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestBulkDeleteApiResult {
       /**
@@ -7765,7 +7763,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModel' {
   /**
    * The AutoTestChangeViewModel model module.
    * @module model/AutoTestChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestChangeViewModel {
       /**
@@ -7812,7 +7810,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedField
   /**
    * The AutoTestChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AutoTestChangeViewModelArrayChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -7845,7 +7843,7 @@ declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
   /**
    * The AutoTestClassCountApiModel model module.
    * @module model/AutoTestClassCountApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestClassCountApiModel {
       /**
@@ -7887,7 +7885,7 @@ declare module 'testit-api-client/model/AutoTestCreateApiModel' {
   /**
    * The AutoTestCreateApiModel model module.
    * @module model/AutoTestCreateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestCreateApiModel {
       /**
@@ -7947,7 +7945,7 @@ declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
   /**
    * The AutoTestExtractionApiModel model module.
    * @module model/AutoTestExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestExtractionApiModel {
       /**
@@ -7979,7 +7977,7 @@ declare module 'testit-api-client/model/AutoTestFilterApiModel' {
   /**
    * The AutoTestFilterApiModel model module.
    * @module model/AutoTestFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestFilterApiModel {
       /**
@@ -8030,7 +8028,7 @@ declare module 'testit-api-client/model/AutoTestFilterModel' {
   /**
    * The AutoTestFilterModel model module.
    * @module model/AutoTestFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestFilterModel {
       /**
@@ -8081,7 +8079,7 @@ declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
   /**
    * The AutoTestFlakyBulkApiModel model module.
    * @module model/AutoTestFlakyBulkApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestFlakyBulkApiModel {
       /**
@@ -8124,7 +8122,7 @@ declare module 'testit-api-client/model/AutoTestIdModel' {
   /**
    * The AutoTestIdModel model module.
    * @module model/AutoTestIdModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestIdModel {
       /**
@@ -8165,7 +8163,7 @@ declare module 'testit-api-client/model/AutoTestModel' {
   /**
    * The AutoTestModel model module.
    * @module model/AutoTestModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestModel {
       /**
@@ -8242,7 +8240,7 @@ declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
   /**
    * The AutoTestModelV2GetModel model module.
    * @module model/AutoTestModelV2GetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestModelV2GetModel {
       /**
@@ -8306,7 +8304,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
   /**
    * The AutoTestNamespaceApiResult model module.
    * @module model/AutoTestNamespaceApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestNamespaceApiResult {
       /**
@@ -8348,7 +8346,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
   /**
    * The AutoTestNamespaceCountApiModel model module.
    * @module model/AutoTestNamespaceCountApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestNamespaceCountApiModel {
       /**
@@ -8377,7 +8375,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
        * @param count {Number}
        * @param classes {Array.<module:model/AutoTestClassCountApiModel>}
        */
-      constructor(count: number, classes: Array<module>);
+      constructor(count: number, classes: Array<any>);
       name: any;
       count: any;
       classes: any;
@@ -8392,7 +8390,7 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
   /**
    * The AutoTestNamespacesCountResponse model module.
    * @module model/AutoTestNamespacesCountResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestNamespacesCountResponse {
       /**
@@ -8420,7 +8418,7 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
        * @alias module:model/AutoTestNamespacesCountResponse
        * @param namespaces {Array.<module:model/AutoTestNamespaceCountApiModel>}
        */
-      constructor(namespaces: Array<module>);
+      constructor(namespaces: Array<any>);
       namespaces: any;
   }
   namespace AutoTestNamespacesCountResponse {
@@ -8465,7 +8463,6 @@ declare module 'testit-api-client/model/AutoTestOutcome' {
   /**
    * *
    */
-  export type AutoTestOutcome = any;
 
 }
 declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
@@ -8473,7 +8470,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
   /**
    * The AutoTestProjectSettingsApiModel model module.
    * @module model/AutoTestProjectSettingsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestProjectSettingsApiModel {
       /**
@@ -8519,7 +8516,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
   /**
    * The AutoTestProjectSettingsApiResult model module.
    * @module model/AutoTestProjectSettingsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestProjectSettingsApiResult {
       /**
@@ -8570,7 +8567,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
   /**
    * The AutoTestResultHistoryApiResult model module.
    * @module model/AutoTestResultHistoryApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultHistoryApiResult {
       /**
@@ -8607,7 +8604,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
        * @param createdDate {Date}
        * @param createdById {String}
        */
-      constructor(id: string, testRunId: string, configurationId: string, configurationName: string, outcome: any, status: any, rerunCount: number, rerunTestResults: Array<module>, createdDate: Date, createdById: string);
+      constructor(id: string, testRunId: string, configurationId: string, configurationName: string, outcome: any, status: any, rerunCount: number, rerunTestResults: Array<any>, createdDate: Date, createdById: string);
       id: any;
       testPlanId: any;
       testPlanGlobalId: any;
@@ -8638,7 +8635,7 @@ declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
   /**
    * The AutoTestResultHistorySelectApiModel model module.
    * @module model/AutoTestResultHistorySelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultHistorySelectApiModel {
       /**
@@ -8714,7 +8711,6 @@ declare module 'testit-api-client/model/AutotestResultOutcome' {
   /**
    * *
    */
-  export type AutotestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
@@ -8722,7 +8718,7 @@ declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
   /**
    * The AutotestResultReasonFilterModel model module.
    * @module model/AutotestResultReasonFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutotestResultReasonFilterModel {
       /**
@@ -8757,7 +8753,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonsCountItemModel' {
   /**
    * The AutoTestResultReasonsCountItemModel model module.
    * @module model/AutoTestResultReasonsCountItemModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultReasonsCountItemModel {
       /**
@@ -8800,7 +8796,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonsCountModel' {
   /**
    * The AutoTestResultReasonsCountModel model module.
    * @module model/AutoTestResultReasonsCountModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultReasonsCountModel {
       /**
@@ -8828,7 +8824,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonsCountModel' {
        * @alias module:model/AutoTestResultReasonsCountModel
        * @param data {Array.<module:model/AutoTestResultReasonsCountItemModel>}
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace AutoTestResultReasonsCountModel {
@@ -8841,7 +8837,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonShort' {
   /**
    * The AutoTestResultReasonShort model module.
    * @module model/AutoTestResultReasonShort
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultReasonShort {
       /**
@@ -8884,7 +8880,7 @@ declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
   /**
    * The AutotestResultReasonShortGetModel model module.
    * @module model/AutotestResultReasonShortGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutotestResultReasonShortGetModel {
       /**
@@ -8940,7 +8936,7 @@ declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
   /**
    * The AutoTestResultsForTestRunModel model module.
    * @module model/AutoTestResultsForTestRunModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestResultsForTestRunModel {
       /**
@@ -8998,7 +8994,7 @@ declare module 'testit-api-client/model/AutoTestSearchApiModel' {
   /**
    * The AutoTestSearchApiModel model module.
    * @module model/AutoTestSearchApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestSearchApiModel {
       /**
@@ -9031,7 +9027,7 @@ declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
   /**
    * The AutoTestSearchIncludeApiModel model module.
    * @module model/AutoTestSearchIncludeApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestSearchIncludeApiModel {
       /**
@@ -9065,7 +9061,7 @@ declare module 'testit-api-client/model/AutoTestSelectApiModel' {
   /**
    * The AutoTestSelectApiModel model module.
    * @module model/AutoTestSelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestSelectApiModel {
       /**
@@ -9098,7 +9094,7 @@ declare module 'testit-api-client/model/AutoTestSelectModel' {
   /**
    * The AutoTestSelectModel model module.
    * @module model/AutoTestSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestSelectModel {
       /**
@@ -9140,7 +9136,7 @@ declare module 'testit-api-client/model/AutoTestsExtractionModel' {
   /**
    * The AutoTestsExtractionModel model module.
    * @module model/AutoTestsExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestsExtractionModel {
       /**
@@ -9172,7 +9168,7 @@ declare module 'testit-api-client/model/AutoTestShortApiResult' {
   /**
    * The AutoTestShortApiResult model module.
    * @module model/AutoTestShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestShortApiResult {
       /**
@@ -9221,7 +9217,7 @@ declare module 'testit-api-client/model/AutoTestStep' {
   /**
    * The AutoTestStep model module.
    * @module model/AutoTestStep
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStep {
       /**
@@ -9264,7 +9260,7 @@ declare module 'testit-api-client/model/AutoTestStepApiModel' {
   /**
    * The AutoTestStepApiModel model module.
    * @module model/AutoTestStepApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepApiModel {
       /**
@@ -9307,7 +9303,7 @@ declare module 'testit-api-client/model/AutoTestStepApiResult' {
   /**
    * The AutoTestStepApiResult model module.
    * @module model/AutoTestStepApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepApiResult {
       /**
@@ -9350,7 +9346,7 @@ declare module 'testit-api-client/model/AutoTestStepModel' {
   /**
    * The AutoTestStepModel model module.
    * @module model/AutoTestStepModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepModel {
       /**
@@ -9393,7 +9389,7 @@ declare module 'testit-api-client/model/AutoTestStepResult' {
   /**
    * The AutoTestStepResult model module.
    * @module model/AutoTestStepResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepResult {
       /**
@@ -9434,7 +9430,7 @@ declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
   /**
    * The AutoTestStepResultsApiResult model module.
    * @module model/AutoTestStepResultsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepResultsApiResult {
       /**
@@ -9475,7 +9471,7 @@ declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
   /**
    * The AutoTestStepResultUpdateRequest model module.
    * @module model/AutoTestStepResultUpdateRequest
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestStepResultUpdateRequest {
       /**
@@ -9516,7 +9512,7 @@ declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
   /**
    * The AutoTestUpdateApiModel model module.
    * @module model/AutoTestUpdateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestUpdateApiModel {
       /**
@@ -9575,7 +9571,7 @@ declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
   /**
    * The AutoTestWorkItemIdentifierApiResult model module.
    * @module model/AutoTestWorkItemIdentifierApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class AutoTestWorkItemIdentifierApiResult {
       /**
@@ -9645,7 +9641,6 @@ declare module 'testit-api-client/model/AvailableFailureCategory' {
   /**
    * *
    */
-  export type AvailableFailureCategory = any;
 
 }
 declare module 'testit-api-client/model/AvailableTestResultOutcome' {
@@ -9685,7 +9680,6 @@ declare module 'testit-api-client/model/AvailableTestResultOutcome' {
   /**
    * *
    */
-  export type AvailableTestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
@@ -9693,7 +9687,7 @@ declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
   /**
    * The BackgroundJobAttachmentModel model module.
    * @module model/BackgroundJobAttachmentModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class BackgroundJobAttachmentModel {
       /**
@@ -9740,7 +9734,7 @@ declare module 'testit-api-client/model/BackgroundJobFilterModel' {
   /**
    * The BackgroundJobFilterModel model module.
    * @module model/BackgroundJobFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class BackgroundJobFilterModel {
       /**
@@ -9776,7 +9770,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
   /**
    * The BackgroundJobGetModel model module.
    * @module model/BackgroundJobGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class BackgroundJobGetModel {
       /**
@@ -9811,7 +9805,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
        * @param createdDate {Date}
        * @param attachments {Array.<module:model/BackgroundJobAttachmentModel>}
        */
-      constructor(id: string, jobId: string, jobType: any, state: any, isDeleted: boolean, progress: number, createdDate: Date, attachments: Array<module>);
+      constructor(id: string, jobId: string, jobType: any, state: any, isDeleted: boolean, progress: number, createdDate: Date, attachments: Array<any>);
       id: any;
       jobId: any;
       jobType: any;
@@ -9871,7 +9865,6 @@ declare module 'testit-api-client/model/BackgroundJobState' {
   /**
    * *
    */
-  export type BackgroundJobState = any;
 
 }
 declare module 'testit-api-client/model/BackgroundJobType' {
@@ -9981,7 +9974,6 @@ declare module 'testit-api-client/model/BackgroundJobType' {
   /**
    * *
    */
-  export type BackgroundJobType = any;
 
 }
 declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
@@ -9989,7 +9981,7 @@ declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
   /**
    * The BooleanChangedFieldViewModel model module.
    * @module model/BooleanChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class BooleanChangedFieldViewModel {
       /**
@@ -10032,7 +10024,7 @@ declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
   /**
    * The BooleanNullableChangedFieldViewModel model module.
    * @module model/BooleanNullableChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class BooleanNullableChangedFieldViewModel {
       /**
@@ -10065,7 +10057,7 @@ declare module 'testit-api-client/model/CollectionFilter' {
   /**
    * The CollectionFilter model module.
    * @module model/CollectionFilter
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CollectionFilter {
       /**
@@ -10132,7 +10124,6 @@ declare module 'testit-api-client/model/CollectionOperator' {
   /**
    * *
    */
-  export type CollectionOperator = any;
 
 }
 declare module 'testit-api-client/model/CompositeFilter' {
@@ -10140,7 +10131,7 @@ declare module 'testit-api-client/model/CompositeFilter' {
   /**
    * The CompositeFilter model module.
    * @module model/CompositeFilter
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CompositeFilter {
       /**
@@ -10169,7 +10160,7 @@ declare module 'testit-api-client/model/CompositeFilter' {
        * @param filters {Array.<module:model/IFilter>}
        * @param operator {module:model/LogicalOperator}
        */
-      constructor(filters: Array<module>, operator: any);
+      constructor(filters: Array<any>, operator: any);
       filters: any;
       operator: any;
   }
@@ -10183,7 +10174,7 @@ declare module 'testit-api-client/model/ConfigurationByParametersModel' {
   /**
    * The ConfigurationByParametersModel model module.
    * @module model/ConfigurationByParametersModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationByParametersModel {
       /**
@@ -10226,7 +10217,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
   /**
    * The ConfigurationExtractionApiModel model module.
    * @module model/ConfigurationExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationExtractionApiModel {
       /**
@@ -10259,7 +10250,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionModel' {
   /**
    * The ConfigurationExtractionModel model module.
    * @module model/ConfigurationExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationExtractionModel {
       /**
@@ -10292,7 +10283,7 @@ declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
   /**
    * The ConfigurationFilterApiModel model module.
    * @module model/ConfigurationFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationFilterApiModel {
       /**
@@ -10327,7 +10318,7 @@ declare module 'testit-api-client/model/ConfigurationFilterModel' {
   /**
    * The ConfigurationFilterModel model module.
    * @module model/ConfigurationFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationFilterModel {
       /**
@@ -10362,7 +10353,7 @@ declare module 'testit-api-client/model/ConfigurationModel' {
   /**
    * The ConfigurationModel model module.
    * @module model/ConfigurationModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationModel {
       /**
@@ -10420,7 +10411,7 @@ declare module 'testit-api-client/model/ConfigurationPostModel' {
   /**
    * The ConfigurationPostModel model module.
    * @module model/ConfigurationPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationPostModel {
       /**
@@ -10468,7 +10459,7 @@ declare module 'testit-api-client/model/ConfigurationPutModel' {
   /**
    * The ConfigurationPutModel model module.
    * @module model/ConfigurationPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationPutModel {
       /**
@@ -10518,7 +10509,7 @@ declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
   /**
    * The ConfigurationSelectApiModel model module.
    * @module model/ConfigurationSelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationSelectApiModel {
       /**
@@ -10551,7 +10542,7 @@ declare module 'testit-api-client/model/ConfigurationSelectModel' {
   /**
    * The ConfigurationSelectModel model module.
    * @module model/ConfigurationSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationSelectModel {
       /**
@@ -10584,7 +10575,7 @@ declare module 'testit-api-client/model/ConfigurationShort' {
   /**
    * The ConfigurationShort model module.
    * @module model/ConfigurationShort
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationShort {
       /**
@@ -10627,7 +10618,7 @@ declare module 'testit-api-client/model/ConfigurationShortApiResult' {
   /**
    * The ConfigurationShortApiResult model module.
    * @module model/ConfigurationShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationShortApiResult {
       /**
@@ -10670,7 +10661,7 @@ declare module 'testit-api-client/model/ConfigurationShortModel' {
   /**
    * The ConfigurationShortModel model module.
    * @module model/ConfigurationShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ConfigurationShortModel {
       /**
@@ -10713,7 +10704,7 @@ declare module 'testit-api-client/model/CreateDefectApiModel' {
   /**
    * The CreateDefectApiModel model module.
    * @module model/CreateDefectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateDefectApiModel {
       /**
@@ -10756,7 +10747,7 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
   /**
    * The CreateEmptyTestRunApiModel model module.
    * @module model/CreateEmptyTestRunApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateEmptyTestRunApiModel {
       /**
@@ -10802,7 +10793,7 @@ declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
   /**
    * The CreateFailureCategoryApiModel model module.
    * @module model/CreateFailureCategoryApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateFailureCategoryApiModel {
       /**
@@ -10847,7 +10838,7 @@ declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
   /**
    * The CreateFailureClassRegexApiModel model module.
    * @module model/CreateFailureClassRegexApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateFailureClassRegexApiModel {
       /**
@@ -10888,7 +10879,7 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
   /**
    * The CreateLinkApiModel model module.
    * @module model/CreateLinkApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateLinkApiModel {
       /**
@@ -10934,7 +10925,7 @@ declare module 'testit-api-client/model/CreateParameterApiModel' {
   /**
    * The CreateParameterApiModel model module.
    * @module model/CreateParameterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateParameterApiModel {
       /**
@@ -10978,7 +10969,7 @@ declare module 'testit-api-client/model/CreateProjectApiModel' {
   /**
    * The CreateProjectApiModel model module.
    * @module model/CreateProjectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateProjectApiModel {
       /**
@@ -11022,7 +11013,7 @@ declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
   /**
    * The CreateProjectFailureCategoryApiModel model module.
    * @module model/CreateProjectFailureCategoryApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateProjectFailureCategoryApiModel {
       /**
@@ -11066,7 +11057,7 @@ declare module 'testit-api-client/model/CreateStepApiModel' {
   /**
    * The CreateStepApiModel model module.
    * @module model/CreateStepApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateStepApiModel {
       /**
@@ -11102,7 +11093,7 @@ declare module 'testit-api-client/model/CreateTagApiModel' {
   /**
    * The CreateTagApiModel model module.
    * @module model/CreateTagApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTagApiModel {
       /**
@@ -11143,7 +11134,7 @@ declare module 'testit-api-client/model/CreateTestPlanApiModel' {
   /**
    * The CreateTestPlanApiModel model module.
    * @module model/CreateTestPlanApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTestPlanApiModel {
       /**
@@ -11196,7 +11187,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel'
   /**
    * The CreateTestRunAndFillByAutoTestsApiModel model module.
    * @module model/CreateTestRunAndFillByAutoTestsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTestRunAndFillByAutoTestsApiModel {
       /**
@@ -11246,7 +11237,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
   /**
    * The CreateTestRunAndFillByConfigurationsApiModel model module.
    * @module model/CreateTestRunAndFillByConfigurationsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTestRunAndFillByConfigurationsApiModel {
       /**
@@ -11276,7 +11267,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
        * @param testPlanId {String} Specifies the GUID of the test plan, within which the test run will be created.
        * @param testPointSelectors {Array.<module:model/TestPointSelector>} Specifies an array of work items and configuration to create a test run for.
        */
-      constructor(projectId: string, testPlanId: string, testPointSelectors: Array<module>);
+      constructor(projectId: string, testPlanId: string, testPointSelectors: Array<any>);
       projectId: any;
       testPlanId: any;
       name: any;
@@ -11296,7 +11287,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel'
   /**
    * The CreateTestRunAndFillByWorkItemsApiModel model module.
    * @module model/CreateTestRunAndFillByWorkItemsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTestRunAndFillByWorkItemsApiModel {
       /**
@@ -11348,7 +11339,7 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   /**
    * The CreateTestStatusApiModel model module.
    * @module model/CreateTestStatusApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateTestStatusApiModel {
       /**
@@ -11394,7 +11385,7 @@ declare module 'testit-api-client/model/CreateWorkflowApiModel' {
   /**
    * The CreateWorkflowApiModel model module.
    * @module model/CreateWorkflowApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateWorkflowApiModel {
       /**
@@ -11423,7 +11414,7 @@ declare module 'testit-api-client/model/CreateWorkflowApiModel' {
        * @param name {String}
        * @param statuses {Array.<module:model/WorkflowStatusApiModel>}
        */
-      constructor(name: string, statuses: Array<module>);
+      constructor(name: string, statuses: Array<any>);
       name: any;
       isDefault: any;
       statuses: any;
@@ -11439,7 +11430,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
   /**
    * The CreateWorkItemApiModel model module.
    * @module model/CreateWorkItemApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateWorkItemApiModel {
       /**
@@ -11478,7 +11469,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
        * @param postconditionSteps {Array.<module:model/CreateStepApiModel>} Set of postcondition steps that are executed after completing the main steps
        * @param links {Array.<module:model/CreateLinkApiModel>} Set of links related to the work item
        */
-      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any, attributes: any, tags: Array<module>, preconditionSteps: Array<module>, steps: Array<module>, postconditionSteps: Array<module>, links: Array<module>);
+      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any, attributes: any, tags: Array<any>, preconditionSteps: Array<any>, steps: Array<any>, postconditionSteps: Array<any>, links: Array<any>);
       projectId: any;
       sectionId: any;
       name: any;
@@ -11507,7 +11498,7 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
   /**
    * The CreateWorkItemPreviewsApiModel model module.
    * @module model/CreateWorkItemPreviewsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CreateWorkItemPreviewsApiModel {
       /**
@@ -11536,7 +11527,7 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
        * @param sectionId {String}
        * @param previews {Array.<module:model/WorkItemPreviewApiModel>}
        */
-      constructor(sectionId: string, previews: Array<module>);
+      constructor(sectionId: string, previews: Array<any>);
       sectionId: any;
       previews: any;
       attributes: any;
@@ -11552,7 +11543,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
   /**
    * The CustomAttributeApiResult model module.
    * @module model/CustomAttributeApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeApiResult {
       /**
@@ -11587,7 +11578,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -11607,7 +11598,7 @@ declare module 'testit-api-client/model/CustomAttributeChangeModel' {
   /**
    * The CustomAttributeChangeModel model module.
    * @module model/CustomAttributeChangeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeChangeModel {
       /**
@@ -11643,7 +11634,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
   /**
    * The CustomAttributeGetModel model module.
    * @module model/CustomAttributeGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeGetModel {
       /**
@@ -11678,7 +11669,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
        * @param isRequired {Boolean} Indicates if the attribute is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -11698,7 +11689,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
   /**
    * The CustomAttributeModel model module.
    * @module model/CustomAttributeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeModel {
       /**
@@ -11733,7 +11724,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -11753,7 +11744,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
   /**
    * The CustomAttributeOptionApiResult model module.
    * @module model/CustomAttributeOptionApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeOptionApiResult {
       /**
@@ -11799,7 +11790,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionModel' {
   /**
    * The CustomAttributeOptionModel model module.
    * @module model/CustomAttributeOptionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeOptionModel {
       /**
@@ -11845,7 +11836,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
   /**
    * The CustomAttributeOptionPostModel model module.
    * @module model/CustomAttributeOptionPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeOptionPostModel {
       /**
@@ -11887,7 +11878,7 @@ declare module 'testit-api-client/model/CustomAttributePostModel' {
   /**
    * The CustomAttributePostModel model module.
    * @module model/CustomAttributePostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributePostModel {
       /**
@@ -11937,7 +11928,7 @@ declare module 'testit-api-client/model/CustomAttributePutModel' {
   /**
    * The CustomAttributePutModel model module.
    * @module model/CustomAttributePutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributePutModel {
       /**
@@ -11991,7 +11982,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
   /**
    * The CustomAttributeSearchQueryModel model module.
    * @module model/CustomAttributeSearchQueryModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeSearchQueryModel {
       /**
@@ -12028,7 +12019,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
   /**
    * The CustomAttributeSearchResponseModel model module.
    * @module model/CustomAttributeSearchResponseModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeSearchResponseModel {
       /**
@@ -12065,7 +12056,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(workItemUsage: Array<module>, testPlanUsage: Array<module>, id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(workItemUsage: Array<any>, testPlanUsage: Array<any>, id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       workItemUsage: any;
       testPlanUsage: any;
       id: any;
@@ -12087,7 +12078,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
   /**
    * The CustomAttributeTemplateModel model module.
    * @module model/CustomAttributeTemplateModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTemplateModel {
       /**
@@ -12132,7 +12123,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
   /**
    * The CustomAttributeTemplatePostModel model module.
    * @module model/CustomAttributeTemplatePostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTemplatePostModel {
       /**
@@ -12174,7 +12165,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
   /**
    * The CustomAttributeTemplatePutModel model module.
    * @module model/CustomAttributeTemplatePutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTemplatePutModel {
       /**
@@ -12218,7 +12209,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel'
   /**
    * The CustomAttributeTemplateSearchQueryModel model module.
    * @module model/CustomAttributeTemplateSearchQueryModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTemplateSearchQueryModel {
       /**
@@ -12253,7 +12244,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult'
   /**
    * The CustomAttributeTemplateValidationResult model module.
    * @module model/CustomAttributeTemplateValidationResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTemplateValidationResult {
       /**
@@ -12294,7 +12285,7 @@ declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPu
   /**
    * The CustomAttributeTestPlanProjectRelationPutModel model module.
    * @module model/CustomAttributeTestPlanProjectRelationPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeTestPlanProjectRelationPutModel {
       /**
@@ -12381,7 +12372,6 @@ declare module 'testit-api-client/model/CustomAttributeType' {
   /**
    * *
    */
-  export type CustomAttributeType = any;
 
 }
 declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
@@ -12431,7 +12421,6 @@ declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
   /**
    * *
    */
-  export type CustomAttributeTypesEnum = any;
 
 }
 declare module 'testit-api-client/model/CustomAttributeValidationResult' {
@@ -12439,7 +12428,7 @@ declare module 'testit-api-client/model/CustomAttributeValidationResult' {
   /**
    * The CustomAttributeValidationResult model module.
    * @module model/CustomAttributeValidationResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class CustomAttributeValidationResult {
       /**
@@ -12480,7 +12469,7 @@ declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
   /**
    * The DateTimeRangeSelectorModel model module.
    * @module model/DateTimeRangeSelectorModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class DateTimeRangeSelectorModel {
       /**
@@ -12513,7 +12502,7 @@ declare module 'testit-api-client/model/DefectApiModel' {
   /**
    * The DefectApiModel model module.
    * @module model/DefectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class DefectApiModel {
       /**
@@ -12581,7 +12570,6 @@ declare module 'testit-api-client/model/DeletionState' {
   /**
    * *
    */
-  export type DeletionState = any;
 
 }
 declare module 'testit-api-client/model/DemoProjectApiResult' {
@@ -12589,7 +12577,7 @@ declare module 'testit-api-client/model/DemoProjectApiResult' {
   /**
    * The DemoProjectApiResult model module.
    * @module model/DemoProjectApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class DemoProjectApiResult {
       /**
@@ -12630,7 +12618,7 @@ declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
   /**
    * The EnableProjectExternalServiceApiModel model module.
    * @module model/EnableProjectExternalServiceApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class EnableProjectExternalServiceApiModel {
       /**
@@ -12671,7 +12659,7 @@ declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
   /**
    * The ExternalFormAllowedValueModel model module.
    * @module model/ExternalFormAllowedValueModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalFormAllowedValueModel {
       /**
@@ -12715,7 +12703,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
   /**
    * The ExternalFormCreateModel model module.
    * @module model/ExternalFormCreateModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalFormCreateModel {
       /**
@@ -12746,7 +12734,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
        * @param links {Array.<module:model/ExternalFormLinkModel>}
        * @param values {Object.<String, Object>}
        */
-      constructor(possibleValues: any, fields: Array<module>, links: Array<module>, values: any);
+      constructor(possibleValues: any, fields: Array<any>, links: Array<any>, values: any);
       possibleValues: any;
       fields: any;
       links: any;
@@ -12762,7 +12750,7 @@ declare module 'testit-api-client/model/ExternalFormFieldModel' {
   /**
    * The ExternalFormFieldModel model module.
    * @module model/ExternalFormFieldModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalFormFieldModel {
       /**
@@ -12816,7 +12804,7 @@ declare module 'testit-api-client/model/ExternalFormLinkModel' {
   /**
    * The ExternalFormLinkModel model module.
    * @module model/ExternalFormLinkModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalFormLinkModel {
       /**
@@ -12859,7 +12847,7 @@ declare module 'testit-api-client/model/ExternalFormModel' {
   /**
    * The ExternalFormModel model module.
    * @module model/ExternalFormModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalFormModel {
       /**
@@ -12888,7 +12876,7 @@ declare module 'testit-api-client/model/ExternalFormModel' {
        * @param fields {Array.<module:model/ExternalFormFieldModel>}
        * @param possibleValues {Object.<String, Array.<module:model/ExternalFormAllowedValueModel>>}
        */
-      constructor(fields: Array<module>, possibleValues: any);
+      constructor(fields: Array<any>, possibleValues: any);
       fields: any;
       possibleValues: any;
   }
@@ -12939,7 +12927,6 @@ declare module 'testit-api-client/model/ExternalIssueApiField' {
   /**
    * *
    */
-  export type ExternalIssueApiField = any;
 
 }
 declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
@@ -12947,7 +12934,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   /**
    * The ExternalIssueApiFieldSuggestion model module.
    * @module model/ExternalIssueApiFieldSuggestion
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiFieldSuggestion {
       /**
@@ -12990,7 +12977,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
   /**
    * The ExternalIssueApiFieldSuggestionReply model module.
    * @module model/ExternalIssueApiFieldSuggestionReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiFieldSuggestionReply {
       /**
@@ -13019,7 +13006,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
        * @param data {Array.<module:model/ExternalIssueApiFieldSuggestion>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -13033,7 +13020,7 @@ declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
   /**
    * The ExternalIssueApiMetadata model module.
    * @module model/ExternalIssueApiMetadata
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiMetadata {
       /**
@@ -13082,7 +13069,7 @@ declare module 'testit-api-client/model/ExternalIssueApiPriority' {
   /**
    * The ExternalIssueApiPriority model module.
    * @module model/ExternalIssueApiPriority
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiPriority {
       /**
@@ -13124,7 +13111,7 @@ declare module 'testit-api-client/model/ExternalIssueApiResult' {
   /**
    * The ExternalIssueApiResult model module.
    * @module model/ExternalIssueApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiResult {
       /**
@@ -13171,7 +13158,7 @@ declare module 'testit-api-client/model/ExternalIssueApiType' {
   /**
    * The ExternalIssueApiType model module.
    * @module model/ExternalIssueApiType
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueApiType {
       /**
@@ -13213,7 +13200,7 @@ declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
   /**
    * The ExternalIssueExternalServiceApiResult model module.
    * @module model/ExternalIssueExternalServiceApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueExternalServiceApiResult {
       /**
@@ -13256,7 +13243,7 @@ declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
   /**
    * The ExternalIssueMetadataModel model module.
    * @module model/ExternalIssueMetadataModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueMetadataModel {
       /**
@@ -13305,7 +13292,7 @@ declare module 'testit-api-client/model/ExternalIssueModel' {
   /**
    * The ExternalIssueModel model module.
    * @module model/ExternalIssueModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueModel {
       /**
@@ -13352,7 +13339,7 @@ declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
   /**
    * The ExternalIssuePriorityModel model module.
    * @module model/ExternalIssuePriorityModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssuePriorityModel {
       /**
@@ -13394,7 +13381,7 @@ declare module 'testit-api-client/model/ExternalIssueTypeModel' {
   /**
    * The ExternalIssueTypeModel model module.
    * @module model/ExternalIssueTypeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalIssueTypeModel {
       /**
@@ -13436,7 +13423,7 @@ declare module 'testit-api-client/model/ExternalLinkModel' {
   /**
    * The ExternalLinkModel model module.
    * @module model/ExternalLinkModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalLinkModel {
       /**
@@ -13475,7 +13462,7 @@ declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
   /**
    * The ExternalServiceMetadataApiResult model module.
    * @module model/ExternalServiceMetadataApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalServiceMetadataApiResult {
       /**
@@ -13522,7 +13509,7 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
   /**
    * The ExternalServicesMetadataApiResult model module.
    * @module model/ExternalServicesMetadataApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ExternalServicesMetadataApiResult {
       /**
@@ -13550,7 +13537,7 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
        * @alias module:model/ExternalServicesMetadataApiResult
        * @param data {Array.<module:model/ExternalServiceMetadataApiResult>} External services metadata
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace ExternalServicesMetadataApiResult {
@@ -13600,7 +13587,6 @@ declare module 'testit-api-client/model/FailureCategory' {
   /**
    * *
    */
-  export type FailureCategory = any;
 
 }
 declare module 'testit-api-client/model/FailureCategoryApiResult' {
@@ -13608,7 +13594,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
   /**
    * The FailureCategoryApiResult model module.
    * @module model/FailureCategoryApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryApiResult {
       /**
@@ -13642,7 +13628,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
        * @param projects {Array.<module:model/ProjectNameApiResult>} Projects names
        * @param failureClassRegexes {Array.<module:model/FailureClassRegexApiResult>} Failure category regexes
        */
-      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, projects: Array<module>, failureClassRegexes: Array<module>);
+      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, projects: Array<any>, failureClassRegexes: Array<any>);
       id: any;
       name: any;
       isDeleted: any;
@@ -13664,7 +13650,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
   /**
    * The FailureCategoryGroupApiModel model module.
    * @module model/FailureCategoryGroupApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryGroupApiModel {
       /**
@@ -13706,7 +13692,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
   /**
    * The FailureCategoryGroupApiResult model module.
    * @module model/FailureCategoryGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryGroupApiResult {
       /**
@@ -13749,7 +13735,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
   /**
    * The FailureCategoryGroupItemApiResult model module.
    * @module model/FailureCategoryGroupItemApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryGroupItemApiResult {
       /**
@@ -13777,7 +13763,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
        * @alias module:model/FailureCategoryGroupItemApiResult
        * @param items {Array.<module:model/FailureCategoryItemApiResult>} Group data
        */
-      constructor(items: Array<module>);
+      constructor(items: Array<any>);
       group: any;
       items: any;
   }
@@ -13791,7 +13777,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
   /**
    * The FailureCategoryGroupItemApiResultReply model module.
    * @module model/FailureCategoryGroupItemApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryGroupItemApiResultReply {
       /**
@@ -13820,7 +13806,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
        * @param data {Array.<module:model/FailureCategoryGroupItemApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -13834,7 +13820,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
   /**
    * The FailureCategoryGroupSearchApiModel model module.
    * @module model/FailureCategoryGroupSearchApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryGroupSearchApiModel {
       /**
@@ -13876,7 +13862,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
   /**
    * The FailureCategoryItemApiResult model module.
    * @module model/FailureCategoryItemApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureCategoryItemApiResult {
       /**
@@ -13911,7 +13897,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
        * @param projects {Array.<module:model/ProjectNameApiResult>} Projects names
        * @param projectIds {Array.<String>} Projects identifiers
        */
-      constructor(id: string, failureCategory: any, createdDate: Date, createdById: string, failureCategoryId: number, regexCount: number, projects: Array<module>, projectIds: Array<string>);
+      constructor(id: string, failureCategory: any, createdDate: Date, createdById: string, failureCategoryId: number, regexCount: number, projects: Array<any>, projectIds: Array<string>);
       id: any;
       name: any;
       failureCategory: any;
@@ -13971,7 +13957,6 @@ declare module 'testit-api-client/model/FailureCategoryModel' {
   /**
    * *
    */
-  export type FailureCategoryModel = any;
 
 }
 declare module 'testit-api-client/model/FailureClassRegexApiResult' {
@@ -13979,7 +13964,7 @@ declare module 'testit-api-client/model/FailureClassRegexApiResult' {
   /**
    * The FailureClassRegexApiResult model module.
    * @module model/FailureClassRegexApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FailureClassRegexApiResult {
       /**
@@ -14026,7 +14011,7 @@ declare module 'testit-api-client/model/Filter' {
   /**
    * The Filter model module.
    * @module model/Filter
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Filter {
       /**
@@ -14070,7 +14055,7 @@ declare module 'testit-api-client/model/FilterModel' {
   /**
    * The FilterModel model module.
    * @module model/FilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class FilterModel {
       /**
@@ -14187,7 +14172,6 @@ declare module 'testit-api-client/model/FilterOperator' {
   /**
    * *
    */
-  export type FilterOperator = any;
 
 }
 declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
@@ -14195,7 +14179,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
   /**
    * The GenerateWorkItemPreviewsApiModel model module.
    * @module model/GenerateWorkItemPreviewsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GenerateWorkItemPreviewsApiModel {
       /**
@@ -14240,7 +14224,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
   /**
    * The GenerateWorkItemPreviewsApiResult model module.
    * @module model/GenerateWorkItemPreviewsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GenerateWorkItemPreviewsApiResult {
       /**
@@ -14268,7 +14252,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
        * @alias module:model/GenerateWorkItemPreviewsApiResult
        * @param previews {Array.<module:model/WorkItemPreviewApiModel>}
        */
-      constructor(previews: Array<module>);
+      constructor(previews: Array<any>);
       previews: any;
       link: any;
   }
@@ -14282,7 +14266,7 @@ declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
   /**
    * The GetAIServiceModelsApiModel model module.
    * @module model/GetAIServiceModelsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GetAIServiceModelsApiModel {
       /**
@@ -14314,7 +14298,7 @@ declare module 'testit-api-client/model/GetExternalFormApiResult' {
   /**
    * The GetExternalFormApiResult model module.
    * @module model/GetExternalFormApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GetExternalFormApiResult {
       /**
@@ -14357,7 +14341,7 @@ declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
   /**
    * The GetExternalIssueSuggestionsApiModel model module.
    * @module model/GetExternalIssueSuggestionsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GetExternalIssueSuggestionsApiModel {
       /**
@@ -14400,7 +14384,7 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
   /**
    * The GetShortProjectsApiModel model module.
    * @module model/GetShortProjectsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GetShortProjectsApiModel {
       /**
@@ -14434,7 +14418,7 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
   /**
    * The GetXlsxTestPointsByTestPlanModel model module.
    * @module model/GetXlsxTestPointsByTestPlanModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GetXlsxTestPointsByTestPlanModel {
       /**
@@ -14501,7 +14485,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
   /**
    * The GlobalCustomAttributePostModel model module.
    * @module model/GlobalCustomAttributePostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GlobalCustomAttributePostModel {
       /**
@@ -14547,7 +14531,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   /**
    * The GlobalCustomAttributeUpdateModel model module.
    * @module model/GlobalCustomAttributeUpdateModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GlobalCustomAttributeUpdateModel {
       /**
@@ -14591,7 +14575,7 @@ declare module 'testit-api-client/model/GlobalSearchItemResult' {
   /**
    * The GlobalSearchItemResult model module.
    * @module model/GlobalSearchItemResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GlobalSearchItemResult {
       /**
@@ -14639,7 +14623,7 @@ declare module 'testit-api-client/model/GlobalSearchRequest' {
   /**
    * The GlobalSearchRequest model module.
    * @module model/GlobalSearchRequest
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GlobalSearchRequest {
       /**
@@ -14685,7 +14669,7 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
   /**
    * The GlobalSearchResponse model module.
    * @module model/GlobalSearchResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GlobalSearchResponse {
       /**
@@ -14715,7 +14699,7 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
        * @param moreResultsAvailable {Boolean}
        * @param availableResourceTypes {Array.<String>}
        */
-      constructor(results: Array<module>, moreResultsAvailable: boolean, availableResourceTypes: Array<string>);
+      constructor(results: Array<any>, moreResultsAvailable: boolean, availableResourceTypes: Array<string>);
       results: any;
       moreResultsAvailable: any;
       availableResourceTypes: any;
@@ -14730,7 +14714,7 @@ declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
   /**
    * The GuidChangedFieldViewModel model module.
    * @module model/GuidChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GuidChangedFieldViewModel {
       /**
@@ -14773,7 +14757,7 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
   /**
    * The GuidExtractionModel model module.
    * @module model/GuidExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class GuidExtractionModel {
       /**
@@ -14806,7 +14790,7 @@ declare module 'testit-api-client/model/IFilter' {
   /**
    * The IFilter model module.
    * @module model/IFilter
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class IFilter {
       /**
@@ -14834,7 +14818,7 @@ declare module 'testit-api-client/model/IFilter' {
        * Gets the actual instance, which can be <code>CollectionFilter</code>, <code>CompositeFilter</code>, <code>Filter</code>.
        * @return {(module:model/CollectionFilter|module:model/CompositeFilter|module:model/Filter)} The actual instance.
        */
-      getActualInstance(): (module: model) => any;
+      getActualInstance(): (module: any) => any;
       /**
        * Sets the actual instance, which can be <code>CollectionFilter</code>, <code>CompositeFilter</code>, <code>Filter</code>.
        * @param {(module:model/CollectionFilter|module:model/CompositeFilter|module:model/Filter)} obj The actual instance.
@@ -14883,7 +14867,6 @@ declare module 'testit-api-client/model/ImageResizeType' {
   /**
    * *
    */
-  export type ImageResizeType = any;
 
 }
 declare module 'testit-api-client/model/Inquiry' {
@@ -14891,7 +14874,7 @@ declare module 'testit-api-client/model/Inquiry' {
   /**
    * The Inquiry model module.
    * @module model/Inquiry
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Inquiry {
       /**
@@ -14919,7 +14902,7 @@ declare module 'testit-api-client/model/Inquiry' {
        * @alias module:model/Inquiry
        * @param order {Array.<module:model/Order>}
        */
-      constructor(order: Array<module>);
+      constructor(order: Array<any>);
       filter: any;
       order: any;
       page: any;
@@ -14934,7 +14917,7 @@ declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
   /**
    * The Int32ChangedFieldViewModel model module.
    * @module model/Int32ChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Int32ChangedFieldViewModel {
       /**
@@ -14977,7 +14960,7 @@ declare module 'testit-api-client/model/Int32RangeSelectorModel' {
   /**
    * The Int32RangeSelectorModel model module.
    * @module model/Int32RangeSelectorModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Int32RangeSelectorModel {
       /**
@@ -15010,7 +14993,7 @@ declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
   /**
    * The Int64ChangedFieldViewModel model module.
    * @module model/Int64ChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Int64ChangedFieldViewModel {
       /**
@@ -15053,7 +15036,7 @@ declare module 'testit-api-client/model/Int64RangeSelectorModel' {
   /**
    * The Int64RangeSelectorModel model module.
    * @module model/Int64RangeSelectorModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Int64RangeSelectorModel {
       /**
@@ -15086,7 +15069,7 @@ declare module 'testit-api-client/model/IterationApiResult' {
   /**
    * The IterationApiResult model module.
    * @module model/IterationApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class IterationApiResult {
       /**
@@ -15128,7 +15111,7 @@ declare module 'testit-api-client/model/IterationModel' {
   /**
    * The IterationModel model module.
    * @module model/IterationModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class IterationModel {
       /**
@@ -15170,7 +15153,7 @@ declare module 'testit-api-client/model/Label' {
   /**
    * The Label model module.
    * @module model/Label
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Label {
       /**
@@ -15213,7 +15196,7 @@ declare module 'testit-api-client/model/LabelApiModel' {
   /**
    * The LabelApiModel model module.
    * @module model/LabelApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LabelApiModel {
       /**
@@ -15254,7 +15237,7 @@ declare module 'testit-api-client/model/LabelApiResult' {
   /**
    * The LabelApiResult model module.
    * @module model/LabelApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LabelApiResult {
       /**
@@ -15297,7 +15280,7 @@ declare module 'testit-api-client/model/LabelShortModel' {
   /**
    * The LabelShortModel model module.
    * @module model/LabelShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LabelShortModel {
       /**
@@ -15340,7 +15323,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
   /**
    * The LastTestResultApiResult model module.
    * @module model/LastTestResultApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LastTestResultApiResult {
       /**
@@ -15371,7 +15354,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
        * @param links {Array.<module:model/LinkApiResult>}
        * @param attachments {Array.<module:model/AttachmentApiResult>}
        */
-      constructor(id: string, testRunId: string, links: Array<module>, attachments: Array<module>);
+      constructor(id: string, testRunId: string, links: Array<any>, attachments: Array<any>);
       id: any;
       testRunId: any;
       autoTestId: any;
@@ -15390,7 +15373,7 @@ declare module 'testit-api-client/model/LastTestResultModel' {
   /**
    * The LastTestResultModel model module.
    * @module model/LastTestResultModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LastTestResultModel {
       /**
@@ -15439,7 +15422,7 @@ declare module 'testit-api-client/model/Link' {
   /**
    * The Link model module.
    * @module model/Link
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Link {
       /**
@@ -15486,7 +15469,7 @@ declare module 'testit-api-client/model/LinkApiResult' {
   /**
    * The LinkApiResult model module.
    * @module model/LinkApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkApiResult {
       /**
@@ -15533,7 +15516,7 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
   /**
    * The LinkCreateApiModel model module.
    * @module model/LinkCreateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkCreateApiModel {
       /**
@@ -15579,7 +15562,7 @@ declare module 'testit-api-client/model/LinkModel' {
   /**
    * The LinkModel model module.
    * @module model/LinkModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkModel {
       /**
@@ -15626,7 +15609,7 @@ declare module 'testit-api-client/model/LinkPostModel' {
   /**
    * The LinkPostModel model module.
    * @module model/LinkPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkPostModel {
       /**
@@ -15672,7 +15655,7 @@ declare module 'testit-api-client/model/LinkPutModel' {
   /**
    * The LinkPutModel model module.
    * @module model/LinkPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkPutModel {
       /**
@@ -15719,7 +15702,7 @@ declare module 'testit-api-client/model/LinkShort' {
   /**
    * The LinkShort model module.
    * @module model/LinkShort
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkShort {
       /**
@@ -15762,7 +15745,7 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
   /**
    * The LinkShortApiResult model module.
    * @module model/LinkShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkShortApiResult {
       /**
@@ -15809,7 +15792,7 @@ declare module 'testit-api-client/model/LinkShortModel' {
   /**
    * The LinkShortModel model module.
    * @module model/LinkShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkShortModel {
       /**
@@ -15897,7 +15880,6 @@ declare module 'testit-api-client/model/LinkType' {
   /**
    * *
    */
-  export type LinkType = any;
 
 }
 declare module 'testit-api-client/model/LinkUpdateApiModel' {
@@ -15905,7 +15887,7 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
   /**
    * The LinkUpdateApiModel model module.
    * @module model/LinkUpdateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class LinkUpdateApiModel {
       /**
@@ -15974,7 +15956,6 @@ declare module 'testit-api-client/model/ListSortDirection' {
   /**
    * *
    */
-  export type ListSortDirection = any;
 
 }
 declare module 'testit-api-client/model/LogicalOperator' {
@@ -16004,7 +15985,6 @@ declare module 'testit-api-client/model/LogicalOperator' {
   /**
    * *
    */
-  export type LogicalOperator = any;
 
 }
 declare module 'testit-api-client/model/ManualRerunApiResult' {
@@ -16012,7 +15992,7 @@ declare module 'testit-api-client/model/ManualRerunApiResult' {
   /**
    * The ManualRerunApiResult model module.
    * @module model/ManualRerunApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ManualRerunApiResult {
       /**
@@ -16053,7 +16033,7 @@ declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
   /**
    * The ManualRerunSelectTestResultsApiModel model module.
    * @module model/ManualRerunSelectTestResultsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ManualRerunSelectTestResultsApiModel {
       /**
@@ -16087,7 +16067,7 @@ declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
   /**
    * The ManualRerunTestResultApiModel model module.
    * @module model/ManualRerunTestResultApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ManualRerunTestResultApiModel {
       /**
@@ -16119,7 +16099,7 @@ declare module 'testit-api-client/model/NamedEntityApiModel' {
   /**
    * The NamedEntityApiModel model module.
    * @module model/NamedEntityApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class NamedEntityApiModel {
       /**
@@ -16162,7 +16142,7 @@ declare module 'testit-api-client/model/NotificationModel' {
   /**
    * The NotificationModel model module.
    * @module model/NotificationModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class NotificationModel {
       /**
@@ -16224,7 +16204,7 @@ declare module 'testit-api-client/model/NotificationQueryFilterModel' {
   /**
    * The NotificationQueryFilterModel model module.
    * @module model/NotificationQueryFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class NotificationQueryFilterModel {
       /**
@@ -16290,7 +16270,6 @@ declare module 'testit-api-client/model/NotificationTypeModel' {
   /**
    * *
    */
-  export type NotificationTypeModel = any;
 
 }
 declare module 'testit-api-client/model/Operation' {
@@ -16298,7 +16277,7 @@ declare module 'testit-api-client/model/Operation' {
   /**
    * The Operation model module.
    * @module model/Operation
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Operation {
       /**
@@ -16333,7 +16312,7 @@ declare module 'testit-api-client/model/Order' {
   /**
    * The Order model module.
    * @module model/Order
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Order {
       /**
@@ -16376,7 +16355,7 @@ declare module 'testit-api-client/model/Page' {
   /**
    * The Page model module.
    * @module model/Page
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class Page {
       /**
@@ -16419,7 +16398,7 @@ declare module 'testit-api-client/model/ParameterApiResult' {
   /**
    * The ParameterApiResult model module.
    * @module model/ParameterApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterApiResult {
       /**
@@ -16476,7 +16455,7 @@ declare module 'testit-api-client/model/ParameterGroupApiResult' {
   /**
    * The ParameterGroupApiResult model module.
    * @module model/ParameterGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterGroupApiResult {
       /**
@@ -16523,7 +16502,7 @@ declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
   /**
    * The ParameterGroupsFilterApiModel model module.
    * @module model/ParameterGroupsFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterGroupsFilterApiModel {
       /**
@@ -16558,7 +16537,7 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
   /**
    * The ParameterIterationModel model module.
    * @module model/ParameterIterationModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterIterationModel {
       /**
@@ -16599,7 +16578,7 @@ declare module 'testit-api-client/model/ParametersFilterApiModel' {
   /**
    * The ParametersFilterApiModel model module.
    * @module model/ParametersFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParametersFilterApiModel {
       /**
@@ -16633,7 +16612,7 @@ declare module 'testit-api-client/model/ParameterShortApiResult' {
   /**
    * The ParameterShortApiResult model module.
    * @module model/ParameterShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterShortApiResult {
       /**
@@ -16680,7 +16659,7 @@ declare module 'testit-api-client/model/ParameterShortModel' {
   /**
    * The ParameterShortModel model module.
    * @module model/ParameterShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ParameterShortModel {
       /**
@@ -16729,7 +16708,7 @@ declare module 'testit-api-client/model/PeriodViewModel' {
   /**
    * The PeriodViewModel model module.
    * @module model/PeriodViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class PeriodViewModel {
       /**
@@ -16762,7 +16741,7 @@ declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
   /**
    * The PeriodViewModelChangedFieldViewModel model module.
    * @module model/PeriodViewModelChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class PeriodViewModelChangedFieldViewModel {
       /**
@@ -16795,7 +16774,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
   /**
    * The PreviewsIssueLinkApiModel model module.
    * @module model/PreviewsIssueLinkApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class PreviewsIssueLinkApiModel {
       /**
@@ -16838,7 +16817,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
   /**
    * The PreviewsIssueLinkApiResult model module.
    * @module model/PreviewsIssueLinkApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class PreviewsIssueLinkApiResult {
       /**
@@ -16881,7 +16860,7 @@ declare module 'testit-api-client/model/ProblemDetails' {
   /**
    * The ProblemDetails model module.
    * @module model/ProblemDetails
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProblemDetails {
       /**
@@ -16917,7 +16896,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
   /**
    * The ProjectApiResult model module.
    * @module model/ProjectApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectApiResult {
       /**
@@ -16984,7 +16963,7 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
   /**
    * The ProjectAttributesFilterModel model module.
    * @module model/ProjectAttributesFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectAttributesFilterModel {
       /**
@@ -17013,7 +16992,7 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
        * @param name {String} Specifies an attribute name to search for
        * @param types {Array.<module:model/CustomAttributeTypesEnum>} Specifies an attribute types to search for
        */
-      constructor(name: string, types: Array<module>);
+      constructor(name: string, types: Array<any>);
       name: any;
       isRequired: any;
       isGlobal: any;
@@ -17030,7 +17009,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterMo
   /**
    * The ProjectCustomAttributesTemplatesFilterModel model module.
    * @module model/ProjectCustomAttributesTemplatesFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectCustomAttributesTemplatesFilterModel {
       /**
@@ -17063,7 +17042,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
   /**
    * The ProjectCustomAttributeTemplateGetModel model module.
    * @module model/ProjectCustomAttributeTemplateGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectCustomAttributeTemplateGetModel {
       /**
@@ -17094,7 +17073,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
        * @param name {String} Name of the custom attribute template
        * @param customAttributeModels {Array.<module:model/CustomAttributeModel>} Attributes of the template
        */
-      constructor(id: string, isDeleted: boolean, name: string, customAttributeModels: Array<module>);
+      constructor(id: string, isDeleted: boolean, name: string, customAttributeModels: Array<any>);
       id: any;
       isDeleted: any;
       name: any;
@@ -17110,7 +17089,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
   /**
    * The ProjectDetailedFailureCategoryApiResult model module.
    * @module model/ProjectDetailedFailureCategoryApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectDetailedFailureCategoryApiResult {
       /**
@@ -17144,7 +17123,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
        * @param failureClassRegexes {Array.<module:model/FailureClassRegexApiResult>} Failure category regexes
        * @param projectsCount {Number} Projects relations count
        */
-      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, failureClassRegexes: Array<module>, projectsCount: number);
+      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, failureClassRegexes: Array<any>, projectsCount: number);
       id: any;
       name: any;
       isDeleted: any;
@@ -17166,7 +17145,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
   /**
    * The ProjectExternalServiceApiResult model module.
    * @module model/ProjectExternalServiceApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectExternalServiceApiResult {
       /**
@@ -17213,7 +17192,7 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
   /**
    * The ProjectExternalServicesApiResult model module.
    * @module model/ProjectExternalServicesApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectExternalServicesApiResult {
       /**
@@ -17241,7 +17220,7 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
        * @alias module:model/ProjectExternalServicesApiResult
        * @param data {Array.<module:model/ProjectExternalServiceApiResult>} External services associated with a project
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace ProjectExternalServicesApiResult {
@@ -17254,7 +17233,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult'
   /**
    * The ProjectExternalServiceSettingsApiResult model module.
    * @module model/ProjectExternalServiceSettingsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectExternalServiceSettingsApiResult {
       /**
@@ -17286,7 +17265,7 @@ declare module 'testit-api-client/model/ProjectExtractionModel' {
   /**
    * The ProjectExtractionModel model module.
    * @module model/ProjectExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectExtractionModel {
       /**
@@ -17318,7 +17297,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
   /**
    * The ProjectFailureCategoryApiResult model module.
    * @module model/ProjectFailureCategoryApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectFailureCategoryApiResult {
       /**
@@ -17374,7 +17353,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResult model module.
    * @module model/ProjectFailureCategoryGroupItemApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectFailureCategoryGroupItemApiResult {
       /**
@@ -17402,7 +17381,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
        * @alias module:model/ProjectFailureCategoryGroupItemApiResult
        * @param items {Array.<module:model/ProjectFailureCategoryApiResult>} Group data
        */
-      constructor(items: Array<module>);
+      constructor(items: Array<any>);
       group: any;
       items: any;
   }
@@ -17416,7 +17395,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResultReply model module.
    * @module model/ProjectFailureCategoryGroupItemApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectFailureCategoryGroupItemApiResultReply {
       /**
@@ -17445,7 +17424,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
        * @param data {Array.<module:model/ProjectFailureCategoryGroupItemApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -17459,7 +17438,7 @@ declare module 'testit-api-client/model/ProjectModel' {
   /**
    * The ProjectModel model module.
    * @module model/ProjectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectModel {
       /**
@@ -17526,7 +17505,7 @@ declare module 'testit-api-client/model/ProjectNameApiResult' {
   /**
    * The ProjectNameApiResult model module.
    * @module model/ProjectNameApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectNameApiResult {
       /**
@@ -17569,7 +17548,7 @@ declare module 'testit-api-client/model/ProjectSelectModel' {
   /**
    * The ProjectSelectModel model module.
    * @module model/ProjectSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectSelectModel {
       /**
@@ -17602,7 +17581,7 @@ declare module 'testit-api-client/model/ProjectsFilterModel' {
   /**
    * The ProjectsFilterModel model module.
    * @module model/ProjectsFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectsFilterModel {
       /**
@@ -17644,7 +17623,7 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
   /**
    * The ProjectShortApiResult model module.
    * @module model/ProjectShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectShortApiResult {
       /**
@@ -17695,7 +17674,7 @@ declare module 'testit-api-client/model/ProjectShortApiResultReply' {
   /**
    * The ProjectShortApiResultReply model module.
    * @module model/ProjectShortApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectShortApiResultReply {
       /**
@@ -17724,7 +17703,7 @@ declare module 'testit-api-client/model/ProjectShortApiResultReply' {
        * @param data {Array.<module:model/ProjectShortApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -17738,7 +17717,7 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
   /**
    * The ProjectShortestModel model module.
    * @module model/ProjectShortestModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectShortestModel {
       /**
@@ -17787,7 +17766,7 @@ declare module 'testit-api-client/model/ProjectShortModel' {
   /**
    * The ProjectShortModel model module.
    * @module model/ProjectShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectShortModel {
       /**
@@ -17852,7 +17831,7 @@ declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
   /**
    * The ProjectTestPlansFilterModel model module.
    * @module model/ProjectTestPlansFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ProjectTestPlansFilterModel {
       /**
@@ -17922,7 +17901,6 @@ declare module 'testit-api-client/model/ProjectType' {
   /**
    * *
    */
-  export type ProjectType = any;
 
 }
 declare module 'testit-api-client/model/ProjectTypeModel' {
@@ -17952,7 +17930,6 @@ declare module 'testit-api-client/model/ProjectTypeModel' {
   /**
    * *
    */
-  export type ProjectTypeModel = any;
 
 }
 declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
@@ -17960,7 +17937,7 @@ declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
   /**
    * The ReplaceProjectExternalServiceApiModel model module.
    * @module model/ReplaceProjectExternalServiceApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ReplaceProjectExternalServiceApiModel {
       /**
@@ -18030,7 +18007,6 @@ declare module 'testit-api-client/model/RequestType' {
   /**
    * *
    */
-  export type RequestType = any;
 
 }
 declare module 'testit-api-client/model/RequestTypeApiModel' {
@@ -18065,7 +18041,6 @@ declare module 'testit-api-client/model/RequestTypeApiModel' {
   /**
    * *
    */
-  export type RequestTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/RequestTypeModel' {
@@ -18100,7 +18075,6 @@ declare module 'testit-api-client/model/RequestTypeModel' {
   /**
    * *
    */
-  export type RequestTypeModel = any;
 
 }
 declare module 'testit-api-client/model/RerunsModel' {
@@ -18108,7 +18082,7 @@ declare module 'testit-api-client/model/RerunsModel' {
   /**
    * The RerunsModel model module.
    * @module model/RerunsModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class RerunsModel {
       /**
@@ -18137,7 +18111,7 @@ declare module 'testit-api-client/model/RerunsModel' {
        * @param rerunCount {Number}
        * @param rerunTestResults {Array.<module:model/RerunTestResultModel>}
        */
-      constructor(rerunCount: number, rerunTestResults: Array<module>);
+      constructor(rerunCount: number, rerunTestResults: Array<any>);
       rerunCount: any;
       rerunTestResults: any;
   }
@@ -18151,7 +18125,7 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
   /**
    * The RerunTestResultApiResult model module.
    * @module model/RerunTestResultApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class RerunTestResultApiResult {
       /**
@@ -18198,7 +18172,7 @@ declare module 'testit-api-client/model/RerunTestResultModel' {
   /**
    * The RerunTestResultModel model module.
    * @module model/RerunTestResultModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class RerunTestResultModel {
       /**
@@ -18242,7 +18216,7 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
   /**
    * The SearchCustomAttributeTemplateGetModel model module.
    * @module model/SearchCustomAttributeTemplateGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchCustomAttributeTemplateGetModel {
       /**
@@ -18274,7 +18248,7 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
        * @param projectShortestModels {Array.<module:model/ProjectShortestModel>}
        * @param customAttributeModels {Array.<module:model/CustomAttributeModel>}
        */
-      constructor(id: string, isDeleted: boolean, name: string, projectShortestModels: Array<module>, customAttributeModels: Array<module>);
+      constructor(id: string, isDeleted: boolean, name: string, projectShortestModels: Array<any>, customAttributeModels: Array<any>);
       id: any;
       isDeleted: any;
       name: any;
@@ -18291,7 +18265,7 @@ declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
   /**
    * The SearchExternalIssuesApiModel model module.
    * @module model/SearchExternalIssuesApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchExternalIssuesApiModel {
       /**
@@ -18332,7 +18306,7 @@ declare module 'testit-api-client/model/SearchTestRunsApiModel' {
   /**
    * The SearchTestRunsApiModel model module.
    * @module model/SearchTestRunsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchTestRunsApiModel {
       /**
@@ -18370,7 +18344,7 @@ declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
   /**
    * The SearchTestStatusesApiModel model module.
    * @module model/SearchTestStatusesApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchTestStatusesApiModel {
       /**
@@ -18402,7 +18376,7 @@ declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
   /**
    * The SearchWebhooksQueryModel model module.
    * @module model/SearchWebhooksQueryModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchWebhooksQueryModel {
       /**
@@ -18438,7 +18412,7 @@ declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
   /**
    * The SearchWorkflowProjectsApiModel model module.
    * @module model/SearchWorkflowProjectsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchWorkflowProjectsApiModel {
       /**
@@ -18470,7 +18444,7 @@ declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
   /**
    * The SearchWorkflowsApiModel model module.
    * @module model/SearchWorkflowsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchWorkflowsApiModel {
       /**
@@ -18502,7 +18476,7 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
   /**
    * The SearchWorkItemLinkUrlsApiResult model module.
    * @module model/SearchWorkItemLinkUrlsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SearchWorkItemLinkUrlsApiResult {
       /**
@@ -18530,7 +18504,7 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
        * @alias module:model/SearchWorkItemLinkUrlsApiResult
        * @param data {Array.<module:model/WorkItemLinkUrlApiResult>}
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace SearchWorkItemLinkUrlsApiResult {
@@ -18543,7 +18517,7 @@ declare module 'testit-api-client/model/SectionModel' {
   /**
    * The SectionModel model module.
    * @module model/SectionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionModel {
       /**
@@ -18596,7 +18570,7 @@ declare module 'testit-api-client/model/SectionMoveModel' {
   /**
    * The SectionMoveModel model module.
    * @module model/SectionMoveModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionMoveModel {
       /**
@@ -18642,7 +18616,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
   /**
    * The SectionPostModel model module.
    * @module model/SectionPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionPostModel {
       /**
@@ -18672,7 +18646,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
        * @param projectId {String}
        * @param attachments {Array.<module:model/AttachmentPutModel>}
        */
-      constructor(name: string, projectId: string, attachments: Array<module>);
+      constructor(name: string, projectId: string, attachments: Array<any>);
       name: any;
       projectId: any;
       parentId: any;
@@ -18690,7 +18664,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
   /**
    * The SectionPutModel model module.
    * @module model/SectionPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionPutModel {
       /**
@@ -18721,7 +18695,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
        * @param projectId {String}
        * @param attachments {Array.<module:model/AttachmentPutModel>}
        */
-      constructor(id: string, name: string, projectId: string, attachments: Array<module>);
+      constructor(id: string, name: string, projectId: string, attachments: Array<any>);
       id: any;
       name: any;
       projectId: any;
@@ -18740,7 +18714,7 @@ declare module 'testit-api-client/model/SectionRenameModel' {
   /**
    * The SectionRenameModel model module.
    * @module model/SectionRenameModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionRenameModel {
       /**
@@ -18783,7 +18757,7 @@ declare module 'testit-api-client/model/SectionWithStepsModel' {
   /**
    * The SectionWithStepsModel model module.
    * @module model/SectionWithStepsModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SectionWithStepsModel {
       /**
@@ -18839,7 +18813,7 @@ declare module 'testit-api-client/model/SelectTagsApiModel' {
   /**
    * The SelectTagsApiModel model module.
    * @module model/SelectTagsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SelectTagsApiModel {
       /**
@@ -18872,7 +18846,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
   /**
    * The SharedStepChangeViewModel model module.
    * @module model/SharedStepChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepChangeViewModel {
       /**
@@ -18903,7 +18877,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
        * @param name {String}
        * @param steps {Array.<module:model/WorkItemStepChangeViewModel>}
        */
-      constructor(id: string, globalId: number, name: string, steps: Array<module>);
+      constructor(id: string, globalId: number, name: string, steps: Array<any>);
       id: any;
       globalId: any;
       name: any;
@@ -18919,7 +18893,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
   /**
    * The SharedStepModel model module.
    * @module model/SharedStepModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepModel {
       /**
@@ -18951,7 +18925,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
        * @param steps {Array.<module:model/StepModel>}
        * @param isDeleted {Boolean}
        */
-      constructor(versionId: string, globalId: number, name: string, steps: Array<module>, isDeleted: boolean);
+      constructor(versionId: string, globalId: number, name: string, steps: Array<any>, isDeleted: boolean);
       versionId: any;
       globalId: any;
       name: any;
@@ -18968,7 +18942,7 @@ declare module 'testit-api-client/model/SharedStepReferenceModel' {
   /**
    * The SharedStepReferenceModel model module.
    * @module model/SharedStepReferenceModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepReferenceModel {
       /**
@@ -19041,7 +19015,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
   /**
    * The SharedStepReferenceSectionModel model module.
    * @module model/SharedStepReferenceSectionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepReferenceSectionModel {
       /**
@@ -19095,7 +19069,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterMo
   /**
    * The SharedStepReferenceSectionsQueryFilterModel model module.
    * @module model/SharedStepReferenceSectionsQueryFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepReferenceSectionsQueryFilterModel {
       /**
@@ -19131,7 +19105,7 @@ declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
   /**
    * The SharedStepReferencesQueryFilterModel model module.
    * @module model/SharedStepReferencesQueryFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepReferencesQueryFilterModel {
       /**
@@ -19174,7 +19148,7 @@ declare module 'testit-api-client/model/SharedStepResultApiModel' {
   /**
    * The SharedStepResultApiModel model module.
    * @module model/SharedStepResultApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class SharedStepResultApiModel {
       /**
@@ -19217,7 +19191,7 @@ declare module 'testit-api-client/model/ShortConfiguration' {
   /**
    * The ShortConfiguration model module.
    * @module model/ShortConfiguration
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ShortConfiguration {
       /**
@@ -19260,7 +19234,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
   /**
    * The StepCommentApiModel model module.
    * @module model/StepCommentApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StepCommentApiModel {
       /**
@@ -19293,7 +19267,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
        * @param createdById {String}
        * @param createdDate {Date}
        */
-      constructor(id: string, stepId: string, attachments: Array<module>, testResultId: string, createdById: string, createdDate: Date);
+      constructor(id: string, stepId: string, attachments: Array<any>, testResultId: string, createdById: string, createdDate: Date);
       id: any;
       text: any;
       stepId: any;
@@ -19315,7 +19289,7 @@ declare module 'testit-api-client/model/StepModel' {
   /**
    * The StepModel model module.
    * @module model/StepModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StepModel {
       /**
@@ -19362,7 +19336,7 @@ declare module 'testit-api-client/model/StepPostModel' {
   /**
    * The StepPostModel model module.
    * @module model/StepPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StepPostModel {
       /**
@@ -19398,7 +19372,7 @@ declare module 'testit-api-client/model/StepPutModel' {
   /**
    * The StepPutModel model module.
    * @module model/StepPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StepPutModel {
       /**
@@ -19444,7 +19418,7 @@ declare module 'testit-api-client/model/StepResultApiModel' {
   /**
    * The StepResultApiModel model module.
    * @module model/StepResultApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StepResultApiModel {
       /**
@@ -19490,7 +19464,7 @@ declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
   /**
    * The StringArrayChangedFieldViewModel model module.
    * @module model/StringArrayChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StringArrayChangedFieldViewModel {
       /**
@@ -19523,7 +19497,7 @@ declare module 'testit-api-client/model/StringChangedFieldViewModel' {
   /**
    * The StringChangedFieldViewModel model module.
    * @module model/StringChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StringChangedFieldViewModel {
       /**
@@ -19556,7 +19530,7 @@ declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
   /**
    * The StringChangedFieldWithDiffsViewModel model module.
    * @module model/StringChangedFieldWithDiffsViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StringChangedFieldWithDiffsViewModel {
       /**
@@ -19590,7 +19564,7 @@ declare module 'testit-api-client/model/StringExtractionModel' {
   /**
    * The StringExtractionModel model module.
    * @module model/StringExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class StringExtractionModel {
       /**
@@ -19623,7 +19597,7 @@ declare module 'testit-api-client/model/TagApiModel' {
   /**
    * The TagApiModel model module.
    * @module model/TagApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagApiModel {
       /**
@@ -19664,7 +19638,7 @@ declare module 'testit-api-client/model/TagApiResult' {
   /**
    * The TagApiResult model module.
    * @module model/TagApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagApiResult {
       /**
@@ -19713,7 +19687,7 @@ declare module 'testit-api-client/model/TagModel' {
   /**
    * The TagModel model module.
    * @module model/TagModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagModel {
       /**
@@ -19754,7 +19728,7 @@ declare module 'testit-api-client/model/TagsExtractionApiModel' {
   /**
    * The TagsExtractionApiModel model module.
    * @module model/TagsExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagsExtractionApiModel {
       /**
@@ -19786,7 +19760,7 @@ declare module 'testit-api-client/model/TagsFilterApiModel' {
   /**
    * The TagsFilterApiModel model module.
    * @module model/TagsFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagsFilterApiModel {
       /**
@@ -19820,7 +19794,7 @@ declare module 'testit-api-client/model/TagShortApiResult' {
   /**
    * The TagShortApiResult model module.
    * @module model/TagShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TagShortApiResult {
       /**
@@ -19861,7 +19835,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
   /**
    * The TestPlanApiResult model module.
    * @module model/TestPlanApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanApiResult {
       /**
@@ -19896,7 +19870,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
        * @param createdById {String}
        * @param isDeleted {Boolean}
        */
-      constructor(id: string, name: string, status: any, tags: Array<module>, globalId: number, attributes: any, createdById: string, isDeleted: boolean);
+      constructor(id: string, name: string, status: any, tags: Array<any>, globalId: number, attributes: any, createdById: string, isDeleted: boolean);
       id: any;
       name: any;
       startDate: any;
@@ -19930,7 +19904,7 @@ declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
   /**
    * The TestPlanChangedFieldsViewModel model module.
    * @module model/TestPlanChangedFieldsViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanChangedFieldsViewModel {
       /**
@@ -19974,7 +19948,7 @@ declare module 'testit-api-client/model/TestPlanChangeModel' {
   /**
    * The TestPlanChangeModel model module.
    * @module model/TestPlanChangeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanChangeModel {
       /**
@@ -20022,7 +19996,7 @@ declare module 'testit-api-client/model/TestPlanExtractionModel' {
   /**
    * The TestPlanExtractionModel model module.
    * @module model/TestPlanExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanExtractionModel {
       /**
@@ -20054,7 +20028,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatus' {
   /**
    * The TestPlanGroupByStatus model module.
    * @module model/TestPlanGroupByStatus
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByStatus {
       /**
@@ -20097,7 +20071,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
   /**
    * The TestPlanGroupByStatusCode model module.
    * @module model/TestPlanGroupByStatusCode
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByStatusCode {
       /**
@@ -20140,7 +20114,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
   /**
    * The TestPlanGroupByStatusType model module.
    * @module model/TestPlanGroupByStatusType
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByStatusType {
       /**
@@ -20183,7 +20157,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTester' {
   /**
    * The TestPlanGroupByTester model module.
    * @module model/TestPlanGroupByTester
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByTester {
       /**
@@ -20225,7 +20199,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
   /**
    * The TestPlanGroupByTesterAndStatus model module.
    * @module model/TestPlanGroupByTesterAndStatus
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByTesterAndStatus {
       /**
@@ -20269,7 +20243,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
   /**
    * The TestPlanGroupByTesterAndStatusCode model module.
    * @module model/TestPlanGroupByTesterAndStatusCode
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByTesterAndStatusCode {
       /**
@@ -20313,7 +20287,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTestSuite' {
   /**
    * The TestPlanGroupByTestSuite model module.
    * @module model/TestPlanGroupByTestSuite
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanGroupByTestSuite {
       /**
@@ -20358,7 +20332,7 @@ declare module 'testit-api-client/model/TestPlanLink' {
   /**
    * The TestPlanLink model module.
    * @module model/TestPlanLink
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanLink {
       /**
@@ -20396,7 +20370,7 @@ declare module 'testit-api-client/model/TestPlanModel' {
   /**
    * The TestPlanModel model module.
    * @module model/TestPlanModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanModel {
       /**
@@ -20465,7 +20439,7 @@ declare module 'testit-api-client/model/TestPlanSelectModel' {
   /**
    * The TestPlanSelectModel model module.
    * @module model/TestPlanSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanSelectModel {
       /**
@@ -20507,7 +20481,7 @@ declare module 'testit-api-client/model/TestPlanShortModel' {
   /**
    * The TestPlanShortModel model module.
    * @module model/TestPlanShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanShortModel {
       /**
@@ -20584,7 +20558,6 @@ declare module 'testit-api-client/model/TestPlanStatus' {
   /**
    * *
    */
-  export type TestPlanStatus = any;
 
 }
 declare module 'testit-api-client/model/TestPlanStatusModel' {
@@ -20624,7 +20597,6 @@ declare module 'testit-api-client/model/TestPlanStatusModel' {
   /**
    * *
    */
-  export type TestPlanStatusModel = any;
 
 }
 declare module 'testit-api-client/model/TestPlanSummaryModel' {
@@ -20632,7 +20604,7 @@ declare module 'testit-api-client/model/TestPlanSummaryModel' {
   /**
    * The TestPlanSummaryModel model module.
    * @module model/TestPlanSummaryModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanSummaryModel {
       /**
@@ -20684,7 +20656,7 @@ declare module 'testit-api-client/model/TestPlanTagApiResult' {
   /**
    * The TestPlanTagApiResult model module.
    * @module model/TestPlanTagApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTagApiResult {
       /**
@@ -20725,7 +20697,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
   /**
    * The TestPlanTestPointsAnalyticsApiModel model module.
    * @module model/TestPlanTestPointsAnalyticsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsAnalyticsApiModel {
       /**
@@ -20758,7 +20730,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
   /**
    * The TestPlanTestPointsAnalyticsApiResult model module.
    * @module model/TestPlanTestPointsAnalyticsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsAnalyticsApiResult {
       /**
@@ -20791,7 +20763,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
        * @param countGroupByStatusType {Array.<module:model/TestPlanTestPointsStatusTypeGroupApiResult>}
        * @param countGroupByTesterAndStatusType {Array.<module:model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult>}
        */
-      constructor(countGroupByStatus: Array<module>, countGroupByTesterAndStatus: Array<module>, sumGroupByTester: Array<module>, countGroupByTester: Array<module>, countGroupByStatusType: Array<module>, countGroupByTesterAndStatusType: Array<module>);
+      constructor(countGroupByStatus: Array<any>, countGroupByTesterAndStatus: Array<any>, sumGroupByTester: Array<any>, countGroupByTester: Array<any>, countGroupByStatusType: Array<any>, countGroupByTesterAndStatusType: Array<any>);
       countGroupByStatus: any;
       countGroupByTesterAndStatus: any;
       sumGroupByTester: any;
@@ -20809,7 +20781,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
   /**
    * The TestPlanTestPointsApiModel model module.
    * @module model/TestPlanTestPointsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsApiModel {
       /**
@@ -20843,7 +20815,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel
   /**
    * The TestPlanTestPointsAutoTestsRerunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRerunApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsAutoTestsRerunApiModel {
       /**
@@ -20877,7 +20849,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' 
   /**
    * The TestPlanTestPointsAutoTestsRunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRunApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsAutoTestsRunApiModel {
       /**
@@ -20923,7 +20895,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
   /**
    * The TestPlanTestPointsExtractionApiModel model module.
    * @module model/TestPlanTestPointsExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsExtractionApiModel {
       /**
@@ -20955,7 +20927,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
   /**
    * The TestPlanTestPointsGroupApiModel model module.
    * @module model/TestPlanTestPointsGroupApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsGroupApiModel {
       /**
@@ -20997,7 +20969,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
   /**
    * The TestPlanTestPointsGroupApiResult model module.
    * @module model/TestPlanTestPointsGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsGroupApiResult {
       /**
@@ -21042,7 +21014,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
   /**
    * The TestPlanTestPointsGroupSearchApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsGroupSearchApiResult {
       /**
@@ -21072,7 +21044,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
        * @param totalCount {Number}
        * @param statusCounters {module:model/TestPlanTestPointsSearchStatusCountersApiResult}
        */
-      constructor(data: Array<module>, totalCount: number, statusCounters: any);
+      constructor(data: Array<any>, totalCount: number, statusCounters: any);
       data: any;
       totalCount: any;
       statusCounters: any;
@@ -21087,7 +21059,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
   /**
    * The TestPlanTestPointsGroupSearchItemApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchItemApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsGroupSearchItemApiResult {
       /**
@@ -21116,7 +21088,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
        * @param group {module:model/TestPlanTestPointsGroupApiResult}
        * @param items {Array.<module:model/TestPlanTestPointsSearchApiResult>}
        */
-      constructor(group: any, items: Array<module>);
+      constructor(group: any, items: Array<any>);
       group: any;
       items: any;
   }
@@ -21130,7 +21102,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
   /**
    * The TestPlanTestPointsInquiryApiModel model module.
    * @module model/TestPlanTestPointsInquiryApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsInquiryApiModel {
       /**
@@ -21158,7 +21130,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
        * @alias module:model/TestPlanTestPointsInquiryApiModel
        * @param order {Array.<module:model/Order>}
        */
-      constructor(order: Array<module>);
+      constructor(order: Array<any>);
       order: any;
       page: any;
   }
@@ -21172,7 +21144,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
   /**
    * The TestPlanTestPointsSearchApiModel model module.
    * @module model/TestPlanTestPointsSearchApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsSearchApiModel {
       /**
@@ -21226,7 +21198,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
   /**
    * The TestPlanTestPointsSearchApiResult model module.
    * @module model/TestPlanTestPointsSearchApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsSearchApiResult {
       /**
@@ -21262,7 +21234,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
        * @param workItem {module:model/TestPlanTestPointsWorkItemSearchApiResult}
        * @param parameters {Array.<module:model/ParameterShortApiResult>}
        */
-      constructor(id: string, created: any, status: string, statusModel: any, inProgress: boolean, configuration: any, testSuite: any, workItem: any, parameters: Array<module>);
+      constructor(id: string, created: any, status: string, statusModel: any, inProgress: boolean, configuration: any, testSuite: any, workItem: any, parameters: Array<any>);
       id: any;
       created: any;
       modified: any;
@@ -21286,7 +21258,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersAp
   /**
    * The TestPlanTestPointsSearchStatusCountersApiResult model module.
    * @module model/TestPlanTestPointsSearchStatusCountersApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsSearchStatusCountersApiResult {
       /**
@@ -21333,7 +21305,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult
   /**
    * The TestPlanTestPointsSectionSearchApiResult model module.
    * @module model/TestPlanTestPointsSectionSearchApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsSectionSearchApiResult {
       /**
@@ -21377,7 +21349,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
   /**
    * The TestPlanTestPointsSetTestersApiModel model module.
    * @module model/TestPlanTestPointsSetTestersApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsSetTestersApiModel {
       /**
@@ -21420,7 +21392,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResu
   /**
    * The TestPlanTestPointsStatusCodeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusCodeGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsStatusCodeGroupApiResult {
       /**
@@ -21465,7 +21437,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' 
   /**
    * The TestPlanTestPointsStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsStatusGroupApiResult {
       /**
@@ -21508,7 +21480,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
   /**
    * The TestPlanTestPointsStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusTypeGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsStatusTypeGroupApiResult {
       /**
@@ -21537,7 +21509,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
        * @param statusType {module:model/TestStatusApiType} Collection of possible status types
        * @param statuses {Array.<module:model/TestPlanTestPointsStatusCodeGroupApiResult>}
        */
-      constructor(statusType: any, statuses: Array<module>);
+      constructor(statusType: any, statuses: Array<any>);
       statusType: any;
       statuses: any;
   }
@@ -21551,7 +21523,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupAp
   /**
    * The TestPlanTestPointsTesterAndStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsTesterAndStatusGroupApiResult {
       /**
@@ -21596,7 +21568,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
   /**
    * The TestPlanTestPointsTesterAndStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
       /**
@@ -21626,7 +21598,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
        * @param statusType {module:model/TestStatusApiType} Collection of possible status types
        * @param statuses {Array.<module:model/TestPlanTestPointsStatusCodeGroupApiResult>}
        */
-      constructor(userId: string, statusType: any, statuses: Array<module>);
+      constructor(userId: string, statusType: any, statuses: Array<any>);
       userId: any;
       statusType: any;
       statuses: any;
@@ -21641,7 +21613,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' 
   /**
    * The TestPlanTestPointsTesterGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterGroupApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsTesterGroupApiResult {
       /**
@@ -21684,7 +21656,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResu
   /**
    * The TestPlanTestPointsTestSuiteSearchApiResult model module.
    * @module model/TestPlanTestPointsTestSuiteSearchApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsTestSuiteSearchApiResult {
       /**
@@ -21727,7 +21699,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResul
   /**
    * The TestPlanTestPointsWorkItemSearchApiResult model module.
    * @module model/TestPlanTestPointsWorkItemSearchApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanTestPointsWorkItemSearchApiResult {
       /**
@@ -21796,7 +21768,7 @@ declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
   /**
    * The TestPlanWithAnalyticModel model module.
    * @module model/TestPlanWithAnalyticModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanWithAnalyticModel {
       /**
@@ -21867,7 +21839,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
   /**
    * The TestPlanWithTestSuiteTreeModel model module.
    * @module model/TestPlanWithTestSuiteTreeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPlanWithTestSuiteTreeModel {
       /**
@@ -21903,7 +21875,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
        * @param projectId {String}
        * @param attributes {Object.<String, Object>}
        */
-      constructor(testSuites: Array<module>, status: any, createdById: string, globalId: number, isDeleted: boolean, id: string, name: string, projectId: string, attributes: any);
+      constructor(testSuites: Array<any>, status: any, createdById: string, globalId: number, isDeleted: boolean, id: string, name: string, projectId: string, attributes: any);
       testSuites: any;
       status: any;
       startedOn: any;
@@ -21938,7 +21910,7 @@ declare module 'testit-api-client/model/TestPoint' {
   /**
    * The TestPoint model module.
    * @module model/TestPoint
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPoint {
       /**
@@ -21991,7 +21963,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
   /**
    * The TestPointAnalyticResult model module.
    * @module model/TestPointAnalyticResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointAnalyticResult {
       /**
@@ -22026,7 +21998,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
        * @param countGroupByTesterAndStatusCode {Array.<module:model/TestPlanGroupByTesterAndStatusCode>}
        * @param countGroupByStatusType {Array.<module:model/TestPlanGroupByStatusType>}
        */
-      constructor(countGroupByStatus: Array<module>, sumGroupByTester: Array<module>, countGroupByTester: Array<module>, countGroupByTestSuite: Array<module>, countGroupByTesterAndStatus: Array<module>, countGroupByStatusCode: Array<module>, countGroupByTesterAndStatusCode: Array<module>, countGroupByStatusType: Array<module>);
+      constructor(countGroupByStatus: Array<any>, sumGroupByTester: Array<any>, countGroupByTester: Array<any>, countGroupByTestSuite: Array<any>, countGroupByTesterAndStatus: Array<any>, countGroupByStatusCode: Array<any>, countGroupByTesterAndStatusCode: Array<any>, countGroupByStatusType: Array<any>);
       countGroupByStatus: any;
       sumGroupByTester: any;
       countGroupByTester: any;
@@ -22046,7 +22018,7 @@ declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
   /**
    * The TestPointByTestSuiteModel model module.
    * @module model/TestPointByTestSuiteModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointByTestSuiteModel {
       /**
@@ -22095,7 +22067,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModel' {
   /**
    * The TestPointChangeViewModel model module.
    * @module model/TestPointChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointChangeViewModel {
       /**
@@ -22139,7 +22111,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldView
   /**
    * The TestPointChangeViewModelChangedFieldViewModel model module.
    * @module model/TestPointChangeViewModelChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointChangeViewModelChangedFieldViewModel {
       /**
@@ -22172,7 +22144,7 @@ declare module 'testit-api-client/model/TestPointFilterModel' {
   /**
    * The TestPointFilterModel model module.
    * @module model/TestPointFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointFilterModel {
       /**
@@ -22228,7 +22200,7 @@ declare module 'testit-api-client/model/TestPointFilterRequestModel' {
   /**
    * The TestPointFilterRequestModel model module.
    * @module model/TestPointFilterRequestModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointFilterRequestModel {
       /**
@@ -22284,7 +22256,7 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
   /**
    * The TestPointResultApiResult model module.
    * @module model/TestPointResultApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointResultApiResult {
       /**
@@ -22312,7 +22284,7 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
        * @alias module:model/TestPointResultApiResult
        * @param testResults {Array.<module:model/TestResultShortApiResult>}
        */
-      constructor(testResults: Array<module>);
+      constructor(testResults: Array<any>);
       testPointId: any;
       aggregatedOutcome: any;
       aggregatedStatus: any;
@@ -22331,7 +22303,7 @@ declare module 'testit-api-client/model/TestPointSelectModel' {
   /**
    * The TestPointSelectModel model module.
    * @module model/TestPointSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointSelectModel {
       /**
@@ -22364,7 +22336,7 @@ declare module 'testit-api-client/model/TestPointSelector' {
   /**
    * The TestPointSelector model module.
    * @module model/TestPointSelector
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointSelector {
       /**
@@ -22407,7 +22379,7 @@ declare module 'testit-api-client/model/TestPointsExtractionModel' {
   /**
    * The TestPointsExtractionModel model module.
    * @module model/TestPointsExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointsExtractionModel {
       /**
@@ -22439,7 +22411,7 @@ declare module 'testit-api-client/model/TestPointShortApiResult' {
   /**
    * The TestPointShortApiResult model module.
    * @module model/TestPointShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointShortApiResult {
       /**
@@ -22494,7 +22466,7 @@ declare module 'testit-api-client/model/TestPointShortModel' {
   /**
    * The TestPointShortModel model module.
    * @module model/TestPointShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointShortModel {
       /**
@@ -22545,7 +22517,7 @@ declare module 'testit-api-client/model/TestPointShortResponseModel' {
   /**
    * The TestPointShortResponseModel model module.
    * @module model/TestPointShortResponseModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointShortResponseModel {
       /**
@@ -22687,7 +22659,6 @@ declare module 'testit-api-client/model/TestPointStatus' {
   /**
    * *
    */
-  export type TestPointStatus = any;
 
 }
 declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
@@ -22695,7 +22666,7 @@ declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
   /**
    * The TestPointWithLastResultResponseModel model module.
    * @module model/TestPointWithLastResultResponseModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestPointWithLastResultResponseModel {
       /**
@@ -22769,7 +22740,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
   /**
    * The TestResultApiResult model module.
    * @module model/TestResultApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultApiResult {
       /**
@@ -22807,7 +22778,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
        * @param createdById {String}
        * @param isDeleted {Boolean}
        */
-      constructor(id: string, outcome: string, testRunId: string, configurationId: string, status: any, attachments: Array<module>, links: Array<module>, failureClasses: Array<module>, createdDate: Date, createdById: string, isDeleted: boolean);
+      constructor(id: string, outcome: string, testRunId: string, configurationId: string, status: any, attachments: Array<any>, links: Array<any>, failureClasses: Array<any>, createdDate: Date, createdById: string, isDeleted: boolean);
       id: any;
       startedOn: any;
       completedOn: any;
@@ -22852,7 +22823,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModel' {
   /**
    * The TestResultChangeViewModel model module.
    * @module model/TestResultChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultChangeViewModel {
       /**
@@ -22893,7 +22864,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldVie
   /**
    * The TestResultChangeViewModelChangedFieldViewModel model module.
    * @module model/TestResultChangeViewModelChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultChangeViewModelChangedFieldViewModel {
       /**
@@ -22926,7 +22897,7 @@ declare module 'testit-api-client/model/TestResultChronologyModel' {
   /**
    * The TestResultChronologyModel model module.
    * @module model/TestResultChronologyModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultChronologyModel {
       /**
@@ -22968,7 +22939,7 @@ declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
   /**
    * The TestResultFailureClassApiResult model module.
    * @module model/TestResultFailureClassApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultFailureClassApiResult {
       /**
@@ -23009,7 +22980,7 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
   /**
    * The TestResultHistoryReportApiResult model module.
    * @module model/TestResultHistoryReportApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultHistoryReportApiResult {
       /**
@@ -23119,7 +23090,6 @@ declare module 'testit-api-client/model/TestResultOutcome' {
   /**
    * *
    */
-  export type TestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/TestResultResponse' {
@@ -23127,7 +23097,7 @@ declare module 'testit-api-client/model/TestResultResponse' {
   /**
    * The TestResultResponse model module.
    * @module model/TestResultResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultResponse {
       /**
@@ -23208,7 +23178,7 @@ declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
   /**
    * The TestResultsExtractionApiModel model module.
    * @module model/TestResultsExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsExtractionApiModel {
       /**
@@ -23240,7 +23210,7 @@ declare module 'testit-api-client/model/TestResultsFilterApiModel' {
   /**
    * The TestResultsFilterApiModel model module.
    * @module model/TestResultsFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsFilterApiModel {
       /**
@@ -23286,7 +23256,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
   /**
    * The TestResultShortApiResult model module.
    * @module model/TestResultShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultShortApiResult {
       /**
@@ -23318,7 +23288,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
        * @param createdDate {Date}
        * @param attachments {Array.<module:model/AttachmentApiResult>}
        */
-      constructor(id: string, outcome: string, status: any, createdDate: Date, attachments: Array<module>);
+      constructor(id: string, outcome: string, status: any, createdDate: Date, attachments: Array<any>);
       id: any;
       outcome: any;
       status: any;
@@ -23340,7 +23310,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
   /**
    * The TestResultShortResponse model module.
    * @module model/TestResultShortResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultShortResponse {
       /**
@@ -23380,7 +23350,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
        * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of files attached to the test result
        * @param rerunCompletedCount {Number} Run count
        */
-      constructor(id: string, name: string, autotestGlobalId: number, testRunId: string, configurationId: string, configurationName: string, status: any, resultReasons: Array<module>, date: Date, createdDate: Date, links: Array<module>, attachments: Array<module>, rerunCompletedCount: number);
+      constructor(id: string, name: string, autotestGlobalId: number, testRunId: string, configurationId: string, configurationName: string, status: any, resultReasons: Array<any>, date: Date, createdDate: Date, links: Array<any>, attachments: Array<any>, rerunCompletedCount: number);
       id: any;
       name: any;
       autotestGlobalId: any;
@@ -23412,7 +23382,7 @@ declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
   /**
    * The TestResultsLocalFilterModel model module.
    * @module model/TestResultsLocalFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsLocalFilterModel {
       /**
@@ -23449,7 +23419,7 @@ declare module 'testit-api-client/model/TestResultsSelectApiModel' {
   /**
    * The TestResultsSelectApiModel model module.
    * @module model/TestResultsSelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsSelectApiModel {
       /**
@@ -23492,7 +23462,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
   /**
    * The TestResultsStatisticsApiResult model module.
    * @module model/TestResultsStatisticsApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsStatisticsApiResult {
       /**
@@ -23535,7 +23505,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesAp
   /**
    * The TestResultsStatisticsFailureCategoriesApiResult model module.
    * @module model/TestResultsStatisticsFailureCategoriesApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsStatisticsFailureCategoriesApiResult {
       /**
@@ -23580,7 +23550,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' 
   /**
    * The TestResultsStatisticsStatusesApiResult model module.
    * @module model/TestResultsStatisticsStatusesApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultsStatisticsStatusesApiResult {
       /**
@@ -23633,7 +23603,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
   /**
    * The TestResultStepCommentUpdateRequest model module.
    * @module model/TestResultStepCommentUpdateRequest
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultStepCommentUpdateRequest {
       /**
@@ -23664,7 +23634,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
        * @param stepId {String}
        * @param attachments {Array.<module:model/AttachmentUpdateRequest>}
        */
-      constructor(id: string, text: string, stepId: string, attachments: Array<module>);
+      constructor(id: string, text: string, stepId: string, attachments: Array<any>);
       id: any;
       text: any;
       stepId: any;
@@ -23681,7 +23651,7 @@ declare module 'testit-api-client/model/TestResultUpdateV2Request' {
   /**
    * The TestResultUpdateV2Request model module.
    * @module model/TestResultUpdateV2Request
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultUpdateV2Request {
       /**
@@ -23726,7 +23696,7 @@ declare module 'testit-api-client/model/TestResultV2GetModel' {
   /**
    * The TestResultV2GetModel model module.
    * @module model/TestResultV2GetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultV2GetModel {
       /**
@@ -23791,7 +23761,7 @@ declare module 'testit-api-client/model/TestResultV2ShortModel' {
   /**
    * The TestResultV2ShortModel model module.
    * @module model/TestResultV2ShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestResultV2ShortModel {
       /**
@@ -23854,7 +23824,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
   /**
    * The TestRunAnalyticApiResult model module.
    * @module model/TestRunAnalyticApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunAnalyticApiResult {
       /**
@@ -23884,7 +23854,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
        * @param countGroupByStatusType {Array.<module:model/TestRunGroupByStatusTypeApiResult>}
        * @param countGroupByFailureClass {Array.<module:model/TestRunGroupByFailureClassApiResult>}
        */
-      constructor(countGroupByStatus: Array<module>, countGroupByStatusType: Array<module>, countGroupByFailureClass: Array<module>);
+      constructor(countGroupByStatus: Array<any>, countGroupByStatusType: Array<any>, countGroupByFailureClass: Array<any>);
       countGroupByStatus: any;
       countGroupByStatusType: any;
       countGroupByFailureClass: any;
@@ -23899,7 +23869,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
   /**
    * The TestRunApiResult model module.
    * @module model/TestRunApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunApiResult {
       /**
@@ -23940,7 +23910,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
        * @param createdDate {Date}
        * @param createdById {String}
        */
-      constructor(id: string, isDeleted: boolean, build: string, stateName: any, status: any, projectId: string, autoTests: Array<module>, autoTestsCount: number, testSuiteIds: Array<string>, isAutomated: boolean, analytic: any, testResults: Array<module>, createdDate: Date, createdById: string);
+      constructor(id: string, isDeleted: boolean, build: string, stateName: any, status: any, projectId: string, autoTests: Array<any>, autoTestsCount: number, testSuiteIds: Array<string>, isAutomated: boolean, analytic: any, testResults: Array<any>, createdDate: Date, createdById: string);
       id: any;
       isDeleted: any;
       startedDate: any;
@@ -23978,7 +23948,7 @@ declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
   /**
    * The TestRunByAutoTestApiResult model module.
    * @module model/TestRunByAutoTestApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunByAutoTestApiResult {
       /**
@@ -24030,7 +24000,7 @@ declare module 'testit-api-client/model/TestRunExtractionApiModel' {
   /**
    * The TestRunExtractionApiModel model module.
    * @module model/TestRunExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunExtractionApiModel {
       /**
@@ -24062,7 +24032,7 @@ declare module 'testit-api-client/model/TestRunFilterApiModel' {
   /**
    * The TestRunFilterApiModel model module.
    * @module model/TestRunFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunFilterApiModel {
       /**
@@ -24108,7 +24078,7 @@ declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
   /**
    * The TestRunGroupByFailureClassApiResult model module.
    * @module model/TestRunGroupByFailureClassApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunGroupByFailureClassApiResult {
       /**
@@ -24151,7 +24121,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
   /**
    * The TestRunGroupByStatusApiResult model module.
    * @module model/TestRunGroupByStatusApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunGroupByStatusApiResult {
       /**
@@ -24194,7 +24164,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
   /**
    * The TestRunGroupByStatusTypeApiResult model module.
    * @module model/TestRunGroupByStatusTypeApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunGroupByStatusTypeApiResult {
       /**
@@ -24237,7 +24207,7 @@ declare module 'testit-api-client/model/TestRunNameApiResult' {
   /**
    * The TestRunNameApiResult model module.
    * @module model/TestRunNameApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunNameApiResult {
       /**
@@ -24280,7 +24250,7 @@ declare module 'testit-api-client/model/TestRunSelectApiModel' {
   /**
    * The TestRunSelectApiModel model module.
    * @module model/TestRunSelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunSelectApiModel {
       /**
@@ -24324,7 +24294,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
   /**
    * The TestRunShortApiResult model module.
    * @module model/TestRunShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunShortApiResult {
       /**
@@ -24361,7 +24331,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
        * @param statistics {module:model/TestResultsStatisticsApiResult} Statistics of the test run
        * @param testResultsConfigurations {Array.<module:model/ConfigurationShortApiResult>} Test results configurations
        */
-      constructor(id: string, name: string, state: any, status: any, createdDate: Date, createdById: string, isDeleted: boolean, autoTestsCount: number, statistics: any, testResultsConfigurations: Array<module>);
+      constructor(id: string, name: string, state: any, status: any, createdDate: Date, createdById: string, isDeleted: boolean, autoTestsCount: number, statistics: any, testResultsConfigurations: Array<any>);
       id: any;
       name: any;
       state: any;
@@ -24418,7 +24388,6 @@ declare module 'testit-api-client/model/TestRunState' {
   /**
    * *
    */
-  export type TestRunState = any;
 
 }
 declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
@@ -24426,7 +24395,7 @@ declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
   /**
    * The TestRunStatisticsFilterApiModel model module.
    * @module model/TestRunStatisticsFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunStatisticsFilterApiModel {
       /**
@@ -24463,7 +24432,7 @@ declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
   /**
    * The TestRunTestResultsPartialBulkSetModel model module.
    * @module model/TestRunTestResultsPartialBulkSetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunTestResultsPartialBulkSetModel {
       /**
@@ -24499,7 +24468,7 @@ declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
   /**
    * The TestRunTestResultsSelectModel model module.
    * @module model/TestRunTestResultsSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunTestResultsSelectModel {
       /**
@@ -24532,7 +24501,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
   /**
    * The TestRunV2ApiResult model module.
    * @module model/TestRunV2ApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestRunV2ApiResult {
       /**
@@ -24570,7 +24539,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
        * @param webhooks {Array.<module:model/NamedEntityApiModel>} Enabled webhooks
        * @param runCount {Number} Run count
        */
-      constructor(id: string, name: string, stateName: any, status: any, projectId: string, createdDate: Date, createdById: string, attachments: Array<module>, links: Array<module>, webhooks: Array<module>, runCount: number);
+      constructor(id: string, name: string, stateName: any, status: any, projectId: string, createdDate: Date, createdById: string, attachments: Array<any>, links: Array<any>, webhooks: Array<any>, runCount: number);
       id: any;
       name: any;
       description: any;
@@ -24603,7 +24572,7 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
   /**
    * The TestStatusApiResult model module.
    * @module model/TestStatusApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestStatusApiResult {
       /**
@@ -24653,7 +24622,7 @@ declare module 'testit-api-client/model/TestStatusApiResultReply' {
   /**
    * The TestStatusApiResultReply model module.
    * @module model/TestStatusApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestStatusApiResultReply {
       /**
@@ -24682,7 +24651,7 @@ declare module 'testit-api-client/model/TestStatusApiResultReply' {
        * @param data {Array.<module:model/TestStatusApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -24733,7 +24702,6 @@ declare module 'testit-api-client/model/TestStatusApiType' {
   /**
    * *
    */
-  export type TestStatusApiType = any;
 
 }
 declare module 'testit-api-client/model/TestStatusModel' {
@@ -24741,7 +24709,7 @@ declare module 'testit-api-client/model/TestStatusModel' {
   /**
    * The TestStatusModel model module.
    * @module model/TestStatusModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestStatusModel {
       /**
@@ -24791,7 +24759,7 @@ declare module 'testit-api-client/model/TestStatusShortApiResult' {
   /**
    * The TestStatusShortApiResult model module.
    * @module model/TestStatusShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestStatusShortApiResult {
       /**
@@ -24875,7 +24843,6 @@ declare module 'testit-api-client/model/TestStatusType' {
   /**
    * *
    */
-  export type TestStatusType = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteApiResult' {
@@ -24883,7 +24850,7 @@ declare module 'testit-api-client/model/TestSuiteApiResult' {
   /**
    * The TestSuiteApiResult model module.
    * @module model/TestSuiteApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteApiResult {
       /**
@@ -24938,7 +24905,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
   /**
    * The TestSuiteChangeViewModel model module.
    * @module model/TestSuiteChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteChangeViewModel {
       /**
@@ -24984,7 +24951,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldView
   /**
    * The TestSuiteChangeViewModelChangedFieldViewModel model module.
    * @module model/TestSuiteChangeViewModelChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteChangeViewModelChangedFieldViewModel {
       /**
@@ -25017,7 +24984,7 @@ declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
   /**
    * The TestSuiteHierarchyApiResult model module.
    * @module model/TestSuiteHierarchyApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteHierarchyApiResult {
       /**
@@ -25073,7 +25040,7 @@ declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
   /**
    * The TestSuiteTestPlanApiModel model module.
    * @module model/TestSuiteTestPlanApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteTestPlanApiModel {
       /**
@@ -25146,7 +25113,6 @@ declare module 'testit-api-client/model/TestSuiteType' {
   /**
    * *
    */
-  export type TestSuiteType = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
@@ -25181,7 +25147,6 @@ declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
   /**
    * *
    */
-  export type TestSuiteTypeApiResult = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteV2GetModel' {
@@ -25189,7 +25154,7 @@ declare module 'testit-api-client/model/TestSuiteV2GetModel' {
   /**
    * The TestSuiteV2GetModel model module.
    * @module model/TestSuiteV2GetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteV2GetModel {
       /**
@@ -25239,7 +25204,7 @@ declare module 'testit-api-client/model/TestSuiteV2PostModel' {
   /**
    * The TestSuiteV2PostModel model module.
    * @module model/TestSuiteV2PostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteV2PostModel {
       /**
@@ -25286,7 +25251,7 @@ declare module 'testit-api-client/model/TestSuiteV2PutModel' {
   /**
    * The TestSuiteV2PutModel model module.
    * @module model/TestSuiteV2PutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteV2PutModel {
       /**
@@ -25333,7 +25298,7 @@ declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
   /**
    * The TestSuiteWithChildrenModel model module.
    * @module model/TestSuiteWithChildrenModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteWithChildrenModel {
       /**
@@ -25383,7 +25348,7 @@ declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
   /**
    * The TestSuiteWorkItemsSearchModel model module.
    * @module model/TestSuiteWorkItemsSearchModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class TestSuiteWorkItemsSearchModel {
       /**
@@ -25443,7 +25408,7 @@ declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
   /**
    * The UpdateEmptyTestRunApiModel model module.
    * @module model/UpdateEmptyTestRunApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateEmptyTestRunApiModel {
       /**
@@ -25490,7 +25455,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
   /**
    * The UpdateFailureCategoryApiModel model module.
    * @module model/UpdateFailureCategoryApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateFailureCategoryApiModel {
       /**
@@ -25537,7 +25502,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
   /**
    * The UpdateFailureCategoryProjectApiModel model module.
    * @module model/UpdateFailureCategoryProjectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateFailureCategoryProjectApiModel {
       /**
@@ -25583,7 +25548,7 @@ declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
   /**
    * The UpdateFailureClassRegexApiModel model module.
    * @module model/UpdateFailureClassRegexApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateFailureClassRegexApiModel {
       /**
@@ -25626,7 +25591,7 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
   /**
    * The UpdateLinkApiModel model module.
    * @module model/UpdateLinkApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateLinkApiModel {
       /**
@@ -25673,7 +25638,7 @@ declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
   /**
    * The UpdateMultipleAttachmentsApiModel model module.
    * @module model/UpdateMultipleAttachmentsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateMultipleAttachmentsApiModel {
       /**
@@ -25715,7 +25680,7 @@ declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
   /**
    * The UpdateMultipleLinksApiModel model module.
    * @module model/UpdateMultipleLinksApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateMultipleLinksApiModel {
       /**
@@ -25757,7 +25722,7 @@ declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
   /**
    * The UpdateMultipleTestRunsApiModel model module.
    * @module model/UpdateMultipleTestRunsApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateMultipleTestRunsApiModel {
       /**
@@ -25801,7 +25766,7 @@ declare module 'testit-api-client/model/UpdateParameterApiModel' {
   /**
    * The UpdateParameterApiModel model module.
    * @module model/UpdateParameterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateParameterApiModel {
       /**
@@ -25847,7 +25812,7 @@ declare module 'testit-api-client/model/UpdateProjectApiModel' {
   /**
    * The UpdateProjectApiModel model module.
    * @module model/UpdateProjectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateProjectApiModel {
       /**
@@ -25893,7 +25858,7 @@ declare module 'testit-api-client/model/UpdateStepApiModel' {
   /**
    * The UpdateStepApiModel model module.
    * @module model/UpdateStepApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateStepApiModel {
       /**
@@ -25939,7 +25904,7 @@ declare module 'testit-api-client/model/UpdateTagApiModel' {
   /**
    * The UpdateTagApiModel model module.
    * @module model/UpdateTagApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateTagApiModel {
       /**
@@ -25980,7 +25945,7 @@ declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
   /**
    * The UpdateTestPlanApiModel model module.
    * @module model/UpdateTestPlanApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateTestPlanApiModel {
       /**
@@ -26034,7 +25999,7 @@ declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
   /**
    * The UpdateTestStatusApiModel model module.
    * @module model/UpdateTestStatusApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateTestStatusApiModel {
       /**
@@ -26076,7 +26041,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
   /**
    * The UpdateWorkflowApiModel model module.
    * @module model/UpdateWorkflowApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateWorkflowApiModel {
       /**
@@ -26107,7 +26072,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
        * @param statuses {Array.<module:model/WorkflowStatusApiModel>}
        * @param projectIds {Array.<String>}
        */
-      constructor(name: string, isDefault: boolean, statuses: Array<module>, projectIds: Array<string>);
+      constructor(name: string, isDefault: boolean, statuses: Array<any>, projectIds: Array<string>);
       name: any;
       isDefault: any;
       statuses: any;
@@ -26123,7 +26088,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
   /**
    * The UpdateWorkItemApiModel model module.
    * @module model/UpdateWorkItemApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UpdateWorkItemApiModel {
       /**
@@ -26163,7 +26128,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
        * @param name {String} Workitem name
        * @param attachments {Array.<module:model/AssignAttachmentApiModel>}
        */
-      constructor(id: string, sectionId: string, state: any, priority: any, steps: Array<module>, preconditionSteps: Array<module>, postconditionSteps: Array<module>, duration: number, attributes: any, tags: Array<module>, links: Array<module>, name: string, attachments: Array<module>);
+      constructor(id: string, sectionId: string, state: any, priority: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string, attachments: Array<any>);
       id: any;
       sectionId: any;
       description: any;
@@ -26192,7 +26157,7 @@ declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
   /**
    * The UserCustomNameValidationResponse model module.
    * @module model/UserCustomNameValidationResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UserCustomNameValidationResponse {
       /**
@@ -26233,7 +26198,7 @@ declare module 'testit-api-client/model/UserNameApiResult' {
   /**
    * The UserNameApiResult model module.
    * @module model/UserNameApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UserNameApiResult {
       /**
@@ -26275,7 +26240,7 @@ declare module 'testit-api-client/model/UserRankModel' {
   /**
    * The UserRankModel model module.
    * @module model/UserRankModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UserRankModel {
       /**
@@ -26332,7 +26297,7 @@ declare module 'testit-api-client/model/UserWithRankModel' {
   /**
    * The UserWithRankModel model module.
    * @module model/UserWithRankModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class UserWithRankModel {
       /**
@@ -26398,7 +26363,7 @@ declare module 'testit-api-client/model/ValidationProblemDetails' {
   /**
    * The ValidationProblemDetails model module.
    * @module model/ValidationProblemDetails
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class ValidationProblemDetails {
       /**
@@ -26445,7 +26410,7 @@ declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
   /**
    * The WebhookBulkUpdateApiModel model module.
    * @module model/WebhookBulkUpdateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhookBulkUpdateApiModel {
       /**
@@ -26583,7 +26548,6 @@ declare module 'testit-api-client/model/WebHookEventType' {
   /**
    * *
    */
-  export type WebHookEventType = any;
 
 }
 declare module 'testit-api-client/model/WebHookEventTypeModel' {
@@ -26688,7 +26652,6 @@ declare module 'testit-api-client/model/WebHookEventTypeModel' {
   /**
    * *
    */
-  export type WebHookEventTypeModel = any;
 
 }
 declare module 'testit-api-client/model/WebHookEventTypeRequest' {
@@ -26793,7 +26756,6 @@ declare module 'testit-api-client/model/WebHookEventTypeRequest' {
   /**
    * *
    */
-  export type WebHookEventTypeRequest = any;
 
 }
 declare module 'testit-api-client/model/WebhookLogApiResult' {
@@ -26801,7 +26763,7 @@ declare module 'testit-api-client/model/WebhookLogApiResult' {
   /**
    * The WebhookLogApiResult model module.
    * @module model/WebhookLogApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhookLogApiResult {
       /**
@@ -26867,7 +26829,7 @@ declare module 'testit-api-client/model/WebHookModel' {
   /**
    * The WebHookModel model module.
    * @module model/WebHookModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebHookModel {
       /**
@@ -26941,7 +26903,7 @@ declare module 'testit-api-client/model/WebHookPostModel' {
   /**
    * The WebHookPostModel model module.
    * @module model/WebHookPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebHookPostModel {
       /**
@@ -27006,7 +26968,7 @@ declare module 'testit-api-client/model/WebhookResponse' {
   /**
    * The WebhookResponse model module.
    * @module model/WebhookResponse
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhookResponse {
       /**
@@ -27055,7 +27017,7 @@ declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
   /**
    * The WebhooksDeleteApiModel model module.
    * @module model/WebhooksDeleteApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksDeleteApiModel {
       /**
@@ -27098,7 +27060,7 @@ declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
   /**
    * The WebhooksDeleteFilterApiModel model module.
    * @module model/WebhooksDeleteFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksDeleteFilterApiModel {
       /**
@@ -27134,7 +27096,7 @@ declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
   /**
    * The WebhooksExtractionApiModel model module.
    * @module model/WebhooksExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksExtractionApiModel {
       /**
@@ -27166,7 +27128,7 @@ declare module 'testit-api-client/model/WebhooksFilterApiModel' {
   /**
    * The WebhooksFilterApiModel model module.
    * @module model/WebhooksFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksFilterApiModel {
       /**
@@ -27201,7 +27163,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
   /**
    * The WebhooksUpdateApiModel model module.
    * @module model/WebhooksUpdateApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksUpdateApiModel {
       /**
@@ -27246,7 +27208,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
   /**
    * The WebhooksUpdateApiResult model module.
    * @module model/WebhooksUpdateApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebhooksUpdateApiResult {
       /**
@@ -27287,7 +27249,7 @@ declare module 'testit-api-client/model/WebHookTestModel' {
   /**
    * The WebHookTestModel model module.
    * @module model/WebHookTestModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WebHookTestModel {
       /**
@@ -27357,7 +27319,6 @@ declare module 'testit-api-client/model/WebhookVariablesType' {
   /**
    * *
    */
-  export type WebhookVariablesType = any;
 
 }
 declare module 'testit-api-client/model/WorkflowApiResult' {
@@ -27365,7 +27326,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
   /**
    * The WorkflowApiResult model module.
    * @module model/WorkflowApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowApiResult {
       /**
@@ -27402,7 +27363,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
        * @param statuses {Array.<module:model/WorkflowStatusApiResult>}
        * @param projects {Array.<module:model/WorkflowProjectApiResult>}
        */
-      constructor(id: string, name: string, isSystem: boolean, isDefault: boolean, createdDate: Date, createdById: string, modifiedDate: Date, modifiedById: string, statuses: Array<module>, projects: Array<module>);
+      constructor(id: string, name: string, isSystem: boolean, isDefault: boolean, createdDate: Date, createdById: string, modifiedDate: Date, modifiedById: string, statuses: Array<any>, projects: Array<any>);
       id: any;
       name: any;
       isSystem: any;
@@ -27424,7 +27385,7 @@ declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
   /**
    * The WorkflowExistsByNameApiResult model module.
    * @module model/WorkflowExistsByNameApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowExistsByNameApiResult {
       /**
@@ -27465,7 +27426,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResult' {
   /**
    * The WorkflowProjectApiResult model module.
    * @module model/WorkflowProjectApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowProjectApiResult {
       /**
@@ -27506,7 +27467,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
   /**
    * The WorkflowProjectApiResultApiCollectionPreview model module.
    * @module model/WorkflowProjectApiResultApiCollectionPreview
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowProjectApiResultApiCollectionPreview {
       /**
@@ -27535,7 +27496,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
        * @param data {Array.<module:model/WorkflowProjectApiResult>} Preview items
        * @param totalCount {Number} Total count
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27549,7 +27510,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
   /**
    * The WorkflowProjectApiResultReply model module.
    * @module model/WorkflowProjectApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowProjectApiResultReply {
       /**
@@ -27578,7 +27539,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
        * @param data {Array.<module:model/WorkflowProjectApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27592,7 +27553,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
   /**
    * The WorkflowShortApiResult model module.
    * @module model/WorkflowShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowShortApiResult {
       /**
@@ -27649,7 +27610,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
   /**
    * The WorkflowShortApiResultReply model module.
    * @module model/WorkflowShortApiResultReply
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowShortApiResultReply {
       /**
@@ -27678,7 +27639,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
        * @param data {Array.<module:model/WorkflowShortApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27692,7 +27653,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiModel' {
   /**
    * The WorkflowStatusApiModel model module.
    * @module model/WorkflowStatusApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowStatusApiModel {
       /**
@@ -27735,7 +27696,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiResult' {
   /**
    * The WorkflowStatusApiResult model module.
    * @module model/WorkflowStatusApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkflowStatusApiResult {
       /**
@@ -27788,7 +27749,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
   /**
    * The WorkItemApiResult model module.
    * @module model/WorkItemApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemApiResult {
       /**
@@ -27844,7 +27805,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
        * @param createdById {String} Unique identifier of the work item creator
        * @param isDeleted {Boolean} Indicates whether the work item is marked as deleted
        */
-      constructor(id: string, globalId: number, versionId: string, versionNumber: number, projectId: string, sectionId: string, name: string, sourceType: any, entityTypeName: any, duration: number, medianDuration: number, state: any, priority: any, isAutomated: boolean, attributes: any, tags: Array<module>, sectionPreconditionSteps: Array<module>, sectionPostconditionSteps: Array<module>, preconditionSteps: Array<module>, steps: Array<module>, postconditionSteps: Array<module>, iterations: Array<module>, autoTests: Array<module>, attachments: Array<module>, links: Array<module>, externalIssues: Array<module>, createdDate: Date, createdById: string, isDeleted: boolean);
+      constructor(id: string, globalId: number, versionId: string, versionNumber: number, projectId: string, sectionId: string, name: string, sourceType: any, entityTypeName: any, duration: number, medianDuration: number, state: any, priority: any, isAutomated: boolean, attributes: any, tags: Array<any>, sectionPreconditionSteps: Array<any>, sectionPostconditionSteps: Array<any>, preconditionSteps: Array<any>, steps: Array<any>, postconditionSteps: Array<any>, iterations: Array<any>, autoTests: Array<any>, attachments: Array<any>, links: Array<any>, externalIssues: Array<any>, createdDate: Date, createdById: string, isDeleted: boolean);
       id: any;
       globalId: any;
       versionId: any;
@@ -27888,7 +27849,7 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
   /**
    * The WorkItemChangedAttributeViewModel model module.
    * @module model/WorkItemChangedAttributeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemChangedAttributeViewModel {
       /**
@@ -27937,7 +27898,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
   /**
    * The WorkItemChangedFieldsViewModel model module.
    * @module model/WorkItemChangedFieldsViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemChangedFieldsViewModel {
       /**
@@ -28014,7 +27975,7 @@ declare module 'testit-api-client/model/WorkItemChangeModel' {
   /**
    * The WorkItemChangeModel model module.
    * @module model/WorkItemChangeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemChangeModel {
       /**
@@ -28066,7 +28027,7 @@ declare module 'testit-api-client/model/WorkItemCommentModel' {
   /**
    * The WorkItemCommentModel model module.
    * @module model/WorkItemCommentModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemCommentModel {
       /**
@@ -28117,7 +28078,7 @@ declare module 'testit-api-client/model/WorkItemCommentPostModel' {
   /**
    * The WorkItemCommentPostModel model module.
    * @module model/WorkItemCommentPostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemCommentPostModel {
       /**
@@ -28160,7 +28121,7 @@ declare module 'testit-api-client/model/WorkItemCommentPutModel' {
   /**
    * The WorkItemCommentPutModel model module.
    * @module model/WorkItemCommentPutModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemCommentPutModel {
       /**
@@ -28230,7 +28191,6 @@ declare module 'testit-api-client/model/WorkItemEntityTypeApiModel' {
   /**
    * *
    */
-  export type WorkItemEntityTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemEntityTypes' {
@@ -28265,7 +28225,6 @@ declare module 'testit-api-client/model/WorkItemEntityTypes' {
   /**
    * *
    */
-  export type WorkItemEntityTypes = any;
 
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel' {
@@ -28273,7 +28232,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiMo
   /**
    * The WorkItemExternalMetadataFieldFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExternalMetadataFieldFilterApiModel {
       /**
@@ -28316,7 +28275,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel
   /**
    * The WorkItemExternalMetadataFieldFilterModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExternalMetadataFieldFilterModel {
       /**
@@ -28359,7 +28318,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' 
   /**
    * The WorkItemExternalMetadataFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExternalMetadataFilterApiModel {
       /**
@@ -28395,7 +28354,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
   /**
    * The WorkItemExternalMetadataFilterModel model module.
    * @module model/WorkItemExternalMetadataFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExternalMetadataFilterModel {
       /**
@@ -28431,7 +28390,7 @@ declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
   /**
    * The WorkItemExtractionApiModel model module.
    * @module model/WorkItemExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExtractionApiModel {
       /**
@@ -28465,7 +28424,7 @@ declare module 'testit-api-client/model/WorkItemExtractionModel' {
   /**
    * The WorkItemExtractionModel model module.
    * @module model/WorkItemExtractionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemExtractionModel {
       /**
@@ -28499,7 +28458,7 @@ declare module 'testit-api-client/model/WorkItemFilterApiModel' {
   /**
    * The WorkItemFilterApiModel model module.
    * @module model/WorkItemFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemFilterApiModel {
       /**
@@ -28557,7 +28516,7 @@ declare module 'testit-api-client/model/WorkItemFilterModel' {
   /**
    * The WorkItemFilterModel model module.
    * @module model/WorkItemFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemFilterModel {
       /**
@@ -28615,7 +28574,7 @@ declare module 'testit-api-client/model/WorkItemGroupGetModel' {
   /**
    * The WorkItemGroupGetModel model module.
    * @module model/WorkItemGroupGetModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemGroupGetModel {
       /**
@@ -28658,7 +28617,7 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
   /**
    * The WorkItemGroupModel model module.
    * @module model/WorkItemGroupModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemGroupModel {
       /**
@@ -28687,7 +28646,7 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
        * @param size {Number}
        * @param workItems {Array.<module:model/WorkItemShortModel>}
        */
-      constructor(size: number, workItems: Array<module>);
+      constructor(size: number, workItems: Array<any>);
       key: any;
       size: any;
       workItems: any;
@@ -28749,7 +28708,6 @@ declare module 'testit-api-client/model/WorkItemGroupType' {
   /**
    * *
    */
-  export type WorkItemGroupType = any;
 
 }
 declare module 'testit-api-client/model/WorkItemIdApiModel' {
@@ -28757,7 +28715,7 @@ declare module 'testit-api-client/model/WorkItemIdApiModel' {
   /**
    * The WorkItemIdApiModel model module.
    * @module model/WorkItemIdApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemIdApiModel {
       /**
@@ -28798,7 +28756,7 @@ declare module 'testit-api-client/model/WorkItemIndexApiResult' {
   /**
    * The WorkItemIndexApiResult model module.
    * @module model/WorkItemIndexApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemIndexApiResult {
       /**
@@ -28841,7 +28799,7 @@ declare module 'testit-api-client/model/WorkItemLikeModel' {
   /**
    * The WorkItemLikeModel model module.
    * @module model/WorkItemLikeModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLikeModel {
       /**
@@ -28892,7 +28850,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
   /**
    * The WorkItemLinkChangeViewModel model module.
    * @module model/WorkItemLinkChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkChangeViewModel {
       /**
@@ -28943,7 +28901,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedF
   /**
    * The WorkItemLinkChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -28976,7 +28934,7 @@ declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
   /**
    * The WorkItemLinkExtractionApiModel model module.
    * @module model/WorkItemLinkExtractionApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkExtractionApiModel {
       /**
@@ -29010,7 +28968,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
   /**
    * The WorkItemLinkFilterApiModel model module.
    * @module model/WorkItemLinkFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkFilterApiModel {
       /**
@@ -29045,7 +29003,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
   /**
    * The WorkItemLinkFilterModel model module.
    * @module model/WorkItemLinkFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkFilterModel {
       /**
@@ -29080,7 +29038,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
   /**
    * The WorkItemLinkUrlApiModel model module.
    * @module model/WorkItemLinkUrlApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkUrlApiModel {
       /**
@@ -29123,7 +29081,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
   /**
    * The WorkItemLinkUrlApiResult model module.
    * @module model/WorkItemLinkUrlApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkUrlApiResult {
       /**
@@ -29164,7 +29122,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
   /**
    * The WorkItemLinkUrlFilterApiModel model module.
    * @module model/WorkItemLinkUrlFilterApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLinkUrlFilterApiModel {
       /**
@@ -29197,7 +29155,7 @@ declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
   /**
    * The WorkItemLocalFilterModel model module.
    * @module model/WorkItemLocalFilterModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLocalFilterModel {
       /**
@@ -29249,7 +29207,7 @@ declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
   /**
    * The WorkItemLocalSelectModel model module.
    * @module model/WorkItemLocalSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemLocalSelectModel {
       /**
@@ -29282,7 +29240,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
   /**
    * The WorkItemModel model module.
    * @module model/WorkItemModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemModel {
       /**
@@ -29333,7 +29291,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * @param links {Array.<module:model/LinkModel>}
        * @param name {String}
        */
-      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, createdDate: Date, createdById: string, globalId: number, externalIssues: Array<module>, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<module>, preconditionSteps: Array<module>, postconditionSteps: Array<module>, duration: number, attributes: any, tags: Array<module>, links: Array<module>, name: string);
+      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, createdDate: Date, createdById: string, globalId: number, externalIssues: Array<any>, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string);
       versionId: any;
       medianDuration: any;
       isDeleted: any;
@@ -29377,7 +29335,7 @@ declare module 'testit-api-client/model/WorkItemMovePostModel' {
   /**
    * The WorkItemMovePostModel model module.
    * @module model/WorkItemMovePostModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemMovePostModel {
       /**
@@ -29422,7 +29380,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
   /**
    * The WorkItemPreviewApiModel model module.
    * @module model/WorkItemPreviewApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemPreviewApiModel {
       /**
@@ -29452,7 +29410,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
        * @param description {String}
        * @param steps {Array.<module:model/WorkItemPreviewStepApiModel>}
        */
-      constructor(name: string, description: string, steps: Array<module>);
+      constructor(name: string, description: string, steps: Array<any>);
       name: any;
       description: any;
       steps: any;
@@ -29467,7 +29425,7 @@ declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
   /**
    * The WorkItemPreviewStepApiModel model module.
    * @module model/WorkItemPreviewStepApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemPreviewStepApiModel {
       /**
@@ -29549,7 +29507,6 @@ declare module 'testit-api-client/model/WorkItemPriority' {
   /**
    * *
    */
-  export type WorkItemPriority = any;
 
 }
 declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
@@ -29594,7 +29551,6 @@ declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
   /**
    * *
    */
-  export type WorkItemPriorityApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemPriorityModel' {
@@ -29639,7 +29595,6 @@ declare module 'testit-api-client/model/WorkItemPriorityModel' {
   /**
    * *
    */
-  export type WorkItemPriorityModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
@@ -29647,7 +29602,7 @@ declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
   /**
    * The WorkItemSearchQueryModel model module.
    * @module model/WorkItemSearchQueryModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemSearchQueryModel {
       /**
@@ -29701,7 +29656,7 @@ declare module 'testit-api-client/model/WorkItemSelectApiModel' {
   /**
    * The WorkItemSelectApiModel model module.
    * @module model/WorkItemSelectApiModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemSelectApiModel {
       /**
@@ -29743,7 +29698,7 @@ declare module 'testit-api-client/model/WorkItemSelectModel' {
   /**
    * The WorkItemSelectModel model module.
    * @module model/WorkItemSelectModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemSelectModel {
       /**
@@ -29786,7 +29741,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
   /**
    * The WorkItemShortApiResult model module.
    * @module model/WorkItemShortApiResult
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemShortApiResult {
       /**
@@ -29831,7 +29786,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
        * @param iterations {Array.<module:model/IterationApiResult>} Set of iterations related to Work Item
        * @param links {Array.<module:model/LinkShortApiResult>} Set of links related to Work Item
        */
-      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<module>, links: Array<module>);
+      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
       id: any;
       versionId: any;
       versionNumber: any;
@@ -29867,7 +29822,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
   /**
    * The WorkItemShortModel model module.
    * @module model/WorkItemShortModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemShortModel {
       /**
@@ -29912,7 +29867,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
        * @param iterations {Array.<module:model/IterationModel>} Set of iterations related to Work Item
        * @param links {Array.<module:model/LinkShortModel>} Set of links related to Work Item
        */
-      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<module>, links: Array<module>);
+      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
       id: any;
       versionId: any;
       versionNumber: any;
@@ -29970,7 +29925,6 @@ declare module 'testit-api-client/model/WorkItemSourceTypeApiModel' {
   /**
    * *
    */
-  export type WorkItemSourceTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
@@ -30000,7 +29954,6 @@ declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
   /**
    * *
    */
-  export type WorkItemSourceTypeModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemState' {
@@ -30035,7 +29988,6 @@ declare module 'testit-api-client/model/WorkItemState' {
   /**
    * *
    */
-  export type WorkItemState = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStateApiModel' {
@@ -30070,7 +30022,6 @@ declare module 'testit-api-client/model/WorkItemStateApiModel' {
   /**
    * *
    */
-  export type WorkItemStateApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStates' {
@@ -30105,7 +30056,6 @@ declare module 'testit-api-client/model/WorkItemStates' {
   /**
    * *
    */
-  export type WorkItemStates = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
@@ -30113,7 +30063,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
   /**
    * The WorkItemStepChangeViewModel model module.
    * @module model/WorkItemStepChangeViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemStepChangeViewModel {
       /**
@@ -30165,7 +30115,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
   /**
    * The WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel model module.
    * @module model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel {
       /**
@@ -30199,7 +30149,7 @@ declare module 'testit-api-client/model/WorkItemVersionModel' {
   /**
    * The WorkItemVersionModel model module.
    * @module model/WorkItemVersionModel
-   * @version 7.0.0
+   * @version 7.0.0-rc8
    */
   class WorkItemVersionModel {
       /**

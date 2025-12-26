@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BooleanChangedFieldViewModel model module.
  * @module model/BooleanChangedFieldViewModel
- * @version 7.0.0
+ * @version 7.0.0-rc8
  */
 class BooleanChangedFieldViewModel {
     /**
