@@ -145,6 +145,13 @@ export default class BackgroundJobType {
         "CopySections" = "CopySections";
 
     
+        /**
+         * value: "DeleteSection"
+         * @const
+         */
+        "DeleteSection" = "DeleteSection";
+
+    
 
     /**
     * Returns a <code>BackgroundJobType</code> enum value from a Javascript object name.

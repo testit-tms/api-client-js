@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemPreviewStepApiModel model module.
  * @module model/WorkItemPreviewStepApiModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class WorkItemPreviewStepApiModel {
     /**

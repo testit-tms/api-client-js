@@ -1,0 +1,56 @@
+export default WorkflowApiResult;
+/**
+ * The WorkflowApiResult model module.
+ * @module model/WorkflowApiResult
+ * @version 7.1.0-TMS-5.6
+ */
+declare class WorkflowApiResult {
+    /**
+     * Initializes the fields of this object.
+     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+     * Only for internal use.
+     */
+    static initialize(obj: any, id: any, name: any, isSystem: any, isDefault: any, createdDate: any, createdById: any, modifiedDate: any, modifiedById: any, statuses: any, projects: any): void;
+    /**
+     * Constructs a <code>WorkflowApiResult</code> from a plain JavaScript object, optionally creating a new instance.
+     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @param {module:model/WorkflowApiResult} obj Optional instance to populate.
+     * @return {module:model/WorkflowApiResult} The populated <code>WorkflowApiResult</code> instance.
+     */
+    static constructFromObject(data: any, obj: any): any;
+    /**
+     * Validates the JSON data with respect to <code>WorkflowApiResult</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowApiResult</code>.
+     */
+    static validateJSON(data: any): boolean;
+    /**
+     * Constructs a new <code>WorkflowApiResult</code>.
+     * @alias module:model/WorkflowApiResult
+     * @param id {String}
+     * @param name {String}
+     * @param isSystem {Boolean}
+     * @param isDefault {Boolean}
+     * @param createdDate {Date}
+     * @param createdById {String}
+     * @param modifiedDate {Date}
+     * @param modifiedById {String}
+     * @param statuses {Array.<module:model/WorkflowStatusApiResult>}
+     * @param projects {Array.<module:model/WorkflowProjectApiResult>}
+     */
+    constructor(id: string, name: string, isSystem: boolean, isDefault: boolean, createdDate: Date, createdById: string, modifiedDate: Date, modifiedById: string, statuses: Array<NodeModule>, projects: Array<NodeModule>);
+    id: any;
+    name: any;
+    isSystem: any;
+    isDefault: any;
+    createdDate: any;
+    createdById: any;
+    modifiedDate: any;
+    modifiedById: any;
+    statuses: any;
+    projects: any;
+}
+declare namespace WorkflowApiResult {
+    let RequiredProperties: string[];
+}

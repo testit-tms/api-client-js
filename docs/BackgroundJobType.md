@@ -39,4 +39,6 @@
 
 * `CopySections` (value: `"CopySections"`)
 
+* `DeleteSection` (value: `"DeleteSection"`)
+
 

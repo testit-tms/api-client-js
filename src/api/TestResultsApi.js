@@ -31,7 +31,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestResults service.
 * @module api/TestResultsApi
-* @version 7.0.0
+* @version 7.1.0-TMS-5.6
 */
 export default class TestResultsApi {
 

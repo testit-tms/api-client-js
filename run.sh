@@ -1,14 +1,38 @@
 # Using 7.18.0
-#npm install @openapitools/openapi-generator-cli -g
+# npm install @openapitools/openapi-generator-cli -g
 
-FILE_NAME=swagger.json
-NEW_VERSION="7.0.1"
+FILE_NAME="swagger5.6.json"
+NEW_VERSION="7.1.0-TMS-5.6"
+GENERATOR="openapi-generator-cli.jar"
 
+if [ ! -f ".swagger/$FILE_NAME" ]; then
+    echo "Ошибка: .swagger/$FILE_NAME не найден!"
+    exit 1
+fi
+
+if [ ! -f "genConfig.yml" ]; then
+    echo "Ошибка: genConfig.yml не найден!"
+    exit 1
+fi
+
+echo "Начало генерации JS API клиента..."
+
+# Обновление версии в genConfig.yml
 sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.yml
 
-
+# Очистка предыдущей генерации
+echo "Очистка предыдущей генерации..."
 rm -rf new
-openapi-generator-cli generate -i .swagger/$FILE_NAME -g javascript -o new --skip-validate-spec --type-mappings=set=Array -c genConfig.yml
+rm -rf node_modules
+
+# Генерация JS API клиента
+echo "Генерация JS API клиента..."
+java -jar .vendor/$GENERATOR generate \
+  -i .swagger/$FILE_NAME \
+  -g javascript \
+  -o new \
+  --skip-validate-spec \
+  -c genConfig.yml
 
 cp -r new/src .
 cp -r .migration/ApiClient.js src/ApiClient.js

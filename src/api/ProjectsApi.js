@@ -16,7 +16,6 @@ import ApiClient from "../ApiClient";
 import AutoTestNamespaceApiResult from '../model/AutoTestNamespaceApiResult';
 import CreateProjectApiModel from '../model/CreateProjectApiModel';
 import CustomAttributeTestPlanProjectRelationPutModel from '../model/CustomAttributeTestPlanProjectRelationPutModel';
-import DemoProjectApiResult from '../model/DemoProjectApiResult';
 import FailureCategoryApiResult from '../model/FailureCategoryApiResult';
 import FilterModel from '../model/FilterModel';
 import GetShortProjectsApiModel from '../model/GetShortProjectsApiModel';
@@ -37,7 +36,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Projects service.
 * @module api/ProjectsApi
-* @version 7.0.0
+* @version 7.1.0-TMS-5.6
 */
 export default class ProjectsApi {
 
@@ -101,43 +100,6 @@ export default class ProjectsApi {
      */
     addGlobalAttributesToProject(id, opts) {
       return this.addGlobalAttributesToProjectWithHttpInfo(id, opts)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DemoProjectApiResult} and HTTP response
-     */
-    apiV2ProjectsDemoPostWithHttpInfo() {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = DemoProjectApiResult;
-      return this.apiClient.callApi(
-        '/api/v2/projects/demo', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DemoProjectApiResult}
-     */
-    apiV2ProjectsDemoPost() {
-      return this.apiV2ProjectsDemoPostWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });
