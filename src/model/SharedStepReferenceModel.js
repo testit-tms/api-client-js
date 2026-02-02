@@ -19,7 +19,7 @@ import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 /**
  * The SharedStepReferenceModel model module.
  * @module model/SharedStepReferenceModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class SharedStepReferenceModel {
     /**

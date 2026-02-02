@@ -18,7 +18,7 @@ import ProjectTypeModel from './ProjectTypeModel';
 /**
  * The ProjectModel model module.
  * @module model/ProjectModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class ProjectModel {
     /**
@@ -117,9 +117,6 @@ class ProjectModel {
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], ProjectTypeModel);
-            }
-            if (data.hasOwnProperty('isFlakyAuto')) {
-                obj['isFlakyAuto'] = ApiClient.convertToType(data['isFlakyAuto'], 'Boolean');
             }
             if (data.hasOwnProperty('workflowId')) {
                 obj['workflowId'] = ApiClient.convertToType(data['workflowId'], 'String');
@@ -294,12 +291,6 @@ ProjectModel.prototype['globalId'] = undefined;
  * @member {module:model/ProjectTypeModel} type
  */
 ProjectModel.prototype['type'] = undefined;
-
-/**
- * Indicates if the status \"Flaky/Stable\" sets automatically
- * @member {Boolean} isFlakyAuto
- */
-ProjectModel.prototype['isFlakyAuto'] = undefined;
 
 /**
  * @member {String} workflowId

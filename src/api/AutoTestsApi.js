@@ -35,7 +35,7 @@ import WorkItemIdApiModel from '../model/WorkItemIdApiModel';
 /**
 * AutoTests service.
 * @module api/AutoTestsApi
-* @version 7.0.0
+* @version 7.1.0-TMS-5.6
 */
 export default class AutoTestsApi {
 

@@ -18,7 +18,7 @@ import AutoTestSearchIncludeApiModel from './AutoTestSearchIncludeApiModel';
 /**
  * The AutoTestSearchApiModel model module.
  * @module model/AutoTestSearchApiModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class AutoTestSearchApiModel {
     /**

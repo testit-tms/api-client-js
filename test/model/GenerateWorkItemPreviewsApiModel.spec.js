@@ -72,6 +72,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property temperature (base name: "temperature")', function() {
+      // uncomment below and update the code to test the property temperature
+      //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property previewLimit (base name: "previewLimit")', function() {
+      // uncomment below and update the code to test the property previewLimit
+      //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

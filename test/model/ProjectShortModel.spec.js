@@ -144,12 +144,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isFlakyAuto (base name: "isFlakyAuto")', function() {
-      // uncomment below and update the code to test the property isFlakyAuto
-      //var instance = new TestitApiClient.ProjectShortModel();
-      //expect(instance).to.be();
-    });
-
     it('should have the property workflowId (base name: "workflowId")', function() {
       // uncomment below and update the code to test the property workflowId
       //var instance = new TestitApiClient.ProjectShortModel();

@@ -18,7 +18,7 @@ import AvailableTestResultOutcome from './AvailableTestResultOutcome';
 /**
  * The AttachmentPutModelAutoTestStepResultsModel model module.
  * @module model/AttachmentPutModelAutoTestStepResultsModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class AttachmentPutModelAutoTestStepResultsModel {
     /**

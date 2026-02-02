@@ -5,7 +5,6 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addGlobalAttributesToProject**](ProjectsApi.md#addGlobalAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project
-[**apiV2ProjectsDemoPost**](ProjectsApi.md#apiV2ProjectsDemoPost) | **POST** /api/v2/projects/demo | 
 [**apiV2ProjectsIdDelete**](ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project
 [**apiV2ProjectsIdFailureClassesGet**](ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes
 [**apiV2ProjectsIdFavoritePut**](ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite
@@ -83,50 +82,6 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## apiV2ProjectsDemoPost
-
-> DemoProjectApiResult apiV2ProjectsDemoPost()
-
-
-
-### Example
-
-```javascript
-import TestitApiClient from 'testit-api-client';
-let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
-
-let apiInstance = new TestitApiClient.ProjectsApi();
-apiInstance.apiV2ProjectsDemoPost().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**DemoProjectApiResult**](DemoProjectApiResult.md)
-
-### Authorization
-
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

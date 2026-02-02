@@ -18,7 +18,7 @@ import TestStatusApiType from './TestStatusApiType';
 /**
  * The TestPlanTestPointsStatusTypeGroupApiResult model module.
  * @module model/TestPlanTestPointsStatusTypeGroupApiResult
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class TestPlanTestPointsStatusTypeGroupApiResult {
     /**

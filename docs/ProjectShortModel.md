@@ -19,7 +19,6 @@ Name | Type | Description | Notes
 **modifiedById** | **String** | Unique ID of the project last editor | [optional] 
 **globalId** | **Number** | Global ID of the project | 
 **type** | [**ProjectTypeModel**](ProjectTypeModel.md) | Type of the project | 
-**isFlakyAuto** | **Boolean** | Indicates if the status \&quot;Flaky/Stable\&quot; sets automatically | [optional] 
 **workflowId** | **String** |  | 
 
 

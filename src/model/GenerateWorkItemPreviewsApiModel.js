@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GenerateWorkItemPreviewsApiModel model module.
  * @module model/GenerateWorkItemPreviewsApiModel
- * @version 7.0.0
+ * @version 7.1.0-TMS-5.6
  */
 class GenerateWorkItemPreviewsApiModel {
     /**
@@ -25,10 +25,12 @@ class GenerateWorkItemPreviewsApiModel {
      * @param externalServiceId {String} 
      * @param taskKey {String} 
      * @param sectionId {String} 
+     * @param temperature {Number} 
+     * @param previewLimit {Number} 
      */
-    constructor(externalServiceId, taskKey, sectionId) { 
+    constructor(externalServiceId, taskKey, sectionId, temperature, previewLimit) { 
         
-        GenerateWorkItemPreviewsApiModel.initialize(this, externalServiceId, taskKey, sectionId);
+        GenerateWorkItemPreviewsApiModel.initialize(this, externalServiceId, taskKey, sectionId, temperature, previewLimit);
     }
 
     /**
@@ -36,10 +38,12 @@ class GenerateWorkItemPreviewsApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, externalServiceId, taskKey, sectionId) { 
+    static initialize(obj, externalServiceId, taskKey, sectionId, temperature, previewLimit) { 
         obj['externalServiceId'] = externalServiceId;
         obj['taskKey'] = taskKey;
         obj['sectionId'] = sectionId;
+        obj['temperature'] = temperature;
+        obj['previewLimit'] = previewLimit;
     }
 
     /**
@@ -61,6 +65,12 @@ class GenerateWorkItemPreviewsApiModel {
             }
             if (data.hasOwnProperty('sectionId')) {
                 obj['sectionId'] = ApiClient.convertToType(data['sectionId'], 'String');
+            }
+            if (data.hasOwnProperty('temperature')) {
+                obj['temperature'] = ApiClient.convertToType(data['temperature'], 'Number');
+            }
+            if (data.hasOwnProperty('previewLimit')) {
+                obj['previewLimit'] = ApiClient.convertToType(data['previewLimit'], 'Number');
             }
         }
         return obj;
@@ -97,7 +107,7 @@ class GenerateWorkItemPreviewsApiModel {
 
 }
 
-GenerateWorkItemPreviewsApiModel.RequiredProperties = ["externalServiceId", "taskKey", "sectionId"];
+GenerateWorkItemPreviewsApiModel.RequiredProperties = ["externalServiceId", "taskKey", "sectionId", "temperature", "previewLimit"];
 
 /**
  * @member {String} externalServiceId
@@ -113,6 +123,16 @@ GenerateWorkItemPreviewsApiModel.prototype['taskKey'] = undefined;
  * @member {String} sectionId
  */
 GenerateWorkItemPreviewsApiModel.prototype['sectionId'] = undefined;
+
+/**
+ * @member {Number} temperature
+ */
+GenerateWorkItemPreviewsApiModel.prototype['temperature'] = undefined;
+
+/**
+ * @member {Number} previewLimit
+ */
+GenerateWorkItemPreviewsApiModel.prototype['previewLimit'] = undefined;
 
 
 
