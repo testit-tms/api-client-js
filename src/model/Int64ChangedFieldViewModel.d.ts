@@ -2,7 +2,7 @@ export default Int64ChangedFieldViewModel;
 /**
  * The Int64ChangedFieldViewModel model module.
  * @module model/Int64ChangedFieldViewModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class Int64ChangedFieldViewModel {
     /**

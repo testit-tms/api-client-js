@@ -2,7 +2,7 @@ export default TestPlanChangeModel;
 /**
  * The TestPlanChangeModel model module.
  * @module model/TestPlanChangeModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanChangeModel {
     /**

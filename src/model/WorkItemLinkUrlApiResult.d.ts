@@ -2,7 +2,7 @@ export default WorkItemLinkUrlApiResult;
 /**
  * The WorkItemLinkUrlApiResult model module.
  * @module model/WorkItemLinkUrlApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemLinkUrlApiResult {
     /**

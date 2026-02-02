@@ -2,7 +2,7 @@ export default CreateTestRunAndFillByWorkItemsApiModel;
 /**
  * The CreateTestRunAndFillByWorkItemsApiModel model module.
  * @module model/CreateTestRunAndFillByWorkItemsApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class CreateTestRunAndFillByWorkItemsApiModel {
     /**

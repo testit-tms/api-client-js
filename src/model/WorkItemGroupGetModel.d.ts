@@ -2,7 +2,7 @@ export default WorkItemGroupGetModel;
 /**
  * The WorkItemGroupGetModel model module.
  * @module model/WorkItemGroupGetModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemGroupGetModel {
     /**

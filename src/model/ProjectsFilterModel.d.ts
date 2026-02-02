@@ -2,7 +2,7 @@ export default ProjectsFilterModel;
 /**
  * The ProjectsFilterModel model module.
  * @module model/ProjectsFilterModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ProjectsFilterModel {
     /**

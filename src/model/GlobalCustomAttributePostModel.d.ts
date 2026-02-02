@@ -2,7 +2,7 @@ export default GlobalCustomAttributePostModel;
 /**
  * The GlobalCustomAttributePostModel model module.
  * @module model/GlobalCustomAttributePostModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class GlobalCustomAttributePostModel {
     /**

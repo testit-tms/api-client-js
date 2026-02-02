@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Parameters service.
 * @module api/ParametersApi
-* @version 7.1.0-TMS-5.6
+* @version 7.1.0
 */
 export default class ParametersApi {
 

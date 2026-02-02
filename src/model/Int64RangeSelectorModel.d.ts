@@ -2,7 +2,7 @@ export default Int64RangeSelectorModel;
 /**
  * The Int64RangeSelectorModel model module.
  * @module model/Int64RangeSelectorModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class Int64RangeSelectorModel {
     /**

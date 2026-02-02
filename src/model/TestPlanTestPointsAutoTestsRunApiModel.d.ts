@@ -2,7 +2,7 @@ export default TestPlanTestPointsAutoTestsRunApiModel;
 /**
  * The TestPlanTestPointsAutoTestsRunApiModel model module.
  * @module model/TestPlanTestPointsAutoTestsRunApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanTestPointsAutoTestsRunApiModel {
     /**

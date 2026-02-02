@@ -2,7 +2,7 @@ export default StepPutModel;
 /**
  * The StepPutModel model module.
  * @module model/StepPutModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class StepPutModel {
     /**

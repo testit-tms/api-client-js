@@ -18,7 +18,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributePutModel model module.
  * @module model/CustomAttributePutModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class CustomAttributePutModel {
     /**

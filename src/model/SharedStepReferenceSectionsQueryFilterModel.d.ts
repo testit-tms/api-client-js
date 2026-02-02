@@ -2,7 +2,7 @@ export default SharedStepReferenceSectionsQueryFilterModel;
 /**
  * The SharedStepReferenceSectionsQueryFilterModel model module.
  * @module model/SharedStepReferenceSectionsQueryFilterModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class SharedStepReferenceSectionsQueryFilterModel {
     /**

@@ -2,7 +2,7 @@ export default AutoTestResultReasonsCountItemModel;
 /**
  * The AutoTestResultReasonsCountItemModel model module.
  * @module model/AutoTestResultReasonsCountItemModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestResultReasonsCountItemModel {
     /**

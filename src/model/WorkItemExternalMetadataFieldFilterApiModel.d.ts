@@ -2,7 +2,7 @@ export default WorkItemExternalMetadataFieldFilterApiModel;
 /**
  * The WorkItemExternalMetadataFieldFilterApiModel model module.
  * @module model/WorkItemExternalMetadataFieldFilterApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemExternalMetadataFieldFilterApiModel {
     /**

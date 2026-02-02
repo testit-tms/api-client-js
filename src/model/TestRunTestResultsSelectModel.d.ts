@@ -2,7 +2,7 @@ export default TestRunTestResultsSelectModel;
 /**
  * The TestRunTestResultsSelectModel model module.
  * @module model/TestRunTestResultsSelectModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestRunTestResultsSelectModel {
     /**

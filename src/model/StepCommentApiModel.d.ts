@@ -2,7 +2,7 @@ export default StepCommentApiModel;
 /**
  * The StepCommentApiModel model module.
  * @module model/StepCommentApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class StepCommentApiModel {
     /**

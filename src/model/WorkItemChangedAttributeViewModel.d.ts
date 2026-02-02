@@ -2,7 +2,7 @@ export default WorkItemChangedAttributeViewModel;
 /**
  * The WorkItemChangedAttributeViewModel model module.
  * @module model/WorkItemChangedAttributeViewModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemChangedAttributeViewModel {
     /**

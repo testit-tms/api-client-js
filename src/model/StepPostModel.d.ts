@@ -2,7 +2,7 @@ export default StepPostModel;
 /**
  * The StepPostModel model module.
  * @module model/StepPostModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class StepPostModel {
     /**

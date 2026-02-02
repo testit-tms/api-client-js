@@ -2,7 +2,7 @@ export default Order;
 /**
  * The Order model module.
  * @module model/Order
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class Order {
     /**

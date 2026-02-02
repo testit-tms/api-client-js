@@ -2,7 +2,7 @@ export default TestResultChronologyModel;
 /**
  * The TestResultChronologyModel model module.
  * @module model/TestResultChronologyModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestResultChronologyModel {
     /**

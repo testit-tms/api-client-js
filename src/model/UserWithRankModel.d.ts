@@ -2,7 +2,7 @@ export default UserWithRankModel;
 /**
  * The UserWithRankModel model module.
  * @module model/UserWithRankModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class UserWithRankModel {
     /**

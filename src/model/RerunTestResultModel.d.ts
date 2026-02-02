@@ -2,7 +2,7 @@ export default RerunTestResultModel;
 /**
  * The RerunTestResultModel model module.
  * @module model/RerunTestResultModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class RerunTestResultModel {
     /**

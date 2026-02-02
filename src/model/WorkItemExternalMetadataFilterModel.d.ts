@@ -2,7 +2,7 @@ export default WorkItemExternalMetadataFilterModel;
 /**
  * The WorkItemExternalMetadataFilterModel model module.
  * @module model/WorkItemExternalMetadataFilterModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemExternalMetadataFilterModel {
     /**

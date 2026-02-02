@@ -2,7 +2,7 @@ export default ConfigurationPostModel;
 /**
  * The ConfigurationPostModel model module.
  * @module model/ConfigurationPostModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ConfigurationPostModel {
     /**

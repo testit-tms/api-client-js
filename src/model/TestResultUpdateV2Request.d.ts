@@ -2,7 +2,7 @@ export default TestResultUpdateV2Request;
 /**
  * The TestResultUpdateV2Request model module.
  * @module model/TestResultUpdateV2Request
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestResultUpdateV2Request {
     /**

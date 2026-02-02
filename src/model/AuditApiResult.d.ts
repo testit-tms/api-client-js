@@ -2,7 +2,7 @@ export default AuditApiResult;
 /**
  * The AuditApiResult model module.
  * @module model/AuditApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AuditApiResult {
     /**

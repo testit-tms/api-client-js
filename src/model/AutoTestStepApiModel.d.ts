@@ -2,7 +2,7 @@ export default AutoTestStepApiModel;
 /**
  * The AutoTestStepApiModel model module.
  * @module model/AutoTestStepApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestStepApiModel {
     /**

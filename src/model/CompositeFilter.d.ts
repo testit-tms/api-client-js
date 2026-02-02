@@ -2,7 +2,7 @@ export default CompositeFilter;
 /**
  * The CompositeFilter model module.
  * @module model/CompositeFilter
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class CompositeFilter {
     /**

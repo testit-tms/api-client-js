@@ -2,7 +2,7 @@ export default ConfigurationSelectModel;
 /**
  * The ConfigurationSelectModel model module.
  * @module model/ConfigurationSelectModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ConfigurationSelectModel {
     /**

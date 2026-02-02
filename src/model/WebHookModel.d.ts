@@ -2,7 +2,7 @@ export default WebHookModel;
 /**
  * The WebHookModel model module.
  * @module model/WebHookModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WebHookModel {
     /**

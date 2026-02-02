@@ -2,7 +2,7 @@ export default AutoTestProjectSettingsApiResult;
 /**
  * The AutoTestProjectSettingsApiResult model module.
  * @module model/AutoTestProjectSettingsApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestProjectSettingsApiResult {
     /**

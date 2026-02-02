@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SharedStepResultApiModel model module.
  * @module model/SharedStepResultApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class SharedStepResultApiModel {
     /**

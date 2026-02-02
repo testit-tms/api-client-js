@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The ConfigurationExtractionModel model module.
  * @module model/ConfigurationExtractionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class ConfigurationExtractionModel {
     /**

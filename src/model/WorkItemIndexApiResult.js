@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemIndexApiResult model module.
  * @module model/WorkItemIndexApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class WorkItemIndexApiResult {
     /**

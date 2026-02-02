@@ -2,7 +2,7 @@ export default TestPlanTestPointsGroupSearchApiResult;
 /**
  * The TestPlanTestPointsGroupSearchApiResult model module.
  * @module model/TestPlanTestPointsGroupSearchApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanTestPointsGroupSearchApiResult {
     /**

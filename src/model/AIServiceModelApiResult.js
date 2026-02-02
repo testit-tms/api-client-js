@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AIServiceModelApiResult model module.
  * @module model/AIServiceModelApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class AIServiceModelApiResult {
     /**

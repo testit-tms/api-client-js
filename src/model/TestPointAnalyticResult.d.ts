@@ -2,7 +2,7 @@ export default TestPointAnalyticResult;
 /**
  * The TestPointAnalyticResult model module.
  * @module model/TestPointAnalyticResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPointAnalyticResult {
     /**

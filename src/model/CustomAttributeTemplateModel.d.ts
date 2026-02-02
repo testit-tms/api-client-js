@@ -2,7 +2,7 @@ export default CustomAttributeTemplateModel;
 /**
  * The CustomAttributeTemplateModel model module.
  * @module model/CustomAttributeTemplateModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class CustomAttributeTemplateModel {
     /**

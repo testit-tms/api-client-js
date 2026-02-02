@@ -2,7 +2,7 @@ export default Page;
 /**
  * The Page model module.
  * @module model/Page
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class Page {
     /**

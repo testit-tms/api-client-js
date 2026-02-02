@@ -2,7 +2,7 @@ export default ParameterShortApiResult;
 /**
  * The ParameterShortApiResult model module.
  * @module model/ParameterShortApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ParameterShortApiResult {
     /**

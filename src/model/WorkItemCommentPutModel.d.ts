@@ -2,7 +2,7 @@ export default WorkItemCommentPutModel;
 /**
  * The WorkItemCommentPutModel model module.
  * @module model/WorkItemCommentPutModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemCommentPutModel {
     /**

@@ -2,7 +2,7 @@ export default TestStatusApiResultReply;
 /**
  * The TestStatusApiResultReply model module.
  * @module model/TestStatusApiResultReply
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestStatusApiResultReply {
     /**

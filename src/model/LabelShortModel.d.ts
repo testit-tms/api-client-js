@@ -2,7 +2,7 @@ export default LabelShortModel;
 /**
  * The LabelShortModel model module.
  * @module model/LabelShortModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class LabelShortModel {
     /**

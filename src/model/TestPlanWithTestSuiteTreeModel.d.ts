@@ -2,7 +2,7 @@ export default TestPlanWithTestSuiteTreeModel;
 /**
  * The TestPlanWithTestSuiteTreeModel model module.
  * @module model/TestPlanWithTestSuiteTreeModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanWithTestSuiteTreeModel {
     /**

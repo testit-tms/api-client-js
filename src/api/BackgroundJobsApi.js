@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * BackgroundJobs service.
 * @module api/BackgroundJobsApi
-* @version 7.1.0-TMS-5.6
+* @version 7.1.0
 */
 export default class BackgroundJobsApi {
 

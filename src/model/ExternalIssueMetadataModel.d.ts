@@ -2,7 +2,7 @@ export default ExternalIssueMetadataModel;
 /**
  * The ExternalIssueMetadataModel model module.
  * @module model/ExternalIssueMetadataModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ExternalIssueMetadataModel {
     /**

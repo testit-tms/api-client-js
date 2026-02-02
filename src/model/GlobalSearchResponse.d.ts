@@ -2,7 +2,7 @@ export default GlobalSearchResponse;
 /**
  * The GlobalSearchResponse model module.
  * @module model/GlobalSearchResponse
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class GlobalSearchResponse {
     /**

@@ -2,7 +2,7 @@ export default ProjectShortApiResult;
 /**
  * The ProjectShortApiResult model module.
  * @module model/ProjectShortApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ProjectShortApiResult {
     /**

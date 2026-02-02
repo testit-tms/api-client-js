@@ -2,7 +2,7 @@ export default AutoTestStepResultUpdateRequest;
 /**
  * The AutoTestStepResultUpdateRequest model module.
  * @module model/AutoTestStepResultUpdateRequest
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestStepResultUpdateRequest {
     /**

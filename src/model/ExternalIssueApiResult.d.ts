@@ -2,7 +2,7 @@ export default ExternalIssueApiResult;
 /**
  * The ExternalIssueApiResult model module.
  * @module model/ExternalIssueApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ExternalIssueApiResult {
     /**

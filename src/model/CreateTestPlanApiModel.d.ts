@@ -2,7 +2,7 @@ export default CreateTestPlanApiModel;
 /**
  * The CreateTestPlanApiModel model module.
  * @module model/CreateTestPlanApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class CreateTestPlanApiModel {
     /**

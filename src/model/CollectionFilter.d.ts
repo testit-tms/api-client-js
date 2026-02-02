@@ -2,7 +2,7 @@ export default CollectionFilter;
 /**
  * The CollectionFilter model module.
  * @module model/CollectionFilter
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class CollectionFilter {
     /**
