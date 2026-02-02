@@ -2,7 +2,7 @@ export default TagsExtractionApiModel;
 /**
  * The TagsExtractionApiModel model module.
  * @module model/TagsExtractionApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TagsExtractionApiModel {
     /**

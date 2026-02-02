@@ -2,7 +2,7 @@ export default ProjectExtractionModel;
 /**
  * The ProjectExtractionModel model module.
  * @module model/ProjectExtractionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ProjectExtractionModel {
     /**

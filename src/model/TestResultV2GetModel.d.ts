@@ -2,7 +2,7 @@ export default TestResultV2GetModel;
 /**
  * The TestResultV2GetModel model module.
  * @module model/TestResultV2GetModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestResultV2GetModel {
     /**

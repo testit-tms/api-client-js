@@ -17,7 +17,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributeSearchQueryModel model module.
  * @module model/CustomAttributeSearchQueryModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class CustomAttributeSearchQueryModel {
     /**

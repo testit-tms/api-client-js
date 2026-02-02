@@ -2,7 +2,7 @@ export default TestResultResponse;
 /**
  * The TestResultResponse model module.
  * @module model/TestResultResponse
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestResultResponse {
     /**

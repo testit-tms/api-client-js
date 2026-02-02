@@ -2,7 +2,7 @@ export default FailureClassRegexApiResult;
 /**
  * The FailureClassRegexApiResult model module.
  * @module model/FailureClassRegexApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class FailureClassRegexApiResult {
     /**

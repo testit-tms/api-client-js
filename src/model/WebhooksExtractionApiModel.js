@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The WebhooksExtractionApiModel model module.
  * @module model/WebhooksExtractionApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class WebhooksExtractionApiModel {
     /**

@@ -2,7 +2,7 @@ export default FailureCategoryGroupApiResult;
 /**
  * The FailureCategoryGroupApiResult model module.
  * @module model/FailureCategoryGroupApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class FailureCategoryGroupApiResult {
     /**

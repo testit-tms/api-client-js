@@ -17,7 +17,7 @@ import ApiExternalServiceCategory from './ApiExternalServiceCategory';
 /**
  * The ExternalServiceMetadataApiResult model module.
  * @module model/ExternalServiceMetadataApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class ExternalServiceMetadataApiResult {
     /**

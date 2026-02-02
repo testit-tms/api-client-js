@@ -2,7 +2,7 @@ export default AssignAttachmentApiModel;
 /**
  * The AssignAttachmentApiModel model module.
  * @module model/AssignAttachmentApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AssignAttachmentApiModel {
     /**

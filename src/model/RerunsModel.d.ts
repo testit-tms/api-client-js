@@ -2,7 +2,7 @@ export default RerunsModel;
 /**
  * The RerunsModel model module.
  * @module model/RerunsModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class RerunsModel {
     /**

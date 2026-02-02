@@ -2,7 +2,7 @@ export default ReplaceProjectExternalServiceApiModel;
 /**
  * The ReplaceProjectExternalServiceApiModel model module.
  * @module model/ReplaceProjectExternalServiceApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ReplaceProjectExternalServiceApiModel {
     /**

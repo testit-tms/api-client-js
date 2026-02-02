@@ -2,7 +2,7 @@ export default WorkItemExtractionModel;
 /**
  * The WorkItemExtractionModel model module.
  * @module model/WorkItemExtractionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WorkItemExtractionModel {
     /**

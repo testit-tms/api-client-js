@@ -2,7 +2,7 @@ export default TestPlanSummaryModel;
 /**
  * The TestPlanSummaryModel model module.
  * @module model/TestPlanSummaryModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanSummaryModel {
     /**

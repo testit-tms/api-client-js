@@ -2,7 +2,7 @@ export default AutoTestApiResult;
 /**
  * The AutoTestApiResult model module.
  * @module model/AutoTestApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestApiResult {
     /**

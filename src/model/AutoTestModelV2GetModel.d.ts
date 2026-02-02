@@ -2,7 +2,7 @@ export default AutoTestModelV2GetModel;
 /**
  * The AutoTestModelV2GetModel model module.
  * @module model/AutoTestModelV2GetModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestModelV2GetModel {
     /**

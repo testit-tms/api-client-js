@@ -2,7 +2,7 @@ export default TestPointWithLastResultResponseModel;
 /**
  * The TestPointWithLastResultResponseModel model module.
  * @module model/TestPointWithLastResultResponseModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPointWithLastResultResponseModel {
     /**

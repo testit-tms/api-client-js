@@ -2,7 +2,7 @@ export default TestPointsExtractionModel;
 /**
  * The TestPointsExtractionModel model module.
  * @module model/TestPointsExtractionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPointsExtractionModel {
     /**

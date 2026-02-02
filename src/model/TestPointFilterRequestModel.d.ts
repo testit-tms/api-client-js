@@ -2,7 +2,7 @@ export default TestPointFilterRequestModel;
 /**
  * The TestPointFilterRequestModel model module.
  * @module model/TestPointFilterRequestModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPointFilterRequestModel {
     /**

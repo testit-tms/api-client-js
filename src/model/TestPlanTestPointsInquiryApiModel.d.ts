@@ -2,7 +2,7 @@ export default TestPlanTestPointsInquiryApiModel;
 /**
  * The TestPlanTestPointsInquiryApiModel model module.
  * @module model/TestPlanTestPointsInquiryApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanTestPointsInquiryApiModel {
     /**

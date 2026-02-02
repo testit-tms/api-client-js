@@ -2,7 +2,7 @@ export default GlobalCustomAttributeUpdateModel;
 /**
  * The GlobalCustomAttributeUpdateModel model module.
  * @module model/GlobalCustomAttributeUpdateModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class GlobalCustomAttributeUpdateModel {
     /**

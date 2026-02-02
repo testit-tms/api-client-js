@@ -2,7 +2,7 @@ export default AutoTestAverageDurationApiResult;
 /**
  * The AutoTestAverageDurationApiResult model module.
  * @module model/AutoTestAverageDurationApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestAverageDurationApiResult {
     /**

@@ -2,7 +2,7 @@ export default ConfigurationShortApiResult;
 /**
  * The ConfigurationShortApiResult model module.
  * @module model/ConfigurationShortApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ConfigurationShortApiResult {
     /**

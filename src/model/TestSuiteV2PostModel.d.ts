@@ -2,7 +2,7 @@ export default TestSuiteV2PostModel;
 /**
  * The TestSuiteV2PostModel model module.
  * @module model/TestSuiteV2PostModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestSuiteV2PostModel {
     /**

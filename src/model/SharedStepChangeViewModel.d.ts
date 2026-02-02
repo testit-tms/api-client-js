@@ -2,7 +2,7 @@ export default SharedStepChangeViewModel;
 /**
  * The SharedStepChangeViewModel model module.
  * @module model/SharedStepChangeViewModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class SharedStepChangeViewModel {
     /**

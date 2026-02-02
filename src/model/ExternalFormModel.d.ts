@@ -2,7 +2,7 @@ export default ExternalFormModel;
 /**
  * The ExternalFormModel model module.
  * @module model/ExternalFormModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ExternalFormModel {
     /**

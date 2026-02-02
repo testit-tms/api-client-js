@@ -2,7 +2,7 @@ export default IterationModel;
 /**
  * The IterationModel model module.
  * @module model/IterationModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class IterationModel {
     /**

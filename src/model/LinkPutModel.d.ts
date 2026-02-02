@@ -2,7 +2,7 @@ export default LinkPutModel;
 /**
  * The LinkPutModel model module.
  * @module model/LinkPutModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class LinkPutModel {
     /**

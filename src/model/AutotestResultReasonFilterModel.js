@@ -18,7 +18,7 @@ import Int32RangeSelectorModel from './Int32RangeSelectorModel';
 /**
  * The AutotestResultReasonFilterModel model module.
  * @module model/AutotestResultReasonFilterModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class AutotestResultReasonFilterModel {
     /**

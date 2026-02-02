@@ -2,7 +2,7 @@ export default AutoTestStep;
 /**
  * The AutoTestStep model module.
  * @module model/AutoTestStep
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestStep {
     /**

@@ -2,7 +2,7 @@ export default TestPointSelector;
 /**
  * The TestPointSelector model module.
  * @module model/TestPointSelector
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPointSelector {
     /**

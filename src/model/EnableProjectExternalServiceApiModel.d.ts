@@ -2,7 +2,7 @@ export default EnableProjectExternalServiceApiModel;
 /**
  * The EnableProjectExternalServiceApiModel model module.
  * @module model/EnableProjectExternalServiceApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class EnableProjectExternalServiceApiModel {
     /**

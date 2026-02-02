@@ -2,7 +2,7 @@ export default TestRunV2ApiResult;
 /**
  * The TestRunV2ApiResult model module.
  * @module model/TestRunV2ApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestRunV2ApiResult {
     /**

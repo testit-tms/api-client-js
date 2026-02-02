@@ -2,7 +2,7 @@ export default TestPlanGroupByStatusType;
 /**
  * The TestPlanGroupByStatusType model module.
  * @module model/TestPlanGroupByStatusType
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanGroupByStatusType {
     /**

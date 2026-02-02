@@ -2,7 +2,7 @@ export default TestPlanTestPointsStatusTypeGroupApiResult;
 /**
  * The TestPlanTestPointsStatusTypeGroupApiResult model module.
  * @module model/TestPlanTestPointsStatusTypeGroupApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanTestPointsStatusTypeGroupApiResult {
     /**

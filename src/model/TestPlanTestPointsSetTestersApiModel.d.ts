@@ -2,7 +2,7 @@ export default TestPlanTestPointsSetTestersApiModel;
 /**
  * The TestPlanTestPointsSetTestersApiModel model module.
  * @module model/TestPlanTestPointsSetTestersApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanTestPointsSetTestersApiModel {
     /**

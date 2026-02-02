@@ -2,7 +2,7 @@ export default WebhooksUpdateApiResult;
 /**
  * The WebhooksUpdateApiResult model module.
  * @module model/WebhooksUpdateApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class WebhooksUpdateApiResult {
     /**

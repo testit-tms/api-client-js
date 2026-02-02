@@ -2,7 +2,7 @@ export default TestResultsSelectApiModel;
 /**
  * The TestResultsSelectApiModel model module.
  * @module model/TestResultsSelectApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestResultsSelectApiModel {
     /**

@@ -18,7 +18,7 @@ import StringExtractionModel from './StringExtractionModel';
 /**
  * The WorkItemLinkExtractionApiModel model module.
  * @module model/WorkItemLinkExtractionApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class WorkItemLinkExtractionApiModel {
     /**

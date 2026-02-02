@@ -2,7 +2,7 @@ export default LinkModel;
 /**
  * The LinkModel model module.
  * @module model/LinkModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class LinkModel {
     /**

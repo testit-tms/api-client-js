@@ -17,7 +17,7 @@ import SharedStepChangeViewModel from './SharedStepChangeViewModel';
 /**
  * The WorkItemStepChangeViewModel model module.
  * @module model/WorkItemStepChangeViewModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 class WorkItemStepChangeViewModel {
     /**

@@ -2,7 +2,7 @@
 # npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME="swagger5.6.json"
-NEW_VERSION="7.1.0-TMS-5.6"
+NEW_VERSION="7.1.0"
 GENERATOR="openapi-generator-cli-7.18.0.jar"
 
 if [ ! -f ".swagger/$FILE_NAME" ]; then

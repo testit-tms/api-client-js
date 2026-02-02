@@ -2,7 +2,7 @@ export default UpdateMultipleLinksApiModel;
 /**
  * The UpdateMultipleLinksApiModel model module.
  * @module model/UpdateMultipleLinksApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class UpdateMultipleLinksApiModel {
     /**

@@ -2,7 +2,7 @@ export default TestPlanExtractionModel;
 /**
  * The TestPlanExtractionModel model module.
  * @module model/TestPlanExtractionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class TestPlanExtractionModel {
     /**

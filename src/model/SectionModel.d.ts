@@ -2,7 +2,7 @@ export default SectionModel;
 /**
  * The SectionModel model module.
  * @module model/SectionModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class SectionModel {
     /**

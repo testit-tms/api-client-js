@@ -2,7 +2,7 @@ export default ProjectExternalServicesApiResult;
 /**
  * The ProjectExternalServicesApiResult model module.
  * @module model/ProjectExternalServicesApiResult
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ProjectExternalServicesApiResult {
     /**

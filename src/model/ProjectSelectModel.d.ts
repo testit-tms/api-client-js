@@ -2,7 +2,7 @@ export default ProjectSelectModel;
 /**
  * The ProjectSelectModel model module.
  * @module model/ProjectSelectModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class ProjectSelectModel {
     /**

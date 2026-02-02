@@ -2,7 +2,7 @@ export default AutoTestBulkDeleteApiModel;
 /**
  * The AutoTestBulkDeleteApiModel model module.
  * @module model/AutoTestBulkDeleteApiModel
- * @version 7.1.0-TMS-5.6
+ * @version 7.1.0
  */
 declare class AutoTestBulkDeleteApiModel {
     /**
