@@ -3,7 +3,7 @@
 
 FILE_NAME="swagger5.6.json"
 NEW_VERSION="7.1.0-TMS-5.6"
-GENERATOR="openapi-generator-cli.jar"
+GENERATOR="openapi-generator-cli-7.18.0.jar"
 
 if [ ! -f ".swagger/$FILE_NAME" ]; then
     echo "Ошибка: .swagger/$FILE_NAME не найден!"
