@@ -20,7 +20,7 @@ import WorkItemState from './WorkItemState';
 /**
  * The TestPlanTestPointsWorkItemSearchApiResult model module.
  * @module model/TestPlanTestPointsWorkItemSearchApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPlanTestPointsWorkItemSearchApiResult {
     /**

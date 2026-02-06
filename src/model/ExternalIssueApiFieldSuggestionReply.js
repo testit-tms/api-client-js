@@ -17,7 +17,7 @@ import ExternalIssueApiFieldSuggestion from './ExternalIssueApiFieldSuggestion';
 /**
  * The ExternalIssueApiFieldSuggestionReply model module.
  * @module model/ExternalIssueApiFieldSuggestionReply
- * @version 7.1.0
+ * @version 7.2.0
  */
 class ExternalIssueApiFieldSuggestionReply {
     /**

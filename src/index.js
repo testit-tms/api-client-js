@@ -313,7 +313,6 @@ import TestPlanExtractionModel from './model/TestPlanExtractionModel';
 import TestPlanGroupByStatus from './model/TestPlanGroupByStatus';
 import TestPlanGroupByStatusCode from './model/TestPlanGroupByStatusCode';
 import TestPlanGroupByStatusType from './model/TestPlanGroupByStatusType';
-import TestPlanGroupByTestSuite from './model/TestPlanGroupByTestSuite';
 import TestPlanGroupByTester from './model/TestPlanGroupByTester';
 import TestPlanGroupByTesterAndStatus from './model/TestPlanGroupByTesterAndStatus';
 import TestPlanGroupByTesterAndStatusCode from './model/TestPlanGroupByTesterAndStatusCode';
@@ -511,6 +510,8 @@ import WorkItemStateApiModel from './model/WorkItemStateApiModel';
 import WorkItemStates from './model/WorkItemStates';
 import WorkItemStepChangeViewModel from './model/WorkItemStepChangeViewModel';
 import WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel from './model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel';
+import WorkItemUpdatingFieldsApiModel from './model/WorkItemUpdatingFieldsApiModel';
+import WorkItemUpdatingFieldsApiResult from './model/WorkItemUpdatingFieldsApiResult';
 import WorkItemVersionModel from './model/WorkItemVersionModel';
 import WorkflowApiResult from './model/WorkflowApiResult';
 import WorkflowExistsByNameApiResult from './model/WorkflowExistsByNameApiResult';
@@ -547,12 +548,14 @@ import TestPlansApi from './api/TestPlansApi';
 import TestPointsApi from './api/TestPointsApi';
 import TestResultsApi from './api/TestResultsApi';
 import TestRunsApi from './api/TestRunsApi';
+import TestStatusesApi from './api/TestStatusesApi';
 import TestSuitesApi from './api/TestSuitesApi';
 import UsersApi from './api/UsersApi';
 import WebhooksApi from './api/WebhooksApi';
 import WebhooksLogsApi from './api/WebhooksLogsApi';
 import WorkItemsApi from './api/WorkItemsApi';
 import WorkItemsCommentsApi from './api/WorkItemsCommentsApi';
+import WorkflowsApi from './api/WorkflowsApi';
 
 
 /**
@@ -584,7 +587,7 @@ import WorkItemsCommentsApi from './api/WorkItemsCommentsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.1.0
+* @version 7.2.0
 */
 export {
     /**
@@ -2394,12 +2397,6 @@ export {
     TestPlanGroupByStatusType,
 
     /**
-     * The TestPlanGroupByTestSuite model constructor.
-     * @property {module:model/TestPlanGroupByTestSuite}
-     */
-    TestPlanGroupByTestSuite,
-
-    /**
      * The TestPlanGroupByTester model constructor.
      * @property {module:model/TestPlanGroupByTester}
      */
@@ -3582,6 +3579,18 @@ export {
     WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel,
 
     /**
+     * The WorkItemUpdatingFieldsApiModel model constructor.
+     * @property {module:model/WorkItemUpdatingFieldsApiModel}
+     */
+    WorkItemUpdatingFieldsApiModel,
+
+    /**
+     * The WorkItemUpdatingFieldsApiResult model constructor.
+     * @property {module:model/WorkItemUpdatingFieldsApiResult}
+     */
+    WorkItemUpdatingFieldsApiResult,
+
+    /**
      * The WorkItemVersionModel model constructor.
      * @property {module:model/WorkItemVersionModel}
      */
@@ -3798,6 +3807,12 @@ export {
     TestRunsApi,
 
     /**
+    * The TestStatusesApi service constructor.
+    * @property {module:api/TestStatusesApi}
+    */
+    TestStatusesApi,
+
+    /**
     * The TestSuitesApi service constructor.
     * @property {module:api/TestSuitesApi}
     */
@@ -3831,5 +3846,11 @@ export {
     * The WorkItemsCommentsApi service constructor.
     * @property {module:api/WorkItemsCommentsApi}
     */
-    WorkItemsCommentsApi
+    WorkItemsCommentsApi,
+
+    /**
+    * The WorkflowsApi service constructor.
+    * @property {module:api/WorkflowsApi}
+    */
+    WorkflowsApi
 };

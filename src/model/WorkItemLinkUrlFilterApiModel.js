@@ -17,7 +17,7 @@ import WorkItemEntityTypes from './WorkItemEntityTypes';
 /**
  * The WorkItemLinkUrlFilterApiModel model module.
  * @module model/WorkItemLinkUrlFilterApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WorkItemLinkUrlFilterApiModel {
     /**

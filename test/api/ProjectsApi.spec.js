@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('apiV2ProjectsDemoPost', function() {
+      it('should call apiV2ProjectsDemoPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsDemoPost
+        //instance.apiV2ProjectsDemoPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('apiV2ProjectsIdDelete', function() {
       it('should call apiV2ProjectsIdDelete successfully', function(done) {
         //uncomment below and update the code to test apiV2ProjectsIdDelete

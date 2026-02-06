@@ -17,7 +17,7 @@ import ProjectShortApiResult from './ProjectShortApiResult';
 /**
  * The ProjectShortApiResultReply model module.
  * @module model/ProjectShortApiResultReply
- * @version 7.1.0
+ * @version 7.2.0
  */
 class ProjectShortApiResultReply {
     /**

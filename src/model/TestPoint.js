@@ -17,7 +17,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestPoint model module.
  * @module model/TestPoint
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPoint {
     /**

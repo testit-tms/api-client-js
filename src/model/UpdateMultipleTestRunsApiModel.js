@@ -19,7 +19,7 @@ import UpdateMultipleLinksApiModel from './UpdateMultipleLinksApiModel';
 /**
  * The UpdateMultipleTestRunsApiModel model module.
  * @module model/UpdateMultipleTestRunsApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class UpdateMultipleTestRunsApiModel {
     /**

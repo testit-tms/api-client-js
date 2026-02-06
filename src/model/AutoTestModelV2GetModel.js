@@ -19,7 +19,7 @@ import LinkModel from './LinkModel';
 /**
  * The AutoTestModelV2GetModel model module.
  * @module model/AutoTestModelV2GetModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestModelV2GetModel {
     /**

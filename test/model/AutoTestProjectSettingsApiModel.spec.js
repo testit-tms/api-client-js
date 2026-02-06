@@ -84,6 +84,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property workItemUpdatingEnabled (base name: "workItemUpdatingEnabled")', function() {
+      // uncomment below and update the code to test the property workItemUpdatingEnabled
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property workItemUpdatingFields (base name: "workItemUpdatingFields")', function() {
+      // uncomment below and update the code to test the property workItemUpdatingFields
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

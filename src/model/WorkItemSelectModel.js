@@ -18,7 +18,7 @@ import WorkItemFilterModel from './WorkItemFilterModel';
 /**
  * The WorkItemSelectModel model module.
  * @module model/WorkItemSelectModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WorkItemSelectModel {
     /**

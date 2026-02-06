@@ -20,7 +20,7 @@ import WorkItemPriorityModel from './WorkItemPriorityModel';
 /**
  * The TestPlanTestPointsSearchApiModel model module.
  * @module model/TestPlanTestPointsSearchApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPlanTestPointsSearchApiModel {
     /**

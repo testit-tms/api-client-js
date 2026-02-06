@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property countGroupByTestSuite (base name: "countGroupByTestSuite")', function() {
-      // uncomment below and update the code to test the property countGroupByTestSuite
-      //var instance = new TestitApiClient.TestPointAnalyticResult();
-      //expect(instance).to.be();
-    });
-
     it('should have the property countGroupByTesterAndStatus (base name: "countGroupByTesterAndStatus")', function() {
       // uncomment below and update the code to test the property countGroupByTesterAndStatus
       //var instance = new TestitApiClient.TestPointAnalyticResult();

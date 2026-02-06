@@ -17,7 +17,7 @@ import TestPointChangeViewModel from './TestPointChangeViewModel';
 /**
  * The TestPointChangeViewModelChangedFieldViewModel model module.
  * @module model/TestPointChangeViewModelChangedFieldViewModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPointChangeViewModelChangedFieldViewModel {
     /**

@@ -47,6 +47,13 @@ export default class AvailableTestResultOutcome {
         "Skipped" = "Skipped";
 
     
+        /**
+         * value: "InProgress"
+         * @const
+         */
+        "InProgress" = "InProgress";
+
+    
 
     /**
     * Returns a <code>AvailableTestResultOutcome</code> enum value from a Javascript object name.

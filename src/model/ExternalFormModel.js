@@ -18,7 +18,7 @@ import ExternalFormFieldModel from './ExternalFormFieldModel';
 /**
  * The ExternalFormModel model module.
  * @module model/ExternalFormModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class ExternalFormModel {
     /**

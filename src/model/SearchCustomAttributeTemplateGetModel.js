@@ -18,7 +18,7 @@ import ProjectShortestModel from './ProjectShortestModel';
 /**
  * The SearchCustomAttributeTemplateGetModel model module.
  * @module model/SearchCustomAttributeTemplateGetModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class SearchCustomAttributeTemplateGetModel {
     /**

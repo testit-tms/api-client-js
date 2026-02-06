@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(TestitApiClient.AutoTestCreateApiModel);
     });
 
+    it('should have the property projectId (base name: "projectId")', function() {
+      // uncomment below and update the code to test the property projectId
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property externalId (base name: "externalId")', function() {
       // uncomment below and update the code to test the property externalId
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
@@ -62,12 +68,6 @@
 
     it('should have the property externalKey (base name: "externalKey")', function() {
       // uncomment below and update the code to test the property externalKey
-      //var instance = new TestitApiClient.AutoTestCreateApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property projectId (base name: "projectId")', function() {
-      // uncomment below and update the code to test the property projectId
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
       //expect(instance).to.be();
     });
@@ -90,6 +90,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isFlaky (base name: "isFlaky")', function() {
+      // uncomment below and update the code to test the property isFlaky
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property steps (base name: "steps")', function() {
       // uncomment below and update the code to test the property steps
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
@@ -108,14 +126,26 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
+    it('should have the property shouldCreateWorkItem (base name: "shouldCreateWorkItem")', function() {
+      // uncomment below and update the code to test the property shouldCreateWorkItem
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property workItemIds (base name: "workItemIds")', function() {
+      // uncomment below and update the code to test the property workItemIds
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property attributes (base name: "attributes")', function() {
+      // uncomment below and update the code to test the property attributes
+      //var instance = new TestitApiClient.AutoTestCreateApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property workItemIdsForLinkWithAutoTest (base name: "workItemIdsForLinkWithAutoTest")', function() {
+      // uncomment below and update the code to test the property workItemIdsForLinkWithAutoTest
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
       //expect(instance).to.be();
     });
@@ -132,32 +162,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property isFlaky (base name: "isFlaky")', function() {
-      // uncomment below and update the code to test the property isFlaky
-      //var instance = new TestitApiClient.AutoTestCreateApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property workItemIdsForLinkWithAutoTest (base name: "workItemIdsForLinkWithAutoTest")', function() {
-      // uncomment below and update the code to test the property workItemIdsForLinkWithAutoTest
-      //var instance = new TestitApiClient.AutoTestCreateApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property workItemIds (base name: "workItemIds")', function() {
-      // uncomment below and update the code to test the property workItemIds
-      //var instance = new TestitApiClient.AutoTestCreateApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property shouldCreateWorkItem (base name: "shouldCreateWorkItem")', function() {
-      // uncomment below and update the code to test the property shouldCreateWorkItem
-      //var instance = new TestitApiClient.AutoTestCreateApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property attributes (base name: "attributes")', function() {
-      // uncomment below and update the code to test the property attributes
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
       //var instance = new TestitApiClient.AutoTestCreateApiModel();
       //expect(instance).to.be();
     });

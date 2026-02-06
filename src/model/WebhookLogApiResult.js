@@ -18,7 +18,7 @@ import WebHookEventType from './WebHookEventType';
 /**
  * The WebhookLogApiResult model module.
  * @module model/WebhookLogApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WebhookLogApiResult {
     /**

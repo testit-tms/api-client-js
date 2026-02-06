@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The LinkModel model module.
  * @module model/LinkModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class LinkModel {
     /**

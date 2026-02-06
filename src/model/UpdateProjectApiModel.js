@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateProjectApiModel model module.
  * @module model/UpdateProjectApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class UpdateProjectApiModel {
     /**

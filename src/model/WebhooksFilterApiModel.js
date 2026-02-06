@@ -18,7 +18,7 @@ import WebHookEventTypeRequest from './WebHookEventTypeRequest';
 /**
  * The WebhooksFilterApiModel model module.
  * @module model/WebhooksFilterApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WebhooksFilterApiModel {
     /**

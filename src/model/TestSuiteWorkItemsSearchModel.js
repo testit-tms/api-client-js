@@ -25,7 +25,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The TestSuiteWorkItemsSearchModel model module.
  * @module model/TestSuiteWorkItemsSearchModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestSuiteWorkItemsSearchModel {
     /**

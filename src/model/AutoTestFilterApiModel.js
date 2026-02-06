@@ -19,7 +19,7 @@ import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 /**
  * The AutoTestFilterApiModel model module.
  * @module model/AutoTestFilterApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestFilterApiModel {
     /**
@@ -110,6 +110,9 @@ class AutoTestFilterApiModel {
             if (data.hasOwnProperty('lastTestResultConfigurationIds')) {
                 obj['lastTestResultConfigurationIds'] = ApiClient.convertToType(data['lastTestResultConfigurationIds'], ['String']);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
         }
         return obj;
     }
@@ -175,6 +178,10 @@ class AutoTestFilterApiModel {
         // ensure the json data is an array
         if (!Array.isArray(data['lastTestResultConfigurationIds'])) {
             throw new Error("Expected the field `lastTestResultConfigurationIds` to be an array in the JSON data but got " + data['lastTestResultConfigurationIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
 
         return true;
@@ -304,6 +311,12 @@ AutoTestFilterApiModel.prototype['externalKey'] = undefined;
  * @member {Array.<String>} lastTestResultConfigurationIds
  */
 AutoTestFilterApiModel.prototype['lastTestResultConfigurationIds'] = undefined;
+
+/**
+ * Specifies an autotest tags to search for
+ * @member {Array.<String>} tags
+ */
+AutoTestFilterApiModel.prototype['tags'] = undefined;
 
 
 

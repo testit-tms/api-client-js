@@ -15,7 +15,6 @@ import ApiClient from '../ApiClient';
 import TestPlanGroupByStatus from './TestPlanGroupByStatus';
 import TestPlanGroupByStatusCode from './TestPlanGroupByStatusCode';
 import TestPlanGroupByStatusType from './TestPlanGroupByStatusType';
-import TestPlanGroupByTestSuite from './TestPlanGroupByTestSuite';
 import TestPlanGroupByTester from './TestPlanGroupByTester';
 import TestPlanGroupByTesterAndStatus from './TestPlanGroupByTesterAndStatus';
 import TestPlanGroupByTesterAndStatusCode from './TestPlanGroupByTesterAndStatusCode';
@@ -23,7 +22,7 @@ import TestPlanGroupByTesterAndStatusCode from './TestPlanGroupByTesterAndStatus
 /**
  * The TestPointAnalyticResult model module.
  * @module model/TestPointAnalyticResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPointAnalyticResult {
     /**
@@ -32,15 +31,14 @@ class TestPointAnalyticResult {
      * @param countGroupByStatus {Array.<module:model/TestPlanGroupByStatus>} 
      * @param sumGroupByTester {Array.<module:model/TestPlanGroupByTester>} 
      * @param countGroupByTester {Array.<module:model/TestPlanGroupByTester>} 
-     * @param countGroupByTestSuite {Array.<module:model/TestPlanGroupByTestSuite>} 
      * @param countGroupByTesterAndStatus {Array.<module:model/TestPlanGroupByTesterAndStatus>} 
      * @param countGroupByStatusCode {Array.<module:model/TestPlanGroupByStatusCode>} 
      * @param countGroupByTesterAndStatusCode {Array.<module:model/TestPlanGroupByTesterAndStatusCode>} 
      * @param countGroupByStatusType {Array.<module:model/TestPlanGroupByStatusType>} 
      */
-    constructor(countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTestSuite, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType) { 
+    constructor(countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType) { 
         
-        TestPointAnalyticResult.initialize(this, countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTestSuite, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType);
+        TestPointAnalyticResult.initialize(this, countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType);
     }
 
     /**
@@ -48,11 +46,10 @@ class TestPointAnalyticResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTestSuite, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType) { 
+    static initialize(obj, countGroupByStatus, sumGroupByTester, countGroupByTester, countGroupByTesterAndStatus, countGroupByStatusCode, countGroupByTesterAndStatusCode, countGroupByStatusType) { 
         obj['countGroupByStatus'] = countGroupByStatus;
         obj['sumGroupByTester'] = sumGroupByTester;
         obj['countGroupByTester'] = countGroupByTester;
-        obj['countGroupByTestSuite'] = countGroupByTestSuite;
         obj['countGroupByTesterAndStatus'] = countGroupByTesterAndStatus;
         obj['countGroupByStatusCode'] = countGroupByStatusCode;
         obj['countGroupByTesterAndStatusCode'] = countGroupByTesterAndStatusCode;
@@ -78,9 +75,6 @@ class TestPointAnalyticResult {
             }
             if (data.hasOwnProperty('countGroupByTester')) {
                 obj['countGroupByTester'] = ApiClient.convertToType(data['countGroupByTester'], [TestPlanGroupByTester]);
-            }
-            if (data.hasOwnProperty('countGroupByTestSuite')) {
-                obj['countGroupByTestSuite'] = ApiClient.convertToType(data['countGroupByTestSuite'], [TestPlanGroupByTestSuite]);
             }
             if (data.hasOwnProperty('countGroupByTesterAndStatus')) {
                 obj['countGroupByTesterAndStatus'] = ApiClient.convertToType(data['countGroupByTesterAndStatus'], [TestPlanGroupByTesterAndStatus]);
@@ -140,16 +134,6 @@ class TestPointAnalyticResult {
                 TestPlanGroupByTester.validateJSON(item);
             };
         }
-        if (data['countGroupByTestSuite']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['countGroupByTestSuite'])) {
-                throw new Error("Expected the field `countGroupByTestSuite` to be an array in the JSON data but got " + data['countGroupByTestSuite']);
-            }
-            // validate the optional field `countGroupByTestSuite` (array)
-            for (const item of data['countGroupByTestSuite']) {
-                TestPlanGroupByTestSuite.validateJSON(item);
-            };
-        }
         if (data['countGroupByTesterAndStatus']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['countGroupByTesterAndStatus'])) {
@@ -197,7 +181,7 @@ class TestPointAnalyticResult {
 
 }
 
-TestPointAnalyticResult.RequiredProperties = ["countGroupByStatus", "sumGroupByTester", "countGroupByTester", "countGroupByTestSuite", "countGroupByTesterAndStatus", "countGroupByStatusCode", "countGroupByTesterAndStatusCode", "countGroupByStatusType"];
+TestPointAnalyticResult.RequiredProperties = ["countGroupByStatus", "sumGroupByTester", "countGroupByTester", "countGroupByTesterAndStatus", "countGroupByStatusCode", "countGroupByTesterAndStatusCode", "countGroupByStatusType"];
 
 /**
  * @member {Array.<module:model/TestPlanGroupByStatus>} countGroupByStatus
@@ -213,11 +197,6 @@ TestPointAnalyticResult.prototype['sumGroupByTester'] = undefined;
  * @member {Array.<module:model/TestPlanGroupByTester>} countGroupByTester
  */
 TestPointAnalyticResult.prototype['countGroupByTester'] = undefined;
-
-/**
- * @member {Array.<module:model/TestPlanGroupByTestSuite>} countGroupByTestSuite
- */
-TestPointAnalyticResult.prototype['countGroupByTestSuite'] = undefined;
 
 /**
  * @member {Array.<module:model/TestPlanGroupByTesterAndStatus>} countGroupByTesterAndStatus

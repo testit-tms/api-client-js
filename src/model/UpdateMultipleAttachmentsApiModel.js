@@ -17,7 +17,7 @@ import ActionUpdate from './ActionUpdate';
 /**
  * The UpdateMultipleAttachmentsApiModel model module.
  * @module model/UpdateMultipleAttachmentsApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class UpdateMultipleAttachmentsApiModel {
     /**

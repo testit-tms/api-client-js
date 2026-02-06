@@ -17,7 +17,7 @@ import TestStatusApiType from './TestStatusApiType';
 /**
  * The WorkflowStatusApiResult model module.
  * @module model/WorkflowStatusApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WorkflowStatusApiResult {
     /**

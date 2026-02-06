@@ -19,7 +19,7 @@ import BackgroundJobType from './BackgroundJobType';
 /**
  * The BackgroundJobGetModel model module.
  * @module model/BackgroundJobGetModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class BackgroundJobGetModel {
     /**

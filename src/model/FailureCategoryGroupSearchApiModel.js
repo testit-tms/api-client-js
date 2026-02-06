@@ -18,7 +18,7 @@ import Inquiry from './Inquiry';
 /**
  * The FailureCategoryGroupSearchApiModel model module.
  * @module model/FailureCategoryGroupSearchApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class FailureCategoryGroupSearchApiModel {
     /**

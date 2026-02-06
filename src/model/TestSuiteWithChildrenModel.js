@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestSuiteWithChildrenModel model module.
  * @module model/TestSuiteWithChildrenModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestSuiteWithChildrenModel {
     /**

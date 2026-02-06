@@ -325,7 +325,6 @@ docs/TestPlanExtractionModel.md
 docs/TestPlanGroupByStatus.md
 docs/TestPlanGroupByStatusCode.md
 docs/TestPlanGroupByStatusType.md
-docs/TestPlanGroupByTestSuite.md
 docs/TestPlanGroupByTester.md
 docs/TestPlanGroupByTesterAndStatus.md
 docs/TestPlanGroupByTesterAndStatusCode.md
@@ -426,6 +425,7 @@ docs/TestStatusApiType.md
 docs/TestStatusModel.md
 docs/TestStatusShortApiResult.md
 docs/TestStatusType.md
+docs/TestStatusesApi.md
 docs/TestSuiteApiResult.md
 docs/TestSuiteChangeViewModel.md
 docs/TestSuiteChangeViewModelChangedFieldViewModel.md
@@ -531,6 +531,8 @@ docs/WorkItemStateApiModel.md
 docs/WorkItemStates.md
 docs/WorkItemStepChangeViewModel.md
 docs/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.md
+docs/WorkItemUpdatingFieldsApiModel.md
+docs/WorkItemUpdatingFieldsApiResult.md
 docs/WorkItemVersionModel.md
 docs/WorkItemsApi.md
 docs/WorkItemsCommentsApi.md
@@ -543,6 +545,7 @@ docs/WorkflowShortApiResult.md
 docs/WorkflowShortApiResultReply.md
 docs/WorkflowStatusApiModel.md
 docs/WorkflowStatusApiResult.md
+docs/WorkflowsApi.md
 git_push.sh
 mocha.opts
 package.json
@@ -573,12 +576,14 @@ src/api/TestPlansApi.js
 src/api/TestPointsApi.js
 src/api/TestResultsApi.js
 src/api/TestRunsApi.js
+src/api/TestStatusesApi.js
 src/api/TestSuitesApi.js
 src/api/UsersApi.js
 src/api/WebhooksApi.js
 src/api/WebhooksLogsApi.js
 src/api/WorkItemsApi.js
 src/api/WorkItemsCommentsApi.js
+src/api/WorkflowsApi.js
 src/index.js
 src/model/AIServiceModelApiResult.js
 src/model/AIServiceModelApiResultReply.js
@@ -880,7 +885,6 @@ src/model/TestPlanExtractionModel.js
 src/model/TestPlanGroupByStatus.js
 src/model/TestPlanGroupByStatusCode.js
 src/model/TestPlanGroupByStatusType.js
-src/model/TestPlanGroupByTestSuite.js
 src/model/TestPlanGroupByTester.js
 src/model/TestPlanGroupByTesterAndStatus.js
 src/model/TestPlanGroupByTesterAndStatusCode.js
@@ -1078,6 +1082,8 @@ src/model/WorkItemStateApiModel.js
 src/model/WorkItemStates.js
 src/model/WorkItemStepChangeViewModel.js
 src/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.js
+src/model/WorkItemUpdatingFieldsApiModel.js
+src/model/WorkItemUpdatingFieldsApiResult.js
 src/model/WorkItemVersionModel.js
 src/model/WorkflowApiResult.js
 src/model/WorkflowExistsByNameApiResult.js
@@ -1114,12 +1120,14 @@ test/api/TestPlansApi.spec.js
 test/api/TestPointsApi.spec.js
 test/api/TestResultsApi.spec.js
 test/api/TestRunsApi.spec.js
+test/api/TestStatusesApi.spec.js
 test/api/TestSuitesApi.spec.js
 test/api/UsersApi.spec.js
 test/api/WebhooksApi.spec.js
 test/api/WebhooksLogsApi.spec.js
 test/api/WorkItemsApi.spec.js
 test/api/WorkItemsCommentsApi.spec.js
+test/api/WorkflowsApi.spec.js
 test/model/AIServiceModelApiResult.spec.js
 test/model/AIServiceModelApiResultReply.spec.js
 test/model/ActionUpdate.spec.js
@@ -1420,7 +1428,6 @@ test/model/TestPlanExtractionModel.spec.js
 test/model/TestPlanGroupByStatus.spec.js
 test/model/TestPlanGroupByStatusCode.spec.js
 test/model/TestPlanGroupByStatusType.spec.js
-test/model/TestPlanGroupByTestSuite.spec.js
 test/model/TestPlanGroupByTester.spec.js
 test/model/TestPlanGroupByTesterAndStatus.spec.js
 test/model/TestPlanGroupByTesterAndStatusCode.spec.js
@@ -1618,6 +1625,8 @@ test/model/WorkItemStateApiModel.spec.js
 test/model/WorkItemStates.spec.js
 test/model/WorkItemStepChangeViewModel.spec.js
 test/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.spec.js
+test/model/WorkItemUpdatingFieldsApiModel.spec.js
+test/model/WorkItemUpdatingFieldsApiResult.spec.js
 test/model/WorkItemVersionModel.spec.js
 test/model/WorkflowApiResult.spec.js
 test/model/WorkflowExistsByNameApiResult.spec.js

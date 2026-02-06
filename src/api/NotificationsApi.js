@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Notifications service.
 * @module api/NotificationsApi
-* @version 7.1.0
+* @version 7.2.0
 */
 export default class NotificationsApi {
 

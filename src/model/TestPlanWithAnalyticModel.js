@@ -19,7 +19,7 @@ import TestPointAnalyticResult from './TestPointAnalyticResult';
 /**
  * The TestPlanWithAnalyticModel model module.
  * @module model/TestPlanWithAnalyticModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPlanWithAnalyticModel {
     /**
