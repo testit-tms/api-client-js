@@ -18,7 +18,7 @@ import TestResultsLocalFilterModel from './TestResultsLocalFilterModel';
 /**
  * The TestRunTestResultsSelectModel model module.
  * @module model/TestRunTestResultsSelectModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestRunTestResultsSelectModel {
     /**

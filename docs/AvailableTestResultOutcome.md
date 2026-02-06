@@ -11,4 +11,6 @@
 
 * `Skipped` (value: `"Skipped"`)
 
+* `InProgress` (value: `"InProgress"`)
+
 

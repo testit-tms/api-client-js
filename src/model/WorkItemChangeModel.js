@@ -17,7 +17,7 @@ import WorkItemChangedFieldsViewModel from './WorkItemChangedFieldsViewModel';
 /**
  * The WorkItemChangeModel model module.
  * @module model/WorkItemChangeModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WorkItemChangeModel {
     /**

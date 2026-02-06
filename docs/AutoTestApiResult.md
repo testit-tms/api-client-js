@@ -33,5 +33,6 @@ Name | Type | Description | Notes
 **stabilityPercentage** | **Number** |  | [optional] 
 **links** | [**[LinkApiResult]**](LinkApiResult.md) |  | [optional] 
 **labels** | [**[LabelApiResult]**](LabelApiResult.md) |  | [optional] 
+**tags** | **[String]** |  | [optional] 
 
 

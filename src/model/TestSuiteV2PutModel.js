@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestSuiteV2PutModel model module.
  * @module model/TestSuiteV2PutModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestSuiteV2PutModel {
     /**

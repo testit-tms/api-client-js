@@ -17,7 +17,7 @@ import TestStatusType from './TestStatusType';
 /**
  * The TestPlanGroupByStatusType model module.
  * @module model/TestPlanGroupByStatusType
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPlanGroupByStatusType {
     /**

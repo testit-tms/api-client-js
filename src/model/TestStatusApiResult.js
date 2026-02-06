@@ -17,7 +17,7 @@ import TestStatusApiType from './TestStatusApiType';
 /**
  * The TestStatusApiResult model module.
  * @module model/TestStatusApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestStatusApiResult {
     /**

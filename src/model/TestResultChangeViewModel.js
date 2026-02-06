@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestResultChangeViewModel model module.
  * @module model/TestResultChangeViewModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestResultChangeViewModel {
     /**

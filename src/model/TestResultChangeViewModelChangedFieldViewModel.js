@@ -17,7 +17,7 @@ import TestResultChangeViewModel from './TestResultChangeViewModel';
 /**
  * The TestResultChangeViewModelChangedFieldViewModel model module.
  * @module model/TestResultChangeViewModelChangedFieldViewModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestResultChangeViewModelChangedFieldViewModel {
     /**

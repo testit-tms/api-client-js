@@ -23,7 +23,7 @@
 | 5.4.1   | 6.2.2-TMS-5.4.1 |
 | 5.5     | 6.4.0-TMS-5.5   |
 | 5.6     | 7.1.0-TMS-5.6   |
-| Cloud   | 7.1.0 +         |
+| Cloud   | 7.2.0 +         |
 
 
 1. For current versions, see the releases tab. 
@@ -184,6 +184,7 @@ Class | Method | HTTP request | Description
 *TestitApiClient.ProjectWorkItemsApi* | [**apiV2ProjectsProjectIdWorkItemsTagsGet**](docs/ProjectWorkItemsApi.md#apiV2ProjectsProjectIdWorkItemsTagsGet) | **GET** /api/v2/projects/{projectId}/workItems/tags | Get WorkItems Tags
 *TestitApiClient.ProjectWorkItemsApi* | [**getWorkItemsByProjectId**](docs/ProjectWorkItemsApi.md#getWorkItemsByProjectId) | **GET** /api/v2/projects/{projectId}/workItems | Get project work items
 *TestitApiClient.ProjectsApi* | [**addGlobalAttributesToProject**](docs/ProjectsApi.md#addGlobalAttributesToProject) | **POST** /api/v2/projects/{id}/globalAttributes | Add global attributes to project
+*TestitApiClient.ProjectsApi* | [**apiV2ProjectsDemoPost**](docs/ProjectsApi.md#apiV2ProjectsDemoPost) | **POST** /api/v2/projects/demo | 
 *TestitApiClient.ProjectsApi* | [**apiV2ProjectsIdDelete**](docs/ProjectsApi.md#apiV2ProjectsIdDelete) | **DELETE** /api/v2/projects/{id} | Archive project
 *TestitApiClient.ProjectsApi* | [**apiV2ProjectsIdFailureClassesGet**](docs/ProjectsApi.md#apiV2ProjectsIdFailureClassesGet) | **GET** /api/v2/projects/{id}/failureClasses | Get failure classes
 *TestitApiClient.ProjectsApi* | [**apiV2ProjectsIdFavoritePut**](docs/ProjectsApi.md#apiV2ProjectsIdFavoritePut) | **PUT** /api/v2/projects/{id}/favorite | Mark Project as favorite
@@ -296,6 +297,13 @@ Class | Method | HTTP request | Description
 *TestitApiClient.TestRunsApi* | [**startTestRun**](docs/TestRunsApi.md#startTestRun) | **POST** /api/v2/testRuns/{id}/start | Start TestRun
 *TestitApiClient.TestRunsApi* | [**stopTestRun**](docs/TestRunsApi.md#stopTestRun) | **POST** /api/v2/testRuns/{id}/stop | Stop TestRun
 *TestitApiClient.TestRunsApi* | [**updateEmpty**](docs/TestRunsApi.md#updateEmpty) | **PUT** /api/v2/testRuns | Update empty TestRun
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesCodeCodeExistsGet**](docs/TestStatusesApi.md#apiV2TestStatusesCodeCodeExistsGet) | **GET** /api/v2/testStatuses/code/{code}/exists | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesIdDelete**](docs/TestStatusesApi.md#apiV2TestStatusesIdDelete) | **DELETE** /api/v2/testStatuses/{id} | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesIdGet**](docs/TestStatusesApi.md#apiV2TestStatusesIdGet) | **GET** /api/v2/testStatuses/{id} | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesIdPut**](docs/TestStatusesApi.md#apiV2TestStatusesIdPut) | **PUT** /api/v2/testStatuses/{id} | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesNameNameExistsGet**](docs/TestStatusesApi.md#apiV2TestStatusesNameNameExistsGet) | **GET** /api/v2/testStatuses/name/{name}/exists | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesPost**](docs/TestStatusesApi.md#apiV2TestStatusesPost) | **POST** /api/v2/testStatuses | 
+*TestitApiClient.TestStatusesApi* | [**apiV2TestStatusesSearchPost**](docs/TestStatusesApi.md#apiV2TestStatusesSearchPost) | **POST** /api/v2/testStatuses/search | 
 *TestitApiClient.TestSuitesApi* | [**addTestPointsToTestSuite**](docs/TestSuitesApi.md#addTestPointsToTestSuite) | **POST** /api/v2/testSuites/{id}/test-points | Add test-points to test suite
 *TestitApiClient.TestSuitesApi* | [**apiV2TestSuitesIdPatch**](docs/TestSuitesApi.md#apiV2TestSuitesIdPatch) | **PATCH** /api/v2/testSuites/{id} | Patch test suite
 *TestitApiClient.TestSuitesApi* | [**apiV2TestSuitesIdRefreshPost**](docs/TestSuitesApi.md#apiV2TestSuitesIdRefreshPost) | **POST** /api/v2/testSuites/{id}/refresh | Refresh test suite. Only dynamic test suites are supported by this method
@@ -354,6 +362,14 @@ Class | Method | HTTP request | Description
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsCommentsPut**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsCommentsPut) | **PUT** /api/v2/workItems/comments | Update work item comment
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsIdCommentsCountGet**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsIdCommentsCountGet) | **GET** /api/v2/workItems/{id}/comments/count | Get work item comments count
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsIdCommentsGet**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsIdCommentsGet) | **GET** /api/v2/workItems/{id}/comments | Get work item comments
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsIdDelete**](docs/WorkflowsApi.md#apiV2WorkflowsIdDelete) | **DELETE** /api/v2/workflows/{id} | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsIdGet**](docs/WorkflowsApi.md#apiV2WorkflowsIdGet) | **GET** /api/v2/workflows/{id} | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsIdPatch**](docs/WorkflowsApi.md#apiV2WorkflowsIdPatch) | **PATCH** /api/v2/workflows/{id} | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsIdProjectsSearchPost**](docs/WorkflowsApi.md#apiV2WorkflowsIdProjectsSearchPost) | **POST** /api/v2/workflows/{id}/projects/search | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsIdPut**](docs/WorkflowsApi.md#apiV2WorkflowsIdPut) | **PUT** /api/v2/workflows/{id} | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsNameNameExistsGet**](docs/WorkflowsApi.md#apiV2WorkflowsNameNameExistsGet) | **GET** /api/v2/workflows/name/{name}/exists | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsPost**](docs/WorkflowsApi.md#apiV2WorkflowsPost) | **POST** /api/v2/workflows | 
+*TestitApiClient.WorkflowsApi* | [**apiV2WorkflowsSearchPost**](docs/WorkflowsApi.md#apiV2WorkflowsSearchPost) | **POST** /api/v2/workflows/search | 
 
 
 ## Documentation for Models
@@ -658,7 +674,6 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.TestPlanGroupByStatus](docs/TestPlanGroupByStatus.md)
  - [TestitApiClient.TestPlanGroupByStatusCode](docs/TestPlanGroupByStatusCode.md)
  - [TestitApiClient.TestPlanGroupByStatusType](docs/TestPlanGroupByStatusType.md)
- - [TestitApiClient.TestPlanGroupByTestSuite](docs/TestPlanGroupByTestSuite.md)
  - [TestitApiClient.TestPlanGroupByTester](docs/TestPlanGroupByTester.md)
  - [TestitApiClient.TestPlanGroupByTesterAndStatus](docs/TestPlanGroupByTesterAndStatus.md)
  - [TestitApiClient.TestPlanGroupByTesterAndStatusCode](docs/TestPlanGroupByTesterAndStatusCode.md)
@@ -856,6 +871,8 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkItemStates](docs/WorkItemStates.md)
  - [TestitApiClient.WorkItemStepChangeViewModel](docs/WorkItemStepChangeViewModel.md)
  - [TestitApiClient.WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel](docs/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.md)
+ - [TestitApiClient.WorkItemUpdatingFieldsApiModel](docs/WorkItemUpdatingFieldsApiModel.md)
+ - [TestitApiClient.WorkItemUpdatingFieldsApiResult](docs/WorkItemUpdatingFieldsApiResult.md)
  - [TestitApiClient.WorkItemVersionModel](docs/WorkItemVersionModel.md)
  - [TestitApiClient.WorkflowApiResult](docs/WorkflowApiResult.md)
  - [TestitApiClient.WorkflowExistsByNameApiResult](docs/WorkflowExistsByNameApiResult.md)

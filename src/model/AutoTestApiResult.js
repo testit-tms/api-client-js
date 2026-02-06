@@ -21,7 +21,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The AutoTestApiResult model module.
  * @module model/AutoTestApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestApiResult {
     /**
@@ -157,6 +157,9 @@ class AutoTestApiResult {
             if (data.hasOwnProperty('labels')) {
                 obj['labels'] = ApiClient.convertToType(data['labels'], [LabelApiResult]);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
         }
         return obj;
     }
@@ -290,6 +293,10 @@ class AutoTestApiResult {
             for (const item of data['labels']) {
                 LabelApiResult.validateJSON(item);
             };
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
 
         return true;
@@ -444,6 +451,11 @@ AutoTestApiResult.prototype['links'] = undefined;
  * @member {Array.<module:model/LabelApiResult>} labels
  */
 AutoTestApiResult.prototype['labels'] = undefined;
+
+/**
+ * @member {Array.<String>} tags
+ */
+AutoTestApiResult.prototype['tags'] = undefined;
 
 
 

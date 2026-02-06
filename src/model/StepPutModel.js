@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StepPutModel model module.
  * @module model/StepPutModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class StepPutModel {
     /**

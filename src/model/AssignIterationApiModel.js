@@ -17,7 +17,7 @@ import ParameterIterationModel from './ParameterIterationModel';
 /**
  * The AssignIterationApiModel model module.
  * @module model/AssignIterationApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AssignIterationApiModel {
     /**

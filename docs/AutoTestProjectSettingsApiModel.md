@@ -9,5 +9,7 @@ Name | Type | Description | Notes
 **flakyTestRunCount** | **Number** | Last test run count for autotest flaky computing | [optional] [default to 100]
 **rerunEnabled** | **Boolean** | Auto rerun enabled | 
 **rerunAttemptsCount** | **Number** | Auto rerun attempt count | 
+**workItemUpdatingEnabled** | **Boolean** | Autotest to work item updating enabled | [optional] [default to false]
+**workItemUpdatingFields** | [**WorkItemUpdatingFieldsApiModel**](WorkItemUpdatingFieldsApiModel.md) | Autotest to work item updating fields | 
 
 

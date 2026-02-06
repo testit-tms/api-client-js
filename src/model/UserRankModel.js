@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserRankModel model module.
  * @module model/UserRankModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class UserRankModel {
     /**

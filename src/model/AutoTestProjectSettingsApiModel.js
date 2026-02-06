@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import WorkItemUpdatingFieldsApiModel from './WorkItemUpdatingFieldsApiModel';
 
 /**
  * The AutoTestProjectSettingsApiModel model module.
  * @module model/AutoTestProjectSettingsApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestProjectSettingsApiModel {
     /**
@@ -24,10 +25,11 @@ class AutoTestProjectSettingsApiModel {
      * @alias module:model/AutoTestProjectSettingsApiModel
      * @param rerunEnabled {Boolean} Auto rerun enabled
      * @param rerunAttemptsCount {Number} Auto rerun attempt count
+     * @param workItemUpdatingFields {module:model/WorkItemUpdatingFieldsApiModel} Autotest to work item updating fields
      */
-    constructor(rerunEnabled, rerunAttemptsCount) { 
+    constructor(rerunEnabled, rerunAttemptsCount, workItemUpdatingFields) { 
         
-        AutoTestProjectSettingsApiModel.initialize(this, rerunEnabled, rerunAttemptsCount);
+        AutoTestProjectSettingsApiModel.initialize(this, rerunEnabled, rerunAttemptsCount, workItemUpdatingFields);
     }
 
     /**
@@ -35,12 +37,14 @@ class AutoTestProjectSettingsApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, rerunEnabled, rerunAttemptsCount) { 
+    static initialize(obj, rerunEnabled, rerunAttemptsCount, workItemUpdatingFields) { 
         obj['isFlakyAuto'] = false;
         obj['flakyStabilityPercentage'] = 100;
         obj['flakyTestRunCount'] = 100;
         obj['rerunEnabled'] = rerunEnabled;
         obj['rerunAttemptsCount'] = rerunAttemptsCount;
+        obj['workItemUpdatingEnabled'] = false;
+        obj['workItemUpdatingFields'] = workItemUpdatingFields;
     }
 
     /**
@@ -69,6 +73,12 @@ class AutoTestProjectSettingsApiModel {
             if (data.hasOwnProperty('rerunAttemptsCount')) {
                 obj['rerunAttemptsCount'] = ApiClient.convertToType(data['rerunAttemptsCount'], 'Number');
             }
+            if (data.hasOwnProperty('workItemUpdatingEnabled')) {
+                obj['workItemUpdatingEnabled'] = ApiClient.convertToType(data['workItemUpdatingEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('workItemUpdatingFields')) {
+                obj['workItemUpdatingFields'] = ApiClient.convertToType(data['workItemUpdatingFields'], WorkItemUpdatingFieldsApiModel);
+            }
         }
         return obj;
     }
@@ -85,6 +95,10 @@ class AutoTestProjectSettingsApiModel {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
+        // validate the optional field `workItemUpdatingFields`
+        if (data['workItemUpdatingFields']) { // data not null
+          WorkItemUpdatingFieldsApiModel.validateJSON(data['workItemUpdatingFields']);
+        }
 
         return true;
     }
@@ -92,7 +106,7 @@ class AutoTestProjectSettingsApiModel {
 
 }
 
-AutoTestProjectSettingsApiModel.RequiredProperties = ["rerunEnabled", "rerunAttemptsCount"];
+AutoTestProjectSettingsApiModel.RequiredProperties = ["rerunEnabled", "rerunAttemptsCount", "workItemUpdatingFields"];
 
 /**
  * Indicates if the status \"Flaky/Stable\" sets automatically
@@ -126,6 +140,19 @@ AutoTestProjectSettingsApiModel.prototype['rerunEnabled'] = undefined;
  * @member {Number} rerunAttemptsCount
  */
 AutoTestProjectSettingsApiModel.prototype['rerunAttemptsCount'] = undefined;
+
+/**
+ * Autotest to work item updating enabled
+ * @member {Boolean} workItemUpdatingEnabled
+ * @default false
+ */
+AutoTestProjectSettingsApiModel.prototype['workItemUpdatingEnabled'] = false;
+
+/**
+ * Autotest to work item updating fields
+ * @member {module:model/WorkItemUpdatingFieldsApiModel} workItemUpdatingFields
+ */
+AutoTestProjectSettingsApiModel.prototype['workItemUpdatingFields'] = undefined;
 
 
 

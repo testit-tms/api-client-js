@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import WorkItemUpdatingFieldsApiResult from './WorkItemUpdatingFieldsApiResult';
 
 /**
  * The AutoTestProjectSettingsApiResult model module.
  * @module model/AutoTestProjectSettingsApiResult
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestProjectSettingsApiResult {
     /**
@@ -28,10 +29,12 @@ class AutoTestProjectSettingsApiResult {
      * @param flakyTestRunCount {Number} Last test run count for autotest flaky computing
      * @param rerunEnabled {Boolean} Auto rerun enabled
      * @param rerunAttemptsCount {Number} Auto rerun attempt count
+     * @param workItemUpdatingEnabled {Boolean} Autotest to work item updating enabled
+     * @param workItemUpdatingFields {module:model/WorkItemUpdatingFieldsApiResult} Autotest to work item updating fields
      */
-    constructor(projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount) { 
+    constructor(projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields) { 
         
-        AutoTestProjectSettingsApiResult.initialize(this, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount);
+        AutoTestProjectSettingsApiResult.initialize(this, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields);
     }
 
     /**
@@ -39,13 +42,15 @@ class AutoTestProjectSettingsApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount) { 
+    static initialize(obj, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields) { 
         obj['projectId'] = projectId;
         obj['isFlakyAuto'] = isFlakyAuto;
         obj['flakyStabilityPercentage'] = flakyStabilityPercentage;
         obj['flakyTestRunCount'] = flakyTestRunCount;
         obj['rerunEnabled'] = rerunEnabled;
         obj['rerunAttemptsCount'] = rerunAttemptsCount;
+        obj['workItemUpdatingEnabled'] = workItemUpdatingEnabled;
+        obj['workItemUpdatingFields'] = workItemUpdatingFields;
     }
 
     /**
@@ -77,6 +82,12 @@ class AutoTestProjectSettingsApiResult {
             if (data.hasOwnProperty('rerunAttemptsCount')) {
                 obj['rerunAttemptsCount'] = ApiClient.convertToType(data['rerunAttemptsCount'], 'Number');
             }
+            if (data.hasOwnProperty('workItemUpdatingEnabled')) {
+                obj['workItemUpdatingEnabled'] = ApiClient.convertToType(data['workItemUpdatingEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('workItemUpdatingFields')) {
+                obj['workItemUpdatingFields'] = ApiClient.convertToType(data['workItemUpdatingFields'], WorkItemUpdatingFieldsApiResult);
+            }
         }
         return obj;
     }
@@ -97,6 +108,10 @@ class AutoTestProjectSettingsApiResult {
         if (data['projectId'] && !(typeof data['projectId'] === 'string' || data['projectId'] instanceof String)) {
             throw new Error("Expected the field `projectId` to be a primitive type in the JSON string but got " + data['projectId']);
         }
+        // validate the optional field `workItemUpdatingFields`
+        if (data['workItemUpdatingFields']) { // data not null
+          WorkItemUpdatingFieldsApiResult.validateJSON(data['workItemUpdatingFields']);
+        }
 
         return true;
     }
@@ -104,7 +119,7 @@ class AutoTestProjectSettingsApiResult {
 
 }
 
-AutoTestProjectSettingsApiResult.RequiredProperties = ["projectId", "isFlakyAuto", "flakyStabilityPercentage", "flakyTestRunCount", "rerunEnabled", "rerunAttemptsCount"];
+AutoTestProjectSettingsApiResult.RequiredProperties = ["projectId", "isFlakyAuto", "flakyStabilityPercentage", "flakyTestRunCount", "rerunEnabled", "rerunAttemptsCount", "workItemUpdatingEnabled", "workItemUpdatingFields"];
 
 /**
  * Unique ID of the project.
@@ -141,6 +156,18 @@ AutoTestProjectSettingsApiResult.prototype['rerunEnabled'] = undefined;
  * @member {Number} rerunAttemptsCount
  */
 AutoTestProjectSettingsApiResult.prototype['rerunAttemptsCount'] = undefined;
+
+/**
+ * Autotest to work item updating enabled
+ * @member {Boolean} workItemUpdatingEnabled
+ */
+AutoTestProjectSettingsApiResult.prototype['workItemUpdatingEnabled'] = undefined;
+
+/**
+ * Autotest to work item updating fields
+ * @member {module:model/WorkItemUpdatingFieldsApiResult} workItemUpdatingFields
+ */
+AutoTestProjectSettingsApiResult.prototype['workItemUpdatingFields'] = undefined;
 
 
 

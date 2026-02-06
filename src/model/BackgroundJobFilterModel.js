@@ -19,7 +19,7 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 /**
  * The BackgroundJobFilterModel model module.
  * @module model/BackgroundJobFilterModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class BackgroundJobFilterModel {
     /**

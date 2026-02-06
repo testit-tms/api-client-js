@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StringArrayChangedFieldViewModel model module.
  * @module model/StringArrayChangedFieldViewModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class StringArrayChangedFieldViewModel {
     /**

@@ -18,7 +18,7 @@ import WorkItemLinkUrlFilterApiModel from './WorkItemLinkUrlFilterApiModel';
 /**
  * The WorkItemLinkUrlApiModel model module.
  * @module model/WorkItemLinkUrlApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class WorkItemLinkUrlApiModel {
     /**

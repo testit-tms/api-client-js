@@ -18,7 +18,7 @@ import TestPlanExtractionModel from './TestPlanExtractionModel';
 /**
  * The TestPlanSelectModel model module.
  * @module model/TestPlanSelectModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPlanSelectModel {
     /**

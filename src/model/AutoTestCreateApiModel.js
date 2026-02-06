@@ -19,19 +19,19 @@ import LinkCreateApiModel from './LinkCreateApiModel';
 /**
  * The AutoTestCreateApiModel model module.
  * @module model/AutoTestCreateApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class AutoTestCreateApiModel {
     /**
      * Constructs a new <code>AutoTestCreateApiModel</code>.
      * @alias module:model/AutoTestCreateApiModel
-     * @param externalId {String} External ID of the autotest
      * @param projectId {String} Unique ID of the autotest project
+     * @param externalId {String} External ID of the autotest
      * @param name {String} Name of the autotest
      */
-    constructor(externalId, projectId, name) { 
+    constructor(projectId, externalId, name) { 
         
-        AutoTestCreateApiModel.initialize(this, externalId, projectId, name);
+        AutoTestCreateApiModel.initialize(this, projectId, externalId, name);
     }
 
     /**
@@ -39,9 +39,9 @@ class AutoTestCreateApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, externalId, projectId, name) { 
-        obj['externalId'] = externalId;
+    static initialize(obj, projectId, externalId, name) { 
         obj['projectId'] = projectId;
+        obj['externalId'] = externalId;
         obj['name'] = name;
     }
 
@@ -56,14 +56,14 @@ class AutoTestCreateApiModel {
         if (data) {
             obj = obj || new AutoTestCreateApiModel();
 
+            if (data.hasOwnProperty('projectId')) {
+                obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
+            }
             if (data.hasOwnProperty('externalId')) {
                 obj['externalId'] = ApiClient.convertToType(data['externalId'], 'String');
             }
             if (data.hasOwnProperty('externalKey')) {
                 obj['externalKey'] = ApiClient.convertToType(data['externalKey'], 'String');
-            }
-            if (data.hasOwnProperty('projectId')) {
-                obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -74,6 +74,15 @@ class AutoTestCreateApiModel {
             if (data.hasOwnProperty('classname')) {
                 obj['classname'] = ApiClient.convertToType(data['classname'], 'String');
             }
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('isFlaky')) {
+                obj['isFlaky'] = ApiClient.convertToType(data['isFlaky'], 'Boolean');
+            }
             if (data.hasOwnProperty('steps')) {
                 obj['steps'] = ApiClient.convertToType(data['steps'], [AutoTestStepApiModel]);
             }
@@ -83,11 +92,17 @@ class AutoTestCreateApiModel {
             if (data.hasOwnProperty('teardown')) {
                 obj['teardown'] = ApiClient.convertToType(data['teardown'], [AutoTestStepApiModel]);
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            if (data.hasOwnProperty('shouldCreateWorkItem')) {
+                obj['shouldCreateWorkItem'] = ApiClient.convertToType(data['shouldCreateWorkItem'], 'Boolean');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('workItemIds')) {
+                obj['workItemIds'] = ApiClient.convertToType(data['workItemIds'], ['String']);
+            }
+            if (data.hasOwnProperty('attributes')) {
+                obj['attributes'] = ApiClient.convertToType(data['attributes'], {'String': Object});
+            }
+            if (data.hasOwnProperty('workItemIdsForLinkWithAutoTest')) {
+                obj['workItemIdsForLinkWithAutoTest'] = ApiClient.convertToType(data['workItemIdsForLinkWithAutoTest'], ['String']);
             }
             if (data.hasOwnProperty('labels')) {
                 obj['labels'] = ApiClient.convertToType(data['labels'], [LabelApiModel]);
@@ -95,20 +110,8 @@ class AutoTestCreateApiModel {
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [LinkCreateApiModel]);
             }
-            if (data.hasOwnProperty('isFlaky')) {
-                obj['isFlaky'] = ApiClient.convertToType(data['isFlaky'], 'Boolean');
-            }
-            if (data.hasOwnProperty('workItemIdsForLinkWithAutoTest')) {
-                obj['workItemIdsForLinkWithAutoTest'] = ApiClient.convertToType(data['workItemIdsForLinkWithAutoTest'], ['String']);
-            }
-            if (data.hasOwnProperty('workItemIds')) {
-                obj['workItemIds'] = ApiClient.convertToType(data['workItemIds'], ['String']);
-            }
-            if (data.hasOwnProperty('shouldCreateWorkItem')) {
-                obj['shouldCreateWorkItem'] = ApiClient.convertToType(data['shouldCreateWorkItem'], 'Boolean');
-            }
-            if (data.hasOwnProperty('attributes')) {
-                obj['attributes'] = ApiClient.convertToType(data['attributes'], {'String': Object});
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -127,16 +130,16 @@ class AutoTestCreateApiModel {
             }
         }
         // ensure the json data is a string
+        if (data['projectId'] && !(typeof data['projectId'] === 'string' || data['projectId'] instanceof String)) {
+            throw new Error("Expected the field `projectId` to be a primitive type in the JSON string but got " + data['projectId']);
+        }
+        // ensure the json data is a string
         if (data['externalId'] && !(typeof data['externalId'] === 'string' || data['externalId'] instanceof String)) {
             throw new Error("Expected the field `externalId` to be a primitive type in the JSON string but got " + data['externalId']);
         }
         // ensure the json data is a string
         if (data['externalKey'] && !(typeof data['externalKey'] === 'string' || data['externalKey'] instanceof String)) {
             throw new Error("Expected the field `externalKey` to be a primitive type in the JSON string but got " + data['externalKey']);
-        }
-        // ensure the json data is a string
-        if (data['projectId'] && !(typeof data['projectId'] === 'string' || data['projectId'] instanceof String)) {
-            throw new Error("Expected the field `projectId` to be a primitive type in the JSON string but got " + data['projectId']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -149,6 +152,14 @@ class AutoTestCreateApiModel {
         // ensure the json data is a string
         if (data['classname'] && !(typeof data['classname'] === 'string' || data['classname'] instanceof String)) {
             throw new Error("Expected the field `classname` to be a primitive type in the JSON string but got " + data['classname']);
+        }
+        // ensure the json data is a string
+        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
+            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
         if (data['steps']) { // data not null
             // ensure the json data is an array
@@ -180,13 +191,13 @@ class AutoTestCreateApiModel {
                 AutoTestStepApiModel.validateJSON(item);
             };
         }
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
+        // ensure the json data is an array
+        if (!Array.isArray(data['workItemIds'])) {
+            throw new Error("Expected the field `workItemIds` to be an array in the JSON data but got " + data['workItemIds']);
         }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        // ensure the json data is an array
+        if (!Array.isArray(data['workItemIdsForLinkWithAutoTest'])) {
+            throw new Error("Expected the field `workItemIdsForLinkWithAutoTest` to be an array in the JSON data but got " + data['workItemIdsForLinkWithAutoTest']);
         }
         if (data['labels']) { // data not null
             // ensure the json data is an array
@@ -209,12 +220,8 @@ class AutoTestCreateApiModel {
             };
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['workItemIdsForLinkWithAutoTest'])) {
-            throw new Error("Expected the field `workItemIdsForLinkWithAutoTest` to be an array in the JSON data but got " + data['workItemIdsForLinkWithAutoTest']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['workItemIds'])) {
-            throw new Error("Expected the field `workItemIds` to be an array in the JSON data but got " + data['workItemIds']);
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
 
         return true;
@@ -223,7 +230,13 @@ class AutoTestCreateApiModel {
 
 }
 
-AutoTestCreateApiModel.RequiredProperties = ["externalId", "projectId", "name"];
+AutoTestCreateApiModel.RequiredProperties = ["projectId", "externalId", "name"];
+
+/**
+ * Unique ID of the autotest project
+ * @member {String} projectId
+ */
+AutoTestCreateApiModel.prototype['projectId'] = undefined;
 
 /**
  * External ID of the autotest
@@ -236,12 +249,6 @@ AutoTestCreateApiModel.prototype['externalId'] = undefined;
  * @member {String} externalKey
  */
 AutoTestCreateApiModel.prototype['externalKey'] = undefined;
-
-/**
- * Unique ID of the autotest project
- * @member {String} projectId
- */
-AutoTestCreateApiModel.prototype['projectId'] = undefined;
 
 /**
  * Name of the autotest
@@ -262,6 +269,24 @@ AutoTestCreateApiModel.prototype['namespace'] = undefined;
 AutoTestCreateApiModel.prototype['classname'] = undefined;
 
 /**
+ * Name of the autotest in autotest's card
+ * @member {String} title
+ */
+AutoTestCreateApiModel.prototype['title'] = undefined;
+
+/**
+ * Description of the autotest in autotest's card
+ * @member {String} description
+ */
+AutoTestCreateApiModel.prototype['description'] = undefined;
+
+/**
+ * Indicates if the autotest is marked as flaky
+ * @member {Boolean} isFlaky
+ */
+AutoTestCreateApiModel.prototype['isFlaky'] = undefined;
+
+/**
  * Collection of the autotest steps
  * @member {Array.<module:model/AutoTestStepApiModel>} steps
  */
@@ -280,16 +305,28 @@ AutoTestCreateApiModel.prototype['setup'] = undefined;
 AutoTestCreateApiModel.prototype['teardown'] = undefined;
 
 /**
- * Name of the autotest in autotest's card
- * @member {String} title
+ * Creates a test case linked to the autotest.
+ * @member {Boolean} shouldCreateWorkItem
  */
-AutoTestCreateApiModel.prototype['title'] = undefined;
+AutoTestCreateApiModel.prototype['shouldCreateWorkItem'] = undefined;
 
 /**
- * Description of the autotest in autotest's card
- * @member {String} description
+ * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+ * @member {Array.<String>} workItemIds
  */
-AutoTestCreateApiModel.prototype['description'] = undefined;
+AutoTestCreateApiModel.prototype['workItemIds'] = undefined;
+
+/**
+ * Key value pair of custom work item attributes
+ * @member {Object.<String, Object>} attributes
+ */
+AutoTestCreateApiModel.prototype['attributes'] = undefined;
+
+/**
+ * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
+ * @member {Array.<String>} workItemIdsForLinkWithAutoTest
+ */
+AutoTestCreateApiModel.prototype['workItemIdsForLinkWithAutoTest'] = undefined;
 
 /**
  * Collection of the autotest labels
@@ -304,34 +341,10 @@ AutoTestCreateApiModel.prototype['labels'] = undefined;
 AutoTestCreateApiModel.prototype['links'] = undefined;
 
 /**
- * Indicates if the autotest is marked as flaky
- * @member {Boolean} isFlaky
+ * Collection of the autotest tags
+ * @member {Array.<String>} tags
  */
-AutoTestCreateApiModel.prototype['isFlaky'] = undefined;
-
-/**
- * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
- * @member {Array.<String>} workItemIdsForLinkWithAutoTest
- */
-AutoTestCreateApiModel.prototype['workItemIdsForLinkWithAutoTest'] = undefined;
-
-/**
- * Specifies the IDs of work items to link your autotest to. You can specify several IDs.
- * @member {Array.<String>} workItemIds
- */
-AutoTestCreateApiModel.prototype['workItemIds'] = undefined;
-
-/**
- * Creates a test case linked to the autotest.
- * @member {Boolean} shouldCreateWorkItem
- */
-AutoTestCreateApiModel.prototype['shouldCreateWorkItem'] = undefined;
-
-/**
- * Key value pair of custom work item attributes
- * @member {Object.<String, Object>} attributes
- */
-AutoTestCreateApiModel.prototype['attributes'] = undefined;
+AutoTestCreateApiModel.prototype['tags'] = undefined;
 
 
 

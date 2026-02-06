@@ -21,7 +21,7 @@ import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 /**
  * The TestPointWithLastResultResponseModel model module.
  * @module model/TestPointWithLastResultResponseModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class TestPointWithLastResultResponseModel {
     /**

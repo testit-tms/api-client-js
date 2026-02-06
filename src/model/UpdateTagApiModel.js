@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateTagApiModel model module.
  * @module model/UpdateTagApiModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class UpdateTagApiModel {
     /**

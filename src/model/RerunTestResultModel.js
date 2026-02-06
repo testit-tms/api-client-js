@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The RerunTestResultModel model module.
  * @module model/RerunTestResultModel
- * @version 7.1.0
+ * @version 7.2.0
  */
 class RerunTestResultModel {
     /**
