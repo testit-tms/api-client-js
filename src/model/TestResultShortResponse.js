@@ -20,7 +20,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestResultShortResponse model module.
  * @module model/TestResultShortResponse
- * @version 7.2.0
+ * @version 7.2.1
  */
 class TestResultShortResponse {
     /**
@@ -29,6 +29,7 @@ class TestResultShortResponse {
      * @param id {String} Unique ID of the test result
      * @param name {String} Name of autotest represented by the test result
      * @param autotestGlobalId {Number} Global ID of autotest represented by the test result
+     * @param autoTestTags {Array.<String>} Tags of the autotest represented by the test result
      * @param testRunId {String} Unique ID of test run where the test result is located
      * @param configurationId {String} Unique ID of configuration which the test result uses
      * @param configurationName {String} Name of configuration which the test result uses
@@ -40,9 +41,9 @@ class TestResultShortResponse {
      * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of files attached to the test result
      * @param rerunCompletedCount {Number} Run count
      */
-    constructor(id, name, autotestGlobalId, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount) { 
+    constructor(id, name, autotestGlobalId, autoTestTags, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount) { 
         
-        TestResultShortResponse.initialize(this, id, name, autotestGlobalId, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount);
+        TestResultShortResponse.initialize(this, id, name, autotestGlobalId, autoTestTags, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount);
     }
 
     /**
@@ -50,10 +51,11 @@ class TestResultShortResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, autotestGlobalId, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount) { 
+    static initialize(obj, id, name, autotestGlobalId, autoTestTags, testRunId, configurationId, configurationName, status, resultReasons, date, createdDate, links, attachments, rerunCompletedCount) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['autotestGlobalId'] = autotestGlobalId;
+        obj['autoTestTags'] = autoTestTags;
         obj['testRunId'] = testRunId;
         obj['configurationId'] = configurationId;
         obj['configurationName'] = configurationName;
@@ -88,6 +90,9 @@ class TestResultShortResponse {
             }
             if (data.hasOwnProperty('autotestExternalId')) {
                 obj['autotestExternalId'] = ApiClient.convertToType(data['autotestExternalId'], 'String');
+            }
+            if (data.hasOwnProperty('autoTestTags')) {
+                obj['autoTestTags'] = ApiClient.convertToType(data['autoTestTags'], ['String']);
             }
             if (data.hasOwnProperty('testRunId')) {
                 obj['testRunId'] = ApiClient.convertToType(data['testRunId'], 'String');
@@ -165,6 +170,10 @@ class TestResultShortResponse {
         if (data['autotestExternalId'] && !(typeof data['autotestExternalId'] === 'string' || data['autotestExternalId'] instanceof String)) {
             throw new Error("Expected the field `autotestExternalId` to be a primitive type in the JSON string but got " + data['autotestExternalId']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['autoTestTags'])) {
+            throw new Error("Expected the field `autoTestTags` to be an array in the JSON data but got " + data['autoTestTags']);
+        }
         // ensure the json data is a string
         if (data['testRunId'] && !(typeof data['testRunId'] === 'string' || data['testRunId'] instanceof String)) {
             throw new Error("Expected the field `testRunId` to be a primitive type in the JSON string but got " + data['testRunId']);
@@ -226,7 +235,7 @@ class TestResultShortResponse {
 
 }
 
-TestResultShortResponse.RequiredProperties = ["id", "name", "autotestGlobalId", "testRunId", "configurationId", "configurationName", "status", "resultReasons", "date", "createdDate", "links", "attachments", "rerunCompletedCount"];
+TestResultShortResponse.RequiredProperties = ["id", "name", "autotestGlobalId", "autoTestTags", "testRunId", "configurationId", "configurationName", "status", "resultReasons", "date", "createdDate", "links", "attachments", "rerunCompletedCount"];
 
 /**
  * Unique ID of the test result
@@ -251,6 +260,12 @@ TestResultShortResponse.prototype['autotestGlobalId'] = undefined;
  * @member {String} autotestExternalId
  */
 TestResultShortResponse.prototype['autotestExternalId'] = undefined;
+
+/**
+ * Tags of the autotest represented by the test result
+ * @member {Array.<String>} autoTestTags
+ */
+TestResultShortResponse.prototype['autoTestTags'] = undefined;
 
 /**
  * Unique ID of test run where the test result is located

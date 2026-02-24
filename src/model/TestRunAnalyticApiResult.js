@@ -19,7 +19,7 @@ import TestRunGroupByStatusTypeApiResult from './TestRunGroupByStatusTypeApiResu
 /**
  * The TestRunAnalyticApiResult model module.
  * @module model/TestRunAnalyticApiResult
- * @version 7.2.0
+ * @version 7.2.1
  */
 class TestRunAnalyticApiResult {
     /**

@@ -17,7 +17,7 @@ import AutoTestResultReasonsCountItemModel from './AutoTestResultReasonsCountIte
 /**
  * The AutoTestResultReasonsCountModel model module.
  * @module model/AutoTestResultReasonsCountModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class AutoTestResultReasonsCountModel {
     /**

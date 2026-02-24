@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **newVersionId** | **String** |  | 
 **workItemChangedFields** | [**WorkItemChangedFieldsViewModel**](WorkItemChangedFieldsViewModel.md) |  | 
 **createdById** | **String** |  | 
-**createdDate** | **Date** |  | [optional] 
+**createdDate** | **Date** |  | 
+**modifiedById** | **String** |  | [optional] 
+**modifiedDate** | **Date** |  | [optional] 
 
 

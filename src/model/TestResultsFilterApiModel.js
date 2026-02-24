@@ -20,7 +20,7 @@ import TestResultOutcome from './TestResultOutcome';
 /**
  * The TestResultsFilterApiModel model module.
  * @module model/TestResultsFilterApiModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class TestResultsFilterApiModel {
     /**
@@ -71,6 +71,12 @@ class TestResultsFilterApiModel {
             }
             if (data.hasOwnProperty('autoTestGlobalIds')) {
                 obj['autoTestGlobalIds'] = ApiClient.convertToType(data['autoTestGlobalIds'], ['Number']);
+            }
+            if (data.hasOwnProperty('autoTestTags')) {
+                obj['autoTestTags'] = ApiClient.convertToType(data['autoTestTags'], ['String']);
+            }
+            if (data.hasOwnProperty('excludeAutoTestTags')) {
+                obj['excludeAutoTestTags'] = ApiClient.convertToType(data['excludeAutoTestTags'], ['String']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -133,6 +139,14 @@ class TestResultsFilterApiModel {
         // ensure the json data is an array
         if (!Array.isArray(data['autoTestGlobalIds'])) {
             throw new Error("Expected the field `autoTestGlobalIds` to be an array in the JSON data but got " + data['autoTestGlobalIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['autoTestTags'])) {
+            throw new Error("Expected the field `autoTestTags` to be an array in the JSON data but got " + data['autoTestTags']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['excludeAutoTestTags'])) {
+            throw new Error("Expected the field `excludeAutoTestTags` to be an array in the JSON data but got " + data['excludeAutoTestTags']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -216,6 +230,18 @@ TestResultsFilterApiModel.prototype['className'] = undefined;
  * @member {Array.<Number>} autoTestGlobalIds
  */
 TestResultsFilterApiModel.prototype['autoTestGlobalIds'] = undefined;
+
+/**
+ * Specifies autotest tags to include in the search.
+ * @member {Array.<String>} autoTestTags
+ */
+TestResultsFilterApiModel.prototype['autoTestTags'] = undefined;
+
+/**
+ * Specifies autotest tags to exclude from the search.
+ * @member {Array.<String>} excludeAutoTestTags
+ */
+TestResultsFilterApiModel.prototype['excludeAutoTestTags'] = undefined;
 
 /**
  * Specifies an autotest name to search results for

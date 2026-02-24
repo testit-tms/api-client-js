@@ -19,7 +19,7 @@ import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 /**
  * The AutoTestFilterModel model module.
  * @module model/AutoTestFilterModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class AutoTestFilterModel {
     /**
@@ -113,6 +113,9 @@ class AutoTestFilterModel {
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
+            if (data.hasOwnProperty('excludeTags')) {
+                obj['excludeTags'] = ApiClient.convertToType(data['excludeTags'], ['String']);
+            }
         }
         return obj;
     }
@@ -182,6 +185,10 @@ class AutoTestFilterModel {
         // ensure the json data is an array
         if (!Array.isArray(data['tags'])) {
             throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['excludeTags'])) {
+            throw new Error("Expected the field `excludeTags` to be an array in the JSON data but got " + data['excludeTags']);
         }
 
         return true;
@@ -296,6 +303,11 @@ AutoTestFilterModel.prototype['lastTestResultConfigurationIds'] = undefined;
  * @member {Array.<String>} tags
  */
 AutoTestFilterModel.prototype['tags'] = undefined;
+
+/**
+ * @member {Array.<String>} excludeTags
+ */
+AutoTestFilterModel.prototype['excludeTags'] = undefined;
 
 
 

@@ -19,7 +19,7 @@ import DefectApiModel from '../model/DefectApiModel';
 import GetExternalFormApiResult from '../model/GetExternalFormApiResult';
 import ImageResizeType from '../model/ImageResizeType';
 import ProblemDetails from '../model/ProblemDetails';
-import RerunsModel from '../model/RerunsModel';
+import RerunsApiResult from '../model/RerunsApiResult';
 import TestResultResponse from '../model/TestResultResponse';
 import TestResultShortResponse from '../model/TestResultShortResponse';
 import TestResultUpdateV2Request from '../model/TestResultUpdateV2Request';
@@ -31,7 +31,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestResults service.
 * @module api/TestResultsApi
-* @version 7.2.0
+* @version 7.2.1
 */
 export default class TestResultsApi {
 
@@ -391,7 +391,7 @@ export default class TestResultsApi {
     /**
      * Get reruns
      * @param {String} id Test result unique ID
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RerunsModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RerunsApiResult} and HTTP response
      */
     apiV2TestResultsIdRerunsGetWithHttpInfo(id) {
       let postBody = null;
@@ -413,7 +413,7 @@ export default class TestResultsApi {
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = RerunsModel;
+      let returnType = RerunsApiResult;
       return this.apiClient.callApi(
         '/api/v2/testResults/{id}/reruns', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -424,7 +424,7 @@ export default class TestResultsApi {
     /**
      * Get reruns
      * @param {String} id Test result unique ID
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RerunsModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RerunsApiResult}
      */
     apiV2TestResultsIdRerunsGet(id) {
       return this.apiV2TestResultsIdRerunsGetWithHttpInfo(id)

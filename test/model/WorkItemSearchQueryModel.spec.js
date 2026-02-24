@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property links (base name: "links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new TestitApiClient.WorkItemSearchQueryModel();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new TestitApiClient.WorkItemSearchQueryModel();
@@ -188,6 +182,18 @@
 
     it('should have the property workItemVersionIds (base name: "workItemVersionIds")', function() {
       // uncomment below and update the code to test the property workItemVersionIds
+      //var instance = new TestitApiClient.WorkItemSearchQueryModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new TestitApiClient.WorkItemSearchQueryModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalMetadata (base name: "externalMetadata")', function() {
+      // uncomment below and update the code to test the property externalMetadata
       //var instance = new TestitApiClient.WorkItemSearchQueryModel();
       //expect(instance).to.be();
     });

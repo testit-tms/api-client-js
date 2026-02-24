@@ -13,16 +13,16 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateWorkItemCommentApiModel from '../model/CreateWorkItemCommentApiModel';
 import ProblemDetails from '../model/ProblemDetails';
+import UpdateWorkItemCommentApiModel from '../model/UpdateWorkItemCommentApiModel';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
-import WorkItemCommentModel from '../model/WorkItemCommentModel';
-import WorkItemCommentPostModel from '../model/WorkItemCommentPostModel';
-import WorkItemCommentPutModel from '../model/WorkItemCommentPutModel';
+import WorkItemCommentApiResult from '../model/WorkItemCommentApiResult';
 
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.2.0
+* @version 7.2.1
 */
 export default class WorkItemsCommentsApi {
 
@@ -91,12 +91,12 @@ export default class WorkItemsCommentsApi {
      * Create WorkItem comment
      *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
      * @param {Object} opts Optional parameters
-     * @param {module:model/WorkItemCommentPostModel} [workItemCommentPostModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentModel} and HTTP response
+     * @param {module:model/CreateWorkItemCommentApiModel} [createWorkItemCommentApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentApiResult} and HTTP response
      */
     apiV2WorkItemsCommentsPostWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['workItemCommentPostModel'];
+      let postBody = opts['createWorkItemCommentApiModel'];
 
       let pathParams = {
       };
@@ -110,7 +110,7 @@ export default class WorkItemsCommentsApi {
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = WorkItemCommentModel;
+      let returnType = WorkItemCommentApiResult;
       return this.apiClient.callApi(
         '/api/v2/workItems/comments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -122,8 +122,8 @@ export default class WorkItemsCommentsApi {
      * Create WorkItem comment
      *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
      * @param {Object} opts Optional parameters
-     * @param {module:model/WorkItemCommentPostModel} opts.workItemCommentPostModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemCommentModel}
+     * @param {module:model/CreateWorkItemCommentApiModel} opts.createWorkItemCommentApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemCommentApiResult}
      */
     apiV2WorkItemsCommentsPost(opts) {
       return this.apiV2WorkItemsCommentsPostWithHttpInfo(opts)
@@ -136,12 +136,12 @@ export default class WorkItemsCommentsApi {
     /**
      * Update work item comment
      * @param {Object} opts Optional parameters
-     * @param {module:model/WorkItemCommentPutModel} [workItemCommentPutModel] 
+     * @param {module:model/UpdateWorkItemCommentApiModel} [updateWorkItemCommentApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiV2WorkItemsCommentsPutWithHttpInfo(opts) {
       opts = opts || {};
-      let postBody = opts['workItemCommentPutModel'];
+      let postBody = opts['updateWorkItemCommentApiModel'];
 
       let pathParams = {
       };
@@ -166,7 +166,7 @@ export default class WorkItemsCommentsApi {
     /**
      * Update work item comment
      * @param {Object} opts Optional parameters
-     * @param {module:model/WorkItemCommentPutModel} opts.workItemCommentPutModel 
+     * @param {module:model/UpdateWorkItemCommentApiModel} opts.updateWorkItemCommentApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiV2WorkItemsCommentsPut(opts) {
@@ -226,7 +226,7 @@ export default class WorkItemsCommentsApi {
     /**
      * Get work item comments
      * @param {String} id Unique or global ID of the work item
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemCommentModel>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemCommentApiResult>} and HTTP response
      */
     apiV2WorkItemsIdCommentsGetWithHttpInfo(id) {
       let postBody = null;
@@ -248,7 +248,7 @@ export default class WorkItemsCommentsApi {
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [WorkItemCommentModel];
+      let returnType = [WorkItemCommentApiResult];
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}/comments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -259,7 +259,7 @@ export default class WorkItemsCommentsApi {
     /**
      * Get work item comments
      * @param {String} id Unique or global ID of the work item
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemCommentModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemCommentApiResult>}
      */
     apiV2WorkItemsIdCommentsGet(id) {
       return this.apiV2WorkItemsIdCommentsGetWithHttpInfo(id)

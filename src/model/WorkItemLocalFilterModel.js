@@ -16,6 +16,8 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import Int32RangeSelectorModel from './Int32RangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 import WorkItemEntityTypes from './WorkItemEntityTypes';
+import WorkItemExternalMetadataFilterModel from './WorkItemExternalMetadataFilterModel';
+import WorkItemLinkFilterModel from './WorkItemLinkFilterModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
@@ -23,7 +25,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemLocalFilterModel model module.
  * @module model/WorkItemLocalFilterModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WorkItemLocalFilterModel {
     /**
@@ -118,6 +120,12 @@ class WorkItemLocalFilterModel {
             if (data.hasOwnProperty('workItemVersionIds')) {
                 obj['workItemVersionIds'] = ApiClient.convertToType(data['workItemVersionIds'], ['String']);
             }
+            if (data.hasOwnProperty('links')) {
+                obj['links'] = ApiClient.convertToType(data['links'], WorkItemLinkFilterModel);
+            }
+            if (data.hasOwnProperty('externalMetadata')) {
+                obj['externalMetadata'] = ApiClient.convertToType(data['externalMetadata'], WorkItemExternalMetadataFilterModel);
+            }
         }
         return obj;
     }
@@ -199,6 +207,14 @@ class WorkItemLocalFilterModel {
         // ensure the json data is an array
         if (!Array.isArray(data['workItemVersionIds'])) {
             throw new Error("Expected the field `workItemVersionIds` to be an array in the JSON data but got " + data['workItemVersionIds']);
+        }
+        // validate the optional field `links`
+        if (data['links']) { // data not null
+          WorkItemLinkFilterModel.validateJSON(data['links']);
+        }
+        // validate the optional field `externalMetadata`
+        if (data['externalMetadata']) { // data not null
+          WorkItemExternalMetadataFilterModel.validateJSON(data['externalMetadata']);
         }
 
         return true;
@@ -334,6 +350,18 @@ WorkItemLocalFilterModel.prototype['autoTestIds'] = undefined;
  * @member {Array.<String>} workItemVersionIds
  */
 WorkItemLocalFilterModel.prototype['workItemVersionIds'] = undefined;
+
+/**
+ * Specifies a work item filter by its links
+ * @member {module:model/WorkItemLinkFilterModel} links
+ */
+WorkItemLocalFilterModel.prototype['links'] = undefined;
+
+/**
+ * Specifies work item filter by its external metadata
+ * @member {module:model/WorkItemExternalMetadataFilterModel} externalMetadata
+ */
+WorkItemLocalFilterModel.prototype['externalMetadata'] = undefined;
 
 
 

@@ -180,6 +180,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property excludeTags (base name: "excludeTags")', function() {
+      // uncomment below and update the code to test the property excludeTags
+      //var instance = new TestitApiClient.AutoTestFilterModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

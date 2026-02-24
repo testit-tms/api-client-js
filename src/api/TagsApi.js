@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Tags service.
 * @module api/TagsApi
-* @version 7.2.0
+* @version 7.2.1
 */
 export default class TagsApi {
 

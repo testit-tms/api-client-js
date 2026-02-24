@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **projectIds** | **[String]** | Collection of project identifiers | [optional] 
-**links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] 
 **name** | **String** | Name of work item | [optional] 
 **ids** | **[String]** | Specifies a work item unique IDs to search for | [optional] 
 **globalIds** | **[Number]** | Collection of global (integer) identifiers | [optional] 
@@ -27,5 +26,7 @@ Name | Type | Description | Notes
 **excludeTags** | **[String]** | Collection of tags to exclude | [optional] 
 **autoTestIds** | **[String]** | Collection of identifiers of linked autotests | [optional] 
 **workItemVersionIds** | **[String]** | Collection of identifiers work items versions. | [optional] 
+**links** | [**WorkItemLinkFilterModel**](WorkItemLinkFilterModel.md) | Specifies a work item filter by its links | [optional] 
+**externalMetadata** | [**WorkItemExternalMetadataFilterModel**](WorkItemExternalMetadataFilterModel.md) | Specifies work item filter by its external metadata | [optional] 
 
 

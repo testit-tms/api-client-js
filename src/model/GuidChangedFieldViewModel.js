@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GuidChangedFieldViewModel model module.
  * @module model/GuidChangedFieldViewModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class GuidChangedFieldViewModel {
     /**

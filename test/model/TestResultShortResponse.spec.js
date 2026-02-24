@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoTestTags (base name: "autoTestTags")', function() {
+      // uncomment below and update the code to test the property autoTestTags
+      //var instance = new TestitApiClient.TestResultShortResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property testRunId (base name: "testRunId")', function() {
       // uncomment below and update the code to test the property testRunId
       //var instance = new TestitApiClient.TestResultShortResponse();

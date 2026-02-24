@@ -374,7 +374,7 @@ null (empty response body)
 
 ## apiV2TestResultsIdRerunsGet
 
-> RerunsModel apiV2TestResultsIdRerunsGet(id)
+> RerunsApiResult apiV2TestResultsIdRerunsGet(id)
 
 Get reruns
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RerunsModel**](RerunsModel.md)
+[**RerunsApiResult**](RerunsApiResult.md)
 
 ### Authorization
 
