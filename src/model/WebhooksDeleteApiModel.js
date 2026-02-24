@@ -18,7 +18,7 @@ import WebhooksExtractionApiModel from './WebhooksExtractionApiModel';
 /**
  * The WebhooksDeleteApiModel model module.
  * @module model/WebhooksDeleteApiModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WebhooksDeleteApiModel {
     /**

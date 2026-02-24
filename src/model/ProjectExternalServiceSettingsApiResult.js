@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ProjectExternalServiceSettingsApiResult model module.
  * @module model/ProjectExternalServiceSettingsApiResult
- * @version 7.2.0
+ * @version 7.2.1
  */
 class ProjectExternalServiceSettingsApiResult {
     /**

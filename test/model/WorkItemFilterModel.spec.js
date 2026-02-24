@@ -72,20 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property externalMetadata (base name: "externalMetadata")', function() {
-      // uncomment below and update the code to test the property externalMetadata
-      //var instance = new TestitApiClient.WorkItemFilterModel();
-      //expect(instance).to.be();
-    });
-
     it('should have the property projectIds (base name: "projectIds")', function() {
       // uncomment below and update the code to test the property projectIds
-      //var instance = new TestitApiClient.WorkItemFilterModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property links (base name: "links")', function() {
-      // uncomment below and update the code to test the property links
       //var instance = new TestitApiClient.WorkItemFilterModel();
       //expect(instance).to.be();
     });
@@ -212,6 +200,18 @@
 
     it('should have the property workItemVersionIds (base name: "workItemVersionIds")', function() {
       // uncomment below and update the code to test the property workItemVersionIds
+      //var instance = new TestitApiClient.WorkItemFilterModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new TestitApiClient.WorkItemFilterModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalMetadata (base name: "externalMetadata")', function() {
+      // uncomment below and update the code to test the property externalMetadata
       //var instance = new TestitApiClient.WorkItemFilterModel();
       //expect(instance).to.be();
     });

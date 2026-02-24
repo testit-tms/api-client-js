@@ -64,7 +64,7 @@ null (empty response body)
 
 ## apiV2WorkItemsCommentsPost
 
-> WorkItemCommentModel apiV2WorkItemsCommentsPost(opts)
+> WorkItemCommentApiResult apiV2WorkItemsCommentsPost(opts)
 
 Create WorkItem comment
 
@@ -83,7 +83,7 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let opts = {
-  'workItemCommentPostModel': new TestitApiClient.WorkItemCommentPostModel() // WorkItemCommentPostModel | 
+  'createWorkItemCommentApiModel': new TestitApiClient.CreateWorkItemCommentApiModel() // CreateWorkItemCommentApiModel | 
 };
 apiInstance.apiV2WorkItemsCommentsPost(opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
@@ -98,11 +98,11 @@ apiInstance.apiV2WorkItemsCommentsPost(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workItemCommentPostModel** | [**WorkItemCommentPostModel**](WorkItemCommentPostModel.md)|  | [optional] 
+ **createWorkItemCommentApiModel** | [**CreateWorkItemCommentApiModel**](CreateWorkItemCommentApiModel.md)|  | [optional] 
 
 ### Return type
 
-[**WorkItemCommentModel**](WorkItemCommentModel.md)
+[**WorkItemCommentApiResult**](WorkItemCommentApiResult.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Bearer or PrivateToken.apiKey = 'YOUR API KEY';
 
 let apiInstance = new TestitApiClient.WorkItemsCommentsApi();
 let opts = {
-  'workItemCommentPutModel': new TestitApiClient.WorkItemCommentPutModel() // WorkItemCommentPutModel | 
+  'updateWorkItemCommentApiModel': new TestitApiClient.UpdateWorkItemCommentApiModel() // UpdateWorkItemCommentApiModel | 
 };
 apiInstance.apiV2WorkItemsCommentsPut(opts).then(() => {
   console.log('API called successfully.');
@@ -148,7 +148,7 @@ apiInstance.apiV2WorkItemsCommentsPut(opts).then(() => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **workItemCommentPutModel** | [**WorkItemCommentPutModel**](WorkItemCommentPutModel.md)|  | [optional] 
+ **updateWorkItemCommentApiModel** | [**UpdateWorkItemCommentApiModel**](UpdateWorkItemCommentApiModel.md)|  | [optional] 
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ## apiV2WorkItemsIdCommentsGet
 
-> [WorkItemCommentModel] apiV2WorkItemsIdCommentsGet(id)
+> [WorkItemCommentApiResult] apiV2WorkItemsIdCommentsGet(id)
 
 Get work item comments
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[WorkItemCommentModel]**](WorkItemCommentModel.md)
+[**[WorkItemCommentApiResult]**](WorkItemCommentApiResult.md)
 
 ### Authorization
 

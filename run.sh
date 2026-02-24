@@ -1,9 +1,11 @@
 # Using 7.18.0
 # npm install @openapitools/openapi-generator-cli -g
 
-FILE_NAME="cloud_swagger.json"
-NEW_VERSION="7.2.0"
+FILE_NAME="cloud-swagger.json"
+NEW_VERSION="7.2.1"
 GENERATOR="openapi-generator-cli-7.18.0.jar"
+INDEX_DTS_PATH=index.d.ts
+
 
 if [ ! -f ".swagger/$FILE_NAME" ]; then
     echo "Ошибка: .swagger/$FILE_NAME не найден!"
@@ -24,6 +26,9 @@ sed -i "s/\projectVersion: \".*\"/\projectVersion: \"$NEW_VERSION\"/" genConfig.
 echo "Очистка предыдущей генерации..."
 rm -rf new
 rm -rf node_modules
+rm -rf test
+rm -rf src
+rm -rf $INDEX_DTS_PATH
 
 # Генерация JS API клиента
 echo "Генерация JS API клиента..."
@@ -50,11 +55,12 @@ sed -i "s/\"version\": \".*\"/\"version\": \"$NEW_VERSION\"/" package.json
 cp -r new/README.MD README-NEW.MD
 ./update-docs.sh
 
+# stable on 5.9.3
 npm i -g typescript
+# stable on 1.3.13
 npm i -g npm-dts
 npm-dts generate -L debug
 
-INDEX_DTS_PATH=index.d.ts
 
 # Постобработка index.d.ts
 if [ -f "$INDEX_DTS_PATH" ]; then

@@ -28,7 +28,7 @@ import WorkflowShortApiResultReply from '../model/WorkflowShortApiResultReply';
 /**
 * Workflows service.
 * @module api/WorkflowsApi
-* @version 7.2.0
+* @version 7.2.1
 */
 export default class WorkflowsApi {
 
@@ -112,7 +112,7 @@ export default class WorkflowsApi {
 
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['application/json'];
       let returnType = WorkflowApiResult;
       return this.apiClient.callApi(
         '/api/v2/workflows/{id}', 'GET',
@@ -159,7 +159,7 @@ export default class WorkflowsApi {
       };
 
       let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
@@ -209,8 +209,8 @@ export default class WorkflowsApi {
       };
 
       let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
       let returnType = WorkflowProjectApiResultReply;
       return this.apiClient.callApi(
         '/api/v2/workflows/{id}/projects/search', 'POST',
@@ -258,7 +258,7 @@ export default class WorkflowsApi {
       };
 
       let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
       return this.apiClient.callApi(
@@ -305,7 +305,7 @@ export default class WorkflowsApi {
 
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let accepts = ['application/json'];
       let returnType = WorkflowExistsByNameApiResult;
       return this.apiClient.callApi(
         '/api/v2/workflows/name/{name}/exists', 'GET',
@@ -345,8 +345,8 @@ export default class WorkflowsApi {
       };
 
       let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
       let returnType = WorkflowApiResult;
       return this.apiClient.callApi(
         '/api/v2/workflows', 'POST',
@@ -387,8 +387,8 @@ export default class WorkflowsApi {
       };
 
       let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
       let returnType = WorkflowShortApiResultReply;
       return this.apiClient.callApi(
         '/api/v2/workflows/search', 'POST',

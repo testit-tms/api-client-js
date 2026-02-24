@@ -180,6 +180,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new TestitApiClient.WorkItemLocalFilterModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalMetadata (base name: "externalMetadata")', function() {
+      // uncomment below and update the code to test the property externalMetadata
+      //var instance = new TestitApiClient.WorkItemLocalFilterModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

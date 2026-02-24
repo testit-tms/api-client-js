@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The TagsExtractionApiModel model module.
  * @module model/TagsExtractionApiModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class TagsExtractionApiModel {
     /**

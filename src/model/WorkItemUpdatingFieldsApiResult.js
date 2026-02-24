@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemUpdatingFieldsApiResult model module.
  * @module model/WorkItemUpdatingFieldsApiResult
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WorkItemUpdatingFieldsApiResult {
     /**

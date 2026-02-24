@@ -114,6 +114,7 @@ import CreateTestRunAndFillByConfigurationsApiModel from './model/CreateTestRunA
 import CreateTestRunAndFillByWorkItemsApiModel from './model/CreateTestRunAndFillByWorkItemsApiModel';
 import CreateTestStatusApiModel from './model/CreateTestStatusApiModel';
 import CreateWorkItemApiModel from './model/CreateWorkItemApiModel';
+import CreateWorkItemCommentApiModel from './model/CreateWorkItemCommentApiModel';
 import CreateWorkItemPreviewsApiModel from './model/CreateWorkItemPreviewsApiModel';
 import CreateWorkflowApiModel from './model/CreateWorkflowApiModel';
 import CustomAttributeApiResult from './model/CustomAttributeApiResult';
@@ -266,8 +267,7 @@ import RequestType from './model/RequestType';
 import RequestTypeApiModel from './model/RequestTypeApiModel';
 import RequestTypeModel from './model/RequestTypeModel';
 import RerunTestResultApiResult from './model/RerunTestResultApiResult';
-import RerunTestResultModel from './model/RerunTestResultModel';
-import RerunsModel from './model/RerunsModel';
+import RerunsApiResult from './model/RerunsApiResult';
 import SearchCustomAttributeTemplateGetModel from './model/SearchCustomAttributeTemplateGetModel';
 import SearchExternalIssuesApiModel from './model/SearchExternalIssuesApiModel';
 import SearchTestRunsApiModel from './model/SearchTestRunsApiModel';
@@ -436,11 +436,10 @@ import UpdateTagApiModel from './model/UpdateTagApiModel';
 import UpdateTestPlanApiModel from './model/UpdateTestPlanApiModel';
 import UpdateTestStatusApiModel from './model/UpdateTestStatusApiModel';
 import UpdateWorkItemApiModel from './model/UpdateWorkItemApiModel';
+import UpdateWorkItemCommentApiModel from './model/UpdateWorkItemCommentApiModel';
 import UpdateWorkflowApiModel from './model/UpdateWorkflowApiModel';
 import UserCustomNameValidationResponse from './model/UserCustomNameValidationResponse';
 import UserNameApiResult from './model/UserNameApiResult';
-import UserRankModel from './model/UserRankModel';
-import UserWithRankModel from './model/UserWithRankModel';
 import ValidationProblemDetails from './model/ValidationProblemDetails';
 import WebHookEventType from './model/WebHookEventType';
 import WebHookEventTypeModel from './model/WebHookEventTypeModel';
@@ -462,9 +461,7 @@ import WorkItemApiResult from './model/WorkItemApiResult';
 import WorkItemChangeModel from './model/WorkItemChangeModel';
 import WorkItemChangedAttributeViewModel from './model/WorkItemChangedAttributeViewModel';
 import WorkItemChangedFieldsViewModel from './model/WorkItemChangedFieldsViewModel';
-import WorkItemCommentModel from './model/WorkItemCommentModel';
-import WorkItemCommentPostModel from './model/WorkItemCommentPostModel';
-import WorkItemCommentPutModel from './model/WorkItemCommentPutModel';
+import WorkItemCommentApiResult from './model/WorkItemCommentApiResult';
 import WorkItemEntityTypeApiModel from './model/WorkItemEntityTypeApiModel';
 import WorkItemEntityTypes from './model/WorkItemEntityTypes';
 import WorkItemExternalMetadataFieldFilterApiModel from './model/WorkItemExternalMetadataFieldFilterApiModel';
@@ -587,7 +584,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.0
+* @version 7.2.1
 */
 export {
     /**
@@ -1201,6 +1198,12 @@ export {
      * @property {module:model/CreateWorkItemApiModel}
      */
     CreateWorkItemApiModel,
+
+    /**
+     * The CreateWorkItemCommentApiModel model constructor.
+     * @property {module:model/CreateWorkItemCommentApiModel}
+     */
+    CreateWorkItemCommentApiModel,
 
     /**
      * The CreateWorkItemPreviewsApiModel model constructor.
@@ -2115,16 +2118,10 @@ export {
     RerunTestResultApiResult,
 
     /**
-     * The RerunTestResultModel model constructor.
-     * @property {module:model/RerunTestResultModel}
+     * The RerunsApiResult model constructor.
+     * @property {module:model/RerunsApiResult}
      */
-    RerunTestResultModel,
-
-    /**
-     * The RerunsModel model constructor.
-     * @property {module:model/RerunsModel}
-     */
-    RerunsModel,
+    RerunsApiResult,
 
     /**
      * The SearchCustomAttributeTemplateGetModel model constructor.
@@ -3135,6 +3132,12 @@ export {
     UpdateWorkItemApiModel,
 
     /**
+     * The UpdateWorkItemCommentApiModel model constructor.
+     * @property {module:model/UpdateWorkItemCommentApiModel}
+     */
+    UpdateWorkItemCommentApiModel,
+
+    /**
      * The UpdateWorkflowApiModel model constructor.
      * @property {module:model/UpdateWorkflowApiModel}
      */
@@ -3151,18 +3154,6 @@ export {
      * @property {module:model/UserNameApiResult}
      */
     UserNameApiResult,
-
-    /**
-     * The UserRankModel model constructor.
-     * @property {module:model/UserRankModel}
-     */
-    UserRankModel,
-
-    /**
-     * The UserWithRankModel model constructor.
-     * @property {module:model/UserWithRankModel}
-     */
-    UserWithRankModel,
 
     /**
      * The ValidationProblemDetails model constructor.
@@ -3291,22 +3282,10 @@ export {
     WorkItemChangedFieldsViewModel,
 
     /**
-     * The WorkItemCommentModel model constructor.
-     * @property {module:model/WorkItemCommentModel}
+     * The WorkItemCommentApiResult model constructor.
+     * @property {module:model/WorkItemCommentApiResult}
      */
-    WorkItemCommentModel,
-
-    /**
-     * The WorkItemCommentPostModel model constructor.
-     * @property {module:model/WorkItemCommentPostModel}
-     */
-    WorkItemCommentPostModel,
-
-    /**
-     * The WorkItemCommentPutModel model constructor.
-     * @property {module:model/WorkItemCommentPutModel}
-     */
-    WorkItemCommentPutModel,
+    WorkItemCommentApiResult,
 
     /**
      * The WorkItemEntityTypeApiModel model constructor.

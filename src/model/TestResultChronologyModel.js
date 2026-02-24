@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestResultChronologyModel model module.
  * @module model/TestResultChronologyModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class TestResultChronologyModel {
     /**

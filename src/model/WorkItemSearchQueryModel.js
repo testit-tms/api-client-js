@@ -16,6 +16,7 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import Int32RangeSelectorModel from './Int32RangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 import WorkItemEntityTypes from './WorkItemEntityTypes';
+import WorkItemExternalMetadataFilterModel from './WorkItemExternalMetadataFilterModel';
 import WorkItemLinkFilterModel from './WorkItemLinkFilterModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
@@ -24,7 +25,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemSearchQueryModel model module.
  * @module model/WorkItemSearchQueryModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WorkItemSearchQueryModel {
     /**
@@ -57,9 +58,6 @@ class WorkItemSearchQueryModel {
 
             if (data.hasOwnProperty('projectIds')) {
                 obj['projectIds'] = ApiClient.convertToType(data['projectIds'], ['String']);
-            }
-            if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], WorkItemLinkFilterModel);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -124,6 +122,12 @@ class WorkItemSearchQueryModel {
             if (data.hasOwnProperty('workItemVersionIds')) {
                 obj['workItemVersionIds'] = ApiClient.convertToType(data['workItemVersionIds'], ['String']);
             }
+            if (data.hasOwnProperty('links')) {
+                obj['links'] = ApiClient.convertToType(data['links'], WorkItemLinkFilterModel);
+            }
+            if (data.hasOwnProperty('externalMetadata')) {
+                obj['externalMetadata'] = ApiClient.convertToType(data['externalMetadata'], WorkItemExternalMetadataFilterModel);
+            }
         }
         return obj;
     }
@@ -137,10 +141,6 @@ class WorkItemSearchQueryModel {
         // ensure the json data is an array
         if (!Array.isArray(data['projectIds'])) {
             throw new Error("Expected the field `projectIds` to be an array in the JSON data but got " + data['projectIds']);
-        }
-        // validate the optional field `links`
-        if (data['links']) { // data not null
-          WorkItemLinkFilterModel.validateJSON(data['links']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -214,6 +214,14 @@ class WorkItemSearchQueryModel {
         if (!Array.isArray(data['workItemVersionIds'])) {
             throw new Error("Expected the field `workItemVersionIds` to be an array in the JSON data but got " + data['workItemVersionIds']);
         }
+        // validate the optional field `links`
+        if (data['links']) { // data not null
+          WorkItemLinkFilterModel.validateJSON(data['links']);
+        }
+        // validate the optional field `externalMetadata`
+        if (data['externalMetadata']) { // data not null
+          WorkItemExternalMetadataFilterModel.validateJSON(data['externalMetadata']);
+        }
 
         return true;
     }
@@ -228,12 +236,6 @@ class WorkItemSearchQueryModel {
  * @member {Array.<String>} projectIds
  */
 WorkItemSearchQueryModel.prototype['projectIds'] = undefined;
-
-/**
- * Specifies a work item filter by its links
- * @member {module:model/WorkItemLinkFilterModel} links
- */
-WorkItemSearchQueryModel.prototype['links'] = undefined;
 
 /**
  * Name of work item
@@ -360,6 +362,18 @@ WorkItemSearchQueryModel.prototype['autoTestIds'] = undefined;
  * @member {Array.<String>} workItemVersionIds
  */
 WorkItemSearchQueryModel.prototype['workItemVersionIds'] = undefined;
+
+/**
+ * Specifies a work item filter by its links
+ * @member {module:model/WorkItemLinkFilterModel} links
+ */
+WorkItemSearchQueryModel.prototype['links'] = undefined;
+
+/**
+ * Specifies work item filter by its external metadata
+ * @member {module:model/WorkItemExternalMetadataFilterModel} externalMetadata
+ */
+WorkItemSearchQueryModel.prototype['externalMetadata'] = undefined;
 
 
 

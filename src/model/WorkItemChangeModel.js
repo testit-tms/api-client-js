@@ -17,7 +17,7 @@ import WorkItemChangedFieldsViewModel from './WorkItemChangedFieldsViewModel';
 /**
  * The WorkItemChangeModel model module.
  * @module model/WorkItemChangeModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WorkItemChangeModel {
     /**
@@ -29,10 +29,11 @@ class WorkItemChangeModel {
      * @param newVersionId {String} 
      * @param workItemChangedFields {module:model/WorkItemChangedFieldsViewModel} 
      * @param createdById {String} 
+     * @param createdDate {Date} 
      */
-    constructor(id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById) { 
+    constructor(id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById, createdDate) { 
         
-        WorkItemChangeModel.initialize(this, id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById);
+        WorkItemChangeModel.initialize(this, id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById, createdDate);
     }
 
     /**
@@ -40,13 +41,14 @@ class WorkItemChangeModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById) { 
+    static initialize(obj, id, workItemId, oldVersionId, newVersionId, workItemChangedFields, createdById, createdDate) { 
         obj['id'] = id;
         obj['workItemId'] = workItemId;
         obj['oldVersionId'] = oldVersionId;
         obj['newVersionId'] = newVersionId;
         obj['workItemChangedFields'] = workItemChangedFields;
         obj['createdById'] = createdById;
+        obj['createdDate'] = createdDate;
     }
 
     /**
@@ -80,6 +82,12 @@ class WorkItemChangeModel {
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], 'Date');
+            }
+            if (data.hasOwnProperty('modifiedById')) {
+                obj['modifiedById'] = ApiClient.convertToType(data['modifiedById'], 'String');
+            }
+            if (data.hasOwnProperty('modifiedDate')) {
+                obj['modifiedDate'] = ApiClient.convertToType(data['modifiedDate'], 'Date');
             }
         }
         return obj;
@@ -121,6 +129,10 @@ class WorkItemChangeModel {
         if (data['createdById'] && !(typeof data['createdById'] === 'string' || data['createdById'] instanceof String)) {
             throw new Error("Expected the field `createdById` to be a primitive type in the JSON string but got " + data['createdById']);
         }
+        // ensure the json data is a string
+        if (data['modifiedById'] && !(typeof data['modifiedById'] === 'string' || data['modifiedById'] instanceof String)) {
+            throw new Error("Expected the field `modifiedById` to be a primitive type in the JSON string but got " + data['modifiedById']);
+        }
 
         return true;
     }
@@ -128,7 +140,7 @@ class WorkItemChangeModel {
 
 }
 
-WorkItemChangeModel.RequiredProperties = ["id", "workItemId", "oldVersionId", "newVersionId", "workItemChangedFields", "createdById"];
+WorkItemChangeModel.RequiredProperties = ["id", "workItemId", "oldVersionId", "newVersionId", "workItemChangedFields", "createdById", "createdDate"];
 
 /**
  * @member {String} id
@@ -164,6 +176,16 @@ WorkItemChangeModel.prototype['createdById'] = undefined;
  * @member {Date} createdDate
  */
 WorkItemChangeModel.prototype['createdDate'] = undefined;
+
+/**
+ * @member {String} modifiedById
+ */
+WorkItemChangeModel.prototype['modifiedById'] = undefined;
+
+/**
+ * @member {Date} modifiedDate
+ */
+WorkItemChangeModel.prototype['modifiedDate'] = undefined;
 
 
 

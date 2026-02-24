@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property modifiedById (base name: "modifiedById")', function() {
+      // uncomment below and update the code to test the property modifiedById
+      //var instance = new TestitApiClient.WorkItemChangeModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property modifiedDate (base name: "modifiedDate")', function() {
+      // uncomment below and update the code to test the property modifiedDate
+      //var instance = new TestitApiClient.WorkItemChangeModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

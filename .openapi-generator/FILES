@@ -108,6 +108,7 @@ docs/CreateTestRunAndFillByConfigurationsApiModel.md
 docs/CreateTestRunAndFillByWorkItemsApiModel.md
 docs/CreateTestStatusApiModel.md
 docs/CreateWorkItemApiModel.md
+docs/CreateWorkItemCommentApiModel.md
 docs/CreateWorkItemPreviewsApiModel.md
 docs/CreateWorkflowApiModel.md
 docs/CustomAttributeApiResult.md
@@ -275,8 +276,7 @@ docs/RequestType.md
 docs/RequestTypeApiModel.md
 docs/RequestTypeModel.md
 docs/RerunTestResultApiResult.md
-docs/RerunTestResultModel.md
-docs/RerunsModel.md
+docs/RerunsApiResult.md
 docs/SearchApi.md
 docs/SearchCustomAttributeTemplateGetModel.md
 docs/SearchExternalIssuesApiModel.md
@@ -454,11 +454,10 @@ docs/UpdateTagApiModel.md
 docs/UpdateTestPlanApiModel.md
 docs/UpdateTestStatusApiModel.md
 docs/UpdateWorkItemApiModel.md
+docs/UpdateWorkItemCommentApiModel.md
 docs/UpdateWorkflowApiModel.md
 docs/UserCustomNameValidationResponse.md
 docs/UserNameApiResult.md
-docs/UserRankModel.md
-docs/UserWithRankModel.md
 docs/UsersApi.md
 docs/ValidationProblemDetails.md
 docs/WebHookEventType.md
@@ -483,9 +482,7 @@ docs/WorkItemApiResult.md
 docs/WorkItemChangeModel.md
 docs/WorkItemChangedAttributeViewModel.md
 docs/WorkItemChangedFieldsViewModel.md
-docs/WorkItemCommentModel.md
-docs/WorkItemCommentPostModel.md
-docs/WorkItemCommentPutModel.md
+docs/WorkItemCommentApiResult.md
 docs/WorkItemEntityTypeApiModel.md
 docs/WorkItemEntityTypes.md
 docs/WorkItemExternalMetadataFieldFilterApiModel.md
@@ -686,6 +683,7 @@ src/model/CreateTestRunAndFillByConfigurationsApiModel.js
 src/model/CreateTestRunAndFillByWorkItemsApiModel.js
 src/model/CreateTestStatusApiModel.js
 src/model/CreateWorkItemApiModel.js
+src/model/CreateWorkItemCommentApiModel.js
 src/model/CreateWorkItemPreviewsApiModel.js
 src/model/CreateWorkflowApiModel.js
 src/model/CustomAttributeApiResult.js
@@ -838,8 +836,7 @@ src/model/RequestType.js
 src/model/RequestTypeApiModel.js
 src/model/RequestTypeModel.js
 src/model/RerunTestResultApiResult.js
-src/model/RerunTestResultModel.js
-src/model/RerunsModel.js
+src/model/RerunsApiResult.js
 src/model/SearchCustomAttributeTemplateGetModel.js
 src/model/SearchExternalIssuesApiModel.js
 src/model/SearchTestRunsApiModel.js
@@ -1008,11 +1005,10 @@ src/model/UpdateTagApiModel.js
 src/model/UpdateTestPlanApiModel.js
 src/model/UpdateTestStatusApiModel.js
 src/model/UpdateWorkItemApiModel.js
+src/model/UpdateWorkItemCommentApiModel.js
 src/model/UpdateWorkflowApiModel.js
 src/model/UserCustomNameValidationResponse.js
 src/model/UserNameApiResult.js
-src/model/UserRankModel.js
-src/model/UserWithRankModel.js
 src/model/ValidationProblemDetails.js
 src/model/WebHookEventType.js
 src/model/WebHookEventTypeModel.js
@@ -1034,9 +1030,7 @@ src/model/WorkItemApiResult.js
 src/model/WorkItemChangeModel.js
 src/model/WorkItemChangedAttributeViewModel.js
 src/model/WorkItemChangedFieldsViewModel.js
-src/model/WorkItemCommentModel.js
-src/model/WorkItemCommentPostModel.js
-src/model/WorkItemCommentPutModel.js
+src/model/WorkItemCommentApiResult.js
 src/model/WorkItemEntityTypeApiModel.js
 src/model/WorkItemEntityTypes.js
 src/model/WorkItemExternalMetadataFieldFilterApiModel.js
@@ -1229,6 +1223,7 @@ test/model/CreateTestRunAndFillByConfigurationsApiModel.spec.js
 test/model/CreateTestRunAndFillByWorkItemsApiModel.spec.js
 test/model/CreateTestStatusApiModel.spec.js
 test/model/CreateWorkItemApiModel.spec.js
+test/model/CreateWorkItemCommentApiModel.spec.js
 test/model/CreateWorkItemPreviewsApiModel.spec.js
 test/model/CreateWorkflowApiModel.spec.js
 test/model/CustomAttributeApiResult.spec.js
@@ -1381,8 +1376,7 @@ test/model/RequestType.spec.js
 test/model/RequestTypeApiModel.spec.js
 test/model/RequestTypeModel.spec.js
 test/model/RerunTestResultApiResult.spec.js
-test/model/RerunTestResultModel.spec.js
-test/model/RerunsModel.spec.js
+test/model/RerunsApiResult.spec.js
 test/model/SearchCustomAttributeTemplateGetModel.spec.js
 test/model/SearchExternalIssuesApiModel.spec.js
 test/model/SearchTestRunsApiModel.spec.js
@@ -1551,11 +1545,10 @@ test/model/UpdateTagApiModel.spec.js
 test/model/UpdateTestPlanApiModel.spec.js
 test/model/UpdateTestStatusApiModel.spec.js
 test/model/UpdateWorkItemApiModel.spec.js
+test/model/UpdateWorkItemCommentApiModel.spec.js
 test/model/UpdateWorkflowApiModel.spec.js
 test/model/UserCustomNameValidationResponse.spec.js
 test/model/UserNameApiResult.spec.js
-test/model/UserRankModel.spec.js
-test/model/UserWithRankModel.spec.js
 test/model/ValidationProblemDetails.spec.js
 test/model/WebHookEventType.spec.js
 test/model/WebHookEventTypeModel.spec.js
@@ -1577,9 +1570,7 @@ test/model/WorkItemApiResult.spec.js
 test/model/WorkItemChangeModel.spec.js
 test/model/WorkItemChangedAttributeViewModel.spec.js
 test/model/WorkItemChangedFieldsViewModel.spec.js
-test/model/WorkItemCommentModel.spec.js
-test/model/WorkItemCommentPostModel.spec.js
-test/model/WorkItemCommentPutModel.spec.js
+test/model/WorkItemCommentApiResult.spec.js
 test/model/WorkItemEntityTypeApiModel.spec.js
 test/model/WorkItemEntityTypes.spec.js
 test/model/WorkItemExternalMetadataFieldFilterApiModel.spec.js

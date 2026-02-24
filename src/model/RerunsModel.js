@@ -17,7 +17,7 @@ import RerunTestResultModel from './RerunTestResultModel';
 /**
  * The RerunsModel model module.
  * @module model/RerunsModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class RerunsModel {
     /**

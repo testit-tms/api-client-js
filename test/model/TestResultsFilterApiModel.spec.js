@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoTestTags (base name: "autoTestTags")', function() {
+      // uncomment below and update the code to test the property autoTestTags
+      //var instance = new TestitApiClient.TestResultsFilterApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property excludeAutoTestTags (base name: "excludeAutoTestTags")', function() {
+      // uncomment below and update the code to test the property excludeAutoTestTags
+      //var instance = new TestitApiClient.TestResultsFilterApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new TestitApiClient.TestResultsFilterApiModel();

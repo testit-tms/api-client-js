@@ -18,7 +18,7 @@ import WorkItemPreviewApiModel from './WorkItemPreviewApiModel';
 /**
  * The CreateWorkItemPreviewsApiModel model module.
  * @module model/CreateWorkItemPreviewsApiModel
- * @version 7.2.0
+ * @version 7.2.1
  */
 class CreateWorkItemPreviewsApiModel {
     /**

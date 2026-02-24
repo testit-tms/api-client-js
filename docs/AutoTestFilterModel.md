@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **externalKey** | **String** |  | [optional] 
 **lastTestResultConfigurationIds** | **[String]** |  | [optional] 
 **tags** | **[String]** |  | [optional] 
+**excludeTags** | **[String]** |  | [optional] 
 
 

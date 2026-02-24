@@ -30,7 +30,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * TestSuites service.
 * @module api/TestSuitesApi
-* @version 7.2.0
+* @version 7.2.1
 */
 export default class TestSuitesApi {
 

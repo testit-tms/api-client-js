@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemLinkUrlApiResult model module.
  * @module model/WorkItemLinkUrlApiResult
- * @version 7.2.0
+ * @version 7.2.1
  */
 class WorkItemLinkUrlApiResult {
     /**

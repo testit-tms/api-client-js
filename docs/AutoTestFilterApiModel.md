@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **externalKey** | **String** | Specifies an autotest external key to search for | [optional] 
 **lastTestResultConfigurationIds** | **[String]** | Specifies an autotest configuration IDs of the last test result to search for | [optional] 
 **tags** | **[String]** | Specifies an autotest tags to search for | [optional] 
+**excludeTags** | **[String]** | Specifies an autotest tags to exclude | [optional] 
 
 
