@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Search service.
 * @module api/SearchApi
-* @version 7.2.2
+* @version 7.2.3
 */
 export default class SearchApi {
 

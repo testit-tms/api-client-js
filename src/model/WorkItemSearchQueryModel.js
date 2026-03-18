@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
-import Int32RangeSelectorModel from './Int32RangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 import WorkItemEntityTypes from './WorkItemEntityTypes';
 import WorkItemExternalMetadataFilterModel from './WorkItemExternalMetadataFilterModel';
@@ -25,7 +24,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemSearchQueryModel model module.
  * @module model/WorkItemSearchQueryModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class WorkItemSearchQueryModel {
     /**
@@ -102,7 +101,7 @@ class WorkItemSearchQueryModel {
                 obj['modifiedDate'] = ApiClient.convertToType(data['modifiedDate'], DateTimeRangeSelectorModel);
             }
             if (data.hasOwnProperty('duration')) {
-                obj['duration'] = ApiClient.convertToType(data['duration'], Int32RangeSelectorModel);
+                obj['duration'] = ApiClient.convertToType(data['duration'], Int64RangeSelectorModel);
             }
             if (data.hasOwnProperty('medianDuration')) {
                 obj['medianDuration'] = ApiClient.convertToType(data['medianDuration'], Int64RangeSelectorModel);
@@ -192,7 +191,7 @@ class WorkItemSearchQueryModel {
         }
         // validate the optional field `duration`
         if (data['duration']) { // data not null
-          Int32RangeSelectorModel.validateJSON(data['duration']);
+          Int64RangeSelectorModel.validateJSON(data['duration']);
         }
         // validate the optional field `medianDuration`
         if (data['medianDuration']) { // data not null
@@ -323,7 +322,7 @@ WorkItemSearchQueryModel.prototype['modifiedDate'] = undefined;
 
 /**
  * Specifies a work item duration range to search for
- * @member {module:model/Int32RangeSelectorModel} duration
+ * @member {module:model/Int64RangeSelectorModel} duration
  */
 WorkItemSearchQueryModel.prototype['duration'] = undefined;
 

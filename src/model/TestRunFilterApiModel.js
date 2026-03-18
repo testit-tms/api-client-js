@@ -21,7 +21,7 @@ import TestRunState from './TestRunState';
 /**
  * The TestRunFilterApiModel model module.
  * @module model/TestRunFilterApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestRunFilterApiModel {
     /**

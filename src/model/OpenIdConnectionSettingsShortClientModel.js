@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OpenIdConnectionSettingsShortClientModel model module.
  * @module model/OpenIdConnectionSettingsShortClientModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class OpenIdConnectionSettingsShortClientModel {
     /**

@@ -18,7 +18,7 @@ import IFilter from './IFilter';
 /**
  * The CollectionFilter model module.
  * @module model/CollectionFilter
- * @version 7.2.2
+ * @version 7.2.3
  */
 class CollectionFilter {
     /**

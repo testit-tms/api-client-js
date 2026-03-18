@@ -16,21 +16,19 @@ import ApiClient from '../ApiClient';
 /**
  * The GenerateWorkItemPreviewsApiModel model module.
  * @module model/GenerateWorkItemPreviewsApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class GenerateWorkItemPreviewsApiModel {
     /**
      * Constructs a new <code>GenerateWorkItemPreviewsApiModel</code>.
      * @alias module:model/GenerateWorkItemPreviewsApiModel
-     * @param externalServiceId {String} 
-     * @param taskKey {String} 
-     * @param sectionId {String} 
-     * @param temperature {Number} 
-     * @param previewLimit {Number} 
+     * @param externalServiceId {String} The ID of the external AI service to be used for generation.
+     * @param temperature {Number} Controls randomness of the AI model output.
+     * @param previewLimit {Number} Number of work item previews to generate.
      */
-    constructor(externalServiceId, taskKey, sectionId, temperature, previewLimit) { 
+    constructor(externalServiceId, temperature, previewLimit) { 
         
-        GenerateWorkItemPreviewsApiModel.initialize(this, externalServiceId, taskKey, sectionId, temperature, previewLimit);
+        GenerateWorkItemPreviewsApiModel.initialize(this, externalServiceId, temperature, previewLimit);
     }
 
     /**
@@ -38,10 +36,8 @@ class GenerateWorkItemPreviewsApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, externalServiceId, taskKey, sectionId, temperature, previewLimit) { 
+    static initialize(obj, externalServiceId, temperature, previewLimit) { 
         obj['externalServiceId'] = externalServiceId;
-        obj['taskKey'] = taskKey;
-        obj['sectionId'] = sectionId;
         obj['temperature'] = temperature;
         obj['previewLimit'] = previewLimit;
     }
@@ -63,8 +59,11 @@ class GenerateWorkItemPreviewsApiModel {
             if (data.hasOwnProperty('taskKey')) {
                 obj['taskKey'] = ApiClient.convertToType(data['taskKey'], 'String');
             }
-            if (data.hasOwnProperty('sectionId')) {
-                obj['sectionId'] = ApiClient.convertToType(data['sectionId'], 'String');
+            if (data.hasOwnProperty('issueKey')) {
+                obj['issueKey'] = ApiClient.convertToType(data['issueKey'], 'String');
+            }
+            if (data.hasOwnProperty('userContext')) {
+                obj['userContext'] = ApiClient.convertToType(data['userContext'], 'String');
             }
             if (data.hasOwnProperty('temperature')) {
                 obj['temperature'] = ApiClient.convertToType(data['temperature'], 'Number');
@@ -97,8 +96,12 @@ class GenerateWorkItemPreviewsApiModel {
             throw new Error("Expected the field `taskKey` to be a primitive type in the JSON string but got " + data['taskKey']);
         }
         // ensure the json data is a string
-        if (data['sectionId'] && !(typeof data['sectionId'] === 'string' || data['sectionId'] instanceof String)) {
-            throw new Error("Expected the field `sectionId` to be a primitive type in the JSON string but got " + data['sectionId']);
+        if (data['issueKey'] && !(typeof data['issueKey'] === 'string' || data['issueKey'] instanceof String)) {
+            throw new Error("Expected the field `issueKey` to be a primitive type in the JSON string but got " + data['issueKey']);
+        }
+        // ensure the json data is a string
+        if (data['userContext'] && !(typeof data['userContext'] === 'string' || data['userContext'] instanceof String)) {
+            throw new Error("Expected the field `userContext` to be a primitive type in the JSON string but got " + data['userContext']);
         }
 
         return true;
@@ -107,29 +110,40 @@ class GenerateWorkItemPreviewsApiModel {
 
 }
 
-GenerateWorkItemPreviewsApiModel.RequiredProperties = ["externalServiceId", "taskKey", "sectionId", "temperature", "previewLimit"];
+GenerateWorkItemPreviewsApiModel.RequiredProperties = ["externalServiceId", "temperature", "previewLimit"];
 
 /**
+ * The ID of the external AI service to be used for generation.
  * @member {String} externalServiceId
  */
 GenerateWorkItemPreviewsApiModel.prototype['externalServiceId'] = undefined;
 
 /**
+ * The key of the issue in an issue tracker (e.g., JIRA-123).
  * @member {String} taskKey
  */
 GenerateWorkItemPreviewsApiModel.prototype['taskKey'] = undefined;
 
 /**
- * @member {String} sectionId
+ * The key of the issue in an issue tracker (e.g., JIRA-123).
+ * @member {String} issueKey
  */
-GenerateWorkItemPreviewsApiModel.prototype['sectionId'] = undefined;
+GenerateWorkItemPreviewsApiModel.prototype['issueKey'] = undefined;
 
 /**
+ * Additional user context or description of the issue if no issue key is provided.
+ * @member {String} userContext
+ */
+GenerateWorkItemPreviewsApiModel.prototype['userContext'] = undefined;
+
+/**
+ * Controls randomness of the AI model output.
  * @member {Number} temperature
  */
 GenerateWorkItemPreviewsApiModel.prototype['temperature'] = undefined;
 
 /**
+ * Number of work item previews to generate.
  * @member {Number} previewLimit
  */
 GenerateWorkItemPreviewsApiModel.prototype['previewLimit'] = undefined;

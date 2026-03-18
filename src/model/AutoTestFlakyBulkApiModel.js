@@ -17,7 +17,7 @@ import AutoTestSelectApiModel from './AutoTestSelectApiModel';
 /**
  * The AutoTestFlakyBulkApiModel model module.
  * @module model/AutoTestFlakyBulkApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class AutoTestFlakyBulkApiModel {
     /**

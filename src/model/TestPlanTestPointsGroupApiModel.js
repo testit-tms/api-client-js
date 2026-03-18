@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanTestPointsGroupApiModel model module.
  * @module model/TestPlanTestPointsGroupApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestPlanTestPointsGroupApiModel {
     /**

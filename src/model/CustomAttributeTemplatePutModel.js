@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeTemplatePutModel model module.
  * @module model/CustomAttributeTemplatePutModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class CustomAttributeTemplatePutModel {
     /**

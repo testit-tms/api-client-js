@@ -52,8 +52,6 @@ import AutoTestProjectSettingsApiResult from './model/AutoTestProjectSettingsApi
 import AutoTestResultHistoryApiResult from './model/AutoTestResultHistoryApiResult';
 import AutoTestResultHistorySelectApiModel from './model/AutoTestResultHistorySelectApiModel';
 import AutoTestResultReasonShort from './model/AutoTestResultReasonShort';
-import AutoTestResultReasonsCountItemModel from './model/AutoTestResultReasonsCountItemModel';
-import AutoTestResultReasonsCountModel from './model/AutoTestResultReasonsCountModel';
 import AutoTestResultsForTestRunModel from './model/AutoTestResultsForTestRunModel';
 import AutoTestSearchApiModel from './model/AutoTestSearchApiModel';
 import AutoTestSearchIncludeApiModel from './model/AutoTestSearchIncludeApiModel';
@@ -210,7 +208,6 @@ import LinkCreateApiModel from './model/LinkCreateApiModel';
 import LinkModel from './model/LinkModel';
 import LinkPostModel from './model/LinkPostModel';
 import LinkPutModel from './model/LinkPutModel';
-import LinkShort from './model/LinkShort';
 import LinkShortApiResult from './model/LinkShortApiResult';
 import LinkShortModel from './model/LinkShortModel';
 import LinkType from './model/LinkType';
@@ -374,6 +371,7 @@ import TestResultChangeViewModelChangedFieldViewModel from './model/TestResultCh
 import TestResultChronologyModel from './model/TestResultChronologyModel';
 import TestResultFailureClassApiResult from './model/TestResultFailureClassApiResult';
 import TestResultHistoryReportApiResult from './model/TestResultHistoryReportApiResult';
+import TestResultLinkApiResult from './model/TestResultLinkApiResult';
 import TestResultOutcome from './model/TestResultOutcome';
 import TestResultResponse from './model/TestResultResponse';
 import TestResultShortApiResult from './model/TestResultShortApiResult';
@@ -588,7 +586,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.2
+* @version 7.2.3
 */
 export {
     /**
@@ -830,18 +828,6 @@ export {
      * @property {module:model/AutoTestResultReasonShort}
      */
     AutoTestResultReasonShort,
-
-    /**
-     * The AutoTestResultReasonsCountItemModel model constructor.
-     * @property {module:model/AutoTestResultReasonsCountItemModel}
-     */
-    AutoTestResultReasonsCountItemModel,
-
-    /**
-     * The AutoTestResultReasonsCountModel model constructor.
-     * @property {module:model/AutoTestResultReasonsCountModel}
-     */
-    AutoTestResultReasonsCountModel,
 
     /**
      * The AutoTestResultsForTestRunModel model constructor.
@@ -1778,12 +1764,6 @@ export {
      * @property {module:model/LinkPutModel}
      */
     LinkPutModel,
-
-    /**
-     * The LinkShort model constructor.
-     * @property {module:model/LinkShort}
-     */
-    LinkShort,
 
     /**
      * The LinkShortApiResult model constructor.
@@ -2762,6 +2742,12 @@ export {
      * @property {module:model/TestResultHistoryReportApiResult}
      */
     TestResultHistoryReportApiResult,
+
+    /**
+     * The TestResultLinkApiResult model constructor.
+     * @property {module:model/TestResultLinkApiResult}
+     */
+    TestResultLinkApiResult,
 
     /**
      * The TestResultOutcome model constructor.

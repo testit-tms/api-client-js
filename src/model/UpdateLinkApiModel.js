@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The UpdateLinkApiModel model module.
  * @module model/UpdateLinkApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class UpdateLinkApiModel {
     /**

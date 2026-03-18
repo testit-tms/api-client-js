@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestStepModel model module.
  * @module model/AutoTestStepModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class AutoTestStepModel {
     /**

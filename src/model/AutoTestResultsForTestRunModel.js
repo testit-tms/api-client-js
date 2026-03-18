@@ -17,11 +17,12 @@ import AttachmentPutModelAutoTestStepResultsModel from './AttachmentPutModelAuto
 import AvailableTestResultOutcome from './AvailableTestResultOutcome';
 import FailureCategoryModel from './FailureCategoryModel';
 import LinkPostModel from './LinkPostModel';
+import TestStatusType from './TestStatusType';
 
 /**
  * The AutoTestResultsForTestRunModel model module.
  * @module model/AutoTestResultsForTestRunModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class AutoTestResultsForTestRunModel {
     /**
@@ -73,6 +74,9 @@ class AutoTestResultsForTestRunModel {
             }
             if (data.hasOwnProperty('statusCode')) {
                 obj['statusCode'] = ApiClient.convertToType(data['statusCode'], 'String');
+            }
+            if (data.hasOwnProperty('statusType')) {
+                obj['statusType'] = ApiClient.convertToType(data['statusType'], TestStatusType);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -237,10 +241,16 @@ AutoTestResultsForTestRunModel.prototype['autoTestExternalId'] = undefined;
 AutoTestResultsForTestRunModel.prototype['outcome'] = undefined;
 
 /**
- * Specifies the result of the autotest execution.
+ * Specifies code of result status of the autotest execution.
  * @member {String} statusCode
  */
 AutoTestResultsForTestRunModel.prototype['statusCode'] = undefined;
+
+/**
+ * Specifies type of result status of the autotest execution.
+ * @member {module:model/TestStatusType} statusType
+ */
+AutoTestResultsForTestRunModel.prototype['statusType'] = undefined;
 
 /**
  * A comment for the result.

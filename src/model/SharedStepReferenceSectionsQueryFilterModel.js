@@ -17,7 +17,7 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 /**
  * The SharedStepReferenceSectionsQueryFilterModel model module.
  * @module model/SharedStepReferenceSectionsQueryFilterModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class SharedStepReferenceSectionsQueryFilterModel {
     /**

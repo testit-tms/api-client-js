@@ -18,11 +18,12 @@ import Link from './Link';
 import StepResultApiModel from './StepResultApiModel';
 import TestResultOutcome from './TestResultOutcome';
 import TestResultStepCommentUpdateRequest from './TestResultStepCommentUpdateRequest';
+import TestStatusType from './TestStatusType';
 
 /**
  * The TestResultUpdateV2Request model module.
  * @module model/TestResultUpdateV2Request
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestResultUpdateV2Request {
     /**
@@ -61,6 +62,9 @@ class TestResultUpdateV2Request {
             }
             if (data.hasOwnProperty('statusCode')) {
                 obj['statusCode'] = ApiClient.convertToType(data['statusCode'], 'String');
+            }
+            if (data.hasOwnProperty('statusType')) {
+                obj['statusType'] = ApiClient.convertToType(data['statusType'], TestStatusType);
             }
             if (data.hasOwnProperty('comment')) {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
@@ -208,6 +212,11 @@ TestResultUpdateV2Request.prototype['outcome'] = undefined;
  * @member {String} statusCode
  */
 TestResultUpdateV2Request.prototype['statusCode'] = undefined;
+
+/**
+ * @member {module:model/TestStatusType} statusType
+ */
+TestResultUpdateV2Request.prototype['statusType'] = undefined;
 
 /**
  * @member {String} comment

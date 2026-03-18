@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeTestPlanProjectRelationPutModel model module.
  * @module model/CustomAttributeTestPlanProjectRelationPutModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class CustomAttributeTestPlanProjectRelationPutModel {
     /**

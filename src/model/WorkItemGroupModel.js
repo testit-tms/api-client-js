@@ -17,7 +17,7 @@ import WorkItemShortModel from './WorkItemShortModel';
 /**
  * The WorkItemGroupModel model module.
  * @module model/WorkItemGroupModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class WorkItemGroupModel {
     /**

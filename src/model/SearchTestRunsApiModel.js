@@ -18,7 +18,7 @@ import TestRunState from './TestRunState';
 /**
  * The SearchTestRunsApiModel model module.
  * @module model/SearchTestRunsApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class SearchTestRunsApiModel {
     /**

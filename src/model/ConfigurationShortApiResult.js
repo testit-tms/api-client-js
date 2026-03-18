@@ -16,14 +16,14 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationShortApiResult model module.
  * @module model/ConfigurationShortApiResult
- * @version 7.2.2
+ * @version 7.2.3
  */
 class ConfigurationShortApiResult {
     /**
      * Constructs a new <code>ConfigurationShortApiResult</code>.
      * @alias module:model/ConfigurationShortApiResult
-     * @param id {String} 
-     * @param name {String} 
+     * @param id {String} Identifier of the configuration.
+     * @param name {String} Name of the configuration.
      */
     constructor(id, name) { 
         
@@ -91,11 +91,13 @@ class ConfigurationShortApiResult {
 ConfigurationShortApiResult.RequiredProperties = ["id", "name"];
 
 /**
+ * Identifier of the configuration.
  * @member {String} id
  */
 ConfigurationShortApiResult.prototype['id'] = undefined;
 
 /**
+ * Name of the configuration.
  * @member {String} name
  */
 ConfigurationShortApiResult.prototype['name'] = undefined;

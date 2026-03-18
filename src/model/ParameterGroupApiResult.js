@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterGroupApiResult model module.
  * @module model/ParameterGroupApiResult
- * @version 7.2.2
+ * @version 7.2.3
  */
 class ParameterGroupApiResult {
     /**

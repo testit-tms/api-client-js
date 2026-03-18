@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateStepApiModel model module.
  * @module model/UpdateStepApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class UpdateStepApiModel {
     /**

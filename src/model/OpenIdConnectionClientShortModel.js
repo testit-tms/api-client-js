@@ -17,7 +17,7 @@ import OpenIdConnectionSettingsShortClientModel from './OpenIdConnectionSettings
 /**
  * The OpenIdConnectionClientShortModel model module.
  * @module model/OpenIdConnectionClientShortModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class OpenIdConnectionClientShortModel {
     /**

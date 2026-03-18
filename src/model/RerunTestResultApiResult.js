@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import TestStatusApiResult from './TestStatusApiResult';
+import TestStatusShortApiResult from './TestStatusShortApiResult';
 
 /**
  * The RerunTestResultApiResult model module.
  * @module model/RerunTestResultApiResult
- * @version 7.2.2
+ * @version 7.2.3
  */
 class RerunTestResultApiResult {
     /**
      * Constructs a new <code>RerunTestResultApiResult</code>.
      * @alias module:model/RerunTestResultApiResult
-     * @param id {String} 
-     * @param outcome {String} 
-     * @param status {module:model/TestStatusApiResult} 
-     * @param runNumber {Number} 
+     * @param id {String} Identifier of the rerun result.
+     * @param outcome {String} Status of the autotest run.
+     * @param status {module:model/TestStatusShortApiResult} Status of the autotest run.
+     * @param runNumber {Number} Number of the run (e.g., 1 for the first attempt).
      */
     constructor(id, outcome, status, runNumber) { 
         
@@ -63,7 +63,7 @@ class RerunTestResultApiResult {
                 obj['outcome'] = ApiClient.convertToType(data['outcome'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], TestStatusApiResult);
+                obj['status'] = ApiClient.convertToType(data['status'], TestStatusShortApiResult);
             }
             if (data.hasOwnProperty('runNumber')) {
                 obj['runNumber'] = ApiClient.convertToType(data['runNumber'], 'Number');
@@ -94,7 +94,7 @@ class RerunTestResultApiResult {
         }
         // validate the optional field `status`
         if (data['status']) { // data not null
-          TestStatusApiResult.validateJSON(data['status']);
+          TestStatusShortApiResult.validateJSON(data['status']);
         }
 
         return true;
@@ -106,21 +106,25 @@ class RerunTestResultApiResult {
 RerunTestResultApiResult.RequiredProperties = ["id", "outcome", "status", "runNumber"];
 
 /**
+ * Identifier of the rerun result.
  * @member {String} id
  */
 RerunTestResultApiResult.prototype['id'] = undefined;
 
 /**
+ * Status of the autotest run.
  * @member {String} outcome
  */
 RerunTestResultApiResult.prototype['outcome'] = undefined;
 
 /**
- * @member {module:model/TestStatusApiResult} status
+ * Status of the autotest run.
+ * @member {module:model/TestStatusShortApiResult} status
  */
 RerunTestResultApiResult.prototype['status'] = undefined;
 
 /**
+ * Number of the run (e.g., 1 for the first attempt).
  * @member {Number} runNumber
  */
 RerunTestResultApiResult.prototype['runNumber'] = undefined;

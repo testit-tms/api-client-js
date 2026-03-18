@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemChangedAttributeViewModel model module.
  * @module model/WorkItemChangedAttributeViewModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class WorkItemChangedAttributeViewModel {
     /**

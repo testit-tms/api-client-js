@@ -17,20 +17,20 @@ import TestStatusApiType from './TestStatusApiType';
 /**
  * The TestStatusShortApiResult model module.
  * @module model/TestStatusShortApiResult
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestStatusShortApiResult {
     /**
      * Constructs a new <code>TestStatusShortApiResult</code>.
      * @alias module:model/TestStatusShortApiResult
-     * @param id {String} 
-     * @param name {String} 
-     * @param code {String} 
-     * @param type {module:model/TestStatusApiType} Collection of possible status types
+     * @param id {String} Identifier of the test status.
+     * @param code {String} Code representing the test status.
+     * @param name {String} Name of the test status.
+     * @param type {module:model/TestStatusApiType} Type of the test status (e.g., Passed, Failed).
      */
-    constructor(id, name, code, type) { 
+    constructor(id, code, name, type) { 
         
-        TestStatusShortApiResult.initialize(this, id, name, code, type);
+        TestStatusShortApiResult.initialize(this, id, code, name, type);
     }
 
     /**
@@ -38,10 +38,10 @@ class TestStatusShortApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, code, type) { 
+    static initialize(obj, id, code, name, type) { 
         obj['id'] = id;
-        obj['name'] = name;
         obj['code'] = code;
+        obj['name'] = name;
         obj['type'] = type;
     }
 
@@ -59,11 +59,11 @@ class TestStatusShortApiResult {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
             if (data.hasOwnProperty('code')) {
                 obj['code'] = ApiClient.convertToType(data['code'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], TestStatusApiType);
@@ -89,12 +89,12 @@ class TestStatusShortApiResult {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
         // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
         if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
             throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
 
         return true;
@@ -103,25 +103,28 @@ class TestStatusShortApiResult {
 
 }
 
-TestStatusShortApiResult.RequiredProperties = ["id", "name", "code", "type"];
+TestStatusShortApiResult.RequiredProperties = ["id", "code", "name", "type"];
 
 /**
+ * Identifier of the test status.
  * @member {String} id
  */
 TestStatusShortApiResult.prototype['id'] = undefined;
 
 /**
- * @member {String} name
- */
-TestStatusShortApiResult.prototype['name'] = undefined;
-
-/**
+ * Code representing the test status.
  * @member {String} code
  */
 TestStatusShortApiResult.prototype['code'] = undefined;
 
 /**
- * Collection of possible status types
+ * Name of the test status.
+ * @member {String} name
+ */
+TestStatusShortApiResult.prototype['name'] = undefined;
+
+/**
+ * Type of the test status (e.g., Passed, Failed).
  * @member {module:model/TestStatusApiType} type
  */
 TestStatusShortApiResult.prototype['type'] = undefined;

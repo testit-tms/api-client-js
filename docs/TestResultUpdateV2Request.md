@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **failureClassIds** | **[String]** |  | [optional] 
 **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] 
 **statusCode** | **String** |  | [optional] 
+**statusType** | [**TestStatusType**](TestStatusType.md) |  | [optional] 
 **comment** | **String** |  | [optional] 
 **links** | [**[Link]**](Link.md) |  | [optional] 
 **stepResults** | [**[StepResultApiModel]**](StepResultApiModel.md) |  | [optional] 

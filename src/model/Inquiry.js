@@ -19,7 +19,7 @@ import Page from './Page';
 /**
  * The Inquiry model module.
  * @module model/Inquiry
- * @version 7.2.2
+ * @version 7.2.3
  */
 class Inquiry {
     /**

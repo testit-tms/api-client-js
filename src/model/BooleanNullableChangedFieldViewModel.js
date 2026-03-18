@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BooleanNullableChangedFieldViewModel model module.
  * @module model/BooleanNullableChangedFieldViewModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class BooleanNullableChangedFieldViewModel {
     /**

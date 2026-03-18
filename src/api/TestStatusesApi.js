@@ -24,7 +24,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestStatuses service.
 * @module api/TestStatusesApi
-* @version 7.2.2
+* @version 7.2.3
 */
 export default class TestStatusesApi {
 

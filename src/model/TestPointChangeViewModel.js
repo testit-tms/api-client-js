@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPointChangeViewModel model module.
  * @module model/TestPointChangeViewModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestPointChangeViewModel {
     /**

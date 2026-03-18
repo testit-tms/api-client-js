@@ -27,7 +27,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemModel model module.
  * @module model/WorkItemModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class WorkItemModel {
     /**
