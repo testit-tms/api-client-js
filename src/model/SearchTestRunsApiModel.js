@@ -18,7 +18,7 @@ import TestRunState from './TestRunState';
 /**
  * The SearchTestRunsApiModel model module.
  * @module model/SearchTestRunsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class SearchTestRunsApiModel {
     /**
@@ -70,6 +70,12 @@ class SearchTestRunsApiModel {
             if (data.hasOwnProperty('modifiedByIds')) {
                 obj['modifiedByIds'] = ApiClient.convertToType(data['modifiedByIds'], ['String']);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
+            if (data.hasOwnProperty('excludeTags')) {
+                obj['excludeTags'] = ApiClient.convertToType(data['excludeTags'], ['String']);
+            }
         }
         return obj;
     }
@@ -107,6 +113,14 @@ class SearchTestRunsApiModel {
         // ensure the json data is an array
         if (!Array.isArray(data['modifiedByIds'])) {
             throw new Error("Expected the field `modifiedByIds` to be an array in the JSON data but got " + data['modifiedByIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['excludeTags'])) {
+            throw new Error("Expected the field `excludeTags` to be an array in the JSON data but got " + data['excludeTags']);
         }
 
         return true;
@@ -151,6 +165,16 @@ SearchTestRunsApiModel.prototype['createdByIds'] = undefined;
  * @member {Array.<String>} modifiedByIds
  */
 SearchTestRunsApiModel.prototype['modifiedByIds'] = undefined;
+
+/**
+ * @member {Array.<String>} tags
+ */
+SearchTestRunsApiModel.prototype['tags'] = undefined;
+
+/**
+ * @member {Array.<String>} excludeTags
+ */
+SearchTestRunsApiModel.prototype['excludeTags'] = undefined;
 
 
 

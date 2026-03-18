@@ -17,7 +17,7 @@ import WorkflowShortApiResult from './WorkflowShortApiResult';
 /**
  * The WorkflowShortApiResultReply model module.
  * @module model/WorkflowShortApiResultReply
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkflowShortApiResultReply {
     /**

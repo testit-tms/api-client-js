@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **launchSource** | **String** | Specifies the test run launch source. | [optional] 
 **attachments** | [**[AssignAttachmentApiModel]**](AssignAttachmentApiModel.md) | Collection of attachment ids to relate to the test run | [optional] 
 **links** | [**[CreateLinkApiModel]**](CreateLinkApiModel.md) | Collection of links to relate to the test run | [optional] 
+**tags** | **[String]** | Collection of tags to assign to the test run | [optional] 
 
 

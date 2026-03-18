@@ -224,6 +224,8 @@ import NamedEntityApiModel from './model/NamedEntityApiModel';
 import NotificationModel from './model/NotificationModel';
 import NotificationQueryFilterModel from './model/NotificationQueryFilterModel';
 import NotificationTypeModel from './model/NotificationTypeModel';
+import OpenIdConnectionClientShortModel from './model/OpenIdConnectionClientShortModel';
+import OpenIdConnectionSettingsShortClientModel from './model/OpenIdConnectionSettingsShortClientModel';
 import Operation from './model/Operation';
 import Order from './model/Order';
 import Page from './model/Page';
@@ -428,6 +430,7 @@ import UpdateFailureClassRegexApiModel from './model/UpdateFailureClassRegexApiM
 import UpdateLinkApiModel from './model/UpdateLinkApiModel';
 import UpdateMultipleAttachmentsApiModel from './model/UpdateMultipleAttachmentsApiModel';
 import UpdateMultipleLinksApiModel from './model/UpdateMultipleLinksApiModel';
+import UpdateMultipleTagsApiModel from './model/UpdateMultipleTagsApiModel';
 import UpdateMultipleTestRunsApiModel from './model/UpdateMultipleTestRunsApiModel';
 import UpdateParameterApiModel from './model/UpdateParameterApiModel';
 import UpdateProjectApiModel from './model/UpdateProjectApiModel';
@@ -527,6 +530,7 @@ import CustomAttributeTemplatesApi from './api/CustomAttributeTemplatesApi';
 import CustomAttributesApi from './api/CustomAttributesApi';
 import ExternalIssuesApi from './api/ExternalIssuesApi';
 import NotificationsApi from './api/NotificationsApi';
+import OpenIdConnectionsApi from './api/OpenIdConnectionsApi';
 import ParametersApi from './api/ParametersApi';
 import ProjectAttributeTemplatesApi from './api/ProjectAttributeTemplatesApi';
 import ProjectAttributesApi from './api/ProjectAttributesApi';
@@ -584,7 +588,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.1
+* @version 7.2.2
 */
 export {
     /**
@@ -1860,6 +1864,18 @@ export {
     NotificationTypeModel,
 
     /**
+     * The OpenIdConnectionClientShortModel model constructor.
+     * @property {module:model/OpenIdConnectionClientShortModel}
+     */
+    OpenIdConnectionClientShortModel,
+
+    /**
+     * The OpenIdConnectionSettingsShortClientModel model constructor.
+     * @property {module:model/OpenIdConnectionSettingsShortClientModel}
+     */
+    OpenIdConnectionSettingsShortClientModel,
+
+    /**
      * The Operation model constructor.
      * @property {module:model/Operation}
      */
@@ -3084,6 +3100,12 @@ export {
     UpdateMultipleLinksApiModel,
 
     /**
+     * The UpdateMultipleTagsApiModel model constructor.
+     * @property {module:model/UpdateMultipleTagsApiModel}
+     */
+    UpdateMultipleTagsApiModel,
+
+    /**
      * The UpdateMultipleTestRunsApiModel model constructor.
      * @property {module:model/UpdateMultipleTestRunsApiModel}
      */
@@ -3676,6 +3698,12 @@ export {
     * @property {module:api/NotificationsApi}
     */
     NotificationsApi,
+
+    /**
+    * The OpenIdConnectionsApi service constructor.
+    * @property {module:api/OpenIdConnectionsApi}
+    */
+    OpenIdConnectionsApi,
 
     /**
     * The ParametersApi service constructor.

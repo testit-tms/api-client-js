@@ -22,7 +22,7 @@ import WorkItemCommentApiResult from '../model/WorkItemCommentApiResult';
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.2.1
+* @version 7.2.2
 */
 export default class WorkItemsCommentsApi {
 

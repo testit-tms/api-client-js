@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import TestRunSelectApiModel from './TestRunSelectApiModel';
 import UpdateMultipleAttachmentsApiModel from './UpdateMultipleAttachmentsApiModel';
 import UpdateMultipleLinksApiModel from './UpdateMultipleLinksApiModel';
+import UpdateMultipleTagsApiModel from './UpdateMultipleTagsApiModel';
 
 /**
  * The UpdateMultipleTestRunsApiModel model module.
  * @module model/UpdateMultipleTestRunsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class UpdateMultipleTestRunsApiModel {
     /**
@@ -64,6 +65,9 @@ class UpdateMultipleTestRunsApiModel {
             if (data.hasOwnProperty('linkUpdateScheme')) {
                 obj['linkUpdateScheme'] = ApiClient.convertToType(data['linkUpdateScheme'], UpdateMultipleLinksApiModel);
             }
+            if (data.hasOwnProperty('tagUpdateScheme')) {
+                obj['tagUpdateScheme'] = ApiClient.convertToType(data['tagUpdateScheme'], UpdateMultipleTagsApiModel);
+            }
         }
         return obj;
     }
@@ -95,6 +99,10 @@ class UpdateMultipleTestRunsApiModel {
         // validate the optional field `linkUpdateScheme`
         if (data['linkUpdateScheme']) { // data not null
           UpdateMultipleLinksApiModel.validateJSON(data['linkUpdateScheme']);
+        }
+        // validate the optional field `tagUpdateScheme`
+        if (data['tagUpdateScheme']) { // data not null
+          UpdateMultipleTagsApiModel.validateJSON(data['tagUpdateScheme']);
         }
 
         return true;
@@ -128,6 +136,12 @@ UpdateMultipleTestRunsApiModel.prototype['attachmentUpdateScheme'] = undefined;
  * @member {module:model/UpdateMultipleLinksApiModel} linkUpdateScheme
  */
 UpdateMultipleTestRunsApiModel.prototype['linkUpdateScheme'] = undefined;
+
+/**
+ * Set of tags
+ * @member {module:model/UpdateMultipleTagsApiModel} tagUpdateScheme
+ */
+UpdateMultipleTestRunsApiModel.prototype['tagUpdateScheme'] = undefined;
 
 
 

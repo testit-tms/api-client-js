@@ -222,6 +222,9 @@ docs/NotificationModel.md
 docs/NotificationQueryFilterModel.md
 docs/NotificationTypeModel.md
 docs/NotificationsApi.md
+docs/OpenIdConnectionClientShortModel.md
+docs/OpenIdConnectionSettingsShortClientModel.md
+docs/OpenIdConnectionsApi.md
 docs/Operation.md
 docs/Order.md
 docs/Page.md
@@ -446,6 +449,7 @@ docs/UpdateFailureClassRegexApiModel.md
 docs/UpdateLinkApiModel.md
 docs/UpdateMultipleAttachmentsApiModel.md
 docs/UpdateMultipleLinksApiModel.md
+docs/UpdateMultipleTagsApiModel.md
 docs/UpdateMultipleTestRunsApiModel.md
 docs/UpdateParameterApiModel.md
 docs/UpdateProjectApiModel.md
@@ -555,6 +559,7 @@ src/api/CustomAttributeTemplatesApi.js
 src/api/CustomAttributesApi.js
 src/api/ExternalIssuesApi.js
 src/api/NotificationsApi.js
+src/api/OpenIdConnectionsApi.js
 src/api/ParametersApi.js
 src/api/ProjectAttributeTemplatesApi.js
 src/api/ProjectAttributesApi.js
@@ -793,6 +798,8 @@ src/model/NamedEntityApiModel.js
 src/model/NotificationModel.js
 src/model/NotificationQueryFilterModel.js
 src/model/NotificationTypeModel.js
+src/model/OpenIdConnectionClientShortModel.js
+src/model/OpenIdConnectionSettingsShortClientModel.js
 src/model/Operation.js
 src/model/Order.js
 src/model/Page.js
@@ -997,6 +1004,7 @@ src/model/UpdateFailureClassRegexApiModel.js
 src/model/UpdateLinkApiModel.js
 src/model/UpdateMultipleAttachmentsApiModel.js
 src/model/UpdateMultipleLinksApiModel.js
+src/model/UpdateMultipleTagsApiModel.js
 src/model/UpdateMultipleTestRunsApiModel.js
 src/model/UpdateParameterApiModel.js
 src/model/UpdateProjectApiModel.js
@@ -1096,6 +1104,7 @@ test/api/CustomAttributeTemplatesApi.spec.js
 test/api/CustomAttributesApi.spec.js
 test/api/ExternalIssuesApi.spec.js
 test/api/NotificationsApi.spec.js
+test/api/OpenIdConnectionsApi.spec.js
 test/api/ParametersApi.spec.js
 test/api/ProjectAttributeTemplatesApi.spec.js
 test/api/ProjectAttributesApi.spec.js
@@ -1333,6 +1342,8 @@ test/model/NamedEntityApiModel.spec.js
 test/model/NotificationModel.spec.js
 test/model/NotificationQueryFilterModel.spec.js
 test/model/NotificationTypeModel.spec.js
+test/model/OpenIdConnectionClientShortModel.spec.js
+test/model/OpenIdConnectionSettingsShortClientModel.spec.js
 test/model/Operation.spec.js
 test/model/Order.spec.js
 test/model/Page.spec.js
@@ -1537,6 +1548,7 @@ test/model/UpdateFailureClassRegexApiModel.spec.js
 test/model/UpdateLinkApiModel.spec.js
 test/model/UpdateMultipleAttachmentsApiModel.spec.js
 test/model/UpdateMultipleLinksApiModel.spec.js
+test/model/UpdateMultipleTagsApiModel.spec.js
 test/model/UpdateMultipleTestRunsApiModel.spec.js
 test/model/UpdateParameterApiModel.spec.js
 test/model/UpdateProjectApiModel.spec.js

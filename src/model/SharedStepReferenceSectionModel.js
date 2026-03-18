@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SharedStepReferenceSectionModel model module.
  * @module model/SharedStepReferenceSectionModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class SharedStepReferenceSectionModel {
     /**

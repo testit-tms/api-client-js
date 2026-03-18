@@ -18,7 +18,7 @@ import LinkApiResult from './LinkApiResult';
 /**
  * The LastTestResultApiResult model module.
  * @module model/LastTestResultApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class LastTestResultApiResult {
     /**

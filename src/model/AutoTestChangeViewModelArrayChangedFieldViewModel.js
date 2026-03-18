@@ -17,7 +17,7 @@ import AutoTestChangeViewModel from './AutoTestChangeViewModel';
 /**
  * The AutoTestChangeViewModelArrayChangedFieldViewModel model module.
  * @module model/AutoTestChangeViewModelArrayChangedFieldViewModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class AutoTestChangeViewModelArrayChangedFieldViewModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Int64RangeSelectorModel model module.
  * @module model/Int64RangeSelectorModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class Int64RangeSelectorModel {
     /**

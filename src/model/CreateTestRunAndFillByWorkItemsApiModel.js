@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The CreateTestRunAndFillByWorkItemsApiModel model module.
  * @module model/CreateTestRunAndFillByWorkItemsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class CreateTestRunAndFillByWorkItemsApiModel {
     /**
@@ -77,6 +77,9 @@ class CreateTestRunAndFillByWorkItemsApiModel {
             }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
             if (data.hasOwnProperty('configurationIds')) {
                 obj['configurationIds'] = ApiClient.convertToType(data['configurationIds'], ['String']);
@@ -141,6 +144,10 @@ class CreateTestRunAndFillByWorkItemsApiModel {
             };
         }
         // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
+        // ensure the json data is an array
         if (!Array.isArray(data['configurationIds'])) {
             throw new Error("Expected the field `configurationIds` to be an array in the JSON data but got " + data['configurationIds']);
         }
@@ -198,6 +205,12 @@ CreateTestRunAndFillByWorkItemsApiModel.prototype['attachments'] = undefined;
  * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 CreateTestRunAndFillByWorkItemsApiModel.prototype['links'] = undefined;
+
+/**
+ * Collection of tags to assign to the test run
+ * @member {Array.<String>} tags
+ */
+CreateTestRunAndFillByWorkItemsApiModel.prototype['tags'] = undefined;
 
 /**
  * Specifies the configuration GUIDs, from which test points are created. You can specify several GUIDs.

@@ -19,7 +19,7 @@ import TestPointSelector from './TestPointSelector';
 /**
  * The CreateTestRunAndFillByConfigurationsApiModel model module.
  * @module model/CreateTestRunAndFillByConfigurationsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class CreateTestRunAndFillByConfigurationsApiModel {
     /**
@@ -76,6 +76,9 @@ class CreateTestRunAndFillByConfigurationsApiModel {
             }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
             if (data.hasOwnProperty('testPointSelectors')) {
                 obj['testPointSelectors'] = ApiClient.convertToType(data['testPointSelectors'], [TestPointSelector]);
@@ -135,6 +138,10 @@ class CreateTestRunAndFillByConfigurationsApiModel {
             for (const item of data['links']) {
                 CreateLinkApiModel.validateJSON(item);
             };
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
         if (data['testPointSelectors']) { // data not null
             // ensure the json data is an array
@@ -196,6 +203,12 @@ CreateTestRunAndFillByConfigurationsApiModel.prototype['attachments'] = undefine
  * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 CreateTestRunAndFillByConfigurationsApiModel.prototype['links'] = undefined;
+
+/**
+ * Collection of tags to assign to the test run
+ * @member {Array.<String>} tags
+ */
+CreateTestRunAndFillByConfigurationsApiModel.prototype['tags'] = undefined;
 
 /**
  * Specifies an array of work items and configuration to create a test run for.

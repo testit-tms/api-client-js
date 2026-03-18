@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The CreateTestRunAndFillByAutoTestsApiModel model module.
  * @module model/CreateTestRunAndFillByAutoTestsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class CreateTestRunAndFillByAutoTestsApiModel {
     /**
@@ -78,6 +78,9 @@ class CreateTestRunAndFillByAutoTestsApiModel {
             }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -139,6 +142,10 @@ class CreateTestRunAndFillByAutoTestsApiModel {
                 CreateLinkApiModel.validateJSON(item);
             };
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
 
         return true;
     }
@@ -195,6 +202,12 @@ CreateTestRunAndFillByAutoTestsApiModel.prototype['attachments'] = undefined;
  * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 CreateTestRunAndFillByAutoTestsApiModel.prototype['links'] = undefined;
+
+/**
+ * Collection of tags to assign to the test run
+ * @member {Array.<String>} tags
+ */
+CreateTestRunAndFillByAutoTestsApiModel.prototype['tags'] = undefined;
 
 
 

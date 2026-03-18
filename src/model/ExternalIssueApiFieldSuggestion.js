@@ -17,7 +17,7 @@ import ExternalIssueExternalServiceApiResult from './ExternalIssueExternalServic
 /**
  * The ExternalIssueApiFieldSuggestion model module.
  * @module model/ExternalIssueApiFieldSuggestion
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ExternalIssueApiFieldSuggestion {
     /**

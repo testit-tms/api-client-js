@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowProjectApiResult model module.
  * @module model/WorkflowProjectApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkflowProjectApiResult {
     /**

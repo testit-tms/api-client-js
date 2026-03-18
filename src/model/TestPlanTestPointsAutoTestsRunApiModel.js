@@ -18,7 +18,7 @@ import TestPlanTestPointsSearchApiModel from './TestPlanTestPointsSearchApiModel
 /**
  * The TestPlanTestPointsAutoTestsRunApiModel model module.
  * @module model/TestPlanTestPointsAutoTestsRunApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestPlanTestPointsAutoTestsRunApiModel {
     /**
@@ -68,6 +68,9 @@ class TestPlanTestPointsAutoTestsRunApiModel {
             if (data.hasOwnProperty('resetNotActualAutomatedTestPoints')) {
                 obj['resetNotActualAutomatedTestPoints'] = ApiClient.convertToType(data['resetNotActualAutomatedTestPoints'], 'Boolean');
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
         }
         return obj;
     }
@@ -99,6 +102,10 @@ class TestPlanTestPointsAutoTestsRunApiModel {
         // ensure the json data is a string
         if (data['build'] && !(typeof data['build'] === 'string' || data['build'] instanceof String)) {
             throw new Error("Expected the field `build` to be a primitive type in the JSON string but got " + data['build']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
 
         return true;
@@ -138,6 +145,12 @@ TestPlanTestPointsAutoTestsRunApiModel.prototype['build'] = undefined;
  * @member {Boolean} resetNotActualAutomatedTestPoints
  */
 TestPlanTestPointsAutoTestsRunApiModel.prototype['resetNotActualAutomatedTestPoints'] = undefined;
+
+/**
+ * Tags of the test run.
+ * @member {Array.<String>} tags
+ */
+TestPlanTestPointsAutoTestsRunApiModel.prototype['tags'] = undefined;
 
 
 

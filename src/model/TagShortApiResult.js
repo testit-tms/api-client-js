@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TagShortApiResult model module.
  * @module model/TagShortApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TagShortApiResult {
     /**

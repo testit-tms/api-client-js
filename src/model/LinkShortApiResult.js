@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LinkShortApiResult model module.
  * @module model/LinkShortApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class LinkShortApiResult {
     /**

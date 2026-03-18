@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GlobalSearchItemResult model module.
  * @module model/GlobalSearchItemResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class GlobalSearchItemResult {
     /**

@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tagUpdateScheme (base name: "tagUpdateScheme")', function() {
+      // uncomment below and update the code to test the property tagUpdateScheme
+      //var instance = new TestitApiClient.UpdateMultipleTestRunsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

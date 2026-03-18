@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterIterationModel model module.
  * @module model/ParameterIterationModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ParameterIterationModel {
     /**

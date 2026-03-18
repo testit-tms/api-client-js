@@ -17,7 +17,7 @@ import WorkItemSearchQueryModel from './WorkItemSearchQueryModel';
 /**
  * The FilterModel model module.
  * @module model/FilterModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class FilterModel {
     /**

@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **webhookIds** | **[String]** | Webhook ids to run. | 
 **build** | **String** | Specifies the test run build. | [optional] 
 **resetNotActualAutomatedTestPoints** | **Boolean** | Reset test point status when actual work item does not automated. | 
+**tags** | **[String]** | Tags of the test run. | [optional] 
 
 

@@ -30,5 +30,6 @@ Name | Type | Description | Notes
 **createdById** | **String** |  | 
 **modifiedById** | **String** |  | [optional] 
 **createdByUserName** | **String** |  | [optional] 
+**tags** | **[String]** |  | 
 
 

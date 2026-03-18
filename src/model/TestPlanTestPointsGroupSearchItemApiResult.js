@@ -18,7 +18,7 @@ import TestPlanTestPointsSearchApiResult from './TestPlanTestPointsSearchApiResu
 /**
  * The TestPlanTestPointsGroupSearchItemApiResult model module.
  * @module model/TestPlanTestPointsGroupSearchItemApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestPlanTestPointsGroupSearchItemApiResult {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeChangeModel model module.
  * @module model/CustomAttributeChangeModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class CustomAttributeChangeModel {
     /**

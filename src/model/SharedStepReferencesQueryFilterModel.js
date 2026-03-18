@@ -19,7 +19,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The SharedStepReferencesQueryFilterModel model module.
  * @module model/SharedStepReferencesQueryFilterModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class SharedStepReferencesQueryFilterModel {
     /**

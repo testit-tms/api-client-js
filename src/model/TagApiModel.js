@@ -16,13 +16,13 @@ import ApiClient from '../ApiClient';
 /**
  * The TagApiModel model module.
  * @module model/TagApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TagApiModel {
     /**
      * Constructs a new <code>TagApiModel</code>.
      * @alias module:model/TagApiModel
-     * @param name {String} Tag name
+     * @param name {String} Name of the tag
      */
     constructor(name) { 
         
@@ -82,7 +82,7 @@ class TagApiModel {
 TagApiModel.RequiredProperties = ["name"];
 
 /**
- * Tag name
+ * Name of the tag
  * @member {String} name
  */
 TagApiModel.prototype['name'] = undefined;

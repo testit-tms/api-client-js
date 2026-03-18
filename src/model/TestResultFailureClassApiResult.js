@@ -17,7 +17,7 @@ import FailureCategory from './FailureCategory';
 /**
  * The TestResultFailureClassApiResult model module.
  * @module model/TestResultFailureClassApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestResultFailureClassApiResult {
     /**

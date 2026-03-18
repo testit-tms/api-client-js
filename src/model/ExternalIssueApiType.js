@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalIssueApiType model module.
  * @module model/ExternalIssueApiType
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ExternalIssueApiType {
     /**

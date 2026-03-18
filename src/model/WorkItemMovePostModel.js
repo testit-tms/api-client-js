@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemMovePostModel model module.
  * @module model/WorkItemMovePostModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkItemMovePostModel {
     /**

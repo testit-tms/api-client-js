@@ -17,7 +17,7 @@ import AttachmentUpdateRequest from './AttachmentUpdateRequest';
 /**
  * The TestResultStepCommentUpdateRequest model module.
  * @module model/TestResultStepCommentUpdateRequest
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestResultStepCommentUpdateRequest {
     /**

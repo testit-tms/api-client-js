@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instance = new TestitApiClient.CreateTestRunAndFillByConfigurationsApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property testPointSelectors (base name: "testPointSelectors")', function() {
       // uncomment below and update the code to test the property testPointSelectors
       //var instance = new TestitApiClient.CreateTestRunAndFillByConfigurationsApiModel();

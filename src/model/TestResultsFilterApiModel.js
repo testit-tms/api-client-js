@@ -20,7 +20,7 @@ import TestResultOutcome from './TestResultOutcome';
 /**
  * The TestResultsFilterApiModel model module.
  * @module model/TestResultsFilterApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestResultsFilterApiModel {
     /**

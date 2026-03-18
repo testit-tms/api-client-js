@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkflowExistsByNameApiResult model module.
  * @module model/WorkflowExistsByNameApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkflowExistsByNameApiResult {
     /**

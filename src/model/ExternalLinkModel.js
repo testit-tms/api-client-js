@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalLinkModel model module.
  * @module model/ExternalLinkModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ExternalLinkModel {
     /**
