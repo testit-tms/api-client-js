@@ -11,5 +11,7 @@ Name | Type | Description | Notes
 **completedDate** | [**DateTimeRangeSelectorModel**](DateTimeRangeSelectorModel.md) |  | [optional] 
 **createdByIds** | **[String]** |  | [optional] 
 **modifiedByIds** | **[String]** |  | [optional] 
+**tags** | **[String]** |  | [optional] 
+**excludeTags** | **[String]** |  | [optional] 
 
 

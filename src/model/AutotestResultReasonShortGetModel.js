@@ -17,7 +17,7 @@ import AvailableFailureCategory from './AvailableFailureCategory';
 /**
  * The AutotestResultReasonShortGetModel model module.
  * @module model/AutotestResultReasonShortGetModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class AutotestResultReasonShortGetModel {
     /**

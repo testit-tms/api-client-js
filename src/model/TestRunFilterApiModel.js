@@ -21,7 +21,7 @@ import TestRunState from './TestRunState';
 /**
  * The TestRunFilterApiModel model module.
  * @module model/TestRunFilterApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestRunFilterApiModel {
     /**
@@ -97,6 +97,12 @@ class TestRunFilterApiModel {
             if (data.hasOwnProperty('testResultsConfigurationIds')) {
                 obj['testResultsConfigurationIds'] = ApiClient.convertToType(data['testResultsConfigurationIds'], ['String']);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
+            if (data.hasOwnProperty('excludeTags')) {
+                obj['excludeTags'] = ApiClient.convertToType(data['excludeTags'], ['String']);
+            }
         }
         return obj;
     }
@@ -162,6 +168,14 @@ class TestRunFilterApiModel {
         // ensure the json data is an array
         if (!Array.isArray(data['testResultsConfigurationIds'])) {
             throw new Error("Expected the field `testResultsConfigurationIds` to be an array in the JSON data but got " + data['testResultsConfigurationIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['excludeTags'])) {
+            throw new Error("Expected the field `excludeTags` to be an array in the JSON data but got " + data['excludeTags']);
         }
 
         return true;
@@ -261,6 +275,18 @@ TestRunFilterApiModel.prototype['completedDate'] = undefined;
  * @member {Array.<String>} testResultsConfigurationIds
  */
 TestRunFilterApiModel.prototype['testResultsConfigurationIds'] = undefined;
+
+/**
+ * Specifies a test run tags to search for
+ * @member {Array.<String>} tags
+ */
+TestRunFilterApiModel.prototype['tags'] = undefined;
+
+/**
+ * Specifies a test run excluded tags to search for
+ * @member {Array.<String>} excludeTags
+ */
+TestRunFilterApiModel.prototype['excludeTags'] = undefined;
 
 
 

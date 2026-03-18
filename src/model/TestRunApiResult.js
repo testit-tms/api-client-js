@@ -22,7 +22,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunApiResult model module.
  * @module model/TestRunApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestRunApiResult {
     /**
@@ -42,10 +42,11 @@ class TestRunApiResult {
      * @param testResults {Array.<module:model/TestResultApiResult>} 
      * @param createdDate {Date} 
      * @param createdById {String} 
+     * @param tags {Array.<String>} 
      */
-    constructor(id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById) { 
+    constructor(id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById, tags) { 
         
-        TestRunApiResult.initialize(this, id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById);
+        TestRunApiResult.initialize(this, id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById, tags);
     }
 
     /**
@@ -53,7 +54,7 @@ class TestRunApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById) { 
+    static initialize(obj, id, isDeleted, build, stateName, status, projectId, autoTests, autoTestsCount, testSuiteIds, isAutomated, analytic, testResults, createdDate, createdById, tags) { 
         obj['id'] = id;
         obj['isDeleted'] = isDeleted;
         obj['build'] = build;
@@ -68,6 +69,7 @@ class TestRunApiResult {
         obj['testResults'] = testResults;
         obj['createdDate'] = createdDate;
         obj['createdById'] = createdById;
+        obj['tags'] = tags;
     }
 
     /**
@@ -158,6 +160,9 @@ class TestRunApiResult {
             }
             if (data.hasOwnProperty('createdByUserName')) {
                 obj['createdByUserName'] = ApiClient.convertToType(data['createdByUserName'], 'String');
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -259,6 +264,10 @@ class TestRunApiResult {
         if (data['createdByUserName'] && !(typeof data['createdByUserName'] === 'string' || data['createdByUserName'] instanceof String)) {
             throw new Error("Expected the field `createdByUserName` to be a primitive type in the JSON string but got " + data['createdByUserName']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
 
         return true;
     }
@@ -266,7 +275,7 @@ class TestRunApiResult {
 
 }
 
-TestRunApiResult.RequiredProperties = ["id", "isDeleted", "build", "stateName", "status", "projectId", "autoTests", "autoTestsCount", "testSuiteIds", "isAutomated", "analytic", "testResults", "createdDate", "createdById"];
+TestRunApiResult.RequiredProperties = ["id", "isDeleted", "build", "stateName", "status", "projectId", "autoTests", "autoTestsCount", "testSuiteIds", "isAutomated", "analytic", "testResults", "createdDate", "createdById", "tags"];
 
 /**
  * Unique ID of the entity
@@ -399,6 +408,11 @@ TestRunApiResult.prototype['modifiedById'] = undefined;
  * @member {String} createdByUserName
  */
 TestRunApiResult.prototype['createdByUserName'] = undefined;
+
+/**
+ * @member {Array.<String>} tags
+ */
+TestRunApiResult.prototype['tags'] = undefined;
 
 
 

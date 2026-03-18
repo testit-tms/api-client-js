@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NamedEntityApiModel model module.
  * @module model/NamedEntityApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class NamedEntityApiModel {
     /**

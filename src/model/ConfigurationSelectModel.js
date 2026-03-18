@@ -18,7 +18,7 @@ import ConfigurationFilterModel from './ConfigurationFilterModel';
 /**
  * The ConfigurationSelectModel model module.
  * @module model/ConfigurationSelectModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ConfigurationSelectModel {
     /**

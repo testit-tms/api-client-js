@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **customParameters** | **{String: String}** | Customers test run parameters | [optional] 
 **webhooks** | [**[NamedEntityApiModel]**](NamedEntityApiModel.md) | Enabled webhooks | 
 **runCount** | **Number** | Run count | 
+**tags** | **[String]** | Collection of tags associated with the test run | 
 
 

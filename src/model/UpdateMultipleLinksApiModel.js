@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The UpdateMultipleLinksApiModel model module.
  * @module model/UpdateMultipleLinksApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class UpdateMultipleLinksApiModel {
     /**

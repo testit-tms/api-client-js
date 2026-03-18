@@ -17,7 +17,7 @@ import Inquiry from './Inquiry';
 /**
  * The GetAIServiceModelsApiModel model module.
  * @module model/GetAIServiceModelsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class GetAIServiceModelsApiModel {
     /**

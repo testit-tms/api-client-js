@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The CreateEmptyTestRunApiModel model module.
  * @module model/CreateEmptyTestRunApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class CreateEmptyTestRunApiModel {
     /**
@@ -68,6 +68,9 @@ class CreateEmptyTestRunApiModel {
             }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -121,6 +124,10 @@ class CreateEmptyTestRunApiModel {
                 CreateLinkApiModel.validateJSON(item);
             };
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
 
         return true;
     }
@@ -165,6 +172,12 @@ CreateEmptyTestRunApiModel.prototype['attachments'] = undefined;
  * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 CreateEmptyTestRunApiModel.prototype['links'] = undefined;
+
+/**
+ * Collection of tags to assign to the test run
+ * @member {Array.<String>} tags
+ */
+CreateEmptyTestRunApiModel.prototype['tags'] = undefined;
 
 
 

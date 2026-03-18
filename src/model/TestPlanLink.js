@@ -18,7 +18,7 @@ import LinkModel from './LinkModel';
 /**
  * The TestPlanLink model module.
  * @module model/TestPlanLink
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestPlanLink {
     /**

@@ -17,7 +17,7 @@ import WorkflowProjectApiResult from './WorkflowProjectApiResult';
 /**
  * The WorkflowProjectApiResultReply model module.
  * @module model/WorkflowProjectApiResultReply
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkflowProjectApiResultReply {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanSummaryModel model module.
  * @module model/TestPlanSummaryModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestPlanSummaryModel {
     /**

@@ -18,7 +18,7 @@ import TestPointsExtractionModel from './TestPointsExtractionModel';
 /**
  * The TestPointSelectModel model module.
  * @module model/TestPointSelectModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestPointSelectModel {
     /**

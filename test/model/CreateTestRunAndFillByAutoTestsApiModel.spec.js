@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tags (base name: "tags")', function() {
+      // uncomment below and update the code to test the property tags
+      //var instance = new TestitApiClient.CreateTestRunAndFillByAutoTestsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

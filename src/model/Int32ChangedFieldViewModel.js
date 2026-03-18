@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Int32ChangedFieldViewModel model module.
  * @module model/Int32ChangedFieldViewModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class Int32ChangedFieldViewModel {
     /**

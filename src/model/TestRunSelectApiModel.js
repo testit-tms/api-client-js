@@ -18,7 +18,7 @@ import TestRunFilterApiModel from './TestRunFilterApiModel';
 /**
  * The TestRunSelectApiModel model module.
  * @module model/TestRunSelectApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestRunSelectApiModel {
     /**

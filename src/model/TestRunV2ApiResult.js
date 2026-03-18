@@ -22,7 +22,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunV2ApiResult model module.
  * @module model/TestRunV2ApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestRunV2ApiResult {
     /**
@@ -39,10 +39,11 @@ class TestRunV2ApiResult {
      * @param links {Array.<module:model/LinkApiResult>} Collection of links related to the test run
      * @param webhooks {Array.<module:model/NamedEntityApiModel>} Enabled webhooks
      * @param runCount {Number} Run count
+     * @param tags {Array.<String>} Collection of tags associated with the test run
      */
-    constructor(id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount) { 
+    constructor(id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount, tags) { 
         
-        TestRunV2ApiResult.initialize(this, id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount);
+        TestRunV2ApiResult.initialize(this, id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount, tags);
     }
 
     /**
@@ -50,7 +51,7 @@ class TestRunV2ApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount) { 
+    static initialize(obj, id, name, stateName, status, projectId, createdDate, createdById, attachments, links, webhooks, runCount, tags) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['stateName'] = stateName;
@@ -62,6 +63,7 @@ class TestRunV2ApiResult {
         obj['links'] = links;
         obj['webhooks'] = webhooks;
         obj['runCount'] = runCount;
+        obj['tags'] = tags;
     }
 
     /**
@@ -137,6 +139,9 @@ class TestRunV2ApiResult {
             }
             if (data.hasOwnProperty('runCount')) {
                 obj['runCount'] = ApiClient.convertToType(data['runCount'], 'Number');
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -234,6 +239,10 @@ class TestRunV2ApiResult {
                 NamedEntityApiModel.validateJSON(item);
             };
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
 
         return true;
     }
@@ -241,7 +250,7 @@ class TestRunV2ApiResult {
 
 }
 
-TestRunV2ApiResult.RequiredProperties = ["id", "name", "stateName", "status", "projectId", "createdDate", "createdById", "attachments", "links", "webhooks", "runCount"];
+TestRunV2ApiResult.RequiredProperties = ["id", "name", "stateName", "status", "projectId", "createdDate", "createdById", "attachments", "links", "webhooks", "runCount", "tags"];
 
 /**
  * Test run unique identifier
@@ -368,6 +377,12 @@ TestRunV2ApiResult.prototype['webhooks'] = undefined;
  * @member {Number} runCount
  */
 TestRunV2ApiResult.prototype['runCount'] = undefined;
+
+/**
+ * Collection of tags associated with the test run
+ * @member {Array.<String>} tags
+ */
+TestRunV2ApiResult.prototype['tags'] = undefined;
 
 
 

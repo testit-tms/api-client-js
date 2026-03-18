@@ -25,7 +25,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemLocalFilterModel model module.
  * @module model/WorkItemLocalFilterModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkItemLocalFilterModel {
     /**

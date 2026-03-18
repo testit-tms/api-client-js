@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The WorkItemLinkFilterModel model module.
  * @module model/WorkItemLinkFilterModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class WorkItemLinkFilterModel {
     /**

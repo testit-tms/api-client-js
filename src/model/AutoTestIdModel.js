@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestIdModel model module.
  * @module model/AutoTestIdModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class AutoTestIdModel {
     /**

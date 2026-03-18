@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectConfigurations service.
 * @module api/ProjectConfigurationsApi
-* @version 7.2.1
+* @version 7.2.2
 */
 export default class ProjectConfigurationsApi {
 

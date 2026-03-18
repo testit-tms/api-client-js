@@ -28,7 +28,7 @@ import WorkflowShortApiResultReply from '../model/WorkflowShortApiResultReply';
 /**
 * Workflows service.
 * @module api/WorkflowsApi
-* @version 7.2.1
+* @version 7.2.2
 */
 export default class WorkflowsApi {
 

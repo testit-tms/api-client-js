@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateTestStatusApiModel model module.
  * @module model/UpdateTestStatusApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class UpdateTestStatusApiModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Page model module.
  * @module model/Page
- * @version 7.2.1
+ * @version 7.2.2
  */
 class Page {
     /**

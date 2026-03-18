@@ -20,7 +20,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunShortApiResult model module.
  * @module model/TestRunShortApiResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class TestRunShortApiResult {
     /**
@@ -36,10 +36,11 @@ class TestRunShortApiResult {
      * @param autoTestsCount {Number} Number of AutoTests run in the test run
      * @param statistics {module:model/TestResultsStatisticsApiResult} Statistics of the test run
      * @param testResultsConfigurations {Array.<module:model/ConfigurationShortApiResult>} Test results configurations
+     * @param tags {Array.<String>} Collection of tags associated with the test run
      */
-    constructor(id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations) { 
+    constructor(id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations, tags) { 
         
-        TestRunShortApiResult.initialize(this, id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations);
+        TestRunShortApiResult.initialize(this, id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations, tags);
     }
 
     /**
@@ -47,7 +48,7 @@ class TestRunShortApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations) { 
+    static initialize(obj, id, name, state, status, createdDate, createdById, isDeleted, autoTestsCount, statistics, testResultsConfigurations, tags) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['state'] = state;
@@ -58,6 +59,7 @@ class TestRunShortApiResult {
         obj['autoTestsCount'] = autoTestsCount;
         obj['statistics'] = statistics;
         obj['testResultsConfigurations'] = testResultsConfigurations;
+        obj['tags'] = tags;
     }
 
     /**
@@ -110,6 +112,9 @@ class TestRunShortApiResult {
             if (data.hasOwnProperty('testResultsConfigurations')) {
                 obj['testResultsConfigurations'] = ApiClient.convertToType(data['testResultsConfigurations'], [ConfigurationShortApiResult]);
             }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
         }
         return obj;
     }
@@ -160,6 +165,10 @@ class TestRunShortApiResult {
                 ConfigurationShortApiResult.validateJSON(item);
             };
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['tags'])) {
+            throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
+        }
 
         return true;
     }
@@ -167,7 +176,7 @@ class TestRunShortApiResult {
 
 }
 
-TestRunShortApiResult.RequiredProperties = ["id", "name", "state", "status", "createdDate", "createdById", "isDeleted", "autoTestsCount", "statistics", "testResultsConfigurations"];
+TestRunShortApiResult.RequiredProperties = ["id", "name", "state", "status", "createdDate", "createdById", "isDeleted", "autoTestsCount", "statistics", "testResultsConfigurations", "tags"];
 
 /**
  * Unique ID of the test run
@@ -246,6 +255,12 @@ TestRunShortApiResult.prototype['statistics'] = undefined;
  * @member {Array.<module:model/ConfigurationShortApiResult>} testResultsConfigurations
  */
 TestRunShortApiResult.prototype['testResultsConfigurations'] = undefined;
+
+/**
+ * Collection of tags associated with the test run
+ * @member {Array.<String>} tags
+ */
+TestRunShortApiResult.prototype['tags'] = undefined;
 
 
 

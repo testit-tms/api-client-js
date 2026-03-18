@@ -18,7 +18,7 @@ import AvailableTestResultOutcome from './AvailableTestResultOutcome';
 /**
  * The AutoTestStepResult model module.
  * @module model/AutoTestStepResult
- * @version 7.2.1
+ * @version 7.2.2
  */
 class AutoTestStepResult {
     /**

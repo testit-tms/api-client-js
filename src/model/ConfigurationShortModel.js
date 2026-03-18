@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationShortModel model module.
  * @module model/ConfigurationShortModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ConfigurationShortModel {
     /**

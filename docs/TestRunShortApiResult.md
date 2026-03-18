@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **autoTestsCount** | **Number** | Number of AutoTests run in the test run | 
 **statistics** | [**TestResultsStatisticsApiResult**](TestResultsStatisticsApiResult.md) | Statistics of the test run | 
 **testResultsConfigurations** | [**[ConfigurationShortApiResult]**](ConfigurationShortApiResult.md) | Test results configurations | 
+**tags** | **[String]** | Collection of tags associated with the test run | 
 
 

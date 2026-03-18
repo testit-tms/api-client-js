@@ -17,7 +17,7 @@ import Inquiry from './Inquiry';
 /**
  * The SearchWorkflowProjectsApiModel model module.
  * @module model/SearchWorkflowProjectsApiModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class SearchWorkflowProjectsApiModel {
     /**

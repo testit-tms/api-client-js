@@ -136,6 +136,7 @@ Class | Method | HTTP request | Description
 *TestitApiClient.NotificationsApi* | [**apiV2NotificationsIdReadPost**](docs/NotificationsApi.md#apiV2NotificationsIdReadPost) | **POST** /api/v2/notifications/{id}/read | Set Notification as read
 *TestitApiClient.NotificationsApi* | [**apiV2NotificationsReadPost**](docs/NotificationsApi.md#apiV2NotificationsReadPost) | **POST** /api/v2/notifications/read | Set all Notifications as read
 *TestitApiClient.NotificationsApi* | [**apiV2NotificationsSearchPost**](docs/NotificationsApi.md#apiV2NotificationsSearchPost) | **POST** /api/v2/notifications/search | Search Notifications for current User
+*TestitApiClient.OpenIdConnectionsApi* | [**apiV2OpenidConnectionsGet**](docs/OpenIdConnectionsApi.md#apiV2OpenidConnectionsGet) | **GET** /api/v2/openid-connections | 
 *TestitApiClient.ParametersApi* | [**apiV2ParametersBulkPost**](docs/ParametersApi.md#apiV2ParametersBulkPost) | **POST** /api/v2/parameters/bulk | Create multiple parameters
 *TestitApiClient.ParametersApi* | [**apiV2ParametersBulkPut**](docs/ParametersApi.md#apiV2ParametersBulkPut) | **PUT** /api/v2/parameters/bulk | Update multiple parameters
 *TestitApiClient.ParametersApi* | [**apiV2ParametersGroupsGet**](docs/ParametersApi.md#apiV2ParametersGroupsGet) | **GET** /api/v2/parameters/groups | Get parameters as group
@@ -585,6 +586,8 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.NotificationModel](docs/NotificationModel.md)
  - [TestitApiClient.NotificationQueryFilterModel](docs/NotificationQueryFilterModel.md)
  - [TestitApiClient.NotificationTypeModel](docs/NotificationTypeModel.md)
+ - [TestitApiClient.OpenIdConnectionClientShortModel](docs/OpenIdConnectionClientShortModel.md)
+ - [TestitApiClient.OpenIdConnectionSettingsShortClientModel](docs/OpenIdConnectionSettingsShortClientModel.md)
  - [TestitApiClient.Operation](docs/Operation.md)
  - [TestitApiClient.Order](docs/Order.md)
  - [TestitApiClient.Page](docs/Page.md)
@@ -789,6 +792,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.UpdateLinkApiModel](docs/UpdateLinkApiModel.md)
  - [TestitApiClient.UpdateMultipleAttachmentsApiModel](docs/UpdateMultipleAttachmentsApiModel.md)
  - [TestitApiClient.UpdateMultipleLinksApiModel](docs/UpdateMultipleLinksApiModel.md)
+ - [TestitApiClient.UpdateMultipleTagsApiModel](docs/UpdateMultipleTagsApiModel.md)
  - [TestitApiClient.UpdateMultipleTestRunsApiModel](docs/UpdateMultipleTestRunsApiModel.md)
  - [TestitApiClient.UpdateParameterApiModel](docs/UpdateParameterApiModel.md)
  - [TestitApiClient.UpdateProjectApiModel](docs/UpdateProjectApiModel.md)

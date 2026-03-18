@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * Sections service.
 * @module api/SectionsApi
-* @version 7.2.1
+* @version 7.2.2
 */
 export default class SectionsApi {
 

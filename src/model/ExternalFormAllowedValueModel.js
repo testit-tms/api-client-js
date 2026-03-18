@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalFormAllowedValueModel model module.
  * @module model/ExternalFormAllowedValueModel
- * @version 7.2.1
+ * @version 7.2.2
  */
 class ExternalFormAllowedValueModel {
     /**

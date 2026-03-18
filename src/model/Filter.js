@@ -17,7 +17,7 @@ import FilterOperator from './FilterOperator';
 /**
  * The Filter model module.
  * @module model/Filter
- * @version 7.2.1
+ * @version 7.2.2
  */
 class Filter {
     /**
