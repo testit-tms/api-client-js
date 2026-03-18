@@ -20,7 +20,7 @@ import Link from './Link';
 /**
  * The AutoTest model module.
  * @module model/AutoTest
- * @version 7.2.2
+ * @version 7.2.3
  */
 class AutoTest {
     /**

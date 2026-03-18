@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The SectionMoveModel model module.
  * @module model/SectionMoveModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class SectionMoveModel {
     /**

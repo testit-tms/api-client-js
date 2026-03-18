@@ -18,7 +18,7 @@ import ProjectsFilterModel from './ProjectsFilterModel';
 /**
  * The ProjectSelectModel model module.
  * @module model/ProjectSelectModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class ProjectSelectModel {
     /**

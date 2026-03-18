@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property statusType (base name: "statusType")', function() {
+      // uncomment below and update the code to test the property statusType
+      //var instance = new TestitApiClient.TestResultUpdateV2Request();
+      //expect(instance).to.be();
+    });
+
     it('should have the property comment (base name: "comment")', function() {
       // uncomment below and update the code to test the property comment
       //var instance = new TestitApiClient.TestResultUpdateV2Request();

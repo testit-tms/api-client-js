@@ -20,7 +20,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunShortApiResult model module.
  * @module model/TestRunShortApiResult
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestRunShortApiResult {
     /**

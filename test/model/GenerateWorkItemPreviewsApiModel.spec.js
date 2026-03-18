@@ -66,8 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property sectionId (base name: "sectionId")', function() {
-      // uncomment below and update the code to test the property sectionId
+    it('should have the property issueKey (base name: "issueKey")', function() {
+      // uncomment below and update the code to test the property issueKey
+      //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property userContext (base name: "userContext")', function() {
+      // uncomment below and update the code to test the property userContext
       //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();
       //expect(instance).to.be();
     });

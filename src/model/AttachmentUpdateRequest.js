@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AttachmentUpdateRequest model module.
  * @module model/AttachmentUpdateRequest
- * @version 7.2.2
+ * @version 7.2.3
  */
 class AttachmentUpdateRequest {
     /**

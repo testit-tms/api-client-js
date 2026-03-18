@@ -18,7 +18,7 @@ import LinkModel from './LinkModel';
 /**
  * The LastTestResultModel model module.
  * @module model/LastTestResultModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class LastTestResultModel {
     /**

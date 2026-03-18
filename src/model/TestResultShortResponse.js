@@ -14,13 +14,13 @@
 import ApiClient from '../ApiClient';
 import AttachmentApiResult from './AttachmentApiResult';
 import AutoTestResultReasonShort from './AutoTestResultReasonShort';
-import LinkShort from './LinkShort';
+import TestResultLinkApiResult from './TestResultLinkApiResult';
 import TestStatusApiResult from './TestStatusApiResult';
 
 /**
  * The TestResultShortResponse model module.
  * @module model/TestResultShortResponse
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestResultShortResponse {
     /**
@@ -37,7 +37,7 @@ class TestResultShortResponse {
      * @param resultReasons {Array.<module:model/AutoTestResultReasonShort>} Collection of result reasons which the test result have
      * @param date {Date} Date when the test result was completed or started or created
      * @param createdDate {Date} Date when the test result has been created
-     * @param links {Array.<module:model/LinkShort>} Collection of links attached to the test result
+     * @param links {Array.<module:model/TestResultLinkApiResult>} Collection of links attached to the test result
      * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of files attached to the test result
      * @param rerunCompletedCount {Number} Run count
      */
@@ -134,7 +134,7 @@ class TestResultShortResponse {
                 obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
             }
             if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], [LinkShort]);
+                obj['links'] = ApiClient.convertToType(data['links'], [TestResultLinkApiResult]);
             }
             if (data.hasOwnProperty('attachments')) {
                 obj['attachments'] = ApiClient.convertToType(data['attachments'], [AttachmentApiResult]);
@@ -215,7 +215,7 @@ class TestResultShortResponse {
             }
             // validate the optional field `links` (array)
             for (const item of data['links']) {
-                LinkShort.validateJSON(item);
+                TestResultLinkApiResult.validateJSON(item);
             };
         }
         if (data['attachments']) { // data not null
@@ -346,7 +346,7 @@ TestResultShortResponse.prototype['duration'] = undefined;
 
 /**
  * Collection of links attached to the test result
- * @member {Array.<module:model/LinkShort>} links
+ * @member {Array.<module:model/TestResultLinkApiResult>} links
  */
 TestResultShortResponse.prototype['links'] = undefined;
 

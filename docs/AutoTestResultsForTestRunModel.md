@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **failureReasonNames** | [**[FailureCategoryModel]**](FailureCategoryModel.md) | Specifies the cause of autotest failure. | [optional] 
 **autoTestExternalId** | **String** | Specifies the external ID of the autotest, which was specified when the test run was created. | 
 **outcome** | [**AvailableTestResultOutcome**](AvailableTestResultOutcome.md) | Specifies the result of the autotest execution. | [optional] 
-**statusCode** | **String** | Specifies the result of the autotest execution. | [optional] 
+**statusCode** | **String** | Specifies code of result status of the autotest execution. | [optional] 
+**statusType** | [**TestStatusType**](TestStatusType.md) | Specifies type of result status of the autotest execution. | [optional] 
 **message** | **String** | A comment for the result. | [optional] 
 **traces** | **String** | An extended comment or a stack trace. | [optional] 
 **startedOn** | **Date** | Test run start date. | [optional] 

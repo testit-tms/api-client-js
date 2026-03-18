@@ -18,7 +18,7 @@ import UpdateFailureClassRegexApiModel from './UpdateFailureClassRegexApiModel';
 /**
  * The UpdateFailureCategoryProjectApiModel model module.
  * @module model/UpdateFailureCategoryProjectApiModel
- * @version 7.2.2
+ * @version 7.2.3
  */
 class UpdateFailureCategoryProjectApiModel {
     /**

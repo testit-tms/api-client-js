@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property statusType (base name: "statusType")', function() {
+      // uncomment below and update the code to test the property statusType
+      //var instance = new TestitApiClient.AutoTestResultsForTestRunModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
       //var instance = new TestitApiClient.AutoTestResultsForTestRunModel();

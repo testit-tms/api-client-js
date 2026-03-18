@@ -43,8 +43,6 @@ docs/AutoTestProjectSettingsApiResult.md
 docs/AutoTestResultHistoryApiResult.md
 docs/AutoTestResultHistorySelectApiModel.md
 docs/AutoTestResultReasonShort.md
-docs/AutoTestResultReasonsCountItemModel.md
-docs/AutoTestResultReasonsCountModel.md
 docs/AutoTestResultsForTestRunModel.md
 docs/AutoTestSearchApiModel.md
 docs/AutoTestSearchIncludeApiModel.md
@@ -207,7 +205,6 @@ docs/LinkCreateApiModel.md
 docs/LinkModel.md
 docs/LinkPostModel.md
 docs/LinkPutModel.md
-docs/LinkShort.md
 docs/LinkShortApiResult.md
 docs/LinkShortModel.md
 docs/LinkType.md
@@ -389,6 +386,7 @@ docs/TestResultChangeViewModelChangedFieldViewModel.md
 docs/TestResultChronologyModel.md
 docs/TestResultFailureClassApiResult.md
 docs/TestResultHistoryReportApiResult.md
+docs/TestResultLinkApiResult.md
 docs/TestResultOutcome.md
 docs/TestResultResponse.md
 docs/TestResultShortApiResult.md
@@ -626,8 +624,6 @@ src/model/AutoTestProjectSettingsApiResult.js
 src/model/AutoTestResultHistoryApiResult.js
 src/model/AutoTestResultHistorySelectApiModel.js
 src/model/AutoTestResultReasonShort.js
-src/model/AutoTestResultReasonsCountItemModel.js
-src/model/AutoTestResultReasonsCountModel.js
 src/model/AutoTestResultsForTestRunModel.js
 src/model/AutoTestSearchApiModel.js
 src/model/AutoTestSearchIncludeApiModel.js
@@ -784,7 +780,6 @@ src/model/LinkCreateApiModel.js
 src/model/LinkModel.js
 src/model/LinkPostModel.js
 src/model/LinkPutModel.js
-src/model/LinkShort.js
 src/model/LinkShortApiResult.js
 src/model/LinkShortModel.js
 src/model/LinkType.js
@@ -948,6 +943,7 @@ src/model/TestResultChangeViewModelChangedFieldViewModel.js
 src/model/TestResultChronologyModel.js
 src/model/TestResultFailureClassApiResult.js
 src/model/TestResultHistoryReportApiResult.js
+src/model/TestResultLinkApiResult.js
 src/model/TestResultOutcome.js
 src/model/TestResultResponse.js
 src/model/TestResultShortApiResult.js
@@ -1170,8 +1166,6 @@ test/model/AutoTestProjectSettingsApiResult.spec.js
 test/model/AutoTestResultHistoryApiResult.spec.js
 test/model/AutoTestResultHistorySelectApiModel.spec.js
 test/model/AutoTestResultReasonShort.spec.js
-test/model/AutoTestResultReasonsCountItemModel.spec.js
-test/model/AutoTestResultReasonsCountModel.spec.js
 test/model/AutoTestResultsForTestRunModel.spec.js
 test/model/AutoTestSearchApiModel.spec.js
 test/model/AutoTestSearchIncludeApiModel.spec.js
@@ -1328,7 +1322,6 @@ test/model/LinkCreateApiModel.spec.js
 test/model/LinkModel.spec.js
 test/model/LinkPostModel.spec.js
 test/model/LinkPutModel.spec.js
-test/model/LinkShort.spec.js
 test/model/LinkShortApiResult.spec.js
 test/model/LinkShortModel.spec.js
 test/model/LinkType.spec.js
@@ -1492,6 +1485,7 @@ test/model/TestResultChangeViewModelChangedFieldViewModel.spec.js
 test/model/TestResultChronologyModel.spec.js
 test/model/TestResultFailureClassApiResult.spec.js
 test/model/TestResultHistoryReportApiResult.spec.js
+test/model/TestResultLinkApiResult.spec.js
 test/model/TestResultOutcome.spec.js
 test/model/TestResultResponse.spec.js
 test/model/TestResultShortApiResult.spec.js

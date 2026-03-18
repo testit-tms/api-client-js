@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanGroupByTesterAndStatusCode model module.
  * @module model/TestPlanGroupByTesterAndStatusCode
- * @version 7.2.2
+ * @version 7.2.3
  */
 class TestPlanGroupByTesterAndStatusCode {
     /**
