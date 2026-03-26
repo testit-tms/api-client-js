@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PreviewsIssueLinkApiResult model module.
  * @module model/PreviewsIssueLinkApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class PreviewsIssueLinkApiResult {
     /**

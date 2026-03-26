@@ -17,7 +17,7 @@ import AttachmentChangeViewModel from './AttachmentChangeViewModel';
 /**
  * The AttachmentChangeViewModelArrayChangedFieldViewModel model module.
  * @module model/AttachmentChangeViewModelArrayChangedFieldViewModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AttachmentChangeViewModelArrayChangedFieldViewModel {
     /**

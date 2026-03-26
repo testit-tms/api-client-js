@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **modifiedById** | **String** | Unique ID of the project last editor | [optional] 
 **globalId** | **Number** | Global ID of the project | 
 **type** | [**ProjectTypeModel**](ProjectTypeModel.md) | Type of the project | 
-**workflowId** | **String** |  | 
+**workflowId** | **String** | Identifier of current workflow | 
 
 

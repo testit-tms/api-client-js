@@ -17,7 +17,7 @@ import AttachmentApiResult from './AttachmentApiResult';
 /**
  * The StepCommentApiModel model module.
  * @module model/StepCommentApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class StepCommentApiModel {
     /**

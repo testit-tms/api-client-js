@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The TestResultLinkApiResult model module.
  * @module model/TestResultLinkApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestResultLinkApiResult {
     /**

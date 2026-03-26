@@ -1139,7 +1139,7 @@ Name | Type | Description  | Notes
 
 ## getWorkItemById
 
-> WorkItemModel getWorkItemById(id, opts)
+> WorkItemApiResult getWorkItemById(id, opts)
 
 Get Test Case, Checklist or Shared Step by Id or GlobalId
 
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WorkItemModel**](WorkItemModel.md)
+[**WorkItemApiResult**](WorkItemApiResult.md)
 
 ### Authorization
 

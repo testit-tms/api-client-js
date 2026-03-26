@@ -18,7 +18,7 @@ import StepPutModel from './StepPutModel';
 /**
  * The SectionPutModel model module.
  * @module model/SectionPutModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class SectionPutModel {
     /**

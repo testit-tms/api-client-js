@@ -18,7 +18,7 @@ import AutoTestFilterApiModel from './AutoTestFilterApiModel';
 /**
  * The AutoTestSelectApiModel model module.
  * @module model/AutoTestSelectApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AutoTestSelectApiModel {
     /**

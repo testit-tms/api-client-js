@@ -23,7 +23,7 @@
 | 5.4.1   | 6.2.2-TMS-5.4.1 |
 | 5.5     | 6.4.0-TMS-5.5   |
 | 5.6     | 7.1.0-TMS-5.6   |
-| Cloud   | 7.2.0 +         |
+| Cloud   | 7.2.4 +         |
 
 
 1. For current versions, see the releases tab. 
@@ -853,6 +853,9 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkItemLocalSelectModel](docs/WorkItemLocalSelectModel.md)
  - [TestitApiClient.WorkItemModel](docs/WorkItemModel.md)
  - [TestitApiClient.WorkItemMovePostModel](docs/WorkItemMovePostModel.md)
+ - [TestitApiClient.WorkItemParameterKeyApiModel](docs/WorkItemParameterKeyApiModel.md)
+ - [TestitApiClient.WorkItemParameterKeyApiResult](docs/WorkItemParameterKeyApiResult.md)
+ - [TestitApiClient.WorkItemParameterKeyModel](docs/WorkItemParameterKeyModel.md)
  - [TestitApiClient.WorkItemPreviewApiModel](docs/WorkItemPreviewApiModel.md)
  - [TestitApiClient.WorkItemPreviewStepApiModel](docs/WorkItemPreviewStepApiModel.md)
  - [TestitApiClient.WorkItemPriority](docs/WorkItemPriority.md)

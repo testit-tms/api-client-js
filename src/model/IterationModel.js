@@ -17,7 +17,7 @@ import ParameterShortModel from './ParameterShortModel';
 /**
  * The IterationModel model module.
  * @module model/IterationModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class IterationModel {
     /**

@@ -156,6 +156,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property parameters (base name: "parameters")', function() {
+      // uncomment below and update the code to test the property parameters
+      //var instance = new TestitApiClient.CreateWorkItemApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

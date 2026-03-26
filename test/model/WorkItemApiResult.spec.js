@@ -216,6 +216,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property parameters (base name: "parameters")', function() {
+      // uncomment below and update the code to test the property parameters
+      //var instance = new TestitApiClient.WorkItemApiResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property createdDate (base name: "createdDate")', function() {
       // uncomment below and update the code to test the property createdDate
       //var instance = new TestitApiClient.WorkItemApiResult();

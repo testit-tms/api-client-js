@@ -20,6 +20,7 @@ import LinkModel from './LinkModel';
 import StepModel from './StepModel';
 import TagModel from './TagModel';
 import WorkItemEntityTypeApiModel from './WorkItemEntityTypeApiModel';
+import WorkItemParameterKeyApiResult from './WorkItemParameterKeyApiResult';
 import WorkItemPriorityApiModel from './WorkItemPriorityApiModel';
 import WorkItemSourceTypeApiModel from './WorkItemSourceTypeApiModel';
 import WorkItemStateApiModel from './WorkItemStateApiModel';
@@ -27,7 +28,7 @@ import WorkItemStateApiModel from './WorkItemStateApiModel';
 /**
  * The WorkItemApiResult model module.
  * @module model/WorkItemApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class WorkItemApiResult {
     /**
@@ -59,13 +60,14 @@ class WorkItemApiResult {
      * @param attachments {Array.<module:model/AttachmentModel>} Files attached to the work item
      * @param links {Array.<module:model/LinkModel>} Set of links related to the work item
      * @param externalIssues {Array.<module:model/ExternalIssueApiResult>} Set of external issues related to the work item
+     * @param parameters {Array.<module:model/WorkItemParameterKeyApiResult>} Set of parameters related to the work item
      * @param createdDate {Date} Creation date of the work item
      * @param createdById {String} Unique identifier of the work item creator
      * @param isDeleted {Boolean} Indicates whether the work item is marked as deleted
      */
-    constructor(id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, createdDate, createdById, isDeleted) { 
+    constructor(id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, parameters, createdDate, createdById, isDeleted) { 
         
-        WorkItemApiResult.initialize(this, id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, createdDate, createdById, isDeleted);
+        WorkItemApiResult.initialize(this, id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, parameters, createdDate, createdById, isDeleted);
     }
 
     /**
@@ -73,7 +75,7 @@ class WorkItemApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, createdDate, createdById, isDeleted) { 
+    static initialize(obj, id, globalId, versionId, versionNumber, projectId, sectionId, name, sourceType, entityTypeName, duration, medianDuration, state, priority, isAutomated, attributes, tags, sectionPreconditionSteps, sectionPostconditionSteps, preconditionSteps, steps, postconditionSteps, iterations, autoTests, attachments, links, externalIssues, parameters, createdDate, createdById, isDeleted) { 
         obj['id'] = id;
         obj['globalId'] = globalId;
         obj['versionId'] = versionId;
@@ -100,6 +102,7 @@ class WorkItemApiResult {
         obj['attachments'] = attachments;
         obj['links'] = links;
         obj['externalIssues'] = externalIssues;
+        obj['parameters'] = parameters;
         obj['createdDate'] = createdDate;
         obj['createdById'] = createdById;
         obj['isDeleted'] = isDeleted;
@@ -196,6 +199,9 @@ class WorkItemApiResult {
             }
             if (data.hasOwnProperty('externalIssues')) {
                 obj['externalIssues'] = ApiClient.convertToType(data['externalIssues'], [ExternalIssueApiResult]);
+            }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyApiResult]);
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], 'Date');
@@ -362,6 +368,16 @@ class WorkItemApiResult {
                 ExternalIssueApiResult.validateJSON(item);
             };
         }
+        if (data['parameters']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['parameters'])) {
+                throw new Error("Expected the field `parameters` to be an array in the JSON data but got " + data['parameters']);
+            }
+            // validate the optional field `parameters` (array)
+            for (const item of data['parameters']) {
+                WorkItemParameterKeyApiResult.validateJSON(item);
+            };
+        }
         // ensure the json data is a string
         if (data['createdById'] && !(typeof data['createdById'] === 'string' || data['createdById'] instanceof String)) {
             throw new Error("Expected the field `createdById` to be a primitive type in the JSON string but got " + data['createdById']);
@@ -377,7 +393,7 @@ class WorkItemApiResult {
 
 }
 
-WorkItemApiResult.RequiredProperties = ["id", "globalId", "versionId", "versionNumber", "projectId", "sectionId", "name", "sourceType", "entityTypeName", "duration", "medianDuration", "state", "priority", "isAutomated", "attributes", "tags", "sectionPreconditionSteps", "sectionPostconditionSteps", "preconditionSteps", "steps", "postconditionSteps", "iterations", "autoTests", "attachments", "links", "externalIssues", "createdDate", "createdById", "isDeleted"];
+WorkItemApiResult.RequiredProperties = ["id", "globalId", "versionId", "versionNumber", "projectId", "sectionId", "name", "sourceType", "entityTypeName", "duration", "medianDuration", "state", "priority", "isAutomated", "attributes", "tags", "sectionPreconditionSteps", "sectionPostconditionSteps", "preconditionSteps", "steps", "postconditionSteps", "iterations", "autoTests", "attachments", "links", "externalIssues", "parameters", "createdDate", "createdById", "isDeleted"];
 
 /**
  * Unique identifier of the work item
@@ -539,6 +555,12 @@ WorkItemApiResult.prototype['links'] = undefined;
  * @member {Array.<module:model/ExternalIssueApiResult>} externalIssues
  */
 WorkItemApiResult.prototype['externalIssues'] = undefined;
+
+/**
+ * Set of parameters related to the work item
+ * @member {Array.<module:model/WorkItemParameterKeyApiResult>} parameters
+ */
+WorkItemApiResult.prototype['parameters'] = undefined;
 
 /**
  * Creation date of the work item

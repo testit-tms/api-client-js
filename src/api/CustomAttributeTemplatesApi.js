@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * CustomAttributeTemplates service.
 * @module api/CustomAttributeTemplatesApi
-* @version 7.2.3
+* @version 7.2.4
 */
 export default class CustomAttributeTemplatesApi {
 

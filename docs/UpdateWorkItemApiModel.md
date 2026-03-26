@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **attachments** | [**[AssignAttachmentApiModel]**](AssignAttachmentApiModel.md) |  | 
 **iterations** | [**[AssignIterationApiModel]**](AssignIterationApiModel.md) | Collection of parameter id sets | [optional] 
 **autoTests** | [**[AutoTestIdModel]**](AutoTestIdModel.md) | Collection of autotest internal ids | [optional] 
+**parameters** | [**[WorkItemParameterKeyApiModel]**](WorkItemParameterKeyApiModel.md) | Set of parameter keys related to the work item | [optional] 
 
 

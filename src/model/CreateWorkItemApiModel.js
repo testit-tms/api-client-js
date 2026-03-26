@@ -19,13 +19,14 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 import CreateStepApiModel from './CreateStepApiModel';
 import TagModel from './TagModel';
 import WorkItemEntityTypeApiModel from './WorkItemEntityTypeApiModel';
+import WorkItemParameterKeyApiModel from './WorkItemParameterKeyApiModel';
 import WorkItemPriorityApiModel from './WorkItemPriorityApiModel';
 import WorkItemStateApiModel from './WorkItemStateApiModel';
 
 /**
  * The CreateWorkItemApiModel model module.
  * @module model/CreateWorkItemApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class CreateWorkItemApiModel {
     /**
@@ -130,6 +131,9 @@ class CreateWorkItemApiModel {
             }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
+            }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyApiModel]);
             }
         }
         return obj;
@@ -243,6 +247,16 @@ class CreateWorkItemApiModel {
                 CreateLinkApiModel.validateJSON(item);
             };
         }
+        if (data['parameters']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['parameters'])) {
+                throw new Error("Expected the field `parameters` to be an array in the JSON data but got " + data['parameters']);
+            }
+            // validate the optional field `parameters` (array)
+            for (const item of data['parameters']) {
+                WorkItemParameterKeyApiModel.validateJSON(item);
+            };
+        }
 
         return true;
     }
@@ -353,6 +367,12 @@ CreateWorkItemApiModel.prototype['attachments'] = undefined;
  * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 CreateWorkItemApiModel.prototype['links'] = undefined;
+
+/**
+ * Set of parameter keys related to the work item
+ * @member {Array.<module:model/WorkItemParameterKeyApiModel>} parameters
+ */
+CreateWorkItemApiModel.prototype['parameters'] = undefined;
 
 
 

@@ -21,7 +21,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemShortApiResult model module.
  * @module model/WorkItemShortApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class WorkItemShortApiResult {
     /**

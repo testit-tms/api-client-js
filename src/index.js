@@ -491,6 +491,9 @@ import WorkItemLocalFilterModel from './model/WorkItemLocalFilterModel';
 import WorkItemLocalSelectModel from './model/WorkItemLocalSelectModel';
 import WorkItemModel from './model/WorkItemModel';
 import WorkItemMovePostModel from './model/WorkItemMovePostModel';
+import WorkItemParameterKeyApiModel from './model/WorkItemParameterKeyApiModel';
+import WorkItemParameterKeyApiResult from './model/WorkItemParameterKeyApiResult';
+import WorkItemParameterKeyModel from './model/WorkItemParameterKeyModel';
 import WorkItemPreviewApiModel from './model/WorkItemPreviewApiModel';
 import WorkItemPreviewStepApiModel from './model/WorkItemPreviewStepApiModel';
 import WorkItemPriority from './model/WorkItemPriority';
@@ -586,7 +589,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.3
+* @version 7.2.4
 */
 export {
     /**
@@ -3462,6 +3465,24 @@ export {
      * @property {module:model/WorkItemMovePostModel}
      */
     WorkItemMovePostModel,
+
+    /**
+     * The WorkItemParameterKeyApiModel model constructor.
+     * @property {module:model/WorkItemParameterKeyApiModel}
+     */
+    WorkItemParameterKeyApiModel,
+
+    /**
+     * The WorkItemParameterKeyApiResult model constructor.
+     * @property {module:model/WorkItemParameterKeyApiResult}
+     */
+    WorkItemParameterKeyApiResult,
+
+    /**
+     * The WorkItemParameterKeyModel model constructor.
+     * @property {module:model/WorkItemParameterKeyModel}
+     */
+    WorkItemParameterKeyModel,
 
     /**
      * The WorkItemPreviewApiModel model constructor.

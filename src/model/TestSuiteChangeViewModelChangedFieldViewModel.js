@@ -17,7 +17,7 @@ import TestSuiteChangeViewModel from './TestSuiteChangeViewModel';
 /**
  * The TestSuiteChangeViewModelChangedFieldViewModel model module.
  * @module model/TestSuiteChangeViewModelChangedFieldViewModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestSuiteChangeViewModelChangedFieldViewModel {
     /**

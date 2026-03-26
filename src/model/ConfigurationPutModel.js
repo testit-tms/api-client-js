@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationPutModel model module.
  * @module model/ConfigurationPutModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class ConfigurationPutModel {
     /**

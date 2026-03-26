@@ -40,7 +40,7 @@ import WorkItemVersionModel from '../model/WorkItemVersionModel';
 /**
 * WorkItems service.
 * @module api/WorkItemsApi
-* @version 7.2.3
+* @version 7.2.4
 */
 export default class WorkItemsApi {
 
@@ -1164,7 +1164,7 @@ export default class WorkItemsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [versionId] WorkItem version (guid format) identifier\"
      * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemApiResult} and HTTP response
      */
     getWorkItemByIdWithHttpInfo(id, opts) {
       opts = opts || {};
@@ -1189,7 +1189,7 @@ export default class WorkItemsApi {
       let authNames = ['Bearer or PrivateToken'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = WorkItemModel;
+      let returnType = WorkItemApiResult;
       return this.apiClient.callApi(
         '/api/v2/workItems/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1204,7 +1204,7 @@ export default class WorkItemsApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.versionId WorkItem version (guid format) identifier\"
      * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemApiResult}
      */
     getWorkItemById(id, opts) {
       return this.getWorkItemByIdWithHttpInfo(id, opts)

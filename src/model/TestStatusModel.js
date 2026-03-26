@@ -17,7 +17,7 @@ import TestStatusType from './TestStatusType';
 /**
  * The TestStatusModel model module.
  * @module model/TestStatusModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestStatusModel {
     /**

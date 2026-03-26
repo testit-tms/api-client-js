@@ -17,7 +17,7 @@ import AutoTestSelectModel from './AutoTestSelectModel';
 /**
  * The AutoTestBulkDeleteApiModel model module.
  * @module model/AutoTestBulkDeleteApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AutoTestBulkDeleteApiModel {
     /**

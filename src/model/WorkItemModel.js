@@ -20,6 +20,7 @@ import LinkModel from './LinkModel';
 import StepModel from './StepModel';
 import TagModel from './TagModel';
 import WorkItemEntityTypes from './WorkItemEntityTypes';
+import WorkItemParameterKeyModel from './WorkItemParameterKeyModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
@@ -27,7 +28,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemModel model module.
  * @module model/WorkItemModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class WorkItemModel {
     /**
@@ -44,6 +45,7 @@ class WorkItemModel {
      * @param createdById {String} 
      * @param globalId {Number} 
      * @param externalIssues {Array.<module:model/ExternalIssueModel>} 
+     * @param parameters {Array.<module:model/WorkItemParameterKeyModel>} 
      * @param id {String} 
      * @param sectionId {String} 
      * @param state {module:model/WorkItemStates} 
@@ -58,9 +60,9 @@ class WorkItemModel {
      * @param links {Array.<module:model/LinkModel>} 
      * @param name {String} 
      */
-    constructor(versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
+    constructor(versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
         
-        WorkItemModel.initialize(this, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name);
+        WorkItemModel.initialize(this, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name);
     }
 
     /**
@@ -68,7 +70,7 @@ class WorkItemModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
+    static initialize(obj, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
         obj['versionId'] = versionId;
         obj['medianDuration'] = medianDuration;
         obj['isDeleted'] = isDeleted;
@@ -80,6 +82,7 @@ class WorkItemModel {
         obj['createdById'] = createdById;
         obj['globalId'] = globalId;
         obj['externalIssues'] = externalIssues;
+        obj['parameters'] = parameters;
         obj['id'] = id;
         obj['sectionId'] = sectionId;
         obj['state'] = state;
@@ -159,6 +162,9 @@ class WorkItemModel {
             }
             if (data.hasOwnProperty('externalIssues')) {
                 obj['externalIssues'] = ApiClient.convertToType(data['externalIssues'], [ExternalIssueModel]);
+            }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyModel]);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -294,6 +300,16 @@ class WorkItemModel {
                 ExternalIssueModel.validateJSON(item);
             };
         }
+        if (data['parameters']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['parameters'])) {
+                throw new Error("Expected the field `parameters` to be an array in the JSON data but got " + data['parameters']);
+            }
+            // validate the optional field `parameters` (array)
+            for (const item of data['parameters']) {
+                WorkItemParameterKeyModel.validateJSON(item);
+            };
+        }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
@@ -367,7 +383,7 @@ class WorkItemModel {
 
 }
 
-WorkItemModel.RequiredProperties = ["versionId", "medianDuration", "isDeleted", "projectId", "entityTypeName", "isAutomated", "versionNumber", "createdDate", "createdById", "globalId", "externalIssues", "id", "sectionId", "state", "priority", "sourceType", "steps", "preconditionSteps", "postconditionSteps", "duration", "attributes", "tags", "links", "name"];
+WorkItemModel.RequiredProperties = ["versionId", "medianDuration", "isDeleted", "projectId", "entityTypeName", "isAutomated", "versionNumber", "createdDate", "createdById", "globalId", "externalIssues", "parameters", "id", "sectionId", "state", "priority", "sourceType", "steps", "preconditionSteps", "postconditionSteps", "duration", "attributes", "tags", "links", "name"];
 
 /**
  * used for versioning changes in workitem
@@ -461,6 +477,11 @@ WorkItemModel.prototype['globalId'] = undefined;
  * @member {Array.<module:model/ExternalIssueModel>} externalIssues
  */
 WorkItemModel.prototype['externalIssues'] = undefined;
+
+/**
+ * @member {Array.<module:model/WorkItemParameterKeyModel>} parameters
+ */
+WorkItemModel.prototype['parameters'] = undefined;
 
 /**
  * @member {String} id

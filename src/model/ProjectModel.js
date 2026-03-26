@@ -18,7 +18,7 @@ import ProjectTypeModel from './ProjectTypeModel';
 /**
  * The ProjectModel model module.
  * @module model/ProjectModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class ProjectModel {
     /**
@@ -32,7 +32,7 @@ class ProjectModel {
      * @param createdById {String} Unique ID of the project creator
      * @param globalId {Number} Global ID of the project
      * @param type {module:model/ProjectTypeModel} Type of the project
-     * @param workflowId {String} 
+     * @param workflowId {String} Identifier of current workflow
      */
     constructor(id, name, isFavorite, isDeleted, createdDate, createdById, globalId, type, workflowId) { 
         
@@ -293,6 +293,7 @@ ProjectModel.prototype['globalId'] = undefined;
 ProjectModel.prototype['type'] = undefined;
 
 /**
+ * Identifier of current workflow
  * @member {String} workflowId
  */
 ProjectModel.prototype['workflowId'] = undefined;
