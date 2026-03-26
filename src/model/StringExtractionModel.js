@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StringExtractionModel model module.
  * @module model/StringExtractionModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class StringExtractionModel {
     /**

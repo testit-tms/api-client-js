@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalIssueApiPriority model module.
  * @module model/ExternalIssueApiPriority
- * @version 7.2.3
+ * @version 7.2.4
  */
 class ExternalIssueApiPriority {
     /**

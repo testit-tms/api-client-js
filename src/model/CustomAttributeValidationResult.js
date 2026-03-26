@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeValidationResult model module.
  * @module model/CustomAttributeValidationResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class CustomAttributeValidationResult {
     /**

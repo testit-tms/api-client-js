@@ -19,7 +19,7 @@ import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 /**
  * The AutoTestFilterModel model module.
  * @module model/AutoTestFilterModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AutoTestFilterModel {
     /**

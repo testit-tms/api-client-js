@@ -19,7 +19,7 @@ import TestPointSelector from './TestPointSelector';
 /**
  * The CreateTestRunAndFillByConfigurationsApiModel model module.
  * @module model/CreateTestRunAndFillByConfigurationsApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class CreateTestRunAndFillByConfigurationsApiModel {
     /**

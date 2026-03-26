@@ -513,6 +513,9 @@ docs/WorkItemLocalFilterModel.md
 docs/WorkItemLocalSelectModel.md
 docs/WorkItemModel.md
 docs/WorkItemMovePostModel.md
+docs/WorkItemParameterKeyApiModel.md
+docs/WorkItemParameterKeyApiResult.md
+docs/WorkItemParameterKeyModel.md
 docs/WorkItemPreviewApiModel.md
 docs/WorkItemPreviewStepApiModel.md
 docs/WorkItemPriority.md
@@ -1063,6 +1066,9 @@ src/model/WorkItemLocalFilterModel.js
 src/model/WorkItemLocalSelectModel.js
 src/model/WorkItemModel.js
 src/model/WorkItemMovePostModel.js
+src/model/WorkItemParameterKeyApiModel.js
+src/model/WorkItemParameterKeyApiResult.js
+src/model/WorkItemParameterKeyModel.js
 src/model/WorkItemPreviewApiModel.js
 src/model/WorkItemPreviewStepApiModel.js
 src/model/WorkItemPriority.js
@@ -1605,6 +1611,9 @@ test/model/WorkItemLocalFilterModel.spec.js
 test/model/WorkItemLocalSelectModel.spec.js
 test/model/WorkItemModel.spec.js
 test/model/WorkItemMovePostModel.spec.js
+test/model/WorkItemParameterKeyApiModel.spec.js
+test/model/WorkItemParameterKeyApiResult.spec.js
+test/model/WorkItemParameterKeyModel.spec.js
 test/model/WorkItemPreviewApiModel.spec.js
 test/model/WorkItemPreviewStepApiModel.spec.js
 test/model/WorkItemPriority.spec.js

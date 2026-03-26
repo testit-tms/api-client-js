@@ -18,6 +18,7 @@ import AutoTestIdModel from './AutoTestIdModel';
 import TagModel from './TagModel';
 import UpdateLinkApiModel from './UpdateLinkApiModel';
 import UpdateStepApiModel from './UpdateStepApiModel';
+import WorkItemParameterKeyApiModel from './WorkItemParameterKeyApiModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
@@ -25,7 +26,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The UpdateWorkItemApiModel model module.
  * @module model/UpdateWorkItemApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class UpdateWorkItemApiModel {
     /**
@@ -132,6 +133,9 @@ class UpdateWorkItemApiModel {
             }
             if (data.hasOwnProperty('autoTests')) {
                 obj['autoTests'] = ApiClient.convertToType(data['autoTests'], [AutoTestIdModel]);
+            }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyApiModel]);
             }
         }
         return obj;
@@ -245,6 +249,16 @@ class UpdateWorkItemApiModel {
                 AutoTestIdModel.validateJSON(item);
             };
         }
+        if (data['parameters']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['parameters'])) {
+                throw new Error("Expected the field `parameters` to be an array in the JSON data but got " + data['parameters']);
+            }
+            // validate the optional field `parameters` (array)
+            for (const item of data['parameters']) {
+                WorkItemParameterKeyApiModel.validateJSON(item);
+            };
+        }
 
         return true;
     }
@@ -351,6 +365,12 @@ UpdateWorkItemApiModel.prototype['iterations'] = undefined;
  * @member {Array.<module:model/AutoTestIdModel>} autoTests
  */
 UpdateWorkItemApiModel.prototype['autoTests'] = undefined;
+
+/**
+ * Set of parameter keys related to the work item
+ * @member {Array.<module:model/WorkItemParameterKeyApiModel>} parameters
+ */
+UpdateWorkItemApiModel.prototype['parameters'] = undefined;
 
 
 

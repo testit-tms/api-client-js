@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestBulkDeleteApiResult model module.
  * @module model/AutoTestBulkDeleteApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AutoTestBulkDeleteApiResult {
     /**

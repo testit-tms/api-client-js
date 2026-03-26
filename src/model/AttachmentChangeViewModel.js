@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AttachmentChangeViewModel model module.
  * @module model/AttachmentChangeViewModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AttachmentChangeViewModel {
     /**

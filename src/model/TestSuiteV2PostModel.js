@@ -17,7 +17,7 @@ import TestSuiteType from './TestSuiteType';
 /**
  * The TestSuiteV2PostModel model module.
  * @module model/TestSuiteV2PostModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestSuiteV2PostModel {
     /**

@@ -23,7 +23,7 @@ import TestStatusType from './TestStatusType';
 /**
  * The TestResultUpdateV2Request model module.
  * @module model/TestResultUpdateV2Request
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestResultUpdateV2Request {
     /**

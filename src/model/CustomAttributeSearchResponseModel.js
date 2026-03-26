@@ -19,7 +19,7 @@ import ProjectShortestModel from './ProjectShortestModel';
 /**
  * The CustomAttributeSearchResponseModel model module.
  * @module model/CustomAttributeSearchResponseModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class CustomAttributeSearchResponseModel {
     /**

@@ -21,5 +21,6 @@ Name | Type | Description | Notes
 **autoTests** | [**[AutoTestIdModel]**](AutoTestIdModel.md) | Automated tests associated with the work item | [optional] 
 **attachments** | [**[AssignAttachmentApiModel]**](AssignAttachmentApiModel.md) | Files attached to the work item | [optional] 
 **links** | [**[CreateLinkApiModel]**](CreateLinkApiModel.md) | Set of links related to the work item | 
+**parameters** | [**[WorkItemParameterKeyApiModel]**](WorkItemParameterKeyApiModel.md) | Set of parameter keys related to the work item | [optional] 
 
 

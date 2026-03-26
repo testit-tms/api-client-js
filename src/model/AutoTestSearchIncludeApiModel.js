@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestSearchIncludeApiModel model module.
  * @module model/AutoTestSearchIncludeApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class AutoTestSearchIncludeApiModel {
     /**

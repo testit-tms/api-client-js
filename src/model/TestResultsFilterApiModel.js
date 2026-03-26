@@ -16,11 +16,12 @@ import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import FailureCategoryModel from './FailureCategoryModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
 import TestResultOutcome from './TestResultOutcome';
+import TestStatusApiType from './TestStatusApiType';
 
 /**
  * The TestResultsFilterApiModel model module.
  * @module model/TestResultsFilterApiModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class TestResultsFilterApiModel {
     /**
@@ -59,6 +60,9 @@ class TestResultsFilterApiModel {
             }
             if (data.hasOwnProperty('statusCodes')) {
                 obj['statusCodes'] = ApiClient.convertToType(data['statusCodes'], ['String']);
+            }
+            if (data.hasOwnProperty('statusTypes')) {
+                obj['statusTypes'] = ApiClient.convertToType(data['statusTypes'], [TestStatusApiType]);
             }
             if (data.hasOwnProperty('failureCategories')) {
                 obj['failureCategories'] = ApiClient.convertToType(data['failureCategories'], [FailureCategoryModel]);
@@ -123,6 +127,10 @@ class TestResultsFilterApiModel {
         // ensure the json data is an array
         if (!Array.isArray(data['statusCodes'])) {
             throw new Error("Expected the field `statusCodes` to be an array in the JSON data but got " + data['statusCodes']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['statusTypes'])) {
+            throw new Error("Expected the field `statusTypes` to be an array in the JSON data but got " + data['statusTypes']);
         }
         // ensure the json data is an array
         if (!Array.isArray(data['failureCategories'])) {
@@ -206,6 +214,12 @@ TestResultsFilterApiModel.prototype['outcomes'] = undefined;
  * @member {Array.<String>} statusCodes
  */
 TestResultsFilterApiModel.prototype['statusCodes'] = undefined;
+
+/**
+ * Specifies a test result status types to search for
+ * @member {Array.<module:model/TestStatusApiType>} statusTypes
+ */
+TestResultsFilterApiModel.prototype['statusTypes'] = undefined;
 
 /**
  * Specifies a test result failure categories to search for

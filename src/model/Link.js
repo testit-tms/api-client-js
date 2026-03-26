@@ -17,7 +17,7 @@ import LinkType from './LinkType';
 /**
  * The Link model module.
  * @module model/Link
- * @version 7.2.3
+ * @version 7.2.4
  */
 class Link {
     /**

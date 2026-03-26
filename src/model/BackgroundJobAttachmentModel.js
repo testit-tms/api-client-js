@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The BackgroundJobAttachmentModel model module.
  * @module model/BackgroundJobAttachmentModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class BackgroundJobAttachmentModel {
     /**

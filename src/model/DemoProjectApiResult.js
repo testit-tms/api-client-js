@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DemoProjectApiResult model module.
  * @module model/DemoProjectApiResult
- * @version 7.2.3
+ * @version 7.2.4
  */
 class DemoProjectApiResult {
     /**

@@ -18,7 +18,7 @@ import ExternalIssueTypeModel from './ExternalIssueTypeModel';
 /**
  * The ExternalIssueMetadataModel model module.
  * @module model/ExternalIssueMetadataModel
- * @version 7.2.3
+ * @version 7.2.4
  */
 class ExternalIssueMetadataModel {
     /**
