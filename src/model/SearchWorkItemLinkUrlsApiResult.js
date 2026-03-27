@@ -17,7 +17,7 @@ import WorkItemLinkUrlApiResult from './WorkItemLinkUrlApiResult';
 /**
  * The SearchWorkItemLinkUrlsApiResult model module.
  * @module model/SearchWorkItemLinkUrlsApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class SearchWorkItemLinkUrlsApiResult {
     /**

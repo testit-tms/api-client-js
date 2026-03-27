@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestRunGroupByStatusApiResult model module.
  * @module model/TestRunGroupByStatusApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestRunGroupByStatusApiResult {
     /**

@@ -17,7 +17,7 @@ import TestPlanChangedFieldsViewModel from './TestPlanChangedFieldsViewModel';
 /**
  * The TestPlanChangeModel model module.
  * @module model/TestPlanChangeModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestPlanChangeModel {
     /**

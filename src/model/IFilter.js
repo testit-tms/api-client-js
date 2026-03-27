@@ -20,7 +20,7 @@ import Filter from './Filter';
 /**
  * The IFilter model module.
  * @module model/IFilter
- * @version 7.2.4
+ * @version 7.2.6
  */
 class IFilter {
     /**

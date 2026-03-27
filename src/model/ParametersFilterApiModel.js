@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParametersFilterApiModel model module.
  * @module model/ParametersFilterApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ParametersFilterApiModel {
     /**

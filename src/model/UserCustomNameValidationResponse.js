@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserCustomNameValidationResponse model module.
  * @module model/UserCustomNameValidationResponse
- * @version 7.2.4
+ * @version 7.2.6
  */
 class UserCustomNameValidationResponse {
     /**

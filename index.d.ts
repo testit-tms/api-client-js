@@ -2,7 +2,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
   /**
   * Attachments service.
   * @module api/AttachmentsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class AttachmentsApi {
       /**
@@ -37,7 +37,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
        * @param {Boolean} [preview] If image must be converted to a preview (lower quality, no animation)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2AttachmentsIdGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2AttachmentsIdGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Download attachment file
        * @param {String} id
@@ -85,7 +85,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
        * @param {File} [file]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentModel} and HTTP response
        */
-      apiV2AttachmentsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2AttachmentsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Upload new attachment file
        * File size is restricted to 50 MB (52 428 800 bytes)
@@ -103,7 +103,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
   /**
   * AutoTests service.
   * @module api/AutoTestsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class AutoTestsApi {
       /**
@@ -121,7 +121,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestBulkDeleteApiModel} [autoTestBulkDeleteApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestBulkDeleteApiResult} and HTTP response
        */
-      apiV2AutoTestsDeleteWithHttpInfo(opts: any): Promise<any>;
+      apiV2AutoTestsDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete autotests
        * @param {Object} opts Optional parameters
@@ -143,7 +143,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestFlakyBulkApiModel} [autoTestFlakyBulkApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2AutoTestsFlakyBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2AutoTestsFlakyBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Set \"Flaky\" status for multiple autotests
        * User permissions for project: - Read only - Execute - Write - Full control
@@ -172,7 +172,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2AutoTestsIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2AutoTestsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch auto test
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -181,7 +181,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2AutoTestsIdPatch(id: string, opts: any): Promise<any>;
+      apiV2AutoTestsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history for autotest
        *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
@@ -195,7 +195,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestResultHistorySelectApiModel} [autoTestResultHistorySelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestResultHistoryApiResult>} and HTTP response
        */
-      apiV2AutoTestsIdTestResultsSearchPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2AutoTestsIdTestResultsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history for autotest
        *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
@@ -258,7 +258,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestSearchApiModel} [autoTestSearchApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
        */
-      apiV2AutoTestsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2AutoTestsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for autotests
        * @param {Object} opts Optional parameters
@@ -285,7 +285,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestCreateApiModel} [autoTestCreateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
        */
-      createAutoTestWithHttpInfo(opts: any): Promise<any>;
+      createAutoTestWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create autotest
        *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
@@ -303,7 +303,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/AutoTestCreateApiModel>} [autoTestCreateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
        */
-      createMultipleWithHttpInfo(opts: any): Promise<any>;
+      createMultipleWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create multiple autotests
        *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
@@ -311,7 +311,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/AutoTestCreateApiModel>} opts.autoTestCreateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestApiResult>}
        */
-      createMultiple(opts: any): Promise<any>;
+      createMultiple(opts: Object): Promise<any>;
       /**
        * Delete autotest
        *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
@@ -334,7 +334,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {String} [workItemId] Work item internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      deleteAutoTestLinkFromWorkItemWithHttpInfo(id: string, opts: any): Promise<any>;
+      deleteAutoTestLinkFromWorkItemWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Unlink autotest from work item
        *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
@@ -376,7 +376,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestModel>} and HTTP response
        */
-      getAllAutoTestsWithHttpInfo(opts: any): Promise<any>;
+      getAllAutoTestsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {String} opts.projectId Project internal ID
@@ -500,7 +500,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Boolean} [isWorkItemDeleted = false)] OBSOLETE: Use `isDeleted` instead
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestWorkItemIdentifierApiResult>} and HTTP response
        */
-      getWorkItemsLinkedToAutoTestWithHttpInfo(id: string, opts: any): Promise<any>;
+      getWorkItemsLinkedToAutoTestWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get work items linked to autotest
        *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
@@ -522,7 +522,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/WorkItemIdApiModel} [workItemIdApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      linkAutoTestToWorkItemWithHttpInfo(id: string, opts: any): Promise<any>;
+      linkAutoTestToWorkItemWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Link autotest with work items
        *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
@@ -541,7 +541,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {module:model/AutoTestUpdateApiModel} [autoTestUpdateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateAutoTestWithHttpInfo(opts: any): Promise<any>;
+      updateAutoTestWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update autotest
        *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
@@ -559,7 +559,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/AutoTestUpdateApiModel>} [autoTestUpdateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateMultipleWithHttpInfo(opts: any): Promise<any>;
+      updateMultipleWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update multiple autotests
        *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
@@ -567,7 +567,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
        * @param {Array.<module:model/AutoTestUpdateApiModel>} opts.autoTestUpdateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      updateMultiple(opts: any): Promise<any>;
+      updateMultiple(opts: Object): Promise<any>;
   }
 
 }
@@ -575,7 +575,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
   /**
   * BackgroundJobs service.
   * @module api/BackgroundJobsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class BackgroundJobsApi {
       /**
@@ -606,7 +606,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BackgroundJobGetModel>} and HTTP response
        */
-      apiV2BackgroundJobsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2BackgroundJobsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -670,7 +670,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
        * @param {module:model/BackgroundJobFilterModel} [backgroundJobFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/BackgroundJobGetModel>} and HTTP response
        */
-      apiV2BackgroundJobsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2BackgroundJobsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for user background jobs
        * @param {Object} opts Optional parameters
@@ -697,7 +697,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
   /**
   * Configurations service.
   * @module api/ConfigurationsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ConfigurationsApi {
       /**
@@ -715,7 +715,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationByParametersModel} [configurationByParametersModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2ConfigurationsCreateByParametersPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsCreateByParametersPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create configurations by parameters
        * @param {Object} opts Optional parameters
@@ -731,7 +731,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationSelectApiModel} [configurationSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2ConfigurationsDeleteBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsDeleteBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete multiple configurations
        * @param {Object} opts Optional parameters
@@ -761,7 +761,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ConfigurationsIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2ConfigurationsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch configuration
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -770,7 +770,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2ConfigurationsIdPatch(id: string, opts: any): Promise<any>;
+      apiV2ConfigurationsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Permanently delete configuration from archive
        * @param {String} id Unique or global ID of the configuration
@@ -801,7 +801,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationSelectModel} [configurationSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2ConfigurationsPurgeBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsPurgeBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Permanently delete multiple archived configurations
        * @param {Object} opts Optional parameters
@@ -817,7 +817,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationPutModel} [configurationPutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ConfigurationsPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Edit configuration
        * @param {Object} opts Optional parameters
@@ -833,7 +833,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationSelectModel} [configurationSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2ConfigurationsRestoreBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsRestoreBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Restore multiple configurations from the archive
        * @param {Object} opts Optional parameters
@@ -854,7 +854,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationFilterModel} [configurationFilterModel] Model containing all the filters
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
        */
-      apiV2ConfigurationsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ConfigurationsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for configurations
        * @param {Object} opts Optional parameters
@@ -881,7 +881,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
        * @param {module:model/ConfigurationPostModel} [configurationPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ConfigurationModel} and HTTP response
        */
-      createConfigurationWithHttpInfo(opts: any): Promise<any>;
+      createConfigurationWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create Configuration
        *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
@@ -913,7 +913,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
   /**
   * CustomAttributes service.
   * @module api/CustomAttributesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class CustomAttributesApi {
       /**
@@ -931,7 +931,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
        * @param {Boolean} [isGlobal]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeValidationResult} and HTTP response
        */
-      apiV2CustomAttributesExistsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesExistsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {String} opts.name
@@ -961,7 +961,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
        * @param {module:model/GlobalCustomAttributeUpdateModel} [globalCustomAttributeUpdateModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
        */
-      apiV2CustomAttributesGlobalIdPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2CustomAttributesGlobalIdPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Edit global attribute
        * @param {String} id Unique ID of attribute
@@ -978,7 +978,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
        * @param {module:model/GlobalCustomAttributePostModel} [globalCustomAttributePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
        */
-      apiV2CustomAttributesGlobalPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesGlobalPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create global attribute
        * @param {Object} opts Optional parameters
@@ -1011,7 +1011,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
        * @param {module:model/CustomAttributeSearchQueryModel} [customAttributeSearchQueryModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeSearchResponseModel>} and HTTP response
        */
-      apiV2CustomAttributesSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for attributes
        * @param {Object} opts Optional parameters
@@ -1038,7 +1038,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
   /**
   * CustomAttributeTemplates service.
   * @module api/CustomAttributeTemplatesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class CustomAttributeTemplatesApi {
       /**
@@ -1055,7 +1055,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {String} [name]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateValidationResult} and HTTP response
        */
-      apiV2CustomAttributesTemplatesExistsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesExistsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {String} opts.name
@@ -1072,7 +1072,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Exclude CustomAttributes from CustomAttributeTemplate
        *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
@@ -1092,7 +1092,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Include CustomAttributes to CustomAttributeTemplate
        *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
@@ -1153,7 +1153,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {module:model/CustomAttributeTemplatePostModel} [customAttributeTemplatePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
        */
-      apiV2CustomAttributesTemplatesPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create CustomAttributeTemplate
        *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
@@ -1170,7 +1170,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {module:model/CustomAttributeTemplatePutModel} [customAttributeTemplatePutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2CustomAttributesTemplatesPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update custom attributes template
        * @param {Object} opts Optional parameters
@@ -1192,7 +1192,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
        * @param {module:model/CustomAttributeTemplateSearchQueryModel} [customAttributeTemplateSearchQueryModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SearchCustomAttributeTemplateGetModel>} and HTTP response
        */
-      apiV2CustomAttributesTemplatesSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2CustomAttributesTemplatesSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search CustomAttributeTemplates
        *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
@@ -1220,7 +1220,7 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
   /**
   * ExternalIssues service.
   * @module api/ExternalIssuesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ExternalIssuesApi {
       /**
@@ -1238,7 +1238,7 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
        * @param {module:model/GetExternalIssueSuggestionsApiModel} [getExternalIssueSuggestionsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionReply} and HTTP response
        */
-      apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Returns list of suggestions from available external issues
        * @param {Object} opts Optional parameters
@@ -1255,7 +1255,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
   /**
   * Notifications service.
   * @module api/NotificationsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class NotificationsApi {
       /**
@@ -1274,7 +1274,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
        * @param {Boolean} [isRead]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2NotificationsCountGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2NotificationsCountGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get unread Notifications total in last 7 days
        *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
@@ -1297,7 +1297,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/NotificationModel>} and HTTP response
        */
-      apiV2NotificationsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2NotificationsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all Notifications for current User
        *  Use case  User runs method execution  System returns notifications (listed in the response example)
@@ -1356,7 +1356,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
        * @param {module:model/NotificationQueryFilterModel} [notificationQueryFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/NotificationModel>} and HTTP response
        */
-      apiV2NotificationsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2NotificationsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search Notifications for current User
        *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
@@ -1384,7 +1384,7 @@ declare module 'testit-api-client/api/OpenIdConnectionsApi' {
   /**
   * OpenIdConnections service.
   * @module api/OpenIdConnectionsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class OpenIdConnectionsApi {
       /**
@@ -1411,7 +1411,7 @@ declare module 'testit-api-client/api/ParametersApi' {
   /**
   * Parameters service.
   * @module api/ParametersApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ParametersApi {
       /**
@@ -1430,7 +1430,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {Array.<module:model/CreateParameterApiModel>} [createParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
        */
-      apiV2ParametersBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create multiple parameters
        *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
@@ -1438,7 +1438,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {Array.<module:model/CreateParameterApiModel>} opts.createParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
        */
-      apiV2ParametersBulkPost(opts: any): Promise<any>;
+      apiV2ParametersBulkPost(opts: Object): Promise<any>;
       /**
        * Update multiple parameters
        *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
@@ -1446,7 +1446,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {Array.<module:model/UpdateParameterApiModel>} [updateParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ParametersBulkPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersBulkPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update multiple parameters
        *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
@@ -1454,7 +1454,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {Array.<module:model/UpdateParameterApiModel>} opts.updateParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2ParametersBulkPut(opts: any): Promise<any>;
+      apiV2ParametersBulkPut(opts: Object): Promise<any>;
       /**
        * Get parameters as group
        *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
@@ -1470,7 +1470,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterGroupApiResult>} and HTTP response
        */
-      apiV2ParametersGroupsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersGroupsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get parameters as group
        *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
@@ -1537,7 +1537,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2ParametersKeysGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersKeysGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all parameter keys
        *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
@@ -1569,7 +1569,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {module:model/ParameterGroupsFilterApiModel} [parameterGroupsFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterGroupApiResult>} and HTTP response
        */
-      apiV2ParametersSearchGroupsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersSearchGroupsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for parameters as group
        * @param {Object} opts Optional parameters
@@ -1600,7 +1600,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {module:model/ParametersFilterApiModel} [parametersFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
        */
-      apiV2ParametersSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ParametersSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for parameters
        * @param {Object} opts Optional parameters
@@ -1627,7 +1627,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {module:model/CreateParameterApiModel} [createParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
        */
-      createParameterWithHttpInfo(opts: any): Promise<any>;
+      createParameterWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create parameter
        *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
@@ -1692,7 +1692,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
        */
-      getAllParametersWithHttpInfo(opts: any): Promise<any>;
+      getAllParametersWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all parameters
        *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
@@ -1734,7 +1734,7 @@ declare module 'testit-api-client/api/ParametersApi' {
        * @param {module:model/UpdateParameterApiModel} [updateParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateParameterWithHttpInfo(opts: any): Promise<any>;
+      updateParameterWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update parameter
        *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
@@ -1752,7 +1752,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
   /**
   * ProjectAttributes service.
   * @module api/ProjectAttributesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectAttributesApi {
       /**
@@ -1772,7 +1772,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
        * @param {module:model/CustomAttributePostModel} [customAttributePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
        */
-      createProjectsAttributeWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      createProjectsAttributeWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Create project attribute
        *  Use case  User sets attribute parameters (listed in request example) and runs method execution  System search project  System creates attribute and relates it to the project  System returns project attribute properties (example listed in response parameters)
@@ -1824,7 +1824,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
        * @param {module:model/DeletionState} [isDeleted]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
        */
-      getAttributesByProjectIdWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      getAttributesByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project attributes
        *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project  [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all attributes related to project  System returns array of found attributes (listed in response model)
@@ -1848,7 +1848,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
        * @param {module:model/ProjectAttributesFilterModel} [projectAttributesFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeGetModel>} and HTTP response
        */
-      searchAttributesInProjectWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      searchAttributesInProjectWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for attributes used in the project
        * @param {String} projectId Unique or global project ID
@@ -1876,7 +1876,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
        * @param {module:model/CustomAttributePutModel} [customAttributePutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateProjectsAttributeWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      updateProjectsAttributeWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Edit attribute of the project
        * @param {String} projectId Unique or global project ID
@@ -1894,7 +1894,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
   /**
   * ProjectAttributeTemplates service.
   * @module api/ProjectAttributeTemplatesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectAttributeTemplatesApi {
       /**
@@ -1918,7 +1918,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
        * @param {module:model/ProjectCustomAttributesTemplatesFilterModel} [projectCustomAttributesTemplatesFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectCustomAttributeTemplateGetModel>} and HTTP response
        */
-      apiV2ProjectsProjectIdAttributesTemplatesSearchPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdAttributesTemplatesSearchPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for custom attributes templates
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -1978,7 +1978,7 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
   /**
   * ProjectConfigurations service.
   * @module api/ProjectConfigurationsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectConfigurationsApi {
       /**
@@ -2011,7 +2011,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
   /**
   * Projects service.
   * @module api/ProjectsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectsApi {
       /**
@@ -2031,7 +2031,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      addGlobalAttributesToProjectWithHttpInfo(id: string, opts: any): Promise<any>;
+      addGlobalAttributesToProjectWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add global attributes to project
        *  Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
@@ -2070,7 +2070,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {Boolean} [isDeleted]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FailureCategoryApiResult>} and HTTP response
        */
-      apiV2ProjectsIdFailureClassesGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2ProjectsIdFailureClassesGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get failure classes
        * @param {String} id Unique or global ID of the project
@@ -2115,7 +2115,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ProjectsIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2ProjectsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch project
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -2124,7 +2124,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2ProjectsIdPatch(id: string, opts: any): Promise<any>;
+      apiV2ProjectsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Purge the project
        * @param {String} id Unique or global ID of the project
@@ -2173,7 +2173,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ProjectsIdTestPlansAttributePutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2ProjectsIdTestPlansAttributePutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Update attribute of project's test plans
        *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
@@ -2206,7 +2206,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
        */
-      apiV2ProjectsIdTestRunsFullGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2ProjectsIdTestRunsFullGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Project TestRuns full models
        *  Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
@@ -2260,7 +2260,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/ProjectSelectModel} [projectSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2ProjectsPurgeBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ProjectsPurgeBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Purge multiple projects
        * @param {Object} opts Optional parameters
@@ -2276,7 +2276,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/ProjectSelectModel} [projectSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2ProjectsRestoreBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ProjectsRestoreBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Restore multiple projects
        * @param {Object} opts Optional parameters
@@ -2297,7 +2297,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/ProjectsFilterModel} [projectsFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
        */
-      apiV2ProjectsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ProjectsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for projects
        * @param {Object} opts Optional parameters
@@ -2324,7 +2324,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/GetShortProjectsApiModel} [getShortProjectsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultReply} and HTTP response
        */
-      apiV2ProjectsShortsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2ProjectsShortsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get projects short models
        *  Use case  User sets query params  User runs method execution  System return projects short models
@@ -2342,7 +2342,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/CreateProjectApiModel} [createProjectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectApiResult} and HTTP response
        */
-      createProjectWithHttpInfo(opts: any): Promise<any>;
+      createProjectWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create project
        *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
@@ -2378,7 +2378,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
        */
-      getAllProjectsWithHttpInfo(opts: any): Promise<any>;
+      getAllProjectsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all projects
        *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
@@ -2437,7 +2437,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {Boolean} [isDeleted] If result must consist of only actual/archived test plans
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanModel>} and HTTP response
        */
-      getTestPlansByProjectIdWithHttpInfo(id: string, opts: any): Promise<any>;
+      getTestPlansByProjectIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get project test plans
        *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
@@ -2468,7 +2468,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunV2ApiResult>} and HTTP response
        */
-      getTestRunsByProjectIdWithHttpInfo(id: string, notStarted: boolean, inProgress: boolean, stopped: boolean, completed: boolean, opts: any): Promise<any>;
+      getTestRunsByProjectIdWithHttpInfo(id: string, notStarted: boolean, inProgress: boolean, stopped: boolean, completed: boolean, opts: Object): Promise<any>;
       /**
        * Get project test runs
        *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
@@ -2505,7 +2505,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {module:model/UpdateProjectApiModel} [updateProjectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateProjectWithHttpInfo(opts: any): Promise<any>;
+      updateProjectWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update project
        *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
@@ -2523,7 +2523,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
   /**
   * ProjectSections service.
   * @module api/ProjectSectionsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectSectionsApi {
       /**
@@ -2547,7 +2547,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SectionModel>} and HTTP response
        */
-      getSectionsByProjectIdWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      getSectionsByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project sections
        *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
@@ -2574,7 +2574,7 @@ declare module 'testit-api-client/api/ProjectSettingsApi' {
   /**
   * ProjectSettings service.
   * @module api/ProjectSettingsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectSettingsApi {
       /**
@@ -2593,7 +2593,7 @@ declare module 'testit-api-client/api/ProjectSettingsApi' {
        * @param {module:model/AutoTestProjectSettingsApiModel} [autoTestProjectSettingsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ProjectsProjectIdSettingsAutotestsPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdSettingsAutotestsPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Set autotest project settings.
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -2623,7 +2623,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
   /**
   * ProjectTestPlanAttributes service.
   * @module api/ProjectTestPlanAttributesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectTestPlanAttributesApi {
       /**
@@ -2643,7 +2643,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      createCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      createCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Add attributes to project's test plans
        *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
@@ -2697,7 +2697,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
        * @param {module:model/ProjectAttributesFilterModel} [projectAttributesFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeGetModel>} and HTTP response
        */
-      searchTestPlanAttributesInProjectWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      searchTestPlanAttributesInProjectWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for attributes used in the project test plans
        * @param {String} projectId Unique or global project ID
@@ -2726,7 +2726,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      updateCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Update attribute of project's test plans
        *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
@@ -2745,7 +2745,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
   /**
   * ProjectTestPlans service.
   * @module api/ProjectTestPlansApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectTestPlansApi {
       /**
@@ -2771,7 +2771,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanWithAnalyticModel>} and HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansAnalyticsGetWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansAnalyticsGetWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get TestPlans analytics
        *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
@@ -2802,7 +2802,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
        * @param {module:model/TestPlanSelectModel} [testPlanSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansDeleteBulkPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansDeleteBulkPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Delete multiple test plans
        * @param {String} projectId Unique or global ID of the project
@@ -2836,7 +2836,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
        * @param {module:model/TestPlanSelectModel} [testPlanSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansPurgeBulkPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansPurgeBulkPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Permanently delete multiple archived test plans
        * @param {String} projectId Unique or global ID of the project
@@ -2854,7 +2854,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
        * @param {module:model/TestPlanSelectModel} [testPlanSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansRestoreBulkPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansRestoreBulkPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Restore multiple test plans
        * @param {String} projectId Unique or global ID of the project
@@ -2879,7 +2879,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
        * @param {module:model/ProjectTestPlansFilterModel} [projectTestPlansFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanWithAnalyticModel>} and HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansSearchPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansSearchPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get Project TestPlans with analytics
        *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
@@ -2910,7 +2910,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
   /**
   * ProjectTestPlanTestPoints service.
   * @module api/ProjectTestPlanTestPointsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectTestPlanTestPointsApi {
       /**
@@ -2930,7 +2930,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
        * @param {module:model/TestPlanTestPointsAutoTestsRerunApiModel} [testPlanTestPointsAutoTestsRerunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostWithHttpInfo(projectId: string, testPlanId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPostWithHttpInfo(projectId: string, testPlanId: string, opts: Object): Promise<any>;
       /**
        * Rerun autotests.
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -2950,7 +2950,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
        * @param {module:model/TestPlanTestPointsAutoTestsRunApiModel} [testPlanTestPointsAutoTestsRunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunNameApiResult} and HTTP response
        */
-      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostWithHttpInfo(projectId: string, testPlanId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostWithHttpInfo(projectId: string, testPlanId: string, opts: Object): Promise<any>;
       /**
        * Run autotests.
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -2969,7 +2969,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
   /**
   * ProjectWorkItems service.
   * @module api/ProjectWorkItemsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class ProjectWorkItemsApi {
       /**
@@ -2993,7 +2993,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {module:model/WorkItemGroupGetModel} [workItemGroupGetModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemGroupModel>} and HTTP response
        */
-      apiV2ProjectsProjectIdWorkItemsSearchGroupedPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdWorkItemsSearchGroupedPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for work items and group results by attribute
        * @param {String} projectId Unique or global ID of the project
@@ -3026,7 +3026,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {module:model/WorkItemSelectModel} [workItemSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2ProjectsProjectIdWorkItemsSearchIdPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdWorkItemsSearchIdPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for work items and extract IDs only
        * @param {String} projectId Unique or global ID of the project
@@ -3059,7 +3059,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortApiResult>} and HTTP response
        */
-      apiV2ProjectsProjectIdWorkItemsSearchPostWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdWorkItemsSearchPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Search for work items
        * @param {String} projectId Unique or global ID of the project
@@ -3093,7 +3093,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemIndexApiResult} and HTTP response
        */
-      apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostWithHttpInfo(projectId: string, workItemId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdWorkItemsSearchWorkItemIdIndexPostWithHttpInfo(projectId: string, workItemId: string, opts: Object): Promise<any>;
       /**
        * Get work item index (position) in a collection by its id.
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -3123,7 +3123,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {Boolean} [isDeleted]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagShortApiResult>} and HTTP response
        */
-      apiV2ProjectsProjectIdWorkItemsTagsGetWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      apiV2ProjectsProjectIdWorkItemsTagsGetWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get WorkItems Tags
        *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
@@ -3150,7 +3150,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
        */
-      getWorkItemsByProjectIdWithHttpInfo(projectId: string, opts: any): Promise<any>;
+      getWorkItemsByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project work items
        *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
@@ -3183,7 +3183,7 @@ declare module 'testit-api-client/api/SearchApi' {
   /**
   * Search service.
   * @module api/SearchApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class SearchApi {
       /**
@@ -3200,7 +3200,7 @@ declare module 'testit-api-client/api/SearchApi' {
        * @param {module:model/GlobalSearchRequest} [globalSearchRequest]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GlobalSearchResponse} and HTTP response
        */
-      apiV2SearchGlobalSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2SearchGlobalSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/GlobalSearchRequest} opts.globalSearchRequest
@@ -3216,7 +3216,7 @@ declare module 'testit-api-client/api/SectionsApi' {
   /**
   * Sections service.
   * @module api/SectionsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class SectionsApi {
       /**
@@ -3236,7 +3236,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2SectionsIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2SectionsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch section
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -3245,7 +3245,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2SectionsIdPatch(id: string, opts: any): Promise<any>;
+      apiV2SectionsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Create section
        *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
@@ -3253,7 +3253,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {module:model/SectionPostModel} [sectionPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
        */
-      createSectionWithHttpInfo(opts: any): Promise<any>;
+      createSectionWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create section
        *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
@@ -3286,7 +3286,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {module:model/DeletionState} [isDeleted]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
        */
-      getSectionByIdWithHttpInfo(id: string, opts: any): Promise<any>;
+      getSectionByIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get section
        *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
@@ -3313,7 +3313,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
        */
-      getWorkItemsBySectionIdWithHttpInfo(id: string, opts: any): Promise<any>;
+      getWorkItemsBySectionIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get section work items
        *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
@@ -3345,7 +3345,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {module:model/SectionMoveModel} [sectionMoveModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      moveWithHttpInfo(opts: any): Promise<any>;
+      moveWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Move section with all work items into another section
        * @param {Object} opts Optional parameters
@@ -3362,7 +3362,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {module:model/SectionRenameModel} [sectionRenameModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      renameWithHttpInfo(opts: any): Promise<any>;
+      renameWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Rename section
        *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
@@ -3380,7 +3380,7 @@ declare module 'testit-api-client/api/SectionsApi' {
        * @param {module:model/SectionPutModel} [sectionPutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateSectionWithHttpInfo(opts: any): Promise<any>;
+      updateSectionWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update section
        *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
@@ -3398,7 +3398,7 @@ declare module 'testit-api-client/api/TagsApi' {
   /**
   * Tags service.
   * @module api/TagsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TagsApi {
       /**
@@ -3417,7 +3417,7 @@ declare module 'testit-api-client/api/TagsApi' {
        * @param {module:model/SelectTagsApiModel} [selectTagsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TagsDeleteWithHttpInfo(opts: any): Promise<any>;
+      apiV2TagsDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete tags
        *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
@@ -3449,7 +3449,7 @@ declare module 'testit-api-client/api/TagsApi' {
        * @param {module:model/CreateTagApiModel} [createTagApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
        */
-      apiV2TagsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TagsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create tag
        *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
@@ -3468,7 +3468,7 @@ declare module 'testit-api-client/api/TagsApi' {
        * @param {module:model/UpdateTagApiModel} [updateTagApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
        */
-      apiV2TagsPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2TagsPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update tag
        *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
@@ -3492,7 +3492,7 @@ declare module 'testit-api-client/api/TagsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagApiResult>} and HTTP response
        */
-      apiV2TagsSearchGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2TagsSearchGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search tags
        *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
@@ -3522,7 +3522,7 @@ declare module 'testit-api-client/api/TagsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TagApiResult>} and HTTP response
        */
-      apiV2TagsTestPlansTagsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2TagsTestPlansTagsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all Tags that are used in TestPlans
        *  Use case  User runs method execution  System returns tags (listed in the response example)
@@ -3548,7 +3548,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
   /**
   * TestPlans service.
   * @module api/TestPlansApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestPlansApi {
       /**
@@ -3567,7 +3567,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      addTestPointsWithSectionsWithHttpInfo(id: string, opts: any): Promise<any>;
+      addTestPointsWithSectionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add test-points to TestPlan with sections
        * @param {String} id Test plan internal (guid format) or global (int format) identifier
@@ -3586,7 +3586,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      addWorkItemsWithSectionsWithHttpInfo(id: string, opts: any): Promise<any>;
+      addWorkItemsWithSectionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add WorkItems to TestPlan with Sections as TestSuites
        *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
@@ -3619,7 +3619,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<String>} [testers] Specifies a project user IDs to distribute
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanWithTestSuiteTreeModel} and HTTP response
        */
-      apiV2TestPlansIdAutobalancePostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdAutobalancePostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Distribute test points between the users
        * @param {String} id Test plan unique or global ID
@@ -3653,7 +3653,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/GetXlsxTestPointsByTestPlanModel} [getXlsxTestPointsByTestPlanModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Export TestPoints from TestPlan in xls format
        *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
@@ -3678,7 +3678,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Number} [timeZoneOffsetInMinutes]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestPlansIdExportTestResultHistoryXlsxPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdExportTestResultHistoryXlsxPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Export TestResults history from TestPlan in xls format
        *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
@@ -3708,7 +3708,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanChangeModel>} and HTTP response
        */
-      apiV2TestPlansIdHistoryGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestPlan history
        *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
@@ -3738,7 +3738,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {String} [orderBy]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanLink>} and HTTP response
        */
-      apiV2TestPlansIdLinksGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdLinksGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Links of TestPlan
        *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
@@ -3762,7 +3762,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestPlansIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch test plan
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -3771,7 +3771,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2TestPlansIdPatch(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Get summary by TestPlan
        *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
@@ -3799,7 +3799,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointWithLastResultResponseModel>} and HTTP response
        */
-      apiV2TestPlansIdTestPointsLastResultsGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestPointsLastResultsGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestPoints with last result from TestPlan
        *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
@@ -3829,7 +3829,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestPlansIdTestPointsResetPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestPointsResetPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Reset TestPoints status of TestPlan
        *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
@@ -3848,7 +3848,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/TestPointSelectModel} [testPointSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2TestPlansIdTestPointsTesterDeleteWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestPointsTesterDeleteWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Unassign users from multiple test points
        * @param {String} id Unique or global ID of the test plan
@@ -3867,7 +3867,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/TestPointSelectModel} [testPointSelectModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2TestPlansIdTestPointsTesterUserIdPostWithHttpInfo(id: string, userId: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestPointsTesterUserIdPostWithHttpInfo(id: string, userId: string, opts: Object): Promise<any>;
       /**
        * Assign user as a tester to multiple test points
        * @param {String} id Unique or global ID of the test plan
@@ -3895,7 +3895,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
        */
-      apiV2TestPlansIdTestRunsGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestRunsGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestRuns of TestPlan
        *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
@@ -3936,7 +3936,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/SearchTestRunsApiModel} [searchTestRunsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunApiResult>} and HTTP response
        */
-      apiV2TestPlansIdTestRunsSearchPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestPlansIdTestRunsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Search TestRuns of TestPlan
        *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
@@ -3992,7 +3992,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPlanShortModel>} and HTTP response
        */
-      apiV2TestPlansShortsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestPlansShortsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get TestPlans short models by Project identifiers
        *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
@@ -4040,7 +4040,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/CreateTestPlanApiModel} [createTestPlanApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
        */
-      createTestPlanWithHttpInfo(opts: any): Promise<any>;
+      createTestPlanWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create TestPlan
        *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
@@ -4154,7 +4154,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
        * @param {module:model/UpdateTestPlanApiModel} [updateTestPlanApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateTestPlanWithHttpInfo(opts: any): Promise<any>;
+      updateTestPlanWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update TestPlan
        *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
@@ -4172,7 +4172,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
   /**
   * TestPoints service.
   * @module api/TestPointsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestPointsApi {
       /**
@@ -4219,7 +4219,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
        * @param {module:model/TestPointFilterRequestModel} [testPointFilterRequestModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2TestPointsSearchIdPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestPointsSearchIdPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for test points and extract IDs only
        * @param {Object} opts Optional parameters
@@ -4250,7 +4250,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
        * @param {module:model/TestPointFilterRequestModel} [testPointFilterRequestModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointShortResponseModel>} and HTTP response
        */
-      apiV2TestPointsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestPointsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for test points
        * @param {Object} opts Optional parameters
@@ -4277,7 +4277,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
   /**
   * TestResults service.
   * @module api/TestResultsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestResultsApi {
       /**
@@ -4295,7 +4295,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {module:model/TestResultsSelectApiModel} [testResultsSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GetExternalFormApiResult} and HTTP response
        */
-      apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostWithHttpInfo(externalProjectId: string, opts: any): Promise<any>;
+      apiV2TestResultsExternalProjectsExternalProjectIdDefectsExternalFormsPostWithHttpInfo(externalProjectId: string, opts: Object): Promise<any>;
       /**
        * @param {String} externalProjectId
        * @param {Object} opts Optional parameters
@@ -4311,7 +4311,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {module:model/CreateDefectApiModel} [createDefectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DefectApiModel} and HTTP response
        */
-      apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostWithHttpInfo(externalProjectId: string, opts: any): Promise<any>;
+      apiV2TestResultsExternalProjectsExternalProjectIdDefectsPostWithHttpInfo(externalProjectId: string, opts: Object): Promise<any>;
       /**
        * @param {String} externalProjectId
        * @param {Object} opts Optional parameters
@@ -4378,7 +4378,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {module:model/TestResultUpdateV2Request} [testResultUpdateV2Request]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestResultsIdPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestResultsIdPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Edit test result by ID
        * @param {String} id Test result unique ID
@@ -4412,7 +4412,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {module:model/TestResultsFilterApiModel} [testResultsFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultShortResponse>} and HTTP response
        */
-      apiV2TestResultsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestResultsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for test results
        * @param {Object} opts Optional parameters
@@ -4438,7 +4438,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {module:model/TestResultsFilterApiModel} [testResultsFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultsStatisticsApiResult} and HTTP response
        */
-      apiV2TestResultsStatisticsFilterPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestResultsStatisticsFilterPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for test results and extract statistics
        * @param {Object} opts Optional parameters
@@ -4456,7 +4456,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {File} [file] Select file
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      createAttachmentWithHttpInfo(id: string, opts: any): Promise<any>;
+      createAttachmentWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Upload and link attachment to TestResult
        *  Use case  User sets testResultId  User attaches a file  System creates attachment and links it to the test result  System returns attachment identifier
@@ -4497,7 +4497,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
        * @param {Boolean} [preview] If image must be converted to a preview (lower quality, no animation)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      downloadAttachmentWithHttpInfo(attachmentId: string, id: string, opts: any): Promise<any>;
+      downloadAttachmentWithHttpInfo(attachmentId: string, id: string, opts: Object): Promise<any>;
       /**
        * Get attachment of TestResult
        *  Use case  User sets attachmentId and testResultId  [Optional] User sets resize configuration  User runs method execution  System search attachments by the attachmentId and the testResultId  [Optional] If resize configuration is set, System resizes the attachment according to the resize                     configuration  [Optional] Otherwise, System does not resize the attachment  System returns attachment as a file
@@ -4555,7 +4555,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
   /**
   * TestRuns service.
   * @module api/TestRunsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestRunsApi {
       /**
@@ -4574,7 +4574,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2TestRunsDeleteWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestRunsDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete multiple test runs
        *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
@@ -4632,7 +4632,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/ManualRerunSelectTestResultsApiModel} [manualRerunSelectTestResultsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ManualRerunApiResult} and HTTP response
        */
-      apiV2TestRunsIdRerunsPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestRunsIdRerunsPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Manual autotests rerun in test run
        * @param {String} id
@@ -4664,7 +4664,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunStatisticsFilterApiModel} [testRunStatisticsFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestResultsStatisticsApiResult} and HTTP response
        */
-      apiV2TestRunsIdStatisticsFilterPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestRunsIdStatisticsFilterPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Search for the test run test results and build statistics
        * @param {String} id Test run unique ID
@@ -4694,7 +4694,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunTestResultsPartialBulkSetModel} [testRunTestResultsPartialBulkSetModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestRunsIdTestResultsBulkPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestRunsIdTestResultsBulkPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Partial edit of multiple test results in the test run
        * @param {String} id Test run unique ID
@@ -4724,7 +4724,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2TestRunsPurgeBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestRunsPurgeBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Permanently delete multiple test runs from archive
        *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
@@ -4742,7 +4742,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
-      apiV2TestRunsRestoreBulkPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestRunsRestoreBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Restore multiple test runs from the archive
        *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
@@ -4764,7 +4764,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/TestRunFilterApiModel} [testRunFilterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunShortApiResult>} and HTTP response
        */
-      apiV2TestRunsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestRunsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for test runs
        * @param {Object} opts Optional parameters
@@ -4790,7 +4790,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/UpdateMultipleTestRunsApiModel} [updateMultipleTestRunsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestRunsUpdateMultiplePostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestRunsUpdateMultiplePostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update multiple test runs
        * @param {Object} opts Optional parameters
@@ -4821,7 +4821,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} [createTestRunAndFillByAutoTestsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
        */
-      createAndFillByAutoTestsWithHttpInfo(opts: any): Promise<any>;
+      createAndFillByAutoTestsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test runs based on autotests and configurations
        * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
@@ -4839,7 +4839,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} [createTestRunAndFillByConfigurationsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
        */
-      createAndFillByConfigurationsWithHttpInfo(opts: any): Promise<any>;
+      createAndFillByConfigurationsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test runs picking the needed test points
        * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
@@ -4857,7 +4857,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} [createTestRunAndFillByWorkItemsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
        */
-      createAndFillByWorkItemsWithHttpInfo(opts: any): Promise<any>;
+      createAndFillByWorkItemsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test run based on configurations and work items
        * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
@@ -4875,7 +4875,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/CreateEmptyTestRunApiModel} [createEmptyTestRunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
        */
-      createEmptyWithHttpInfo(opts: any): Promise<any>;
+      createEmptyWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create empty TestRun
        *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
@@ -4908,7 +4908,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {Array.<module:model/AutoTestResultsForTestRunModel>} [autoTestResultsForTestRunModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      setAutoTestResultsForTestRunWithHttpInfo(id: string, opts: any): Promise<any>;
+      setAutoTestResultsForTestRunWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Send test results to the test runs in the system
        * This method sends test results to the test management system.
@@ -4917,7 +4917,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {Array.<module:model/AutoTestResultsForTestRunModel>} opts.autoTestResultsForTestRunModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
        */
-      setAutoTestResultsForTestRun(id: string, opts: any): Promise<any>;
+      setAutoTestResultsForTestRun(id: string, opts: Object): Promise<any>;
       /**
        * Start TestRun
        *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
@@ -4953,7 +4953,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
        * @param {module:model/UpdateEmptyTestRunApiModel} [updateEmptyTestRunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateEmptyWithHttpInfo(opts: any): Promise<any>;
+      updateEmptyWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update empty TestRun
        *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
@@ -4971,7 +4971,7 @@ declare module 'testit-api-client/api/TestStatusesApi' {
   /**
   * TestStatuses service.
   * @module api/TestStatusesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestStatusesApi {
       /**
@@ -5019,7 +5019,7 @@ declare module 'testit-api-client/api/TestStatusesApi' {
        * @param {module:model/UpdateTestStatusApiModel} [updateTestStatusApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestStatusesIdPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestStatusesIdPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * @param {String} id
        * @param {Object} opts Optional parameters
@@ -5044,7 +5044,7 @@ declare module 'testit-api-client/api/TestStatusesApi' {
        * @param {module:model/CreateTestStatusApiModel} [createTestStatusApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResult} and HTTP response
        */
-      apiV2TestStatusesPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestStatusesPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestStatusApiModel} opts.createTestStatusApiModel
@@ -5058,7 +5058,7 @@ declare module 'testit-api-client/api/TestStatusesApi' {
        * @param {module:model/SearchTestStatusesApiModel} [searchTestStatusesApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResultReply} and HTTP response
        */
-      apiV2TestStatusesSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestStatusesSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchTestStatusesApiModel} opts.searchTestStatusesApiModel
@@ -5074,7 +5074,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
   /**
   * TestSuites service.
   * @module api/TestSuitesApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class TestSuitesApi {
       /**
@@ -5093,7 +5093,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      addTestPointsToTestSuiteWithHttpInfo(id: string, opts: any): Promise<any>;
+      addTestPointsToTestSuiteWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add test-points to test suite
        * @param {String} id Test suite internal identifier
@@ -5112,7 +5112,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestSuitesIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestSuitesIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Patch test suite
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
@@ -5121,7 +5121,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2TestSuitesIdPatch(id: string, opts: any): Promise<any>;
+      apiV2TestSuitesIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Refresh test suite. Only dynamic test suites are supported by this method
        * @param {String} id Test Suite internal (UUID) identifier
@@ -5141,7 +5141,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestSuitesIdWorkItemsPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2TestSuitesIdWorkItemsPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Set work items for test suite
        * @param {String} id Unique ID of the test suite
@@ -5158,7 +5158,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {module:model/TestSuiteV2PostModel} [testSuiteV2PostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestSuiteV2GetModel} and HTTP response
        */
-      apiV2TestSuitesPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestSuitesPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test suite
        * @param {Object} opts Optional parameters
@@ -5174,7 +5174,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {module:model/TestSuiteV2PutModel} [testSuiteV2PutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2TestSuitesPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2TestSuitesPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Edit test suite
        * @param {Object} opts Optional parameters
@@ -5267,7 +5267,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {module:model/TestSuiteWorkItemsSearchModel} [testSuiteWorkItemsSearchModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortModel>} and HTTP response
        */
-      searchWorkItemsWithHttpInfo(id: string, opts: any): Promise<any>;
+      searchWorkItemsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Search WorkItems
        *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
@@ -5297,7 +5297,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
        * @param {Array.<String>} [requestBody] Collection of configuration identifiers\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      setConfigurationsByTestSuiteIdWithHttpInfo(id: string, opts: any): Promise<any>;
+      setConfigurationsByTestSuiteIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Set Configurations By TestSuite Id
        *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
@@ -5316,7 +5316,7 @@ declare module 'testit-api-client/api/UsersApi' {
   /**
   * Users service.
   * @module api/UsersApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class UsersApi {
       /**
@@ -5333,7 +5333,7 @@ declare module 'testit-api-client/api/UsersApi' {
        * @param {String} [userName]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserCustomNameValidationResponse} and HTTP response
        */
-      apiV2UsersExistsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2UsersExistsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {String} opts.userName
@@ -5349,7 +5349,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
   /**
   * Webhooks service.
   * @module api/WebhooksApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class WebhooksApi {
       /**
@@ -5366,7 +5366,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebhooksDeleteApiModel} [webhooksDeleteApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2WebhooksDeleteWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/WebhooksDeleteApiModel} opts.webhooksDeleteApiModel
@@ -5381,7 +5381,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {String} [projectId] Project unique ID
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookModel>} and HTTP response
        */
-      apiV2WebhooksGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all webhooks
        * @param {Object} opts Optional parameters
@@ -5422,7 +5422,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebHookPostModel} [webHookPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookModel} and HTTP response
        */
-      apiV2WebhooksIdPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WebhooksIdPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Edit webhook by ID
        * @param {String} id Webhook unique ID
@@ -5439,7 +5439,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebHookPostModel} [webHookPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebHookModel} and HTTP response
        */
-      apiV2WebhooksPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create webhook
        * @param {Object} opts Optional parameters
@@ -5454,7 +5454,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebhooksUpdateApiModel} [webhooksUpdateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebhooksUpdateApiResult} and HTTP response
        */
-      apiV2WebhooksPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/WebhooksUpdateApiModel} opts.webhooksUpdateApiModel
@@ -5474,7 +5474,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/SearchWebhooksQueryModel} [searchWebhooksQueryModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebHookModel>} and HTTP response
        */
-      apiV2WebhooksSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for webhooks
        * @param {Object} opts Optional parameters
@@ -5501,7 +5501,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebhookVariablesType} [variablesType]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
-      apiV2WebhooksSpecialVariablesGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksSpecialVariablesGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get special variables for webhook event type
        * @param {Object} opts Optional parameters
@@ -5519,7 +5519,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
        * @param {module:model/WebHookTestModel} [webHookTestModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WebhookResponse} and HTTP response
        */
-      apiV2WebhooksTestPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksTestPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Test webhook's url
        * @param {Object} opts Optional parameters
@@ -5536,7 +5536,7 @@ declare module 'testit-api-client/api/WebhooksLogsApi' {
   /**
   * WebhooksLogs service.
   * @module api/WebhooksLogsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class WebhooksLogsApi {
       /**
@@ -5559,7 +5559,7 @@ declare module 'testit-api-client/api/WebhooksLogsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WebhookLogApiResult>} and HTTP response
        */
-      apiV2WebhooksLogsGetWithHttpInfo(opts: any): Promise<any>;
+      apiV2WebhooksLogsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get last webhook logs
        * @param {Object} opts Optional parameters
@@ -5610,7 +5610,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
   /**
   * Workflows service.
   * @module api/WorkflowsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class WorkflowsApi {
       /**
@@ -5649,7 +5649,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {Array.<module:model/Operation>} [operation]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2WorkflowsIdPatchWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkflowsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
        * @param {String} id
@@ -5657,14 +5657,14 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {Array.<module:model/Operation>} opts.operation
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
-      apiV2WorkflowsIdPatch(id: string, opts: any): Promise<any>;
+      apiV2WorkflowsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowProjectsApiModel} [searchWorkflowProjectsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowProjectApiResultReply} and HTTP response
        */
-      apiV2WorkflowsIdProjectsSearchPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkflowsIdProjectsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * @param {String} id
        * @param {Object} opts Optional parameters
@@ -5680,7 +5680,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {module:model/UpdateWorkflowApiModel} [updateWorkflowApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2WorkflowsIdPutWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkflowsIdPutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * @param {String} id
        * @param {Object} opts Optional parameters
@@ -5705,7 +5705,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {module:model/CreateWorkflowApiModel} [createWorkflowApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowApiResult} and HTTP response
        */
-      apiV2WorkflowsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkflowsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateWorkflowApiModel} opts.createWorkflowApiModel
@@ -5719,7 +5719,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {module:model/SearchWorkflowsApiModel} [searchWorkflowsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowShortApiResultReply} and HTTP response
        */
-      apiV2WorkflowsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkflowsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowsApiModel} opts.searchWorkflowsApiModel
@@ -5735,7 +5735,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
   /**
   * WorkItems service.
   * @module api/WorkItemsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class WorkItemsApi {
       /**
@@ -5755,7 +5755,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {File} [file] Select file
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2WorkItemsIdAttachmentsPostWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkItemsIdAttachmentsPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Upload and link attachment to WorkItem
        *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
@@ -5793,7 +5793,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemChangeModel>} and HTTP response
        */
-      apiV2WorkItemsIdHistoryGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkItemsIdHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get change history of WorkItem
        *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
@@ -5891,7 +5891,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {String} [searchValue] Value for searching
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultHistoryReportApiResult>} and HTTP response
        */
-      apiV2WorkItemsIdTestResultsHistoryGetWithHttpInfo(id: string, opts: any): Promise<any>;
+      apiV2WorkItemsIdTestResultsHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history of WorkItem
        *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
@@ -5957,7 +5957,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/WorkItemLinkUrlApiModel} [workItemLinkUrlApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SearchWorkItemLinkUrlsApiResult} and HTTP response
        */
-      apiV2WorkItemsLinksUrlsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsLinksUrlsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -5983,7 +5983,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/WorkItemMovePostModel} [workItemMovePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemShortModel} and HTTP response
        */
-      apiV2WorkItemsMovePostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsMovePostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Move WorkItem to another section
        *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
@@ -6000,7 +6000,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/CreateWorkItemApiModel} [createWorkItemApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemApiResult} and HTTP response
        */
-      apiV2WorkItemsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Creates work item
        * @param {Object} opts Optional parameters
@@ -6021,7 +6021,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/WorkItemSelectApiModel} [workItemSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemShortApiResult>} and HTTP response
        */
-      apiV2WorkItemsSearchPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search for work items
        * @param {Object} opts Optional parameters
@@ -6054,7 +6054,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/SharedStepReferenceSectionsQueryFilterModel} [sharedStepReferenceSectionsQueryFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceSectionModel>} and HTTP response
        */
-      apiV2WorkItemsSharedStepIdReferencesSectionsPostWithHttpInfo(sharedStepId: string, opts: any): Promise<any>;
+      apiV2WorkItemsSharedStepIdReferencesSectionsPostWithHttpInfo(sharedStepId: string, opts: Object): Promise<any>;
       /**
        * Get SharedStep references in sections
        *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
@@ -6089,7 +6089,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/SharedStepReferencesQueryFilterModel} [sharedStepReferencesQueryFilterModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceModel>} and HTTP response
        */
-      apiV2WorkItemsSharedStepIdReferencesWorkItemsPostWithHttpInfo(sharedStepId: string, opts: any): Promise<any>;
+      apiV2WorkItemsSharedStepIdReferencesWorkItemsPostWithHttpInfo(sharedStepId: string, opts: Object): Promise<any>;
       /**
        * Get SharedStep references in work items
        *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
@@ -6175,7 +6175,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/IterationModel>} and HTTP response
        */
-      getIterationsWithHttpInfo(id: string, opts: any): Promise<any>;
+      getIterationsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get iterations by work item Id or GlobalId
        * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
@@ -6197,7 +6197,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemApiResult} and HTTP response
        */
-      getWorkItemByIdWithHttpInfo(id: string, opts: any): Promise<any>;
+      getWorkItemByIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Test Case, Checklist or Shared Step by Id or GlobalId
        *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
@@ -6234,7 +6234,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {Number} [versionNumber] WorkItem version (integer format) number\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemVersionModel>} and HTTP response
        */
-      getWorkItemVersionsWithHttpInfo(id: string, opts: any): Promise<any>;
+      getWorkItemVersionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get WorkItem versions
        *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
@@ -6279,7 +6279,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      updateWorkItemWithHttpInfo(opts: any): Promise<any>;
+      updateWorkItemWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update Test Case, Checklist or Shared Step
        *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
@@ -6297,7 +6297,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
   /**
   * WorkItemsComments service.
   * @module api/WorkItemsCommentsApi
-  * @version 7.2.4
+  * @version 7.2.6
   */
   export default class WorkItemsCommentsApi {
       /**
@@ -6330,7 +6330,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
        * @param {module:model/CreateWorkItemCommentApiModel} [createWorkItemCommentApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentApiResult} and HTTP response
        */
-      apiV2WorkItemsCommentsPostWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsCommentsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create WorkItem comment
        *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
@@ -6347,7 +6347,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
        * @param {module:model/UpdateWorkItemCommentApiModel} [updateWorkItemCommentApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
-      apiV2WorkItemsCommentsPutWithHttpInfo(opts: any): Promise<any>;
+      apiV2WorkItemsCommentsPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update work item comment
        * @param {Object} opts Optional parameters
@@ -6419,13 +6419,13 @@ declare module 'testit-api-client/ApiClient' {
       * all properties on <code>data<code> will be converted to this type.
       * @returns An instance of the specified type or null or undefined if data is null or undefined.
       */
-      static convertToType(data: (string | any), type: (string | Array<string> | any | Function)): any;
+      static convertToType(data: (string | Object), type: (string | Array<string> | any | Function)): any;
       /**
       * Constructs a new map or array model from REST data.
       * @param data {Object|Array} The REST data.
       * @param obj {Object|Array} The target object or array.
       */
-      static constructFromObject(data: any | any[], obj: any | any[], itemType: any): void;
+      static constructFromObject(data: Object | any[], obj: Object | any[], itemType: any): void;
       /**
        * The base URL against which to resolve every API call's (relative) path.
        * Overrides the default value set in spec file if present
@@ -6491,7 +6491,7 @@ declare module 'testit-api-client/ApiClient' {
        * @param {String} apiBasePath Base path defined in the path, operation level to override the default one
        * @returns {String} The encoded path with parameter values substituted.
        */
-      buildUrl(path: string, pathParams: any, apiBasePath: string): string;
+      buildUrl(path: string, pathParams: Object, apiBasePath: string): string;
       /**
       * Checks whether the given content type represents JSON.<br>
       * JSON content type examples:<br>
@@ -6540,7 +6540,7 @@ declare module 'testit-api-client/ApiClient' {
       * @param {Object} request The request object created by a <code>superagent()</code> call.
       * @param {Array.<String>} authNames An array of authentication method names.
       */
-      applyAuthToRequest(request: any, authNames: Array<string>): void;
+      applyAuthToRequest(request: Object, authNames: Array<string>): void;
       /**
        * Deserializes an HTTP response body into a value of the specified type.
        * @param {Object} response A SuperAgent response object.
@@ -6550,7 +6550,7 @@ declare module 'testit-api-client/ApiClient' {
        * all properties on <code>data<code> will be converted to this type.
        * @returns A value of the specified type.
        */
-      deserialize(response: any, returnType: (string | Array<string> | any | Function)): any;
+      deserialize(response: Object, returnType: (string | Array<string> | any | Function)): any;
       /**
        * Invokes the REST service using the supplied settings and parameters.
        * @param {String} path The base URL to invoke.
@@ -6568,7 +6568,7 @@ declare module 'testit-api-client/ApiClient' {
        * @param {String} apiBasePath base path defined in the operation/path level to override the default one
        * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
        */
-      callApi(path: string, httpMethod: string, pathParams: any, queryParams: any, headerParams: any, formParams: any, bodyParam: any, authNames: Array<string>, contentTypes: Array<string>, accepts: Array<string>, returnType: (string | any[] | ObjectFunction), apiBasePath: string): Promise<any>;
+      callApi(path: string, httpMethod: string, pathParams: any, queryParams: any, headerParams: any, formParams: any, bodyParam: Object, authNames: Array<string>, contentTypes: Array<string>, accepts: Array<string>, returnType: (string | any[] ), apiBasePath: string): Promise<any>;
       /**
         * Gets an array of host settings
         * @returns An array of host settings
@@ -7182,7 +7182,6 @@ declare module 'testit-api-client/model/ActionUpdate' {
   /**
    * *
    */
-  export type ActionUpdate = any;
 
 }
 declare module 'testit-api-client/model/AIServiceModelApiResult' {
@@ -7190,7 +7189,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
   /**
    * The AIServiceModelApiResult model module.
    * @module model/AIServiceModelApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AIServiceModelApiResult {
       /**
@@ -7206,13 +7205,13 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
        * @param {module:model/AIServiceModelApiResult} obj Optional instance to populate.
        * @return {module:model/AIServiceModelApiResult} The populated <code>AIServiceModelApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AIServiceModelApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AIServiceModelApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AIServiceModelApiResult</code>.
        * @alias module:model/AIServiceModelApiResult
@@ -7233,7 +7232,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
   /**
    * The AIServiceModelApiResultReply model module.
    * @module model/AIServiceModelApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AIServiceModelApiResultReply {
       /**
@@ -7249,20 +7248,20 @@ declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
        * @param {module:model/AIServiceModelApiResultReply} obj Optional instance to populate.
        * @return {module:model/AIServiceModelApiResultReply} The populated <code>AIServiceModelApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AIServiceModelApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AIServiceModelApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AIServiceModelApiResultReply</code>.
        * @alias module:model/AIServiceModelApiResultReply
        * @param data {Array.<module:model/AIServiceModelApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -7298,7 +7297,6 @@ declare module 'testit-api-client/model/ApiExternalServiceCategory' {
   /**
    * *
    */
-  export type ApiExternalServiceCategory = any;
 
 }
 declare module 'testit-api-client/model/AssignAttachmentApiModel' {
@@ -7306,7 +7304,7 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   /**
    * The AssignAttachmentApiModel model module.
    * @module model/AssignAttachmentApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AssignAttachmentApiModel {
       /**
@@ -7322,13 +7320,13 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
        * @param {module:model/AssignAttachmentApiModel} obj Optional instance to populate.
        * @return {module:model/AssignAttachmentApiModel} The populated <code>AssignAttachmentApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AssignAttachmentApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AssignAttachmentApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AssignAttachmentApiModel</code>.
        * @alias module:model/AssignAttachmentApiModel
@@ -7347,7 +7345,7 @@ declare module 'testit-api-client/model/AssignIterationApiModel' {
   /**
    * The AssignIterationApiModel model module.
    * @module model/AssignIterationApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AssignIterationApiModel {
       /**
@@ -7363,20 +7361,20 @@ declare module 'testit-api-client/model/AssignIterationApiModel' {
        * @param {module:model/AssignIterationApiModel} obj Optional instance to populate.
        * @return {module:model/AssignIterationApiModel} The populated <code>AssignIterationApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AssignIterationApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AssignIterationApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AssignIterationApiModel</code>.
        * @alias module:model/AssignIterationApiModel
        * @param parameters {Array.<module:model/ParameterIterationModel>}
        * @param id {String} Iteration identifier, must be empty for new or changed iteration
        */
-      constructor(parameters: Array<module>, id: string);
+      constructor(parameters: Array<any>, id: string);
       parameters: any;
       id: any;
   }
@@ -7390,7 +7388,7 @@ declare module 'testit-api-client/model/AttachmentApiResult' {
   /**
    * The AttachmentApiResult model module.
    * @module model/AttachmentApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentApiResult {
       /**
@@ -7406,13 +7404,13 @@ declare module 'testit-api-client/model/AttachmentApiResult' {
        * @param {module:model/AttachmentApiResult} obj Optional instance to populate.
        * @return {module:model/AttachmentApiResult} The populated <code>AttachmentApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AttachmentApiResult</code>.
        * @alias module:model/AttachmentApiResult
@@ -7445,7 +7443,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModel' {
   /**
    * The AttachmentChangeViewModel model module.
    * @module model/AttachmentChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentChangeViewModel {
       /**
@@ -7461,13 +7459,13 @@ declare module 'testit-api-client/model/AttachmentChangeViewModel' {
        * @param {module:model/AttachmentChangeViewModel} obj Optional instance to populate.
        * @return {module:model/AttachmentChangeViewModel} The populated <code>AttachmentChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AttachmentChangeViewModel</code>.
        * @alias module:model/AttachmentChangeViewModel
@@ -7490,7 +7488,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFie
   /**
    * The AttachmentChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AttachmentChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -7506,13 +7504,13 @@ declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFie
        * @param {module:model/AttachmentChangeViewModelArrayChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/AttachmentChangeViewModelArrayChangedFieldViewModel} The populated <code>AttachmentChangeViewModelArrayChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentChangeViewModelArrayChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentChangeViewModelArrayChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -7523,7 +7521,7 @@ declare module 'testit-api-client/model/AttachmentModel' {
   /**
    * The AttachmentModel model module.
    * @module model/AttachmentModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentModel {
       /**
@@ -7539,13 +7537,13 @@ declare module 'testit-api-client/model/AttachmentModel' {
        * @param {module:model/AttachmentModel} obj Optional instance to populate.
        * @return {module:model/AttachmentModel} The populated <code>AttachmentModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AttachmentModel</code>.
        * @alias module:model/AttachmentModel
@@ -7578,7 +7576,7 @@ declare module 'testit-api-client/model/AttachmentPutModel' {
   /**
    * The AttachmentPutModel model module.
    * @module model/AttachmentPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentPutModel {
       /**
@@ -7594,13 +7592,13 @@ declare module 'testit-api-client/model/AttachmentPutModel' {
        * @param {module:model/AttachmentPutModel} obj Optional instance to populate.
        * @return {module:model/AttachmentPutModel} The populated <code>AttachmentPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AttachmentPutModel</code>.
        * @alias module:model/AttachmentPutModel
@@ -7619,7 +7617,7 @@ declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsMod
   /**
    * The AttachmentPutModelAutoTestStepResultsModel model module.
    * @module model/AttachmentPutModelAutoTestStepResultsModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentPutModelAutoTestStepResultsModel {
       /**
@@ -7635,13 +7633,13 @@ declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsMod
        * @param {module:model/AttachmentPutModelAutoTestStepResultsModel} obj Optional instance to populate.
        * @return {module:model/AttachmentPutModelAutoTestStepResultsModel} The populated <code>AttachmentPutModelAutoTestStepResultsModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentPutModelAutoTestStepResultsModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentPutModelAutoTestStepResultsModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       title: any;
       description: any;
       info: any;
@@ -7660,7 +7658,7 @@ declare module 'testit-api-client/model/AttachmentUpdateRequest' {
   /**
    * The AttachmentUpdateRequest model module.
    * @module model/AttachmentUpdateRequest
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AttachmentUpdateRequest {
       /**
@@ -7676,13 +7674,13 @@ declare module 'testit-api-client/model/AttachmentUpdateRequest' {
        * @param {module:model/AttachmentUpdateRequest} obj Optional instance to populate.
        * @return {module:model/AttachmentUpdateRequest} The populated <code>AttachmentUpdateRequest</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AttachmentUpdateRequest</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AttachmentUpdateRequest</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AttachmentUpdateRequest</code>.
        * @alias module:model/AttachmentUpdateRequest
@@ -7701,7 +7699,7 @@ declare module 'testit-api-client/model/AuditApiResult' {
   /**
    * The AuditApiResult model module.
    * @module model/AuditApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AuditApiResult {
       /**
@@ -7717,13 +7715,13 @@ declare module 'testit-api-client/model/AuditApiResult' {
        * @param {module:model/AuditApiResult} obj Optional instance to populate.
        * @return {module:model/AuditApiResult} The populated <code>AuditApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AuditApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AuditApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AuditApiResult</code>.
        * @alias module:model/AuditApiResult
@@ -7745,7 +7743,7 @@ declare module 'testit-api-client/model/AutoTest' {
   /**
    * The AutoTest model module.
    * @module model/AutoTest
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTest {
       /**
@@ -7761,13 +7759,13 @@ declare module 'testit-api-client/model/AutoTest' {
        * @param {module:model/AutoTest} obj Optional instance to populate.
        * @return {module:model/AutoTest} The populated <code>AutoTest</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTest</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTest</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTest</code>.
        * @alias module:model/AutoTest
@@ -7821,7 +7819,7 @@ declare module 'testit-api-client/model/AutoTestApiResult' {
   /**
    * The AutoTestApiResult model module.
    * @module model/AutoTestApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestApiResult {
       /**
@@ -7837,13 +7835,13 @@ declare module 'testit-api-client/model/AutoTestApiResult' {
        * @param {module:model/AutoTestApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestApiResult} The populated <code>AutoTestApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestApiResult</code>.
        * @alias module:model/AutoTestApiResult
@@ -7899,7 +7897,7 @@ declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
   /**
    * The AutoTestAverageDurationApiResult model module.
    * @module model/AutoTestAverageDurationApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestAverageDurationApiResult {
       /**
@@ -7915,13 +7913,13 @@ declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
        * @param {module:model/AutoTestAverageDurationApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestAverageDurationApiResult} The populated <code>AutoTestAverageDurationApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestAverageDurationApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestAverageDurationApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestAverageDurationApiResult</code>.
        * @alias module:model/AutoTestAverageDurationApiResult
@@ -7942,7 +7940,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
   /**
    * The AutoTestBulkDeleteApiModel model module.
    * @module model/AutoTestBulkDeleteApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestBulkDeleteApiModel {
       /**
@@ -7958,13 +7956,13 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
        * @param {module:model/AutoTestBulkDeleteApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestBulkDeleteApiModel} The populated <code>AutoTestBulkDeleteApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestBulkDeleteApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestBulkDeleteApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestBulkDeleteApiModel</code>.
        * @alias module:model/AutoTestBulkDeleteApiModel
@@ -7983,7 +7981,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   /**
    * The AutoTestBulkDeleteApiResult model module.
    * @module model/AutoTestBulkDeleteApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestBulkDeleteApiResult {
       /**
@@ -7999,13 +7997,13 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
        * @param {module:model/AutoTestBulkDeleteApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestBulkDeleteApiResult} The populated <code>AutoTestBulkDeleteApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestBulkDeleteApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestBulkDeleteApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestBulkDeleteApiResult</code>.
        * @alias module:model/AutoTestBulkDeleteApiResult
@@ -8026,7 +8024,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModel' {
   /**
    * The AutoTestChangeViewModel model module.
    * @module model/AutoTestChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestChangeViewModel {
       /**
@@ -8042,13 +8040,13 @@ declare module 'testit-api-client/model/AutoTestChangeViewModel' {
        * @param {module:model/AutoTestChangeViewModel} obj Optional instance to populate.
        * @return {module:model/AutoTestChangeViewModel} The populated <code>AutoTestChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestChangeViewModel</code>.
        * @alias module:model/AutoTestChangeViewModel
@@ -8073,7 +8071,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedField
   /**
    * The AutoTestChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AutoTestChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -8089,13 +8087,13 @@ declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedField
        * @param {module:model/AutoTestChangeViewModelArrayChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/AutoTestChangeViewModelArrayChangedFieldViewModel} The populated <code>AutoTestChangeViewModelArrayChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestChangeViewModelArrayChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestChangeViewModelArrayChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -8106,7 +8104,7 @@ declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
   /**
    * The AutoTestClassCountApiModel model module.
    * @module model/AutoTestClassCountApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestClassCountApiModel {
       /**
@@ -8122,13 +8120,13 @@ declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
        * @param {module:model/AutoTestClassCountApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestClassCountApiModel} The populated <code>AutoTestClassCountApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestClassCountApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestClassCountApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestClassCountApiModel</code>.
        * @alias module:model/AutoTestClassCountApiModel
@@ -8148,7 +8146,7 @@ declare module 'testit-api-client/model/AutoTestCreateApiModel' {
   /**
    * The AutoTestCreateApiModel model module.
    * @module model/AutoTestCreateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestCreateApiModel {
       /**
@@ -8164,13 +8162,13 @@ declare module 'testit-api-client/model/AutoTestCreateApiModel' {
        * @param {module:model/AutoTestCreateApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestCreateApiModel} The populated <code>AutoTestCreateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestCreateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestCreateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestCreateApiModel</code>.
        * @alias module:model/AutoTestCreateApiModel
@@ -8209,7 +8207,7 @@ declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
   /**
    * The AutoTestExtractionApiModel model module.
    * @module model/AutoTestExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestExtractionApiModel {
       /**
@@ -8225,13 +8223,13 @@ declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
        * @param {module:model/AutoTestExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestExtractionApiModel} The populated <code>AutoTestExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -8241,7 +8239,7 @@ declare module 'testit-api-client/model/AutoTestFilterApiModel' {
   /**
    * The AutoTestFilterApiModel model module.
    * @module model/AutoTestFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestFilterApiModel {
       /**
@@ -8257,13 +8255,13 @@ declare module 'testit-api-client/model/AutoTestFilterApiModel' {
        * @param {module:model/AutoTestFilterApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestFilterApiModel} The populated <code>AutoTestFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       externalIds: any;
       globalIds: any;
@@ -8294,7 +8292,7 @@ declare module 'testit-api-client/model/AutoTestFilterModel' {
   /**
    * The AutoTestFilterModel model module.
    * @module model/AutoTestFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestFilterModel {
       /**
@@ -8310,13 +8308,13 @@ declare module 'testit-api-client/model/AutoTestFilterModel' {
        * @param {module:model/AutoTestFilterModel} obj Optional instance to populate.
        * @return {module:model/AutoTestFilterModel} The populated <code>AutoTestFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       externalIds: any;
       globalIds: any;
@@ -8347,7 +8345,7 @@ declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
   /**
    * The AutoTestFlakyBulkApiModel model module.
    * @module model/AutoTestFlakyBulkApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestFlakyBulkApiModel {
       /**
@@ -8363,13 +8361,13 @@ declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
        * @param {module:model/AutoTestFlakyBulkApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestFlakyBulkApiModel} The populated <code>AutoTestFlakyBulkApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestFlakyBulkApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestFlakyBulkApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestFlakyBulkApiModel</code>.
        * @alias module:model/AutoTestFlakyBulkApiModel
@@ -8390,7 +8388,7 @@ declare module 'testit-api-client/model/AutoTestIdModel' {
   /**
    * The AutoTestIdModel model module.
    * @module model/AutoTestIdModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestIdModel {
       /**
@@ -8406,13 +8404,13 @@ declare module 'testit-api-client/model/AutoTestIdModel' {
        * @param {module:model/AutoTestIdModel} obj Optional instance to populate.
        * @return {module:model/AutoTestIdModel} The populated <code>AutoTestIdModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestIdModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestIdModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestIdModel</code>.
        * @alias module:model/AutoTestIdModel
@@ -8431,7 +8429,7 @@ declare module 'testit-api-client/model/AutoTestModel' {
   /**
    * The AutoTestModel model module.
    * @module model/AutoTestModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestModel {
       /**
@@ -8447,13 +8445,13 @@ declare module 'testit-api-client/model/AutoTestModel' {
        * @param {module:model/AutoTestModel} obj Optional instance to populate.
        * @return {module:model/AutoTestModel} The populated <code>AutoTestModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestModel</code>.
        * @alias module:model/AutoTestModel
@@ -8508,7 +8506,7 @@ declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
   /**
    * The AutoTestModelV2GetModel model module.
    * @module model/AutoTestModelV2GetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestModelV2GetModel {
       /**
@@ -8524,13 +8522,13 @@ declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
        * @param {module:model/AutoTestModelV2GetModel} obj Optional instance to populate.
        * @return {module:model/AutoTestModelV2GetModel} The populated <code>AutoTestModelV2GetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestModelV2GetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestModelV2GetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestModelV2GetModel</code>.
        * @alias module:model/AutoTestModelV2GetModel
@@ -8572,7 +8570,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
   /**
    * The AutoTestNamespaceApiResult model module.
    * @module model/AutoTestNamespaceApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestNamespaceApiResult {
       /**
@@ -8588,13 +8586,13 @@ declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
        * @param {module:model/AutoTestNamespaceApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestNamespaceApiResult} The populated <code>AutoTestNamespaceApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestNamespaceApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestNamespaceApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestNamespaceApiResult</code>.
        * @alias module:model/AutoTestNamespaceApiResult
@@ -8614,7 +8612,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
   /**
    * The AutoTestNamespaceCountApiModel model module.
    * @module model/AutoTestNamespaceCountApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestNamespaceCountApiModel {
       /**
@@ -8630,20 +8628,20 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
        * @param {module:model/AutoTestNamespaceCountApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestNamespaceCountApiModel} The populated <code>AutoTestNamespaceCountApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestNamespaceCountApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestNamespaceCountApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestNamespaceCountApiModel</code>.
        * @alias module:model/AutoTestNamespaceCountApiModel
        * @param count {Number}
        * @param classes {Array.<module:model/AutoTestClassCountApiModel>}
        */
-      constructor(count: number, classes: Array<module>);
+      constructor(count: number, classes: Array<any>);
       name: any;
       count: any;
       classes: any;
@@ -8658,7 +8656,7 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
   /**
    * The AutoTestNamespacesCountResponse model module.
    * @module model/AutoTestNamespacesCountResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestNamespacesCountResponse {
       /**
@@ -8674,19 +8672,19 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
        * @param {module:model/AutoTestNamespacesCountResponse} obj Optional instance to populate.
        * @return {module:model/AutoTestNamespacesCountResponse} The populated <code>AutoTestNamespacesCountResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestNamespacesCountResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestNamespacesCountResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestNamespacesCountResponse</code>.
        * @alias module:model/AutoTestNamespacesCountResponse
        * @param namespaces {Array.<module:model/AutoTestNamespaceCountApiModel>}
        */
-      constructor(namespaces: Array<module>);
+      constructor(namespaces: Array<any>);
       namespaces: any;
   }
   namespace AutoTestNamespacesCountResponse {
@@ -8731,7 +8729,6 @@ declare module 'testit-api-client/model/AutoTestOutcome' {
   /**
    * *
    */
-  export type AutoTestOutcome = any;
 
 }
 declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
@@ -8739,7 +8736,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
   /**
    * The AutoTestProjectSettingsApiModel model module.
    * @module model/AutoTestProjectSettingsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestProjectSettingsApiModel {
       /**
@@ -8755,13 +8752,13 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
        * @param {module:model/AutoTestProjectSettingsApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestProjectSettingsApiModel} The populated <code>AutoTestProjectSettingsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestProjectSettingsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestProjectSettingsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestProjectSettingsApiModel</code>.
        * @alias module:model/AutoTestProjectSettingsApiModel
@@ -8788,7 +8785,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
   /**
    * The AutoTestProjectSettingsApiResult model module.
    * @module model/AutoTestProjectSettingsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestProjectSettingsApiResult {
       /**
@@ -8804,13 +8801,13 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
        * @param {module:model/AutoTestProjectSettingsApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestProjectSettingsApiResult} The populated <code>AutoTestProjectSettingsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestProjectSettingsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestProjectSettingsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestProjectSettingsApiResult</code>.
        * @alias module:model/AutoTestProjectSettingsApiResult
@@ -8843,7 +8840,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
   /**
    * The AutoTestResultHistoryApiResult model module.
    * @module model/AutoTestResultHistoryApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestResultHistoryApiResult {
       /**
@@ -8859,13 +8856,13 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
        * @param {module:model/AutoTestResultHistoryApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestResultHistoryApiResult} The populated <code>AutoTestResultHistoryApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestResultHistoryApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestResultHistoryApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestResultHistoryApiResult</code>.
        * @alias module:model/AutoTestResultHistoryApiResult
@@ -8880,7 +8877,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
        * @param createdDate {Date}
        * @param createdById {String}
        */
-      constructor(id: string, testRunId: string, configurationId: string, configurationName: string, outcome: any, status: any, rerunCount: number, rerunTestResults: Array<module>, createdDate: Date, createdById: string);
+      constructor(id: string, testRunId: string, configurationId: string, configurationName: string, outcome: any, status: any, rerunCount: number, rerunTestResults: Array<any>, createdDate: Date, createdById: string);
       id: any;
       testPlanId: any;
       testPlanGlobalId: any;
@@ -8911,7 +8908,7 @@ declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
   /**
    * The AutoTestResultHistorySelectApiModel model module.
    * @module model/AutoTestResultHistorySelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestResultHistorySelectApiModel {
       /**
@@ -8927,13 +8924,13 @@ declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
        * @param {module:model/AutoTestResultHistorySelectApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestResultHistorySelectApiModel} The populated <code>AutoTestResultHistorySelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestResultHistorySelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestResultHistorySelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       outcomes: any;
       statusCodes: any;
       testPlanIds: any;
@@ -8987,7 +8984,6 @@ declare module 'testit-api-client/model/AutotestResultOutcome' {
   /**
    * *
    */
-  export type AutotestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
@@ -8995,7 +8991,7 @@ declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
   /**
    * The AutotestResultReasonFilterModel model module.
    * @module model/AutotestResultReasonFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutotestResultReasonFilterModel {
       /**
@@ -9011,13 +9007,13 @@ declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
        * @param {module:model/AutotestResultReasonFilterModel} obj Optional instance to populate.
        * @return {module:model/AutotestResultReasonFilterModel} The populated <code>AutotestResultReasonFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutotestResultReasonFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutotestResultReasonFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       failureCategories: any;
       name: any;
       regexCount: any;
@@ -9030,7 +9026,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonShort' {
   /**
    * The AutoTestResultReasonShort model module.
    * @module model/AutoTestResultReasonShort
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestResultReasonShort {
       /**
@@ -9046,13 +9042,13 @@ declare module 'testit-api-client/model/AutoTestResultReasonShort' {
        * @param {module:model/AutoTestResultReasonShort} obj Optional instance to populate.
        * @return {module:model/AutoTestResultReasonShort} The populated <code>AutoTestResultReasonShort</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestResultReasonShort</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestResultReasonShort</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestResultReasonShort</code>.
        * @alias module:model/AutoTestResultReasonShort
@@ -9073,7 +9069,7 @@ declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
   /**
    * The AutotestResultReasonShortGetModel model module.
    * @module model/AutotestResultReasonShortGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutotestResultReasonShortGetModel {
       /**
@@ -9089,13 +9085,13 @@ declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
        * @param {module:model/AutotestResultReasonShortGetModel} obj Optional instance to populate.
        * @return {module:model/AutotestResultReasonShortGetModel} The populated <code>AutotestResultReasonShortGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutotestResultReasonShortGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutotestResultReasonShortGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutotestResultReasonShortGetModel</code>.
        * @alias module:model/AutotestResultReasonShortGetModel
@@ -9129,7 +9125,7 @@ declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
   /**
    * The AutoTestResultsForTestRunModel model module.
    * @module model/AutoTestResultsForTestRunModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestResultsForTestRunModel {
       /**
@@ -9145,13 +9141,13 @@ declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
        * @param {module:model/AutoTestResultsForTestRunModel} obj Optional instance to populate.
        * @return {module:model/AutoTestResultsForTestRunModel} The populated <code>AutoTestResultsForTestRunModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestResultsForTestRunModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestResultsForTestRunModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestResultsForTestRunModel</code>.
        * @alias module:model/AutoTestResultsForTestRunModel
@@ -9188,7 +9184,7 @@ declare module 'testit-api-client/model/AutoTestSearchApiModel' {
   /**
    * The AutoTestSearchApiModel model module.
    * @module model/AutoTestSearchApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestSearchApiModel {
       /**
@@ -9204,13 +9200,13 @@ declare module 'testit-api-client/model/AutoTestSearchApiModel' {
        * @param {module:model/AutoTestSearchApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestSearchApiModel} The populated <code>AutoTestSearchApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestSearchApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestSearchApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       includes: any;
   }
@@ -9221,7 +9217,7 @@ declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
   /**
    * The AutoTestSearchIncludeApiModel model module.
    * @module model/AutoTestSearchIncludeApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestSearchIncludeApiModel {
       /**
@@ -9237,13 +9233,13 @@ declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
        * @param {module:model/AutoTestSearchIncludeApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestSearchIncludeApiModel} The populated <code>AutoTestSearchIncludeApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestSearchIncludeApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestSearchIncludeApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       includeSteps: any;
       includeLinks: any;
       includeLabels: any;
@@ -9255,7 +9251,7 @@ declare module 'testit-api-client/model/AutoTestSelectApiModel' {
   /**
    * The AutoTestSelectApiModel model module.
    * @module model/AutoTestSelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestSelectApiModel {
       /**
@@ -9271,13 +9267,13 @@ declare module 'testit-api-client/model/AutoTestSelectApiModel' {
        * @param {module:model/AutoTestSelectApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestSelectApiModel} The populated <code>AutoTestSelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestSelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestSelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -9288,7 +9284,7 @@ declare module 'testit-api-client/model/AutoTestSelectModel' {
   /**
    * The AutoTestSelectModel model module.
    * @module model/AutoTestSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestSelectModel {
       /**
@@ -9304,13 +9300,13 @@ declare module 'testit-api-client/model/AutoTestSelectModel' {
        * @param {module:model/AutoTestSelectModel} obj Optional instance to populate.
        * @return {module:model/AutoTestSelectModel} The populated <code>AutoTestSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestSelectModel</code>.
        * @alias module:model/AutoTestSelectModel
@@ -9330,7 +9326,7 @@ declare module 'testit-api-client/model/AutoTestsExtractionModel' {
   /**
    * The AutoTestsExtractionModel model module.
    * @module model/AutoTestsExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestsExtractionModel {
       /**
@@ -9346,13 +9342,13 @@ declare module 'testit-api-client/model/AutoTestsExtractionModel' {
        * @param {module:model/AutoTestsExtractionModel} obj Optional instance to populate.
        * @return {module:model/AutoTestsExtractionModel} The populated <code>AutoTestsExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestsExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestsExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -9362,7 +9358,7 @@ declare module 'testit-api-client/model/AutoTestShortApiResult' {
   /**
    * The AutoTestShortApiResult model module.
    * @module model/AutoTestShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestShortApiResult {
       /**
@@ -9378,13 +9374,13 @@ declare module 'testit-api-client/model/AutoTestShortApiResult' {
        * @param {module:model/AutoTestShortApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestShortApiResult} The populated <code>AutoTestShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestShortApiResult</code>.
        * @alias module:model/AutoTestShortApiResult
@@ -9411,7 +9407,7 @@ declare module 'testit-api-client/model/AutoTestStep' {
   /**
    * The AutoTestStep model module.
    * @module model/AutoTestStep
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStep {
       /**
@@ -9427,13 +9423,13 @@ declare module 'testit-api-client/model/AutoTestStep' {
        * @param {module:model/AutoTestStep} obj Optional instance to populate.
        * @return {module:model/AutoTestStep} The populated <code>AutoTestStep</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStep</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStep</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestStep</code>.
        * @alias module:model/AutoTestStep
@@ -9454,7 +9450,7 @@ declare module 'testit-api-client/model/AutoTestStepApiModel' {
   /**
    * The AutoTestStepApiModel model module.
    * @module model/AutoTestStepApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepApiModel {
       /**
@@ -9470,13 +9466,13 @@ declare module 'testit-api-client/model/AutoTestStepApiModel' {
        * @param {module:model/AutoTestStepApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestStepApiModel} The populated <code>AutoTestStepApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestStepApiModel</code>.
        * @alias module:model/AutoTestStepApiModel
@@ -9497,7 +9493,7 @@ declare module 'testit-api-client/model/AutoTestStepApiResult' {
   /**
    * The AutoTestStepApiResult model module.
    * @module model/AutoTestStepApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepApiResult {
       /**
@@ -9513,13 +9509,13 @@ declare module 'testit-api-client/model/AutoTestStepApiResult' {
        * @param {module:model/AutoTestStepApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestStepApiResult} The populated <code>AutoTestStepApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestStepApiResult</code>.
        * @alias module:model/AutoTestStepApiResult
@@ -9540,7 +9536,7 @@ declare module 'testit-api-client/model/AutoTestStepModel' {
   /**
    * The AutoTestStepModel model module.
    * @module model/AutoTestStepModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepModel {
       /**
@@ -9556,13 +9552,13 @@ declare module 'testit-api-client/model/AutoTestStepModel' {
        * @param {module:model/AutoTestStepModel} obj Optional instance to populate.
        * @return {module:model/AutoTestStepModel} The populated <code>AutoTestStepModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestStepModel</code>.
        * @alias module:model/AutoTestStepModel
@@ -9583,7 +9579,7 @@ declare module 'testit-api-client/model/AutoTestStepResult' {
   /**
    * The AutoTestStepResult model module.
    * @module model/AutoTestStepResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepResult {
       /**
@@ -9599,13 +9595,13 @@ declare module 'testit-api-client/model/AutoTestStepResult' {
        * @param {module:model/AutoTestStepResult} obj Optional instance to populate.
        * @return {module:model/AutoTestStepResult} The populated <code>AutoTestStepResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       title: any;
       description: any;
       info: any;
@@ -9624,7 +9620,7 @@ declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
   /**
    * The AutoTestStepResultsApiResult model module.
    * @module model/AutoTestStepResultsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepResultsApiResult {
       /**
@@ -9640,13 +9636,13 @@ declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
        * @param {module:model/AutoTestStepResultsApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestStepResultsApiResult} The populated <code>AutoTestStepResultsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepResultsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepResultsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       title: any;
       description: any;
       info: any;
@@ -9665,7 +9661,7 @@ declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
   /**
    * The AutoTestStepResultUpdateRequest model module.
    * @module model/AutoTestStepResultUpdateRequest
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestStepResultUpdateRequest {
       /**
@@ -9681,13 +9677,13 @@ declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
        * @param {module:model/AutoTestStepResultUpdateRequest} obj Optional instance to populate.
        * @return {module:model/AutoTestStepResultUpdateRequest} The populated <code>AutoTestStepResultUpdateRequest</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestStepResultUpdateRequest</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestStepResultUpdateRequest</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       title: any;
       description: any;
       info: any;
@@ -9706,7 +9702,7 @@ declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
   /**
    * The AutoTestUpdateApiModel model module.
    * @module model/AutoTestUpdateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestUpdateApiModel {
       /**
@@ -9722,13 +9718,13 @@ declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
        * @param {module:model/AutoTestUpdateApiModel} obj Optional instance to populate.
        * @return {module:model/AutoTestUpdateApiModel} The populated <code>AutoTestUpdateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestUpdateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestUpdateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestUpdateApiModel</code>.
        * @alias module:model/AutoTestUpdateApiModel
@@ -9766,7 +9762,7 @@ declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
   /**
    * The AutoTestWorkItemIdentifierApiResult model module.
    * @module model/AutoTestWorkItemIdentifierApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class AutoTestWorkItemIdentifierApiResult {
       /**
@@ -9782,13 +9778,13 @@ declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
        * @param {module:model/AutoTestWorkItemIdentifierApiResult} obj Optional instance to populate.
        * @return {module:model/AutoTestWorkItemIdentifierApiResult} The populated <code>AutoTestWorkItemIdentifierApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>AutoTestWorkItemIdentifierApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestWorkItemIdentifierApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>AutoTestWorkItemIdentifierApiResult</code>.
        * @alias module:model/AutoTestWorkItemIdentifierApiResult
@@ -9836,7 +9832,6 @@ declare module 'testit-api-client/model/AvailableFailureCategory' {
   /**
    * *
    */
-  export type AvailableFailureCategory = any;
 
 }
 declare module 'testit-api-client/model/AvailableTestResultOutcome' {
@@ -9881,7 +9876,6 @@ declare module 'testit-api-client/model/AvailableTestResultOutcome' {
   /**
    * *
    */
-  export type AvailableTestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
@@ -9889,7 +9883,7 @@ declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
   /**
    * The BackgroundJobAttachmentModel model module.
    * @module model/BackgroundJobAttachmentModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class BackgroundJobAttachmentModel {
       /**
@@ -9905,13 +9899,13 @@ declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
        * @param {module:model/BackgroundJobAttachmentModel} obj Optional instance to populate.
        * @return {module:model/BackgroundJobAttachmentModel} The populated <code>BackgroundJobAttachmentModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>BackgroundJobAttachmentModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BackgroundJobAttachmentModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>BackgroundJobAttachmentModel</code>.
        * @alias module:model/BackgroundJobAttachmentModel
@@ -9936,7 +9930,7 @@ declare module 'testit-api-client/model/BackgroundJobFilterModel' {
   /**
    * The BackgroundJobFilterModel model module.
    * @module model/BackgroundJobFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class BackgroundJobFilterModel {
       /**
@@ -9952,13 +9946,13 @@ declare module 'testit-api-client/model/BackgroundJobFilterModel' {
        * @param {module:model/BackgroundJobFilterModel} obj Optional instance to populate.
        * @return {module:model/BackgroundJobFilterModel} The populated <code>BackgroundJobFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>BackgroundJobFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BackgroundJobFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       types: any;
       states: any;
       isDeleted: any;
@@ -9972,7 +9966,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
   /**
    * The BackgroundJobGetModel model module.
    * @module model/BackgroundJobGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class BackgroundJobGetModel {
       /**
@@ -9988,13 +9982,13 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
        * @param {module:model/BackgroundJobGetModel} obj Optional instance to populate.
        * @return {module:model/BackgroundJobGetModel} The populated <code>BackgroundJobGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>BackgroundJobGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BackgroundJobGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>BackgroundJobGetModel</code>.
        * @alias module:model/BackgroundJobGetModel
@@ -10007,7 +10001,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
        * @param createdDate {Date}
        * @param attachments {Array.<module:model/BackgroundJobAttachmentModel>}
        */
-      constructor(id: string, jobId: string, jobType: any, state: any, isDeleted: boolean, progress: number, createdDate: Date, attachments: Array<module>);
+      constructor(id: string, jobId: string, jobType: any, state: any, isDeleted: boolean, progress: number, createdDate: Date, attachments: Array<any>);
       id: any;
       jobId: any;
       jobType: any;
@@ -10067,7 +10061,6 @@ declare module 'testit-api-client/model/BackgroundJobState' {
   /**
    * *
    */
-  export type BackgroundJobState = any;
 
 }
 declare module 'testit-api-client/model/BackgroundJobType' {
@@ -10182,7 +10175,6 @@ declare module 'testit-api-client/model/BackgroundJobType' {
   /**
    * *
    */
-  export type BackgroundJobType = any;
 
 }
 declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
@@ -10190,7 +10182,7 @@ declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
   /**
    * The BooleanChangedFieldViewModel model module.
    * @module model/BooleanChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class BooleanChangedFieldViewModel {
       /**
@@ -10206,13 +10198,13 @@ declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
        * @param {module:model/BooleanChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/BooleanChangedFieldViewModel} The populated <code>BooleanChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>BooleanChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BooleanChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>BooleanChangedFieldViewModel</code>.
        * @alias module:model/BooleanChangedFieldViewModel
@@ -10233,7 +10225,7 @@ declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
   /**
    * The BooleanNullableChangedFieldViewModel model module.
    * @module model/BooleanNullableChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class BooleanNullableChangedFieldViewModel {
       /**
@@ -10249,13 +10241,13 @@ declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
        * @param {module:model/BooleanNullableChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/BooleanNullableChangedFieldViewModel} The populated <code>BooleanNullableChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>BooleanNullableChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BooleanNullableChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -10266,7 +10258,7 @@ declare module 'testit-api-client/model/CollectionFilter' {
   /**
    * The CollectionFilter model module.
    * @module model/CollectionFilter
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CollectionFilter {
       /**
@@ -10282,13 +10274,13 @@ declare module 'testit-api-client/model/CollectionFilter' {
        * @param {module:model/CollectionFilter} obj Optional instance to populate.
        * @return {module:model/CollectionFilter} The populated <code>CollectionFilter</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CollectionFilter</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CollectionFilter</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CollectionFilter</code>.
        * @alias module:model/CollectionFilter
@@ -10333,7 +10325,6 @@ declare module 'testit-api-client/model/CollectionOperator' {
   /**
    * *
    */
-  export type CollectionOperator = any;
 
 }
 declare module 'testit-api-client/model/CompositeFilter' {
@@ -10341,7 +10332,7 @@ declare module 'testit-api-client/model/CompositeFilter' {
   /**
    * The CompositeFilter model module.
    * @module model/CompositeFilter
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CompositeFilter {
       /**
@@ -10357,20 +10348,20 @@ declare module 'testit-api-client/model/CompositeFilter' {
        * @param {module:model/CompositeFilter} obj Optional instance to populate.
        * @return {module:model/CompositeFilter} The populated <code>CompositeFilter</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CompositeFilter</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CompositeFilter</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CompositeFilter</code>.
        * @alias module:model/CompositeFilter
        * @param filters {Array.<module:model/IFilter>}
        * @param operator {module:model/LogicalOperator}
        */
-      constructor(filters: Array<module>, operator: any);
+      constructor(filters: Array<any>, operator: any);
       filters: any;
       operator: any;
   }
@@ -10384,7 +10375,7 @@ declare module 'testit-api-client/model/ConfigurationByParametersModel' {
   /**
    * The ConfigurationByParametersModel model module.
    * @module model/ConfigurationByParametersModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationByParametersModel {
       /**
@@ -10400,13 +10391,13 @@ declare module 'testit-api-client/model/ConfigurationByParametersModel' {
        * @param {module:model/ConfigurationByParametersModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationByParametersModel} The populated <code>ConfigurationByParametersModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationByParametersModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationByParametersModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationByParametersModel</code>.
        * @alias module:model/ConfigurationByParametersModel
@@ -10427,7 +10418,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
   /**
    * The ConfigurationExtractionApiModel model module.
    * @module model/ConfigurationExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationExtractionApiModel {
       /**
@@ -10443,13 +10434,13 @@ declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
        * @param {module:model/ConfigurationExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationExtractionApiModel} The populated <code>ConfigurationExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
       projectIds: any;
   }
@@ -10460,7 +10451,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionModel' {
   /**
    * The ConfigurationExtractionModel model module.
    * @module model/ConfigurationExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationExtractionModel {
       /**
@@ -10476,13 +10467,13 @@ declare module 'testit-api-client/model/ConfigurationExtractionModel' {
        * @param {module:model/ConfigurationExtractionModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationExtractionModel} The populated <code>ConfigurationExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
       projectIds: any;
   }
@@ -10493,7 +10484,7 @@ declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
   /**
    * The ConfigurationFilterApiModel model module.
    * @module model/ConfigurationFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationFilterApiModel {
       /**
@@ -10509,13 +10500,13 @@ declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
        * @param {module:model/ConfigurationFilterApiModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationFilterApiModel} The populated <code>ConfigurationFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       name: any;
       isDeleted: any;
@@ -10528,7 +10519,7 @@ declare module 'testit-api-client/model/ConfigurationFilterModel' {
   /**
    * The ConfigurationFilterModel model module.
    * @module model/ConfigurationFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationFilterModel {
       /**
@@ -10544,13 +10535,13 @@ declare module 'testit-api-client/model/ConfigurationFilterModel' {
        * @param {module:model/ConfigurationFilterModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationFilterModel} The populated <code>ConfigurationFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       name: any;
       isDeleted: any;
@@ -10563,7 +10554,7 @@ declare module 'testit-api-client/model/ConfigurationModel' {
   /**
    * The ConfigurationModel model module.
    * @module model/ConfigurationModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationModel {
       /**
@@ -10579,13 +10570,13 @@ declare module 'testit-api-client/model/ConfigurationModel' {
        * @param {module:model/ConfigurationModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationModel} The populated <code>ConfigurationModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationModel</code>.
        * @alias module:model/ConfigurationModel
@@ -10621,7 +10612,7 @@ declare module 'testit-api-client/model/ConfigurationPostModel' {
   /**
    * The ConfigurationPostModel model module.
    * @module model/ConfigurationPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationPostModel {
       /**
@@ -10637,13 +10628,13 @@ declare module 'testit-api-client/model/ConfigurationPostModel' {
        * @param {module:model/ConfigurationPostModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationPostModel} The populated <code>ConfigurationPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationPostModel</code>.
        * @alias module:model/ConfigurationPostModel
@@ -10669,7 +10660,7 @@ declare module 'testit-api-client/model/ConfigurationPutModel' {
   /**
    * The ConfigurationPutModel model module.
    * @module model/ConfigurationPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationPutModel {
       /**
@@ -10685,13 +10676,13 @@ declare module 'testit-api-client/model/ConfigurationPutModel' {
        * @param {module:model/ConfigurationPutModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationPutModel} The populated <code>ConfigurationPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationPutModel</code>.
        * @alias module:model/ConfigurationPutModel
@@ -10719,7 +10710,7 @@ declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
   /**
    * The ConfigurationSelectApiModel model module.
    * @module model/ConfigurationSelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationSelectApiModel {
       /**
@@ -10735,13 +10726,13 @@ declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
        * @param {module:model/ConfigurationSelectApiModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationSelectApiModel} The populated <code>ConfigurationSelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationSelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationSelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -10752,7 +10743,7 @@ declare module 'testit-api-client/model/ConfigurationSelectModel' {
   /**
    * The ConfigurationSelectModel model module.
    * @module model/ConfigurationSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationSelectModel {
       /**
@@ -10768,13 +10759,13 @@ declare module 'testit-api-client/model/ConfigurationSelectModel' {
        * @param {module:model/ConfigurationSelectModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationSelectModel} The populated <code>ConfigurationSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -10785,7 +10776,7 @@ declare module 'testit-api-client/model/ConfigurationShort' {
   /**
    * The ConfigurationShort model module.
    * @module model/ConfigurationShort
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationShort {
       /**
@@ -10801,13 +10792,13 @@ declare module 'testit-api-client/model/ConfigurationShort' {
        * @param {module:model/ConfigurationShort} obj Optional instance to populate.
        * @return {module:model/ConfigurationShort} The populated <code>ConfigurationShort</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationShort</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationShort</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationShort</code>.
        * @alias module:model/ConfigurationShort
@@ -10828,7 +10819,7 @@ declare module 'testit-api-client/model/ConfigurationShortApiResult' {
   /**
    * The ConfigurationShortApiResult model module.
    * @module model/ConfigurationShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationShortApiResult {
       /**
@@ -10844,13 +10835,13 @@ declare module 'testit-api-client/model/ConfigurationShortApiResult' {
        * @param {module:model/ConfigurationShortApiResult} obj Optional instance to populate.
        * @return {module:model/ConfigurationShortApiResult} The populated <code>ConfigurationShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationShortApiResult</code>.
        * @alias module:model/ConfigurationShortApiResult
@@ -10871,7 +10862,7 @@ declare module 'testit-api-client/model/ConfigurationShortModel' {
   /**
    * The ConfigurationShortModel model module.
    * @module model/ConfigurationShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ConfigurationShortModel {
       /**
@@ -10887,13 +10878,13 @@ declare module 'testit-api-client/model/ConfigurationShortModel' {
        * @param {module:model/ConfigurationShortModel} obj Optional instance to populate.
        * @return {module:model/ConfigurationShortModel} The populated <code>ConfigurationShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ConfigurationShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ConfigurationShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ConfigurationShortModel</code>.
        * @alias module:model/ConfigurationShortModel
@@ -10914,7 +10905,7 @@ declare module 'testit-api-client/model/CreateDefectApiModel' {
   /**
    * The CreateDefectApiModel model module.
    * @module model/CreateDefectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateDefectApiModel {
       /**
@@ -10930,13 +10921,13 @@ declare module 'testit-api-client/model/CreateDefectApiModel' {
        * @param {module:model/CreateDefectApiModel} obj Optional instance to populate.
        * @return {module:model/CreateDefectApiModel} The populated <code>CreateDefectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateDefectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateDefectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateDefectApiModel</code>.
        * @alias module:model/CreateDefectApiModel
@@ -10957,7 +10948,7 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
   /**
    * The CreateEmptyTestRunApiModel model module.
    * @module model/CreateEmptyTestRunApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateEmptyTestRunApiModel {
       /**
@@ -10973,13 +10964,13 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
        * @param {module:model/CreateEmptyTestRunApiModel} obj Optional instance to populate.
        * @return {module:model/CreateEmptyTestRunApiModel} The populated <code>CreateEmptyTestRunApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateEmptyTestRunApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateEmptyTestRunApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateEmptyTestRunApiModel</code>.
        * @alias module:model/CreateEmptyTestRunApiModel
@@ -11004,7 +10995,7 @@ declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
   /**
    * The CreateFailureCategoryApiModel model module.
    * @module model/CreateFailureCategoryApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateFailureCategoryApiModel {
       /**
@@ -11020,13 +11011,13 @@ declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
        * @param {module:model/CreateFailureCategoryApiModel} obj Optional instance to populate.
        * @return {module:model/CreateFailureCategoryApiModel} The populated <code>CreateFailureCategoryApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateFailureCategoryApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateFailureCategoryApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateFailureCategoryApiModel</code>.
        * @alias module:model/CreateFailureCategoryApiModel
@@ -11049,7 +11040,7 @@ declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
   /**
    * The CreateFailureClassRegexApiModel model module.
    * @module model/CreateFailureClassRegexApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateFailureClassRegexApiModel {
       /**
@@ -11065,13 +11056,13 @@ declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
        * @param {module:model/CreateFailureClassRegexApiModel} obj Optional instance to populate.
        * @return {module:model/CreateFailureClassRegexApiModel} The populated <code>CreateFailureClassRegexApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateFailureClassRegexApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateFailureClassRegexApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateFailureClassRegexApiModel</code>.
        * @alias module:model/CreateFailureClassRegexApiModel
@@ -11090,7 +11081,7 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
   /**
    * The CreateLinkApiModel model module.
    * @module model/CreateLinkApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateLinkApiModel {
       /**
@@ -11106,13 +11097,13 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
        * @param {module:model/CreateLinkApiModel} obj Optional instance to populate.
        * @return {module:model/CreateLinkApiModel} The populated <code>CreateLinkApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateLinkApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateLinkApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateLinkApiModel</code>.
        * @alias module:model/CreateLinkApiModel
@@ -11136,7 +11127,7 @@ declare module 'testit-api-client/model/CreateParameterApiModel' {
   /**
    * The CreateParameterApiModel model module.
    * @module model/CreateParameterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateParameterApiModel {
       /**
@@ -11152,13 +11143,13 @@ declare module 'testit-api-client/model/CreateParameterApiModel' {
        * @param {module:model/CreateParameterApiModel} obj Optional instance to populate.
        * @return {module:model/CreateParameterApiModel} The populated <code>CreateParameterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateParameterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateParameterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateParameterApiModel</code>.
        * @alias module:model/CreateParameterApiModel
@@ -11180,7 +11171,7 @@ declare module 'testit-api-client/model/CreateProjectApiModel' {
   /**
    * The CreateProjectApiModel model module.
    * @module model/CreateProjectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateProjectApiModel {
       /**
@@ -11196,13 +11187,13 @@ declare module 'testit-api-client/model/CreateProjectApiModel' {
        * @param {module:model/CreateProjectApiModel} obj Optional instance to populate.
        * @return {module:model/CreateProjectApiModel} The populated <code>CreateProjectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateProjectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateProjectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateProjectApiModel</code>.
        * @alias module:model/CreateProjectApiModel
@@ -11224,7 +11215,7 @@ declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
   /**
    * The CreateProjectFailureCategoryApiModel model module.
    * @module model/CreateProjectFailureCategoryApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateProjectFailureCategoryApiModel {
       /**
@@ -11240,13 +11231,13 @@ declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
        * @param {module:model/CreateProjectFailureCategoryApiModel} obj Optional instance to populate.
        * @return {module:model/CreateProjectFailureCategoryApiModel} The populated <code>CreateProjectFailureCategoryApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateProjectFailureCategoryApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateProjectFailureCategoryApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateProjectFailureCategoryApiModel</code>.
        * @alias module:model/CreateProjectFailureCategoryApiModel
@@ -11268,7 +11259,7 @@ declare module 'testit-api-client/model/CreateStepApiModel' {
   /**
    * The CreateStepApiModel model module.
    * @module model/CreateStepApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateStepApiModel {
       /**
@@ -11284,13 +11275,13 @@ declare module 'testit-api-client/model/CreateStepApiModel' {
        * @param {module:model/CreateStepApiModel} obj Optional instance to populate.
        * @return {module:model/CreateStepApiModel} The populated <code>CreateStepApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateStepApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateStepApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       action: any;
       expected: any;
       testData: any;
@@ -11304,7 +11295,7 @@ declare module 'testit-api-client/model/CreateTagApiModel' {
   /**
    * The CreateTagApiModel model module.
    * @module model/CreateTagApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTagApiModel {
       /**
@@ -11320,13 +11311,13 @@ declare module 'testit-api-client/model/CreateTagApiModel' {
        * @param {module:model/CreateTagApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTagApiModel} The populated <code>CreateTagApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTagApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTagApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTagApiModel</code>.
        * @alias module:model/CreateTagApiModel
@@ -11345,7 +11336,7 @@ declare module 'testit-api-client/model/CreateTestPlanApiModel' {
   /**
    * The CreateTestPlanApiModel model module.
    * @module model/CreateTestPlanApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTestPlanApiModel {
       /**
@@ -11361,13 +11352,13 @@ declare module 'testit-api-client/model/CreateTestPlanApiModel' {
        * @param {module:model/CreateTestPlanApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTestPlanApiModel} The populated <code>CreateTestPlanApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTestPlanApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTestPlanApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTestPlanApiModel</code>.
        * @alias module:model/CreateTestPlanApiModel
@@ -11398,7 +11389,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel'
   /**
    * The CreateTestRunAndFillByAutoTestsApiModel model module.
    * @module model/CreateTestRunAndFillByAutoTestsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTestRunAndFillByAutoTestsApiModel {
       /**
@@ -11414,13 +11405,13 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel'
        * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTestRunAndFillByAutoTestsApiModel} The populated <code>CreateTestRunAndFillByAutoTestsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTestRunAndFillByAutoTestsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTestRunAndFillByAutoTestsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTestRunAndFillByAutoTestsApiModel</code>.
        * @alias module:model/CreateTestRunAndFillByAutoTestsApiModel
@@ -11449,7 +11440,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
   /**
    * The CreateTestRunAndFillByConfigurationsApiModel model module.
    * @module model/CreateTestRunAndFillByConfigurationsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTestRunAndFillByConfigurationsApiModel {
       /**
@@ -11465,13 +11456,13 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
        * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTestRunAndFillByConfigurationsApiModel} The populated <code>CreateTestRunAndFillByConfigurationsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTestRunAndFillByConfigurationsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTestRunAndFillByConfigurationsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTestRunAndFillByConfigurationsApiModel</code>.
        * @alias module:model/CreateTestRunAndFillByConfigurationsApiModel
@@ -11479,7 +11470,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
        * @param testPlanId {String} Specifies the GUID of the test plan, within which the test run will be created.
        * @param testPointSelectors {Array.<module:model/TestPointSelector>} Specifies an array of work items and configuration to create a test run for.
        */
-      constructor(projectId: string, testPlanId: string, testPointSelectors: Array<module>);
+      constructor(projectId: string, testPlanId: string, testPointSelectors: Array<any>);
       projectId: any;
       testPlanId: any;
       name: any;
@@ -11500,7 +11491,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel'
   /**
    * The CreateTestRunAndFillByWorkItemsApiModel model module.
    * @module model/CreateTestRunAndFillByWorkItemsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTestRunAndFillByWorkItemsApiModel {
       /**
@@ -11516,13 +11507,13 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel'
        * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTestRunAndFillByWorkItemsApiModel} The populated <code>CreateTestRunAndFillByWorkItemsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTestRunAndFillByWorkItemsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTestRunAndFillByWorkItemsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTestRunAndFillByWorkItemsApiModel</code>.
        * @alias module:model/CreateTestRunAndFillByWorkItemsApiModel
@@ -11553,7 +11544,7 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   /**
    * The CreateTestStatusApiModel model module.
    * @module model/CreateTestStatusApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateTestStatusApiModel {
       /**
@@ -11569,13 +11560,13 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
        * @param {module:model/CreateTestStatusApiModel} obj Optional instance to populate.
        * @return {module:model/CreateTestStatusApiModel} The populated <code>CreateTestStatusApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateTestStatusApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateTestStatusApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateTestStatusApiModel</code>.
        * @alias module:model/CreateTestStatusApiModel
@@ -11599,7 +11590,7 @@ declare module 'testit-api-client/model/CreateWorkflowApiModel' {
   /**
    * The CreateWorkflowApiModel model module.
    * @module model/CreateWorkflowApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateWorkflowApiModel {
       /**
@@ -11615,20 +11606,20 @@ declare module 'testit-api-client/model/CreateWorkflowApiModel' {
        * @param {module:model/CreateWorkflowApiModel} obj Optional instance to populate.
        * @return {module:model/CreateWorkflowApiModel} The populated <code>CreateWorkflowApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateWorkflowApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateWorkflowApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateWorkflowApiModel</code>.
        * @alias module:model/CreateWorkflowApiModel
        * @param name {String}
        * @param statuses {Array.<module:model/WorkflowStatusApiModel>}
        */
-      constructor(name: string, statuses: Array<module>);
+      constructor(name: string, statuses: Array<any>);
       name: any;
       isDefault: any;
       statuses: any;
@@ -11644,7 +11635,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
   /**
    * The CreateWorkItemApiModel model module.
    * @module model/CreateWorkItemApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateWorkItemApiModel {
       /**
@@ -11660,13 +11651,13 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
        * @param {module:model/CreateWorkItemApiModel} obj Optional instance to populate.
        * @return {module:model/CreateWorkItemApiModel} The populated <code>CreateWorkItemApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateWorkItemApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateWorkItemApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateWorkItemApiModel</code>.
        * @alias module:model/CreateWorkItemApiModel
@@ -11683,7 +11674,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
        * @param postconditionSteps {Array.<module:model/CreateStepApiModel>} Set of postcondition steps that are executed after completing the main steps
        * @param links {Array.<module:model/CreateLinkApiModel>} Set of links related to the work item
        */
-      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any, attributes: any, tags: Array<module>, preconditionSteps: Array<module>, steps: Array<module>, postconditionSteps: Array<module>, links: Array<module>);
+      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any, attributes: any, tags: Array<any>, preconditionSteps: Array<any>, steps: Array<any>, postconditionSteps: Array<any>, links: Array<any>);
       projectId: any;
       sectionId: any;
       name: any;
@@ -11713,7 +11704,7 @@ declare module 'testit-api-client/model/CreateWorkItemCommentApiModel' {
   /**
    * The CreateWorkItemCommentApiModel model module.
    * @module model/CreateWorkItemCommentApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateWorkItemCommentApiModel {
       /**
@@ -11729,13 +11720,13 @@ declare module 'testit-api-client/model/CreateWorkItemCommentApiModel' {
        * @param {module:model/CreateWorkItemCommentApiModel} obj Optional instance to populate.
        * @return {module:model/CreateWorkItemCommentApiModel} The populated <code>CreateWorkItemCommentApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateWorkItemCommentApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateWorkItemCommentApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateWorkItemCommentApiModel</code>.
        * @alias module:model/CreateWorkItemCommentApiModel
@@ -11756,7 +11747,7 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
   /**
    * The CreateWorkItemPreviewsApiModel model module.
    * @module model/CreateWorkItemPreviewsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CreateWorkItemPreviewsApiModel {
       /**
@@ -11772,20 +11763,20 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
        * @param {module:model/CreateWorkItemPreviewsApiModel} obj Optional instance to populate.
        * @return {module:model/CreateWorkItemPreviewsApiModel} The populated <code>CreateWorkItemPreviewsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CreateWorkItemPreviewsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateWorkItemPreviewsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CreateWorkItemPreviewsApiModel</code>.
        * @alias module:model/CreateWorkItemPreviewsApiModel
        * @param sectionId {String}
        * @param previews {Array.<module:model/WorkItemPreviewApiModel>}
        */
-      constructor(sectionId: string, previews: Array<module>);
+      constructor(sectionId: string, previews: Array<any>);
       sectionId: any;
       previews: any;
       attributes: any;
@@ -11801,7 +11792,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
   /**
    * The CustomAttributeApiResult model module.
    * @module model/CustomAttributeApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeApiResult {
       /**
@@ -11817,13 +11808,13 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
        * @param {module:model/CustomAttributeApiResult} obj Optional instance to populate.
        * @return {module:model/CustomAttributeApiResult} The populated <code>CustomAttributeApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeApiResult</code>.
        * @alias module:model/CustomAttributeApiResult
@@ -11836,7 +11827,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -11856,7 +11847,7 @@ declare module 'testit-api-client/model/CustomAttributeChangeModel' {
   /**
    * The CustomAttributeChangeModel model module.
    * @module model/CustomAttributeChangeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeChangeModel {
       /**
@@ -11872,13 +11863,13 @@ declare module 'testit-api-client/model/CustomAttributeChangeModel' {
        * @param {module:model/CustomAttributeChangeModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeChangeModel} The populated <code>CustomAttributeChangeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeChangeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeChangeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       type: any;
       oldAttributeName: any;
       newAttributeName: any;
@@ -11892,7 +11883,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
   /**
    * The CustomAttributeGetModel model module.
    * @module model/CustomAttributeGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeGetModel {
       /**
@@ -11908,13 +11899,13 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
        * @param {module:model/CustomAttributeGetModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeGetModel} The populated <code>CustomAttributeGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeGetModel</code>.
        * @alias module:model/CustomAttributeGetModel
@@ -11927,7 +11918,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
        * @param isRequired {Boolean} Indicates if the attribute is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -11947,7 +11938,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
   /**
    * The CustomAttributeModel model module.
    * @module model/CustomAttributeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeModel {
       /**
@@ -11963,13 +11954,13 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
        * @param {module:model/CustomAttributeModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeModel} The populated <code>CustomAttributeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeModel</code>.
        * @alias module:model/CustomAttributeModel
@@ -11982,7 +11973,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
       options: any;
       type: any;
@@ -12002,7 +11993,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
   /**
    * The CustomAttributeOptionApiResult model module.
    * @module model/CustomAttributeOptionApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeOptionApiResult {
       /**
@@ -12018,13 +12009,13 @@ declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
        * @param {module:model/CustomAttributeOptionApiResult} obj Optional instance to populate.
        * @return {module:model/CustomAttributeOptionApiResult} The populated <code>CustomAttributeOptionApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeOptionApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeOptionApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeOptionApiResult</code>.
        * @alias module:model/CustomAttributeOptionApiResult
@@ -12048,7 +12039,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionModel' {
   /**
    * The CustomAttributeOptionModel model module.
    * @module model/CustomAttributeOptionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeOptionModel {
       /**
@@ -12064,13 +12055,13 @@ declare module 'testit-api-client/model/CustomAttributeOptionModel' {
        * @param {module:model/CustomAttributeOptionModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeOptionModel} The populated <code>CustomAttributeOptionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeOptionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeOptionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeOptionModel</code>.
        * @alias module:model/CustomAttributeOptionModel
@@ -12094,7 +12085,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
   /**
    * The CustomAttributeOptionPostModel model module.
    * @module model/CustomAttributeOptionPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeOptionPostModel {
       /**
@@ -12110,13 +12101,13 @@ declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
        * @param {module:model/CustomAttributeOptionPostModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeOptionPostModel} The populated <code>CustomAttributeOptionPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeOptionPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeOptionPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeOptionPostModel</code>.
        * @alias module:model/CustomAttributeOptionPostModel
@@ -12136,7 +12127,7 @@ declare module 'testit-api-client/model/CustomAttributePostModel' {
   /**
    * The CustomAttributePostModel model module.
    * @module model/CustomAttributePostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributePostModel {
       /**
@@ -12152,13 +12143,13 @@ declare module 'testit-api-client/model/CustomAttributePostModel' {
        * @param {module:model/CustomAttributePostModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributePostModel} The populated <code>CustomAttributePostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributePostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributePostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributePostModel</code>.
        * @alias module:model/CustomAttributePostModel
@@ -12186,7 +12177,7 @@ declare module 'testit-api-client/model/CustomAttributePutModel' {
   /**
    * The CustomAttributePutModel model module.
    * @module model/CustomAttributePutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributePutModel {
       /**
@@ -12202,13 +12193,13 @@ declare module 'testit-api-client/model/CustomAttributePutModel' {
        * @param {module:model/CustomAttributePutModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributePutModel} The populated <code>CustomAttributePutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributePutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributePutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributePutModel</code>.
        * @alias module:model/CustomAttributePutModel
@@ -12240,7 +12231,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
   /**
    * The CustomAttributeSearchQueryModel model module.
    * @module model/CustomAttributeSearchQueryModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeSearchQueryModel {
       /**
@@ -12256,13 +12247,13 @@ declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
        * @param {module:model/CustomAttributeSearchQueryModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeSearchQueryModel} The populated <code>CustomAttributeSearchQueryModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeSearchQueryModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeSearchQueryModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       projectIds: any;
       customAttributeIds: any;
@@ -12277,7 +12268,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
   /**
    * The CustomAttributeSearchResponseModel model module.
    * @module model/CustomAttributeSearchResponseModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeSearchResponseModel {
       /**
@@ -12293,13 +12284,13 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
        * @param {module:model/CustomAttributeSearchResponseModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeSearchResponseModel} The populated <code>CustomAttributeSearchResponseModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeSearchResponseModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeSearchResponseModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeSearchResponseModel</code>.
        * @alias module:model/CustomAttributeSearchResponseModel
@@ -12314,7 +12305,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(workItemUsage: Array<module>, testPlanUsage: Array<module>, id: string, options: Array<module>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(workItemUsage: Array<any>, testPlanUsage: Array<any>, id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       workItemUsage: any;
       testPlanUsage: any;
       id: any;
@@ -12336,7 +12327,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
   /**
    * The CustomAttributeTemplateModel model module.
    * @module model/CustomAttributeTemplateModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTemplateModel {
       /**
@@ -12352,13 +12343,13 @@ declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
        * @param {module:model/CustomAttributeTemplateModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTemplateModel} The populated <code>CustomAttributeTemplateModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTemplateModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTemplateModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeTemplateModel</code>.
        * @alias module:model/CustomAttributeTemplateModel
@@ -12381,7 +12372,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
   /**
    * The CustomAttributeTemplatePostModel model module.
    * @module model/CustomAttributeTemplatePostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTemplatePostModel {
       /**
@@ -12397,13 +12388,13 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
        * @param {module:model/CustomAttributeTemplatePostModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTemplatePostModel} The populated <code>CustomAttributeTemplatePostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTemplatePostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTemplatePostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeTemplatePostModel</code>.
        * @alias module:model/CustomAttributeTemplatePostModel
@@ -12423,7 +12414,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
   /**
    * The CustomAttributeTemplatePutModel model module.
    * @module model/CustomAttributeTemplatePutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTemplatePutModel {
       /**
@@ -12439,13 +12430,13 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
        * @param {module:model/CustomAttributeTemplatePutModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTemplatePutModel} The populated <code>CustomAttributeTemplatePutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTemplatePutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTemplatePutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeTemplatePutModel</code>.
        * @alias module:model/CustomAttributeTemplatePutModel
@@ -12467,7 +12458,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel'
   /**
    * The CustomAttributeTemplateSearchQueryModel model module.
    * @module model/CustomAttributeTemplateSearchQueryModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTemplateSearchQueryModel {
       /**
@@ -12483,13 +12474,13 @@ declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel'
        * @param {module:model/CustomAttributeTemplateSearchQueryModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTemplateSearchQueryModel} The populated <code>CustomAttributeTemplateSearchQueryModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTemplateSearchQueryModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTemplateSearchQueryModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       projectIds: any;
       customAttributeTypes: any;
@@ -12502,7 +12493,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult'
   /**
    * The CustomAttributeTemplateValidationResult model module.
    * @module model/CustomAttributeTemplateValidationResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTemplateValidationResult {
       /**
@@ -12518,13 +12509,13 @@ declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult'
        * @param {module:model/CustomAttributeTemplateValidationResult} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTemplateValidationResult} The populated <code>CustomAttributeTemplateValidationResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTemplateValidationResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTemplateValidationResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeTemplateValidationResult</code>.
        * @alias module:model/CustomAttributeTemplateValidationResult
@@ -12543,7 +12534,7 @@ declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPu
   /**
    * The CustomAttributeTestPlanProjectRelationPutModel model module.
    * @module model/CustomAttributeTestPlanProjectRelationPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeTestPlanProjectRelationPutModel {
       /**
@@ -12559,13 +12550,13 @@ declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPu
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} obj Optional instance to populate.
        * @return {module:model/CustomAttributeTestPlanProjectRelationPutModel} The populated <code>CustomAttributeTestPlanProjectRelationPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeTestPlanProjectRelationPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeTestPlanProjectRelationPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeTestPlanProjectRelationPutModel</code>.
        * @alias module:model/CustomAttributeTestPlanProjectRelationPutModel
@@ -12630,7 +12621,6 @@ declare module 'testit-api-client/model/CustomAttributeType' {
   /**
    * *
    */
-  export type CustomAttributeType = any;
 
 }
 declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
@@ -12680,7 +12670,6 @@ declare module 'testit-api-client/model/CustomAttributeTypesEnum' {
   /**
    * *
    */
-  export type CustomAttributeTypesEnum = any;
 
 }
 declare module 'testit-api-client/model/CustomAttributeValidationResult' {
@@ -12688,7 +12677,7 @@ declare module 'testit-api-client/model/CustomAttributeValidationResult' {
   /**
    * The CustomAttributeValidationResult model module.
    * @module model/CustomAttributeValidationResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class CustomAttributeValidationResult {
       /**
@@ -12704,13 +12693,13 @@ declare module 'testit-api-client/model/CustomAttributeValidationResult' {
        * @param {module:model/CustomAttributeValidationResult} obj Optional instance to populate.
        * @return {module:model/CustomAttributeValidationResult} The populated <code>CustomAttributeValidationResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>CustomAttributeValidationResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomAttributeValidationResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>CustomAttributeValidationResult</code>.
        * @alias module:model/CustomAttributeValidationResult
@@ -12729,7 +12718,7 @@ declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
   /**
    * The DateTimeRangeSelectorModel model module.
    * @module model/DateTimeRangeSelectorModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class DateTimeRangeSelectorModel {
       /**
@@ -12745,13 +12734,13 @@ declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
        * @param {module:model/DateTimeRangeSelectorModel} obj Optional instance to populate.
        * @return {module:model/DateTimeRangeSelectorModel} The populated <code>DateTimeRangeSelectorModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>DateTimeRangeSelectorModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DateTimeRangeSelectorModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       from: any;
       to: any;
   }
@@ -12762,7 +12751,7 @@ declare module 'testit-api-client/model/DefectApiModel' {
   /**
    * The DefectApiModel model module.
    * @module model/DefectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class DefectApiModel {
       /**
@@ -12778,13 +12767,13 @@ declare module 'testit-api-client/model/DefectApiModel' {
        * @param {module:model/DefectApiModel} obj Optional instance to populate.
        * @return {module:model/DefectApiModel} The populated <code>DefectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>DefectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DefectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>DefectApiModel</code>.
        * @alias module:model/DefectApiModel
@@ -12830,7 +12819,6 @@ declare module 'testit-api-client/model/DeletionState' {
   /**
    * *
    */
-  export type DeletionState = any;
 
 }
 declare module 'testit-api-client/model/DemoProjectApiResult' {
@@ -12838,7 +12826,7 @@ declare module 'testit-api-client/model/DemoProjectApiResult' {
   /**
    * The DemoProjectApiResult model module.
    * @module model/DemoProjectApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class DemoProjectApiResult {
       /**
@@ -12854,13 +12842,13 @@ declare module 'testit-api-client/model/DemoProjectApiResult' {
        * @param {module:model/DemoProjectApiResult} obj Optional instance to populate.
        * @return {module:model/DemoProjectApiResult} The populated <code>DemoProjectApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>DemoProjectApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DemoProjectApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>DemoProjectApiResult</code>.
        * @alias module:model/DemoProjectApiResult
@@ -12879,7 +12867,7 @@ declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
   /**
    * The EnableProjectExternalServiceApiModel model module.
    * @module model/EnableProjectExternalServiceApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class EnableProjectExternalServiceApiModel {
       /**
@@ -12895,19 +12883,19 @@ declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
        * @param {module:model/EnableProjectExternalServiceApiModel} obj Optional instance to populate.
        * @return {module:model/EnableProjectExternalServiceApiModel} The populated <code>EnableProjectExternalServiceApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>EnableProjectExternalServiceApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnableProjectExternalServiceApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>EnableProjectExternalServiceApiModel</code>.
        * @alias module:model/EnableProjectExternalServiceApiModel
        * @param settings {Object} External service settings
        */
-      constructor(settings: any);
+      constructor(settings: Object);
       settings: any;
   }
   namespace EnableProjectExternalServiceApiModel {
@@ -12920,7 +12908,7 @@ declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
   /**
    * The ExternalFormAllowedValueModel model module.
    * @module model/ExternalFormAllowedValueModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalFormAllowedValueModel {
       /**
@@ -12936,13 +12924,13 @@ declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
        * @param {module:model/ExternalFormAllowedValueModel} obj Optional instance to populate.
        * @return {module:model/ExternalFormAllowedValueModel} The populated <code>ExternalFormAllowedValueModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalFormAllowedValueModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalFormAllowedValueModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalFormAllowedValueModel</code>.
        * @alias module:model/ExternalFormAllowedValueModel
@@ -12964,7 +12952,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
   /**
    * The ExternalFormCreateModel model module.
    * @module model/ExternalFormCreateModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalFormCreateModel {
       /**
@@ -12980,13 +12968,13 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
        * @param {module:model/ExternalFormCreateModel} obj Optional instance to populate.
        * @return {module:model/ExternalFormCreateModel} The populated <code>ExternalFormCreateModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalFormCreateModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalFormCreateModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalFormCreateModel</code>.
        * @alias module:model/ExternalFormCreateModel
@@ -12995,7 +12983,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
        * @param links {Array.<module:model/ExternalFormLinkModel>}
        * @param values {Object.<String, Object>}
        */
-      constructor(possibleValues: any, fields: Array<module>, links: Array<module>, values: any);
+      constructor(possibleValues: any, fields: Array<any>, links: Array<any>, values: any);
       possibleValues: any;
       fields: any;
       links: any;
@@ -13011,7 +12999,7 @@ declare module 'testit-api-client/model/ExternalFormFieldModel' {
   /**
    * The ExternalFormFieldModel model module.
    * @module model/ExternalFormFieldModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalFormFieldModel {
       /**
@@ -13027,13 +13015,13 @@ declare module 'testit-api-client/model/ExternalFormFieldModel' {
        * @param {module:model/ExternalFormFieldModel} obj Optional instance to populate.
        * @return {module:model/ExternalFormFieldModel} The populated <code>ExternalFormFieldModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalFormFieldModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalFormFieldModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalFormFieldModel</code>.
        * @alias module:model/ExternalFormFieldModel
@@ -13065,7 +13053,7 @@ declare module 'testit-api-client/model/ExternalFormLinkModel' {
   /**
    * The ExternalFormLinkModel model module.
    * @module model/ExternalFormLinkModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalFormLinkModel {
       /**
@@ -13081,13 +13069,13 @@ declare module 'testit-api-client/model/ExternalFormLinkModel' {
        * @param {module:model/ExternalFormLinkModel} obj Optional instance to populate.
        * @return {module:model/ExternalFormLinkModel} The populated <code>ExternalFormLinkModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalFormLinkModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalFormLinkModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalFormLinkModel</code>.
        * @alias module:model/ExternalFormLinkModel
@@ -13108,7 +13096,7 @@ declare module 'testit-api-client/model/ExternalFormModel' {
   /**
    * The ExternalFormModel model module.
    * @module model/ExternalFormModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalFormModel {
       /**
@@ -13124,20 +13112,20 @@ declare module 'testit-api-client/model/ExternalFormModel' {
        * @param {module:model/ExternalFormModel} obj Optional instance to populate.
        * @return {module:model/ExternalFormModel} The populated <code>ExternalFormModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalFormModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalFormModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalFormModel</code>.
        * @alias module:model/ExternalFormModel
        * @param fields {Array.<module:model/ExternalFormFieldModel>}
        * @param possibleValues {Object.<String, Array.<module:model/ExternalFormAllowedValueModel>>}
        */
-      constructor(fields: Array<module>, possibleValues: any);
+      constructor(fields: Array<any>, possibleValues: any);
       fields: any;
       possibleValues: any;
   }
@@ -13188,7 +13176,6 @@ declare module 'testit-api-client/model/ExternalIssueApiField' {
   /**
    * *
    */
-  export type ExternalIssueApiField = any;
 
 }
 declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
@@ -13196,7 +13183,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   /**
    * The ExternalIssueApiFieldSuggestion model module.
    * @module model/ExternalIssueApiFieldSuggestion
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiFieldSuggestion {
       /**
@@ -13212,13 +13199,13 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
        * @param {module:model/ExternalIssueApiFieldSuggestion} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiFieldSuggestion} The populated <code>ExternalIssueApiFieldSuggestion</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiFieldSuggestion</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiFieldSuggestion</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiFieldSuggestion</code>.
        * @alias module:model/ExternalIssueApiFieldSuggestion
@@ -13239,7 +13226,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
   /**
    * The ExternalIssueApiFieldSuggestionReply model module.
    * @module model/ExternalIssueApiFieldSuggestionReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiFieldSuggestionReply {
       /**
@@ -13255,20 +13242,20 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
        * @param {module:model/ExternalIssueApiFieldSuggestionReply} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiFieldSuggestionReply} The populated <code>ExternalIssueApiFieldSuggestionReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiFieldSuggestionReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiFieldSuggestionReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiFieldSuggestionReply</code>.
        * @alias module:model/ExternalIssueApiFieldSuggestionReply
        * @param data {Array.<module:model/ExternalIssueApiFieldSuggestion>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -13282,7 +13269,7 @@ declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
   /**
    * The ExternalIssueApiMetadata model module.
    * @module model/ExternalIssueApiMetadata
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiMetadata {
       /**
@@ -13298,13 +13285,13 @@ declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
        * @param {module:model/ExternalIssueApiMetadata} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiMetadata} The populated <code>ExternalIssueApiMetadata</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiMetadata</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiMetadata</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiMetadata</code>.
        * @alias module:model/ExternalIssueApiMetadata
@@ -13331,7 +13318,7 @@ declare module 'testit-api-client/model/ExternalIssueApiPriority' {
   /**
    * The ExternalIssueApiPriority model module.
    * @module model/ExternalIssueApiPriority
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiPriority {
       /**
@@ -13347,13 +13334,13 @@ declare module 'testit-api-client/model/ExternalIssueApiPriority' {
        * @param {module:model/ExternalIssueApiPriority} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiPriority} The populated <code>ExternalIssueApiPriority</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiPriority</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiPriority</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiPriority</code>.
        * @alias module:model/ExternalIssueApiPriority
@@ -13373,7 +13360,7 @@ declare module 'testit-api-client/model/ExternalIssueApiResult' {
   /**
    * The ExternalIssueApiResult model module.
    * @module model/ExternalIssueApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiResult {
       /**
@@ -13389,13 +13376,13 @@ declare module 'testit-api-client/model/ExternalIssueApiResult' {
        * @param {module:model/ExternalIssueApiResult} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiResult} The populated <code>ExternalIssueApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiResult</code>.
        * @alias module:model/ExternalIssueApiResult
@@ -13420,7 +13407,7 @@ declare module 'testit-api-client/model/ExternalIssueApiType' {
   /**
    * The ExternalIssueApiType model module.
    * @module model/ExternalIssueApiType
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueApiType {
       /**
@@ -13436,13 +13423,13 @@ declare module 'testit-api-client/model/ExternalIssueApiType' {
        * @param {module:model/ExternalIssueApiType} obj Optional instance to populate.
        * @return {module:model/ExternalIssueApiType} The populated <code>ExternalIssueApiType</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueApiType</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiType</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueApiType</code>.
        * @alias module:model/ExternalIssueApiType
@@ -13462,7 +13449,7 @@ declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
   /**
    * The ExternalIssueExternalServiceApiResult model module.
    * @module model/ExternalIssueExternalServiceApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueExternalServiceApiResult {
       /**
@@ -13478,13 +13465,13 @@ declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
        * @param {module:model/ExternalIssueExternalServiceApiResult} obj Optional instance to populate.
        * @return {module:model/ExternalIssueExternalServiceApiResult} The populated <code>ExternalIssueExternalServiceApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueExternalServiceApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueExternalServiceApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueExternalServiceApiResult</code>.
        * @alias module:model/ExternalIssueExternalServiceApiResult
@@ -13505,7 +13492,7 @@ declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
   /**
    * The ExternalIssueMetadataModel model module.
    * @module model/ExternalIssueMetadataModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueMetadataModel {
       /**
@@ -13521,13 +13508,13 @@ declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
        * @param {module:model/ExternalIssueMetadataModel} obj Optional instance to populate.
        * @return {module:model/ExternalIssueMetadataModel} The populated <code>ExternalIssueMetadataModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueMetadataModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueMetadataModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueMetadataModel</code>.
        * @alias module:model/ExternalIssueMetadataModel
@@ -13554,7 +13541,7 @@ declare module 'testit-api-client/model/ExternalIssueModel' {
   /**
    * The ExternalIssueModel model module.
    * @module model/ExternalIssueModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueModel {
       /**
@@ -13570,13 +13557,13 @@ declare module 'testit-api-client/model/ExternalIssueModel' {
        * @param {module:model/ExternalIssueModel} obj Optional instance to populate.
        * @return {module:model/ExternalIssueModel} The populated <code>ExternalIssueModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueModel</code>.
        * @alias module:model/ExternalIssueModel
@@ -13601,7 +13588,7 @@ declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
   /**
    * The ExternalIssuePriorityModel model module.
    * @module model/ExternalIssuePriorityModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssuePriorityModel {
       /**
@@ -13617,13 +13604,13 @@ declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
        * @param {module:model/ExternalIssuePriorityModel} obj Optional instance to populate.
        * @return {module:model/ExternalIssuePriorityModel} The populated <code>ExternalIssuePriorityModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssuePriorityModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssuePriorityModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssuePriorityModel</code>.
        * @alias module:model/ExternalIssuePriorityModel
@@ -13643,7 +13630,7 @@ declare module 'testit-api-client/model/ExternalIssueTypeModel' {
   /**
    * The ExternalIssueTypeModel model module.
    * @module model/ExternalIssueTypeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalIssueTypeModel {
       /**
@@ -13659,13 +13646,13 @@ declare module 'testit-api-client/model/ExternalIssueTypeModel' {
        * @param {module:model/ExternalIssueTypeModel} obj Optional instance to populate.
        * @return {module:model/ExternalIssueTypeModel} The populated <code>ExternalIssueTypeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalIssueTypeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueTypeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalIssueTypeModel</code>.
        * @alias module:model/ExternalIssueTypeModel
@@ -13685,7 +13672,7 @@ declare module 'testit-api-client/model/ExternalLinkModel' {
   /**
    * The ExternalLinkModel model module.
    * @module model/ExternalLinkModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalLinkModel {
       /**
@@ -13701,13 +13688,13 @@ declare module 'testit-api-client/model/ExternalLinkModel' {
        * @param {module:model/ExternalLinkModel} obj Optional instance to populate.
        * @return {module:model/ExternalLinkModel} The populated <code>ExternalLinkModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalLinkModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalLinkModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       url: any;
       title: any;
       issueTypeName: any;
@@ -13724,7 +13711,7 @@ declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
   /**
    * The ExternalServiceMetadataApiResult model module.
    * @module model/ExternalServiceMetadataApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalServiceMetadataApiResult {
       /**
@@ -13740,13 +13727,13 @@ declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
        * @param {module:model/ExternalServiceMetadataApiResult} obj Optional instance to populate.
        * @return {module:model/ExternalServiceMetadataApiResult} The populated <code>ExternalServiceMetadataApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalServiceMetadataApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalServiceMetadataApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalServiceMetadataApiResult</code>.
        * @alias module:model/ExternalServiceMetadataApiResult
@@ -13771,7 +13758,7 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
   /**
    * The ExternalServicesMetadataApiResult model module.
    * @module model/ExternalServicesMetadataApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ExternalServicesMetadataApiResult {
       /**
@@ -13787,19 +13774,19 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
        * @param {module:model/ExternalServicesMetadataApiResult} obj Optional instance to populate.
        * @return {module:model/ExternalServicesMetadataApiResult} The populated <code>ExternalServicesMetadataApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ExternalServicesMetadataApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalServicesMetadataApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ExternalServicesMetadataApiResult</code>.
        * @alias module:model/ExternalServicesMetadataApiResult
        * @param data {Array.<module:model/ExternalServiceMetadataApiResult>} External services metadata
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace ExternalServicesMetadataApiResult {
@@ -13849,7 +13836,6 @@ declare module 'testit-api-client/model/FailureCategory' {
   /**
    * *
    */
-  export type FailureCategory = any;
 
 }
 declare module 'testit-api-client/model/FailureCategoryApiResult' {
@@ -13857,7 +13843,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
   /**
    * The FailureCategoryApiResult model module.
    * @module model/FailureCategoryApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryApiResult {
       /**
@@ -13873,13 +13859,13 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
        * @param {module:model/FailureCategoryApiResult} obj Optional instance to populate.
        * @return {module:model/FailureCategoryApiResult} The populated <code>FailureCategoryApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryApiResult</code>.
        * @alias module:model/FailureCategoryApiResult
@@ -13891,7 +13877,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
        * @param projects {Array.<module:model/ProjectNameApiResult>} Projects names
        * @param failureClassRegexes {Array.<module:model/FailureClassRegexApiResult>} Failure category regexes
        */
-      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, projects: Array<module>, failureClassRegexes: Array<module>);
+      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, projects: Array<any>, failureClassRegexes: Array<any>);
       id: any;
       name: any;
       isDeleted: any;
@@ -13913,7 +13899,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
   /**
    * The FailureCategoryGroupApiModel model module.
    * @module model/FailureCategoryGroupApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryGroupApiModel {
       /**
@@ -13929,13 +13915,13 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
        * @param {module:model/FailureCategoryGroupApiModel} obj Optional instance to populate.
        * @return {module:model/FailureCategoryGroupApiModel} The populated <code>FailureCategoryGroupApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryGroupApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryGroupApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryGroupApiModel</code>.
        * @alias module:model/FailureCategoryGroupApiModel
@@ -13955,7 +13941,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
   /**
    * The FailureCategoryGroupApiResult model module.
    * @module model/FailureCategoryGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryGroupApiResult {
       /**
@@ -13971,13 +13957,13 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
        * @param {module:model/FailureCategoryGroupApiResult} obj Optional instance to populate.
        * @return {module:model/FailureCategoryGroupApiResult} The populated <code>FailureCategoryGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryGroupApiResult</code>.
        * @alias module:model/FailureCategoryGroupApiResult
@@ -13998,7 +13984,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
   /**
    * The FailureCategoryGroupItemApiResult model module.
    * @module model/FailureCategoryGroupItemApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryGroupItemApiResult {
       /**
@@ -14014,19 +14000,19 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
        * @param {module:model/FailureCategoryGroupItemApiResult} obj Optional instance to populate.
        * @return {module:model/FailureCategoryGroupItemApiResult} The populated <code>FailureCategoryGroupItemApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryGroupItemApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryGroupItemApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryGroupItemApiResult</code>.
        * @alias module:model/FailureCategoryGroupItemApiResult
        * @param items {Array.<module:model/FailureCategoryItemApiResult>} Group data
        */
-      constructor(items: Array<module>);
+      constructor(items: Array<any>);
       group: any;
       items: any;
   }
@@ -14040,7 +14026,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
   /**
    * The FailureCategoryGroupItemApiResultReply model module.
    * @module model/FailureCategoryGroupItemApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryGroupItemApiResultReply {
       /**
@@ -14056,20 +14042,20 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
        * @param {module:model/FailureCategoryGroupItemApiResultReply} obj Optional instance to populate.
        * @return {module:model/FailureCategoryGroupItemApiResultReply} The populated <code>FailureCategoryGroupItemApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryGroupItemApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryGroupItemApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryGroupItemApiResultReply</code>.
        * @alias module:model/FailureCategoryGroupItemApiResultReply
        * @param data {Array.<module:model/FailureCategoryGroupItemApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -14083,7 +14069,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
   /**
    * The FailureCategoryGroupSearchApiModel model module.
    * @module model/FailureCategoryGroupSearchApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryGroupSearchApiModel {
       /**
@@ -14099,13 +14085,13 @@ declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
        * @param {module:model/FailureCategoryGroupSearchApiModel} obj Optional instance to populate.
        * @return {module:model/FailureCategoryGroupSearchApiModel} The populated <code>FailureCategoryGroupSearchApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryGroupSearchApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryGroupSearchApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryGroupSearchApiModel</code>.
        * @alias module:model/FailureCategoryGroupSearchApiModel
@@ -14125,7 +14111,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
   /**
    * The FailureCategoryItemApiResult model module.
    * @module model/FailureCategoryItemApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureCategoryItemApiResult {
       /**
@@ -14141,13 +14127,13 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
        * @param {module:model/FailureCategoryItemApiResult} obj Optional instance to populate.
        * @return {module:model/FailureCategoryItemApiResult} The populated <code>FailureCategoryItemApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureCategoryItemApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureCategoryItemApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureCategoryItemApiResult</code>.
        * @alias module:model/FailureCategoryItemApiResult
@@ -14160,7 +14146,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
        * @param projects {Array.<module:model/ProjectNameApiResult>} Projects names
        * @param projectIds {Array.<String>} Projects identifiers
        */
-      constructor(id: string, failureCategory: any, createdDate: Date, createdById: string, failureCategoryId: number, regexCount: number, projects: Array<module>, projectIds: Array<string>);
+      constructor(id: string, failureCategory: any, createdDate: Date, createdById: string, failureCategoryId: number, regexCount: number, projects: Array<any>, projectIds: Array<string>);
       id: any;
       name: any;
       failureCategory: any;
@@ -14220,7 +14206,6 @@ declare module 'testit-api-client/model/FailureCategoryModel' {
   /**
    * *
    */
-  export type FailureCategoryModel = any;
 
 }
 declare module 'testit-api-client/model/FailureClassRegexApiResult' {
@@ -14228,7 +14213,7 @@ declare module 'testit-api-client/model/FailureClassRegexApiResult' {
   /**
    * The FailureClassRegexApiResult model module.
    * @module model/FailureClassRegexApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FailureClassRegexApiResult {
       /**
@@ -14244,13 +14229,13 @@ declare module 'testit-api-client/model/FailureClassRegexApiResult' {
        * @param {module:model/FailureClassRegexApiResult} obj Optional instance to populate.
        * @return {module:model/FailureClassRegexApiResult} The populated <code>FailureClassRegexApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FailureClassRegexApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FailureClassRegexApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FailureClassRegexApiResult</code>.
        * @alias module:model/FailureClassRegexApiResult
@@ -14275,7 +14260,7 @@ declare module 'testit-api-client/model/Filter' {
   /**
    * The Filter model module.
    * @module model/Filter
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Filter {
       /**
@@ -14291,13 +14276,13 @@ declare module 'testit-api-client/model/Filter' {
        * @param {module:model/Filter} obj Optional instance to populate.
        * @return {module:model/Filter} The populated <code>Filter</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Filter</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Filter</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Filter</code>.
        * @alias module:model/Filter
@@ -14319,7 +14304,7 @@ declare module 'testit-api-client/model/FilterModel' {
   /**
    * The FilterModel model module.
    * @module model/FilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class FilterModel {
       /**
@@ -14335,13 +14320,13 @@ declare module 'testit-api-client/model/FilterModel' {
        * @param {module:model/FilterModel} obj Optional instance to populate.
        * @return {module:model/FilterModel} The populated <code>FilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>FilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>FilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>FilterModel</code>.
        * @alias module:model/FilterModel
@@ -14436,7 +14421,6 @@ declare module 'testit-api-client/model/FilterOperator' {
   /**
    * *
    */
-  export type FilterOperator = any;
 
 }
 declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
@@ -14444,7 +14428,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
   /**
    * The GenerateWorkItemPreviewsApiModel model module.
    * @module model/GenerateWorkItemPreviewsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GenerateWorkItemPreviewsApiModel {
       /**
@@ -14460,13 +14444,13 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
        * @param {module:model/GenerateWorkItemPreviewsApiModel} obj Optional instance to populate.
        * @return {module:model/GenerateWorkItemPreviewsApiModel} The populated <code>GenerateWorkItemPreviewsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GenerateWorkItemPreviewsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GenerateWorkItemPreviewsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GenerateWorkItemPreviewsApiModel</code>.
        * @alias module:model/GenerateWorkItemPreviewsApiModel
@@ -14492,7 +14476,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
   /**
    * The GenerateWorkItemPreviewsApiResult model module.
    * @module model/GenerateWorkItemPreviewsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GenerateWorkItemPreviewsApiResult {
       /**
@@ -14508,19 +14492,19 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
        * @param {module:model/GenerateWorkItemPreviewsApiResult} obj Optional instance to populate.
        * @return {module:model/GenerateWorkItemPreviewsApiResult} The populated <code>GenerateWorkItemPreviewsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GenerateWorkItemPreviewsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GenerateWorkItemPreviewsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GenerateWorkItemPreviewsApiResult</code>.
        * @alias module:model/GenerateWorkItemPreviewsApiResult
        * @param previews {Array.<module:model/WorkItemPreviewApiModel>}
        */
-      constructor(previews: Array<module>);
+      constructor(previews: Array<any>);
       previews: any;
       link: any;
   }
@@ -14534,7 +14518,7 @@ declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
   /**
    * The GetAIServiceModelsApiModel model module.
    * @module model/GetAIServiceModelsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GetAIServiceModelsApiModel {
       /**
@@ -14550,13 +14534,13 @@ declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
        * @param {module:model/GetAIServiceModelsApiModel} obj Optional instance to populate.
        * @return {module:model/GetAIServiceModelsApiModel} The populated <code>GetAIServiceModelsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GetAIServiceModelsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetAIServiceModelsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       inquiry: any;
   }
 
@@ -14566,7 +14550,7 @@ declare module 'testit-api-client/model/GetExternalFormApiResult' {
   /**
    * The GetExternalFormApiResult model module.
    * @module model/GetExternalFormApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GetExternalFormApiResult {
       /**
@@ -14582,13 +14566,13 @@ declare module 'testit-api-client/model/GetExternalFormApiResult' {
        * @param {module:model/GetExternalFormApiResult} obj Optional instance to populate.
        * @return {module:model/GetExternalFormApiResult} The populated <code>GetExternalFormApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GetExternalFormApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetExternalFormApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GetExternalFormApiResult</code>.
        * @alias module:model/GetExternalFormApiResult
@@ -14609,7 +14593,7 @@ declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
   /**
    * The GetExternalIssueSuggestionsApiModel model module.
    * @module model/GetExternalIssueSuggestionsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GetExternalIssueSuggestionsApiModel {
       /**
@@ -14625,13 +14609,13 @@ declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
        * @param {module:model/GetExternalIssueSuggestionsApiModel} obj Optional instance to populate.
        * @return {module:model/GetExternalIssueSuggestionsApiModel} The populated <code>GetExternalIssueSuggestionsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GetExternalIssueSuggestionsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetExternalIssueSuggestionsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GetExternalIssueSuggestionsApiModel</code>.
        * @alias module:model/GetExternalIssueSuggestionsApiModel
@@ -14652,7 +14636,7 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
   /**
    * The GetShortProjectsApiModel model module.
    * @module model/GetShortProjectsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GetShortProjectsApiModel {
       /**
@@ -14668,13 +14652,13 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
        * @param {module:model/GetShortProjectsApiModel} obj Optional instance to populate.
        * @return {module:model/GetShortProjectsApiModel} The populated <code>GetShortProjectsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GetShortProjectsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetShortProjectsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       inquiry: any;
       permissionName: any;
       permissionType: any;
@@ -14686,7 +14670,7 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
   /**
    * The GetXlsxTestPointsByTestPlanModel model module.
    * @module model/GetXlsxTestPointsByTestPlanModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GetXlsxTestPointsByTestPlanModel {
       /**
@@ -14702,13 +14686,13 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
        * @param {module:model/GetXlsxTestPointsByTestPlanModel} obj Optional instance to populate.
        * @return {module:model/GetXlsxTestPointsByTestPlanModel} The populated <code>GetXlsxTestPointsByTestPlanModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GetXlsxTestPointsByTestPlanModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetXlsxTestPointsByTestPlanModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GetXlsxTestPointsByTestPlanModel</code>.
        * @alias module:model/GetXlsxTestPointsByTestPlanModel
@@ -14753,7 +14737,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
   /**
    * The GlobalCustomAttributePostModel model module.
    * @module model/GlobalCustomAttributePostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GlobalCustomAttributePostModel {
       /**
@@ -14769,13 +14753,13 @@ declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
        * @param {module:model/GlobalCustomAttributePostModel} obj Optional instance to populate.
        * @return {module:model/GlobalCustomAttributePostModel} The populated <code>GlobalCustomAttributePostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GlobalCustomAttributePostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalCustomAttributePostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GlobalCustomAttributePostModel</code>.
        * @alias module:model/GlobalCustomAttributePostModel
@@ -14799,7 +14783,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   /**
    * The GlobalCustomAttributeUpdateModel model module.
    * @module model/GlobalCustomAttributeUpdateModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GlobalCustomAttributeUpdateModel {
       /**
@@ -14815,13 +14799,13 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
        * @param {module:model/GlobalCustomAttributeUpdateModel} obj Optional instance to populate.
        * @return {module:model/GlobalCustomAttributeUpdateModel} The populated <code>GlobalCustomAttributeUpdateModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GlobalCustomAttributeUpdateModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalCustomAttributeUpdateModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GlobalCustomAttributeUpdateModel</code>.
        * @alias module:model/GlobalCustomAttributeUpdateModel
@@ -14843,7 +14827,7 @@ declare module 'testit-api-client/model/GlobalSearchItemResult' {
   /**
    * The GlobalSearchItemResult model module.
    * @module model/GlobalSearchItemResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GlobalSearchItemResult {
       /**
@@ -14859,13 +14843,13 @@ declare module 'testit-api-client/model/GlobalSearchItemResult' {
        * @param {module:model/GlobalSearchItemResult} obj Optional instance to populate.
        * @return {module:model/GlobalSearchItemResult} The populated <code>GlobalSearchItemResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GlobalSearchItemResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchItemResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GlobalSearchItemResult</code>.
        * @alias module:model/GlobalSearchItemResult
@@ -14891,7 +14875,7 @@ declare module 'testit-api-client/model/GlobalSearchRequest' {
   /**
    * The GlobalSearchRequest model module.
    * @module model/GlobalSearchRequest
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GlobalSearchRequest {
       /**
@@ -14907,13 +14891,13 @@ declare module 'testit-api-client/model/GlobalSearchRequest' {
        * @param {module:model/GlobalSearchRequest} obj Optional instance to populate.
        * @return {module:model/GlobalSearchRequest} The populated <code>GlobalSearchRequest</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GlobalSearchRequest</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchRequest</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GlobalSearchRequest</code>.
        * @alias module:model/GlobalSearchRequest
@@ -14937,7 +14921,7 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
   /**
    * The GlobalSearchResponse model module.
    * @module model/GlobalSearchResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GlobalSearchResponse {
       /**
@@ -14953,13 +14937,13 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
        * @param {module:model/GlobalSearchResponse} obj Optional instance to populate.
        * @return {module:model/GlobalSearchResponse} The populated <code>GlobalSearchResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GlobalSearchResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GlobalSearchResponse</code>.
        * @alias module:model/GlobalSearchResponse
@@ -14967,7 +14951,7 @@ declare module 'testit-api-client/model/GlobalSearchResponse' {
        * @param moreResultsAvailable {Boolean}
        * @param availableResourceTypes {Array.<String>}
        */
-      constructor(results: Array<module>, moreResultsAvailable: boolean, availableResourceTypes: Array<string>);
+      constructor(results: Array<any>, moreResultsAvailable: boolean, availableResourceTypes: Array<string>);
       results: any;
       moreResultsAvailable: any;
       availableResourceTypes: any;
@@ -14982,7 +14966,7 @@ declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
   /**
    * The GuidChangedFieldViewModel model module.
    * @module model/GuidChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GuidChangedFieldViewModel {
       /**
@@ -14998,13 +14982,13 @@ declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
        * @param {module:model/GuidChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/GuidChangedFieldViewModel} The populated <code>GuidChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GuidChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GuidChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>GuidChangedFieldViewModel</code>.
        * @alias module:model/GuidChangedFieldViewModel
@@ -15025,7 +15009,7 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
   /**
    * The GuidExtractionModel model module.
    * @module model/GuidExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class GuidExtractionModel {
       /**
@@ -15041,13 +15025,13 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
        * @param {module:model/GuidExtractionModel} obj Optional instance to populate.
        * @return {module:model/GuidExtractionModel} The populated <code>GuidExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>GuidExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GuidExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       include: any;
       exclude: any;
   }
@@ -15058,7 +15042,7 @@ declare module 'testit-api-client/model/IFilter' {
   /**
    * The IFilter model module.
    * @module model/IFilter
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class IFilter {
       /**
@@ -15068,7 +15052,7 @@ declare module 'testit-api-client/model/IFilter' {
        * @param {module:model/IFilter} obj Optional instance to populate.
        * @return {module:model/IFilter} The populated <code>IFilter</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Create an instance of IFilter from a JSON string.
        * @param {string} json_string JSON string.
@@ -15080,13 +15064,13 @@ declare module 'testit-api-client/model/IFilter' {
        * @alias module:model/IFilter
        * @param {(module:model/CollectionFilter|module:model/CompositeFilter|module:model/Filter)} instance The actual instance to initialize IFilter.
        */
-      constructor(instance?: any);
+      constructor(instance?: null);
       actualInstance: any;
       /**
        * Gets the actual instance, which can be <code>CollectionFilter</code>, <code>CompositeFilter</code>, <code>Filter</code>.
        * @return {(module:model/CollectionFilter|module:model/CompositeFilter|module:model/Filter)} The actual instance.
        */
-      getActualInstance(): (module: model) => any;
+      getActualInstance(): (module: any) => any;
       /**
        * Sets the actual instance, which can be <code>CollectionFilter</code>, <code>CompositeFilter</code>, <code>Filter</code>.
        * @param {(module:model/CollectionFilter|module:model/CompositeFilter|module:model/Filter)} obj The actual instance.
@@ -15135,7 +15119,6 @@ declare module 'testit-api-client/model/ImageResizeType' {
   /**
    * *
    */
-  export type ImageResizeType = any;
 
 }
 declare module 'testit-api-client/model/Inquiry' {
@@ -15143,7 +15126,7 @@ declare module 'testit-api-client/model/Inquiry' {
   /**
    * The Inquiry model module.
    * @module model/Inquiry
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Inquiry {
       /**
@@ -15159,19 +15142,19 @@ declare module 'testit-api-client/model/Inquiry' {
        * @param {module:model/Inquiry} obj Optional instance to populate.
        * @return {module:model/Inquiry} The populated <code>Inquiry</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Inquiry</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Inquiry</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Inquiry</code>.
        * @alias module:model/Inquiry
        * @param order {Array.<module:model/Order>}
        */
-      constructor(order: Array<module>);
+      constructor(order: Array<any>);
       filter: any;
       order: any;
       page: any;
@@ -15186,7 +15169,7 @@ declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
   /**
    * The Int32ChangedFieldViewModel model module.
    * @module model/Int32ChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Int32ChangedFieldViewModel {
       /**
@@ -15202,13 +15185,13 @@ declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
        * @param {module:model/Int32ChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/Int32ChangedFieldViewModel} The populated <code>Int32ChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Int32ChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Int32ChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Int32ChangedFieldViewModel</code>.
        * @alias module:model/Int32ChangedFieldViewModel
@@ -15229,7 +15212,7 @@ declare module 'testit-api-client/model/Int32RangeSelectorModel' {
   /**
    * The Int32RangeSelectorModel model module.
    * @module model/Int32RangeSelectorModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Int32RangeSelectorModel {
       /**
@@ -15245,13 +15228,13 @@ declare module 'testit-api-client/model/Int32RangeSelectorModel' {
        * @param {module:model/Int32RangeSelectorModel} obj Optional instance to populate.
        * @return {module:model/Int32RangeSelectorModel} The populated <code>Int32RangeSelectorModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Int32RangeSelectorModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Int32RangeSelectorModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       from: any;
       to: any;
   }
@@ -15262,7 +15245,7 @@ declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
   /**
    * The Int64ChangedFieldViewModel model module.
    * @module model/Int64ChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Int64ChangedFieldViewModel {
       /**
@@ -15278,13 +15261,13 @@ declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
        * @param {module:model/Int64ChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/Int64ChangedFieldViewModel} The populated <code>Int64ChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Int64ChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Int64ChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Int64ChangedFieldViewModel</code>.
        * @alias module:model/Int64ChangedFieldViewModel
@@ -15305,7 +15288,7 @@ declare module 'testit-api-client/model/Int64RangeSelectorModel' {
   /**
    * The Int64RangeSelectorModel model module.
    * @module model/Int64RangeSelectorModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Int64RangeSelectorModel {
       /**
@@ -15321,13 +15304,13 @@ declare module 'testit-api-client/model/Int64RangeSelectorModel' {
        * @param {module:model/Int64RangeSelectorModel} obj Optional instance to populate.
        * @return {module:model/Int64RangeSelectorModel} The populated <code>Int64RangeSelectorModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Int64RangeSelectorModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Int64RangeSelectorModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       from: any;
       to: any;
   }
@@ -15338,7 +15321,7 @@ declare module 'testit-api-client/model/IterationApiResult' {
   /**
    * The IterationApiResult model module.
    * @module model/IterationApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class IterationApiResult {
       /**
@@ -15354,13 +15337,13 @@ declare module 'testit-api-client/model/IterationApiResult' {
        * @param {module:model/IterationApiResult} obj Optional instance to populate.
        * @return {module:model/IterationApiResult} The populated <code>IterationApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>IterationApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>IterationApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>IterationApiResult</code>.
        * @alias module:model/IterationApiResult
@@ -15380,7 +15363,7 @@ declare module 'testit-api-client/model/IterationModel' {
   /**
    * The IterationModel model module.
    * @module model/IterationModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class IterationModel {
       /**
@@ -15396,13 +15379,13 @@ declare module 'testit-api-client/model/IterationModel' {
        * @param {module:model/IterationModel} obj Optional instance to populate.
        * @return {module:model/IterationModel} The populated <code>IterationModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>IterationModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>IterationModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>IterationModel</code>.
        * @alias module:model/IterationModel
@@ -15422,7 +15405,7 @@ declare module 'testit-api-client/model/Label' {
   /**
    * The Label model module.
    * @module model/Label
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Label {
       /**
@@ -15438,13 +15421,13 @@ declare module 'testit-api-client/model/Label' {
        * @param {module:model/Label} obj Optional instance to populate.
        * @return {module:model/Label} The populated <code>Label</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Label</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Label</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Label</code>.
        * @alias module:model/Label
@@ -15465,7 +15448,7 @@ declare module 'testit-api-client/model/LabelApiModel' {
   /**
    * The LabelApiModel model module.
    * @module model/LabelApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LabelApiModel {
       /**
@@ -15481,13 +15464,13 @@ declare module 'testit-api-client/model/LabelApiModel' {
        * @param {module:model/LabelApiModel} obj Optional instance to populate.
        * @return {module:model/LabelApiModel} The populated <code>LabelApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LabelApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LabelApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LabelApiModel</code>.
        * @alias module:model/LabelApiModel
@@ -15506,7 +15489,7 @@ declare module 'testit-api-client/model/LabelApiResult' {
   /**
    * The LabelApiResult model module.
    * @module model/LabelApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LabelApiResult {
       /**
@@ -15522,13 +15505,13 @@ declare module 'testit-api-client/model/LabelApiResult' {
        * @param {module:model/LabelApiResult} obj Optional instance to populate.
        * @return {module:model/LabelApiResult} The populated <code>LabelApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LabelApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LabelApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LabelApiResult</code>.
        * @alias module:model/LabelApiResult
@@ -15549,7 +15532,7 @@ declare module 'testit-api-client/model/LabelShortModel' {
   /**
    * The LabelShortModel model module.
    * @module model/LabelShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LabelShortModel {
       /**
@@ -15565,13 +15548,13 @@ declare module 'testit-api-client/model/LabelShortModel' {
        * @param {module:model/LabelShortModel} obj Optional instance to populate.
        * @return {module:model/LabelShortModel} The populated <code>LabelShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LabelShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LabelShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LabelShortModel</code>.
        * @alias module:model/LabelShortModel
@@ -15592,7 +15575,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
   /**
    * The LastTestResultApiResult model module.
    * @module model/LastTestResultApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LastTestResultApiResult {
       /**
@@ -15608,13 +15591,13 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
        * @param {module:model/LastTestResultApiResult} obj Optional instance to populate.
        * @return {module:model/LastTestResultApiResult} The populated <code>LastTestResultApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LastTestResultApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LastTestResultApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LastTestResultApiResult</code>.
        * @alias module:model/LastTestResultApiResult
@@ -15623,7 +15606,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
        * @param links {Array.<module:model/LinkApiResult>}
        * @param attachments {Array.<module:model/AttachmentApiResult>}
        */
-      constructor(id: string, testRunId: string, links: Array<module>, attachments: Array<module>);
+      constructor(id: string, testRunId: string, links: Array<any>, attachments: Array<any>);
       id: any;
       testRunId: any;
       autoTestId: any;
@@ -15642,7 +15625,7 @@ declare module 'testit-api-client/model/LastTestResultModel' {
   /**
    * The LastTestResultModel model module.
    * @module model/LastTestResultModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LastTestResultModel {
       /**
@@ -15658,13 +15641,13 @@ declare module 'testit-api-client/model/LastTestResultModel' {
        * @param {module:model/LastTestResultModel} obj Optional instance to populate.
        * @return {module:model/LastTestResultModel} The populated <code>LastTestResultModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LastTestResultModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LastTestResultModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LastTestResultModel</code>.
        * @alias module:model/LastTestResultModel
@@ -15691,7 +15674,7 @@ declare module 'testit-api-client/model/Link' {
   /**
    * The Link model module.
    * @module model/Link
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Link {
       /**
@@ -15707,13 +15690,13 @@ declare module 'testit-api-client/model/Link' {
        * @param {module:model/Link} obj Optional instance to populate.
        * @return {module:model/Link} The populated <code>Link</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Link</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Link</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Link</code>.
        * @alias module:model/Link
@@ -15738,7 +15721,7 @@ declare module 'testit-api-client/model/LinkApiResult' {
   /**
    * The LinkApiResult model module.
    * @module model/LinkApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkApiResult {
       /**
@@ -15754,13 +15737,13 @@ declare module 'testit-api-client/model/LinkApiResult' {
        * @param {module:model/LinkApiResult} obj Optional instance to populate.
        * @return {module:model/LinkApiResult} The populated <code>LinkApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkApiResult</code>.
        * @alias module:model/LinkApiResult
@@ -15785,7 +15768,7 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
   /**
    * The LinkCreateApiModel model module.
    * @module model/LinkCreateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkCreateApiModel {
       /**
@@ -15801,13 +15784,13 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
        * @param {module:model/LinkCreateApiModel} obj Optional instance to populate.
        * @return {module:model/LinkCreateApiModel} The populated <code>LinkCreateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkCreateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkCreateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkCreateApiModel</code>.
        * @alias module:model/LinkCreateApiModel
@@ -15831,7 +15814,7 @@ declare module 'testit-api-client/model/LinkModel' {
   /**
    * The LinkModel model module.
    * @module model/LinkModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkModel {
       /**
@@ -15847,13 +15830,13 @@ declare module 'testit-api-client/model/LinkModel' {
        * @param {module:model/LinkModel} obj Optional instance to populate.
        * @return {module:model/LinkModel} The populated <code>LinkModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkModel</code>.
        * @alias module:model/LinkModel
@@ -15878,7 +15861,7 @@ declare module 'testit-api-client/model/LinkPostModel' {
   /**
    * The LinkPostModel model module.
    * @module model/LinkPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkPostModel {
       /**
@@ -15894,13 +15877,13 @@ declare module 'testit-api-client/model/LinkPostModel' {
        * @param {module:model/LinkPostModel} obj Optional instance to populate.
        * @return {module:model/LinkPostModel} The populated <code>LinkPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkPostModel</code>.
        * @alias module:model/LinkPostModel
@@ -15924,7 +15907,7 @@ declare module 'testit-api-client/model/LinkPutModel' {
   /**
    * The LinkPutModel model module.
    * @module model/LinkPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkPutModel {
       /**
@@ -15940,13 +15923,13 @@ declare module 'testit-api-client/model/LinkPutModel' {
        * @param {module:model/LinkPutModel} obj Optional instance to populate.
        * @return {module:model/LinkPutModel} The populated <code>LinkPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkPutModel</code>.
        * @alias module:model/LinkPutModel
@@ -15971,7 +15954,7 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
   /**
    * The LinkShortApiResult model module.
    * @module model/LinkShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkShortApiResult {
       /**
@@ -15987,13 +15970,13 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
        * @param {module:model/LinkShortApiResult} obj Optional instance to populate.
        * @return {module:model/LinkShortApiResult} The populated <code>LinkShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkShortApiResult</code>.
        * @alias module:model/LinkShortApiResult
@@ -16018,7 +16001,7 @@ declare module 'testit-api-client/model/LinkShortModel' {
   /**
    * The LinkShortModel model module.
    * @module model/LinkShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkShortModel {
       /**
@@ -16034,13 +16017,13 @@ declare module 'testit-api-client/model/LinkShortModel' {
        * @param {module:model/LinkShortModel} obj Optional instance to populate.
        * @return {module:model/LinkShortModel} The populated <code>LinkShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkShortModel</code>.
        * @alias module:model/LinkShortModel
@@ -16106,7 +16089,6 @@ declare module 'testit-api-client/model/LinkType' {
   /**
    * *
    */
-  export type LinkType = any;
 
 }
 declare module 'testit-api-client/model/LinkUpdateApiModel' {
@@ -16114,7 +16096,7 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
   /**
    * The LinkUpdateApiModel model module.
    * @module model/LinkUpdateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class LinkUpdateApiModel {
       /**
@@ -16130,13 +16112,13 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
        * @param {module:model/LinkUpdateApiModel} obj Optional instance to populate.
        * @return {module:model/LinkUpdateApiModel} The populated <code>LinkUpdateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>LinkUpdateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LinkUpdateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>LinkUpdateApiModel</code>.
        * @alias module:model/LinkUpdateApiModel
@@ -16183,7 +16165,6 @@ declare module 'testit-api-client/model/ListSortDirection' {
   /**
    * *
    */
-  export type ListSortDirection = any;
 
 }
 declare module 'testit-api-client/model/LogicalOperator' {
@@ -16213,7 +16194,6 @@ declare module 'testit-api-client/model/LogicalOperator' {
   /**
    * *
    */
-  export type LogicalOperator = any;
 
 }
 declare module 'testit-api-client/model/ManualRerunApiResult' {
@@ -16221,7 +16201,7 @@ declare module 'testit-api-client/model/ManualRerunApiResult' {
   /**
    * The ManualRerunApiResult model module.
    * @module model/ManualRerunApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ManualRerunApiResult {
       /**
@@ -16237,13 +16217,13 @@ declare module 'testit-api-client/model/ManualRerunApiResult' {
        * @param {module:model/ManualRerunApiResult} obj Optional instance to populate.
        * @return {module:model/ManualRerunApiResult} The populated <code>ManualRerunApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ManualRerunApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ManualRerunApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ManualRerunApiResult</code>.
        * @alias module:model/ManualRerunApiResult
@@ -16262,7 +16242,7 @@ declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
   /**
    * The ManualRerunSelectTestResultsApiModel model module.
    * @module model/ManualRerunSelectTestResultsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ManualRerunSelectTestResultsApiModel {
       /**
@@ -16278,13 +16258,13 @@ declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
        * @param {module:model/ManualRerunSelectTestResultsApiModel} obj Optional instance to populate.
        * @return {module:model/ManualRerunSelectTestResultsApiModel} The populated <code>ManualRerunSelectTestResultsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ManualRerunSelectTestResultsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ManualRerunSelectTestResultsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
       webhookIds: any;
@@ -16296,7 +16276,7 @@ declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
   /**
    * The ManualRerunTestResultApiModel model module.
    * @module model/ManualRerunTestResultApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ManualRerunTestResultApiModel {
       /**
@@ -16312,13 +16292,13 @@ declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
        * @param {module:model/ManualRerunTestResultApiModel} obj Optional instance to populate.
        * @return {module:model/ManualRerunTestResultApiModel} The populated <code>ManualRerunTestResultApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ManualRerunTestResultApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ManualRerunTestResultApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       testResultIds: any;
   }
 
@@ -16328,7 +16308,7 @@ declare module 'testit-api-client/model/NamedEntityApiModel' {
   /**
    * The NamedEntityApiModel model module.
    * @module model/NamedEntityApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class NamedEntityApiModel {
       /**
@@ -16344,13 +16324,13 @@ declare module 'testit-api-client/model/NamedEntityApiModel' {
        * @param {module:model/NamedEntityApiModel} obj Optional instance to populate.
        * @return {module:model/NamedEntityApiModel} The populated <code>NamedEntityApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>NamedEntityApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NamedEntityApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>NamedEntityApiModel</code>.
        * @alias module:model/NamedEntityApiModel
@@ -16371,7 +16351,7 @@ declare module 'testit-api-client/model/NotificationModel' {
   /**
    * The NotificationModel model module.
    * @module model/NotificationModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class NotificationModel {
       /**
@@ -16387,13 +16367,13 @@ declare module 'testit-api-client/model/NotificationModel' {
        * @param {module:model/NotificationModel} obj Optional instance to populate.
        * @return {module:model/NotificationModel} The populated <code>NotificationModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>NotificationModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NotificationModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>NotificationModel</code>.
        * @alias module:model/NotificationModel
@@ -16433,7 +16413,7 @@ declare module 'testit-api-client/model/NotificationQueryFilterModel' {
   /**
    * The NotificationQueryFilterModel model module.
    * @module model/NotificationQueryFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class NotificationQueryFilterModel {
       /**
@@ -16449,13 +16429,13 @@ declare module 'testit-api-client/model/NotificationQueryFilterModel' {
        * @param {module:model/NotificationQueryFilterModel} obj Optional instance to populate.
        * @return {module:model/NotificationQueryFilterModel} The populated <code>NotificationQueryFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>NotificationQueryFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>NotificationQueryFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       types: any;
       isRead: any;
       createdDate: any;
@@ -16499,7 +16479,6 @@ declare module 'testit-api-client/model/NotificationTypeModel' {
   /**
    * *
    */
-  export type NotificationTypeModel = any;
 
 }
 declare module 'testit-api-client/model/OpenIdConnectionClientShortModel' {
@@ -16507,7 +16486,7 @@ declare module 'testit-api-client/model/OpenIdConnectionClientShortModel' {
   /**
    * The OpenIdConnectionClientShortModel model module.
    * @module model/OpenIdConnectionClientShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class OpenIdConnectionClientShortModel {
       /**
@@ -16523,13 +16502,13 @@ declare module 'testit-api-client/model/OpenIdConnectionClientShortModel' {
        * @param {module:model/OpenIdConnectionClientShortModel} obj Optional instance to populate.
        * @return {module:model/OpenIdConnectionClientShortModel} The populated <code>OpenIdConnectionClientShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>OpenIdConnectionClientShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OpenIdConnectionClientShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>OpenIdConnectionClientShortModel</code>.
        * @alias module:model/OpenIdConnectionClientShortModel
@@ -16552,7 +16531,7 @@ declare module 'testit-api-client/model/OpenIdConnectionSettingsShortClientModel
   /**
    * The OpenIdConnectionSettingsShortClientModel model module.
    * @module model/OpenIdConnectionSettingsShortClientModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class OpenIdConnectionSettingsShortClientModel {
       /**
@@ -16568,13 +16547,13 @@ declare module 'testit-api-client/model/OpenIdConnectionSettingsShortClientModel
        * @param {module:model/OpenIdConnectionSettingsShortClientModel} obj Optional instance to populate.
        * @return {module:model/OpenIdConnectionSettingsShortClientModel} The populated <code>OpenIdConnectionSettingsShortClientModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>OpenIdConnectionSettingsShortClientModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OpenIdConnectionSettingsShortClientModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       authority: any;
       imageUrl: any;
   }
@@ -16585,7 +16564,7 @@ declare module 'testit-api-client/model/Operation' {
   /**
    * The Operation model module.
    * @module model/Operation
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Operation {
       /**
@@ -16601,13 +16580,13 @@ declare module 'testit-api-client/model/Operation' {
        * @param {module:model/Operation} obj Optional instance to populate.
        * @return {module:model/Operation} The populated <code>Operation</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Operation</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Operation</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       value: any;
       path: any;
       op: any;
@@ -16620,7 +16599,7 @@ declare module 'testit-api-client/model/Order' {
   /**
    * The Order model module.
    * @module model/Order
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Order {
       /**
@@ -16636,13 +16615,13 @@ declare module 'testit-api-client/model/Order' {
        * @param {module:model/Order} obj Optional instance to populate.
        * @return {module:model/Order} The populated <code>Order</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Order</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Order</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Order</code>.
        * @alias module:model/Order
@@ -16663,7 +16642,7 @@ declare module 'testit-api-client/model/Page' {
   /**
    * The Page model module.
    * @module model/Page
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class Page {
       /**
@@ -16679,13 +16658,13 @@ declare module 'testit-api-client/model/Page' {
        * @param {module:model/Page} obj Optional instance to populate.
        * @return {module:model/Page} The populated <code>Page</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>Page</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Page</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>Page</code>.
        * @alias module:model/Page
@@ -16706,7 +16685,7 @@ declare module 'testit-api-client/model/ParameterApiResult' {
   /**
    * The ParameterApiResult model module.
    * @module model/ParameterApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterApiResult {
       /**
@@ -16722,13 +16701,13 @@ declare module 'testit-api-client/model/ParameterApiResult' {
        * @param {module:model/ParameterApiResult} obj Optional instance to populate.
        * @return {module:model/ParameterApiResult} The populated <code>ParameterApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ParameterApiResult</code>.
        * @alias module:model/ParameterApiResult
@@ -16763,7 +16742,7 @@ declare module 'testit-api-client/model/ParameterGroupApiResult' {
   /**
    * The ParameterGroupApiResult model module.
    * @module model/ParameterGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterGroupApiResult {
       /**
@@ -16779,13 +16758,13 @@ declare module 'testit-api-client/model/ParameterGroupApiResult' {
        * @param {module:model/ParameterGroupApiResult} obj Optional instance to populate.
        * @return {module:model/ParameterGroupApiResult} The populated <code>ParameterGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ParameterGroupApiResult</code>.
        * @alias module:model/ParameterGroupApiResult
@@ -16810,7 +16789,7 @@ declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
   /**
    * The ParameterGroupsFilterApiModel model module.
    * @module model/ParameterGroupsFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterGroupsFilterApiModel {
       /**
@@ -16826,13 +16805,13 @@ declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
        * @param {module:model/ParameterGroupsFilterApiModel} obj Optional instance to populate.
        * @return {module:model/ParameterGroupsFilterApiModel} The populated <code>ParameterGroupsFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterGroupsFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterGroupsFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       parameterKeyIds: any;
       name: any;
       isDeleted: any;
@@ -16845,7 +16824,7 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
   /**
    * The ParameterIterationModel model module.
    * @module model/ParameterIterationModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterIterationModel {
       /**
@@ -16861,13 +16840,13 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
        * @param {module:model/ParameterIterationModel} obj Optional instance to populate.
        * @return {module:model/ParameterIterationModel} The populated <code>ParameterIterationModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterIterationModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterIterationModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ParameterIterationModel</code>.
        * @alias module:model/ParameterIterationModel
@@ -16886,7 +16865,7 @@ declare module 'testit-api-client/model/ParametersFilterApiModel' {
   /**
    * The ParametersFilterApiModel model module.
    * @module model/ParametersFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParametersFilterApiModel {
       /**
@@ -16902,13 +16881,13 @@ declare module 'testit-api-client/model/ParametersFilterApiModel' {
        * @param {module:model/ParametersFilterApiModel} obj Optional instance to populate.
        * @return {module:model/ParametersFilterApiModel} The populated <code>ParametersFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParametersFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParametersFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       isDeleted: any;
       projectIds: any;
@@ -16920,7 +16899,7 @@ declare module 'testit-api-client/model/ParameterShortApiResult' {
   /**
    * The ParameterShortApiResult model module.
    * @module model/ParameterShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterShortApiResult {
       /**
@@ -16936,13 +16915,13 @@ declare module 'testit-api-client/model/ParameterShortApiResult' {
        * @param {module:model/ParameterShortApiResult} obj Optional instance to populate.
        * @return {module:model/ParameterShortApiResult} The populated <code>ParameterShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ParameterShortApiResult</code>.
        * @alias module:model/ParameterShortApiResult
@@ -16967,7 +16946,7 @@ declare module 'testit-api-client/model/ParameterShortModel' {
   /**
    * The ParameterShortModel model module.
    * @module model/ParameterShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ParameterShortModel {
       /**
@@ -16983,13 +16962,13 @@ declare module 'testit-api-client/model/ParameterShortModel' {
        * @param {module:model/ParameterShortModel} obj Optional instance to populate.
        * @return {module:model/ParameterShortModel} The populated <code>ParameterShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ParameterShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ParameterShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ParameterShortModel</code>.
        * @alias module:model/ParameterShortModel
@@ -17016,7 +16995,7 @@ declare module 'testit-api-client/model/PeriodViewModel' {
   /**
    * The PeriodViewModel model module.
    * @module model/PeriodViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class PeriodViewModel {
       /**
@@ -17032,13 +17011,13 @@ declare module 'testit-api-client/model/PeriodViewModel' {
        * @param {module:model/PeriodViewModel} obj Optional instance to populate.
        * @return {module:model/PeriodViewModel} The populated <code>PeriodViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>PeriodViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PeriodViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       startDate: any;
       endDate: any;
   }
@@ -17049,7 +17028,7 @@ declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
   /**
    * The PeriodViewModelChangedFieldViewModel model module.
    * @module model/PeriodViewModelChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class PeriodViewModelChangedFieldViewModel {
       /**
@@ -17065,13 +17044,13 @@ declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
        * @param {module:model/PeriodViewModelChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/PeriodViewModelChangedFieldViewModel} The populated <code>PeriodViewModelChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>PeriodViewModelChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PeriodViewModelChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -17082,7 +17061,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
   /**
    * The PreviewsIssueLinkApiModel model module.
    * @module model/PreviewsIssueLinkApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class PreviewsIssueLinkApiModel {
       /**
@@ -17098,13 +17077,13 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
        * @param {module:model/PreviewsIssueLinkApiModel} obj Optional instance to populate.
        * @return {module:model/PreviewsIssueLinkApiModel} The populated <code>PreviewsIssueLinkApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>PreviewsIssueLinkApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PreviewsIssueLinkApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>PreviewsIssueLinkApiModel</code>.
        * @alias module:model/PreviewsIssueLinkApiModel
@@ -17125,7 +17104,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
   /**
    * The PreviewsIssueLinkApiResult model module.
    * @module model/PreviewsIssueLinkApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class PreviewsIssueLinkApiResult {
       /**
@@ -17141,13 +17120,13 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
        * @param {module:model/PreviewsIssueLinkApiResult} obj Optional instance to populate.
        * @return {module:model/PreviewsIssueLinkApiResult} The populated <code>PreviewsIssueLinkApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>PreviewsIssueLinkApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>PreviewsIssueLinkApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>PreviewsIssueLinkApiResult</code>.
        * @alias module:model/PreviewsIssueLinkApiResult
@@ -17168,7 +17147,7 @@ declare module 'testit-api-client/model/ProblemDetails' {
   /**
    * The ProblemDetails model module.
    * @module model/ProblemDetails
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProblemDetails {
       /**
@@ -17184,13 +17163,13 @@ declare module 'testit-api-client/model/ProblemDetails' {
        * @param {module:model/ProblemDetails} obj Optional instance to populate.
        * @return {module:model/ProblemDetails} The populated <code>ProblemDetails</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProblemDetails</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProblemDetails</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       type: any;
       title: any;
       status: any;
@@ -17204,7 +17183,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
   /**
    * The ProjectApiResult model module.
    * @module model/ProjectApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectApiResult {
       /**
@@ -17220,13 +17199,13 @@ declare module 'testit-api-client/model/ProjectApiResult' {
        * @param {module:model/ProjectApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectApiResult} The populated <code>ProjectApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectApiResult</code>.
        * @alias module:model/ProjectApiResult
@@ -17271,7 +17250,7 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
   /**
    * The ProjectAttributesFilterModel model module.
    * @module model/ProjectAttributesFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectAttributesFilterModel {
       /**
@@ -17287,20 +17266,20 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
        * @param {module:model/ProjectAttributesFilterModel} obj Optional instance to populate.
        * @return {module:model/ProjectAttributesFilterModel} The populated <code>ProjectAttributesFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectAttributesFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectAttributesFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectAttributesFilterModel</code>.
        * @alias module:model/ProjectAttributesFilterModel
        * @param name {String} Specifies an attribute name to search for
        * @param types {Array.<module:model/CustomAttributeTypesEnum>} Specifies an attribute types to search for
        */
-      constructor(name: string, types: Array<module>);
+      constructor(name: string, types: Array<any>);
       name: any;
       isRequired: any;
       isGlobal: any;
@@ -17317,7 +17296,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterMo
   /**
    * The ProjectCustomAttributesTemplatesFilterModel model module.
    * @module model/ProjectCustomAttributesTemplatesFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectCustomAttributesTemplatesFilterModel {
       /**
@@ -17333,13 +17312,13 @@ declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterMo
        * @param {module:model/ProjectCustomAttributesTemplatesFilterModel} obj Optional instance to populate.
        * @return {module:model/ProjectCustomAttributesTemplatesFilterModel} The populated <code>ProjectCustomAttributesTemplatesFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectCustomAttributesTemplatesFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectCustomAttributesTemplatesFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       customAttributeTypes: any;
   }
@@ -17350,7 +17329,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
   /**
    * The ProjectCustomAttributeTemplateGetModel model module.
    * @module model/ProjectCustomAttributeTemplateGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectCustomAttributeTemplateGetModel {
       /**
@@ -17366,13 +17345,13 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
        * @param {module:model/ProjectCustomAttributeTemplateGetModel} obj Optional instance to populate.
        * @return {module:model/ProjectCustomAttributeTemplateGetModel} The populated <code>ProjectCustomAttributeTemplateGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectCustomAttributeTemplateGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectCustomAttributeTemplateGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectCustomAttributeTemplateGetModel</code>.
        * @alias module:model/ProjectCustomAttributeTemplateGetModel
@@ -17381,7 +17360,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
        * @param name {String} Name of the custom attribute template
        * @param customAttributeModels {Array.<module:model/CustomAttributeModel>} Attributes of the template
        */
-      constructor(id: string, isDeleted: boolean, name: string, customAttributeModels: Array<module>);
+      constructor(id: string, isDeleted: boolean, name: string, customAttributeModels: Array<any>);
       id: any;
       isDeleted: any;
       name: any;
@@ -17397,7 +17376,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
   /**
    * The ProjectDetailedFailureCategoryApiResult model module.
    * @module model/ProjectDetailedFailureCategoryApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectDetailedFailureCategoryApiResult {
       /**
@@ -17413,13 +17392,13 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
        * @param {module:model/ProjectDetailedFailureCategoryApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectDetailedFailureCategoryApiResult} The populated <code>ProjectDetailedFailureCategoryApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectDetailedFailureCategoryApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectDetailedFailureCategoryApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectDetailedFailureCategoryApiResult</code>.
        * @alias module:model/ProjectDetailedFailureCategoryApiResult
@@ -17431,7 +17410,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
        * @param failureClassRegexes {Array.<module:model/FailureClassRegexApiResult>} Failure category regexes
        * @param projectsCount {Number} Projects relations count
        */
-      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, failureClassRegexes: Array<module>, projectsCount: number);
+      constructor(id: string, isDeleted: boolean, failureCategory: any, createdDate: Date, createdById: string, failureClassRegexes: Array<any>, projectsCount: number);
       id: any;
       name: any;
       isDeleted: any;
@@ -17453,7 +17432,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
   /**
    * The ProjectExternalServiceApiResult model module.
    * @module model/ProjectExternalServiceApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectExternalServiceApiResult {
       /**
@@ -17469,13 +17448,13 @@ declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
        * @param {module:model/ProjectExternalServiceApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectExternalServiceApiResult} The populated <code>ProjectExternalServiceApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectExternalServiceApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectExternalServiceApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectExternalServiceApiResult</code>.
        * @alias module:model/ProjectExternalServiceApiResult
@@ -17500,7 +17479,7 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
   /**
    * The ProjectExternalServicesApiResult model module.
    * @module model/ProjectExternalServicesApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectExternalServicesApiResult {
       /**
@@ -17516,19 +17495,19 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
        * @param {module:model/ProjectExternalServicesApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectExternalServicesApiResult} The populated <code>ProjectExternalServicesApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectExternalServicesApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectExternalServicesApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectExternalServicesApiResult</code>.
        * @alias module:model/ProjectExternalServicesApiResult
        * @param data {Array.<module:model/ProjectExternalServiceApiResult>} External services associated with a project
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace ProjectExternalServicesApiResult {
@@ -17541,7 +17520,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult'
   /**
    * The ProjectExternalServiceSettingsApiResult model module.
    * @module model/ProjectExternalServiceSettingsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectExternalServiceSettingsApiResult {
       /**
@@ -17557,13 +17536,13 @@ declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult'
        * @param {module:model/ProjectExternalServiceSettingsApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectExternalServiceSettingsApiResult} The populated <code>ProjectExternalServiceSettingsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectExternalServiceSettingsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectExternalServiceSettingsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       settings: any;
   }
 
@@ -17573,7 +17552,7 @@ declare module 'testit-api-client/model/ProjectExtractionModel' {
   /**
    * The ProjectExtractionModel model module.
    * @module model/ProjectExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectExtractionModel {
       /**
@@ -17589,13 +17568,13 @@ declare module 'testit-api-client/model/ProjectExtractionModel' {
        * @param {module:model/ProjectExtractionModel} obj Optional instance to populate.
        * @return {module:model/ProjectExtractionModel} The populated <code>ProjectExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -17605,7 +17584,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
   /**
    * The ProjectFailureCategoryApiResult model module.
    * @module model/ProjectFailureCategoryApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectFailureCategoryApiResult {
       /**
@@ -17621,13 +17600,13 @@ declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
        * @param {module:model/ProjectFailureCategoryApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectFailureCategoryApiResult} The populated <code>ProjectFailureCategoryApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectFailureCategoryApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectFailureCategoryApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectFailureCategoryApiResult</code>.
        * @alias module:model/ProjectFailureCategoryApiResult
@@ -17661,7 +17640,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResult model module.
    * @module model/ProjectFailureCategoryGroupItemApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectFailureCategoryGroupItemApiResult {
       /**
@@ -17677,19 +17656,19 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
        * @param {module:model/ProjectFailureCategoryGroupItemApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectFailureCategoryGroupItemApiResult} The populated <code>ProjectFailureCategoryGroupItemApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectFailureCategoryGroupItemApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectFailureCategoryGroupItemApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectFailureCategoryGroupItemApiResult</code>.
        * @alias module:model/ProjectFailureCategoryGroupItemApiResult
        * @param items {Array.<module:model/ProjectFailureCategoryApiResult>} Group data
        */
-      constructor(items: Array<module>);
+      constructor(items: Array<any>);
       group: any;
       items: any;
   }
@@ -17703,7 +17682,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResultReply model module.
    * @module model/ProjectFailureCategoryGroupItemApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectFailureCategoryGroupItemApiResultReply {
       /**
@@ -17719,20 +17698,20 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
        * @param {module:model/ProjectFailureCategoryGroupItemApiResultReply} obj Optional instance to populate.
        * @return {module:model/ProjectFailureCategoryGroupItemApiResultReply} The populated <code>ProjectFailureCategoryGroupItemApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectFailureCategoryGroupItemApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectFailureCategoryGroupItemApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectFailureCategoryGroupItemApiResultReply</code>.
        * @alias module:model/ProjectFailureCategoryGroupItemApiResultReply
        * @param data {Array.<module:model/ProjectFailureCategoryGroupItemApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -17746,7 +17725,7 @@ declare module 'testit-api-client/model/ProjectModel' {
   /**
    * The ProjectModel model module.
    * @module model/ProjectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectModel {
       /**
@@ -17762,13 +17741,13 @@ declare module 'testit-api-client/model/ProjectModel' {
        * @param {module:model/ProjectModel} obj Optional instance to populate.
        * @return {module:model/ProjectModel} The populated <code>ProjectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectModel</code>.
        * @alias module:model/ProjectModel
@@ -17812,7 +17791,7 @@ declare module 'testit-api-client/model/ProjectNameApiResult' {
   /**
    * The ProjectNameApiResult model module.
    * @module model/ProjectNameApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectNameApiResult {
       /**
@@ -17828,13 +17807,13 @@ declare module 'testit-api-client/model/ProjectNameApiResult' {
        * @param {module:model/ProjectNameApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectNameApiResult} The populated <code>ProjectNameApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectNameApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectNameApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectNameApiResult</code>.
        * @alias module:model/ProjectNameApiResult
@@ -17855,7 +17834,7 @@ declare module 'testit-api-client/model/ProjectSelectModel' {
   /**
    * The ProjectSelectModel model module.
    * @module model/ProjectSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectSelectModel {
       /**
@@ -17871,13 +17850,13 @@ declare module 'testit-api-client/model/ProjectSelectModel' {
        * @param {module:model/ProjectSelectModel} obj Optional instance to populate.
        * @return {module:model/ProjectSelectModel} The populated <code>ProjectSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -17888,7 +17867,7 @@ declare module 'testit-api-client/model/ProjectsFilterModel' {
   /**
    * The ProjectsFilterModel model module.
    * @module model/ProjectsFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectsFilterModel {
       /**
@@ -17904,13 +17883,13 @@ declare module 'testit-api-client/model/ProjectsFilterModel' {
        * @param {module:model/ProjectsFilterModel} obj Optional instance to populate.
        * @return {module:model/ProjectsFilterModel} The populated <code>ProjectsFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectsFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectsFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       isFavorite: any;
       isDeleted: any;
@@ -17930,7 +17909,7 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
   /**
    * The ProjectShortApiResult model module.
    * @module model/ProjectShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectShortApiResult {
       /**
@@ -17946,13 +17925,13 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
        * @param {module:model/ProjectShortApiResult} obj Optional instance to populate.
        * @return {module:model/ProjectShortApiResult} The populated <code>ProjectShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectShortApiResult</code>.
        * @alias module:model/ProjectShortApiResult
@@ -17981,7 +17960,7 @@ declare module 'testit-api-client/model/ProjectShortApiResultReply' {
   /**
    * The ProjectShortApiResultReply model module.
    * @module model/ProjectShortApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectShortApiResultReply {
       /**
@@ -17997,20 +17976,20 @@ declare module 'testit-api-client/model/ProjectShortApiResultReply' {
        * @param {module:model/ProjectShortApiResultReply} obj Optional instance to populate.
        * @return {module:model/ProjectShortApiResultReply} The populated <code>ProjectShortApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectShortApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectShortApiResultReply</code>.
        * @alias module:model/ProjectShortApiResultReply
        * @param data {Array.<module:model/ProjectShortApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -18024,7 +18003,7 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
   /**
    * The ProjectShortestModel model module.
    * @module model/ProjectShortestModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectShortestModel {
       /**
@@ -18040,13 +18019,13 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
        * @param {module:model/ProjectShortestModel} obj Optional instance to populate.
        * @return {module:model/ProjectShortestModel} The populated <code>ProjectShortestModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectShortestModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortestModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectShortestModel</code>.
        * @alias module:model/ProjectShortestModel
@@ -18073,7 +18052,7 @@ declare module 'testit-api-client/model/ProjectShortModel' {
   /**
    * The ProjectShortModel model module.
    * @module model/ProjectShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectShortModel {
       /**
@@ -18089,13 +18068,13 @@ declare module 'testit-api-client/model/ProjectShortModel' {
        * @param {module:model/ProjectShortModel} obj Optional instance to populate.
        * @return {module:model/ProjectShortModel} The populated <code>ProjectShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ProjectShortModel</code>.
        * @alias module:model/ProjectShortModel
@@ -18137,7 +18116,7 @@ declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
   /**
    * The ProjectTestPlansFilterModel model module.
    * @module model/ProjectTestPlansFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ProjectTestPlansFilterModel {
       /**
@@ -18153,13 +18132,13 @@ declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
        * @param {module:model/ProjectTestPlansFilterModel} obj Optional instance to populate.
        * @return {module:model/ProjectTestPlansFilterModel} The populated <code>ProjectTestPlansFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ProjectTestPlansFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectTestPlansFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       description: any;
       build: any;
@@ -18207,7 +18186,6 @@ declare module 'testit-api-client/model/ProjectType' {
   /**
    * *
    */
-  export type ProjectType = any;
 
 }
 declare module 'testit-api-client/model/ProjectTypeModel' {
@@ -18237,7 +18215,6 @@ declare module 'testit-api-client/model/ProjectTypeModel' {
   /**
    * *
    */
-  export type ProjectTypeModel = any;
 
 }
 declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
@@ -18245,7 +18222,7 @@ declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
   /**
    * The ReplaceProjectExternalServiceApiModel model module.
    * @module model/ReplaceProjectExternalServiceApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ReplaceProjectExternalServiceApiModel {
       /**
@@ -18261,20 +18238,20 @@ declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
        * @param {module:model/ReplaceProjectExternalServiceApiModel} obj Optional instance to populate.
        * @return {module:model/ReplaceProjectExternalServiceApiModel} The populated <code>ReplaceProjectExternalServiceApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ReplaceProjectExternalServiceApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ReplaceProjectExternalServiceApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ReplaceProjectExternalServiceApiModel</code>.
        * @alias module:model/ReplaceProjectExternalServiceApiModel
        * @param newExternalServiceId {String} The unique ID of the new external service that will replace the current one
        * @param settings {Object} External service settings
        */
-      constructor(newExternalServiceId: string, settings: any);
+      constructor(newExternalServiceId: string, settings: Object);
       newExternalServiceId: any;
       settings: any;
   }
@@ -18315,7 +18292,6 @@ declare module 'testit-api-client/model/RequestType' {
   /**
    * *
    */
-  export type RequestType = any;
 
 }
 declare module 'testit-api-client/model/RequestTypeApiModel' {
@@ -18350,7 +18326,6 @@ declare module 'testit-api-client/model/RequestTypeApiModel' {
   /**
    * *
    */
-  export type RequestTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/RequestTypeModel' {
@@ -18385,7 +18360,6 @@ declare module 'testit-api-client/model/RequestTypeModel' {
   /**
    * *
    */
-  export type RequestTypeModel = any;
 
 }
 declare module 'testit-api-client/model/RerunsApiResult' {
@@ -18393,7 +18367,7 @@ declare module 'testit-api-client/model/RerunsApiResult' {
   /**
    * The RerunsApiResult model module.
    * @module model/RerunsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class RerunsApiResult {
       /**
@@ -18409,20 +18383,20 @@ declare module 'testit-api-client/model/RerunsApiResult' {
        * @param {module:model/RerunsApiResult} obj Optional instance to populate.
        * @return {module:model/RerunsApiResult} The populated <code>RerunsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>RerunsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RerunsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>RerunsApiResult</code>.
        * @alias module:model/RerunsApiResult
        * @param rerunCount {Number}
        * @param rerunTestResults {Array.<module:model/RerunTestResultApiResult>}
        */
-      constructor(rerunCount: number, rerunTestResults: Array<module>);
+      constructor(rerunCount: number, rerunTestResults: Array<any>);
       rerunCount: any;
       rerunTestResults: any;
   }
@@ -18436,7 +18410,7 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
   /**
    * The RerunTestResultApiResult model module.
    * @module model/RerunTestResultApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class RerunTestResultApiResult {
       /**
@@ -18452,13 +18426,13 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
        * @param {module:model/RerunTestResultApiResult} obj Optional instance to populate.
        * @return {module:model/RerunTestResultApiResult} The populated <code>RerunTestResultApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>RerunTestResultApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RerunTestResultApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>RerunTestResultApiResult</code>.
        * @alias module:model/RerunTestResultApiResult
@@ -18483,7 +18457,7 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
   /**
    * The SearchCustomAttributeTemplateGetModel model module.
    * @module model/SearchCustomAttributeTemplateGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchCustomAttributeTemplateGetModel {
       /**
@@ -18499,13 +18473,13 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
        * @param {module:model/SearchCustomAttributeTemplateGetModel} obj Optional instance to populate.
        * @return {module:model/SearchCustomAttributeTemplateGetModel} The populated <code>SearchCustomAttributeTemplateGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchCustomAttributeTemplateGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchCustomAttributeTemplateGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SearchCustomAttributeTemplateGetModel</code>.
        * @alias module:model/SearchCustomAttributeTemplateGetModel
@@ -18515,7 +18489,7 @@ declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
        * @param projectShortestModels {Array.<module:model/ProjectShortestModel>}
        * @param customAttributeModels {Array.<module:model/CustomAttributeModel>}
        */
-      constructor(id: string, isDeleted: boolean, name: string, projectShortestModels: Array<module>, customAttributeModels: Array<module>);
+      constructor(id: string, isDeleted: boolean, name: string, projectShortestModels: Array<any>, customAttributeModels: Array<any>);
       id: any;
       isDeleted: any;
       name: any;
@@ -18532,7 +18506,7 @@ declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
   /**
    * The SearchExternalIssuesApiModel model module.
    * @module model/SearchExternalIssuesApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchExternalIssuesApiModel {
       /**
@@ -18548,13 +18522,13 @@ declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
        * @param {module:model/SearchExternalIssuesApiModel} obj Optional instance to populate.
        * @return {module:model/SearchExternalIssuesApiModel} The populated <code>SearchExternalIssuesApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchExternalIssuesApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchExternalIssuesApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SearchExternalIssuesApiModel</code>.
        * @alias module:model/SearchExternalIssuesApiModel
@@ -18573,7 +18547,7 @@ declare module 'testit-api-client/model/SearchTestRunsApiModel' {
   /**
    * The SearchTestRunsApiModel model module.
    * @module model/SearchTestRunsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchTestRunsApiModel {
       /**
@@ -18589,13 +18563,13 @@ declare module 'testit-api-client/model/SearchTestRunsApiModel' {
        * @param {module:model/SearchTestRunsApiModel} obj Optional instance to populate.
        * @return {module:model/SearchTestRunsApiModel} The populated <code>SearchTestRunsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchTestRunsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchTestRunsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       states: any;
       statusCodes: any;
@@ -18613,7 +18587,7 @@ declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
   /**
    * The SearchTestStatusesApiModel model module.
    * @module model/SearchTestStatusesApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchTestStatusesApiModel {
       /**
@@ -18629,13 +18603,13 @@ declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
        * @param {module:model/SearchTestStatusesApiModel} obj Optional instance to populate.
        * @return {module:model/SearchTestStatusesApiModel} The populated <code>SearchTestStatusesApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchTestStatusesApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchTestStatusesApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       inquiry: any;
   }
 
@@ -18645,7 +18619,7 @@ declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
   /**
    * The SearchWebhooksQueryModel model module.
    * @module model/SearchWebhooksQueryModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchWebhooksQueryModel {
       /**
@@ -18661,13 +18635,13 @@ declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
        * @param {module:model/SearchWebhooksQueryModel} obj Optional instance to populate.
        * @return {module:model/SearchWebhooksQueryModel} The populated <code>SearchWebhooksQueryModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchWebhooksQueryModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchWebhooksQueryModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       eventTypes: any;
       methods: any;
@@ -18681,7 +18655,7 @@ declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
   /**
    * The SearchWorkflowProjectsApiModel model module.
    * @module model/SearchWorkflowProjectsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchWorkflowProjectsApiModel {
       /**
@@ -18697,13 +18671,13 @@ declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
        * @param {module:model/SearchWorkflowProjectsApiModel} obj Optional instance to populate.
        * @return {module:model/SearchWorkflowProjectsApiModel} The populated <code>SearchWorkflowProjectsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchWorkflowProjectsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchWorkflowProjectsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       inquiry: any;
   }
 
@@ -18713,7 +18687,7 @@ declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
   /**
    * The SearchWorkflowsApiModel model module.
    * @module model/SearchWorkflowsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchWorkflowsApiModel {
       /**
@@ -18729,13 +18703,13 @@ declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
        * @param {module:model/SearchWorkflowsApiModel} obj Optional instance to populate.
        * @return {module:model/SearchWorkflowsApiModel} The populated <code>SearchWorkflowsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchWorkflowsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchWorkflowsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       inquiry: any;
   }
 
@@ -18745,7 +18719,7 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
   /**
    * The SearchWorkItemLinkUrlsApiResult model module.
    * @module model/SearchWorkItemLinkUrlsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SearchWorkItemLinkUrlsApiResult {
       /**
@@ -18761,19 +18735,19 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
        * @param {module:model/SearchWorkItemLinkUrlsApiResult} obj Optional instance to populate.
        * @return {module:model/SearchWorkItemLinkUrlsApiResult} The populated <code>SearchWorkItemLinkUrlsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SearchWorkItemLinkUrlsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SearchWorkItemLinkUrlsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SearchWorkItemLinkUrlsApiResult</code>.
        * @alias module:model/SearchWorkItemLinkUrlsApiResult
        * @param data {Array.<module:model/WorkItemLinkUrlApiResult>}
        */
-      constructor(data: Array<module>);
+      constructor(data: Array<any>);
       data: any;
   }
   namespace SearchWorkItemLinkUrlsApiResult {
@@ -18786,7 +18760,7 @@ declare module 'testit-api-client/model/SectionModel' {
   /**
    * The SectionModel model module.
    * @module model/SectionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionModel {
       /**
@@ -18802,13 +18776,13 @@ declare module 'testit-api-client/model/SectionModel' {
        * @param {module:model/SectionModel} obj Optional instance to populate.
        * @return {module:model/SectionModel} The populated <code>SectionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionModel</code>.
        * @alias module:model/SectionModel
@@ -18839,7 +18813,7 @@ declare module 'testit-api-client/model/SectionMoveModel' {
   /**
    * The SectionMoveModel model module.
    * @module model/SectionMoveModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionMoveModel {
       /**
@@ -18855,13 +18829,13 @@ declare module 'testit-api-client/model/SectionMoveModel' {
        * @param {module:model/SectionMoveModel} obj Optional instance to populate.
        * @return {module:model/SectionMoveModel} The populated <code>SectionMoveModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionMoveModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionMoveModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionMoveModel</code>.
        * @alias module:model/SectionMoveModel
@@ -18885,7 +18859,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
   /**
    * The SectionPostModel model module.
    * @module model/SectionPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionPostModel {
       /**
@@ -18901,13 +18875,13 @@ declare module 'testit-api-client/model/SectionPostModel' {
        * @param {module:model/SectionPostModel} obj Optional instance to populate.
        * @return {module:model/SectionPostModel} The populated <code>SectionPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionPostModel</code>.
        * @alias module:model/SectionPostModel
@@ -18915,7 +18889,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
        * @param projectId {String}
        * @param attachments {Array.<module:model/AttachmentPutModel>}
        */
-      constructor(name: string, projectId: string, attachments: Array<module>);
+      constructor(name: string, projectId: string, attachments: Array<any>);
       name: any;
       projectId: any;
       parentId: any;
@@ -18933,7 +18907,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
   /**
    * The SectionPutModel model module.
    * @module model/SectionPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionPutModel {
       /**
@@ -18949,13 +18923,13 @@ declare module 'testit-api-client/model/SectionPutModel' {
        * @param {module:model/SectionPutModel} obj Optional instance to populate.
        * @return {module:model/SectionPutModel} The populated <code>SectionPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionPutModel</code>.
        * @alias module:model/SectionPutModel
@@ -18964,7 +18938,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
        * @param projectId {String}
        * @param attachments {Array.<module:model/AttachmentPutModel>}
        */
-      constructor(id: string, name: string, projectId: string, attachments: Array<module>);
+      constructor(id: string, name: string, projectId: string, attachments: Array<any>);
       id: any;
       name: any;
       projectId: any;
@@ -18983,7 +18957,7 @@ declare module 'testit-api-client/model/SectionRenameModel' {
   /**
    * The SectionRenameModel model module.
    * @module model/SectionRenameModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionRenameModel {
       /**
@@ -18999,13 +18973,13 @@ declare module 'testit-api-client/model/SectionRenameModel' {
        * @param {module:model/SectionRenameModel} obj Optional instance to populate.
        * @return {module:model/SectionRenameModel} The populated <code>SectionRenameModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionRenameModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionRenameModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionRenameModel</code>.
        * @alias module:model/SectionRenameModel
@@ -19026,7 +19000,7 @@ declare module 'testit-api-client/model/SectionWithStepsModel' {
   /**
    * The SectionWithStepsModel model module.
    * @module model/SectionWithStepsModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SectionWithStepsModel {
       /**
@@ -19042,13 +19016,13 @@ declare module 'testit-api-client/model/SectionWithStepsModel' {
        * @param {module:model/SectionWithStepsModel} obj Optional instance to populate.
        * @return {module:model/SectionWithStepsModel} The populated <code>SectionWithStepsModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SectionWithStepsModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SectionWithStepsModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SectionWithStepsModel</code>.
        * @alias module:model/SectionWithStepsModel
@@ -19082,7 +19056,7 @@ declare module 'testit-api-client/model/SelectTagsApiModel' {
   /**
    * The SelectTagsApiModel model module.
    * @module model/SelectTagsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SelectTagsApiModel {
       /**
@@ -19098,13 +19072,13 @@ declare module 'testit-api-client/model/SelectTagsApiModel' {
        * @param {module:model/SelectTagsApiModel} obj Optional instance to populate.
        * @return {module:model/SelectTagsApiModel} The populated <code>SelectTagsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SelectTagsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SelectTagsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -19115,7 +19089,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
   /**
    * The SharedStepChangeViewModel model module.
    * @module model/SharedStepChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepChangeViewModel {
       /**
@@ -19131,13 +19105,13 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
        * @param {module:model/SharedStepChangeViewModel} obj Optional instance to populate.
        * @return {module:model/SharedStepChangeViewModel} The populated <code>SharedStepChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SharedStepChangeViewModel</code>.
        * @alias module:model/SharedStepChangeViewModel
@@ -19146,7 +19120,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
        * @param name {String}
        * @param steps {Array.<module:model/WorkItemStepChangeViewModel>}
        */
-      constructor(id: string, globalId: number, name: string, steps: Array<module>);
+      constructor(id: string, globalId: number, name: string, steps: Array<any>);
       id: any;
       globalId: any;
       name: any;
@@ -19162,7 +19136,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
   /**
    * The SharedStepModel model module.
    * @module model/SharedStepModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepModel {
       /**
@@ -19178,13 +19152,13 @@ declare module 'testit-api-client/model/SharedStepModel' {
        * @param {module:model/SharedStepModel} obj Optional instance to populate.
        * @return {module:model/SharedStepModel} The populated <code>SharedStepModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SharedStepModel</code>.
        * @alias module:model/SharedStepModel
@@ -19194,7 +19168,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
        * @param steps {Array.<module:model/StepModel>}
        * @param isDeleted {Boolean}
        */
-      constructor(versionId: string, globalId: number, name: string, steps: Array<module>, isDeleted: boolean);
+      constructor(versionId: string, globalId: number, name: string, steps: Array<any>, isDeleted: boolean);
       versionId: any;
       globalId: any;
       name: any;
@@ -19211,7 +19185,7 @@ declare module 'testit-api-client/model/SharedStepReferenceModel' {
   /**
    * The SharedStepReferenceModel model module.
    * @module model/SharedStepReferenceModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepReferenceModel {
       /**
@@ -19227,13 +19201,13 @@ declare module 'testit-api-client/model/SharedStepReferenceModel' {
        * @param {module:model/SharedStepReferenceModel} obj Optional instance to populate.
        * @return {module:model/SharedStepReferenceModel} The populated <code>SharedStepReferenceModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepReferenceModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepReferenceModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SharedStepReferenceModel</code>.
        * @alias module:model/SharedStepReferenceModel
@@ -19284,7 +19258,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
   /**
    * The SharedStepReferenceSectionModel model module.
    * @module model/SharedStepReferenceSectionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepReferenceSectionModel {
       /**
@@ -19300,13 +19274,13 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
        * @param {module:model/SharedStepReferenceSectionModel} obj Optional instance to populate.
        * @return {module:model/SharedStepReferenceSectionModel} The populated <code>SharedStepReferenceSectionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepReferenceSectionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepReferenceSectionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SharedStepReferenceSectionModel</code>.
        * @alias module:model/SharedStepReferenceSectionModel
@@ -19338,7 +19312,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterMo
   /**
    * The SharedStepReferenceSectionsQueryFilterModel model module.
    * @module model/SharedStepReferenceSectionsQueryFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepReferenceSectionsQueryFilterModel {
       /**
@@ -19354,13 +19328,13 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterMo
        * @param {module:model/SharedStepReferenceSectionsQueryFilterModel} obj Optional instance to populate.
        * @return {module:model/SharedStepReferenceSectionsQueryFilterModel} The populated <code>SharedStepReferenceSectionsQueryFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepReferenceSectionsQueryFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepReferenceSectionsQueryFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       createdByIds: any;
       modifiedByIds: any;
@@ -19374,7 +19348,7 @@ declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
   /**
    * The SharedStepReferencesQueryFilterModel model module.
    * @module model/SharedStepReferencesQueryFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepReferencesQueryFilterModel {
       /**
@@ -19390,13 +19364,13 @@ declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
        * @param {module:model/SharedStepReferencesQueryFilterModel} obj Optional instance to populate.
        * @return {module:model/SharedStepReferencesQueryFilterModel} The populated <code>SharedStepReferencesQueryFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepReferencesQueryFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepReferencesQueryFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       globalIds: any;
       sectionIds: any;
@@ -19417,7 +19391,7 @@ declare module 'testit-api-client/model/SharedStepResultApiModel' {
   /**
    * The SharedStepResultApiModel model module.
    * @module model/SharedStepResultApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class SharedStepResultApiModel {
       /**
@@ -19433,13 +19407,13 @@ declare module 'testit-api-client/model/SharedStepResultApiModel' {
        * @param {module:model/SharedStepResultApiModel} obj Optional instance to populate.
        * @return {module:model/SharedStepResultApiModel} The populated <code>SharedStepResultApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>SharedStepResultApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SharedStepResultApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>SharedStepResultApiModel</code>.
        * @alias module:model/SharedStepResultApiModel
@@ -19460,7 +19434,7 @@ declare module 'testit-api-client/model/ShortConfiguration' {
   /**
    * The ShortConfiguration model module.
    * @module model/ShortConfiguration
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ShortConfiguration {
       /**
@@ -19476,13 +19450,13 @@ declare module 'testit-api-client/model/ShortConfiguration' {
        * @param {module:model/ShortConfiguration} obj Optional instance to populate.
        * @return {module:model/ShortConfiguration} The populated <code>ShortConfiguration</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ShortConfiguration</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ShortConfiguration</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ShortConfiguration</code>.
        * @alias module:model/ShortConfiguration
@@ -19503,7 +19477,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
   /**
    * The StepCommentApiModel model module.
    * @module model/StepCommentApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StepCommentApiModel {
       /**
@@ -19519,13 +19493,13 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
        * @param {module:model/StepCommentApiModel} obj Optional instance to populate.
        * @return {module:model/StepCommentApiModel} The populated <code>StepCommentApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StepCommentApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StepCommentApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>StepCommentApiModel</code>.
        * @alias module:model/StepCommentApiModel
@@ -19536,7 +19510,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
        * @param createdById {String}
        * @param createdDate {Date}
        */
-      constructor(id: string, stepId: string, attachments: Array<module>, testResultId: string, createdById: string, createdDate: Date);
+      constructor(id: string, stepId: string, attachments: Array<any>, testResultId: string, createdById: string, createdDate: Date);
       id: any;
       text: any;
       stepId: any;
@@ -19558,7 +19532,7 @@ declare module 'testit-api-client/model/StepModel' {
   /**
    * The StepModel model module.
    * @module model/StepModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StepModel {
       /**
@@ -19574,13 +19548,13 @@ declare module 'testit-api-client/model/StepModel' {
        * @param {module:model/StepModel} obj Optional instance to populate.
        * @return {module:model/StepModel} The populated <code>StepModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StepModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StepModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>StepModel</code>.
        * @alias module:model/StepModel
@@ -19605,7 +19579,7 @@ declare module 'testit-api-client/model/StepPostModel' {
   /**
    * The StepPostModel model module.
    * @module model/StepPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StepPostModel {
       /**
@@ -19621,13 +19595,13 @@ declare module 'testit-api-client/model/StepPostModel' {
        * @param {module:model/StepPostModel} obj Optional instance to populate.
        * @return {module:model/StepPostModel} The populated <code>StepPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StepPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StepPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       action: any;
       expected: any;
       testData: any;
@@ -19641,7 +19615,7 @@ declare module 'testit-api-client/model/StepPutModel' {
   /**
    * The StepPutModel model module.
    * @module model/StepPutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StepPutModel {
       /**
@@ -19657,13 +19631,13 @@ declare module 'testit-api-client/model/StepPutModel' {
        * @param {module:model/StepPutModel} obj Optional instance to populate.
        * @return {module:model/StepPutModel} The populated <code>StepPutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StepPutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StepPutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>StepPutModel</code>.
        * @alias module:model/StepPutModel
@@ -19687,7 +19661,7 @@ declare module 'testit-api-client/model/StepResultApiModel' {
   /**
    * The StepResultApiModel model module.
    * @module model/StepResultApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StepResultApiModel {
       /**
@@ -19703,13 +19677,13 @@ declare module 'testit-api-client/model/StepResultApiModel' {
        * @param {module:model/StepResultApiModel} obj Optional instance to populate.
        * @return {module:model/StepResultApiModel} The populated <code>StepResultApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StepResultApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StepResultApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>StepResultApiModel</code>.
        * @alias module:model/StepResultApiModel
@@ -19733,7 +19707,7 @@ declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
   /**
    * The StringArrayChangedFieldViewModel model module.
    * @module model/StringArrayChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StringArrayChangedFieldViewModel {
       /**
@@ -19749,13 +19723,13 @@ declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
        * @param {module:model/StringArrayChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/StringArrayChangedFieldViewModel} The populated <code>StringArrayChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StringArrayChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StringArrayChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -19766,7 +19740,7 @@ declare module 'testit-api-client/model/StringChangedFieldViewModel' {
   /**
    * The StringChangedFieldViewModel model module.
    * @module model/StringChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StringChangedFieldViewModel {
       /**
@@ -19782,13 +19756,13 @@ declare module 'testit-api-client/model/StringChangedFieldViewModel' {
        * @param {module:model/StringChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/StringChangedFieldViewModel} The populated <code>StringChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StringChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StringChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -19799,7 +19773,7 @@ declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
   /**
    * The StringChangedFieldWithDiffsViewModel model module.
    * @module model/StringChangedFieldWithDiffsViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StringChangedFieldWithDiffsViewModel {
       /**
@@ -19815,13 +19789,13 @@ declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
        * @param {module:model/StringChangedFieldWithDiffsViewModel} obj Optional instance to populate.
        * @return {module:model/StringChangedFieldWithDiffsViewModel} The populated <code>StringChangedFieldWithDiffsViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StringChangedFieldWithDiffsViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StringChangedFieldWithDiffsViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       diffValue: any;
       oldValue: any;
       newValue: any;
@@ -19833,7 +19807,7 @@ declare module 'testit-api-client/model/StringExtractionModel' {
   /**
    * The StringExtractionModel model module.
    * @module model/StringExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class StringExtractionModel {
       /**
@@ -19849,13 +19823,13 @@ declare module 'testit-api-client/model/StringExtractionModel' {
        * @param {module:model/StringExtractionModel} obj Optional instance to populate.
        * @return {module:model/StringExtractionModel} The populated <code>StringExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>StringExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>StringExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       include: any;
       exclude: any;
   }
@@ -19866,7 +19840,7 @@ declare module 'testit-api-client/model/TagApiModel' {
   /**
    * The TagApiModel model module.
    * @module model/TagApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagApiModel {
       /**
@@ -19882,13 +19856,13 @@ declare module 'testit-api-client/model/TagApiModel' {
        * @param {module:model/TagApiModel} obj Optional instance to populate.
        * @return {module:model/TagApiModel} The populated <code>TagApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TagApiModel</code>.
        * @alias module:model/TagApiModel
@@ -19907,7 +19881,7 @@ declare module 'testit-api-client/model/TagApiResult' {
   /**
    * The TagApiResult model module.
    * @module model/TagApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagApiResult {
       /**
@@ -19923,13 +19897,13 @@ declare module 'testit-api-client/model/TagApiResult' {
        * @param {module:model/TagApiResult} obj Optional instance to populate.
        * @return {module:model/TagApiResult} The populated <code>TagApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TagApiResult</code>.
        * @alias module:model/TagApiResult
@@ -19956,7 +19930,7 @@ declare module 'testit-api-client/model/TagModel' {
   /**
    * The TagModel model module.
    * @module model/TagModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagModel {
       /**
@@ -19972,13 +19946,13 @@ declare module 'testit-api-client/model/TagModel' {
        * @param {module:model/TagModel} obj Optional instance to populate.
        * @return {module:model/TagModel} The populated <code>TagModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TagModel</code>.
        * @alias module:model/TagModel
@@ -19997,7 +19971,7 @@ declare module 'testit-api-client/model/TagsExtractionApiModel' {
   /**
    * The TagsExtractionApiModel model module.
    * @module model/TagsExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagsExtractionApiModel {
       /**
@@ -20013,13 +19987,13 @@ declare module 'testit-api-client/model/TagsExtractionApiModel' {
        * @param {module:model/TagsExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/TagsExtractionApiModel} The populated <code>TagsExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagsExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagsExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -20029,7 +20003,7 @@ declare module 'testit-api-client/model/TagsFilterApiModel' {
   /**
    * The TagsFilterApiModel model module.
    * @module model/TagsFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagsFilterApiModel {
       /**
@@ -20045,13 +20019,13 @@ declare module 'testit-api-client/model/TagsFilterApiModel' {
        * @param {module:model/TagsFilterApiModel} obj Optional instance to populate.
        * @return {module:model/TagsFilterApiModel} The populated <code>TagsFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagsFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagsFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       createdDate: any;
       createdByIds: any;
@@ -20063,7 +20037,7 @@ declare module 'testit-api-client/model/TagShortApiResult' {
   /**
    * The TagShortApiResult model module.
    * @module model/TagShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TagShortApiResult {
       /**
@@ -20079,13 +20053,13 @@ declare module 'testit-api-client/model/TagShortApiResult' {
        * @param {module:model/TagShortApiResult} obj Optional instance to populate.
        * @return {module:model/TagShortApiResult} The populated <code>TagShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TagShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TagShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TagShortApiResult</code>.
        * @alias module:model/TagShortApiResult
@@ -20104,7 +20078,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
   /**
    * The TestPlanApiResult model module.
    * @module model/TestPlanApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanApiResult {
       /**
@@ -20120,13 +20094,13 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
        * @param {module:model/TestPlanApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanApiResult} The populated <code>TestPlanApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanApiResult</code>.
        * @alias module:model/TestPlanApiResult
@@ -20139,7 +20113,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
        * @param createdById {String}
        * @param isDeleted {Boolean}
        */
-      constructor(id: string, name: string, status: any, tags: Array<module>, globalId: number, attributes: any, createdById: string, isDeleted: boolean);
+      constructor(id: string, name: string, status: any, tags: Array<any>, globalId: number, attributes: any, createdById: string, isDeleted: boolean);
       id: any;
       name: any;
       startDate: any;
@@ -20173,7 +20147,7 @@ declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
   /**
    * The TestPlanChangedFieldsViewModel model module.
    * @module model/TestPlanChangedFieldsViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanChangedFieldsViewModel {
       /**
@@ -20189,13 +20163,13 @@ declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
        * @param {module:model/TestPlanChangedFieldsViewModel} obj Optional instance to populate.
        * @return {module:model/TestPlanChangedFieldsViewModel} The populated <code>TestPlanChangedFieldsViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanChangedFieldsViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanChangedFieldsViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       description: any;
       productName: any;
@@ -20217,7 +20191,7 @@ declare module 'testit-api-client/model/TestPlanChangeModel' {
   /**
    * The TestPlanChangeModel model module.
    * @module model/TestPlanChangeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanChangeModel {
       /**
@@ -20233,13 +20207,13 @@ declare module 'testit-api-client/model/TestPlanChangeModel' {
        * @param {module:model/TestPlanChangeModel} obj Optional instance to populate.
        * @return {module:model/TestPlanChangeModel} The populated <code>TestPlanChangeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanChangeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanChangeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanChangeModel</code>.
        * @alias module:model/TestPlanChangeModel
@@ -20265,7 +20239,7 @@ declare module 'testit-api-client/model/TestPlanExtractionModel' {
   /**
    * The TestPlanExtractionModel model module.
    * @module model/TestPlanExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanExtractionModel {
       /**
@@ -20281,13 +20255,13 @@ declare module 'testit-api-client/model/TestPlanExtractionModel' {
        * @param {module:model/TestPlanExtractionModel} obj Optional instance to populate.
        * @return {module:model/TestPlanExtractionModel} The populated <code>TestPlanExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -20297,7 +20271,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatus' {
   /**
    * The TestPlanGroupByStatus model module.
    * @module model/TestPlanGroupByStatus
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByStatus {
       /**
@@ -20313,13 +20287,13 @@ declare module 'testit-api-client/model/TestPlanGroupByStatus' {
        * @param {module:model/TestPlanGroupByStatus} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByStatus} The populated <code>TestPlanGroupByStatus</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByStatus</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByStatus</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByStatus</code>.
        * @alias module:model/TestPlanGroupByStatus
@@ -20340,7 +20314,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
   /**
    * The TestPlanGroupByStatusCode model module.
    * @module model/TestPlanGroupByStatusCode
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByStatusCode {
       /**
@@ -20356,13 +20330,13 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
        * @param {module:model/TestPlanGroupByStatusCode} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByStatusCode} The populated <code>TestPlanGroupByStatusCode</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByStatusCode</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByStatusCode</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByStatusCode</code>.
        * @alias module:model/TestPlanGroupByStatusCode
@@ -20383,7 +20357,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
   /**
    * The TestPlanGroupByStatusType model module.
    * @module model/TestPlanGroupByStatusType
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByStatusType {
       /**
@@ -20399,13 +20373,13 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
        * @param {module:model/TestPlanGroupByStatusType} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByStatusType} The populated <code>TestPlanGroupByStatusType</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByStatusType</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByStatusType</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByStatusType</code>.
        * @alias module:model/TestPlanGroupByStatusType
@@ -20426,7 +20400,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTester' {
   /**
    * The TestPlanGroupByTester model module.
    * @module model/TestPlanGroupByTester
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByTester {
       /**
@@ -20442,13 +20416,13 @@ declare module 'testit-api-client/model/TestPlanGroupByTester' {
        * @param {module:model/TestPlanGroupByTester} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByTester} The populated <code>TestPlanGroupByTester</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByTester</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByTester</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByTester</code>.
        * @alias module:model/TestPlanGroupByTester
@@ -20468,7 +20442,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
   /**
    * The TestPlanGroupByTesterAndStatus model module.
    * @module model/TestPlanGroupByTesterAndStatus
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByTesterAndStatus {
       /**
@@ -20484,13 +20458,13 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
        * @param {module:model/TestPlanGroupByTesterAndStatus} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByTesterAndStatus} The populated <code>TestPlanGroupByTesterAndStatus</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByTesterAndStatus</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByTesterAndStatus</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByTesterAndStatus</code>.
        * @alias module:model/TestPlanGroupByTesterAndStatus
@@ -20512,7 +20486,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
   /**
    * The TestPlanGroupByTesterAndStatusCode model module.
    * @module model/TestPlanGroupByTesterAndStatusCode
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanGroupByTesterAndStatusCode {
       /**
@@ -20528,13 +20502,13 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
        * @param {module:model/TestPlanGroupByTesterAndStatusCode} obj Optional instance to populate.
        * @return {module:model/TestPlanGroupByTesterAndStatusCode} The populated <code>TestPlanGroupByTesterAndStatusCode</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanGroupByTesterAndStatusCode</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanGroupByTesterAndStatusCode</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanGroupByTesterAndStatusCode</code>.
        * @alias module:model/TestPlanGroupByTesterAndStatusCode
@@ -20556,7 +20530,7 @@ declare module 'testit-api-client/model/TestPlanLink' {
   /**
    * The TestPlanLink model module.
    * @module model/TestPlanLink
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanLink {
       /**
@@ -20572,13 +20546,13 @@ declare module 'testit-api-client/model/TestPlanLink' {
        * @param {module:model/TestPlanLink} obj Optional instance to populate.
        * @return {module:model/TestPlanLink} The populated <code>TestPlanLink</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanLink</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanLink</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       bugLink: any;
       workItemGlobalId: any;
       workItemName: any;
@@ -20594,7 +20568,7 @@ declare module 'testit-api-client/model/TestPlanModel' {
   /**
    * The TestPlanModel model module.
    * @module model/TestPlanModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanModel {
       /**
@@ -20610,13 +20584,13 @@ declare module 'testit-api-client/model/TestPlanModel' {
        * @param {module:model/TestPlanModel} obj Optional instance to populate.
        * @return {module:model/TestPlanModel} The populated <code>TestPlanModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanModel</code>.
        * @alias module:model/TestPlanModel
@@ -20663,7 +20637,7 @@ declare module 'testit-api-client/model/TestPlanSelectModel' {
   /**
    * The TestPlanSelectModel model module.
    * @module model/TestPlanSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanSelectModel {
       /**
@@ -20679,13 +20653,13 @@ declare module 'testit-api-client/model/TestPlanSelectModel' {
        * @param {module:model/TestPlanSelectModel} obj Optional instance to populate.
        * @return {module:model/TestPlanSelectModel} The populated <code>TestPlanSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanSelectModel</code>.
        * @alias module:model/TestPlanSelectModel
@@ -20705,7 +20679,7 @@ declare module 'testit-api-client/model/TestPlanShortModel' {
   /**
    * The TestPlanShortModel model module.
    * @module model/TestPlanShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanShortModel {
       /**
@@ -20721,13 +20695,13 @@ declare module 'testit-api-client/model/TestPlanShortModel' {
        * @param {module:model/TestPlanShortModel} obj Optional instance to populate.
        * @return {module:model/TestPlanShortModel} The populated <code>TestPlanShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanShortModel</code>.
        * @alias module:model/TestPlanShortModel
@@ -20782,7 +20756,6 @@ declare module 'testit-api-client/model/TestPlanStatus' {
   /**
    * *
    */
-  export type TestPlanStatus = any;
 
 }
 declare module 'testit-api-client/model/TestPlanStatusModel' {
@@ -20822,7 +20795,6 @@ declare module 'testit-api-client/model/TestPlanStatusModel' {
   /**
    * *
    */
-  export type TestPlanStatusModel = any;
 
 }
 declare module 'testit-api-client/model/TestPlanSummaryModel' {
@@ -20830,7 +20802,7 @@ declare module 'testit-api-client/model/TestPlanSummaryModel' {
   /**
    * The TestPlanSummaryModel model module.
    * @module model/TestPlanSummaryModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanSummaryModel {
       /**
@@ -20846,13 +20818,13 @@ declare module 'testit-api-client/model/TestPlanSummaryModel' {
        * @param {module:model/TestPlanSummaryModel} obj Optional instance to populate.
        * @return {module:model/TestPlanSummaryModel} The populated <code>TestPlanSummaryModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanSummaryModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanSummaryModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanSummaryModel</code>.
        * @alias module:model/TestPlanSummaryModel
@@ -20882,7 +20854,7 @@ declare module 'testit-api-client/model/TestPlanTagApiResult' {
   /**
    * The TestPlanTagApiResult model module.
    * @module model/TestPlanTagApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTagApiResult {
       /**
@@ -20898,13 +20870,13 @@ declare module 'testit-api-client/model/TestPlanTagApiResult' {
        * @param {module:model/TestPlanTagApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTagApiResult} The populated <code>TestPlanTagApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTagApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTagApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTagApiResult</code>.
        * @alias module:model/TestPlanTagApiResult
@@ -20923,7 +20895,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
   /**
    * The TestPlanTestPointsAnalyticsApiModel model module.
    * @module model/TestPlanTestPointsAnalyticsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsAnalyticsApiModel {
       /**
@@ -20939,13 +20911,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
        * @param {module:model/TestPlanTestPointsAnalyticsApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsAnalyticsApiModel} The populated <code>TestPlanTestPointsAnalyticsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsAnalyticsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsAnalyticsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -20956,7 +20928,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
   /**
    * The TestPlanTestPointsAnalyticsApiResult model module.
    * @module model/TestPlanTestPointsAnalyticsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsAnalyticsApiResult {
       /**
@@ -20972,13 +20944,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
        * @param {module:model/TestPlanTestPointsAnalyticsApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsAnalyticsApiResult} The populated <code>TestPlanTestPointsAnalyticsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsAnalyticsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsAnalyticsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsAnalyticsApiResult</code>.
        * @alias module:model/TestPlanTestPointsAnalyticsApiResult
@@ -20989,7 +20961,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
        * @param countGroupByStatusType {Array.<module:model/TestPlanTestPointsStatusTypeGroupApiResult>}
        * @param countGroupByTesterAndStatusType {Array.<module:model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult>}
        */
-      constructor(countGroupByStatus: Array<module>, countGroupByTesterAndStatus: Array<module>, sumGroupByTester: Array<module>, countGroupByTester: Array<module>, countGroupByStatusType: Array<module>, countGroupByTesterAndStatusType: Array<module>);
+      constructor(countGroupByStatus: Array<any>, countGroupByTesterAndStatus: Array<any>, sumGroupByTester: Array<any>, countGroupByTester: Array<any>, countGroupByStatusType: Array<any>, countGroupByTesterAndStatusType: Array<any>);
       countGroupByStatus: any;
       countGroupByTesterAndStatus: any;
       sumGroupByTester: any;
@@ -21007,7 +20979,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
   /**
    * The TestPlanTestPointsApiModel model module.
    * @module model/TestPlanTestPointsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsApiModel {
       /**
@@ -21023,13 +20995,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
        * @param {module:model/TestPlanTestPointsApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsApiModel} The populated <code>TestPlanTestPointsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       group: any;
       inquiry: any;
@@ -21041,7 +21013,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel
   /**
    * The TestPlanTestPointsAutoTestsRerunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRerunApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsAutoTestsRerunApiModel {
       /**
@@ -21057,13 +21029,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel
        * @param {module:model/TestPlanTestPointsAutoTestsRerunApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsAutoTestsRerunApiModel} The populated <code>TestPlanTestPointsAutoTestsRerunApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsAutoTestsRerunApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsAutoTestsRerunApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
       webhookIds: any;
@@ -21075,7 +21047,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' 
   /**
    * The TestPlanTestPointsAutoTestsRunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRunApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsAutoTestsRunApiModel {
       /**
@@ -21091,13 +21063,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' 
        * @param {module:model/TestPlanTestPointsAutoTestsRunApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsAutoTestsRunApiModel} The populated <code>TestPlanTestPointsAutoTestsRunApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsAutoTestsRunApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsAutoTestsRunApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsAutoTestsRunApiModel</code>.
        * @alias module:model/TestPlanTestPointsAutoTestsRunApiModel
@@ -21122,7 +21094,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
   /**
    * The TestPlanTestPointsExtractionApiModel model module.
    * @module model/TestPlanTestPointsExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsExtractionApiModel {
       /**
@@ -21138,13 +21110,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
        * @param {module:model/TestPlanTestPointsExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsExtractionApiModel} The populated <code>TestPlanTestPointsExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -21154,7 +21126,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
   /**
    * The TestPlanTestPointsGroupApiModel model module.
    * @module model/TestPlanTestPointsGroupApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsGroupApiModel {
       /**
@@ -21170,13 +21142,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
        * @param {module:model/TestPlanTestPointsGroupApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsGroupApiModel} The populated <code>TestPlanTestPointsGroupApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsGroupApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsGroupApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsGroupApiModel</code>.
        * @alias module:model/TestPlanTestPointsGroupApiModel
@@ -21196,7 +21168,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
   /**
    * The TestPlanTestPointsGroupApiResult model module.
    * @module model/TestPlanTestPointsGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsGroupApiResult {
       /**
@@ -21212,13 +21184,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
        * @param {module:model/TestPlanTestPointsGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsGroupApiResult} The populated <code>TestPlanTestPointsGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsGroupApiResult
@@ -21226,7 +21198,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
        * @param displayFieldValue {Object}
        * @param count {Number}
        */
-      constructor(fieldValue: any, displayFieldValue: any, count: number);
+      constructor(fieldValue: Object, displayFieldValue: Object, count: number);
       fieldValue: any;
       displayFieldValue: any;
       count: any;
@@ -21241,7 +21213,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
   /**
    * The TestPlanTestPointsGroupSearchApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsGroupSearchApiResult {
       /**
@@ -21257,13 +21229,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
        * @param {module:model/TestPlanTestPointsGroupSearchApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsGroupSearchApiResult} The populated <code>TestPlanTestPointsGroupSearchApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsGroupSearchApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsGroupSearchApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsGroupSearchApiResult</code>.
        * @alias module:model/TestPlanTestPointsGroupSearchApiResult
@@ -21271,7 +21243,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
        * @param totalCount {Number}
        * @param statusCounters {module:model/TestPlanTestPointsSearchStatusCountersApiResult}
        */
-      constructor(data: Array<module>, totalCount: number, statusCounters: any);
+      constructor(data: Array<any>, totalCount: number, statusCounters: any);
       data: any;
       totalCount: any;
       statusCounters: any;
@@ -21286,7 +21258,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
   /**
    * The TestPlanTestPointsGroupSearchItemApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchItemApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsGroupSearchItemApiResult {
       /**
@@ -21302,20 +21274,20 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
        * @param {module:model/TestPlanTestPointsGroupSearchItemApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsGroupSearchItemApiResult} The populated <code>TestPlanTestPointsGroupSearchItemApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsGroupSearchItemApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsGroupSearchItemApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsGroupSearchItemApiResult</code>.
        * @alias module:model/TestPlanTestPointsGroupSearchItemApiResult
        * @param group {module:model/TestPlanTestPointsGroupApiResult}
        * @param items {Array.<module:model/TestPlanTestPointsSearchApiResult>}
        */
-      constructor(group: any, items: Array<module>);
+      constructor(group: any, items: Array<any>);
       group: any;
       items: any;
   }
@@ -21329,7 +21301,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
   /**
    * The TestPlanTestPointsInquiryApiModel model module.
    * @module model/TestPlanTestPointsInquiryApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsInquiryApiModel {
       /**
@@ -21345,19 +21317,19 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
        * @param {module:model/TestPlanTestPointsInquiryApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsInquiryApiModel} The populated <code>TestPlanTestPointsInquiryApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsInquiryApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsInquiryApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsInquiryApiModel</code>.
        * @alias module:model/TestPlanTestPointsInquiryApiModel
        * @param order {Array.<module:model/Order>}
        */
-      constructor(order: Array<module>);
+      constructor(order: Array<any>);
       order: any;
       page: any;
   }
@@ -21371,7 +21343,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
   /**
    * The TestPlanTestPointsSearchApiModel model module.
    * @module model/TestPlanTestPointsSearchApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsSearchApiModel {
       /**
@@ -21387,13 +21359,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
        * @param {module:model/TestPlanTestPointsSearchApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsSearchApiModel} The populated <code>TestPlanTestPointsSearchApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsSearchApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsSearchApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       testSuiteIds: any;
       workItemGlobalIds: any;
       workItemMedianDuration: any;
@@ -21425,7 +21397,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
   /**
    * The TestPlanTestPointsSearchApiResult model module.
    * @module model/TestPlanTestPointsSearchApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsSearchApiResult {
       /**
@@ -21441,13 +21413,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
        * @param {module:model/TestPlanTestPointsSearchApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsSearchApiResult} The populated <code>TestPlanTestPointsSearchApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsSearchApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsSearchApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsSearchApiResult</code>.
        * @alias module:model/TestPlanTestPointsSearchApiResult
@@ -21461,7 +21433,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
        * @param workItem {module:model/TestPlanTestPointsWorkItemSearchApiResult}
        * @param parameters {Array.<module:model/ParameterShortApiResult>}
        */
-      constructor(id: string, created: any, status: string, statusModel: any, inProgress: boolean, configuration: any, testSuite: any, workItem: any, parameters: Array<module>);
+      constructor(id: string, created: any, status: string, statusModel: any, inProgress: boolean, configuration: any, testSuite: any, workItem: any, parameters: Array<any>);
       id: any;
       created: any;
       modified: any;
@@ -21485,7 +21457,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersAp
   /**
    * The TestPlanTestPointsSearchStatusCountersApiResult model module.
    * @module model/TestPlanTestPointsSearchStatusCountersApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsSearchStatusCountersApiResult {
       /**
@@ -21501,13 +21473,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersAp
        * @param {module:model/TestPlanTestPointsSearchStatusCountersApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsSearchStatusCountersApiResult} The populated <code>TestPlanTestPointsSearchStatusCountersApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsSearchStatusCountersApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsSearchStatusCountersApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsSearchStatusCountersApiResult</code>.
        * @alias module:model/TestPlanTestPointsSearchStatusCountersApiResult
@@ -21532,7 +21504,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult
   /**
    * The TestPlanTestPointsSectionSearchApiResult model module.
    * @module model/TestPlanTestPointsSectionSearchApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsSectionSearchApiResult {
       /**
@@ -21548,13 +21520,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult
        * @param {module:model/TestPlanTestPointsSectionSearchApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsSectionSearchApiResult} The populated <code>TestPlanTestPointsSectionSearchApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsSectionSearchApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsSectionSearchApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsSectionSearchApiResult</code>.
        * @alias module:model/TestPlanTestPointsSectionSearchApiResult
@@ -21576,7 +21548,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
   /**
    * The TestPlanTestPointsSetTestersApiModel model module.
    * @module model/TestPlanTestPointsSetTestersApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsSetTestersApiModel {
       /**
@@ -21592,13 +21564,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
        * @param {module:model/TestPlanTestPointsSetTestersApiModel} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsSetTestersApiModel} The populated <code>TestPlanTestPointsSetTestersApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsSetTestersApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsSetTestersApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsSetTestersApiModel</code>.
        * @alias module:model/TestPlanTestPointsSetTestersApiModel
@@ -21619,7 +21591,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResu
   /**
    * The TestPlanTestPointsStatusCodeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusCodeGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsStatusCodeGroupApiResult {
       /**
@@ -21635,13 +21607,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResu
        * @param {module:model/TestPlanTestPointsStatusCodeGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsStatusCodeGroupApiResult} The populated <code>TestPlanTestPointsStatusCodeGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsStatusCodeGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsStatusCodeGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsStatusCodeGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsStatusCodeGroupApiResult
@@ -21664,7 +21636,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' 
   /**
    * The TestPlanTestPointsStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsStatusGroupApiResult {
       /**
@@ -21680,13 +21652,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' 
        * @param {module:model/TestPlanTestPointsStatusGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsStatusGroupApiResult} The populated <code>TestPlanTestPointsStatusGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsStatusGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsStatusGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsStatusGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsStatusGroupApiResult
@@ -21707,7 +21679,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
   /**
    * The TestPlanTestPointsStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusTypeGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsStatusTypeGroupApiResult {
       /**
@@ -21723,20 +21695,20 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
        * @param {module:model/TestPlanTestPointsStatusTypeGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsStatusTypeGroupApiResult} The populated <code>TestPlanTestPointsStatusTypeGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsStatusTypeGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsStatusTypeGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsStatusTypeGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsStatusTypeGroupApiResult
        * @param statusType {module:model/TestStatusApiType} Collection of possible status types
        * @param statuses {Array.<module:model/TestPlanTestPointsStatusCodeGroupApiResult>}
        */
-      constructor(statusType: any, statuses: Array<module>);
+      constructor(statusType: any, statuses: Array<any>);
       statusType: any;
       statuses: any;
   }
@@ -21750,7 +21722,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupAp
   /**
    * The TestPlanTestPointsTesterAndStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsTesterAndStatusGroupApiResult {
       /**
@@ -21766,13 +21738,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupAp
        * @param {module:model/TestPlanTestPointsTesterAndStatusGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsTesterAndStatusGroupApiResult} The populated <code>TestPlanTestPointsTesterAndStatusGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsTesterAndStatusGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsTesterAndStatusGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsTesterAndStatusGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsTesterAndStatusGroupApiResult
@@ -21795,7 +21767,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
   /**
    * The TestPlanTestPointsTesterAndStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
       /**
@@ -21811,13 +21783,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
        * @param {module:model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult} The populated <code>TestPlanTestPointsTesterAndStatusTypeGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsTesterAndStatusTypeGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsTesterAndStatusTypeGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsTesterAndStatusTypeGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult
@@ -21825,7 +21797,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
        * @param statusType {module:model/TestStatusApiType} Collection of possible status types
        * @param statuses {Array.<module:model/TestPlanTestPointsStatusCodeGroupApiResult>}
        */
-      constructor(userId: string, statusType: any, statuses: Array<module>);
+      constructor(userId: string, statusType: any, statuses: Array<any>);
       userId: any;
       statusType: any;
       statuses: any;
@@ -21840,7 +21812,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' 
   /**
    * The TestPlanTestPointsTesterGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterGroupApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsTesterGroupApiResult {
       /**
@@ -21856,13 +21828,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' 
        * @param {module:model/TestPlanTestPointsTesterGroupApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsTesterGroupApiResult} The populated <code>TestPlanTestPointsTesterGroupApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsTesterGroupApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsTesterGroupApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsTesterGroupApiResult</code>.
        * @alias module:model/TestPlanTestPointsTesterGroupApiResult
@@ -21883,7 +21855,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResu
   /**
    * The TestPlanTestPointsTestSuiteSearchApiResult model module.
    * @module model/TestPlanTestPointsTestSuiteSearchApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsTestSuiteSearchApiResult {
       /**
@@ -21899,13 +21871,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResu
        * @param {module:model/TestPlanTestPointsTestSuiteSearchApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsTestSuiteSearchApiResult} The populated <code>TestPlanTestPointsTestSuiteSearchApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsTestSuiteSearchApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsTestSuiteSearchApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsTestSuiteSearchApiResult</code>.
        * @alias module:model/TestPlanTestPointsTestSuiteSearchApiResult
@@ -21926,7 +21898,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResul
   /**
    * The TestPlanTestPointsWorkItemSearchApiResult model module.
    * @module model/TestPlanTestPointsWorkItemSearchApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanTestPointsWorkItemSearchApiResult {
       /**
@@ -21942,13 +21914,13 @@ declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResul
        * @param {module:model/TestPlanTestPointsWorkItemSearchApiResult} obj Optional instance to populate.
        * @return {module:model/TestPlanTestPointsWorkItemSearchApiResult} The populated <code>TestPlanTestPointsWorkItemSearchApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanTestPointsWorkItemSearchApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanTestPointsWorkItemSearchApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanTestPointsWorkItemSearchApiResult</code>.
        * @alias module:model/TestPlanTestPointsWorkItemSearchApiResult
@@ -21995,7 +21967,7 @@ declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
   /**
    * The TestPlanWithAnalyticModel model module.
    * @module model/TestPlanWithAnalyticModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanWithAnalyticModel {
       /**
@@ -22011,13 +21983,13 @@ declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
        * @param {module:model/TestPlanWithAnalyticModel} obj Optional instance to populate.
        * @return {module:model/TestPlanWithAnalyticModel} The populated <code>TestPlanWithAnalyticModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanWithAnalyticModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanWithAnalyticModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanWithAnalyticModel</code>.
        * @alias module:model/TestPlanWithAnalyticModel
@@ -22066,7 +22038,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
   /**
    * The TestPlanWithTestSuiteTreeModel model module.
    * @module model/TestPlanWithTestSuiteTreeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPlanWithTestSuiteTreeModel {
       /**
@@ -22082,13 +22054,13 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
        * @param {module:model/TestPlanWithTestSuiteTreeModel} obj Optional instance to populate.
        * @return {module:model/TestPlanWithTestSuiteTreeModel} The populated <code>TestPlanWithTestSuiteTreeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPlanWithTestSuiteTreeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPlanWithTestSuiteTreeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPlanWithTestSuiteTreeModel</code>.
        * @alias module:model/TestPlanWithTestSuiteTreeModel
@@ -22102,7 +22074,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
        * @param projectId {String}
        * @param attributes {Object.<String, Object>}
        */
-      constructor(testSuites: Array<module>, status: any, createdById: string, globalId: number, isDeleted: boolean, id: string, name: string, projectId: string, attributes: any);
+      constructor(testSuites: Array<any>, status: any, createdById: string, globalId: number, isDeleted: boolean, id: string, name: string, projectId: string, attributes: any);
       testSuites: any;
       status: any;
       startedOn: any;
@@ -22137,7 +22109,7 @@ declare module 'testit-api-client/model/TestPoint' {
   /**
    * The TestPoint model module.
    * @module model/TestPoint
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPoint {
       /**
@@ -22153,13 +22125,13 @@ declare module 'testit-api-client/model/TestPoint' {
        * @param {module:model/TestPoint} obj Optional instance to populate.
        * @return {module:model/TestPoint} The populated <code>TestPoint</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPoint</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPoint</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPoint</code>.
        * @alias module:model/TestPoint
@@ -22190,7 +22162,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
   /**
    * The TestPointAnalyticResult model module.
    * @module model/TestPointAnalyticResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointAnalyticResult {
       /**
@@ -22206,13 +22178,13 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
        * @param {module:model/TestPointAnalyticResult} obj Optional instance to populate.
        * @return {module:model/TestPointAnalyticResult} The populated <code>TestPointAnalyticResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointAnalyticResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointAnalyticResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointAnalyticResult</code>.
        * @alias module:model/TestPointAnalyticResult
@@ -22224,7 +22196,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
        * @param countGroupByTesterAndStatusCode {Array.<module:model/TestPlanGroupByTesterAndStatusCode>}
        * @param countGroupByStatusType {Array.<module:model/TestPlanGroupByStatusType>}
        */
-      constructor(countGroupByStatus: Array<module>, sumGroupByTester: Array<module>, countGroupByTester: Array<module>, countGroupByTesterAndStatus: Array<module>, countGroupByStatusCode: Array<module>, countGroupByTesterAndStatusCode: Array<module>, countGroupByStatusType: Array<module>);
+      constructor(countGroupByStatus: Array<any>, sumGroupByTester: Array<any>, countGroupByTester: Array<any>, countGroupByTesterAndStatus: Array<any>, countGroupByStatusCode: Array<any>, countGroupByTesterAndStatusCode: Array<any>, countGroupByStatusType: Array<any>);
       countGroupByStatus: any;
       sumGroupByTester: any;
       countGroupByTester: any;
@@ -22243,7 +22215,7 @@ declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
   /**
    * The TestPointByTestSuiteModel model module.
    * @module model/TestPointByTestSuiteModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointByTestSuiteModel {
       /**
@@ -22259,13 +22231,13 @@ declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
        * @param {module:model/TestPointByTestSuiteModel} obj Optional instance to populate.
        * @return {module:model/TestPointByTestSuiteModel} The populated <code>TestPointByTestSuiteModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointByTestSuiteModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointByTestSuiteModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointByTestSuiteModel</code>.
        * @alias module:model/TestPointByTestSuiteModel
@@ -22292,7 +22264,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModel' {
   /**
    * The TestPointChangeViewModel model module.
    * @module model/TestPointChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointChangeViewModel {
       /**
@@ -22308,13 +22280,13 @@ declare module 'testit-api-client/model/TestPointChangeViewModel' {
        * @param {module:model/TestPointChangeViewModel} obj Optional instance to populate.
        * @return {module:model/TestPointChangeViewModel} The populated <code>TestPointChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointChangeViewModel</code>.
        * @alias module:model/TestPointChangeViewModel
@@ -22336,7 +22308,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldView
   /**
    * The TestPointChangeViewModelChangedFieldViewModel model module.
    * @module model/TestPointChangeViewModelChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointChangeViewModelChangedFieldViewModel {
       /**
@@ -22352,13 +22324,13 @@ declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldView
        * @param {module:model/TestPointChangeViewModelChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/TestPointChangeViewModelChangedFieldViewModel} The populated <code>TestPointChangeViewModelChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointChangeViewModelChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointChangeViewModelChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -22369,7 +22341,7 @@ declare module 'testit-api-client/model/TestPointFilterModel' {
   /**
    * The TestPointFilterModel model module.
    * @module model/TestPointFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointFilterModel {
       /**
@@ -22385,13 +22357,13 @@ declare module 'testit-api-client/model/TestPointFilterModel' {
        * @param {module:model/TestPointFilterModel} obj Optional instance to populate.
        * @return {module:model/TestPointFilterModel} The populated <code>TestPointFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       testPlanIds: any;
       testSuiteIds: any;
       workItemGlobalIds: any;
@@ -22425,7 +22397,7 @@ declare module 'testit-api-client/model/TestPointFilterRequestModel' {
   /**
    * The TestPointFilterRequestModel model module.
    * @module model/TestPointFilterRequestModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointFilterRequestModel {
       /**
@@ -22441,13 +22413,13 @@ declare module 'testit-api-client/model/TestPointFilterRequestModel' {
        * @param {module:model/TestPointFilterRequestModel} obj Optional instance to populate.
        * @return {module:model/TestPointFilterRequestModel} The populated <code>TestPointFilterRequestModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointFilterRequestModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointFilterRequestModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       testPlanIds: any;
       testSuiteIds: any;
       workItemGlobalIds: any;
@@ -22481,7 +22453,7 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
   /**
    * The TestPointResultApiResult model module.
    * @module model/TestPointResultApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointResultApiResult {
       /**
@@ -22497,19 +22469,19 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
        * @param {module:model/TestPointResultApiResult} obj Optional instance to populate.
        * @return {module:model/TestPointResultApiResult} The populated <code>TestPointResultApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointResultApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointResultApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointResultApiResult</code>.
        * @alias module:model/TestPointResultApiResult
        * @param testResults {Array.<module:model/TestResultShortApiResult>}
        */
-      constructor(testResults: Array<module>);
+      constructor(testResults: Array<any>);
       testPointId: any;
       aggregatedOutcome: any;
       aggregatedStatus: any;
@@ -22528,7 +22500,7 @@ declare module 'testit-api-client/model/TestPointSelectModel' {
   /**
    * The TestPointSelectModel model module.
    * @module model/TestPointSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointSelectModel {
       /**
@@ -22544,13 +22516,13 @@ declare module 'testit-api-client/model/TestPointSelectModel' {
        * @param {module:model/TestPointSelectModel} obj Optional instance to populate.
        * @return {module:model/TestPointSelectModel} The populated <code>TestPointSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -22561,7 +22533,7 @@ declare module 'testit-api-client/model/TestPointSelector' {
   /**
    * The TestPointSelector model module.
    * @module model/TestPointSelector
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointSelector {
       /**
@@ -22577,13 +22549,13 @@ declare module 'testit-api-client/model/TestPointSelector' {
        * @param {module:model/TestPointSelector} obj Optional instance to populate.
        * @return {module:model/TestPointSelector} The populated <code>TestPointSelector</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointSelector</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointSelector</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointSelector</code>.
        * @alias module:model/TestPointSelector
@@ -22604,7 +22576,7 @@ declare module 'testit-api-client/model/TestPointsExtractionModel' {
   /**
    * The TestPointsExtractionModel model module.
    * @module model/TestPointsExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointsExtractionModel {
       /**
@@ -22620,13 +22592,13 @@ declare module 'testit-api-client/model/TestPointsExtractionModel' {
        * @param {module:model/TestPointsExtractionModel} obj Optional instance to populate.
        * @return {module:model/TestPointsExtractionModel} The populated <code>TestPointsExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointsExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointsExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -22636,7 +22608,7 @@ declare module 'testit-api-client/model/TestPointShortApiResult' {
   /**
    * The TestPointShortApiResult model module.
    * @module model/TestPointShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointShortApiResult {
       /**
@@ -22652,13 +22624,13 @@ declare module 'testit-api-client/model/TestPointShortApiResult' {
        * @param {module:model/TestPointShortApiResult} obj Optional instance to populate.
        * @return {module:model/TestPointShortApiResult} The populated <code>TestPointShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointShortApiResult</code>.
        * @alias module:model/TestPointShortApiResult
@@ -22691,7 +22663,7 @@ declare module 'testit-api-client/model/TestPointShortModel' {
   /**
    * The TestPointShortModel model module.
    * @module model/TestPointShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointShortModel {
       /**
@@ -22707,13 +22679,13 @@ declare module 'testit-api-client/model/TestPointShortModel' {
        * @param {module:model/TestPointShortModel} obj Optional instance to populate.
        * @return {module:model/TestPointShortModel} The populated <code>TestPointShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointShortModel</code>.
        * @alias module:model/TestPointShortModel
@@ -22742,7 +22714,7 @@ declare module 'testit-api-client/model/TestPointShortResponseModel' {
   /**
    * The TestPointShortResponseModel model module.
    * @module model/TestPointShortResponseModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointShortResponseModel {
       /**
@@ -22758,13 +22730,13 @@ declare module 'testit-api-client/model/TestPointShortResponseModel' {
        * @param {module:model/TestPointShortResponseModel} obj Optional instance to populate.
        * @return {module:model/TestPointShortResponseModel} The populated <code>TestPointShortResponseModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointShortResponseModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointShortResponseModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointShortResponseModel</code>.
        * @alias module:model/TestPointShortResponseModel
@@ -22884,7 +22856,6 @@ declare module 'testit-api-client/model/TestPointStatus' {
   /**
    * *
    */
-  export type TestPointStatus = any;
 
 }
 declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
@@ -22892,7 +22863,7 @@ declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
   /**
    * The TestPointWithLastResultResponseModel model module.
    * @module model/TestPointWithLastResultResponseModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestPointWithLastResultResponseModel {
       /**
@@ -22908,13 +22879,13 @@ declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
        * @param {module:model/TestPointWithLastResultResponseModel} obj Optional instance to populate.
        * @return {module:model/TestPointWithLastResultResponseModel} The populated <code>TestPointWithLastResultResponseModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestPointWithLastResultResponseModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestPointWithLastResultResponseModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestPointWithLastResultResponseModel</code>.
        * @alias module:model/TestPointWithLastResultResponseModel
@@ -22966,7 +22937,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
   /**
    * The TestResultApiResult model module.
    * @module model/TestResultApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultApiResult {
       /**
@@ -22982,13 +22953,13 @@ declare module 'testit-api-client/model/TestResultApiResult' {
        * @param {module:model/TestResultApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultApiResult} The populated <code>TestResultApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultApiResult</code>.
        * @alias module:model/TestResultApiResult
@@ -23004,7 +22975,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
        * @param createdById {String}
        * @param isDeleted {Boolean}
        */
-      constructor(id: string, outcome: string, testRunId: string, configurationId: string, status: any, attachments: Array<module>, links: Array<module>, failureClasses: Array<module>, createdDate: Date, createdById: string, isDeleted: boolean);
+      constructor(id: string, outcome: string, testRunId: string, configurationId: string, status: any, attachments: Array<any>, links: Array<any>, failureClasses: Array<any>, createdDate: Date, createdById: string, isDeleted: boolean);
       id: any;
       startedOn: any;
       completedOn: any;
@@ -23049,7 +23020,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModel' {
   /**
    * The TestResultChangeViewModel model module.
    * @module model/TestResultChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultChangeViewModel {
       /**
@@ -23065,13 +23036,13 @@ declare module 'testit-api-client/model/TestResultChangeViewModel' {
        * @param {module:model/TestResultChangeViewModel} obj Optional instance to populate.
        * @return {module:model/TestResultChangeViewModel} The populated <code>TestResultChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultChangeViewModel</code>.
        * @alias module:model/TestResultChangeViewModel
@@ -23090,7 +23061,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldVie
   /**
    * The TestResultChangeViewModelChangedFieldViewModel model module.
    * @module model/TestResultChangeViewModelChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultChangeViewModelChangedFieldViewModel {
       /**
@@ -23106,13 +23077,13 @@ declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldVie
        * @param {module:model/TestResultChangeViewModelChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/TestResultChangeViewModelChangedFieldViewModel} The populated <code>TestResultChangeViewModelChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultChangeViewModelChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultChangeViewModelChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -23123,7 +23094,7 @@ declare module 'testit-api-client/model/TestResultChronologyModel' {
   /**
    * The TestResultChronologyModel model module.
    * @module model/TestResultChronologyModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultChronologyModel {
       /**
@@ -23139,13 +23110,13 @@ declare module 'testit-api-client/model/TestResultChronologyModel' {
        * @param {module:model/TestResultChronologyModel} obj Optional instance to populate.
        * @return {module:model/TestResultChronologyModel} The populated <code>TestResultChronologyModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultChronologyModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultChronologyModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultChronologyModel</code>.
        * @alias module:model/TestResultChronologyModel
@@ -23165,7 +23136,7 @@ declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
   /**
    * The TestResultFailureClassApiResult model module.
    * @module model/TestResultFailureClassApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultFailureClassApiResult {
       /**
@@ -23181,13 +23152,13 @@ declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
        * @param {module:model/TestResultFailureClassApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultFailureClassApiResult} The populated <code>TestResultFailureClassApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultFailureClassApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultFailureClassApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultFailureClassApiResult</code>.
        * @alias module:model/TestResultFailureClassApiResult
@@ -23206,7 +23177,7 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
   /**
    * The TestResultHistoryReportApiResult model module.
    * @module model/TestResultHistoryReportApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultHistoryReportApiResult {
       /**
@@ -23222,13 +23193,13 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
        * @param {module:model/TestResultHistoryReportApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultHistoryReportApiResult} The populated <code>TestResultHistoryReportApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultHistoryReportApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultHistoryReportApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultHistoryReportApiResult</code>.
        * @alias module:model/TestResultHistoryReportApiResult
@@ -23279,7 +23250,7 @@ declare module 'testit-api-client/model/TestResultLinkApiResult' {
   /**
    * The TestResultLinkApiResult model module.
    * @module model/TestResultLinkApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultLinkApiResult {
       /**
@@ -23295,13 +23266,13 @@ declare module 'testit-api-client/model/TestResultLinkApiResult' {
        * @param {module:model/TestResultLinkApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultLinkApiResult} The populated <code>TestResultLinkApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultLinkApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultLinkApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultLinkApiResult</code>.
        * @alias module:model/TestResultLinkApiResult
@@ -23364,7 +23335,6 @@ declare module 'testit-api-client/model/TestResultOutcome' {
   /**
    * *
    */
-  export type TestResultOutcome = any;
 
 }
 declare module 'testit-api-client/model/TestResultResponse' {
@@ -23372,7 +23342,7 @@ declare module 'testit-api-client/model/TestResultResponse' {
   /**
    * The TestResultResponse model module.
    * @module model/TestResultResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultResponse {
       /**
@@ -23388,13 +23358,13 @@ declare module 'testit-api-client/model/TestResultResponse' {
        * @param {module:model/TestResultResponse} obj Optional instance to populate.
        * @return {module:model/TestResultResponse} The populated <code>TestResultResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultResponse</code>.
        * @alias module:model/TestResultResponse
@@ -23453,7 +23423,7 @@ declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
   /**
    * The TestResultsExtractionApiModel model module.
    * @module model/TestResultsExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsExtractionApiModel {
       /**
@@ -23469,13 +23439,13 @@ declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
        * @param {module:model/TestResultsExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/TestResultsExtractionApiModel} The populated <code>TestResultsExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -23485,7 +23455,7 @@ declare module 'testit-api-client/model/TestResultsFilterApiModel' {
   /**
    * The TestResultsFilterApiModel model module.
    * @module model/TestResultsFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsFilterApiModel {
       /**
@@ -23501,13 +23471,13 @@ declare module 'testit-api-client/model/TestResultsFilterApiModel' {
        * @param {module:model/TestResultsFilterApiModel} obj Optional instance to populate.
        * @return {module:model/TestResultsFilterApiModel} The populated <code>TestResultsFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       configurationIds: any;
       outcomes: any;
       statusCodes: any;
@@ -23534,7 +23504,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
   /**
    * The TestResultShortApiResult model module.
    * @module model/TestResultShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultShortApiResult {
       /**
@@ -23550,13 +23520,13 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
        * @param {module:model/TestResultShortApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultShortApiResult} The populated <code>TestResultShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultShortApiResult</code>.
        * @alias module:model/TestResultShortApiResult
@@ -23566,7 +23536,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
        * @param createdDate {Date}
        * @param attachments {Array.<module:model/AttachmentApiResult>}
        */
-      constructor(id: string, outcome: string, status: any, createdDate: Date, attachments: Array<module>);
+      constructor(id: string, outcome: string, status: any, createdDate: Date, attachments: Array<any>);
       id: any;
       outcome: any;
       status: any;
@@ -23588,7 +23558,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
   /**
    * The TestResultShortResponse model module.
    * @module model/TestResultShortResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultShortResponse {
       /**
@@ -23604,13 +23574,13 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
        * @param {module:model/TestResultShortResponse} obj Optional instance to populate.
        * @return {module:model/TestResultShortResponse} The populated <code>TestResultShortResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultShortResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultShortResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultShortResponse</code>.
        * @alias module:model/TestResultShortResponse
@@ -23629,7 +23599,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
        * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of files attached to the test result
        * @param rerunCompletedCount {Number} Run count
        */
-      constructor(id: string, name: string, autotestGlobalId: number, autoTestTags: Array<string>, testRunId: string, configurationId: string, configurationName: string, status: any, resultReasons: Array<module>, date: Date, createdDate: Date, links: Array<module>, attachments: Array<module>, rerunCompletedCount: number);
+      constructor(id: string, name: string, autotestGlobalId: number, autoTestTags: Array<string>, testRunId: string, configurationId: string, configurationName: string, status: any, resultReasons: Array<any>, date: Date, createdDate: Date, links: Array<any>, attachments: Array<any>, rerunCompletedCount: number);
       id: any;
       name: any;
       autotestGlobalId: any;
@@ -23662,7 +23632,7 @@ declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
   /**
    * The TestResultsLocalFilterModel model module.
    * @module model/TestResultsLocalFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsLocalFilterModel {
       /**
@@ -23678,13 +23648,13 @@ declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
        * @param {module:model/TestResultsLocalFilterModel} obj Optional instance to populate.
        * @return {module:model/TestResultsLocalFilterModel} The populated <code>TestResultsLocalFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsLocalFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsLocalFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       configurationIds: any;
       outcomes: any;
       statusCodes: any;
@@ -23699,7 +23669,7 @@ declare module 'testit-api-client/model/TestResultsSelectApiModel' {
   /**
    * The TestResultsSelectApiModel model module.
    * @module model/TestResultsSelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsSelectApiModel {
       /**
@@ -23715,13 +23685,13 @@ declare module 'testit-api-client/model/TestResultsSelectApiModel' {
        * @param {module:model/TestResultsSelectApiModel} obj Optional instance to populate.
        * @return {module:model/TestResultsSelectApiModel} The populated <code>TestResultsSelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsSelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsSelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultsSelectApiModel</code>.
        * @alias module:model/TestResultsSelectApiModel
@@ -23742,7 +23712,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
   /**
    * The TestResultsStatisticsApiResult model module.
    * @module model/TestResultsStatisticsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsStatisticsApiResult {
       /**
@@ -23758,13 +23728,13 @@ declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
        * @param {module:model/TestResultsStatisticsApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultsStatisticsApiResult} The populated <code>TestResultsStatisticsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsStatisticsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsStatisticsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultsStatisticsApiResult</code>.
        * @alias module:model/TestResultsStatisticsApiResult
@@ -23785,7 +23755,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesAp
   /**
    * The TestResultsStatisticsFailureCategoriesApiResult model module.
    * @module model/TestResultsStatisticsFailureCategoriesApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsStatisticsFailureCategoriesApiResult {
       /**
@@ -23801,13 +23771,13 @@ declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesAp
        * @param {module:model/TestResultsStatisticsFailureCategoriesApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultsStatisticsFailureCategoriesApiResult} The populated <code>TestResultsStatisticsFailureCategoriesApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsStatisticsFailureCategoriesApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsStatisticsFailureCategoriesApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultsStatisticsFailureCategoriesApiResult</code>.
        * @alias module:model/TestResultsStatisticsFailureCategoriesApiResult
@@ -23830,7 +23800,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' 
   /**
    * The TestResultsStatisticsStatusesApiResult model module.
    * @module model/TestResultsStatisticsStatusesApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultsStatisticsStatusesApiResult {
       /**
@@ -23846,13 +23816,13 @@ declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' 
        * @param {module:model/TestResultsStatisticsStatusesApiResult} obj Optional instance to populate.
        * @return {module:model/TestResultsStatisticsStatusesApiResult} The populated <code>TestResultsStatisticsStatusesApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultsStatisticsStatusesApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultsStatisticsStatusesApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultsStatisticsStatusesApiResult</code>.
        * @alias module:model/TestResultsStatisticsStatusesApiResult
@@ -23883,7 +23853,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
   /**
    * The TestResultStepCommentUpdateRequest model module.
    * @module model/TestResultStepCommentUpdateRequest
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultStepCommentUpdateRequest {
       /**
@@ -23899,13 +23869,13 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
        * @param {module:model/TestResultStepCommentUpdateRequest} obj Optional instance to populate.
        * @return {module:model/TestResultStepCommentUpdateRequest} The populated <code>TestResultStepCommentUpdateRequest</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultStepCommentUpdateRequest</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultStepCommentUpdateRequest</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultStepCommentUpdateRequest</code>.
        * @alias module:model/TestResultStepCommentUpdateRequest
@@ -23914,7 +23884,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
        * @param stepId {String}
        * @param attachments {Array.<module:model/AttachmentUpdateRequest>}
        */
-      constructor(id: string, text: string, stepId: string, attachments: Array<module>);
+      constructor(id: string, text: string, stepId: string, attachments: Array<any>);
       id: any;
       text: any;
       stepId: any;
@@ -23931,7 +23901,7 @@ declare module 'testit-api-client/model/TestResultUpdateV2Request' {
   /**
    * The TestResultUpdateV2Request model module.
    * @module model/TestResultUpdateV2Request
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultUpdateV2Request {
       /**
@@ -23947,13 +23917,13 @@ declare module 'testit-api-client/model/TestResultUpdateV2Request' {
        * @param {module:model/TestResultUpdateV2Request} obj Optional instance to populate.
        * @return {module:model/TestResultUpdateV2Request} The populated <code>TestResultUpdateV2Request</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultUpdateV2Request</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultUpdateV2Request</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       failureClassIds: any;
       outcome: any;
       statusCode: any;
@@ -23977,7 +23947,7 @@ declare module 'testit-api-client/model/TestResultV2GetModel' {
   /**
    * The TestResultV2GetModel model module.
    * @module model/TestResultV2GetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultV2GetModel {
       /**
@@ -23993,13 +23963,13 @@ declare module 'testit-api-client/model/TestResultV2GetModel' {
        * @param {module:model/TestResultV2GetModel} obj Optional instance to populate.
        * @return {module:model/TestResultV2GetModel} The populated <code>TestResultV2GetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultV2GetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultV2GetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultV2GetModel</code>.
        * @alias module:model/TestResultV2GetModel
@@ -24042,7 +24012,7 @@ declare module 'testit-api-client/model/TestResultV2ShortModel' {
   /**
    * The TestResultV2ShortModel model module.
    * @module model/TestResultV2ShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestResultV2ShortModel {
       /**
@@ -24058,13 +24028,13 @@ declare module 'testit-api-client/model/TestResultV2ShortModel' {
        * @param {module:model/TestResultV2ShortModel} obj Optional instance to populate.
        * @return {module:model/TestResultV2ShortModel} The populated <code>TestResultV2ShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestResultV2ShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestResultV2ShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestResultV2ShortModel</code>.
        * @alias module:model/TestResultV2ShortModel
@@ -24105,7 +24075,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
   /**
    * The TestRunAnalyticApiResult model module.
    * @module model/TestRunAnalyticApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunAnalyticApiResult {
       /**
@@ -24121,13 +24091,13 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
        * @param {module:model/TestRunAnalyticApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunAnalyticApiResult} The populated <code>TestRunAnalyticApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunAnalyticApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunAnalyticApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunAnalyticApiResult</code>.
        * @alias module:model/TestRunAnalyticApiResult
@@ -24135,7 +24105,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
        * @param countGroupByStatusType {Array.<module:model/TestRunGroupByStatusTypeApiResult>}
        * @param countGroupByFailureClass {Array.<module:model/TestRunGroupByFailureClassApiResult>}
        */
-      constructor(countGroupByStatus: Array<module>, countGroupByStatusType: Array<module>, countGroupByFailureClass: Array<module>);
+      constructor(countGroupByStatus: Array<any>, countGroupByStatusType: Array<any>, countGroupByFailureClass: Array<any>);
       countGroupByStatus: any;
       countGroupByStatusType: any;
       countGroupByFailureClass: any;
@@ -24150,7 +24120,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
   /**
    * The TestRunApiResult model module.
    * @module model/TestRunApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunApiResult {
       /**
@@ -24166,13 +24136,13 @@ declare module 'testit-api-client/model/TestRunApiResult' {
        * @param {module:model/TestRunApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunApiResult} The populated <code>TestRunApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunApiResult</code>.
        * @alias module:model/TestRunApiResult
@@ -24192,7 +24162,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
        * @param createdById {String}
        * @param tags {Array.<String>}
        */
-      constructor(id: string, isDeleted: boolean, build: string, stateName: any, status: any, projectId: string, autoTests: Array<module>, autoTestsCount: number, testSuiteIds: Array<string>, isAutomated: boolean, analytic: any, testResults: Array<module>, createdDate: Date, createdById: string, tags: Array<string>);
+      constructor(id: string, isDeleted: boolean, build: string, stateName: any, status: any, projectId: string, autoTests: Array<any>, autoTestsCount: number, testSuiteIds: Array<string>, isAutomated: boolean, analytic: any, testResults: Array<any>, createdDate: Date, createdById: string, tags: Array<string>);
       id: any;
       isDeleted: any;
       startedDate: any;
@@ -24231,7 +24201,7 @@ declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
   /**
    * The TestRunByAutoTestApiResult model module.
    * @module model/TestRunByAutoTestApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunByAutoTestApiResult {
       /**
@@ -24247,13 +24217,13 @@ declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
        * @param {module:model/TestRunByAutoTestApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunByAutoTestApiResult} The populated <code>TestRunByAutoTestApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunByAutoTestApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunByAutoTestApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunByAutoTestApiResult</code>.
        * @alias module:model/TestRunByAutoTestApiResult
@@ -24283,7 +24253,7 @@ declare module 'testit-api-client/model/TestRunExtractionApiModel' {
   /**
    * The TestRunExtractionApiModel model module.
    * @module model/TestRunExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunExtractionApiModel {
       /**
@@ -24299,13 +24269,13 @@ declare module 'testit-api-client/model/TestRunExtractionApiModel' {
        * @param {module:model/TestRunExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/TestRunExtractionApiModel} The populated <code>TestRunExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -24315,7 +24285,7 @@ declare module 'testit-api-client/model/TestRunFilterApiModel' {
   /**
    * The TestRunFilterApiModel model module.
    * @module model/TestRunFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunFilterApiModel {
       /**
@@ -24331,13 +24301,13 @@ declare module 'testit-api-client/model/TestRunFilterApiModel' {
        * @param {module:model/TestRunFilterApiModel} obj Optional instance to populate.
        * @return {module:model/TestRunFilterApiModel} The populated <code>TestRunFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       name: any;
       states: any;
@@ -24363,7 +24333,7 @@ declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
   /**
    * The TestRunGroupByFailureClassApiResult model module.
    * @module model/TestRunGroupByFailureClassApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunGroupByFailureClassApiResult {
       /**
@@ -24379,13 +24349,13 @@ declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
        * @param {module:model/TestRunGroupByFailureClassApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunGroupByFailureClassApiResult} The populated <code>TestRunGroupByFailureClassApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunGroupByFailureClassApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunGroupByFailureClassApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunGroupByFailureClassApiResult</code>.
        * @alias module:model/TestRunGroupByFailureClassApiResult
@@ -24406,7 +24376,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
   /**
    * The TestRunGroupByStatusApiResult model module.
    * @module model/TestRunGroupByStatusApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunGroupByStatusApiResult {
       /**
@@ -24422,13 +24392,13 @@ declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
        * @param {module:model/TestRunGroupByStatusApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunGroupByStatusApiResult} The populated <code>TestRunGroupByStatusApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunGroupByStatusApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunGroupByStatusApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunGroupByStatusApiResult</code>.
        * @alias module:model/TestRunGroupByStatusApiResult
@@ -24449,7 +24419,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
   /**
    * The TestRunGroupByStatusTypeApiResult model module.
    * @module model/TestRunGroupByStatusTypeApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunGroupByStatusTypeApiResult {
       /**
@@ -24465,13 +24435,13 @@ declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
        * @param {module:model/TestRunGroupByStatusTypeApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunGroupByStatusTypeApiResult} The populated <code>TestRunGroupByStatusTypeApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunGroupByStatusTypeApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunGroupByStatusTypeApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunGroupByStatusTypeApiResult</code>.
        * @alias module:model/TestRunGroupByStatusTypeApiResult
@@ -24492,7 +24462,7 @@ declare module 'testit-api-client/model/TestRunNameApiResult' {
   /**
    * The TestRunNameApiResult model module.
    * @module model/TestRunNameApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunNameApiResult {
       /**
@@ -24508,13 +24478,13 @@ declare module 'testit-api-client/model/TestRunNameApiResult' {
        * @param {module:model/TestRunNameApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunNameApiResult} The populated <code>TestRunNameApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunNameApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunNameApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunNameApiResult</code>.
        * @alias module:model/TestRunNameApiResult
@@ -24535,7 +24505,7 @@ declare module 'testit-api-client/model/TestRunSelectApiModel' {
   /**
    * The TestRunSelectApiModel model module.
    * @module model/TestRunSelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunSelectApiModel {
       /**
@@ -24551,13 +24521,13 @@ declare module 'testit-api-client/model/TestRunSelectApiModel' {
        * @param {module:model/TestRunSelectApiModel} obj Optional instance to populate.
        * @return {module:model/TestRunSelectApiModel} The populated <code>TestRunSelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunSelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunSelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunSelectApiModel</code>.
        * Model containing options to filter test runs
@@ -24579,7 +24549,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
   /**
    * The TestRunShortApiResult model module.
    * @module model/TestRunShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunShortApiResult {
       /**
@@ -24595,13 +24565,13 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
        * @param {module:model/TestRunShortApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunShortApiResult} The populated <code>TestRunShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunShortApiResult</code>.
        * @alias module:model/TestRunShortApiResult
@@ -24617,7 +24587,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
        * @param testResultsConfigurations {Array.<module:model/ConfigurationShortApiResult>} Test results configurations
        * @param tags {Array.<String>} Collection of tags associated with the test run
        */
-      constructor(id: string, name: string, state: any, status: any, createdDate: Date, createdById: string, isDeleted: boolean, autoTestsCount: number, statistics: any, testResultsConfigurations: Array<module>, tags: Array<string>);
+      constructor(id: string, name: string, state: any, status: any, createdDate: Date, createdById: string, isDeleted: boolean, autoTestsCount: number, statistics: any, testResultsConfigurations: Array<any>, tags: Array<string>);
       id: any;
       name: any;
       state: any;
@@ -24675,7 +24645,6 @@ declare module 'testit-api-client/model/TestRunState' {
   /**
    * *
    */
-  export type TestRunState = any;
 
 }
 declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
@@ -24683,7 +24652,7 @@ declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
   /**
    * The TestRunStatisticsFilterApiModel model module.
    * @module model/TestRunStatisticsFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunStatisticsFilterApiModel {
       /**
@@ -24699,13 +24668,13 @@ declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
        * @param {module:model/TestRunStatisticsFilterApiModel} obj Optional instance to populate.
        * @return {module:model/TestRunStatisticsFilterApiModel} The populated <code>TestRunStatisticsFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunStatisticsFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunStatisticsFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       configurationIds: any;
       outcomes: any;
       statusCodes: any;
@@ -24720,7 +24689,7 @@ declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
   /**
    * The TestRunTestResultsPartialBulkSetModel model module.
    * @module model/TestRunTestResultsPartialBulkSetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunTestResultsPartialBulkSetModel {
       /**
@@ -24736,13 +24705,13 @@ declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
        * @param {module:model/TestRunTestResultsPartialBulkSetModel} obj Optional instance to populate.
        * @return {module:model/TestRunTestResultsPartialBulkSetModel} The populated <code>TestRunTestResultsPartialBulkSetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunTestResultsPartialBulkSetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunTestResultsPartialBulkSetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       selector: any;
       resultReasonIds: any;
       links: any;
@@ -24756,7 +24725,7 @@ declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
   /**
    * The TestRunTestResultsSelectModel model module.
    * @module model/TestRunTestResultsSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunTestResultsSelectModel {
       /**
@@ -24772,13 +24741,13 @@ declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
        * @param {module:model/TestRunTestResultsSelectModel} obj Optional instance to populate.
        * @return {module:model/TestRunTestResultsSelectModel} The populated <code>TestRunTestResultsSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunTestResultsSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunTestResultsSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       testResultIdsExtractionModel: any;
   }
@@ -24789,7 +24758,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
   /**
    * The TestRunV2ApiResult model module.
    * @module model/TestRunV2ApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestRunV2ApiResult {
       /**
@@ -24805,13 +24774,13 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
        * @param {module:model/TestRunV2ApiResult} obj Optional instance to populate.
        * @return {module:model/TestRunV2ApiResult} The populated <code>TestRunV2ApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestRunV2ApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestRunV2ApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestRunV2ApiResult</code>.
        * @alias module:model/TestRunV2ApiResult
@@ -24828,7 +24797,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
        * @param runCount {Number} Run count
        * @param tags {Array.<String>} Collection of tags associated with the test run
        */
-      constructor(id: string, name: string, stateName: any, status: any, projectId: string, createdDate: Date, createdById: string, attachments: Array<module>, links: Array<module>, webhooks: Array<module>, runCount: number, tags: Array<string>);
+      constructor(id: string, name: string, stateName: any, status: any, projectId: string, createdDate: Date, createdById: string, attachments: Array<any>, links: Array<any>, webhooks: Array<any>, runCount: number, tags: Array<string>);
       id: any;
       name: any;
       description: any;
@@ -24862,7 +24831,7 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
   /**
    * The TestStatusApiResult model module.
    * @module model/TestStatusApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestStatusApiResult {
       /**
@@ -24878,13 +24847,13 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
        * @param {module:model/TestStatusApiResult} obj Optional instance to populate.
        * @return {module:model/TestStatusApiResult} The populated <code>TestStatusApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestStatusApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestStatusApiResult</code>.
        * @alias module:model/TestStatusApiResult
@@ -24912,7 +24881,7 @@ declare module 'testit-api-client/model/TestStatusApiResultReply' {
   /**
    * The TestStatusApiResultReply model module.
    * @module model/TestStatusApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestStatusApiResultReply {
       /**
@@ -24928,20 +24897,20 @@ declare module 'testit-api-client/model/TestStatusApiResultReply' {
        * @param {module:model/TestStatusApiResultReply} obj Optional instance to populate.
        * @return {module:model/TestStatusApiResultReply} The populated <code>TestStatusApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestStatusApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestStatusApiResultReply</code>.
        * @alias module:model/TestStatusApiResultReply
        * @param data {Array.<module:model/TestStatusApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -24992,7 +24961,6 @@ declare module 'testit-api-client/model/TestStatusApiType' {
   /**
    * *
    */
-  export type TestStatusApiType = any;
 
 }
 declare module 'testit-api-client/model/TestStatusModel' {
@@ -25000,7 +24968,7 @@ declare module 'testit-api-client/model/TestStatusModel' {
   /**
    * The TestStatusModel model module.
    * @module model/TestStatusModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestStatusModel {
       /**
@@ -25016,13 +24984,13 @@ declare module 'testit-api-client/model/TestStatusModel' {
        * @param {module:model/TestStatusModel} obj Optional instance to populate.
        * @return {module:model/TestStatusModel} The populated <code>TestStatusModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestStatusModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestStatusModel</code>.
        * @alias module:model/TestStatusModel
@@ -25050,7 +25018,7 @@ declare module 'testit-api-client/model/TestStatusShortApiResult' {
   /**
    * The TestStatusShortApiResult model module.
    * @module model/TestStatusShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestStatusShortApiResult {
       /**
@@ -25066,13 +25034,13 @@ declare module 'testit-api-client/model/TestStatusShortApiResult' {
        * @param {module:model/TestStatusShortApiResult} obj Optional instance to populate.
        * @return {module:model/TestStatusShortApiResult} The populated <code>TestStatusShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestStatusShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestStatusShortApiResult</code>.
        * @alias module:model/TestStatusShortApiResult
@@ -25134,7 +25102,6 @@ declare module 'testit-api-client/model/TestStatusType' {
   /**
    * *
    */
-  export type TestStatusType = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteApiResult' {
@@ -25142,7 +25109,7 @@ declare module 'testit-api-client/model/TestSuiteApiResult' {
   /**
    * The TestSuiteApiResult model module.
    * @module model/TestSuiteApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteApiResult {
       /**
@@ -25158,13 +25125,13 @@ declare module 'testit-api-client/model/TestSuiteApiResult' {
        * @param {module:model/TestSuiteApiResult} obj Optional instance to populate.
        * @return {module:model/TestSuiteApiResult} The populated <code>TestSuiteApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteApiResult</code>.
        * @alias module:model/TestSuiteApiResult
@@ -25197,7 +25164,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
   /**
    * The TestSuiteChangeViewModel model module.
    * @module model/TestSuiteChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteChangeViewModel {
       /**
@@ -25213,13 +25180,13 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
        * @param {module:model/TestSuiteChangeViewModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteChangeViewModel} The populated <code>TestSuiteChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteChangeViewModel</code>.
        * @alias module:model/TestSuiteChangeViewModel
@@ -25243,7 +25210,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldView
   /**
    * The TestSuiteChangeViewModelChangedFieldViewModel model module.
    * @module model/TestSuiteChangeViewModelChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteChangeViewModelChangedFieldViewModel {
       /**
@@ -25259,13 +25226,13 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldView
        * @param {module:model/TestSuiteChangeViewModelChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteChangeViewModelChangedFieldViewModel} The populated <code>TestSuiteChangeViewModelChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteChangeViewModelChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteChangeViewModelChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -25276,7 +25243,7 @@ declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
   /**
    * The TestSuiteHierarchyApiResult model module.
    * @module model/TestSuiteHierarchyApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteHierarchyApiResult {
       /**
@@ -25292,13 +25259,13 @@ declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
        * @param {module:model/TestSuiteHierarchyApiResult} obj Optional instance to populate.
        * @return {module:model/TestSuiteHierarchyApiResult} The populated <code>TestSuiteHierarchyApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteHierarchyApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteHierarchyApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteHierarchyApiResult</code>.
        * @alias module:model/TestSuiteHierarchyApiResult
@@ -25332,7 +25299,7 @@ declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
   /**
    * The TestSuiteTestPlanApiModel model module.
    * @module model/TestSuiteTestPlanApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteTestPlanApiModel {
       /**
@@ -25348,13 +25315,13 @@ declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
        * @param {module:model/TestSuiteTestPlanApiModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteTestPlanApiModel} The populated <code>TestSuiteTestPlanApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteTestPlanApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteTestPlanApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteTestPlanApiModel</code>.
        * @alias module:model/TestSuiteTestPlanApiModel
@@ -25405,7 +25372,6 @@ declare module 'testit-api-client/model/TestSuiteType' {
   /**
    * *
    */
-  export type TestSuiteType = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
@@ -25440,7 +25406,6 @@ declare module 'testit-api-client/model/TestSuiteTypeApiResult' {
   /**
    * *
    */
-  export type TestSuiteTypeApiResult = any;
 
 }
 declare module 'testit-api-client/model/TestSuiteV2GetModel' {
@@ -25448,7 +25413,7 @@ declare module 'testit-api-client/model/TestSuiteV2GetModel' {
   /**
    * The TestSuiteV2GetModel model module.
    * @module model/TestSuiteV2GetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteV2GetModel {
       /**
@@ -25464,13 +25429,13 @@ declare module 'testit-api-client/model/TestSuiteV2GetModel' {
        * @param {module:model/TestSuiteV2GetModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteV2GetModel} The populated <code>TestSuiteV2GetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteV2GetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteV2GetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteV2GetModel</code>.
        * @alias module:model/TestSuiteV2GetModel
@@ -25498,7 +25463,7 @@ declare module 'testit-api-client/model/TestSuiteV2PostModel' {
   /**
    * The TestSuiteV2PostModel model module.
    * @module model/TestSuiteV2PostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteV2PostModel {
       /**
@@ -25514,13 +25479,13 @@ declare module 'testit-api-client/model/TestSuiteV2PostModel' {
        * @param {module:model/TestSuiteV2PostModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteV2PostModel} The populated <code>TestSuiteV2PostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteV2PostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteV2PostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteV2PostModel</code>.
        * @alias module:model/TestSuiteV2PostModel
@@ -25545,7 +25510,7 @@ declare module 'testit-api-client/model/TestSuiteV2PutModel' {
   /**
    * The TestSuiteV2PutModel model module.
    * @module model/TestSuiteV2PutModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteV2PutModel {
       /**
@@ -25561,13 +25526,13 @@ declare module 'testit-api-client/model/TestSuiteV2PutModel' {
        * @param {module:model/TestSuiteV2PutModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteV2PutModel} The populated <code>TestSuiteV2PutModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteV2PutModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteV2PutModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteV2PutModel</code>.
        * @alias module:model/TestSuiteV2PutModel
@@ -25592,7 +25557,7 @@ declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
   /**
    * The TestSuiteWithChildrenModel model module.
    * @module model/TestSuiteWithChildrenModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteWithChildrenModel {
       /**
@@ -25608,13 +25573,13 @@ declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
        * @param {module:model/TestSuiteWithChildrenModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteWithChildrenModel} The populated <code>TestSuiteWithChildrenModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteWithChildrenModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteWithChildrenModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>TestSuiteWithChildrenModel</code>.
        * @alias module:model/TestSuiteWithChildrenModel
@@ -25642,7 +25607,7 @@ declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
   /**
    * The TestSuiteWorkItemsSearchModel model module.
    * @module model/TestSuiteWorkItemsSearchModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class TestSuiteWorkItemsSearchModel {
       /**
@@ -25658,13 +25623,13 @@ declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
        * @param {module:model/TestSuiteWorkItemsSearchModel} obj Optional instance to populate.
        * @return {module:model/TestSuiteWorkItemsSearchModel} The populated <code>TestSuiteWorkItemsSearchModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>TestSuiteWorkItemsSearchModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestSuiteWorkItemsSearchModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       tagNames: any;
       entityTypes: any;
       nameOrId: any;
@@ -25702,7 +25667,7 @@ declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
   /**
    * The UpdateEmptyTestRunApiModel model module.
    * @module model/UpdateEmptyTestRunApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateEmptyTestRunApiModel {
       /**
@@ -25718,13 +25683,13 @@ declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
        * @param {module:model/UpdateEmptyTestRunApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateEmptyTestRunApiModel} The populated <code>UpdateEmptyTestRunApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateEmptyTestRunApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateEmptyTestRunApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateEmptyTestRunApiModel</code>.
        * @alias module:model/UpdateEmptyTestRunApiModel
@@ -25750,7 +25715,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
   /**
    * The UpdateFailureCategoryApiModel model module.
    * @module model/UpdateFailureCategoryApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateFailureCategoryApiModel {
       /**
@@ -25766,13 +25731,13 @@ declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
        * @param {module:model/UpdateFailureCategoryApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateFailureCategoryApiModel} The populated <code>UpdateFailureCategoryApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateFailureCategoryApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateFailureCategoryApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateFailureCategoryApiModel</code>.
        * @alias module:model/UpdateFailureCategoryApiModel
@@ -25797,7 +25762,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
   /**
    * The UpdateFailureCategoryProjectApiModel model module.
    * @module model/UpdateFailureCategoryProjectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateFailureCategoryProjectApiModel {
       /**
@@ -25813,13 +25778,13 @@ declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
        * @param {module:model/UpdateFailureCategoryProjectApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateFailureCategoryProjectApiModel} The populated <code>UpdateFailureCategoryProjectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateFailureCategoryProjectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateFailureCategoryProjectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateFailureCategoryProjectApiModel</code>.
        * @alias module:model/UpdateFailureCategoryProjectApiModel
@@ -25843,7 +25808,7 @@ declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
   /**
    * The UpdateFailureClassRegexApiModel model module.
    * @module model/UpdateFailureClassRegexApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateFailureClassRegexApiModel {
       /**
@@ -25859,13 +25824,13 @@ declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
        * @param {module:model/UpdateFailureClassRegexApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateFailureClassRegexApiModel} The populated <code>UpdateFailureClassRegexApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateFailureClassRegexApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateFailureClassRegexApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateFailureClassRegexApiModel</code>.
        * @alias module:model/UpdateFailureClassRegexApiModel
@@ -25886,7 +25851,7 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
   /**
    * The UpdateLinkApiModel model module.
    * @module model/UpdateLinkApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateLinkApiModel {
       /**
@@ -25902,13 +25867,13 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
        * @param {module:model/UpdateLinkApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateLinkApiModel} The populated <code>UpdateLinkApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateLinkApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateLinkApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateLinkApiModel</code>.
        * @alias module:model/UpdateLinkApiModel
@@ -25933,7 +25898,7 @@ declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
   /**
    * The UpdateMultipleAttachmentsApiModel model module.
    * @module model/UpdateMultipleAttachmentsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateMultipleAttachmentsApiModel {
       /**
@@ -25949,13 +25914,13 @@ declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
        * @param {module:model/UpdateMultipleAttachmentsApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateMultipleAttachmentsApiModel} The populated <code>UpdateMultipleAttachmentsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateMultipleAttachmentsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateMultipleAttachmentsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateMultipleAttachmentsApiModel</code>.
        * @alias module:model/UpdateMultipleAttachmentsApiModel
@@ -25975,7 +25940,7 @@ declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
   /**
    * The UpdateMultipleLinksApiModel model module.
    * @module model/UpdateMultipleLinksApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateMultipleLinksApiModel {
       /**
@@ -25991,13 +25956,13 @@ declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
        * @param {module:model/UpdateMultipleLinksApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateMultipleLinksApiModel} The populated <code>UpdateMultipleLinksApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateMultipleLinksApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateMultipleLinksApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateMultipleLinksApiModel</code>.
        * @alias module:model/UpdateMultipleLinksApiModel
@@ -26017,7 +25982,7 @@ declare module 'testit-api-client/model/UpdateMultipleTagsApiModel' {
   /**
    * The UpdateMultipleTagsApiModel model module.
    * @module model/UpdateMultipleTagsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateMultipleTagsApiModel {
       /**
@@ -26033,13 +25998,13 @@ declare module 'testit-api-client/model/UpdateMultipleTagsApiModel' {
        * @param {module:model/UpdateMultipleTagsApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateMultipleTagsApiModel} The populated <code>UpdateMultipleTagsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateMultipleTagsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateMultipleTagsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateMultipleTagsApiModel</code>.
        * @alias module:model/UpdateMultipleTagsApiModel
@@ -26059,7 +26024,7 @@ declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
   /**
    * The UpdateMultipleTestRunsApiModel model module.
    * @module model/UpdateMultipleTestRunsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateMultipleTestRunsApiModel {
       /**
@@ -26075,13 +26040,13 @@ declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
        * @param {module:model/UpdateMultipleTestRunsApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateMultipleTestRunsApiModel} The populated <code>UpdateMultipleTestRunsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateMultipleTestRunsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateMultipleTestRunsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateMultipleTestRunsApiModel</code>.
        * @alias module:model/UpdateMultipleTestRunsApiModel
@@ -26104,7 +26069,7 @@ declare module 'testit-api-client/model/UpdateParameterApiModel' {
   /**
    * The UpdateParameterApiModel model module.
    * @module model/UpdateParameterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateParameterApiModel {
       /**
@@ -26120,13 +26085,13 @@ declare module 'testit-api-client/model/UpdateParameterApiModel' {
        * @param {module:model/UpdateParameterApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateParameterApiModel} The populated <code>UpdateParameterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateParameterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateParameterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateParameterApiModel</code>.
        * @alias module:model/UpdateParameterApiModel
@@ -26150,7 +26115,7 @@ declare module 'testit-api-client/model/UpdateProjectApiModel' {
   /**
    * The UpdateProjectApiModel model module.
    * @module model/UpdateProjectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateProjectApiModel {
       /**
@@ -26166,13 +26131,13 @@ declare module 'testit-api-client/model/UpdateProjectApiModel' {
        * @param {module:model/UpdateProjectApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateProjectApiModel} The populated <code>UpdateProjectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateProjectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateProjectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateProjectApiModel</code>.
        * @alias module:model/UpdateProjectApiModel
@@ -26196,7 +26161,7 @@ declare module 'testit-api-client/model/UpdateStepApiModel' {
   /**
    * The UpdateStepApiModel model module.
    * @module model/UpdateStepApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateStepApiModel {
       /**
@@ -26212,13 +26177,13 @@ declare module 'testit-api-client/model/UpdateStepApiModel' {
        * @param {module:model/UpdateStepApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateStepApiModel} The populated <code>UpdateStepApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateStepApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateStepApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateStepApiModel</code>.
        * @alias module:model/UpdateStepApiModel
@@ -26242,7 +26207,7 @@ declare module 'testit-api-client/model/UpdateTagApiModel' {
   /**
    * The UpdateTagApiModel model module.
    * @module model/UpdateTagApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateTagApiModel {
       /**
@@ -26258,13 +26223,13 @@ declare module 'testit-api-client/model/UpdateTagApiModel' {
        * @param {module:model/UpdateTagApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateTagApiModel} The populated <code>UpdateTagApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateTagApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateTagApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateTagApiModel</code>.
        * @alias module:model/UpdateTagApiModel
@@ -26283,7 +26248,7 @@ declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
   /**
    * The UpdateTestPlanApiModel model module.
    * @module model/UpdateTestPlanApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateTestPlanApiModel {
       /**
@@ -26299,13 +26264,13 @@ declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
        * @param {module:model/UpdateTestPlanApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateTestPlanApiModel} The populated <code>UpdateTestPlanApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateTestPlanApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateTestPlanApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateTestPlanApiModel</code>.
        * @alias module:model/UpdateTestPlanApiModel
@@ -26337,7 +26302,7 @@ declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
   /**
    * The UpdateTestStatusApiModel model module.
    * @module model/UpdateTestStatusApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateTestStatusApiModel {
       /**
@@ -26353,13 +26318,13 @@ declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
        * @param {module:model/UpdateTestStatusApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateTestStatusApiModel} The populated <code>UpdateTestStatusApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateTestStatusApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateTestStatusApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateTestStatusApiModel</code>.
        * @alias module:model/UpdateTestStatusApiModel
@@ -26379,7 +26344,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
   /**
    * The UpdateWorkflowApiModel model module.
    * @module model/UpdateWorkflowApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateWorkflowApiModel {
       /**
@@ -26395,13 +26360,13 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
        * @param {module:model/UpdateWorkflowApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateWorkflowApiModel} The populated <code>UpdateWorkflowApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateWorkflowApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateWorkflowApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateWorkflowApiModel</code>.
        * @alias module:model/UpdateWorkflowApiModel
@@ -26410,7 +26375,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
        * @param statuses {Array.<module:model/WorkflowStatusApiModel>}
        * @param projectIds {Array.<String>}
        */
-      constructor(name: string, isDefault: boolean, statuses: Array<module>, projectIds: Array<string>);
+      constructor(name: string, isDefault: boolean, statuses: Array<any>, projectIds: Array<string>);
       name: any;
       isDefault: any;
       statuses: any;
@@ -26426,7 +26391,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
   /**
    * The UpdateWorkItemApiModel model module.
    * @module model/UpdateWorkItemApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateWorkItemApiModel {
       /**
@@ -26442,13 +26407,13 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
        * @param {module:model/UpdateWorkItemApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateWorkItemApiModel} The populated <code>UpdateWorkItemApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateWorkItemApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateWorkItemApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateWorkItemApiModel</code>.
        * @alias module:model/UpdateWorkItemApiModel
@@ -26466,7 +26431,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
        * @param name {String} Workitem name
        * @param attachments {Array.<module:model/AssignAttachmentApiModel>}
        */
-      constructor(id: string, sectionId: string, state: any, priority: any, steps: Array<module>, preconditionSteps: Array<module>, postconditionSteps: Array<module>, duration: number, attributes: any, tags: Array<module>, links: Array<module>, name: string, attachments: Array<module>);
+      constructor(id: string, sectionId: string, state: any, priority: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string, attachments: Array<any>);
       id: any;
       sectionId: any;
       description: any;
@@ -26496,7 +26461,7 @@ declare module 'testit-api-client/model/UpdateWorkItemCommentApiModel' {
   /**
    * The UpdateWorkItemCommentApiModel model module.
    * @module model/UpdateWorkItemCommentApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UpdateWorkItemCommentApiModel {
       /**
@@ -26512,13 +26477,13 @@ declare module 'testit-api-client/model/UpdateWorkItemCommentApiModel' {
        * @param {module:model/UpdateWorkItemCommentApiModel} obj Optional instance to populate.
        * @return {module:model/UpdateWorkItemCommentApiModel} The populated <code>UpdateWorkItemCommentApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UpdateWorkItemCommentApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UpdateWorkItemCommentApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UpdateWorkItemCommentApiModel</code>.
        * @alias module:model/UpdateWorkItemCommentApiModel
@@ -26539,7 +26504,7 @@ declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
   /**
    * The UserCustomNameValidationResponse model module.
    * @module model/UserCustomNameValidationResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UserCustomNameValidationResponse {
       /**
@@ -26555,13 +26520,13 @@ declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
        * @param {module:model/UserCustomNameValidationResponse} obj Optional instance to populate.
        * @return {module:model/UserCustomNameValidationResponse} The populated <code>UserCustomNameValidationResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UserCustomNameValidationResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UserCustomNameValidationResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UserCustomNameValidationResponse</code>.
        * @alias module:model/UserCustomNameValidationResponse
@@ -26580,7 +26545,7 @@ declare module 'testit-api-client/model/UserNameApiResult' {
   /**
    * The UserNameApiResult model module.
    * @module model/UserNameApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class UserNameApiResult {
       /**
@@ -26596,13 +26561,13 @@ declare module 'testit-api-client/model/UserNameApiResult' {
        * @param {module:model/UserNameApiResult} obj Optional instance to populate.
        * @return {module:model/UserNameApiResult} The populated <code>UserNameApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>UserNameApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UserNameApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>UserNameApiResult</code>.
        * @alias module:model/UserNameApiResult
@@ -26622,7 +26587,7 @@ declare module 'testit-api-client/model/ValidationProblemDetails' {
   /**
    * The ValidationProblemDetails model module.
    * @module model/ValidationProblemDetails
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class ValidationProblemDetails {
       /**
@@ -26638,13 +26603,13 @@ declare module 'testit-api-client/model/ValidationProblemDetails' {
        * @param {module:model/ValidationProblemDetails} obj Optional instance to populate.
        * @return {module:model/ValidationProblemDetails} The populated <code>ValidationProblemDetails</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>ValidationProblemDetails</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ValidationProblemDetails</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>ValidationProblemDetails</code>.
        * @alias module:model/ValidationProblemDetails
@@ -26669,7 +26634,7 @@ declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
   /**
    * The WebhookBulkUpdateApiModel model module.
    * @module model/WebhookBulkUpdateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhookBulkUpdateApiModel {
       /**
@@ -26685,13 +26650,13 @@ declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
        * @param {module:model/WebhookBulkUpdateApiModel} obj Optional instance to populate.
        * @return {module:model/WebhookBulkUpdateApiModel} The populated <code>WebhookBulkUpdateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhookBulkUpdateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhookBulkUpdateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhookBulkUpdateApiModel</code>.
        * @alias module:model/WebhookBulkUpdateApiModel
@@ -26807,7 +26772,6 @@ declare module 'testit-api-client/model/WebHookEventType' {
   /**
    * *
    */
-  export type WebHookEventType = any;
 
 }
 declare module 'testit-api-client/model/WebHookEventTypeModel' {
@@ -26912,7 +26876,6 @@ declare module 'testit-api-client/model/WebHookEventTypeModel' {
   /**
    * *
    */
-  export type WebHookEventTypeModel = any;
 
 }
 declare module 'testit-api-client/model/WebHookEventTypeRequest' {
@@ -27017,7 +26980,6 @@ declare module 'testit-api-client/model/WebHookEventTypeRequest' {
   /**
    * *
    */
-  export type WebHookEventTypeRequest = any;
 
 }
 declare module 'testit-api-client/model/WebhookLogApiResult' {
@@ -27025,7 +26987,7 @@ declare module 'testit-api-client/model/WebhookLogApiResult' {
   /**
    * The WebhookLogApiResult model module.
    * @module model/WebhookLogApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhookLogApiResult {
       /**
@@ -27041,13 +27003,13 @@ declare module 'testit-api-client/model/WebhookLogApiResult' {
        * @param {module:model/WebhookLogApiResult} obj Optional instance to populate.
        * @return {module:model/WebhookLogApiResult} The populated <code>WebhookLogApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhookLogApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhookLogApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhookLogApiResult</code>.
        * @alias module:model/WebhookLogApiResult
@@ -27091,7 +27053,7 @@ declare module 'testit-api-client/model/WebHookModel' {
   /**
    * The WebHookModel model module.
    * @module model/WebHookModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebHookModel {
       /**
@@ -27107,13 +27069,13 @@ declare module 'testit-api-client/model/WebHookModel' {
        * @param {module:model/WebHookModel} obj Optional instance to populate.
        * @return {module:model/WebHookModel} The populated <code>WebHookModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebHookModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebHookModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebHookModel</code>.
        * @alias module:model/WebHookModel
@@ -27165,7 +27127,7 @@ declare module 'testit-api-client/model/WebHookPostModel' {
   /**
    * The WebHookPostModel model module.
    * @module model/WebHookPostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebHookPostModel {
       /**
@@ -27181,13 +27143,13 @@ declare module 'testit-api-client/model/WebHookPostModel' {
        * @param {module:model/WebHookPostModel} obj Optional instance to populate.
        * @return {module:model/WebHookPostModel} The populated <code>WebHookPostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebHookPostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebHookPostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebHookPostModel</code>.
        * @alias module:model/WebHookPostModel
@@ -27230,7 +27192,7 @@ declare module 'testit-api-client/model/WebhookResponse' {
   /**
    * The WebhookResponse model module.
    * @module model/WebhookResponse
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhookResponse {
       /**
@@ -27246,13 +27208,13 @@ declare module 'testit-api-client/model/WebhookResponse' {
        * @param {module:model/WebhookResponse} obj Optional instance to populate.
        * @return {module:model/WebhookResponse} The populated <code>WebhookResponse</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhookResponse</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhookResponse</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhookResponse</code>.
        * @alias module:model/WebhookResponse
@@ -27279,7 +27241,7 @@ declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
   /**
    * The WebhooksDeleteApiModel model module.
    * @module model/WebhooksDeleteApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksDeleteApiModel {
       /**
@@ -27295,13 +27257,13 @@ declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
        * @param {module:model/WebhooksDeleteApiModel} obj Optional instance to populate.
        * @return {module:model/WebhooksDeleteApiModel} The populated <code>WebhooksDeleteApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksDeleteApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksDeleteApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhooksDeleteApiModel</code>.
        * @alias module:model/WebhooksDeleteApiModel
@@ -27322,7 +27284,7 @@ declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
   /**
    * The WebhooksDeleteFilterApiModel model module.
    * @module model/WebhooksDeleteFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksDeleteFilterApiModel {
       /**
@@ -27338,13 +27300,13 @@ declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
        * @param {module:model/WebhooksDeleteFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WebhooksDeleteFilterApiModel} The populated <code>WebhooksDeleteFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksDeleteFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksDeleteFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       eventTypes: any;
       methods: any;
@@ -27358,7 +27320,7 @@ declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
   /**
    * The WebhooksExtractionApiModel model module.
    * @module model/WebhooksExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksExtractionApiModel {
       /**
@@ -27374,13 +27336,13 @@ declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
        * @param {module:model/WebhooksExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/WebhooksExtractionApiModel} The populated <code>WebhooksExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
   }
 
@@ -27390,7 +27352,7 @@ declare module 'testit-api-client/model/WebhooksFilterApiModel' {
   /**
    * The WebhooksFilterApiModel model module.
    * @module model/WebhooksFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksFilterApiModel {
       /**
@@ -27406,13 +27368,13 @@ declare module 'testit-api-client/model/WebhooksFilterApiModel' {
        * @param {module:model/WebhooksFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WebhooksFilterApiModel} The populated <code>WebhooksFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       eventTypes: any;
       methods: any;
@@ -27425,7 +27387,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
   /**
    * The WebhooksUpdateApiModel model module.
    * @module model/WebhooksUpdateApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksUpdateApiModel {
       /**
@@ -27441,13 +27403,13 @@ declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
        * @param {module:model/WebhooksUpdateApiModel} obj Optional instance to populate.
        * @return {module:model/WebhooksUpdateApiModel} The populated <code>WebhooksUpdateApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksUpdateApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksUpdateApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhooksUpdateApiModel</code>.
        * @alias module:model/WebhooksUpdateApiModel
@@ -27470,7 +27432,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
   /**
    * The WebhooksUpdateApiResult model module.
    * @module model/WebhooksUpdateApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebhooksUpdateApiResult {
       /**
@@ -27486,13 +27448,13 @@ declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
        * @param {module:model/WebhooksUpdateApiResult} obj Optional instance to populate.
        * @return {module:model/WebhooksUpdateApiResult} The populated <code>WebhooksUpdateApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebhooksUpdateApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebhooksUpdateApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebhooksUpdateApiResult</code>.
        * @alias module:model/WebhooksUpdateApiResult
@@ -27511,7 +27473,7 @@ declare module 'testit-api-client/model/WebHookTestModel' {
   /**
    * The WebHookTestModel model module.
    * @module model/WebHookTestModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WebHookTestModel {
       /**
@@ -27527,13 +27489,13 @@ declare module 'testit-api-client/model/WebHookTestModel' {
        * @param {module:model/WebHookTestModel} obj Optional instance to populate.
        * @return {module:model/WebHookTestModel} The populated <code>WebHookTestModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WebHookTestModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WebHookTestModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WebHookTestModel</code>.
        * @alias module:model/WebHookTestModel
@@ -27581,7 +27543,6 @@ declare module 'testit-api-client/model/WebhookVariablesType' {
   /**
    * *
    */
-  export type WebhookVariablesType = any;
 
 }
 declare module 'testit-api-client/model/WorkflowApiResult' {
@@ -27589,7 +27550,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
   /**
    * The WorkflowApiResult model module.
    * @module model/WorkflowApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowApiResult {
       /**
@@ -27605,13 +27566,13 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
        * @param {module:model/WorkflowApiResult} obj Optional instance to populate.
        * @return {module:model/WorkflowApiResult} The populated <code>WorkflowApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowApiResult</code>.
        * @alias module:model/WorkflowApiResult
@@ -27626,7 +27587,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
        * @param statuses {Array.<module:model/WorkflowStatusApiResult>}
        * @param projects {Array.<module:model/WorkflowProjectApiResult>}
        */
-      constructor(id: string, name: string, isSystem: boolean, isDefault: boolean, createdDate: Date, createdById: string, modifiedDate: Date, modifiedById: string, statuses: Array<module>, projects: Array<module>);
+      constructor(id: string, name: string, isSystem: boolean, isDefault: boolean, createdDate: Date, createdById: string, modifiedDate: Date, modifiedById: string, statuses: Array<any>, projects: Array<any>);
       id: any;
       name: any;
       isSystem: any;
@@ -27648,7 +27609,7 @@ declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
   /**
    * The WorkflowExistsByNameApiResult model module.
    * @module model/WorkflowExistsByNameApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowExistsByNameApiResult {
       /**
@@ -27664,13 +27625,13 @@ declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
        * @param {module:model/WorkflowExistsByNameApiResult} obj Optional instance to populate.
        * @return {module:model/WorkflowExistsByNameApiResult} The populated <code>WorkflowExistsByNameApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowExistsByNameApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowExistsByNameApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowExistsByNameApiResult</code>.
        * @alias module:model/WorkflowExistsByNameApiResult
@@ -27689,7 +27650,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResult' {
   /**
    * The WorkflowProjectApiResult model module.
    * @module model/WorkflowProjectApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowProjectApiResult {
       /**
@@ -27705,13 +27666,13 @@ declare module 'testit-api-client/model/WorkflowProjectApiResult' {
        * @param {module:model/WorkflowProjectApiResult} obj Optional instance to populate.
        * @return {module:model/WorkflowProjectApiResult} The populated <code>WorkflowProjectApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowProjectApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowProjectApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowProjectApiResult</code>.
        * @alias module:model/WorkflowProjectApiResult
@@ -27730,7 +27691,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
   /**
    * The WorkflowProjectApiResultApiCollectionPreview model module.
    * @module model/WorkflowProjectApiResultApiCollectionPreview
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowProjectApiResultApiCollectionPreview {
       /**
@@ -27746,20 +27707,20 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
        * @param {module:model/WorkflowProjectApiResultApiCollectionPreview} obj Optional instance to populate.
        * @return {module:model/WorkflowProjectApiResultApiCollectionPreview} The populated <code>WorkflowProjectApiResultApiCollectionPreview</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowProjectApiResultApiCollectionPreview</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowProjectApiResultApiCollectionPreview</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowProjectApiResultApiCollectionPreview</code>.
        * @alias module:model/WorkflowProjectApiResultApiCollectionPreview
        * @param data {Array.<module:model/WorkflowProjectApiResult>} Preview items
        * @param totalCount {Number} Total count
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27773,7 +27734,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
   /**
    * The WorkflowProjectApiResultReply model module.
    * @module model/WorkflowProjectApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowProjectApiResultReply {
       /**
@@ -27789,20 +27750,20 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
        * @param {module:model/WorkflowProjectApiResultReply} obj Optional instance to populate.
        * @return {module:model/WorkflowProjectApiResultReply} The populated <code>WorkflowProjectApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowProjectApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowProjectApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowProjectApiResultReply</code>.
        * @alias module:model/WorkflowProjectApiResultReply
        * @param data {Array.<module:model/WorkflowProjectApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27816,7 +27777,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
   /**
    * The WorkflowShortApiResult model module.
    * @module model/WorkflowShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowShortApiResult {
       /**
@@ -27832,13 +27793,13 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
        * @param {module:model/WorkflowShortApiResult} obj Optional instance to populate.
        * @return {module:model/WorkflowShortApiResult} The populated <code>WorkflowShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowShortApiResult</code>.
        * @alias module:model/WorkflowShortApiResult
@@ -27873,7 +27834,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
   /**
    * The WorkflowShortApiResultReply model module.
    * @module model/WorkflowShortApiResultReply
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowShortApiResultReply {
       /**
@@ -27889,20 +27850,20 @@ declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
        * @param {module:model/WorkflowShortApiResultReply} obj Optional instance to populate.
        * @return {module:model/WorkflowShortApiResultReply} The populated <code>WorkflowShortApiResultReply</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowShortApiResultReply</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowShortApiResultReply</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowShortApiResultReply</code>.
        * @alias module:model/WorkflowShortApiResultReply
        * @param data {Array.<module:model/WorkflowShortApiResult>}
        * @param totalCount {Number}
        */
-      constructor(data: Array<module>, totalCount: number);
+      constructor(data: Array<any>, totalCount: number);
       data: any;
       totalCount: any;
   }
@@ -27916,7 +27877,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiModel' {
   /**
    * The WorkflowStatusApiModel model module.
    * @module model/WorkflowStatusApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowStatusApiModel {
       /**
@@ -27932,13 +27893,13 @@ declare module 'testit-api-client/model/WorkflowStatusApiModel' {
        * @param {module:model/WorkflowStatusApiModel} obj Optional instance to populate.
        * @return {module:model/WorkflowStatusApiModel} The populated <code>WorkflowStatusApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowStatusApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowStatusApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowStatusApiModel</code>.
        * @alias module:model/WorkflowStatusApiModel
@@ -27959,7 +27920,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiResult' {
   /**
    * The WorkflowStatusApiResult model module.
    * @module model/WorkflowStatusApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkflowStatusApiResult {
       /**
@@ -27975,13 +27936,13 @@ declare module 'testit-api-client/model/WorkflowStatusApiResult' {
        * @param {module:model/WorkflowStatusApiResult} obj Optional instance to populate.
        * @return {module:model/WorkflowStatusApiResult} The populated <code>WorkflowStatusApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkflowStatusApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowStatusApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkflowStatusApiResult</code>.
        * @alias module:model/WorkflowStatusApiResult
@@ -28012,7 +27973,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
   /**
    * The WorkItemApiResult model module.
    * @module model/WorkItemApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemApiResult {
       /**
@@ -28028,13 +27989,13 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
        * @param {module:model/WorkItemApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemApiResult} The populated <code>WorkItemApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemApiResult</code>.
        * @alias module:model/WorkItemApiResult
@@ -28069,7 +28030,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
        * @param createdById {String} Unique identifier of the work item creator
        * @param isDeleted {Boolean} Indicates whether the work item is marked as deleted
        */
-      constructor(id: string, globalId: number, versionId: string, versionNumber: number, projectId: string, sectionId: string, name: string, sourceType: any, entityTypeName: any, duration: number, medianDuration: number, state: any, priority: any, isAutomated: boolean, attributes: any, tags: Array<module>, sectionPreconditionSteps: Array<module>, sectionPostconditionSteps: Array<module>, preconditionSteps: Array<module>, steps: Array<module>, postconditionSteps: Array<module>, iterations: Array<module>, autoTests: Array<module>, attachments: Array<module>, links: Array<module>, externalIssues: Array<module>, parameters: Array<module>, createdDate: Date, createdById: string, isDeleted: boolean);
+      constructor(id: string, globalId: number, versionId: string, versionNumber: number, projectId: string, sectionId: string, name: string, sourceType: any, entityTypeName: any, duration: number, medianDuration: number, state: any, priority: any, isAutomated: boolean, attributes: any, tags: Array<any>, sectionPreconditionSteps: Array<any>, sectionPostconditionSteps: Array<any>, preconditionSteps: Array<any>, steps: Array<any>, postconditionSteps: Array<any>, iterations: Array<any>, autoTests: Array<any>, attachments: Array<any>, links: Array<any>, externalIssues: Array<any>, parameters: Array<any>, createdDate: Date, createdById: string, isDeleted: boolean);
       id: any;
       globalId: any;
       versionId: any;
@@ -28114,7 +28075,7 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
   /**
    * The WorkItemChangedAttributeViewModel model module.
    * @module model/WorkItemChangedAttributeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemChangedAttributeViewModel {
       /**
@@ -28130,13 +28091,13 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
        * @param {module:model/WorkItemChangedAttributeViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemChangedAttributeViewModel} The populated <code>WorkItemChangedAttributeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemChangedAttributeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemChangedAttributeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemChangedAttributeViewModel</code>.
        * @alias module:model/WorkItemChangedAttributeViewModel
@@ -28146,7 +28107,7 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
        * @param oldValue {Object}
        * @param newValue {Object}
        */
-      constructor(type: string, oldAttributeName: string, newAttributeName: string, oldValue: any, newValue: any);
+      constructor(type: string, oldAttributeName: string, newAttributeName: string, oldValue: Object, newValue: Object);
       type: any;
       oldAttributeName: any;
       newAttributeName: any;
@@ -28163,7 +28124,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
   /**
    * The WorkItemChangedFieldsViewModel model module.
    * @module model/WorkItemChangedFieldsViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemChangedFieldsViewModel {
       /**
@@ -28179,13 +28140,13 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
        * @param {module:model/WorkItemChangedFieldsViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemChangedFieldsViewModel} The populated <code>WorkItemChangedFieldsViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemChangedFieldsViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemChangedFieldsViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemChangedFieldsViewModel</code>.
        * @alias module:model/WorkItemChangedFieldsViewModel
@@ -28240,7 +28201,7 @@ declare module 'testit-api-client/model/WorkItemChangeModel' {
   /**
    * The WorkItemChangeModel model module.
    * @module model/WorkItemChangeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemChangeModel {
       /**
@@ -28256,13 +28217,13 @@ declare module 'testit-api-client/model/WorkItemChangeModel' {
        * @param {module:model/WorkItemChangeModel} obj Optional instance to populate.
        * @return {module:model/WorkItemChangeModel} The populated <code>WorkItemChangeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemChangeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemChangeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemChangeModel</code>.
        * @alias module:model/WorkItemChangeModel
@@ -28295,7 +28256,7 @@ declare module 'testit-api-client/model/WorkItemCommentApiResult' {
   /**
    * The WorkItemCommentApiResult model module.
    * @module model/WorkItemCommentApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemCommentApiResult {
       /**
@@ -28311,13 +28272,13 @@ declare module 'testit-api-client/model/WorkItemCommentApiResult' {
        * @param {module:model/WorkItemCommentApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemCommentApiResult} The populated <code>WorkItemCommentApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemCommentApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemCommentApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemCommentApiResult</code>.
        * @alias module:model/WorkItemCommentApiResult
@@ -28373,7 +28334,6 @@ declare module 'testit-api-client/model/WorkItemEntityTypeApiModel' {
   /**
    * *
    */
-  export type WorkItemEntityTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemEntityTypes' {
@@ -28408,7 +28368,6 @@ declare module 'testit-api-client/model/WorkItemEntityTypes' {
   /**
    * *
    */
-  export type WorkItemEntityTypes = any;
 
 }
 declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel' {
@@ -28416,7 +28375,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiMo
   /**
    * The WorkItemExternalMetadataFieldFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExternalMetadataFieldFilterApiModel {
       /**
@@ -28432,13 +28391,13 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiMo
        * @param {module:model/WorkItemExternalMetadataFieldFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExternalMetadataFieldFilterApiModel} The populated <code>WorkItemExternalMetadataFieldFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExternalMetadataFieldFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExternalMetadataFieldFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemExternalMetadataFieldFilterApiModel</code>.
        * @alias module:model/WorkItemExternalMetadataFieldFilterApiModel
@@ -28459,7 +28418,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel
   /**
    * The WorkItemExternalMetadataFieldFilterModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExternalMetadataFieldFilterModel {
       /**
@@ -28475,13 +28434,13 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel
        * @param {module:model/WorkItemExternalMetadataFieldFilterModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExternalMetadataFieldFilterModel} The populated <code>WorkItemExternalMetadataFieldFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExternalMetadataFieldFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExternalMetadataFieldFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemExternalMetadataFieldFilterModel</code>.
        * @alias module:model/WorkItemExternalMetadataFieldFilterModel
@@ -28502,7 +28461,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' 
   /**
    * The WorkItemExternalMetadataFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExternalMetadataFilterApiModel {
       /**
@@ -28518,13 +28477,13 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' 
        * @param {module:model/WorkItemExternalMetadataFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExternalMetadataFilterApiModel} The populated <code>WorkItemExternalMetadataFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExternalMetadataFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExternalMetadataFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
       types: any;
       priorities: any;
@@ -28538,7 +28497,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
   /**
    * The WorkItemExternalMetadataFilterModel model module.
    * @module model/WorkItemExternalMetadataFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExternalMetadataFilterModel {
       /**
@@ -28554,13 +28513,13 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
        * @param {module:model/WorkItemExternalMetadataFilterModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExternalMetadataFilterModel} The populated <code>WorkItemExternalMetadataFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExternalMetadataFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExternalMetadataFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       ids: any;
       types: any;
       priorities: any;
@@ -28574,7 +28533,7 @@ declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
   /**
    * The WorkItemExtractionApiModel model module.
    * @module model/WorkItemExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExtractionApiModel {
       /**
@@ -28590,13 +28549,13 @@ declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
        * @param {module:model/WorkItemExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExtractionApiModel} The populated <code>WorkItemExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       ids: any;
       sectionIds: any;
@@ -28608,7 +28567,7 @@ declare module 'testit-api-client/model/WorkItemExtractionModel' {
   /**
    * The WorkItemExtractionModel model module.
    * @module model/WorkItemExtractionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemExtractionModel {
       /**
@@ -28624,13 +28583,13 @@ declare module 'testit-api-client/model/WorkItemExtractionModel' {
        * @param {module:model/WorkItemExtractionModel} obj Optional instance to populate.
        * @return {module:model/WorkItemExtractionModel} The populated <code>WorkItemExtractionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemExtractionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemExtractionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       ids: any;
       sectionIds: any;
@@ -28642,7 +28601,7 @@ declare module 'testit-api-client/model/WorkItemFilterApiModel' {
   /**
    * The WorkItemFilterApiModel model module.
    * @module model/WorkItemFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemFilterApiModel {
       /**
@@ -28658,13 +28617,13 @@ declare module 'testit-api-client/model/WorkItemFilterApiModel' {
        * @param {module:model/WorkItemFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemFilterApiModel} The populated <code>WorkItemFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       nameOrId: any;
       includeIds: any;
       excludeIds: any;
@@ -28700,7 +28659,7 @@ declare module 'testit-api-client/model/WorkItemFilterModel' {
   /**
    * The WorkItemFilterModel model module.
    * @module model/WorkItemFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemFilterModel {
       /**
@@ -28716,13 +28675,13 @@ declare module 'testit-api-client/model/WorkItemFilterModel' {
        * @param {module:model/WorkItemFilterModel} obj Optional instance to populate.
        * @return {module:model/WorkItemFilterModel} The populated <code>WorkItemFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       nameOrId: any;
       includeIds: any;
       excludeIds: any;
@@ -28758,7 +28717,7 @@ declare module 'testit-api-client/model/WorkItemGroupGetModel' {
   /**
    * The WorkItemGroupGetModel model module.
    * @module model/WorkItemGroupGetModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemGroupGetModel {
       /**
@@ -28774,13 +28733,13 @@ declare module 'testit-api-client/model/WorkItemGroupGetModel' {
        * @param {module:model/WorkItemGroupGetModel} obj Optional instance to populate.
        * @return {module:model/WorkItemGroupGetModel} The populated <code>WorkItemGroupGetModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemGroupGetModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemGroupGetModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemGroupGetModel</code>.
        * @alias module:model/WorkItemGroupGetModel
@@ -28801,7 +28760,7 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
   /**
    * The WorkItemGroupModel model module.
    * @module model/WorkItemGroupModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemGroupModel {
       /**
@@ -28817,20 +28776,20 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
        * @param {module:model/WorkItemGroupModel} obj Optional instance to populate.
        * @return {module:model/WorkItemGroupModel} The populated <code>WorkItemGroupModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemGroupModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemGroupModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemGroupModel</code>.
        * @alias module:model/WorkItemGroupModel
        * @param size {Number}
        * @param workItems {Array.<module:model/WorkItemShortModel>}
        */
-      constructor(size: number, workItems: Array<module>);
+      constructor(size: number, workItems: Array<any>);
       key: any;
       size: any;
       workItems: any;
@@ -28892,7 +28851,6 @@ declare module 'testit-api-client/model/WorkItemGroupType' {
   /**
    * *
    */
-  export type WorkItemGroupType = any;
 
 }
 declare module 'testit-api-client/model/WorkItemIdApiModel' {
@@ -28900,7 +28858,7 @@ declare module 'testit-api-client/model/WorkItemIdApiModel' {
   /**
    * The WorkItemIdApiModel model module.
    * @module model/WorkItemIdApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemIdApiModel {
       /**
@@ -28916,13 +28874,13 @@ declare module 'testit-api-client/model/WorkItemIdApiModel' {
        * @param {module:model/WorkItemIdApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemIdApiModel} The populated <code>WorkItemIdApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemIdApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemIdApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemIdApiModel</code>.
        * @alias module:model/WorkItemIdApiModel
@@ -28941,7 +28899,7 @@ declare module 'testit-api-client/model/WorkItemIndexApiResult' {
   /**
    * The WorkItemIndexApiResult model module.
    * @module model/WorkItemIndexApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemIndexApiResult {
       /**
@@ -28957,13 +28915,13 @@ declare module 'testit-api-client/model/WorkItemIndexApiResult' {
        * @param {module:model/WorkItemIndexApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemIndexApiResult} The populated <code>WorkItemIndexApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemIndexApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemIndexApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemIndexApiResult</code>.
        * @alias module:model/WorkItemIndexApiResult
@@ -28984,7 +28942,7 @@ declare module 'testit-api-client/model/WorkItemLikeModel' {
   /**
    * The WorkItemLikeModel model module.
    * @module model/WorkItemLikeModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLikeModel {
       /**
@@ -29000,13 +28958,13 @@ declare module 'testit-api-client/model/WorkItemLikeModel' {
        * @param {module:model/WorkItemLikeModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLikeModel} The populated <code>WorkItemLikeModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLikeModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLikeModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemLikeModel</code>.
        * @alias module:model/WorkItemLikeModel
@@ -29035,7 +28993,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
   /**
    * The WorkItemLinkChangeViewModel model module.
    * @module model/WorkItemLinkChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkChangeViewModel {
       /**
@@ -29051,13 +29009,13 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
        * @param {module:model/WorkItemLinkChangeViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkChangeViewModel} The populated <code>WorkItemLinkChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemLinkChangeViewModel</code>.
        * @alias module:model/WorkItemLinkChangeViewModel
@@ -29086,7 +29044,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedF
   /**
    * The WorkItemLinkChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -29102,13 +29060,13 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedF
        * @param {module:model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel} The populated <code>WorkItemLinkChangeViewModelArrayChangedFieldViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkChangeViewModelArrayChangedFieldViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkChangeViewModelArrayChangedFieldViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       oldValue: any;
       newValue: any;
   }
@@ -29119,7 +29077,7 @@ declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
   /**
    * The WorkItemLinkExtractionApiModel model module.
    * @module model/WorkItemLinkExtractionApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkExtractionApiModel {
       /**
@@ -29135,13 +29093,13 @@ declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
        * @param {module:model/WorkItemLinkExtractionApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkExtractionApiModel} The populated <code>WorkItemLinkExtractionApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkExtractionApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkExtractionApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       workItemIds: any;
       linkUrls: any;
@@ -29153,7 +29111,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
   /**
    * The WorkItemLinkFilterApiModel model module.
    * @module model/WorkItemLinkFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkFilterApiModel {
       /**
@@ -29169,13 +29127,13 @@ declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
        * @param {module:model/WorkItemLinkFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkFilterApiModel} The populated <code>WorkItemLinkFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       types: any;
       title: any;
       urls: any;
@@ -29188,7 +29146,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
   /**
    * The WorkItemLinkFilterModel model module.
    * @module model/WorkItemLinkFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkFilterModel {
       /**
@@ -29204,13 +29162,13 @@ declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
        * @param {module:model/WorkItemLinkFilterModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkFilterModel} The populated <code>WorkItemLinkFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       types: any;
       title: any;
       urls: any;
@@ -29223,7 +29181,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
   /**
    * The WorkItemLinkUrlApiModel model module.
    * @module model/WorkItemLinkUrlApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkUrlApiModel {
       /**
@@ -29239,13 +29197,13 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
        * @param {module:model/WorkItemLinkUrlApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkUrlApiModel} The populated <code>WorkItemLinkUrlApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkUrlApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkUrlApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemLinkUrlApiModel</code>.
        * @alias module:model/WorkItemLinkUrlApiModel
@@ -29266,7 +29224,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
   /**
    * The WorkItemLinkUrlApiResult model module.
    * @module model/WorkItemLinkUrlApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkUrlApiResult {
       /**
@@ -29282,13 +29240,13 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
        * @param {module:model/WorkItemLinkUrlApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkUrlApiResult} The populated <code>WorkItemLinkUrlApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkUrlApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkUrlApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemLinkUrlApiResult</code>.
        * @alias module:model/WorkItemLinkUrlApiResult
@@ -29307,7 +29265,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
   /**
    * The WorkItemLinkUrlFilterApiModel model module.
    * @module model/WorkItemLinkUrlFilterApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLinkUrlFilterApiModel {
       /**
@@ -29323,13 +29281,13 @@ declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
        * @param {module:model/WorkItemLinkUrlFilterApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLinkUrlFilterApiModel} The populated <code>WorkItemLinkUrlFilterApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLinkUrlFilterApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLinkUrlFilterApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       types: any;
       searchUrl: any;
   }
@@ -29340,7 +29298,7 @@ declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
   /**
    * The WorkItemLocalFilterModel model module.
    * @module model/WorkItemLocalFilterModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLocalFilterModel {
       /**
@@ -29356,13 +29314,13 @@ declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
        * @param {module:model/WorkItemLocalFilterModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLocalFilterModel} The populated <code>WorkItemLocalFilterModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLocalFilterModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLocalFilterModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: any;
       ids: any;
       globalIds: any;
@@ -29394,7 +29352,7 @@ declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
   /**
    * The WorkItemLocalSelectModel model module.
    * @module model/WorkItemLocalSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemLocalSelectModel {
       /**
@@ -29410,13 +29368,13 @@ declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
        * @param {module:model/WorkItemLocalSelectModel} obj Optional instance to populate.
        * @return {module:model/WorkItemLocalSelectModel} The populated <code>WorkItemLocalSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemLocalSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemLocalSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       filter: any;
       extractionModel: any;
   }
@@ -29427,7 +29385,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
   /**
    * The WorkItemModel model module.
    * @module model/WorkItemModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemModel {
       /**
@@ -29443,13 +29401,13 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * @param {module:model/WorkItemModel} obj Optional instance to populate.
        * @return {module:model/WorkItemModel} The populated <code>WorkItemModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemModel</code>.
        * @alias module:model/WorkItemModel
@@ -29479,7 +29437,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * @param links {Array.<module:model/LinkModel>}
        * @param name {String}
        */
-      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, createdDate: Date, createdById: string, globalId: number, externalIssues: Array<module>, parameters: Array<module>, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<module>, preconditionSteps: Array<module>, postconditionSteps: Array<module>, duration: number, attributes: any, tags: Array<module>, links: Array<module>, name: string);
+      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, createdDate: Date, createdById: string, globalId: number, externalIssues: Array<any>, parameters: Array<any>, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string);
       versionId: any;
       medianDuration: any;
       isDeleted: any;
@@ -29524,7 +29482,7 @@ declare module 'testit-api-client/model/WorkItemMovePostModel' {
   /**
    * The WorkItemMovePostModel model module.
    * @module model/WorkItemMovePostModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemMovePostModel {
       /**
@@ -29540,13 +29498,13 @@ declare module 'testit-api-client/model/WorkItemMovePostModel' {
        * @param {module:model/WorkItemMovePostModel} obj Optional instance to populate.
        * @return {module:model/WorkItemMovePostModel} The populated <code>WorkItemMovePostModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemMovePostModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemMovePostModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemMovePostModel</code>.
        * @alias module:model/WorkItemMovePostModel
@@ -29569,7 +29527,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiModel' {
   /**
    * The WorkItemParameterKeyApiModel model module.
    * @module model/WorkItemParameterKeyApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemParameterKeyApiModel {
       /**
@@ -29585,13 +29543,13 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiModel' {
        * @param {module:model/WorkItemParameterKeyApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemParameterKeyApiModel} The populated <code>WorkItemParameterKeyApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemParameterKeyApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemParameterKeyApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemParameterKeyApiModel</code>.
        * @alias module:model/WorkItemParameterKeyApiModel
@@ -29610,7 +29568,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiResult' {
   /**
    * The WorkItemParameterKeyApiResult model module.
    * @module model/WorkItemParameterKeyApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemParameterKeyApiResult {
       /**
@@ -29626,13 +29584,13 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiResult' {
        * @param {module:model/WorkItemParameterKeyApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemParameterKeyApiResult} The populated <code>WorkItemParameterKeyApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemParameterKeyApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemParameterKeyApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemParameterKeyApiResult</code>.
        * @alias module:model/WorkItemParameterKeyApiResult
@@ -29651,7 +29609,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyModel' {
   /**
    * The WorkItemParameterKeyModel model module.
    * @module model/WorkItemParameterKeyModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemParameterKeyModel {
       /**
@@ -29667,13 +29625,13 @@ declare module 'testit-api-client/model/WorkItemParameterKeyModel' {
        * @param {module:model/WorkItemParameterKeyModel} obj Optional instance to populate.
        * @return {module:model/WorkItemParameterKeyModel} The populated <code>WorkItemParameterKeyModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemParameterKeyModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemParameterKeyModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemParameterKeyModel</code>.
        * @alias module:model/WorkItemParameterKeyModel
@@ -29692,7 +29650,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
   /**
    * The WorkItemPreviewApiModel model module.
    * @module model/WorkItemPreviewApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemPreviewApiModel {
       /**
@@ -29708,13 +29666,13 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
        * @param {module:model/WorkItemPreviewApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemPreviewApiModel} The populated <code>WorkItemPreviewApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemPreviewApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemPreviewApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemPreviewApiModel</code>.
        * @alias module:model/WorkItemPreviewApiModel
@@ -29722,7 +29680,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
        * @param description {String}
        * @param steps {Array.<module:model/WorkItemPreviewStepApiModel>}
        */
-      constructor(name: string, description: string, steps: Array<module>);
+      constructor(name: string, description: string, steps: Array<any>);
       name: any;
       description: any;
       steps: any;
@@ -29737,7 +29695,7 @@ declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
   /**
    * The WorkItemPreviewStepApiModel model module.
    * @module model/WorkItemPreviewStepApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemPreviewStepApiModel {
       /**
@@ -29753,13 +29711,13 @@ declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
        * @param {module:model/WorkItemPreviewStepApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemPreviewStepApiModel} The populated <code>WorkItemPreviewStepApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemPreviewStepApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemPreviewStepApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemPreviewStepApiModel</code>.
        * @alias module:model/WorkItemPreviewStepApiModel
@@ -29819,7 +29777,6 @@ declare module 'testit-api-client/model/WorkItemPriority' {
   /**
    * *
    */
-  export type WorkItemPriority = any;
 
 }
 declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
@@ -29864,7 +29821,6 @@ declare module 'testit-api-client/model/WorkItemPriorityApiModel' {
   /**
    * *
    */
-  export type WorkItemPriorityApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemPriorityModel' {
@@ -29909,7 +29865,6 @@ declare module 'testit-api-client/model/WorkItemPriorityModel' {
   /**
    * *
    */
-  export type WorkItemPriorityModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
@@ -29917,7 +29872,7 @@ declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
   /**
    * The WorkItemSearchQueryModel model module.
    * @module model/WorkItemSearchQueryModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemSearchQueryModel {
       /**
@@ -29933,13 +29888,13 @@ declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
        * @param {module:model/WorkItemSearchQueryModel} obj Optional instance to populate.
        * @return {module:model/WorkItemSearchQueryModel} The populated <code>WorkItemSearchQueryModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemSearchQueryModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemSearchQueryModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       projectIds: any;
       name: any;
       ids: any;
@@ -29972,7 +29927,7 @@ declare module 'testit-api-client/model/WorkItemSelectApiModel' {
   /**
    * The WorkItemSelectApiModel model module.
    * @module model/WorkItemSelectApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemSelectApiModel {
       /**
@@ -29988,13 +29943,13 @@ declare module 'testit-api-client/model/WorkItemSelectApiModel' {
        * @param {module:model/WorkItemSelectApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemSelectApiModel} The populated <code>WorkItemSelectApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemSelectApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemSelectApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemSelectApiModel</code>.
        * @alias module:model/WorkItemSelectApiModel
@@ -30014,7 +29969,7 @@ declare module 'testit-api-client/model/WorkItemSelectModel' {
   /**
    * The WorkItemSelectModel model module.
    * @module model/WorkItemSelectModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemSelectModel {
       /**
@@ -30030,13 +29985,13 @@ declare module 'testit-api-client/model/WorkItemSelectModel' {
        * @param {module:model/WorkItemSelectModel} obj Optional instance to populate.
        * @return {module:model/WorkItemSelectModel} The populated <code>WorkItemSelectModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemSelectModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemSelectModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemSelectModel</code>.
        * Model containing options to filter work items
@@ -30057,7 +30012,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
   /**
    * The WorkItemShortApiResult model module.
    * @module model/WorkItemShortApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemShortApiResult {
       /**
@@ -30073,13 +30028,13 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
        * @param {module:model/WorkItemShortApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemShortApiResult} The populated <code>WorkItemShortApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemShortApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemShortApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemShortApiResult</code>.
        * @alias module:model/WorkItemShortApiResult
@@ -30102,7 +30057,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
        * @param iterations {Array.<module:model/IterationApiResult>} Set of iterations related to Work Item
        * @param links {Array.<module:model/LinkShortApiResult>} Set of links related to Work Item
        */
-      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<module>, links: Array<module>);
+      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
       id: any;
       versionId: any;
       versionNumber: any;
@@ -30138,7 +30093,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
   /**
    * The WorkItemShortModel model module.
    * @module model/WorkItemShortModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemShortModel {
       /**
@@ -30154,13 +30109,13 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
        * @param {module:model/WorkItemShortModel} obj Optional instance to populate.
        * @return {module:model/WorkItemShortModel} The populated <code>WorkItemShortModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemShortModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemShortModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemShortModel</code>.
        * @alias module:model/WorkItemShortModel
@@ -30183,7 +30138,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
        * @param iterations {Array.<module:model/IterationModel>} Set of iterations related to Work Item
        * @param links {Array.<module:model/LinkShortModel>} Set of links related to Work Item
        */
-      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<module>, links: Array<module>);
+      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
       id: any;
       versionId: any;
       versionNumber: any;
@@ -30241,7 +30196,6 @@ declare module 'testit-api-client/model/WorkItemSourceTypeApiModel' {
   /**
    * *
    */
-  export type WorkItemSourceTypeApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
@@ -30271,7 +30225,6 @@ declare module 'testit-api-client/model/WorkItemSourceTypeModel' {
   /**
    * *
    */
-  export type WorkItemSourceTypeModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemState' {
@@ -30306,7 +30259,6 @@ declare module 'testit-api-client/model/WorkItemState' {
   /**
    * *
    */
-  export type WorkItemState = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStateApiModel' {
@@ -30341,7 +30293,6 @@ declare module 'testit-api-client/model/WorkItemStateApiModel' {
   /**
    * *
    */
-  export type WorkItemStateApiModel = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStates' {
@@ -30376,7 +30327,6 @@ declare module 'testit-api-client/model/WorkItemStates' {
   /**
    * *
    */
-  export type WorkItemStates = any;
 
 }
 declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
@@ -30384,7 +30334,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
   /**
    * The WorkItemStepChangeViewModel model module.
    * @module model/WorkItemStepChangeViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemStepChangeViewModel {
       /**
@@ -30400,13 +30350,13 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
        * @param {module:model/WorkItemStepChangeViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemStepChangeViewModel} The populated <code>WorkItemStepChangeViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemStepChangeViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemStepChangeViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemStepChangeViewModel</code>.
        * @alias module:model/WorkItemStepChangeViewModel
@@ -30436,7 +30386,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
   /**
    * The WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel model module.
    * @module model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel {
       /**
@@ -30452,13 +30402,13 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
        * @param {module:model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel} obj Optional instance to populate.
        * @return {module:model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel} The populated <code>WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       diffValue: any;
       oldValue: any;
       newValue: any;
@@ -30470,7 +30420,7 @@ declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiModel' {
   /**
    * The WorkItemUpdatingFieldsApiModel model module.
    * @module model/WorkItemUpdatingFieldsApiModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemUpdatingFieldsApiModel {
       /**
@@ -30486,13 +30436,13 @@ declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiModel' {
        * @param {module:model/WorkItemUpdatingFieldsApiModel} obj Optional instance to populate.
        * @return {module:model/WorkItemUpdatingFieldsApiModel} The populated <code>WorkItemUpdatingFieldsApiModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemUpdatingFieldsApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemUpdatingFieldsApiModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       name: boolean;
       description: boolean;
       preconditionSteps: boolean;
@@ -30508,7 +30458,7 @@ declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiResult' {
   /**
    * The WorkItemUpdatingFieldsApiResult model module.
    * @module model/WorkItemUpdatingFieldsApiResult
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemUpdatingFieldsApiResult {
       /**
@@ -30524,13 +30474,13 @@ declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiResult' {
        * @param {module:model/WorkItemUpdatingFieldsApiResult} obj Optional instance to populate.
        * @return {module:model/WorkItemUpdatingFieldsApiResult} The populated <code>WorkItemUpdatingFieldsApiResult</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemUpdatingFieldsApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemUpdatingFieldsApiResult</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemUpdatingFieldsApiResult</code>.
        * @alias module:model/WorkItemUpdatingFieldsApiResult
@@ -30561,7 +30511,7 @@ declare module 'testit-api-client/model/WorkItemVersionModel' {
   /**
    * The WorkItemVersionModel model module.
    * @module model/WorkItemVersionModel
-   * @version 7.2.4
+   * @version 7.2.6
    */
   class WorkItemVersionModel {
       /**
@@ -30577,13 +30527,13 @@ declare module 'testit-api-client/model/WorkItemVersionModel' {
        * @param {module:model/WorkItemVersionModel} obj Optional instance to populate.
        * @return {module:model/WorkItemVersionModel} The populated <code>WorkItemVersionModel</code> instance.
        */
-      static constructFromObject(data: any, obj: any): any;
+      static constructFromObject(data: Object, obj: any): any;
       /**
        * Validates the JSON data with respect to <code>WorkItemVersionModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
        * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkItemVersionModel</code>.
        */
-      static validateJSON(data: any): boolean;
+      static validateJSON(data: Object): boolean;
       /**
        * Constructs a new <code>WorkItemVersionModel</code>.
        * @alias module:model/WorkItemVersionModel

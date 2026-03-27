@@ -18,7 +18,7 @@ import NotificationTypeModel from './NotificationTypeModel';
 /**
  * The NotificationQueryFilterModel model module.
  * @module model/NotificationQueryFilterModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class NotificationQueryFilterModel {
     /**

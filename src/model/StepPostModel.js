@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StepPostModel model module.
  * @module model/StepPostModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class StepPostModel {
     /**

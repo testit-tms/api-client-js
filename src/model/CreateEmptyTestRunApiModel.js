@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The CreateEmptyTestRunApiModel model module.
  * @module model/CreateEmptyTestRunApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class CreateEmptyTestRunApiModel {
     /**

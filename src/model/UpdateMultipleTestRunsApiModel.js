@@ -20,7 +20,7 @@ import UpdateMultipleTagsApiModel from './UpdateMultipleTagsApiModel';
 /**
  * The UpdateMultipleTestRunsApiModel model module.
  * @module model/UpdateMultipleTestRunsApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class UpdateMultipleTestRunsApiModel {
     /**

@@ -18,7 +18,7 @@ import CustomAttributeType from './CustomAttributeType';
 /**
  * The CustomAttributeApiResult model module.
  * @module model/CustomAttributeApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class CustomAttributeApiResult {
     /**

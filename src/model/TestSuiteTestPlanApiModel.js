@@ -18,7 +18,7 @@ import WorkItemSelectModel from './WorkItemSelectModel';
 /**
  * The TestSuiteTestPlanApiModel model module.
  * @module model/TestSuiteTestPlanApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestSuiteTestPlanApiModel {
     /**

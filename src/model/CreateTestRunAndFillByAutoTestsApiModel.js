@@ -18,7 +18,7 @@ import CreateLinkApiModel from './CreateLinkApiModel';
 /**
  * The CreateTestRunAndFillByAutoTestsApiModel model module.
  * @module model/CreateTestRunAndFillByAutoTestsApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class CreateTestRunAndFillByAutoTestsApiModel {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ProjectNameApiResult model module.
  * @module model/ProjectNameApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ProjectNameApiResult {
     /**

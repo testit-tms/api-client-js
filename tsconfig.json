@@ -2,7 +2,8 @@
   "compilerOptions": {
       "allowJs": true,
       "declaration": true,
+      "rootDir": "src",
       //"emitDeclarationOnly": true,
   },
-  "include": ["src/**/*"], 
+  "include": ["src/**/*"],
 }

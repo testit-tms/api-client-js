@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemVersionModel model module.
  * @module model/WorkItemVersionModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class WorkItemVersionModel {
     /**

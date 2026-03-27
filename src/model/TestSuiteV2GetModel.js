@@ -17,7 +17,7 @@ import TestSuiteType from './TestSuiteType';
 /**
  * The TestSuiteV2GetModel model module.
  * @module model/TestSuiteV2GetModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestSuiteV2GetModel {
     /**

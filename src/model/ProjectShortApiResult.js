@@ -17,7 +17,7 @@ import ProjectType from './ProjectType';
 /**
  * The ProjectShortApiResult model module.
  * @module model/ProjectShortApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ProjectShortApiResult {
     /**

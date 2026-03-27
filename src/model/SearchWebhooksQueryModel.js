@@ -18,7 +18,7 @@ import WebHookEventTypeModel from './WebHookEventTypeModel';
 /**
  * The SearchWebhooksQueryModel model module.
  * @module model/SearchWebhooksQueryModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class SearchWebhooksQueryModel {
     /**

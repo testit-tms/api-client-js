@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanShortModel model module.
  * @module model/TestPlanShortModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestPlanShortModel {
     /**

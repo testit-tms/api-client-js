@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AttachmentPutModel model module.
  * @module model/AttachmentPutModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AttachmentPutModel {
     /**

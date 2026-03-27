@@ -19,7 +19,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The AutoTestResultHistoryApiResult model module.
  * @module model/AutoTestResultHistoryApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestResultHistoryApiResult {
     /**

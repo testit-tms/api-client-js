@@ -17,7 +17,7 @@ import FailureCategoryModel from './FailureCategoryModel';
 /**
  * The AutoTestResultReasonShort model module.
  * @module model/AutoTestResultReasonShort
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestResultReasonShort {
     /**

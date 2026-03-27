@@ -21,7 +21,7 @@ import TestStatusApiType from './TestStatusApiType';
 /**
  * The TestResultsFilterApiModel model module.
  * @module model/TestResultsFilterApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestResultsFilterApiModel {
     /**
