@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestAverageDurationApiResult model module.
  * @module model/AutoTestAverageDurationApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestAverageDurationApiResult {
     /**

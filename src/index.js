@@ -589,7 +589,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.4
+* @version 7.2.6
 */
 export {
     /**

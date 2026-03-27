@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalFormLinkModel model module.
  * @module model/ExternalFormLinkModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ExternalFormLinkModel {
     /**

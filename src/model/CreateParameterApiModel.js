@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateParameterApiModel model module.
  * @module model/CreateParameterApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class CreateParameterApiModel {
     /**

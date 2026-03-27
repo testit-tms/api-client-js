@@ -17,7 +17,7 @@ import CustomAttributeModel from './CustomAttributeModel';
 /**
  * The ProjectCustomAttributeTemplateGetModel model module.
  * @module model/ProjectCustomAttributeTemplateGetModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ProjectCustomAttributeTemplateGetModel {
     /**

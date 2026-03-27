@@ -17,7 +17,7 @@ import TagApiModel from './TagApiModel';
 /**
  * The UpdateTestPlanApiModel model module.
  * @module model/UpdateTestPlanApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class UpdateTestPlanApiModel {
     /**

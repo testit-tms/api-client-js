@@ -17,7 +17,7 @@ import CustomAttributeOptionModel from './CustomAttributeOptionModel';
 /**
  * The GlobalCustomAttributeUpdateModel model module.
  * @module model/GlobalCustomAttributeUpdateModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class GlobalCustomAttributeUpdateModel {
     /**

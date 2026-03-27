@@ -18,7 +18,7 @@ import TestRunTestResultsSelectModel from './TestRunTestResultsSelectModel';
 /**
  * The TestRunTestResultsPartialBulkSetModel model module.
  * @module model/TestRunTestResultsPartialBulkSetModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestRunTestResultsPartialBulkSetModel {
     /**

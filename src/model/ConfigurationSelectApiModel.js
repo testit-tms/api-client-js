@@ -18,7 +18,7 @@ import ConfigurationFilterApiModel from './ConfigurationFilterApiModel';
 /**
  * The ConfigurationSelectApiModel model module.
  * @module model/ConfigurationSelectApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ConfigurationSelectApiModel {
     /**

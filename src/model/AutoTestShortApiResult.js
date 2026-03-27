@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestShortApiResult model module.
  * @module model/AutoTestShortApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestShortApiResult {
     /**

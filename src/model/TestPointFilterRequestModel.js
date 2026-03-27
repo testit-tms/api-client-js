@@ -21,7 +21,7 @@ import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 /**
  * The TestPointFilterRequestModel model module.
  * @module model/TestPointFilterRequestModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class TestPointFilterRequestModel {
     /**

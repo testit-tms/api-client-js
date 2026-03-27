@@ -18,7 +18,7 @@ import AutoTestOutcome from './AutoTestOutcome';
 /**
  * The AutoTestStepResultsApiResult model module.
  * @module model/AutoTestStepResultsApiResult
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestStepResultsApiResult {
     /**

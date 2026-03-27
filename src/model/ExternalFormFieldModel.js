@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ExternalFormFieldModel model module.
  * @module model/ExternalFormFieldModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ExternalFormFieldModel {
     /**

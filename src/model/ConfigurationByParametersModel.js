@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConfigurationByParametersModel model module.
  * @module model/ConfigurationByParametersModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class ConfigurationByParametersModel {
     /**

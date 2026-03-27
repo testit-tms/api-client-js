@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlanTestPoints service.
 * @module api/ProjectTestPlanTestPointsApi
-* @version 7.2.4
+* @version 7.2.6
 */
 export default class ProjectTestPlanTestPointsApi {
 

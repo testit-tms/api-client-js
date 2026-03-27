@@ -17,7 +17,7 @@ import AutoTestClassCountApiModel from './AutoTestClassCountApiModel';
 /**
  * The AutoTestNamespaceCountApiModel model module.
  * @module model/AutoTestNamespaceCountApiModel
- * @version 7.2.4
+ * @version 7.2.6
  */
 class AutoTestNamespaceCountApiModel {
     /**
