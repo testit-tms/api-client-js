@@ -13,14 +13,16 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateUserApiModel from '../model/CreateUserApiModel';
 import ProblemDetails from '../model/ProblemDetails';
+import UserApiModel from '../model/UserApiModel';
 import UserCustomNameValidationResponse from '../model/UserCustomNameValidationResponse';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
 
 /**
 * Users service.
 * @module api/UsersApi
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export default class UsersApi {
 
@@ -74,6 +76,136 @@ export default class UsersApi {
      */
     apiV2UsersExistsGet(opts) {
       return this.apiV2UsersExistsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateUserApiModel} [createUserApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserApiModel} and HTTP response
+     */
+    apiV2UsersPostWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['createUserApiModel'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer or PrivateToken'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = UserApiModel;
+      return this.apiClient.callApi(
+        '/api/v2/users', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateUserApiModel} opts.createUserApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserApiModel}
+     */
+    apiV2UsersPost(opts) {
+      return this.apiV2UsersPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2UsersUserIdDeleteWithHttpInfo(userId) {
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling apiV2UsersUserIdDelete");
+      }
+
+      let pathParams = {
+        'userId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer or PrivateToken'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/users/{userId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2UsersUserIdDelete(userId) {
+      return this.apiV2UsersUserIdDeleteWithHttpInfo(userId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserApiModel} and HTTP response
+     */
+    apiV2UsersUserIdGetWithHttpInfo(userId) {
+      let postBody = null;
+      // verify the required parameter 'userId' is set
+      if (userId === undefined || userId === null) {
+        throw new Error("Missing the required parameter 'userId' when calling apiV2UsersUserIdGet");
+      }
+
+      let pathParams = {
+        'userId': userId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Bearer or PrivateToken'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = UserApiModel;
+      return this.apiClient.callApi(
+        '/api/v2/users/{userId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserApiModel}
+     */
+    apiV2UsersUserIdGet(userId) {
+      return this.apiV2UsersUserIdGetWithHttpInfo(userId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

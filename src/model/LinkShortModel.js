@@ -16,19 +16,18 @@ import ApiClient from '../ApiClient';
 /**
  * The LinkShortModel model module.
  * @module model/LinkShortModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class LinkShortModel {
     /**
      * Constructs a new <code>LinkShortModel</code>.
      * @alias module:model/LinkShortModel
      * @param id {String} 
-     * @param title {String} 
      * @param url {String} 
      */
-    constructor(id, title, url) { 
+    constructor(id, url) { 
         
-        LinkShortModel.initialize(this, id, title, url);
+        LinkShortModel.initialize(this, id, url);
     }
 
     /**
@@ -36,9 +35,8 @@ class LinkShortModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, title, url) { 
+    static initialize(obj, id, url) { 
         obj['id'] = id;
-        obj['title'] = title;
         obj['url'] = url;
     }
 
@@ -104,7 +102,7 @@ class LinkShortModel {
 
 }
 
-LinkShortModel.RequiredProperties = ["id", "title", "url"];
+LinkShortModel.RequiredProperties = ["id", "url"];
 
 /**
  * @member {String} id

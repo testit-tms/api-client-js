@@ -18,7 +18,7 @@ import TestSuiteTestPlanApiModel from './TestSuiteTestPlanApiModel';
 /**
  * The CreateTestPlanApiModel model module.
  * @module model/CreateTestPlanApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class CreateTestPlanApiModel {
     /**

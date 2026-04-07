@@ -29,7 +29,7 @@ import WebhooksUpdateApiResult from '../model/WebhooksUpdateApiResult';
 /**
 * Webhooks service.
 * @module api/WebhooksApi
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export default class WebhooksApi {
 

@@ -37,7 +37,7 @@ import WorkItemSelectModel from '../model/WorkItemSelectModel';
 /**
 * TestPlans service.
 * @module api/TestPlansApi
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export default class TestPlansApi {
 

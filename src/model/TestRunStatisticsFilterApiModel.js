@@ -18,7 +18,7 @@ import TestResultOutcome from './TestResultOutcome';
 /**
  * The TestRunStatisticsFilterApiModel model module.
  * @module model/TestRunStatisticsFilterApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class TestRunStatisticsFilterApiModel {
     /**

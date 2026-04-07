@@ -18,7 +18,7 @@ import StepModel from './StepModel';
 /**
  * The SectionWithStepsModel model module.
  * @module model/SectionWithStepsModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class SectionWithStepsModel {
     /**

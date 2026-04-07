@@ -17,7 +17,7 @@ import WorkItemUpdatingFieldsApiModel from './WorkItemUpdatingFieldsApiModel';
 /**
  * The AutoTestProjectSettingsApiModel model module.
  * @module model/AutoTestProjectSettingsApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class AutoTestProjectSettingsApiModel {
     /**

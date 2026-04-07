@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterIterationModel model module.
  * @module model/ParameterIterationModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class ParameterIterationModel {
     /**
@@ -52,6 +52,9 @@ class ParameterIterationModel {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('sharedStepId')) {
+                obj['sharedStepId'] = ApiClient.convertToType(data['sharedStepId'], 'String');
+            }
         }
         return obj;
     }
@@ -72,6 +75,10 @@ class ParameterIterationModel {
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
+        // ensure the json data is a string
+        if (data['sharedStepId'] && !(typeof data['sharedStepId'] === 'string' || data['sharedStepId'] instanceof String)) {
+            throw new Error("Expected the field `sharedStepId` to be a primitive type in the JSON string but got " + data['sharedStepId']);
+        }
 
         return true;
     }
@@ -85,6 +92,11 @@ ParameterIterationModel.RequiredProperties = ["id"];
  * @member {String} id
  */
 ParameterIterationModel.prototype['id'] = undefined;
+
+/**
+ * @member {String} sharedStepId
+ */
+ParameterIterationModel.prototype['sharedStepId'] = undefined;
 
 
 

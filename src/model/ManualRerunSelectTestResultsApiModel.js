@@ -18,7 +18,7 @@ import TestResultsFilterApiModel from './TestResultsFilterApiModel';
 /**
  * The ManualRerunSelectTestResultsApiModel model module.
  * @module model/ManualRerunSelectTestResultsApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class ManualRerunSelectTestResultsApiModel {
     /**

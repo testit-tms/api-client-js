@@ -16,20 +16,18 @@ import ApiClient from '../ApiClient';
 /**
  * The LinkShortApiResult model module.
  * @module model/LinkShortApiResult
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class LinkShortApiResult {
     /**
      * Constructs a new <code>LinkShortApiResult</code>.
      * @alias module:model/LinkShortApiResult
      * @param id {String} 
-     * @param title {String} 
      * @param url {String} 
-     * @param type {String} 
      */
-    constructor(id, title, url, type) { 
+    constructor(id, url) { 
         
-        LinkShortApiResult.initialize(this, id, title, url, type);
+        LinkShortApiResult.initialize(this, id, url);
     }
 
     /**
@@ -37,11 +35,9 @@ class LinkShortApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, title, url, type) { 
+    static initialize(obj, id, url) { 
         obj['id'] = id;
-        obj['title'] = title;
         obj['url'] = url;
-        obj['type'] = type;
     }
 
     /**
@@ -106,7 +102,7 @@ class LinkShortApiResult {
 
 }
 
-LinkShortApiResult.RequiredProperties = ["id", "title", "url", "type"];
+LinkShortApiResult.RequiredProperties = ["id", "url"];
 
 /**
  * @member {String} id

@@ -18,7 +18,7 @@ import TestPlanTestPointsSearchApiModel from './TestPlanTestPointsSearchApiModel
 /**
  * The TestPlanTestPointsAutoTestsRunApiModel model module.
  * @module model/TestPlanTestPointsAutoTestsRunApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class TestPlanTestPointsAutoTestsRunApiModel {
     /**

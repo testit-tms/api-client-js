@@ -17,7 +17,7 @@ import ExternalServiceMetadataApiResult from './ExternalServiceMetadataApiResult
 /**
  * The ProjectExternalServiceApiResult model module.
  * @module model/ProjectExternalServiceApiResult
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class ProjectExternalServiceApiResult {
     /**

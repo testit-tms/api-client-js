@@ -17,7 +17,7 @@ import WorkItemPreviewStepApiModel from './WorkItemPreviewStepApiModel';
 /**
  * The WorkItemPreviewApiModel model module.
  * @module model/WorkItemPreviewApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class WorkItemPreviewApiModel {
     /**

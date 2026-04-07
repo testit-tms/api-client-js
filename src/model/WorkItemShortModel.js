@@ -21,7 +21,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemShortModel model module.
  * @module model/WorkItemShortModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class WorkItemShortModel {
     /**

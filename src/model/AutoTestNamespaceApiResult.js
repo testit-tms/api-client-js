@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestNamespaceApiResult model module.
  * @module model/AutoTestNamespaceApiResult
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class AutoTestNamespaceApiResult {
     /**

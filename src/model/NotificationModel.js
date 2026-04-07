@@ -17,7 +17,7 @@ import NotificationTypeModel from './NotificationTypeModel';
 /**
  * The NotificationModel model module.
  * @module model/NotificationModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class NotificationModel {
     /**

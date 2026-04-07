@@ -17,7 +17,7 @@ import WorkItemUpdatingFieldsApiResult from './WorkItemUpdatingFieldsApiResult';
 /**
  * The AutoTestProjectSettingsApiResult model module.
  * @module model/AutoTestProjectSettingsApiResult
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class AutoTestProjectSettingsApiResult {
     /**

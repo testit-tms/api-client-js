@@ -17,7 +17,7 @@ import GlobalSearchItemResult from './GlobalSearchItemResult';
 /**
  * The GlobalSearchResponse model module.
  * @module model/GlobalSearchResponse
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class GlobalSearchResponse {
     /**

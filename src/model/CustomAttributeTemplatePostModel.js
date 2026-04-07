@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CustomAttributeTemplatePostModel model module.
  * @module model/CustomAttributeTemplatePostModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class CustomAttributeTemplatePostModel {
     /**

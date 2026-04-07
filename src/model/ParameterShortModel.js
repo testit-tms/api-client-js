@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ParameterShortModel model module.
  * @module model/ParameterShortModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class ParameterShortModel {
     /**
@@ -60,6 +60,9 @@ class ParameterShortModel {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('sharedStepId')) {
+                obj['sharedStepId'] = ApiClient.convertToType(data['sharedStepId'], 'String');
+            }
             if (data.hasOwnProperty('parameterKeyId')) {
                 obj['parameterKeyId'] = ApiClient.convertToType(data['parameterKeyId'], 'String');
             }
@@ -93,6 +96,10 @@ class ParameterShortModel {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
         // ensure the json data is a string
+        if (data['sharedStepId'] && !(typeof data['sharedStepId'] === 'string' || data['sharedStepId'] instanceof String)) {
+            throw new Error("Expected the field `sharedStepId` to be a primitive type in the JSON string but got " + data['sharedStepId']);
+        }
+        // ensure the json data is a string
         if (data['parameterKeyId'] && !(typeof data['parameterKeyId'] === 'string' || data['parameterKeyId'] instanceof String)) {
             throw new Error("Expected the field `parameterKeyId` to be a primitive type in the JSON string but got " + data['parameterKeyId']);
         }
@@ -121,6 +128,11 @@ ParameterShortModel.RequiredProperties = ["id", "parameterKeyId", "value", "name
  * @member {String} id
  */
 ParameterShortModel.prototype['id'] = undefined;
+
+/**
+ * @member {String} sharedStepId
+ */
+ParameterShortModel.prototype['sharedStepId'] = undefined;
 
 /**
  * @member {String} parameterKeyId

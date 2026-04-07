@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Attachments service.
 * @module api/AttachmentsApi
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export default class AttachmentsApi {
 
@@ -235,7 +235,7 @@ export default class AttachmentsApi {
 
     /**
      * Upload new attachment file
-     * File size is restricted to 50 MB (52 428 800 bytes)
+     * File size is restricted to 1 GB (1 073 741 824 bytes)
      * @param {Object} opts Optional parameters
      * @param {File} [file] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentModel} and HTTP response
@@ -267,7 +267,7 @@ export default class AttachmentsApi {
 
     /**
      * Upload new attachment file
-     * File size is restricted to 50 MB (52 428 800 bytes)
+     * File size is restricted to 1 GB (1 073 741 824 bytes)
      * @param {Object} opts Optional parameters
      * @param {File} opts.file 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentModel}

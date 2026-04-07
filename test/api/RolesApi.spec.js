@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TestitApiClient.DemoProjectApiResult();
+    instance = new TestitApiClient.RolesApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,19 +47,17 @@
       object[property] = value;
   }
 
-  describe('DemoProjectApiResult', function() {
-    it('should create an instance of DemoProjectApiResult', function() {
-      // uncomment below and update the code to test DemoProjectApiResult
-      //var instance = new TestitApiClient.DemoProjectApiResult();
-      //expect(instance).to.be.a(TestitApiClient.DemoProjectApiResult);
+  describe('RolesApi', function() {
+    describe('apiV2RolesGet', function() {
+      it('should call apiV2RolesGet successfully', function(done) {
+        //uncomment below and update the code to test apiV2RolesGet
+        //instance.apiV2RolesGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property jobId (base name: "jobId")', function() {
-      // uncomment below and update the code to test the property jobId
-      //var instance = new TestitApiClient.DemoProjectApiResult();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

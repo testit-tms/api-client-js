@@ -18,7 +18,7 @@ import TestPlanStatusModel from './TestPlanStatusModel';
 /**
  * The ProjectTestPlansFilterModel model module.
  * @module model/ProjectTestPlansFilterModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class ProjectTestPlansFilterModel {
     /**

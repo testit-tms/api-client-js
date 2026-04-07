@@ -22,7 +22,7 @@ import TestStatusType from './TestStatusType';
 /**
  * The AutoTestResultsForTestRunModel model module.
  * @module model/AutoTestResultsForTestRunModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class AutoTestResultsForTestRunModel {
     /**

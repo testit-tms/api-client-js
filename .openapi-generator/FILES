@@ -105,6 +105,7 @@ docs/CreateTestRunAndFillByAutoTestsApiModel.md
 docs/CreateTestRunAndFillByConfigurationsApiModel.md
 docs/CreateTestRunAndFillByWorkItemsApiModel.md
 docs/CreateTestStatusApiModel.md
+docs/CreateUserApiModel.md
 docs/CreateWorkItemApiModel.md
 docs/CreateWorkItemCommentApiModel.md
 docs/CreateWorkItemPreviewsApiModel.md
@@ -134,7 +135,6 @@ docs/CustomAttributesApi.md
 docs/DateTimeRangeSelectorModel.md
 docs/DefectApiModel.md
 docs/DeletionState.md
-docs/DemoProjectApiResult.md
 docs/EnableProjectExternalServiceApiModel.md
 docs/ExternalFormAllowedValueModel.md
 docs/ExternalFormCreateModel.md
@@ -277,6 +277,9 @@ docs/RequestTypeApiModel.md
 docs/RequestTypeModel.md
 docs/RerunTestResultApiResult.md
 docs/RerunsApiResult.md
+docs/RoleApiModel.md
+docs/RoleApiModelApiCollection.md
+docs/RolesApi.md
 docs/SearchApi.md
 docs/SearchCustomAttributeTemplateGetModel.md
 docs/SearchExternalIssuesApiModel.md
@@ -458,8 +461,10 @@ docs/UpdateTestStatusApiModel.md
 docs/UpdateWorkItemApiModel.md
 docs/UpdateWorkItemCommentApiModel.md
 docs/UpdateWorkflowApiModel.md
+docs/UserApiModel.md
 docs/UserCustomNameValidationResponse.md
 docs/UserNameApiResult.md
+docs/UserRoleAssignmentsApi.md
 docs/UsersApi.md
 docs/ValidationProblemDetails.md
 docs/WebHookEventType.md
@@ -572,6 +577,7 @@ src/api/ProjectTestPlanTestPointsApi.js
 src/api/ProjectTestPlansApi.js
 src/api/ProjectWorkItemsApi.js
 src/api/ProjectsApi.js
+src/api/RolesApi.js
 src/api/SearchApi.js
 src/api/SectionsApi.js
 src/api/TagsApi.js
@@ -581,6 +587,7 @@ src/api/TestResultsApi.js
 src/api/TestRunsApi.js
 src/api/TestStatusesApi.js
 src/api/TestSuitesApi.js
+src/api/UserRoleAssignmentsApi.js
 src/api/UsersApi.js
 src/api/WebhooksApi.js
 src/api/WebhooksLogsApi.js
@@ -686,6 +693,7 @@ src/model/CreateTestRunAndFillByAutoTestsApiModel.js
 src/model/CreateTestRunAndFillByConfigurationsApiModel.js
 src/model/CreateTestRunAndFillByWorkItemsApiModel.js
 src/model/CreateTestStatusApiModel.js
+src/model/CreateUserApiModel.js
 src/model/CreateWorkItemApiModel.js
 src/model/CreateWorkItemCommentApiModel.js
 src/model/CreateWorkItemPreviewsApiModel.js
@@ -713,7 +721,6 @@ src/model/CustomAttributeValidationResult.js
 src/model/DateTimeRangeSelectorModel.js
 src/model/DefectApiModel.js
 src/model/DeletionState.js
-src/model/DemoProjectApiResult.js
 src/model/EnableProjectExternalServiceApiModel.js
 src/model/ExternalFormAllowedValueModel.js
 src/model/ExternalFormCreateModel.js
@@ -842,6 +849,8 @@ src/model/RequestTypeApiModel.js
 src/model/RequestTypeModel.js
 src/model/RerunTestResultApiResult.js
 src/model/RerunsApiResult.js
+src/model/RoleApiModel.js
+src/model/RoleApiModelApiCollection.js
 src/model/SearchCustomAttributeTemplateGetModel.js
 src/model/SearchExternalIssuesApiModel.js
 src/model/SearchTestRunsApiModel.js
@@ -1014,6 +1023,7 @@ src/model/UpdateTestStatusApiModel.js
 src/model/UpdateWorkItemApiModel.js
 src/model/UpdateWorkItemCommentApiModel.js
 src/model/UpdateWorkflowApiModel.js
+src/model/UserApiModel.js
 src/model/UserCustomNameValidationResponse.js
 src/model/UserNameApiResult.js
 src/model/ValidationProblemDetails.js
@@ -1118,6 +1128,7 @@ test/api/ProjectTestPlanTestPointsApi.spec.js
 test/api/ProjectTestPlansApi.spec.js
 test/api/ProjectWorkItemsApi.spec.js
 test/api/ProjectsApi.spec.js
+test/api/RolesApi.spec.js
 test/api/SearchApi.spec.js
 test/api/SectionsApi.spec.js
 test/api/TagsApi.spec.js
@@ -1127,6 +1138,7 @@ test/api/TestResultsApi.spec.js
 test/api/TestRunsApi.spec.js
 test/api/TestStatusesApi.spec.js
 test/api/TestSuitesApi.spec.js
+test/api/UserRoleAssignmentsApi.spec.js
 test/api/UsersApi.spec.js
 test/api/WebhooksApi.spec.js
 test/api/WebhooksLogsApi.spec.js
@@ -1231,6 +1243,7 @@ test/model/CreateTestRunAndFillByAutoTestsApiModel.spec.js
 test/model/CreateTestRunAndFillByConfigurationsApiModel.spec.js
 test/model/CreateTestRunAndFillByWorkItemsApiModel.spec.js
 test/model/CreateTestStatusApiModel.spec.js
+test/model/CreateUserApiModel.spec.js
 test/model/CreateWorkItemApiModel.spec.js
 test/model/CreateWorkItemCommentApiModel.spec.js
 test/model/CreateWorkItemPreviewsApiModel.spec.js
@@ -1258,7 +1271,6 @@ test/model/CustomAttributeValidationResult.spec.js
 test/model/DateTimeRangeSelectorModel.spec.js
 test/model/DefectApiModel.spec.js
 test/model/DeletionState.spec.js
-test/model/DemoProjectApiResult.spec.js
 test/model/EnableProjectExternalServiceApiModel.spec.js
 test/model/ExternalFormAllowedValueModel.spec.js
 test/model/ExternalFormCreateModel.spec.js
@@ -1387,6 +1399,8 @@ test/model/RequestTypeApiModel.spec.js
 test/model/RequestTypeModel.spec.js
 test/model/RerunTestResultApiResult.spec.js
 test/model/RerunsApiResult.spec.js
+test/model/RoleApiModel.spec.js
+test/model/RoleApiModelApiCollection.spec.js
 test/model/SearchCustomAttributeTemplateGetModel.spec.js
 test/model/SearchExternalIssuesApiModel.spec.js
 test/model/SearchTestRunsApiModel.spec.js
@@ -1559,6 +1573,7 @@ test/model/UpdateTestStatusApiModel.spec.js
 test/model/UpdateWorkItemApiModel.spec.js
 test/model/UpdateWorkItemCommentApiModel.spec.js
 test/model/UpdateWorkflowApiModel.spec.js
+test/model/UserApiModel.spec.js
 test/model/UserCustomNameValidationResponse.spec.js
 test/model/UserNameApiResult.spec.js
 test/model/ValidationProblemDetails.spec.js

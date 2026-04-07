@@ -111,6 +111,7 @@ import CreateTestRunAndFillByAutoTestsApiModel from './model/CreateTestRunAndFil
 import CreateTestRunAndFillByConfigurationsApiModel from './model/CreateTestRunAndFillByConfigurationsApiModel';
 import CreateTestRunAndFillByWorkItemsApiModel from './model/CreateTestRunAndFillByWorkItemsApiModel';
 import CreateTestStatusApiModel from './model/CreateTestStatusApiModel';
+import CreateUserApiModel from './model/CreateUserApiModel';
 import CreateWorkItemApiModel from './model/CreateWorkItemApiModel';
 import CreateWorkItemCommentApiModel from './model/CreateWorkItemCommentApiModel';
 import CreateWorkItemPreviewsApiModel from './model/CreateWorkItemPreviewsApiModel';
@@ -138,7 +139,6 @@ import CustomAttributeValidationResult from './model/CustomAttributeValidationRe
 import DateTimeRangeSelectorModel from './model/DateTimeRangeSelectorModel';
 import DefectApiModel from './model/DefectApiModel';
 import DeletionState from './model/DeletionState';
-import DemoProjectApiResult from './model/DemoProjectApiResult';
 import EnableProjectExternalServiceApiModel from './model/EnableProjectExternalServiceApiModel';
 import ExternalFormAllowedValueModel from './model/ExternalFormAllowedValueModel';
 import ExternalFormCreateModel from './model/ExternalFormCreateModel';
@@ -267,6 +267,8 @@ import RequestTypeApiModel from './model/RequestTypeApiModel';
 import RequestTypeModel from './model/RequestTypeModel';
 import RerunTestResultApiResult from './model/RerunTestResultApiResult';
 import RerunsApiResult from './model/RerunsApiResult';
+import RoleApiModel from './model/RoleApiModel';
+import RoleApiModelApiCollection from './model/RoleApiModelApiCollection';
 import SearchCustomAttributeTemplateGetModel from './model/SearchCustomAttributeTemplateGetModel';
 import SearchExternalIssuesApiModel from './model/SearchExternalIssuesApiModel';
 import SearchTestRunsApiModel from './model/SearchTestRunsApiModel';
@@ -439,6 +441,7 @@ import UpdateTestStatusApiModel from './model/UpdateTestStatusApiModel';
 import UpdateWorkItemApiModel from './model/UpdateWorkItemApiModel';
 import UpdateWorkItemCommentApiModel from './model/UpdateWorkItemCommentApiModel';
 import UpdateWorkflowApiModel from './model/UpdateWorkflowApiModel';
+import UserApiModel from './model/UserApiModel';
 import UserCustomNameValidationResponse from './model/UserCustomNameValidationResponse';
 import UserNameApiResult from './model/UserNameApiResult';
 import ValidationProblemDetails from './model/ValidationProblemDetails';
@@ -543,6 +546,7 @@ import ProjectTestPlanTestPointsApi from './api/ProjectTestPlanTestPointsApi';
 import ProjectTestPlansApi from './api/ProjectTestPlansApi';
 import ProjectWorkItemsApi from './api/ProjectWorkItemsApi';
 import ProjectsApi from './api/ProjectsApi';
+import RolesApi from './api/RolesApi';
 import SearchApi from './api/SearchApi';
 import SectionsApi from './api/SectionsApi';
 import TagsApi from './api/TagsApi';
@@ -552,6 +556,7 @@ import TestResultsApi from './api/TestResultsApi';
 import TestRunsApi from './api/TestRunsApi';
 import TestStatusesApi from './api/TestStatusesApi';
 import TestSuitesApi from './api/TestSuitesApi';
+import UserRoleAssignmentsApi from './api/UserRoleAssignmentsApi';
 import UsersApi from './api/UsersApi';
 import WebhooksApi from './api/WebhooksApi';
 import WebhooksLogsApi from './api/WebhooksLogsApi';
@@ -589,7 +594,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export {
     /**
@@ -1187,6 +1192,12 @@ export {
     CreateTestStatusApiModel,
 
     /**
+     * The CreateUserApiModel model constructor.
+     * @property {module:model/CreateUserApiModel}
+     */
+    CreateUserApiModel,
+
+    /**
      * The CreateWorkItemApiModel model constructor.
      * @property {module:model/CreateWorkItemApiModel}
      */
@@ -1347,12 +1358,6 @@ export {
      * @property {module:model/DeletionState}
      */
     DeletionState,
-
-    /**
-     * The DemoProjectApiResult model constructor.
-     * @property {module:model/DemoProjectApiResult}
-     */
-    DemoProjectApiResult,
 
     /**
      * The EnableProjectExternalServiceApiModel model constructor.
@@ -2121,6 +2126,18 @@ export {
      * @property {module:model/RerunsApiResult}
      */
     RerunsApiResult,
+
+    /**
+     * The RoleApiModel model constructor.
+     * @property {module:model/RoleApiModel}
+     */
+    RoleApiModel,
+
+    /**
+     * The RoleApiModelApiCollection model constructor.
+     * @property {module:model/RoleApiModelApiCollection}
+     */
+    RoleApiModelApiCollection,
 
     /**
      * The SearchCustomAttributeTemplateGetModel model constructor.
@@ -3155,6 +3172,12 @@ export {
     UpdateWorkflowApiModel,
 
     /**
+     * The UserApiModel model constructor.
+     * @property {module:model/UserApiModel}
+     */
+    UserApiModel,
+
+    /**
      * The UserCustomNameValidationResponse model constructor.
      * @property {module:model/UserCustomNameValidationResponse}
      */
@@ -3779,6 +3802,12 @@ export {
     ProjectsApi,
 
     /**
+    * The RolesApi service constructor.
+    * @property {module:api/RolesApi}
+    */
+    RolesApi,
+
+    /**
     * The SearchApi service constructor.
     * @property {module:api/SearchApi}
     */
@@ -3831,6 +3860,12 @@ export {
     * @property {module:api/TestSuitesApi}
     */
     TestSuitesApi,
+
+    /**
+    * The UserRoleAssignmentsApi service constructor.
+    * @property {module:api/UserRoleAssignmentsApi}
+    */
+    UserRoleAssignmentsApi,
 
     /**
     * The UsersApi service constructor.

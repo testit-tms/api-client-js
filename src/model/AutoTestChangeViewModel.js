@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AutoTestChangeViewModel model module.
  * @module model/AutoTestChangeViewModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class AutoTestChangeViewModel {
     /**

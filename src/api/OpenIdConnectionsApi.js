@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * OpenIdConnections service.
 * @module api/OpenIdConnectionsApi
-* @version 7.2.6
+* @version 7.2.6-TMS-5.7
 */
 export default class OpenIdConnectionsApi {
 

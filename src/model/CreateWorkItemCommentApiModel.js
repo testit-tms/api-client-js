@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateWorkItemCommentApiModel model module.
  * @module model/CreateWorkItemCommentApiModel
- * @version 7.2.6
+ * @version 7.2.6-TMS-5.7
  */
 class CreateWorkItemCommentApiModel {
     /**
