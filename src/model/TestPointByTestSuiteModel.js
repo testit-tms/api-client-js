@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPointByTestSuiteModel model module.
  * @module model/TestPointByTestSuiteModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestPointByTestSuiteModel {
     /**
@@ -153,7 +153,7 @@ TestPointByTestSuiteModel.prototype['workItemId'] = undefined;
 TestPointByTestSuiteModel.prototype['configurationId'] = undefined;
 
 /**
- * Test point status  Applies one of these values: Blocked, NoResults, Failed, Passed
+ * Test point status    Applies one of these values: Blocked, NoResults, Failed, Passed
  * @member {String} status
  */
 TestPointByTestSuiteModel.prototype['status'] = undefined;

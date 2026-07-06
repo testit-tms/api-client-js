@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPlanTestPointsTestSuiteSearchApiResult model module.
  * @module model/TestPlanTestPointsTestSuiteSearchApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestPlanTestPointsTestSuiteSearchApiResult {
     /**

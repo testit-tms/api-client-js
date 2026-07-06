@@ -22,7 +22,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestRunV2ApiResult model module.
  * @module model/TestRunV2ApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestRunV2ApiResult {
     /**
@@ -32,7 +32,7 @@ class TestRunV2ApiResult {
      * @param name {String} Test run name
      * @param stateName {module:model/TestRunState} Test run state
      * @param status {module:model/TestStatusApiResult} Test run status
-     * @param projectId {String} Project unique identifier              This property is used to link test run with project.
+     * @param projectId {String} Project unique identifier                This property is used to link test run with project.
      * @param createdDate {Date} Date and time of test run creation
      * @param createdById {String} Unique identifier of user who created test run
      * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of attachments related to the test run
@@ -271,7 +271,7 @@ TestRunV2ApiResult.prototype['name'] = undefined;
 TestRunV2ApiResult.prototype['description'] = undefined;
 
 /**
- * Test run launch source              Once launch source is specified it cannot be updated.
+ * Test run launch source                Once launch source is specified it cannot be updated.
  * @member {String} launchSource
  */
 TestRunV2ApiResult.prototype['launchSource'] = undefined;
@@ -301,13 +301,13 @@ TestRunV2ApiResult.prototype['stateName'] = undefined;
 TestRunV2ApiResult.prototype['status'] = undefined;
 
 /**
- * Project unique identifier              This property is used to link test run with project.
+ * Project unique identifier                This property is used to link test run with project.
  * @member {String} projectId
  */
 TestRunV2ApiResult.prototype['projectId'] = undefined;
 
 /**
- * Test plan unique identifier              This property is used to link test run with test plan.
+ * Test plan unique identifier                This property is used to link test run with test plan.
  * @member {String} testPlanId
  */
 TestRunV2ApiResult.prototype['testPlanId'] = undefined;

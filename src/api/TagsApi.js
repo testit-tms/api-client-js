@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Tags service.
 * @module api/TagsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TagsApi {
 
@@ -42,7 +42,7 @@ export default class TagsApi {
 
     /**
      * Delete tags
-     *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
+     *   Use case    User sets collection of tags internal (guid format) identifiers    System searches and deletes a collection of tags
      * @param {Object} opts Optional parameters
      * @param {module:model/SelectTagsApiModel} [selectTagsApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -60,7 +60,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -73,7 +73,7 @@ export default class TagsApi {
 
     /**
      * Delete tags
-     *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
+     *   Use case    User sets collection of tags internal (guid format) identifiers    System searches and deletes a collection of tags
      * @param {Object} opts Optional parameters
      * @param {module:model/SelectTagsApiModel} opts.selectTagsApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -88,7 +88,7 @@ export default class TagsApi {
 
     /**
      * Delete tag
-     *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
+     *   Use case    User sets tag internal (guid format) identifier    System search and delete tag
      * @param {String} id Tag internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -109,7 +109,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -122,7 +122,7 @@ export default class TagsApi {
 
     /**
      * Delete tag
-     *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
+     *   Use case    User sets tag internal (guid format) identifier    System search and delete tag
      * @param {String} id Tag internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -136,7 +136,7 @@ export default class TagsApi {
 
     /**
      * Create tag
-     *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
+     *   Use case    User sets tag model (listed in the request example)    User runs method execution    System creates tag    System returns tag model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTagApiModel} [createTagApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
@@ -154,7 +154,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = TagApiResult;
@@ -167,7 +167,7 @@ export default class TagsApi {
 
     /**
      * Create tag
-     *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
+     *   Use case    User sets tag model (listed in the request example)    User runs method execution    System creates tag    System returns tag model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTagApiModel} opts.createTagApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TagApiResult}
@@ -182,7 +182,7 @@ export default class TagsApi {
 
     /**
      * Update tag
-     *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
+     *   Use case    User sets tag ID and model (listed in the request example)    User runs method execution    System updates tag    System returns tag model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {String} [id] 
      * @param {module:model/UpdateTagApiModel} [updateTagApiModel] 
@@ -202,7 +202,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = TagApiResult;
@@ -215,7 +215,7 @@ export default class TagsApi {
 
     /**
      * Update tag
-     *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
+     *   Use case    User sets tag ID and model (listed in the request example)    User runs method execution    System updates tag    System returns tag model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {String} opts.id 
      * @param {module:model/UpdateTagApiModel} opts.updateTagApiModel 
@@ -231,7 +231,7 @@ export default class TagsApi {
 
     /**
      * Search tags
-     *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
+     *   Use case    User runs method execution    System returns collection of tags (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -258,7 +258,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagApiResult];
@@ -271,7 +271,7 @@ export default class TagsApi {
 
     /**
      * Search tags
-     *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
+     *   Use case    User runs method execution    System returns collection of tags (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)
@@ -290,7 +290,7 @@ export default class TagsApi {
 
     /**
      * Get all Tags that are used in TestPlans
-     *  Use case  User runs method execution  System returns tags (listed in the response example)
+     *   Use case    User runs method execution    System returns tags (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -317,7 +317,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagApiResult];
@@ -330,7 +330,7 @@ export default class TagsApi {
 
     /**
      * Get all Tags that are used in TestPlans
-     *  Use case  User runs method execution  System returns tags (listed in the response example)
+     *   Use case    User runs method execution    System returns tags (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)

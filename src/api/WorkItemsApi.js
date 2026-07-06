@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import AutoTestModel from '../model/AutoTestModel';
 import CreateWorkItemApiModel from '../model/CreateWorkItemApiModel';
 import IterationModel from '../model/IterationModel';
+import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import SearchWorkItemLinkUrlsApiResult from '../model/SearchWorkItemLinkUrlsApiResult';
 import SharedStepReferenceModel from '../model/SharedStepReferenceModel';
@@ -40,7 +41,7 @@ import WorkItemVersionModel from '../model/WorkItemVersionModel';
 /**
 * WorkItems service.
 * @module api/WorkItemsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class WorkItemsApi {
 
@@ -59,7 +60,7 @@ export default class WorkItemsApi {
 
     /**
      * Upload and link attachment to WorkItem
-     *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
+     *   Use case    User sets workItemId    User attaches a file    System creates attachment and links it to the work item    System returns attachment identifier
      * @param {String} id Work item internal identifier (guid format)
      * @param {Object} opts Optional parameters
      * @param {File} [file] Select file
@@ -84,7 +85,7 @@ export default class WorkItemsApi {
         'file': opts['file']
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -97,7 +98,7 @@ export default class WorkItemsApi {
 
     /**
      * Upload and link attachment to WorkItem
-     *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
+     *   Use case    User sets workItemId    User attaches a file    System creates attachment and links it to the work item    System returns attachment identifier
      * @param {String} id Work item internal identifier (guid format)
      * @param {Object} opts Optional parameters
      * @param {File} opts.file Select file
@@ -113,7 +114,7 @@ export default class WorkItemsApi {
 
     /**
      * Transform CheckList to TestCase
-     *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
+     *   Use case    User sets checklist identifier    User runs method execution    System transform CheckList to TestCase
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
      */
@@ -134,7 +135,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemModel;
@@ -147,7 +148,7 @@ export default class WorkItemsApi {
 
     /**
      * Transform CheckList to TestCase
-     *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
+     *   Use case    User sets checklist identifier    User runs method execution    System transform CheckList to TestCase
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
      */
@@ -161,7 +162,7 @@ export default class WorkItemsApi {
 
     /**
      * Get change history of WorkItem
-     *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
+     *   Use case    User sets work item identifier    User runs method execution    System return change history of WorkItem
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -194,7 +195,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemChangeModel];
@@ -207,7 +208,7 @@ export default class WorkItemsApi {
 
     /**
      * Get change history of WorkItem
-     *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
+     *   Use case    User sets work item identifier    User runs method execution    System return change history of WorkItem
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -227,7 +228,7 @@ export default class WorkItemsApi {
 
     /**
      * Delete like from WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System delete like from WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -248,7 +249,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -261,7 +262,7 @@ export default class WorkItemsApi {
 
     /**
      * Delete like from WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System delete like from WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -275,7 +276,7 @@ export default class WorkItemsApi {
 
     /**
      * Set like to WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System set like to WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -296,7 +297,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -309,7 +310,7 @@ export default class WorkItemsApi {
 
     /**
      * Set like to WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System set like to WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -323,7 +324,7 @@ export default class WorkItemsApi {
 
     /**
      * Get likes count of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return likes count of WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
      */
@@ -344,7 +345,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -357,7 +358,7 @@ export default class WorkItemsApi {
 
     /**
      * Get likes count of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return likes count of WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
      */
@@ -371,7 +372,7 @@ export default class WorkItemsApi {
 
     /**
      * Get likes of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return likes of WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemLikeModel>} and HTTP response
      */
@@ -392,7 +393,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemLikeModel];
@@ -405,7 +406,7 @@ export default class WorkItemsApi {
 
     /**
      * Get likes of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return likes of WorkItem
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemLikeModel>}
      */
@@ -418,8 +419,61 @@ export default class WorkItemsApi {
 
 
     /**
+     * Patch Test Case, Checklist or Shared Step
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} [operation] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2WorkItemsIdPatchWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['operation'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiV2WorkItemsIdPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/workItems/{id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Patch Test Case, Checklist or Shared Step
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2WorkItemsIdPatch(id, opts) {
+      return this.apiV2WorkItemsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Get test results history of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return test results history of WorkItem
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {Date} [from] Take results from this date
@@ -472,7 +526,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultHistoryReportApiResult];
@@ -485,7 +539,7 @@ export default class WorkItemsApi {
 
     /**
      * Get test results history of WorkItem
-     *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
+     *   Use case    User sets WorkItem identifier    User runs method execution    System return test results history of WorkItem
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {Date} opts.from Take results from this date
@@ -515,7 +569,7 @@ export default class WorkItemsApi {
 
     /**
      * Set WorkItem as actual
-     *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
+     *   Use case    User sets work item identifier    User runs method execution    System set WorkItem as actual
      * @param {String} id 
      * @param {String} versionId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
@@ -542,7 +596,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemModel;
@@ -555,7 +609,7 @@ export default class WorkItemsApi {
 
     /**
      * Set WorkItem as actual
-     *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
+     *   Use case    User sets work item identifier    User runs method execution    System set WorkItem as actual
      * @param {String} id 
      * @param {String} versionId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
@@ -596,7 +650,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SearchWorkItemLinkUrlsApiResult;
@@ -627,7 +681,7 @@ export default class WorkItemsApi {
 
     /**
      * Move WorkItem to another section
-     *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
+     *   Use case    User sets WorkItem identifier    User runs method execution    System move WorkItem to another section
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemMovePostModel} [workItemMovePostModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemShortModel} and HTTP response
@@ -645,7 +699,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemShortModel;
@@ -658,7 +712,7 @@ export default class WorkItemsApi {
 
     /**
      * Move WorkItem to another section
-     *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
+     *   Use case    User sets WorkItem identifier    User runs method execution    System move WorkItem to another section
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemMovePostModel} opts.workItemMovePostModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemShortModel}
@@ -690,7 +744,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemApiResult;
@@ -709,6 +763,52 @@ export default class WorkItemsApi {
      */
     apiV2WorkItemsPost(opts) {
       return this.apiV2WorkItemsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update Test Case, Checklist or Shared Step
+     *   Use case    User sets work item properties (listed in request parameters)    User runs method execution    System updates work item by identifier    System returns updated work item model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2WorkItemsPutWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['updateWorkItemApiModel'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/workItems', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Update Test Case, Checklist or Shared Step
+     *   Use case    User sets work item properties (listed in request parameters)    User runs method execution    System updates work item by identifier    System returns updated work item model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2WorkItemsPut(opts) {
+      return this.apiV2WorkItemsPutWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -744,7 +844,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortApiResult];
@@ -776,7 +876,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references in sections
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -810,7 +910,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceSectionModel];
@@ -823,7 +923,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references in sections
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -844,7 +944,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references in work items
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -878,7 +978,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceModel];
@@ -891,7 +991,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references in work items
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -912,7 +1012,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceModel>} and HTTP response
      */
@@ -933,7 +1033,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceModel];
@@ -946,7 +1046,7 @@ export default class WorkItemsApi {
 
     /**
      * Get SharedStep references
-     *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+     *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
      * @param {String} sharedStepId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SharedStepReferenceModel>}
      */
@@ -960,8 +1060,8 @@ export default class WorkItemsApi {
 
     /**
      * Delete all links AutoTests from WorkItem by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search and delete all autotests, related to found work item    System returns no content response
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     deleteAllWorkItemsFromAutoTestWithHttpInfo(id) {
@@ -981,7 +1081,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -994,8 +1094,8 @@ export default class WorkItemsApi {
 
     /**
      * Delete all links AutoTests from WorkItem by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search and delete all autotests, related to found work item    System returns no content response
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     deleteAllWorkItemsFromAutoTest(id) {
@@ -1008,8 +1108,8 @@ export default class WorkItemsApi {
 
     /**
      * Delete Test Case, Checklist or Shared Step by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System deletes work item    System returns no content response
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     deleteWorkItemWithHttpInfo(id) {
@@ -1029,7 +1129,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1042,8 +1142,8 @@ export default class WorkItemsApi {
 
     /**
      * Delete Test Case, Checklist or Shared Step by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System deletes work item    System returns no content response
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     deleteWorkItem(id) {
@@ -1056,8 +1156,8 @@ export default class WorkItemsApi {
 
     /**
      * Get all AutoTests linked to WorkItem by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search all autotests, related to found work item    System returns list of found autotests
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestModel>} and HTTP response
      */
     getAutoTestsForWorkItemWithHttpInfo(id) {
@@ -1077,7 +1177,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AutoTestModel];
@@ -1090,8 +1190,8 @@ export default class WorkItemsApi {
 
     /**
      * Get all AutoTests linked to WorkItem by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search all autotests, related to found work item    System returns list of found autotests
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestModel>}
      */
     getAutoTestsForWorkItem(id) {
@@ -1104,7 +1204,7 @@ export default class WorkItemsApi {
 
     /**
      * Get iterations by work item Id or GlobalId
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {String} [versionId] WorkItem version (guid format) identifier
      * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
@@ -1130,7 +1230,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [IterationModel];
@@ -1143,7 +1243,7 @@ export default class WorkItemsApi {
 
     /**
      * Get iterations by work item Id or GlobalId
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {String} opts.versionId WorkItem version (guid format) identifier
      * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
@@ -1159,8 +1259,8 @@ export default class WorkItemsApi {
 
     /**
      * Get Test Case, Checklist or Shared Step by Id or GlobalId
-     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    [Optional] User sets work item version number    User runs method execution    System search work item by identifier    [Optional] if User sets work item version identifier, system search work item version by identifier.    [Optional] if user sets work item version number, system search work item version by number    Otherwise, system search last work item version    System returns work item
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {String} [versionId] WorkItem version (guid format) identifier\"
      * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
@@ -1186,7 +1286,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemApiResult;
@@ -1199,8 +1299,8 @@ export default class WorkItemsApi {
 
     /**
      * Get Test Case, Checklist or Shared Step by Id or GlobalId
-     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    [Optional] User sets work item version number    User runs method execution    System search work item by identifier    [Optional] if User sets work item version identifier, system search work item version by identifier.    [Optional] if user sets work item version number, system search work item version by number    Otherwise, system search last work item version    System returns work item
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {String} opts.versionId WorkItem version (guid format) identifier\"
      * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
@@ -1216,7 +1316,7 @@ export default class WorkItemsApi {
 
     /**
      * Get WorkItem chronology by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search test results of all autotests, related to found work item    System sort results by CompletedOn ascending, then by CreatedDate ascending    System returns sorted collection of test results
      * @param {String} id Internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
      */
@@ -1237,7 +1337,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultChronologyModel];
@@ -1250,7 +1350,7 @@ export default class WorkItemsApi {
 
     /**
      * Get WorkItem chronology by Id or GlobalId
-     *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
+     *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search test results of all autotests, related to found work item    System sort results by CompletedOn ascending, then by CreatedDate ascending    System returns sorted collection of test results
      * @param {String} id Internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
      */
@@ -1264,11 +1364,11 @@ export default class WorkItemsApi {
 
     /**
      * Get WorkItem versions
-     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    User runs method execution    System search work item by identifier    [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item    System returns array of work item version models (listed in response example)
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
-     * @param {String} [workItemVersionId] WorkItem version (guid format) identifier\"
-     * @param {Number} [versionNumber] WorkItem version (integer format) number\"
+     * @param {String} [workItemVersionId] WorkItem version (guid format)  identifier\"
+     * @param {Number} [versionNumber] WorkItem version (integer format)  number\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemVersionModel>} and HTTP response
      */
     getWorkItemVersionsWithHttpInfo(id, opts) {
@@ -1291,7 +1391,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemVersionModel];
@@ -1304,11 +1404,11 @@ export default class WorkItemsApi {
 
     /**
      * Get WorkItem versions
-     *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
-     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    User runs method execution    System search work item by identifier    [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item    System returns array of work item version models (listed in response example)
+     * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
      * @param {Object} opts Optional parameters
-     * @param {String} opts.workItemVersionId WorkItem version (guid format) identifier\"
-     * @param {Number} opts.versionNumber WorkItem version (integer format) number\"
+     * @param {String} opts.workItemVersionId WorkItem version (guid format)  identifier\"
+     * @param {Number} opts.versionNumber WorkItem version (integer format)  number\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemVersionModel>}
      */
     getWorkItemVersions(id, opts) {
@@ -1341,7 +1441,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1387,7 +1487,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1405,52 +1505,6 @@ export default class WorkItemsApi {
      */
     restoreWorkItem(id) {
       return this.restoreWorkItemWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update Test Case, Checklist or Shared Step
-     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    updateWorkItemWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['updateWorkItemApiModel'];
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/api/v2/workItems', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update Test Case, Checklist or Shared Step
-     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    updateWorkItem(opts) {
-      return this.updateWorkItemWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

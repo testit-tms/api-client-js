@@ -15,12 +15,12 @@ import ApiClient from '../ApiClient';
 import AutoTestStep from './AutoTestStep';
 import ConfigurationShort from './ConfigurationShort';
 import Label from './Label';
-import Link from './Link';
+import LinkApiResult from './LinkApiResult';
 
 /**
  * The AutoTest model module.
  * @module model/AutoTest
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class AutoTest {
     /**
@@ -73,7 +73,7 @@ class AutoTest {
                 obj['externalId'] = ApiClient.convertToType(data['externalId'], 'String');
             }
             if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], [Link]);
+                obj['links'] = ApiClient.convertToType(data['links'], [LinkApiResult]);
             }
             if (data.hasOwnProperty('projectId')) {
                 obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
@@ -180,7 +180,7 @@ class AutoTest {
             }
             // validate the optional field `links` (array)
             for (const item of data['links']) {
-                Link.validateJSON(item);
+                LinkApiResult.validateJSON(item);
             };
         }
         // ensure the json data is a string
@@ -300,7 +300,7 @@ AutoTest.prototype['externalId'] = undefined;
 
 /**
  * Collection of the autotest links
- * @member {Array.<module:model/Link>} links
+ * @member {Array.<module:model/LinkApiResult>} links
  */
 AutoTest.prototype['links'] = undefined;
 

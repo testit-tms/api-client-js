@@ -102,6 +102,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isSystem (base name: "isSystem")', function() {
+      // uncomment below and update the code to test the property isSystem
+      //var instance = new TestitApiClient.CustomAttributeApiResult();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targets (base name: "targets")', function() {
+      // uncomment below and update the code to test the property targets
+      //var instance = new TestitApiClient.CustomAttributeApiResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

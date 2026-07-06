@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ExternalIssueApiFieldSuggestionReply from '../model/ExternalIssueApiFieldSuggestionReply';
+import ExternalIssueApiFieldSuggestionIReply from '../model/ExternalIssueApiFieldSuggestionIReply';
 import GetExternalIssueSuggestionsApiModel from '../model/GetExternalIssueSuggestionsApiModel';
 import ProblemDetails from '../model/ProblemDetails';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ExternalIssues service.
 * @module api/ExternalIssuesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ExternalIssuesApi {
 
@@ -42,7 +42,7 @@ export default class ExternalIssuesApi {
      * Returns list of suggestions from available external issues
      * @param {Object} opts Optional parameters
      * @param {module:model/GetExternalIssueSuggestionsApiModel} [getExternalIssueSuggestionsApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionReply} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionIReply} and HTTP response
      */
     apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts) {
       opts = opts || {};
@@ -57,10 +57,10 @@ export default class ExternalIssuesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ExternalIssueApiFieldSuggestionReply;
+      let returnType = ExternalIssueApiFieldSuggestionIReply;
       return this.apiClient.callApi(
         '/api/v2/external-issues/suggestions', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -72,7 +72,7 @@ export default class ExternalIssuesApi {
      * Returns list of suggestions from available external issues
      * @param {Object} opts Optional parameters
      * @param {module:model/GetExternalIssueSuggestionsApiModel} opts.getExternalIssueSuggestionsApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalIssueApiFieldSuggestionReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalIssueApiFieldSuggestionIReply}
      */
     apiV2ExternalIssuesSuggestionsPost(opts) {
       return this.apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts)

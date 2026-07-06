@@ -18,24 +18,26 @@ import CustomAttributeType from './CustomAttributeType';
 /**
  * The CustomAttributeApiResult model module.
  * @module model/CustomAttributeApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class CustomAttributeApiResult {
     /**
      * Constructs a new <code>CustomAttributeApiResult</code>.
      * @alias module:model/CustomAttributeApiResult
      * @param id {String} Unique ID of the attribute
-     * @param options {Array.<module:model/CustomAttributeOptionApiResult>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+     * @param options {Array.<module:model/CustomAttributeOptionApiResult>} Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
      * @param type {module:model/CustomAttributeType} Type of the attribute
      * @param isDeleted {Boolean} Indicates if the attribute is deleted
      * @param name {String} Name of the attribute
      * @param isEnabled {Boolean} Indicates if the attribute is enabled
      * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
      * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
+     * @param isSystem {Boolean} Indicates if the attribute is system
+     * @param targets {Array.<String>} Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
      */
-    constructor(id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    constructor(id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal, isSystem, targets) { 
         
-        CustomAttributeApiResult.initialize(this, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal);
+        CustomAttributeApiResult.initialize(this, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal, isSystem, targets);
     }
 
     /**
@@ -43,7 +45,7 @@ class CustomAttributeApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    static initialize(obj, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal, isSystem, targets) { 
         obj['id'] = id;
         obj['options'] = options;
         obj['type'] = type;
@@ -52,6 +54,8 @@ class CustomAttributeApiResult {
         obj['isEnabled'] = isEnabled;
         obj['isRequired'] = isRequired;
         obj['isGlobal'] = isGlobal;
+        obj['isSystem'] = isSystem;
+        obj['targets'] = targets;
     }
 
     /**
@@ -89,6 +93,12 @@ class CustomAttributeApiResult {
             if (data.hasOwnProperty('isGlobal')) {
                 obj['isGlobal'] = ApiClient.convertToType(data['isGlobal'], 'Boolean');
             }
+            if (data.hasOwnProperty('isSystem')) {
+                obj['isSystem'] = ApiClient.convertToType(data['isSystem'], 'Boolean');
+            }
+            if (data.hasOwnProperty('targets')) {
+                obj['targets'] = ApiClient.convertToType(data['targets'], ['String']);
+            }
         }
         return obj;
     }
@@ -123,6 +133,10 @@ class CustomAttributeApiResult {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['targets'])) {
+            throw new Error("Expected the field `targets` to be an array in the JSON data but got " + data['targets']);
+        }
 
         return true;
     }
@@ -130,7 +144,7 @@ class CustomAttributeApiResult {
 
 }
 
-CustomAttributeApiResult.RequiredProperties = ["id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isGlobal"];
+CustomAttributeApiResult.RequiredProperties = ["id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isGlobal", "isSystem", "targets"];
 
 /**
  * Unique ID of the attribute
@@ -139,7 +153,7 @@ CustomAttributeApiResult.RequiredProperties = ["id", "options", "type", "isDelet
 CustomAttributeApiResult.prototype['id'] = undefined;
 
 /**
- * Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+ * Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
  * @member {Array.<module:model/CustomAttributeOptionApiResult>} options
  */
 CustomAttributeApiResult.prototype['options'] = undefined;
@@ -179,6 +193,18 @@ CustomAttributeApiResult.prototype['isRequired'] = undefined;
  * @member {Boolean} isGlobal
  */
 CustomAttributeApiResult.prototype['isGlobal'] = undefined;
+
+/**
+ * Indicates if the attribute is system
+ * @member {Boolean} isSystem
+ */
+CustomAttributeApiResult.prototype['isSystem'] = undefined;
+
+/**
+ * Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+ * @member {Array.<String>} targets
+ */
+CustomAttributeApiResult.prototype['targets'] = undefined;
 
 
 

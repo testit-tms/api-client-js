@@ -24,5 +24,6 @@ Name | Type | Description | Notes
 **globalId** | [**Int64ChangedFieldViewModel**](Int64ChangedFieldViewModel.md) |  | 
 **versionNumber** | [**Int32ChangedFieldViewModel**](Int32ChangedFieldViewModel.md) |  | 
 **entityTypeName** | [**StringChangedFieldViewModel**](StringChangedFieldViewModel.md) |  | 
+**parentId** | [**GuidNullableChangedFieldViewModel**](GuidNullableChangedFieldViewModel.md) |  | 
 
 

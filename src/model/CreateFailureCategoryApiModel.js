@@ -18,7 +18,7 @@ import FailureCategory from './FailureCategory';
 /**
  * The CreateFailureCategoryApiModel model module.
  * @module model/CreateFailureCategoryApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class CreateFailureCategoryApiModel {
     /**

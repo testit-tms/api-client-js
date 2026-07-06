@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import ConfigurationModel from '../model/ConfigurationModel';
 import CreateTestPlanApiModel from '../model/CreateTestPlanApiModel';
-import GetXlsxTestPointsByTestPlanModel from '../model/GetXlsxTestPointsByTestPlanModel';
+import GetXlsxTestPointsByTestPlanApiModel from '../model/GetXlsxTestPointsByTestPlanApiModel';
 import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import SearchTestRunsApiModel from '../model/SearchTestRunsApiModel';
@@ -37,7 +37,7 @@ import WorkItemSelectModel from '../model/WorkItemSelectModel';
 /**
 * TestPlans service.
 * @module api/TestPlansApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TestPlansApi {
 
@@ -56,7 +56,7 @@ export default class TestPlansApi {
 
     /**
      * Add test-points to TestPlan with sections
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -79,7 +79,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -92,7 +92,7 @@ export default class TestPlansApi {
 
     /**
      * Add test-points to TestPlan with sections
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemSelectModel} opts.workItemSelectModel Filter object to retrieve work items for test-suite's project
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -107,8 +107,8 @@ export default class TestPlansApi {
 
     /**
      * Add WorkItems to TestPlan with Sections as TestSuites
-     *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -131,7 +131,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -144,8 +144,8 @@ export default class TestPlansApi {
 
     /**
      * Add WorkItems to TestPlan with Sections as TestSuites
-     *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -160,8 +160,8 @@ export default class TestPlansApi {
 
     /**
      * Get analytics by TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPointAnalyticResult} and HTTP response
      */
     apiV2TestPlansIdAnalyticsGetWithHttpInfo(id) {
@@ -181,7 +181,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPointAnalyticResult;
@@ -194,8 +194,8 @@ export default class TestPlansApi {
 
     /**
      * Get analytics by TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPointAnalyticResult}
      */
     apiV2TestPlansIdAnalyticsGet(id) {
@@ -232,7 +232,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanWithTestSuiteTreeModel;
@@ -260,8 +260,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan configurations
-     *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
     apiV2TestPlansIdConfigurationsGetWithHttpInfo(id) {
@@ -281,7 +281,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ConfigurationModel];
@@ -294,8 +294,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan configurations
-     *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */
     apiV2TestPlansIdConfigurationsGet(id) {
@@ -308,16 +308,16 @@ export default class TestPlansApi {
 
     /**
      * Export TestPoints from TestPlan in xls format
-     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [timeZoneOffsetInMinutes] 
-     * @param {module:model/GetXlsxTestPointsByTestPlanModel} [getXlsxTestPointsByTestPlanModel] 
+     * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} [getXlsxTestPointsByTestPlanApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['getXlsxTestPointsByTestPlanModel'];
+      let postBody = opts['getXlsxTestPointsByTestPlanApiModel'];
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling apiV2TestPlansIdExportTestPointsXlsxPost");
@@ -334,7 +334,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -347,11 +347,11 @@ export default class TestPlansApi {
 
     /**
      * Export TestPoints from TestPlan in xls format
-     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.timeZoneOffsetInMinutes 
-     * @param {module:model/GetXlsxTestPointsByTestPlanModel} opts.getXlsxTestPointsByTestPlanModel 
+     * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} opts.getXlsxTestPointsByTestPlanApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiV2TestPlansIdExportTestPointsXlsxPost(id, opts) {
@@ -364,8 +364,8 @@ export default class TestPlansApi {
 
     /**
      * Export TestResults history from TestPlan in xls format
-     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [mustReturnOnlyLastTestResult] 
      * @param {Boolean} [includeSteps] 
@@ -395,7 +395,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -408,8 +408,8 @@ export default class TestPlansApi {
 
     /**
      * Export TestResults history from TestPlan in xls format
-     *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.mustReturnOnlyLastTestResult 
      * @param {Boolean} opts.includeSteps 
@@ -427,8 +427,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan history
-     *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System return test plan history
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -460,7 +460,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanChangeModel];
@@ -473,8 +473,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan history
-     *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System return test plan history
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)
@@ -493,8 +493,8 @@ export default class TestPlansApi {
 
     /**
      * Get Links of TestPlan
-     *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] 
      * @param {Number} [take] 
@@ -522,7 +522,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanLink];
@@ -535,8 +535,8 @@ export default class TestPlansApi {
 
     /**
      * Get Links of TestPlan
-     *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip 
      * @param {Number} opts.take 
@@ -577,7 +577,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -606,8 +606,8 @@ export default class TestPlansApi {
 
     /**
      * Get summary by TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanSummaryModel} and HTTP response
      */
     apiV2TestPlansIdSummariesGetWithHttpInfo(id) {
@@ -627,7 +627,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanSummaryModel;
@@ -640,8 +640,8 @@ export default class TestPlansApi {
 
     /**
      * Get summary by TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanSummaryModel}
      */
     apiV2TestPlansIdSummariesGet(id) {
@@ -654,8 +654,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPoints with last result from TestPlan
-     *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {String} [testerId] 
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -689,7 +689,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointWithLastResultResponseModel];
@@ -702,8 +702,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPoints with last result from TestPlan
-     *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.testerId 
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -723,8 +723,8 @@ export default class TestPlansApi {
 
     /**
      * Reset TestPoints status of TestPlan
-     *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -747,7 +747,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -760,8 +760,8 @@ export default class TestPlansApi {
 
     /**
      * Reset TestPoints status of TestPlan
-     *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -799,7 +799,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -856,7 +856,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -885,8 +885,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestRuns of TestPlan
-     *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [notStarted] 
      * @param {Boolean} [inProgress] 
@@ -926,7 +926,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -939,8 +939,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestRuns of TestPlan
-     *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.notStarted 
      * @param {Boolean} opts.inProgress 
@@ -963,8 +963,8 @@ export default class TestPlansApi {
 
     /**
      * Search TestRuns of TestPlan
-     *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -997,7 +997,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -1010,8 +1010,8 @@ export default class TestPlansApi {
 
     /**
      * Search TestRuns of TestPlan
-     *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)
@@ -1051,7 +1051,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1077,8 +1077,8 @@ export default class TestPlansApi {
 
     /**
      * Send unlock TestPlan notification
-     *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiV2TestPlansIdUnlockRequestPostWithHttpInfo(id) {
@@ -1098,7 +1098,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1111,8 +1111,8 @@ export default class TestPlansApi {
 
     /**
      * Send unlock TestPlan notification
-     *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiV2TestPlansIdUnlockRequestPost(id) {
@@ -1125,7 +1125,7 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlans short models by Project identifiers
-     *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
+     *   Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
      * @param {Array.<String>} [requestBody] 
@@ -1145,7 +1145,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestPlanShortModel];
@@ -1158,7 +1158,7 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlans short models by Project identifiers
-     *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
+     *   Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted 
      * @param {Array.<String>} opts.requestBody 
@@ -1174,8 +1174,8 @@ export default class TestPlansApi {
 
     /**
      * Clone TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
      */
     cloneWithHttpInfo(id) {
@@ -1195,7 +1195,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1208,8 +1208,8 @@ export default class TestPlansApi {
 
     /**
      * Clone TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
      */
     clone(id) {
@@ -1222,8 +1222,8 @@ export default class TestPlansApi {
 
     /**
      * Complete TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     completeWithHttpInfo(id) {
@@ -1243,7 +1243,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1256,8 +1256,8 @@ export default class TestPlansApi {
 
     /**
      * Complete TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     complete(id) {
@@ -1270,7 +1270,7 @@ export default class TestPlansApi {
 
     /**
      * Create TestPlan
-     *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
+     *   Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestPlanApiModel} [createTestPlanApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
@@ -1288,7 +1288,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1301,7 +1301,7 @@ export default class TestPlansApi {
 
     /**
      * Create TestPlan
-     *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
+     *   Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestPlanApiModel} opts.createTestPlanApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
@@ -1316,8 +1316,8 @@ export default class TestPlansApi {
 
     /**
      * Delete TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     deleteTestPlanWithHttpInfo(id) {
@@ -1337,7 +1337,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1350,8 +1350,8 @@ export default class TestPlansApi {
 
     /**
      * Delete TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     deleteTestPlan(id) {
@@ -1364,8 +1364,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan by Id
-     *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
      */
     getTestPlanByIdWithHttpInfo(id) {
@@ -1385,7 +1385,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1398,8 +1398,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestPlan by Id
-     *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
      */
     getTestPlanById(id) {
@@ -1412,8 +1412,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestSuites Tree By Id
-     *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>} and HTTP response
      */
     getTestSuitesByIdWithHttpInfo(id) {
@@ -1433,7 +1433,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestSuiteHierarchyApiResult];
@@ -1446,8 +1446,8 @@ export default class TestPlansApi {
 
     /**
      * Get TestSuites Tree By Id
-     *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>}
      */
     getTestSuitesById(id) {
@@ -1460,8 +1460,8 @@ export default class TestPlansApi {
 
     /**
      * Pause TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     pauseWithHttpInfo(id) {
@@ -1481,7 +1481,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1494,8 +1494,8 @@ export default class TestPlansApi {
 
     /**
      * Pause TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     pause(id) {
@@ -1528,7 +1528,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1554,8 +1554,8 @@ export default class TestPlansApi {
 
     /**
      * Restore TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     restoreTestPlanWithHttpInfo(id) {
@@ -1575,7 +1575,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1588,8 +1588,8 @@ export default class TestPlansApi {
 
     /**
      * Restore TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     restoreTestPlan(id) {
@@ -1602,8 +1602,8 @@ export default class TestPlansApi {
 
     /**
      * Start TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     startWithHttpInfo(id) {
@@ -1623,7 +1623,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1636,8 +1636,8 @@ export default class TestPlansApi {
 
     /**
      * Start TestPlan
-     *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
-     * @param {String} id Test plan internal (guid format) or global (int format) identifier
+     *   Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+     * @param {String} id Test plan internal (guid format) or global (int  format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     start(id) {
@@ -1650,7 +1650,7 @@ export default class TestPlansApi {
 
     /**
      * Update TestPlan
-     *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
+     *   Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateTestPlanApiModel} [updateTestPlanApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1668,7 +1668,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1681,7 +1681,7 @@ export default class TestPlansApi {
 
     /**
      * Update TestPlan
-     *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
+     *   Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateTestPlanApiModel} opts.updateTestPlanApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

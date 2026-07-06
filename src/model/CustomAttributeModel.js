@@ -18,24 +18,26 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributeModel model module.
  * @module model/CustomAttributeModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class CustomAttributeModel {
     /**
      * Constructs a new <code>CustomAttributeModel</code>.
      * @alias module:model/CustomAttributeModel
      * @param id {String} Unique ID of the attribute
-     * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+     * @param targets {Array.<String>} Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+     * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
      * @param type {module:model/CustomAttributeTypesEnum} Type of the attribute
      * @param isDeleted {Boolean} Indicates if the attribute is deleted
+     * @param isSystem {Boolean} Indicates if the attribute is system
      * @param name {String} Name of the attribute
      * @param isEnabled {Boolean} Indicates if the attribute is enabled
      * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
      * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
      */
-    constructor(id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    constructor(id, targets, options, type, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal) { 
         
-        CustomAttributeModel.initialize(this, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal);
+        CustomAttributeModel.initialize(this, id, targets, options, type, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal);
     }
 
     /**
@@ -43,11 +45,13 @@ class CustomAttributeModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    static initialize(obj, id, targets, options, type, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal) { 
         obj['id'] = id;
+        obj['targets'] = targets;
         obj['options'] = options;
         obj['type'] = type;
         obj['isDeleted'] = isDeleted;
+        obj['isSystem'] = isSystem;
         obj['name'] = name;
         obj['isEnabled'] = isEnabled;
         obj['isRequired'] = isRequired;
@@ -68,6 +72,9 @@ class CustomAttributeModel {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
+            if (data.hasOwnProperty('targets')) {
+                obj['targets'] = ApiClient.convertToType(data['targets'], ['String']);
+            }
             if (data.hasOwnProperty('options')) {
                 obj['options'] = ApiClient.convertToType(data['options'], [CustomAttributeOptionModel]);
             }
@@ -76,6 +83,9 @@ class CustomAttributeModel {
             }
             if (data.hasOwnProperty('isDeleted')) {
                 obj['isDeleted'] = ApiClient.convertToType(data['isDeleted'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isSystem')) {
+                obj['isSystem'] = ApiClient.convertToType(data['isSystem'], 'Boolean');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -109,6 +119,10 @@ class CustomAttributeModel {
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['targets'])) {
+            throw new Error("Expected the field `targets` to be an array in the JSON data but got " + data['targets']);
+        }
         if (data['options']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['options'])) {
@@ -130,7 +144,7 @@ class CustomAttributeModel {
 
 }
 
-CustomAttributeModel.RequiredProperties = ["id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isGlobal"];
+CustomAttributeModel.RequiredProperties = ["id", "targets", "options", "type", "isDeleted", "isSystem", "name", "isEnabled", "isRequired", "isGlobal"];
 
 /**
  * Unique ID of the attribute
@@ -139,7 +153,13 @@ CustomAttributeModel.RequiredProperties = ["id", "options", "type", "isDeleted",
 CustomAttributeModel.prototype['id'] = undefined;
 
 /**
- * Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+ * Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+ * @member {Array.<String>} targets
+ */
+CustomAttributeModel.prototype['targets'] = undefined;
+
+/**
+ * Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
  * @member {Array.<module:model/CustomAttributeOptionModel>} options
  */
 CustomAttributeModel.prototype['options'] = undefined;
@@ -155,6 +175,12 @@ CustomAttributeModel.prototype['type'] = undefined;
  * @member {Boolean} isDeleted
  */
 CustomAttributeModel.prototype['isDeleted'] = undefined;
+
+/**
+ * Indicates if the attribute is system
+ * @member {Boolean} isSystem
+ */
+CustomAttributeModel.prototype['isSystem'] = undefined;
 
 /**
  * Name of the attribute

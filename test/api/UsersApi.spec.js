@@ -58,6 +58,36 @@
         done();
       });
     });
+    describe('apiV2UsersPost', function() {
+      it('should call apiV2UsersPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2UsersPost
+        //instance.apiV2UsersPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2UsersUserIdDelete', function() {
+      it('should call apiV2UsersUserIdDelete successfully', function(done) {
+        //uncomment below and update the code to test apiV2UsersUserIdDelete
+        //instance.apiV2UsersUserIdDelete(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2UsersUserIdGet', function() {
+      it('should call apiV2UsersUserIdGet successfully', function(done) {
+        //uncomment below and update the code to test apiV2UsersUserIdGet
+        //instance.apiV2UsersUserIdGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

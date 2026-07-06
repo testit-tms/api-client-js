@@ -20,7 +20,7 @@ import WebhookLogApiResult from '../model/WebhookLogApiResult';
 /**
 * WebhooksLogs service.
 * @module api/WebhooksLogsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class WebhooksLogsApi {
 
@@ -67,7 +67,7 @@ export default class WebhooksLogsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WebhookLogApiResult];
@@ -119,7 +119,7 @@ export default class WebhooksLogsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -165,7 +165,7 @@ export default class WebhooksLogsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WebhookLogApiResult;

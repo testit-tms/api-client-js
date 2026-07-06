@@ -17,14 +17,14 @@ import CreateTestStatusApiModel from '../model/CreateTestStatusApiModel';
 import ProblemDetails from '../model/ProblemDetails';
 import SearchTestStatusesApiModel from '../model/SearchTestStatusesApiModel';
 import TestStatusApiResult from '../model/TestStatusApiResult';
-import TestStatusApiResultReply from '../model/TestStatusApiResultReply';
+import TestStatusApiResultIReply from '../model/TestStatusApiResultIReply';
 import UpdateTestStatusApiModel from '../model/UpdateTestStatusApiModel';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
 
 /**
 * TestStatuses service.
 * @module api/TestStatusesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TestStatusesApi {
 
@@ -62,7 +62,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = 'Boolean';
@@ -106,7 +106,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -150,7 +150,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = TestStatusApiResult;
@@ -197,7 +197,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -243,7 +243,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = 'Boolean';
@@ -284,7 +284,7 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = TestStatusApiResult;
@@ -311,7 +311,7 @@ export default class TestStatusesApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchTestStatusesApiModel} [searchTestStatusesApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResultReply} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResultIReply} and HTTP response
      */
     apiV2TestStatusesSearchPostWithHttpInfo(opts) {
       opts = opts || {};
@@ -326,10 +326,10 @@ export default class TestStatusesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = TestStatusApiResultReply;
+      let returnType = TestStatusApiResultIReply;
       return this.apiClient.callApi(
         '/api/v2/testStatuses/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -340,7 +340,7 @@ export default class TestStatusesApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchTestStatusesApiModel} opts.searchTestStatusesApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestStatusApiResultReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestStatusApiResultIReply}
      */
     apiV2TestStatusesSearchPost(opts) {
       return this.apiV2TestStatusesSearchPostWithHttpInfo(opts)

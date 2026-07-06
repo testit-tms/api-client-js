@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkApiResult model module.
  * @module model/LinkApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkApiResult {
     /**
      * Constructs a new <code>LinkApiResult</code>.
      * @alias module:model/LinkApiResult
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkApiResult.initialize(this, url, hasInfo);
+        LinkApiResult.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -109,7 +111,7 @@ class LinkApiResult {
 
 }
 
-LinkApiResult.RequiredProperties = ["url", "hasInfo"];
+LinkApiResult.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * Link unique identifier

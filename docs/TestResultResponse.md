@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **outcome** | [**TestResultOutcome**](TestResultOutcome.md) |  | [optional] 
 **status** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
 **comment** | **String** |  | [optional] 
-**links** | [**[Link]**](Link.md) |  | [optional] 
+**links** | [**[LinkApiResult]**](LinkApiResult.md) |  | [optional] 
 **stepResults** | [**[StepResultApiModel]**](StepResultApiModel.md) |  | [optional] 
 **attachments** | [**[AttachmentApiResult]**](AttachmentApiResult.md) |  | [optional] 
 **autoTestId** | **String** |  | [optional] 

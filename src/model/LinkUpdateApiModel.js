@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkUpdateApiModel model module.
  * @module model/LinkUpdateApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkUpdateApiModel {
     /**
      * Constructs a new <code>LinkUpdateApiModel</code>.
      * @alias module:model/LinkUpdateApiModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} Flag defines if link relates to integrated external service
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkUpdateApiModel.initialize(this, url, hasInfo);
+        LinkUpdateApiModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkUpdateApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -109,7 +111,7 @@ class LinkUpdateApiModel {
 
 }
 
-LinkUpdateApiModel.RequiredProperties = ["url", "hasInfo"];
+LinkUpdateApiModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * Link unique identifier

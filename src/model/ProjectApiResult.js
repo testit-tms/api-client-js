@@ -12,13 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import CustomAttributeApiResult from './CustomAttributeApiResult';
 import ProjectType from './ProjectType';
 
 /**
  * The ProjectApiResult model module.
  * @module model/ProjectApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class ProjectApiResult {
     /**
@@ -27,6 +26,7 @@ class ProjectApiResult {
      * @param id {String} Unique ID of the project
      * @param name {String} Name of the project
      * @param isFavorite {Boolean} Indicates if the project is marked as favorite
+     * @param workItemsCount {Number} Number of work items in the project
      * @param isDeleted {Boolean} Indicates if the project is deleted
      * @param createdDate {Date} Creation date of the project
      * @param createdById {String} Unique ID of the project creator
@@ -34,9 +34,9 @@ class ProjectApiResult {
      * @param type {module:model/ProjectType} Type of the project
      * @param workflowId {String} ID of the workflow used in project
      */
-    constructor(id, name, isFavorite, isDeleted, createdDate, createdById, globalId, type, workflowId) { 
+    constructor(id, name, isFavorite, workItemsCount, isDeleted, createdDate, createdById, globalId, type, workflowId) { 
         
-        ProjectApiResult.initialize(this, id, name, isFavorite, isDeleted, createdDate, createdById, globalId, type, workflowId);
+        ProjectApiResult.initialize(this, id, name, isFavorite, workItemsCount, isDeleted, createdDate, createdById, globalId, type, workflowId);
     }
 
     /**
@@ -44,10 +44,11 @@ class ProjectApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, isFavorite, isDeleted, createdDate, createdById, globalId, type, workflowId) { 
+    static initialize(obj, id, name, isFavorite, workItemsCount, isDeleted, createdDate, createdById, globalId, type, workflowId) { 
         obj['id'] = id;
         obj['name'] = name;
         obj['isFavorite'] = isFavorite;
+        obj['workItemsCount'] = workItemsCount;
         obj['isDeleted'] = isDeleted;
         obj['createdDate'] = createdDate;
         obj['createdById'] = createdById;
@@ -79,11 +80,8 @@ class ProjectApiResult {
             if (data.hasOwnProperty('isFavorite')) {
                 obj['isFavorite'] = ApiClient.convertToType(data['isFavorite'], 'Boolean');
             }
-            if (data.hasOwnProperty('attributesScheme')) {
-                obj['attributesScheme'] = ApiClient.convertToType(data['attributesScheme'], [CustomAttributeApiResult]);
-            }
-            if (data.hasOwnProperty('testPlansAttributesScheme')) {
-                obj['testPlansAttributesScheme'] = ApiClient.convertToType(data['testPlansAttributesScheme'], [CustomAttributeApiResult]);
+            if (data.hasOwnProperty('workItemsCount')) {
+                obj['workItemsCount'] = ApiClient.convertToType(data['workItemsCount'], 'Number');
             }
             if (data.hasOwnProperty('testCasesCount')) {
                 obj['testCasesCount'] = ApiClient.convertToType(data['testCasesCount'], 'Number');
@@ -118,9 +116,6 @@ class ProjectApiResult {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], ProjectType);
             }
-            if (data.hasOwnProperty('isFlakyAuto')) {
-                obj['isFlakyAuto'] = ApiClient.convertToType(data['isFlakyAuto'], 'Boolean');
-            }
             if (data.hasOwnProperty('workflowId')) {
                 obj['workflowId'] = ApiClient.convertToType(data['workflowId'], 'String');
             }
@@ -152,26 +147,6 @@ class ProjectApiResult {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
-        if (data['attributesScheme']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['attributesScheme'])) {
-                throw new Error("Expected the field `attributesScheme` to be an array in the JSON data but got " + data['attributesScheme']);
-            }
-            // validate the optional field `attributesScheme` (array)
-            for (const item of data['attributesScheme']) {
-                CustomAttributeApiResult.validateJSON(item);
-            };
-        }
-        if (data['testPlansAttributesScheme']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['testPlansAttributesScheme'])) {
-                throw new Error("Expected the field `testPlansAttributesScheme` to be an array in the JSON data but got " + data['testPlansAttributesScheme']);
-            }
-            // validate the optional field `testPlansAttributesScheme` (array)
-            for (const item of data['testPlansAttributesScheme']) {
-                CustomAttributeApiResult.validateJSON(item);
-            };
-        }
         // ensure the json data is a string
         if (data['createdById'] && !(typeof data['createdById'] === 'string' || data['createdById'] instanceof String)) {
             throw new Error("Expected the field `createdById` to be a primitive type in the JSON string but got " + data['createdById']);
@@ -191,7 +166,7 @@ class ProjectApiResult {
 
 }
 
-ProjectApiResult.RequiredProperties = ["id", "name", "isFavorite", "isDeleted", "createdDate", "createdById", "globalId", "type", "workflowId"];
+ProjectApiResult.RequiredProperties = ["id", "name", "isFavorite", "workItemsCount", "isDeleted", "createdDate", "createdById", "globalId", "type", "workflowId"];
 
 /**
  * Unique ID of the project
@@ -218,16 +193,10 @@ ProjectApiResult.prototype['name'] = undefined;
 ProjectApiResult.prototype['isFavorite'] = undefined;
 
 /**
- * Collection of the project attributes
- * @member {Array.<module:model/CustomAttributeApiResult>} attributesScheme
+ * Number of work items in the project
+ * @member {Number} workItemsCount
  */
-ProjectApiResult.prototype['attributesScheme'] = undefined;
-
-/**
- * Collection of the project test plans attributes
- * @member {Array.<module:model/CustomAttributeApiResult>} testPlansAttributesScheme
- */
-ProjectApiResult.prototype['testPlansAttributesScheme'] = undefined;
+ProjectApiResult.prototype['workItemsCount'] = undefined;
 
 /**
  * Number of test cases in the project
@@ -294,12 +263,6 @@ ProjectApiResult.prototype['globalId'] = undefined;
  * @member {module:model/ProjectType} type
  */
 ProjectApiResult.prototype['type'] = undefined;
-
-/**
- * Indicates if the status \"Flaky/Stable\" inits automatically
- * @member {Boolean} isFlakyAuto
- */
-ProjectApiResult.prototype['isFlakyAuto'] = undefined;
 
 /**
  * ID of the workflow used in project

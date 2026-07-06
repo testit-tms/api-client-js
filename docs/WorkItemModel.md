@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **medianDuration** | **Number** | used for getting a median duration of all autotests related to this workitem | 
 **isDeleted** | **Boolean** |  | 
 **projectId** | **String** |  | 
-**entityTypeName** | [**WorkItemEntityTypes**](WorkItemEntityTypes.md) |  | 
+**entityTypeName** | [**WorkItemTypeModel**](WorkItemTypeModel.md) |  | 
 **isAutomated** | **Boolean** |  | 
 **autoTests** | [**[AutoTestModel]**](AutoTestModel.md) |  | [optional] 
 **attachments** | [**[AttachmentModel]**](AttachmentModel.md) |  | [optional] 
@@ -16,13 +16,13 @@ Name | Type | Description | Notes
 **sectionPostconditionSteps** | [**[StepModel]**](StepModel.md) |  | [optional] 
 **versionNumber** | **Number** | used for define chronology of workitem state in each version | 
 **iterations** | [**[IterationModel]**](IterationModel.md) |  | [optional] 
+**externalIssues** | [**[ExternalIssueModel]**](ExternalIssueModel.md) |  | 
+**parameters** | [**[WorkItemParameterKeyModel]**](WorkItemParameterKeyModel.md) |  | 
 **createdDate** | **Date** |  | 
 **modifiedDate** | **Date** |  | [optional] 
 **createdById** | **String** |  | 
 **modifiedById** | **String** |  | [optional] 
 **globalId** | **Number** |  | 
-**externalIssues** | [**[ExternalIssueModel]**](ExternalIssueModel.md) |  | 
-**parameters** | [**[WorkItemParameterKeyModel]**](WorkItemParameterKeyModel.md) |  | 
 **id** | **String** |  | 
 **sectionId** | **String** |  | 
 **description** | **String** |  | [optional] 

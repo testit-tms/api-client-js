@@ -13,13 +13,14 @@
 
 import ApiClient from '../ApiClient';
 import CompositeFilter from './CompositeFilter';
+import Group from './Group';
 import Order from './Order';
 import Page from './Page';
 
 /**
  * The Inquiry model module.
  * @module model/Inquiry
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class Inquiry {
     /**
@@ -52,6 +53,9 @@ class Inquiry {
         if (data) {
             obj = obj || new Inquiry();
 
+            if (data.hasOwnProperty('group')) {
+                obj['group'] = ApiClient.convertToType(data['group'], Group);
+            }
             if (data.hasOwnProperty('filter')) {
                 obj['filter'] = ApiClient.convertToType(data['filter'], CompositeFilter);
             }
@@ -76,6 +80,10 @@ class Inquiry {
             if (!data.hasOwnProperty(property)) {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
+        }
+        // validate the optional field `group`
+        if (data['group']) { // data not null
+          Group.validateJSON(data['group']);
         }
         // validate the optional field `filter`
         if (data['filter']) { // data not null
@@ -103,6 +111,11 @@ class Inquiry {
 }
 
 Inquiry.RequiredProperties = ["order"];
+
+/**
+ * @member {module:model/Group} group
+ */
+Inquiry.prototype['group'] = undefined;
 
 /**
  * @member {module:model/CompositeFilter} filter

@@ -19,7 +19,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestResultHistoryReportApiResult model module.
  * @module model/TestResultHistoryReportApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestResultHistoryReportApiResult {
     /**
@@ -27,7 +27,7 @@ class TestResultHistoryReportApiResult {
      * @alias module:model/TestResultHistoryReportApiResult
      * @param id {String} Internal test result identifier
      * @param createdDate {Date} Test result creation date
-     * @param userId {String} Internal identifier of user who stopped test run related to the test result or user who created the test result              If test run was stopped, this property equals identifier of user who stopped it. Otherwise, the property equals identifier of user who created the test result
+     * @param userId {String} Internal identifier of user who stopped test run related to the test result or user who created the test result                If test run was stopped, this property equals identifier of user who stopped it.  Otherwise, the property equals identifier of user who created the test result
      * @param isAutomated {Boolean} Boolean flag defines if test point related to the test result is automated or not
      * @param status {module:model/TestStatusApiResult} Status from test result with max modified date or from first created test result
      * @param createdById {String} Unique identifier of user who created first test result in the test run
@@ -273,7 +273,7 @@ TestResultHistoryReportApiResult.prototype['createdDate'] = undefined;
 TestResultHistoryReportApiResult.prototype['modifiedDate'] = undefined;
 
 /**
- * Internal identifier of user who stopped test run related to the test result or user who created the test result              If test run was stopped, this property equals identifier of user who stopped it. Otherwise, the property equals identifier of user who created the test result
+ * Internal identifier of user who stopped test run related to the test result or user who created the test result                If test run was stopped, this property equals identifier of user who stopped it.  Otherwise, the property equals identifier of user who created the test result
  * @member {String} userId
  */
 TestResultHistoryReportApiResult.prototype['userId'] = undefined;
@@ -315,7 +315,7 @@ TestResultHistoryReportApiResult.prototype['testPlanGlobalId'] = undefined;
 TestResultHistoryReportApiResult.prototype['testPlanName'] = undefined;
 
 /**
- * Configuration name of test point related to the test result or from test result itself              If test point related to the test result has configuration, this property will be equal to the test point configuration name. Otherwise, this property will be equal to the test result configuration name
+ * Configuration name of test point related to the test result or from test result itself                If test point related to the test result has configuration, this property will be equal to the test point configuration name.  Otherwise, this property will be equal to the test result configuration name
  * @member {String} configurationName
  */
 TestResultHistoryReportApiResult.prototype['configurationName'] = undefined;
@@ -327,7 +327,7 @@ TestResultHistoryReportApiResult.prototype['configurationName'] = undefined;
 TestResultHistoryReportApiResult.prototype['isAutomated'] = undefined;
 
 /**
- * Outcome from test result with max modified date or from first created test result              Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped.              If any test result related to the test run is linked with autotest and the run has an outcome, the outcome value equals to the worst outcome of the last modified test result. Otherwise, the outcome equals to the outcome of first created test result in the test run.
+ * Outcome from test result with max modified date or from first created test result                Property can contain one of these values: Passed, Failed, InProgress, Blocked, Skipped.                If any test result related to the test run is linked with autotest and the run has an outcome, the outcome value equals to the  worst outcome of the last modified test result. Otherwise, the outcome equals to the outcome of first created test result in the  test run.
  * @member {String} outcome
  */
 TestResultHistoryReportApiResult.prototype['outcome'] = undefined;
@@ -339,13 +339,13 @@ TestResultHistoryReportApiResult.prototype['outcome'] = undefined;
 TestResultHistoryReportApiResult.prototype['status'] = undefined;
 
 /**
- * Test result comment              If any test result related to the test run is linked with autotest, comment will have default value. Otherwise, the comment equals to the comment of first created test result in the test run
+ * Test result comment                If any test result related to the test run is linked with autotest, comment will have default value.  Otherwise, the comment equals to the comment of first created test result in the test run
  * @member {String} comment
  */
 TestResultHistoryReportApiResult.prototype['comment'] = undefined;
 
 /**
- * Test result links              If any test result related to the test run is linked with autotest, link will be equal to the links of last modified test result. Otherwise, the links equals to the links of first created test result in the test run.
+ * Test result links                If any test result related to the test run is linked with autotest, link will be equal to the links of last modified test result.  Otherwise, the links equals to the links of first created test result in the test run.
  * @member {Array.<module:model/LinkApiResult>} links
  */
 TestResultHistoryReportApiResult.prototype['links'] = undefined;
@@ -381,7 +381,7 @@ TestResultHistoryReportApiResult.prototype['createdById'] = undefined;
 TestResultHistoryReportApiResult.prototype['modifiedById'] = undefined;
 
 /**
- * Attachments related to the test result              If any test result related to the test run is linked with autotest, attachments will be equal to the attachments of last modified test result. Otherwise, the attachments equals to the attachments of first created test result in the test run.
+ * Attachments related to the test result                If any test result related to the test run is linked with autotest, attachments will be equal to the attachments of last modified  test result. Otherwise, the attachments equals to the attachments of first created test result in the test run.
  * @member {Array.<module:model/AttachmentApiResult>} attachments
  */
 TestResultHistoryReportApiResult.prototype['attachments'] = undefined;

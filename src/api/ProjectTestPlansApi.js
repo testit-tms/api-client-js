@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlans service.
 * @module api/ProjectTestPlansApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectTestPlansApi {
 
@@ -41,7 +41,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Get TestPlans analytics
-     *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
+     *   Use case    User sets project internal identifier    User sets query params    User runs method execution    System return analytics
      * @param {String} projectId Project internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
@@ -78,7 +78,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanWithAnalyticModel];
@@ -91,7 +91,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Get TestPlans analytics
-     *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
+     *   Use case    User sets project internal identifier    User sets query params    User runs method execution    System return analytics
      * @param {String} projectId Project internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted 
@@ -136,7 +136,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -164,7 +164,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Checks if TestPlan exists with the specified name exists for the project
-     *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
+     *   Use case    User sets project internal or global identifier    User runs method execution    System purge delete project workitems
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} name TestPlan name to check
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
@@ -191,7 +191,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Boolean';
@@ -204,7 +204,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Checks if TestPlan exists with the specified name exists for the project
-     *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
+     *   Use case    User sets project internal or global identifier    User runs method execution    System purge delete project workitems
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} name TestPlan name to check
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
@@ -242,7 +242,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -293,7 +293,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -321,7 +321,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Get Project TestPlans with analytics
-     *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
+     *   Use case    User sets project internal or global identifier    User sets request body    User runs method execution    System returns project testplans with analytics
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [mustUpdateCache = false)] 
@@ -357,7 +357,7 @@ export default class ProjectTestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestPlanWithAnalyticModel];
@@ -370,7 +370,7 @@ export default class ProjectTestPlansApi {
 
     /**
      * Get Project TestPlans with analytics
-     *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
+     *   Use case    User sets project internal or global identifier    User sets request body    User runs method execution    System returns project testplans with analytics
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.mustUpdateCache  (default to false)

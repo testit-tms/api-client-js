@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlanAttributes service.
 * @module api/ProjectTestPlanAttributesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectTestPlanAttributesApi {
 
@@ -42,7 +42,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Add attributes to project's test plans
-     *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
+     *   Use case    User sets project internal or global identifier and attributes identifiers    User runs method execution    System updates project and add attributes to project for test plans    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
@@ -66,7 +66,7 @@ export default class ProjectTestPlanAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -79,7 +79,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Add attributes to project's test plans
-     *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
+     *   Use case    User sets project internal or global identifier and attributes identifiers    User runs method execution    System updates project and add attributes to project for test plans    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody 
@@ -95,7 +95,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Delete attribute from project's test plans
-     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+     *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -122,7 +122,7 @@ export default class ProjectTestPlanAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -135,7 +135,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Delete attribute from project's test plans
-     *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+     *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} attributeId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -150,7 +150,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Get project's test plan attributes
-     *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
+     *   Use case    User runs method execution    System returns project for test plans attributes by project identifier
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
      */
@@ -171,7 +171,7 @@ export default class ProjectTestPlanAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [CustomAttributeModel];
@@ -184,7 +184,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Get project's test plan attributes
-     *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
+     *   Use case    User runs method execution    System returns project for test plans attributes by project identifier
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeModel>}
      */
@@ -231,7 +231,7 @@ export default class ProjectTestPlanAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [CustomAttributeGetModel];
@@ -264,7 +264,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Update attribute of project's test plans
-     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+     *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel] 
@@ -288,7 +288,7 @@ export default class ProjectTestPlanAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -301,7 +301,7 @@ export default class ProjectTestPlanAttributesApi {
 
     /**
      * Update attribute of project's test plans
-     *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+     *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} opts.customAttributeTestPlanProjectRelationPutModel 

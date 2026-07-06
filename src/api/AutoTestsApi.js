@@ -35,7 +35,7 @@ import WorkItemIdApiModel from '../model/WorkItemIdApiModel';
 /**
 * AutoTests service.
 * @module api/AutoTestsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class AutoTestsApi {
 
@@ -71,7 +71,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AutoTestBulkDeleteApiResult;
@@ -98,7 +98,7 @@ export default class AutoTestsApi {
 
     /**
      * Set \"Flaky\" status for multiple autotests
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -126,7 +126,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -139,7 +139,7 @@ export default class AutoTestsApi {
 
     /**
      * Set \"Flaky\" status for multiple autotests
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)
@@ -183,7 +183,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -212,7 +212,7 @@ export default class AutoTestsApi {
 
     /**
      * Get test results history for autotest
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets getTestResultHistoryReportQuery (listed in the example)    User runs method execution    System search for test results using filters set by user in getTestResultHistoryReportQuery and id    System returns the enumeration of test results
      * @param {String} id Autotest identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -246,7 +246,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [AutoTestResultHistoryApiResult];
@@ -259,7 +259,7 @@ export default class AutoTestsApi {
 
     /**
      * Get test results history for autotest
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets getTestResultHistoryReportQuery (listed in the example)    User runs method execution    System search for test results using filters set by user in getTestResultHistoryReportQuery and id    System returns the enumeration of test results
      * @param {String} id Autotest identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -280,7 +280,7 @@ export default class AutoTestsApi {
 
     /**
      * Get identifiers of changed linked work items
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
@@ -301,7 +301,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -314,7 +314,7 @@ export default class AutoTestsApi {
 
     /**
      * Get identifiers of changed linked work items
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
@@ -328,7 +328,7 @@ export default class AutoTestsApi {
 
     /**
      * Approve changes to work items linked to autotest
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {String} id 
      * @param {String} workItemId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -355,7 +355,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -368,7 +368,7 @@ export default class AutoTestsApi {
 
     /**
      * Approve changes to work items linked to autotest
-     * User permissions for project: - Read only - Execute - Write - Full control
+     * User permissions for project:  - Read only  - Execute  - Write  - Full control
      * @param {String} id 
      * @param {String} workItemId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -410,7 +410,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [AutoTestApiResult];
@@ -442,7 +442,7 @@ export default class AutoTestsApi {
 
     /**
      * Create autotest
-     *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+     *   This method creates a new autotest.    To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.    Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestCreateApiModel} [autoTestCreateApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
@@ -460,7 +460,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = AutoTestApiResult;
@@ -473,7 +473,7 @@ export default class AutoTestsApi {
 
     /**
      * Create autotest
-     *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+     *   This method creates a new autotest.    To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.    Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestCreateApiModel} opts.autoTestCreateApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
@@ -488,7 +488,7 @@ export default class AutoTestsApi {
 
     /**
      * Create multiple autotests
-     *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
+     *   Use case    User sets autotest parameters (listed in the example) and runs method execution    System creates autotest    [Optional] If steps enumeration is set, system creates step items and relates them to autotest    [Optional] If setup enumeration is set, system creates setup items and relates them to autotest    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest    [Optional] If label enumeration is set, system creates labels and relates them to autotest    [Optional] If link enumeration is set, system creates links and relates them to autotest    System returns autotest model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestCreateApiModel>} [autoTestCreateApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
@@ -506,7 +506,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [AutoTestApiResult];
@@ -519,7 +519,7 @@ export default class AutoTestsApi {
 
     /**
      * Create multiple autotests
-     *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
+     *   Use case    User sets autotest parameters (listed in the example) and runs method execution    System creates autotest    [Optional] If steps enumeration is set, system creates step items and relates them to autotest    [Optional] If setup enumeration is set, system creates setup items and relates them to autotest    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest    [Optional] If label enumeration is set, system creates labels and relates them to autotest    [Optional] If link enumeration is set, system creates links and relates them to autotest    System returns autotest model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestCreateApiModel>} opts.autoTestCreateApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestApiResult>}
@@ -534,7 +534,7 @@ export default class AutoTestsApi {
 
     /**
      * Delete autotest
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier and runs method execution    System finds the autotest by the identifier    System deletes autotest and returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -555,7 +555,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -568,7 +568,7 @@ export default class AutoTestsApi {
 
     /**
      * Delete autotest
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier and runs method execution    System finds the autotest by the identifier    System deletes autotest and returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -582,7 +582,7 @@ export default class AutoTestsApi {
 
     /**
      * Unlink autotest from work item
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    [Optional] User sets workitem internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.    [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.    System returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {String} [workItemId] Work item internal (UUID) or global (integer) identifier
@@ -607,7 +607,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -620,7 +620,7 @@ export default class AutoTestsApi {
 
     /**
      * Unlink autotest from work item
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    [Optional] User sets workitem internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.    [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.    System returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {String} opts.workItemId Work item internal (UUID) or global (integer) identifier
@@ -703,7 +703,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AutoTestModel];
@@ -754,7 +754,7 @@ export default class AutoTestsApi {
 
     /**
      * Get average autotest duration
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System calculates pass average duration and fail average duration of autotest from all related test results    System returns pass average duration and fail average duration for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestAverageDurationApiResult} and HTTP response
      */
@@ -775,7 +775,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AutoTestAverageDurationApiResult;
@@ -788,7 +788,7 @@ export default class AutoTestsApi {
 
     /**
      * Get average autotest duration
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System calculates pass average duration and fail average duration of autotest from all related test results    System returns pass average duration and fail average duration for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestAverageDurationApiResult}
      */
@@ -802,7 +802,7 @@ export default class AutoTestsApi {
 
     /**
      * Get autotest by internal or global ID
-     *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+     *   Use case    User sets autotest internal or global identifier and runs method execution    System returns autotest, which internal or global identifier equals the identifier value set in the previous action
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
      */
@@ -823,7 +823,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AutoTestApiResult;
@@ -836,7 +836,7 @@ export default class AutoTestsApi {
 
     /**
      * Get autotest by internal or global ID
-     *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+     *   Use case    User sets autotest internal or global identifier and runs method execution    System returns autotest, which internal or global identifier equals the identifier value set in the previous action
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
      */
@@ -850,7 +850,7 @@ export default class AutoTestsApi {
 
     /**
      * Get autotest chronology
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search all test results related to autotest (with default limit equal 100)    System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending    System returns test result chronology for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
      */
@@ -871,7 +871,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultChronologyModel];
@@ -884,7 +884,7 @@ export default class AutoTestsApi {
 
     /**
      * Get autotest chronology
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search all test results related to autotest (with default limit equal 100)    System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending    System returns test result chronology for autotest
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
      */
@@ -898,7 +898,7 @@ export default class AutoTestsApi {
 
     /**
      * Get completed tests runs for autotests
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search for all test runs related to the autotest    System returns the enumeration of test runs
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunByAutoTestApiResult>} and HTTP response
      */
@@ -919,7 +919,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunByAutoTestApiResult];
@@ -932,7 +932,7 @@ export default class AutoTestsApi {
 
     /**
      * Get completed tests runs for autotests
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search for all test runs related to the autotest    System returns the enumeration of test runs
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunByAutoTestApiResult>}
      */
@@ -946,8 +946,8 @@ export default class AutoTestsApi {
 
     /**
      * Get work items linked to autotest
-     *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
-     * @param {String} id Specifies the autotest entity ID.  You can copy it from the address bar in your web browser or use autotest GUID.
+     *   This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:    1. Open the project in GUI.                2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.                3. Select the autotest(s) you want to run using checkboxes.                4. In the toolbar above the test list, click <b>Run autotests</b>.
+     * @param {String} id Specifies the autotest entity ID.    You can copy it from the address bar in your web browser or use autotest GUID.
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] Specifies that a test is deleted or still relevant.
      * @param {Boolean} [isWorkItemDeleted = false)] OBSOLETE: Use `isDeleted` instead
@@ -973,7 +973,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AutoTestWorkItemIdentifierApiResult];
@@ -986,8 +986,8 @@ export default class AutoTestsApi {
 
     /**
      * Get work items linked to autotest
-     *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
-     * @param {String} id Specifies the autotest entity ID.  You can copy it from the address bar in your web browser or use autotest GUID.
+     *   This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:    1. Open the project in GUI.                2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.                3. Select the autotest(s) you want to run using checkboxes.                4. In the toolbar above the test list, click <b>Run autotests</b>.
+     * @param {String} id Specifies the autotest entity ID.    You can copy it from the address bar in your web browser or use autotest GUID.
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted Specifies that a test is deleted or still relevant.
      * @param {Boolean} opts.isWorkItemDeleted OBSOLETE: Use `isDeleted` instead (default to false)
@@ -1003,7 +1003,7 @@ export default class AutoTestsApi {
 
     /**
      * Link autotest with work items
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets work item internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    System finds the work item by the work item identifier    System relates the work item with the autotest and returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemIdApiModel} [workItemIdApiModel] 
@@ -1027,7 +1027,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1040,7 +1040,7 @@ export default class AutoTestsApi {
 
     /**
      * Link autotest with work items
-     *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
+     *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets work item internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    System finds the work item by the work item identifier    System relates the work item with the autotest and returns no content response
      * @param {String} id Autotest internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/WorkItemIdApiModel} opts.workItemIdApiModel 
@@ -1056,7 +1056,7 @@ export default class AutoTestsApi {
 
     /**
      * Update autotest
-     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestUpdateApiModel} [autoTestUpdateApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1074,7 +1074,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1087,7 +1087,7 @@ export default class AutoTestsApi {
 
     /**
      * Update autotest
-     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/AutoTestUpdateApiModel} opts.autoTestUpdateApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1102,7 +1102,7 @@ export default class AutoTestsApi {
 
     /**
      * Update multiple autotests
-     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestUpdateApiModel>} [autoTestUpdateApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1120,7 +1120,7 @@ export default class AutoTestsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1133,7 +1133,7 @@ export default class AutoTestsApi {
 
     /**
      * Update multiple autotests
-     *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+     *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/AutoTestUpdateApiModel>} opts.autoTestUpdateApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

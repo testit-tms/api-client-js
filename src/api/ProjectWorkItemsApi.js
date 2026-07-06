@@ -13,6 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateWorkItemPreviewsApiModel from '../model/CreateWorkItemPreviewsApiModel';
+import GenerateWorkItemPreviewsApiModel from '../model/GenerateWorkItemPreviewsApiModel';
+import GenerateWorkItemPreviewsApiResult from '../model/GenerateWorkItemPreviewsApiResult';
 import ProblemDetails from '../model/ProblemDetails';
 import TagShortApiResult from '../model/TagShortApiResult';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
@@ -27,7 +30,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * ProjectWorkItems service.
 * @module api/ProjectWorkItemsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectWorkItemsApi {
 
@@ -42,6 +45,104 @@ export default class ProjectWorkItemsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateWorkItemPreviewsApiModel} [createWorkItemPreviewsApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2ProjectsProjectIdWorkItemsPreviewsBulkPostWithHttpInfo(projectId, opts) {
+      opts = opts || {};
+      let postBody = opts['createWorkItemPreviewsApiModel'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost");
+      }
+
+      let pathParams = {
+        'projectId': projectId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/projects/{projectId}/work-items/previews/bulk', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateWorkItemPreviewsApiModel} opts.createWorkItemPreviewsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsPreviewsBulkPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GenerateWorkItemPreviewsApiModel} [generateWorkItemPreviewsApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenerateWorkItemPreviewsApiResult} and HTTP response
+     */
+    apiV2ProjectsProjectIdWorkItemsPreviewsPostWithHttpInfo(projectId, opts) {
+      opts = opts || {};
+      let postBody = opts['generateWorkItemPreviewsApiModel'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling apiV2ProjectsProjectIdWorkItemsPreviewsPost");
+      }
+
+      let pathParams = {
+        'projectId': projectId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = GenerateWorkItemPreviewsApiResult;
+      return this.apiClient.callApi(
+        '/api/v2/projects/{projectId}/work-items/previews', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GenerateWorkItemPreviewsApiModel} opts.generateWorkItemPreviewsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenerateWorkItemPreviewsApiResult}
+     */
+    apiV2ProjectsProjectIdWorkItemsPreviewsPost(projectId, opts) {
+      return this.apiV2ProjectsProjectIdWorkItemsPreviewsPostWithHttpInfo(projectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -79,7 +180,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemGroupModel];
@@ -145,7 +246,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -211,7 +312,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortApiResult];
@@ -283,7 +384,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemIndexApiResult;
@@ -317,7 +418,7 @@ export default class ProjectWorkItemsApi {
 
     /**
      * Get WorkItems Tags
-     *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+     *   Use case    User sets project internal identifier    User runs method execution    System returns work items tags
      * @param {String} projectId Project internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] 
@@ -342,7 +443,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagShortApiResult];
@@ -355,7 +456,7 @@ export default class ProjectWorkItemsApi {
 
     /**
      * Get WorkItems Tags
-     *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+     *   Use case    User sets project internal identifier    User runs method execution    System returns work items tags
      * @param {String} projectId Project internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted 
@@ -371,7 +472,7 @@ export default class ProjectWorkItemsApi {
 
     /**
      * Get project work items
-     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+     *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project    [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted    If User did not set isDeleted field value, System search all  workitems related to project    System returns array of found workitems (listed in response model)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted = false)] If result must consist of only actual/deleted work items
@@ -410,7 +511,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];
@@ -423,7 +524,7 @@ export default class ProjectWorkItemsApi {
 
     /**
      * Get project work items
-     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+     *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project    [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted    If User did not set isDeleted field value, System search all  workitems related to project    System returns array of found workitems (listed in response model)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted work items (default to false)

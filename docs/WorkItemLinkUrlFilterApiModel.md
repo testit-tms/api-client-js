@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**types** | [**[WorkItemEntityTypes]**](WorkItemEntityTypes.md) |  | [optional] 
+**types** | [**[WorkItemTypeModel]**](WorkItemTypeModel.md) |  | [optional] 
 **searchUrl** | **String** |  | [optional] 
 
 

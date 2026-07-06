@@ -14,17 +14,17 @@
 import ApiClient from '../ApiClient';
 import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
-import WorkItemEntityTypes from './WorkItemEntityTypes';
 import WorkItemExternalMetadataFilterModel from './WorkItemExternalMetadataFilterModel';
 import WorkItemLinkFilterModel from './WorkItemLinkFilterModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The TestSuiteWorkItemsSearchModel model module.
  * @module model/TestSuiteWorkItemsSearchModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestSuiteWorkItemsSearchModel {
     /**
@@ -59,7 +59,7 @@ class TestSuiteWorkItemsSearchModel {
                 obj['tagNames'] = ApiClient.convertToType(data['tagNames'], ['String']);
             }
             if (data.hasOwnProperty('entityTypes')) {
-                obj['entityTypes'] = ApiClient.convertToType(data['entityTypes'], [WorkItemEntityTypes]);
+                obj['entityTypes'] = ApiClient.convertToType(data['entityTypes'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('nameOrId')) {
                 obj['nameOrId'] = ApiClient.convertToType(data['nameOrId'], 'String');
@@ -107,7 +107,7 @@ class TestSuiteWorkItemsSearchModel {
                 obj['sourceTypes'] = ApiClient.convertToType(data['sourceTypes'], [WorkItemSourceTypeModel]);
             }
             if (data.hasOwnProperty('types')) {
-                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemEntityTypes]);
+                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], DateTimeRangeSelectorModel);
@@ -272,8 +272,8 @@ class TestSuiteWorkItemsSearchModel {
 TestSuiteWorkItemsSearchModel.prototype['tagNames'] = undefined;
 
 /**
- * Collection of types of work item  Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
- * @member {Array.<module:model/WorkItemEntityTypes>} entityTypes
+ * Collection of types of work item    Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
+ * @member {Array.<module:model/WorkItemTypeModel>} entityTypes
  */
 TestSuiteWorkItemsSearchModel.prototype['entityTypes'] = undefined;
 
@@ -369,7 +369,7 @@ TestSuiteWorkItemsSearchModel.prototype['sourceTypes'] = undefined;
 
 /**
  * Collection of types of work item
- * @member {Array.<module:model/WorkItemEntityTypes>} types
+ * @member {Array.<module:model/WorkItemTypeModel>} types
  */
 TestSuiteWorkItemsSearchModel.prototype['types'] = undefined;
 

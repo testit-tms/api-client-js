@@ -21,6 +21,7 @@ import CreateTestRunAndFillByConfigurationsApiModel from '../model/CreateTestRun
 import CreateTestRunAndFillByWorkItemsApiModel from '../model/CreateTestRunAndFillByWorkItemsApiModel';
 import ManualRerunApiResult from '../model/ManualRerunApiResult';
 import ManualRerunSelectTestResultsApiModel from '../model/ManualRerunSelectTestResultsApiModel';
+import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import TestPointResultApiResult from '../model/TestPointResultApiResult';
 import TestResultsStatisticsApiResult from '../model/TestResultsStatisticsApiResult';
@@ -37,7 +38,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestRuns service.
 * @module api/TestRunsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TestRunsApi {
 
@@ -56,7 +57,7 @@ export default class TestRunsApi {
 
     /**
      * Delete multiple test runs
-     *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+     *   Use case    User sets selection parameters of test runs    System search and delete collection of test runs    System returns the number of deleted test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -74,7 +75,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -87,7 +88,7 @@ export default class TestRunsApi {
 
     /**
      * Delete multiple test runs
-     *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+     *   Use case    User sets selection parameters of test runs    System search and delete collection of test runs    System returns the number of deleted test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -122,7 +123,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AutoTestNamespacesCountResponse;
@@ -148,7 +149,7 @@ export default class TestRunsApi {
 
     /**
      * Delete test run
-     *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
+     *   Use case    User sets test run internal (guid format) identifier    System search and delete test run
      * @param {String} id Test run internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -169,7 +170,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -182,7 +183,7 @@ export default class TestRunsApi {
 
     /**
      * Delete test run
-     *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
+     *   Use case    User sets test run internal (guid format) identifier    System search and delete test run
      * @param {String} id Test run internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -195,8 +196,61 @@ export default class TestRunsApi {
 
 
     /**
+     * Patch test run
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} [operation] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2TestRunsIdPatchWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['operation'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiV2TestRunsIdPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/testRuns/{id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Patch test run
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2TestRunsIdPatch(id, opts) {
+      return this.apiV2TestRunsIdPatchWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Permanently delete test run from archive
-     *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+     *   Use case    User sets archived test run internal (guid format) identifier    System search and purge archived test run
      * @param {String} id Test run internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -217,7 +271,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -230,7 +284,7 @@ export default class TestRunsApi {
 
     /**
      * Permanently delete test run from archive
-     *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+     *   Use case    User sets archived test run internal (guid format) identifier    System search and purge archived test run
      * @param {String} id Test run internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -267,7 +321,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ManualRerunApiResult;
@@ -295,7 +349,7 @@ export default class TestRunsApi {
 
     /**
      * Restore test run from the archive
-     *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+     *   Use case    User sets archived test run internal (guid format) identifier    System search and restore test run
      * @param {String} id Unique ID of the test run
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -316,7 +370,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -329,7 +383,7 @@ export default class TestRunsApi {
 
     /**
      * Restore test run from the archive
-     *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+     *   Use case    User sets archived test run internal (guid format) identifier    System search and restore test run
      * @param {String} id Unique ID of the test run
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -366,7 +420,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestResultsStatisticsApiResult;
@@ -414,7 +468,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointResultApiResult];
@@ -463,7 +517,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -511,7 +565,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Date';
@@ -537,7 +591,7 @@ export default class TestRunsApi {
 
     /**
      * Permanently delete multiple test runs from archive
-     *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+     *   Use case    User sets selection parameters of archived test runs    System search and delete collection of archived test runs    System returns the number of deleted archived test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -555,7 +609,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -568,7 +622,7 @@ export default class TestRunsApi {
 
     /**
      * Permanently delete multiple test runs from archive
-     *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+     *   Use case    User sets selection parameters of archived test runs    System search and delete collection of archived test runs    System returns the number of deleted archived test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -583,7 +637,7 @@ export default class TestRunsApi {
 
     /**
      * Restore multiple test runs from the archive
-     *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+     *   Use case    User sets selection parameters of archived test runs    System search and restore collection of archived test runs    System returns the number of restored test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -601,7 +655,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -614,7 +668,7 @@ export default class TestRunsApi {
 
     /**
      * Restore multiple test runs from the archive
-     *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+     *   Use case    User sets selection parameters of archived test runs    System search and restore collection of archived test runs    System returns the number of restored test runs
      * @param {Object} opts Optional parameters
      * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -656,7 +710,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestRunShortApiResult];
@@ -705,7 +759,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -732,7 +786,7 @@ export default class TestRunsApi {
 
     /**
      * Complete TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System completes test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -753,7 +807,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -766,7 +820,7 @@ export default class TestRunsApi {
 
     /**
      * Complete TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System completes test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -780,7 +834,7 @@ export default class TestRunsApi {
 
     /**
      * Create test runs based on autotests and configurations
-     * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+     * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} [createTestRunAndFillByAutoTestsApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -798,7 +852,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -811,7 +865,7 @@ export default class TestRunsApi {
 
     /**
      * Create test runs based on autotests and configurations
-     * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+     * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} opts.createTestRunAndFillByAutoTestsApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -826,7 +880,7 @@ export default class TestRunsApi {
 
     /**
      * Create test runs picking the needed test points
-     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
+     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} [createTestRunAndFillByConfigurationsApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -844,7 +898,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -857,7 +911,7 @@ export default class TestRunsApi {
 
     /**
      * Create test runs picking the needed test points
-     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
+     * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} opts.createTestRunAndFillByConfigurationsApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -872,7 +926,7 @@ export default class TestRunsApi {
 
     /**
      * Create test run based on configurations and work items
-     * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+     * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} [createTestRunAndFillByWorkItemsApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -890,7 +944,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -903,7 +957,7 @@ export default class TestRunsApi {
 
     /**
      * Create test run based on configurations and work items
-     * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+     * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} opts.createTestRunAndFillByWorkItemsApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -918,7 +972,7 @@ export default class TestRunsApi {
 
     /**
      * Create empty TestRun
-     *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+     *   Use case    User sets test run model (listed in the request example)    User runs method execution    System creates test run    System returns test run model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateEmptyTestRunApiModel} [createEmptyTestRunApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -936,7 +990,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -949,7 +1003,7 @@ export default class TestRunsApi {
 
     /**
      * Create empty TestRun
-     *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+     *   Use case    User sets test run model (listed in the request example)    User runs method execution    System creates test run    System returns test run model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateEmptyTestRunApiModel} opts.createEmptyTestRunApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -964,7 +1018,7 @@ export default class TestRunsApi {
 
     /**
      * Get TestRun by Id
-     *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+     *   Use case    User sets test run identifier    User runs method execution    System finds test run    System returns test run
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
      */
@@ -985,7 +1039,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -998,7 +1052,7 @@ export default class TestRunsApi {
 
     /**
      * Get TestRun by Id
-     *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+     *   Use case    User sets test run identifier    User runs method execution    System finds test run    System returns test run
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
      */
@@ -1036,7 +1090,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -1065,7 +1119,7 @@ export default class TestRunsApi {
 
     /**
      * Start TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System starts test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1086,7 +1140,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1099,7 +1153,7 @@ export default class TestRunsApi {
 
     /**
      * Start TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System starts test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1113,7 +1167,7 @@ export default class TestRunsApi {
 
     /**
      * Stop TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System stops test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -1134,7 +1188,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1147,7 +1201,7 @@ export default class TestRunsApi {
 
     /**
      * Stop TestRun
-     *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+     *   Use case    User sets test run identifier    User runs method execution    System stops test run    System returns no content response
      * @param {String} id Test Run internal identifier (GUID format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -1161,7 +1215,7 @@ export default class TestRunsApi {
 
     /**
      * Update empty TestRun
-     *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+     *   Use case    User sets test run properties (listed in the request example)    User runs method execution    System updates test run    System returns returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateEmptyTestRunApiModel} [updateEmptyTestRunApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1179,7 +1233,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1192,7 +1246,7 @@ export default class TestRunsApi {
 
     /**
      * Update empty TestRun
-     *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+     *   Use case    User sets test run properties (listed in the request example)    User runs method execution    System updates test run    System returns returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateEmptyTestRunApiModel} opts.updateEmptyTestRunApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

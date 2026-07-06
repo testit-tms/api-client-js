@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import WorkItemEntityTypes from './WorkItemEntityTypes';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The WorkItemLinkUrlFilterApiModel model module.
  * @module model/WorkItemLinkUrlFilterApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemLinkUrlFilterApiModel {
     /**
@@ -49,7 +49,7 @@ class WorkItemLinkUrlFilterApiModel {
             obj = obj || new WorkItemLinkUrlFilterApiModel();
 
             if (data.hasOwnProperty('types')) {
-                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemEntityTypes]);
+                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('searchUrl')) {
                 obj['searchUrl'] = ApiClient.convertToType(data['searchUrl'], 'String');
@@ -82,7 +82,7 @@ class WorkItemLinkUrlFilterApiModel {
 
 
 /**
- * @member {Array.<module:model/WorkItemEntityTypes>} types
+ * @member {Array.<module:model/WorkItemTypeModel>} types
  */
 WorkItemLinkUrlFilterApiModel.prototype['types'] = undefined;
 

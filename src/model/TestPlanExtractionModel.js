@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The TestPlanExtractionModel model module.
  * @module model/TestPlanExtractionModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestPlanExtractionModel {
     /**

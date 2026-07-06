@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectSections service.
 * @module api/ProjectSectionsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectSectionsApi {
 
@@ -39,7 +39,7 @@ export default class ProjectSectionsApi {
 
     /**
      * Get project sections
-     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
+     *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all sections related to the project    System returns array of sections (listed in response)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -72,7 +72,7 @@ export default class ProjectSectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [SectionModel];
@@ -85,7 +85,7 @@ export default class ProjectSectionsApi {
 
     /**
      * Get project sections
-     *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
+     *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all sections related to the project    System returns array of sections (listed in response)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)

@@ -96,6 +96,30 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property archiveOutdatedTestRunsEnabled (base name: "archiveOutdatedTestRunsEnabled")', function() {
+      // uncomment below and update the code to test the property archiveOutdatedTestRunsEnabled
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property testRunsArchiveLimitEnabled (base name: "testRunsArchiveLimitEnabled")', function() {
+      // uncomment below and update the code to test the property testRunsArchiveLimitEnabled
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property testRunsRetentionPeriodDays (base name: "testRunsRetentionPeriodDays")', function() {
+      // uncomment below and update the code to test the property testRunsRetentionPeriodDays
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maxActiveTestRunsCount (base name: "maxActiveTestRunsCount")', function() {
+      // uncomment below and update the code to test the property maxActiveTestRunsCount
+      //var instance = new TestitApiClient.AutoTestProjectSettingsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

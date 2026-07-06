@@ -18,7 +18,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The GlobalCustomAttributePostModel model module.
  * @module model/GlobalCustomAttributePostModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class GlobalCustomAttributePostModel {
     /**
@@ -126,7 +126,7 @@ GlobalCustomAttributePostModel.prototype['isEnabled'] = undefined;
 GlobalCustomAttributePostModel.prototype['isRequired'] = undefined;
 
 /**
- * Collection of attribute options   Available for attributes of type `options` and `multiple options` only
+ * Collection of attribute options      Available for attributes of type `options` and `multiple options` only
  * @member {Array.<module:model/CustomAttributeOptionPostModel>} options
  */
 GlobalCustomAttributePostModel.prototype['options'] = undefined;

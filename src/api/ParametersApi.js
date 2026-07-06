@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Parameters service.
 * @module api/ParametersApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ParametersApi {
 
@@ -44,7 +44,7 @@ export default class ParametersApi {
 
     /**
      * Create multiple parameters
-     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
+     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System creates parameters    System returns list of parameter model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/CreateParameterApiModel>} [createParameterApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
@@ -62,7 +62,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [ParameterApiResult];
@@ -75,7 +75,7 @@ export default class ParametersApi {
 
     /**
      * Create multiple parameters
-     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
+     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System creates parameters    System returns list of parameter model (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/CreateParameterApiModel>} opts.createParameterApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
@@ -90,7 +90,7 @@ export default class ParametersApi {
 
     /**
      * Update multiple parameters
-     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
+     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System updates parameters
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/UpdateParameterApiModel>} [updateParameterApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -108,7 +108,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -121,7 +121,7 @@ export default class ParametersApi {
 
     /**
      * Update multiple parameters
-     *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
+     *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System updates parameters
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/UpdateParameterApiModel>} opts.updateParameterApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -136,7 +136,7 @@ export default class ParametersApi {
 
     /**
      * Get parameters as group
-     *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
+     *   Use case    User runs method execution    System search parameters    System returns parameters models as groups (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [parameterKeyIds] 
      * @param {String} [name] 
@@ -171,7 +171,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ParameterGroupApiResult];
@@ -184,7 +184,7 @@ export default class ParametersApi {
 
     /**
      * Get parameters as group
-     *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
+     *   Use case    User runs method execution    System search parameters    System returns parameters models as groups (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.parameterKeyIds 
      * @param {String} opts.name 
@@ -207,7 +207,7 @@ export default class ParametersApi {
 
     /**
      * Check existence parameter key in system
-     *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
+     *   Use case    User sets name of parameter key    User runs method execution    System search parameter key    System returns the flag for the existence of the parameter key in the system
      * @param {String} name 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
      */
@@ -228,7 +228,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Boolean';
@@ -241,7 +241,7 @@ export default class ParametersApi {
 
     /**
      * Check existence parameter key in system
-     *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
+     *   Use case    User sets name of parameter key    User runs method execution    System search parameter key    System returns the flag for the existence of the parameter key in the system
      * @param {String} name 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
      */
@@ -255,7 +255,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameter key values
-     *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
+     *   Use case    User sets parameter key (string format)    User runs method execution    System search parameter values using the key    System returns parameter
      * @param {String} key Parameter key (string format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
      */
@@ -276,7 +276,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -289,7 +289,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameter key values
-     *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
+     *   Use case    User sets parameter key (string format)    User runs method execution    System search parameter values using the key    System returns parameter
      * @param {String} key Parameter key (string format)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
      */
@@ -303,7 +303,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameter keys
-     *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
+     *   Use case    User runs method execution    System search all parameter keys    System returns parameter keys
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [projectIds] 
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -332,7 +332,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -345,7 +345,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameter keys
-     *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
+     *   Use case    User runs method execution    System search all parameter keys    System returns parameter keys
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.projectIds 
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -392,7 +392,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [ParameterGroupApiResult];
@@ -451,7 +451,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [ParameterApiResult];
@@ -483,7 +483,7 @@ export default class ParametersApi {
 
     /**
      * Create parameter
-     *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
+     *   Use case    User sets parameter model (listed in the request example)    User runs method execution    System creates parameter    System returns parameter model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateParameterApiModel} [createParameterApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
@@ -501,7 +501,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ParameterApiResult;
@@ -514,7 +514,7 @@ export default class ParametersApi {
 
     /**
      * Create parameter
-     *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
+     *   Use case    User sets parameter model (listed in the request example)    User runs method execution    System creates parameter    System returns parameter model
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateParameterApiModel} opts.createParameterApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
@@ -550,7 +550,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -598,7 +598,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -625,7 +625,7 @@ export default class ParametersApi {
 
     /**
      * Delete parameter
-     *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
+     *   Use case    User sets parameter internal (guid format) identifier    System search and delete parameter    System returns deleted parameter
      * @param {String} id Parameter internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -646,7 +646,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -659,7 +659,7 @@ export default class ParametersApi {
 
     /**
      * Delete parameter
-     *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
+     *   Use case    User sets parameter internal (guid format) identifier    System search and delete parameter    System returns deleted parameter
      * @param {String} id Parameter internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -673,7 +673,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameters
-     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
+     *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted parameters    [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted    If User did not set isDeleted field value, System search all parameters    System returns array of all found parameters(listed in response model)
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] If result must consist of only actual/deleted parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -702,7 +702,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ParameterApiResult];
@@ -715,7 +715,7 @@ export default class ParametersApi {
 
     /**
      * Get all parameters
-     *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
+     *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted parameters    [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted    If User did not set isDeleted field value, System search all parameters    System returns array of all found parameters(listed in response model)
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -735,7 +735,7 @@ export default class ParametersApi {
 
     /**
      * Get parameter by ID
-     *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
+     *   Use case    User sets parameter internal (guid format) identifier    User runs method execution    System search parameter using the identifier    System returns parameter
      * @param {String} id Parameter internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
      */
@@ -756,7 +756,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ParameterApiResult;
@@ -769,7 +769,7 @@ export default class ParametersApi {
 
     /**
      * Get parameter by ID
-     *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
+     *   Use case    User sets parameter internal (guid format) identifier    User runs method execution    System search parameter using the identifier    System returns parameter
      * @param {String} id Parameter internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
      */
@@ -783,7 +783,7 @@ export default class ParametersApi {
 
     /**
      * Update parameter
-     *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
+     *   Use case    User sets parameter updated properties(listed in the request example)    User runs method execution    System updated parameter using updated properties    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateParameterApiModel} [updateParameterApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -801,7 +801,7 @@ export default class ParametersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -814,7 +814,7 @@ export default class ParametersApi {
 
     /**
      * Update parameter
-     *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
+     *   Use case    User sets parameter updated properties(listed in the request example)    User runs method execution    System updated parameter using updated properties    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateParameterApiModel} opts.updateParameterApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

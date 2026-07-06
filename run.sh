@@ -1,8 +1,8 @@
 # Using 7.18.0
 # npm install @openapitools/openapi-generator-cli -g
 
-FILE_NAME="cloud-swagger.json"
-NEW_VERSION="7.2.6"
+FILE_NAME="swagger-v2-5.8.json"
+NEW_VERSION="7.3.0-TMS-5.8"
 GENERATOR="openapi-generator-cli-7.18.0.jar"
 INDEX_DTS_PATH=index.d.ts
 

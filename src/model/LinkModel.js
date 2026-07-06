@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkModel model module.
  * @module model/LinkModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkModel {
     /**
      * Constructs a new <code>LinkModel</code>.
      * @alias module:model/LinkModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} 
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkModel.initialize(this, url, hasInfo);
+        LinkModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -109,7 +111,7 @@ class LinkModel {
 
 }
 
-LinkModel.RequiredProperties = ["url", "hasInfo"];
+LinkModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * @member {String} id

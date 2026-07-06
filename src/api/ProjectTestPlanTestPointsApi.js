@@ -14,15 +14,20 @@
 
 import ApiClient from "../ApiClient";
 import ProblemDetails from '../model/ProblemDetails';
+import TestPlanTestPointsAnalyticsApiModel from '../model/TestPlanTestPointsAnalyticsApiModel';
+import TestPlanTestPointsAnalyticsApiResult from '../model/TestPlanTestPointsAnalyticsApiResult';
+import TestPlanTestPointsApiModel from '../model/TestPlanTestPointsApiModel';
 import TestPlanTestPointsAutoTestsRerunApiModel from '../model/TestPlanTestPointsAutoTestsRerunApiModel';
 import TestPlanTestPointsAutoTestsRunApiModel from '../model/TestPlanTestPointsAutoTestsRunApiModel';
+import TestPlanTestPointsGroupSearchApiResult from '../model/TestPlanTestPointsGroupSearchApiResult';
+import TestPlanTestPointsSetTestersApiModel from '../model/TestPlanTestPointsSetTestersApiModel';
 import TestRunNameApiResult from '../model/TestRunNameApiResult';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
 
 /**
 * ProjectTestPlanTestPoints service.
 * @module api/ProjectTestPlanTestPointsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectTestPlanTestPointsApi {
 
@@ -37,6 +42,64 @@ export default class ProjectTestPlanTestPointsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * Get test points analytics.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsAnalyticsApiModel} [testPlanTestPointsAnalyticsApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanTestPointsAnalyticsApiResult} and HTTP response
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPostWithHttpInfo(projectId, testPlanId, opts) {
+      opts = opts || {};
+      let postBody = opts['testPlanTestPointsAnalyticsApiModel'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost");
+      }
+      // verify the required parameter 'testPlanId' is set
+      if (testPlanId === undefined || testPlanId === null) {
+        throw new Error("Missing the required parameter 'testPlanId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost");
+      }
+
+      let pathParams = {
+        'projectId': projectId,
+        'testPlanId': testPlanId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TestPlanTestPointsAnalyticsApiResult;
+      return this.apiClient.callApi(
+        '/api/v2/projects/{projectId}/test-plans/{testPlanId}/test-points/analytics', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get test points analytics.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsAnalyticsApiModel} opts.testPlanTestPointsAnalyticsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanTestPointsAnalyticsApiResult}
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost(projectId, testPlanId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPostWithHttpInfo(projectId, testPlanId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -70,7 +133,7 @@ export default class ProjectTestPlanTestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -128,7 +191,7 @@ export default class ProjectTestPlanTestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunNameApiResult;
@@ -149,6 +212,122 @@ export default class ProjectTestPlanTestPointsApi {
      */
     apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost(projectId, testPlanId, opts) {
       return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPostWithHttpInfo(projectId, testPlanId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Search test points in test plan.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsApiModel} [testPlanTestPointsApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanTestPointsGroupSearchApiResult} and HTTP response
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPostWithHttpInfo(projectId, testPlanId, opts) {
+      opts = opts || {};
+      let postBody = opts['testPlanTestPointsApiModel'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost");
+      }
+      // verify the required parameter 'testPlanId' is set
+      if (testPlanId === undefined || testPlanId === null) {
+        throw new Error("Missing the required parameter 'testPlanId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost");
+      }
+
+      let pathParams = {
+        'projectId': projectId,
+        'testPlanId': testPlanId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = TestPlanTestPointsGroupSearchApiResult;
+      return this.apiClient.callApi(
+        '/api/v2/projects/{projectId}/test-plans/{testPlanId}/test-points/grouping-search', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Search test points in test plan.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsApiModel} opts.testPlanTestPointsApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanTestPointsGroupSearchApiResult}
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost(projectId, testPlanId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPostWithHttpInfo(projectId, testPlanId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Distribute test points between the users.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsSetTestersApiModel} [testPlanTestPointsSetTestersApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPostWithHttpInfo(projectId, testPlanId, opts) {
+      opts = opts || {};
+      let postBody = opts['testPlanTestPointsSetTestersApiModel'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost");
+      }
+      // verify the required parameter 'testPlanId' is set
+      if (testPlanId === undefined || testPlanId === null) {
+        throw new Error("Missing the required parameter 'testPlanId' when calling apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost");
+      }
+
+      let pathParams = {
+        'projectId': projectId,
+        'testPlanId': testPlanId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Cookies'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/projects/{projectId}/test-plans/{testPlanId}/test-points/testers', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Distribute test points between the users.
+     * @param {String} projectId Internal (UUID) or global (integer) identifier
+     * @param {String} testPlanId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/TestPlanTestPointsSetTestersApiModel} opts.testPlanTestPointsSetTestersApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost(projectId, testPlanId, opts) {
+      return this.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPostWithHttpInfo(projectId, testPlanId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

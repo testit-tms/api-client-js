@@ -17,7 +17,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestPointShortApiResult model module.
  * @module model/TestPointShortApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestPointShortApiResult {
     /**
@@ -183,7 +183,7 @@ TestPointShortApiResult.prototype['workItemId'] = undefined;
 TestPointShortApiResult.prototype['configurationId'] = undefined;
 
 /**
- * Test point status  Applies one of these values: Blocked, NoResults, Failed, Passed
+ * Test point status    Applies one of these values: Blocked, NoResults, Failed, Passed
  * @member {String} status
  */
 TestPointShortApiResult.prototype['status'] = undefined;

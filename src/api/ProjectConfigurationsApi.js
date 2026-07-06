@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectConfigurations service.
 * @module api/ProjectConfigurationsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectConfigurationsApi {
 
@@ -39,7 +39,7 @@ export default class ProjectConfigurationsApi {
 
     /**
      * Get project configurations
-     *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all configurations related to project  System returns array of found configurations (listed in response model)
+     *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all configurations related to project    System returns array of found configurations (listed in response model)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
@@ -60,7 +60,7 @@ export default class ProjectConfigurationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ConfigurationModel];
@@ -73,7 +73,7 @@ export default class ProjectConfigurationsApi {
 
     /**
      * Get project configurations
-     *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all configurations related to project  System returns array of found configurations (listed in response model)
+     *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all configurations related to project    System returns array of found configurations (listed in response model)
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */

@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributeTemplates service.
 * @module api/ProjectAttributeTemplatesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class ProjectAttributeTemplatesApi {
 
@@ -73,7 +73,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [ProjectCustomAttributeTemplateGetModel];
@@ -106,7 +106,7 @@ export default class ProjectAttributeTemplatesApi {
 
     /**
      * Delete CustomAttributeTemplate from Project
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -133,7 +133,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -146,7 +146,7 @@ export default class ProjectAttributeTemplatesApi {
 
     /**
      * Delete CustomAttributeTemplate from Project
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -161,7 +161,7 @@ export default class ProjectAttributeTemplatesApi {
 
     /**
      * Add CustomAttributeTemplate to Project
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -188,7 +188,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -201,7 +201,7 @@ export default class ProjectAttributeTemplatesApi {
 
     /**
      * Add CustomAttributeTemplate to Project
-     *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+     *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
      * @param {String} projectId Project internal (UUID) or global (integer) identifier
      * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

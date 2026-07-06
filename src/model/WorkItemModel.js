@@ -19,16 +19,16 @@ import IterationModel from './IterationModel';
 import LinkModel from './LinkModel';
 import StepModel from './StepModel';
 import TagModel from './TagModel';
-import WorkItemEntityTypes from './WorkItemEntityTypes';
 import WorkItemParameterKeyModel from './WorkItemParameterKeyModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The WorkItemModel model module.
  * @module model/WorkItemModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemModel {
     /**
@@ -38,14 +38,14 @@ class WorkItemModel {
      * @param medianDuration {Number} used for getting a median duration of all autotests related to this workitem
      * @param isDeleted {Boolean} 
      * @param projectId {String} 
-     * @param entityTypeName {module:model/WorkItemEntityTypes} 
+     * @param entityTypeName {module:model/WorkItemTypeModel} 
      * @param isAutomated {Boolean} 
      * @param versionNumber {Number} used for define chronology of workitem state in each version
+     * @param externalIssues {Array.<module:model/ExternalIssueModel>} 
+     * @param parameters {Array.<module:model/WorkItemParameterKeyModel>} 
      * @param createdDate {Date} 
      * @param createdById {String} 
      * @param globalId {Number} 
-     * @param externalIssues {Array.<module:model/ExternalIssueModel>} 
-     * @param parameters {Array.<module:model/WorkItemParameterKeyModel>} 
      * @param id {String} 
      * @param sectionId {String} 
      * @param state {module:model/WorkItemStates} 
@@ -60,9 +60,9 @@ class WorkItemModel {
      * @param links {Array.<module:model/LinkModel>} 
      * @param name {String} 
      */
-    constructor(versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
+    constructor(versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, externalIssues, parameters, createdDate, createdById, globalId, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
         
-        WorkItemModel.initialize(this, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name);
+        WorkItemModel.initialize(this, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, externalIssues, parameters, createdDate, createdById, globalId, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name);
     }
 
     /**
@@ -70,7 +70,7 @@ class WorkItemModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, createdDate, createdById, globalId, externalIssues, parameters, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
+    static initialize(obj, versionId, medianDuration, isDeleted, projectId, entityTypeName, isAutomated, versionNumber, externalIssues, parameters, createdDate, createdById, globalId, id, sectionId, state, priority, sourceType, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name) { 
         obj['versionId'] = versionId;
         obj['medianDuration'] = medianDuration;
         obj['isDeleted'] = isDeleted;
@@ -78,11 +78,11 @@ class WorkItemModel {
         obj['entityTypeName'] = entityTypeName;
         obj['isAutomated'] = isAutomated;
         obj['versionNumber'] = versionNumber;
+        obj['externalIssues'] = externalIssues;
+        obj['parameters'] = parameters;
         obj['createdDate'] = createdDate;
         obj['createdById'] = createdById;
         obj['globalId'] = globalId;
-        obj['externalIssues'] = externalIssues;
-        obj['parameters'] = parameters;
         obj['id'] = id;
         obj['sectionId'] = sectionId;
         obj['state'] = state;
@@ -122,7 +122,7 @@ class WorkItemModel {
                 obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
             }
             if (data.hasOwnProperty('entityTypeName')) {
-                obj['entityTypeName'] = ApiClient.convertToType(data['entityTypeName'], WorkItemEntityTypes);
+                obj['entityTypeName'] = ApiClient.convertToType(data['entityTypeName'], WorkItemTypeModel);
             }
             if (data.hasOwnProperty('isAutomated')) {
                 obj['isAutomated'] = ApiClient.convertToType(data['isAutomated'], 'Boolean');
@@ -145,6 +145,12 @@ class WorkItemModel {
             if (data.hasOwnProperty('iterations')) {
                 obj['iterations'] = ApiClient.convertToType(data['iterations'], [IterationModel]);
             }
+            if (data.hasOwnProperty('externalIssues')) {
+                obj['externalIssues'] = ApiClient.convertToType(data['externalIssues'], [ExternalIssueModel]);
+            }
+            if (data.hasOwnProperty('parameters')) {
+                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyModel]);
+            }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], 'Date');
             }
@@ -159,12 +165,6 @@ class WorkItemModel {
             }
             if (data.hasOwnProperty('globalId')) {
                 obj['globalId'] = ApiClient.convertToType(data['globalId'], 'Number');
-            }
-            if (data.hasOwnProperty('externalIssues')) {
-                obj['externalIssues'] = ApiClient.convertToType(data['externalIssues'], [ExternalIssueModel]);
-            }
-            if (data.hasOwnProperty('parameters')) {
-                obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyModel]);
             }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -282,14 +282,6 @@ class WorkItemModel {
                 IterationModel.validateJSON(item);
             };
         }
-        // ensure the json data is a string
-        if (data['createdById'] && !(typeof data['createdById'] === 'string' || data['createdById'] instanceof String)) {
-            throw new Error("Expected the field `createdById` to be a primitive type in the JSON string but got " + data['createdById']);
-        }
-        // ensure the json data is a string
-        if (data['modifiedById'] && !(typeof data['modifiedById'] === 'string' || data['modifiedById'] instanceof String)) {
-            throw new Error("Expected the field `modifiedById` to be a primitive type in the JSON string but got " + data['modifiedById']);
-        }
         if (data['externalIssues']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['externalIssues'])) {
@@ -309,6 +301,14 @@ class WorkItemModel {
             for (const item of data['parameters']) {
                 WorkItemParameterKeyModel.validateJSON(item);
             };
+        }
+        // ensure the json data is a string
+        if (data['createdById'] && !(typeof data['createdById'] === 'string' || data['createdById'] instanceof String)) {
+            throw new Error("Expected the field `createdById` to be a primitive type in the JSON string but got " + data['createdById']);
+        }
+        // ensure the json data is a string
+        if (data['modifiedById'] && !(typeof data['modifiedById'] === 'string' || data['modifiedById'] instanceof String)) {
+            throw new Error("Expected the field `modifiedById` to be a primitive type in the JSON string but got " + data['modifiedById']);
         }
         // ensure the json data is a string
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
@@ -383,7 +383,7 @@ class WorkItemModel {
 
 }
 
-WorkItemModel.RequiredProperties = ["versionId", "medianDuration", "isDeleted", "projectId", "entityTypeName", "isAutomated", "versionNumber", "createdDate", "createdById", "globalId", "externalIssues", "parameters", "id", "sectionId", "state", "priority", "sourceType", "steps", "preconditionSteps", "postconditionSteps", "duration", "attributes", "tags", "links", "name"];
+WorkItemModel.RequiredProperties = ["versionId", "medianDuration", "isDeleted", "projectId", "entityTypeName", "isAutomated", "versionNumber", "externalIssues", "parameters", "createdDate", "createdById", "globalId", "id", "sectionId", "state", "priority", "sourceType", "steps", "preconditionSteps", "postconditionSteps", "duration", "attributes", "tags", "links", "name"];
 
 /**
  * used for versioning changes in workitem
@@ -408,7 +408,7 @@ WorkItemModel.prototype['isDeleted'] = undefined;
 WorkItemModel.prototype['projectId'] = undefined;
 
 /**
- * @member {module:model/WorkItemEntityTypes} entityTypeName
+ * @member {module:model/WorkItemTypeModel} entityTypeName
  */
 WorkItemModel.prototype['entityTypeName'] = undefined;
 
@@ -449,6 +449,16 @@ WorkItemModel.prototype['versionNumber'] = undefined;
 WorkItemModel.prototype['iterations'] = undefined;
 
 /**
+ * @member {Array.<module:model/ExternalIssueModel>} externalIssues
+ */
+WorkItemModel.prototype['externalIssues'] = undefined;
+
+/**
+ * @member {Array.<module:model/WorkItemParameterKeyModel>} parameters
+ */
+WorkItemModel.prototype['parameters'] = undefined;
+
+/**
  * @member {Date} createdDate
  */
 WorkItemModel.prototype['createdDate'] = undefined;
@@ -472,16 +482,6 @@ WorkItemModel.prototype['modifiedById'] = undefined;
  * @member {Number} globalId
  */
 WorkItemModel.prototype['globalId'] = undefined;
-
-/**
- * @member {Array.<module:model/ExternalIssueModel>} externalIssues
- */
-WorkItemModel.prototype['externalIssues'] = undefined;
-
-/**
- * @member {Array.<module:model/WorkItemParameterKeyModel>} parameters
- */
-WorkItemModel.prototype['parameters'] = undefined;
 
 /**
  * @member {String} id

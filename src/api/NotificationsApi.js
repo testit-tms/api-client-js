@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Notifications service.
 * @module api/NotificationsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class NotificationsApi {
 
@@ -41,7 +41,7 @@ export default class NotificationsApi {
 
     /**
      * Get unread Notifications total in last 7 days
-     *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
+     *   Use case    User runs method execution    System returns unread notifications total (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isRead] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -60,7 +60,7 @@ export default class NotificationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -73,7 +73,7 @@ export default class NotificationsApi {
 
     /**
      * Get unread Notifications total in last 7 days
-     *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
+     *   Use case    User runs method execution    System returns unread notifications total (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isRead 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -88,7 +88,7 @@ export default class NotificationsApi {
 
     /**
      * Get all Notifications for current User
-     *  Use case  User runs method execution  System returns notifications (listed in the response example)
+     *   Use case    User runs method execution    System returns notifications (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/NotificationTypeModel} [notificationType] 
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -117,7 +117,7 @@ export default class NotificationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [NotificationModel];
@@ -130,7 +130,7 @@ export default class NotificationsApi {
 
     /**
      * Get all Notifications for current User
-     *  Use case  User runs method execution  System returns notifications (listed in the response example)
+     *   Use case    User runs method execution    System returns notifications (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/NotificationTypeModel} opts.notificationType 
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -150,7 +150,7 @@ export default class NotificationsApi {
 
     /**
      * Set Notification as read
-     *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
+     *   Use case    User sets notification internal (guid format) identifier    User runs method execution    System set notification as read
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -171,7 +171,7 @@ export default class NotificationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -184,7 +184,7 @@ export default class NotificationsApi {
 
     /**
      * Set Notification as read
-     *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
+     *   Use case    User sets notification internal (guid format) identifier    User runs method execution    System set notification as read
      * @param {String} id 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -198,7 +198,7 @@ export default class NotificationsApi {
 
     /**
      * Set all Notifications as read
-     *  Use case  User runs method execution  System set all notifications as read
+     *   Use case    User runs method execution    System set all notifications as read
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiV2NotificationsReadPostWithHttpInfo() {
@@ -213,7 +213,7 @@ export default class NotificationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -226,7 +226,7 @@ export default class NotificationsApi {
 
     /**
      * Set all Notifications as read
-     *  Use case  User runs method execution  System set all notifications as read
+     *   Use case    User runs method execution    System set all notifications as read
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiV2NotificationsReadPost() {
@@ -239,7 +239,7 @@ export default class NotificationsApi {
 
     /**
      * Search Notifications for current User
-     *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
+     *   Use case    User set filter and runs method execution    System returns notifications (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -267,7 +267,7 @@ export default class NotificationsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [NotificationModel];
@@ -280,7 +280,7 @@ export default class NotificationsApi {
 
     /**
      * Search Notifications for current User
-     *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
+     *   Use case    User set filter and runs method execution    System returns notifications (listed in the response example)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)

@@ -18,7 +18,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The CustomAttributePutModel model module.
  * @module model/CustomAttributePutModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class CustomAttributePutModel {
     /**
@@ -137,7 +137,7 @@ CustomAttributePutModel.RequiredProperties = ["id", "type", "isDeleted", "name",
 CustomAttributePutModel.prototype['id'] = undefined;
 
 /**
- * Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+ * Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
  * @member {Array.<module:model/CustomAttributeOptionModel>} options
  */
 CustomAttributePutModel.prototype['options'] = undefined;

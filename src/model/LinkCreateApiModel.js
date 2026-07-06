@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkCreateApiModel model module.
  * @module model/LinkCreateApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkCreateApiModel {
     /**
      * Constructs a new <code>LinkCreateApiModel</code>.
      * @alias module:model/LinkCreateApiModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} Flag defines if link relates to integrated external service
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkCreateApiModel.initialize(this, url, hasInfo);
+        LinkCreateApiModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkCreateApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -102,7 +104,7 @@ class LinkCreateApiModel {
 
 }
 
-LinkCreateApiModel.RequiredProperties = ["url", "hasInfo"];
+LinkCreateApiModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * Link name.

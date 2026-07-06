@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPointShortModel model module.
  * @module model/TestPointShortModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestPointShortModel {
     /**
@@ -167,7 +167,7 @@ TestPointShortModel.prototype['workItemId'] = undefined;
 TestPointShortModel.prototype['configurationId'] = undefined;
 
 /**
- * Test point status  Applies one of these values: Blocked, NoResults, Failed, Passed
+ * Test point status    Applies one of these values: Blocked, NoResults, Failed, Passed
  * @member {String} status
  */
 TestPointShortModel.prototype['status'] = undefined;

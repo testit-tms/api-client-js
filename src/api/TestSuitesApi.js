@@ -30,7 +30,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * TestSuites service.
 * @module api/TestSuitesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TestSuitesApi {
 
@@ -72,7 +72,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -124,7 +124,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -173,7 +173,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -222,7 +222,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -267,7 +267,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestSuiteV2GetModel;
@@ -311,7 +311,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -338,7 +338,7 @@ export default class TestSuitesApi {
 
     /**
      * Delete TestSuite
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System deletes test suite    System returns no content response
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -359,7 +359,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -372,7 +372,7 @@ export default class TestSuitesApi {
 
     /**
      * Delete TestSuite
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System deletes test suite    System returns no content response
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -386,7 +386,7 @@ export default class TestSuitesApi {
 
     /**
      * Get Configurations By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configurations related to the test points    System returns configurations array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
      */
@@ -407,7 +407,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ConfigurationModel];
@@ -420,7 +420,7 @@ export default class TestSuitesApi {
 
     /**
      * Get Configurations By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configurations related to the test points    System returns configurations array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
      */
@@ -434,7 +434,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestPoints By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System returns test points array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointByTestSuiteModel>} and HTTP response
      */
@@ -455,7 +455,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointByTestSuiteModel];
@@ -468,7 +468,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestPoints By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System returns test points array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointByTestSuiteModel>}
      */
@@ -482,7 +482,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestResults By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search test results related to the test points    System returns test results array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultV2ShortModel>} and HTTP response
      */
@@ -503,7 +503,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultV2ShortModel];
@@ -516,7 +516,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestResults By Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search test results related to the test points    System returns test results array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultV2ShortModel>}
      */
@@ -530,7 +530,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestSuite by Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System returns test suite
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestSuiteApiResult} and HTTP response
      */
@@ -551,7 +551,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestSuiteApiResult;
@@ -564,7 +564,7 @@ export default class TestSuitesApi {
 
     /**
      * Get TestSuite by Id
-     *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
+     *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System returns test suite
      * @param {String} id Test suite internal (guid format) identifier\"
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestSuiteApiResult}
      */
@@ -578,7 +578,7 @@ export default class TestSuitesApi {
 
     /**
      * Search WorkItems
-     *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
+     *   Use case    User sets test suite identifier    [Optional] User sets filter    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search work items related to the test points    [Optional] User sets filter, system applies filter    System returns work items array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -612,7 +612,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];
@@ -625,7 +625,7 @@ export default class TestSuitesApi {
 
     /**
      * Search WorkItems
-     *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
+     *   Use case    User sets test suite identifier    [Optional] User sets filter    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search work items related to the test points    [Optional] User sets filter, system applies filter    System returns work items array
      * @param {String} id Test suite internal (guid format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -646,7 +646,7 @@ export default class TestSuitesApi {
 
     /**
      * Set Configurations By TestSuite Id
-     *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
+     *   Use case    User sets test suite identifier    User sets collection of configuration identifiers    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configuration    System restores(if exist) or creates test points with listed configuration    System returns no content response
      * @param {String} id Test suite internal (guid format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] Collection of configuration identifiers\"
@@ -670,7 +670,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -683,7 +683,7 @@ export default class TestSuitesApi {
 
     /**
      * Set Configurations By TestSuite Id
-     *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
+     *   Use case    User sets test suite identifier    User sets collection of configuration identifiers    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configuration    System restores(if exist) or creates test points with listed configuration    System returns no content response
      * @param {String} id Test suite internal (guid format) identifier\"
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody Collection of configuration identifiers\"

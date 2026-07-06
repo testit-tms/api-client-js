@@ -16,6 +16,7 @@ import AttachmentChangeViewModelArrayChangedFieldViewModel from './AttachmentCha
 import AutoTestChangeViewModelArrayChangedFieldViewModel from './AutoTestChangeViewModelArrayChangedFieldViewModel';
 import BooleanChangedFieldViewModel from './BooleanChangedFieldViewModel';
 import GuidChangedFieldViewModel from './GuidChangedFieldViewModel';
+import GuidNullableChangedFieldViewModel from './GuidNullableChangedFieldViewModel';
 import Int32ChangedFieldViewModel from './Int32ChangedFieldViewModel';
 import Int64ChangedFieldViewModel from './Int64ChangedFieldViewModel';
 import StringArrayChangedFieldViewModel from './StringArrayChangedFieldViewModel';
@@ -28,7 +29,7 @@ import WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel from './Wo
 /**
  * The WorkItemChangedFieldsViewModel model module.
  * @module model/WorkItemChangedFieldsViewModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemChangedFieldsViewModel {
     /**
@@ -52,10 +53,11 @@ class WorkItemChangedFieldsViewModel {
      * @param globalId {module:model/Int64ChangedFieldViewModel} 
      * @param versionNumber {module:model/Int32ChangedFieldViewModel} 
      * @param entityTypeName {module:model/StringChangedFieldViewModel} 
+     * @param parentId {module:model/GuidNullableChangedFieldViewModel} 
      */
-    constructor(isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName) { 
+    constructor(isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName, parentId) { 
         
-        WorkItemChangedFieldsViewModel.initialize(this, isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName);
+        WorkItemChangedFieldsViewModel.initialize(this, isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName, parentId);
     }
 
     /**
@@ -63,7 +65,7 @@ class WorkItemChangedFieldsViewModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName) { 
+    static initialize(obj, isDeleted, projectId, isAutomated, sectionId, state, priority, duration, attributes, steps, preconditionSteps, postconditionSteps, autoTests, attachments, tags, links, globalId, versionNumber, entityTypeName, parentId) { 
         obj['isDeleted'] = isDeleted;
         obj['projectId'] = projectId;
         obj['isAutomated'] = isAutomated;
@@ -82,6 +84,7 @@ class WorkItemChangedFieldsViewModel {
         obj['globalId'] = globalId;
         obj['versionNumber'] = versionNumber;
         obj['entityTypeName'] = entityTypeName;
+        obj['parentId'] = parentId;
     }
 
     /**
@@ -154,6 +157,9 @@ class WorkItemChangedFieldsViewModel {
             }
             if (data.hasOwnProperty('entityTypeName')) {
                 obj['entityTypeName'] = ApiClient.convertToType(data['entityTypeName'], StringChangedFieldViewModel);
+            }
+            if (data.hasOwnProperty('parentId')) {
+                obj['parentId'] = ApiClient.convertToType(data['parentId'], GuidNullableChangedFieldViewModel);
             }
         }
         return obj;
@@ -247,6 +253,10 @@ class WorkItemChangedFieldsViewModel {
         if (data['entityTypeName']) { // data not null
           StringChangedFieldViewModel.validateJSON(data['entityTypeName']);
         }
+        // validate the optional field `parentId`
+        if (data['parentId']) { // data not null
+          GuidNullableChangedFieldViewModel.validateJSON(data['parentId']);
+        }
 
         return true;
     }
@@ -254,7 +264,7 @@ class WorkItemChangedFieldsViewModel {
 
 }
 
-WorkItemChangedFieldsViewModel.RequiredProperties = ["isDeleted", "projectId", "isAutomated", "sectionId", "state", "priority", "duration", "attributes", "steps", "preconditionSteps", "postconditionSteps", "autoTests", "attachments", "tags", "links", "globalId", "versionNumber", "entityTypeName"];
+WorkItemChangedFieldsViewModel.RequiredProperties = ["isDeleted", "projectId", "isAutomated", "sectionId", "state", "priority", "duration", "attributes", "steps", "preconditionSteps", "postconditionSteps", "autoTests", "attachments", "tags", "links", "globalId", "versionNumber", "entityTypeName", "parentId"];
 
 /**
  * @member {module:model/StringChangedFieldWithDiffsViewModel} name
@@ -355,6 +365,11 @@ WorkItemChangedFieldsViewModel.prototype['versionNumber'] = undefined;
  * @member {module:model/StringChangedFieldViewModel} entityTypeName
  */
 WorkItemChangedFieldsViewModel.prototype['entityTypeName'] = undefined;
+
+/**
+ * @member {module:model/GuidNullableChangedFieldViewModel} parentId
+ */
+WorkItemChangedFieldsViewModel.prototype['parentId'] = undefined;
 
 
 

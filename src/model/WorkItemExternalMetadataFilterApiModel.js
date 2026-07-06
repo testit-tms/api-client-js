@@ -17,7 +17,7 @@ import WorkItemExternalMetadataFieldFilterApiModel from './WorkItemExternalMetad
 /**
  * The WorkItemExternalMetadataFilterApiModel model module.
  * @module model/WorkItemExternalMetadataFilterApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemExternalMetadataFilterApiModel {
     /**

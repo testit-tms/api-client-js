@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**title** | **String** |  | 
-**type** | **String** |  | [optional] 
+**title** | **String** |  | [optional] 
+**type** | [**LinkType**](LinkType.md) |  | 
 **url** | **String** |  | 
 
 

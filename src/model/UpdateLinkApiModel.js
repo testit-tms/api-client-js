@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The UpdateLinkApiModel model module.
  * @module model/UpdateLinkApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class UpdateLinkApiModel {
     /**
      * Constructs a new <code>UpdateLinkApiModel</code>.
      * @alias module:model/UpdateLinkApiModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        UpdateLinkApiModel.initialize(this, url, hasInfo);
+        UpdateLinkApiModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class UpdateLinkApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -109,7 +111,7 @@ class UpdateLinkApiModel {
 
 }
 
-UpdateLinkApiModel.RequiredProperties = ["url", "hasInfo"];
+UpdateLinkApiModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * Link unique identifier

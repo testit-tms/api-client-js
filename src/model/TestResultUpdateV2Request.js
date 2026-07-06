@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import AttachmentUpdateRequest from './AttachmentUpdateRequest';
 import AutoTestStepResultUpdateRequest from './AutoTestStepResultUpdateRequest';
-import Link from './Link';
+import CreateLinkApiModel from './CreateLinkApiModel';
 import StepResultApiModel from './StepResultApiModel';
 import TestResultOutcome from './TestResultOutcome';
 import TestResultStepCommentUpdateRequest from './TestResultStepCommentUpdateRequest';
@@ -23,7 +23,7 @@ import TestStatusType from './TestStatusType';
 /**
  * The TestResultUpdateV2Request model module.
  * @module model/TestResultUpdateV2Request
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestResultUpdateV2Request {
     /**
@@ -70,7 +70,7 @@ class TestResultUpdateV2Request {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
             if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], [Link]);
+                obj['links'] = ApiClient.convertToType(data['links'], [CreateLinkApiModel]);
             }
             if (data.hasOwnProperty('stepResults')) {
                 obj['stepResults'] = ApiClient.convertToType(data['stepResults'], [StepResultApiModel]);
@@ -128,7 +128,7 @@ class TestResultUpdateV2Request {
             }
             // validate the optional field `links` (array)
             for (const item of data['links']) {
-                Link.validateJSON(item);
+                CreateLinkApiModel.validateJSON(item);
             };
         }
         if (data['stepResults']) { // data not null
@@ -224,7 +224,7 @@ TestResultUpdateV2Request.prototype['statusType'] = undefined;
 TestResultUpdateV2Request.prototype['comment'] = undefined;
 
 /**
- * @member {Array.<module:model/Link>} links
+ * @member {Array.<module:model/CreateLinkApiModel>} links
  */
 TestResultUpdateV2Request.prototype['links'] = undefined;
 

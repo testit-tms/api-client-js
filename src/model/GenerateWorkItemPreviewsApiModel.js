@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GenerateWorkItemPreviewsApiModel model module.
  * @module model/GenerateWorkItemPreviewsApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class GenerateWorkItemPreviewsApiModel {
     /**
@@ -56,9 +56,6 @@ class GenerateWorkItemPreviewsApiModel {
             if (data.hasOwnProperty('externalServiceId')) {
                 obj['externalServiceId'] = ApiClient.convertToType(data['externalServiceId'], 'String');
             }
-            if (data.hasOwnProperty('taskKey')) {
-                obj['taskKey'] = ApiClient.convertToType(data['taskKey'], 'String');
-            }
             if (data.hasOwnProperty('issueKey')) {
                 obj['issueKey'] = ApiClient.convertToType(data['issueKey'], 'String');
             }
@@ -92,10 +89,6 @@ class GenerateWorkItemPreviewsApiModel {
             throw new Error("Expected the field `externalServiceId` to be a primitive type in the JSON string but got " + data['externalServiceId']);
         }
         // ensure the json data is a string
-        if (data['taskKey'] && !(typeof data['taskKey'] === 'string' || data['taskKey'] instanceof String)) {
-            throw new Error("Expected the field `taskKey` to be a primitive type in the JSON string but got " + data['taskKey']);
-        }
-        // ensure the json data is a string
         if (data['issueKey'] && !(typeof data['issueKey'] === 'string' || data['issueKey'] instanceof String)) {
             throw new Error("Expected the field `issueKey` to be a primitive type in the JSON string but got " + data['issueKey']);
         }
@@ -117,12 +110,6 @@ GenerateWorkItemPreviewsApiModel.RequiredProperties = ["externalServiceId", "tem
  * @member {String} externalServiceId
  */
 GenerateWorkItemPreviewsApiModel.prototype['externalServiceId'] = undefined;
-
-/**
- * The key of the issue in an issue tracker (e.g., JIRA-123).
- * @member {String} taskKey
- */
-GenerateWorkItemPreviewsApiModel.prototype['taskKey'] = undefined;
 
 /**
  * The key of the issue in an issue tracker (e.g., JIRA-123).

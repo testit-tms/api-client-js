@@ -48,6 +48,16 @@
   }
 
   describe('ProjectTestPlanTestPointsApi', function() {
+    describe('apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost', function() {
+      it('should call apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost
+        //instance.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost', function() {
       it('should call apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost successfully', function(done) {
         //uncomment below and update the code to test apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRerunPost
@@ -62,6 +72,26 @@
       it('should call apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost successfully', function(done) {
         //uncomment below and update the code to test apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost
         //instance.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost', function() {
+      it('should call apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost
+        //instance.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost', function() {
+      it('should call apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost
+        //instance.apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

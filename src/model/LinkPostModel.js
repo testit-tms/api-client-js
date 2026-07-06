@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkPostModel model module.
  * @module model/LinkPostModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkPostModel {
     /**
      * Constructs a new <code>LinkPostModel</code>.
      * @alias module:model/LinkPostModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} 
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkPostModel.initialize(this, url, hasInfo);
+        LinkPostModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkPostModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -102,7 +104,7 @@ class LinkPostModel {
 
 }
 
-LinkPostModel.RequiredProperties = ["url", "hasInfo"];
+LinkPostModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * Link name.

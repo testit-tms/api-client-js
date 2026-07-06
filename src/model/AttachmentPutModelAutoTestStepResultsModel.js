@@ -18,7 +18,7 @@ import AvailableTestResultOutcome from './AvailableTestResultOutcome';
 /**
  * The AttachmentPutModelAutoTestStepResultsModel model module.
  * @module model/AttachmentPutModelAutoTestStepResultsModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class AttachmentPutModelAutoTestStepResultsModel {
     /**
@@ -179,7 +179,7 @@ AttachmentPutModelAutoTestStepResultsModel.prototype['outcome'] = undefined;
 AttachmentPutModelAutoTestStepResultsModel.prototype['stepResults'] = undefined;
 
 /**
- * /// <summary> Specifies an attachment GUID. Multiple values can be sent. </summary>
+ * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
  * @member {Array.<module:model/AttachmentPutModel>} attachments
  */
 AttachmentPutModelAutoTestStepResultsModel.prototype['attachments'] = undefined;

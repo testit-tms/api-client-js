@@ -17,11 +17,12 @@ import LinkShortModel from './LinkShortModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The WorkItemShortModel model module.
  * @module model/WorkItemShortModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemShortModel {
     /**
@@ -31,7 +32,7 @@ class WorkItemShortModel {
      * @param versionId {String} Work Item version identifier
      * @param versionNumber {Number} Work Item version number
      * @param name {String} Work Item name
-     * @param entityTypeName {String} Work Item type. Possible values: CheckLists, SharedSteps, TestCases
+     * @param entityTypeName {module:model/WorkItemTypeModel} Work Item type. Possible values: CheckLists, SharedSteps, TestCases
      * @param projectId {String} Project unique identifier
      * @param sectionId {String} Identifier of Section where Work Item is located
      * @param sectionName {String} Section name of Work Item
@@ -101,7 +102,7 @@ class WorkItemShortModel {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('entityTypeName')) {
-                obj['entityTypeName'] = ApiClient.convertToType(data['entityTypeName'], 'String');
+                obj['entityTypeName'] = ApiClient.convertToType(data['entityTypeName'], WorkItemTypeModel);
             }
             if (data.hasOwnProperty('projectId')) {
                 obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
@@ -189,10 +190,6 @@ class WorkItemShortModel {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
         // ensure the json data is a string
-        if (data['entityTypeName'] && !(typeof data['entityTypeName'] === 'string' || data['entityTypeName'] instanceof String)) {
-            throw new Error("Expected the field `entityTypeName` to be a primitive type in the JSON string but got " + data['entityTypeName']);
-        }
-        // ensure the json data is a string
         if (data['projectId'] && !(typeof data['projectId'] === 'string' || data['projectId'] instanceof String)) {
             throw new Error("Expected the field `projectId` to be a primitive type in the JSON string but got " + data['projectId']);
         }
@@ -271,7 +268,7 @@ WorkItemShortModel.prototype['name'] = undefined;
 
 /**
  * Work Item type. Possible values: CheckLists, SharedSteps, TestCases
- * @member {String} entityTypeName
+ * @member {module:model/WorkItemTypeModel} entityTypeName
  */
 WorkItemShortModel.prototype['entityTypeName'] = undefined;
 

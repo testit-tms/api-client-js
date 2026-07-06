@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(TestitApiClient.Inquiry);
     });
 
+    it('should have the property group (base name: "group")', function() {
+      // uncomment below and update the code to test the property group
+      //var instance = new TestitApiClient.Inquiry();
+      //expect(instance).to.be();
+    });
+
     it('should have the property filter (base name: "filter")', function() {
       // uncomment below and update the code to test the property filter
       //var instance = new TestitApiClient.Inquiry();

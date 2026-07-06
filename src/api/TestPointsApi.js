@@ -23,7 +23,7 @@ import WorkItemModel from '../model/WorkItemModel';
 /**
 * TestPoints service.
 * @module api/TestPointsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class TestPointsApi {
 
@@ -62,7 +62,7 @@ export default class TestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -108,7 +108,7 @@ export default class TestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemModel;
@@ -161,7 +161,7 @@ export default class TestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -220,7 +220,7 @@ export default class TestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestPointShortResponseModel];

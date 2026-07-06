@@ -14,17 +14,17 @@
 import ApiClient from '../ApiClient';
 import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
-import WorkItemEntityTypes from './WorkItemEntityTypes';
 import WorkItemExternalMetadataFilterModel from './WorkItemExternalMetadataFilterModel';
 import WorkItemLinkFilterModel from './WorkItemLinkFilterModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The WorkItemFilterModel model module.
  * @module model/WorkItemFilterModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemFilterModel {
     /**
@@ -102,7 +102,7 @@ class WorkItemFilterModel {
                 obj['sourceTypes'] = ApiClient.convertToType(data['sourceTypes'], [WorkItemSourceTypeModel]);
             }
             if (data.hasOwnProperty('types')) {
-                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemEntityTypes]);
+                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], DateTimeRangeSelectorModel);
@@ -344,7 +344,7 @@ WorkItemFilterModel.prototype['sourceTypes'] = undefined;
 
 /**
  * Collection of types of work item
- * @member {Array.<module:model/WorkItemEntityTypes>} types
+ * @member {Array.<module:model/WorkItemTypeModel>} types
  */
 WorkItemFilterModel.prototype['types'] = undefined;
 

@@ -48,6 +48,26 @@
   }
 
   describe('ProjectWorkItemsApi', function() {
+    describe('apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost', function() {
+      it('should call apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost
+        //instance.apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2ProjectsProjectIdWorkItemsPreviewsPost', function() {
+      it('should call apiV2ProjectsProjectIdWorkItemsPreviewsPost successfully', function(done) {
+        //uncomment below and update the code to test apiV2ProjectsProjectIdWorkItemsPreviewsPost
+        //instance.apiV2ProjectsProjectIdWorkItemsPreviewsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('apiV2ProjectsProjectIdWorkItemsSearchGroupedPost', function() {
       it('should call apiV2ProjectsProjectIdWorkItemsSearchGroupedPost successfully', function(done) {
         //uncomment below and update the code to test apiV2ProjectsProjectIdWorkItemsSearchGroupedPost

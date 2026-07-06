@@ -26,7 +26,7 @@ import WorkItemStateApiModel from './WorkItemStateApiModel';
 /**
  * The CreateWorkItemApiModel model module.
  * @module model/CreateWorkItemApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class CreateWorkItemApiModel {
     /**
@@ -36,18 +36,12 @@ class CreateWorkItemApiModel {
      * @param name {String} Name of the work item
      * @param entityTypeName {module:model/WorkItemEntityTypeApiModel} Type of entity associated with this work item
      * @param duration {Number} Duration of the work item in milliseconds
-     * @param state {module:model/WorkItemStateApiModel} State of the work item
-     * @param priority {module:model/WorkItemPriorityApiModel} Priority level of the work item
-     * @param attributes {Object.<String, Object>} Set of custom attributes associated with the work item
-     * @param tags {Array.<module:model/TagModel>} Set of tags applied to the work item
-     * @param preconditionSteps {Array.<module:model/CreateStepApiModel>} Set of precondition steps that need to be executed before starting the main steps
-     * @param steps {Array.<module:model/CreateStepApiModel>} Main steps or actions defined for the work item
-     * @param postconditionSteps {Array.<module:model/CreateStepApiModel>} Set of postcondition steps that are executed after completing the main steps
-     * @param links {Array.<module:model/CreateLinkApiModel>} Set of links related to the work item
+     * @param state {module:model/WorkItemStateApiModel} Current state of the work item
+     * @param priority {module:model/WorkItemPriorityApiModel} Priority level assigned to the work item
      */
-    constructor(projectId, name, entityTypeName, duration, state, priority, attributes, tags, preconditionSteps, steps, postconditionSteps, links) { 
+    constructor(projectId, name, entityTypeName, duration, state, priority) { 
         
-        CreateWorkItemApiModel.initialize(this, projectId, name, entityTypeName, duration, state, priority, attributes, tags, preconditionSteps, steps, postconditionSteps, links);
+        CreateWorkItemApiModel.initialize(this, projectId, name, entityTypeName, duration, state, priority);
     }
 
     /**
@@ -55,19 +49,13 @@ class CreateWorkItemApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectId, name, entityTypeName, duration, state, priority, attributes, tags, preconditionSteps, steps, postconditionSteps, links) { 
+    static initialize(obj, projectId, name, entityTypeName, duration, state, priority) { 
         obj['projectId'] = projectId;
         obj['name'] = name;
         obj['entityTypeName'] = entityTypeName;
         obj['duration'] = duration;
         obj['state'] = state;
         obj['priority'] = priority;
-        obj['attributes'] = attributes;
-        obj['tags'] = tags;
-        obj['preconditionSteps'] = preconditionSteps;
-        obj['steps'] = steps;
-        obj['postconditionSteps'] = postconditionSteps;
-        obj['links'] = links;
     }
 
     /**
@@ -264,7 +252,7 @@ class CreateWorkItemApiModel {
 
 }
 
-CreateWorkItemApiModel.RequiredProperties = ["projectId", "name", "entityTypeName", "duration", "state", "priority", "attributes", "tags", "preconditionSteps", "steps", "postconditionSteps", "links"];
+CreateWorkItemApiModel.RequiredProperties = ["projectId", "name", "entityTypeName", "duration", "state", "priority"];
 
 /**
  * Unique identifier of the project
@@ -303,13 +291,13 @@ CreateWorkItemApiModel.prototype['entityTypeName'] = undefined;
 CreateWorkItemApiModel.prototype['duration'] = undefined;
 
 /**
- * State of the work item
+ * Current state of the work item
  * @member {module:model/WorkItemStateApiModel} state
  */
 CreateWorkItemApiModel.prototype['state'] = undefined;
 
 /**
- * Priority level of the work item
+ * Priority level assigned to the work item
  * @member {module:model/WorkItemPriorityApiModel} priority
  */
 CreateWorkItemApiModel.prototype['priority'] = undefined;
@@ -327,13 +315,13 @@ CreateWorkItemApiModel.prototype['attributes'] = undefined;
 CreateWorkItemApiModel.prototype['tags'] = undefined;
 
 /**
- * Set of precondition steps that need to be executed before starting the main steps
+ * Set of precondition steps that must be executed before the main steps
  * @member {Array.<module:model/CreateStepApiModel>} preconditionSteps
  */
 CreateWorkItemApiModel.prototype['preconditionSteps'] = undefined;
 
 /**
- * Main steps or actions defined for the work item
+ * Set of main steps or actions defined for the work item
  * @member {Array.<module:model/CreateStepApiModel>} steps
  */
 CreateWorkItemApiModel.prototype['steps'] = undefined;
@@ -345,19 +333,19 @@ CreateWorkItemApiModel.prototype['steps'] = undefined;
 CreateWorkItemApiModel.prototype['postconditionSteps'] = undefined;
 
 /**
- * Associated iterations linked to the work item
+ * Set of iterations associated with the work item
  * @member {Array.<module:model/AssignIterationApiModel>} iterations
  */
 CreateWorkItemApiModel.prototype['iterations'] = undefined;
 
 /**
- * Automated tests associated with the work item
+ * Set of automated tests linked to the work item
  * @member {Array.<module:model/AutoTestIdModel>} autoTests
  */
 CreateWorkItemApiModel.prototype['autoTests'] = undefined;
 
 /**
- * Files attached to the work item
+ * Set of files attached to the work item
  * @member {Array.<module:model/AssignAttachmentApiModel>} attachments
  */
 CreateWorkItemApiModel.prototype['attachments'] = undefined;
@@ -369,7 +357,7 @@ CreateWorkItemApiModel.prototype['attachments'] = undefined;
 CreateWorkItemApiModel.prototype['links'] = undefined;
 
 /**
- * Set of parameter keys related to the work item
+ * Set of parameter keys associated with the work item
  * @member {Array.<module:model/WorkItemParameterKeyApiModel>} parameters
  */
 CreateWorkItemApiModel.prototype['parameters'] = undefined;

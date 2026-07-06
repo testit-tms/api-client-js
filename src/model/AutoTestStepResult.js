@@ -18,7 +18,7 @@ import AvailableTestResultOutcome from './AvailableTestResultOutcome';
 /**
  * The AutoTestStepResult model module.
  * @module model/AutoTestStepResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class AutoTestStepResult {
     /**
@@ -179,7 +179,7 @@ AutoTestStepResult.prototype['outcome'] = undefined;
 AutoTestStepResult.prototype['stepResults'] = undefined;
 
 /**
- * /// <summary> Specifies an attachment GUID. Multiple values can be sent. </summary>
+ * /// <summary>  Specifies an attachment GUID. Multiple values can be sent.  </summary>
  * @member {Array.<module:model/AttachmentApiResult>} attachments
  */
 AutoTestStepResult.prototype['attachments'] = undefined;

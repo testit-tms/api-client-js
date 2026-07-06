@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property sharedStepId (base name: "sharedStepId")', function() {
+      // uncomment below and update the code to test the property sharedStepId
+      //var instance = new TestitApiClient.ParameterIterationModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

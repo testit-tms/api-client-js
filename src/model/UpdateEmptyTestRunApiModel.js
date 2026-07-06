@@ -18,7 +18,7 @@ import UpdateLinkApiModel from './UpdateLinkApiModel';
 /**
  * The UpdateEmptyTestRunApiModel model module.
  * @module model/UpdateEmptyTestRunApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class UpdateEmptyTestRunApiModel {
     /**
@@ -158,7 +158,7 @@ UpdateEmptyTestRunApiModel.prototype['name'] = undefined;
 UpdateEmptyTestRunApiModel.prototype['description'] = undefined;
 
 /**
- * Test run launch source              Once launch source is specified it cannot be updated
+ * Test run launch source                Once launch source is specified it cannot be updated
  * @member {String} launchSource
  */
 UpdateEmptyTestRunApiModel.prototype['launchSource'] = undefined;

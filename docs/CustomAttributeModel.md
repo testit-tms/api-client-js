@@ -5,9 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique ID of the attribute | 
-**options** | [**[CustomAttributeOptionModel]**](CustomAttributeOptionModel.md) | Collection of the attribute options   Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | 
+**targets** | **[String]** | Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans) | 
+**options** | [**[CustomAttributeOptionModel]**](CustomAttributeOptionModel.md) | Collection of the attribute options      Available for attributes of type &#x60;options&#x60; and &#x60;multiple options&#x60; only | 
 **type** | [**CustomAttributeTypesEnum**](CustomAttributeTypesEnum.md) | Type of the attribute | 
 **isDeleted** | **Boolean** | Indicates if the attribute is deleted | 
+**isSystem** | **Boolean** | Indicates if the attribute is system | 
 **name** | **String** | Name of the attribute | 
 **isEnabled** | **Boolean** | Indicates if the attribute is enabled | 
 **isRequired** | **Boolean** | Indicates if the attribute value is mandatory to specify | 

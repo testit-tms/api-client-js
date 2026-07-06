@@ -17,7 +17,7 @@ import ProjectTypeModel from './ProjectTypeModel';
 /**
  * The ProjectShortestModel model module.
  * @module model/ProjectShortestModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class ProjectShortestModel {
     /**

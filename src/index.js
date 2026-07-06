@@ -14,10 +14,14 @@
 
 import ApiClient from './ApiClient';
 import AIServiceModelApiResult from './model/AIServiceModelApiResult';
+import AIServiceModelApiResultGroup from './model/AIServiceModelApiResultGroup';
+import AIServiceModelApiResultGroupedReply from './model/AIServiceModelApiResultGroupedReply';
+import AIServiceModelApiResultIReply from './model/AIServiceModelApiResultIReply';
 import AIServiceModelApiResultReply from './model/AIServiceModelApiResultReply';
 import ActionUpdate from './model/ActionUpdate';
 import ApiExternalServiceCategory from './model/ApiExternalServiceCategory';
 import AssignAttachmentApiModel from './model/AssignAttachmentApiModel';
+import AssignAutoTestCaseIdApiModel from './model/AssignAutoTestCaseIdApiModel';
 import AssignIterationApiModel from './model/AssignIterationApiModel';
 import AttachmentApiResult from './model/AttachmentApiResult';
 import AttachmentChangeViewModel from './model/AttachmentChangeViewModel';
@@ -32,6 +36,8 @@ import AutoTestApiResult from './model/AutoTestApiResult';
 import AutoTestAverageDurationApiResult from './model/AutoTestAverageDurationApiResult';
 import AutoTestBulkDeleteApiModel from './model/AutoTestBulkDeleteApiModel';
 import AutoTestBulkDeleteApiResult from './model/AutoTestBulkDeleteApiResult';
+import AutoTestCaseApiModel from './model/AutoTestCaseApiModel';
+import AutoTestCaseModel from './model/AutoTestCaseModel';
 import AutoTestChangeViewModel from './model/AutoTestChangeViewModel';
 import AutoTestChangeViewModelArrayChangedFieldViewModel from './model/AutoTestChangeViewModelArrayChangedFieldViewModel';
 import AutoTestClassCountApiModel from './model/AutoTestClassCountApiModel';
@@ -111,6 +117,7 @@ import CreateTestRunAndFillByAutoTestsApiModel from './model/CreateTestRunAndFil
 import CreateTestRunAndFillByConfigurationsApiModel from './model/CreateTestRunAndFillByConfigurationsApiModel';
 import CreateTestRunAndFillByWorkItemsApiModel from './model/CreateTestRunAndFillByWorkItemsApiModel';
 import CreateTestStatusApiModel from './model/CreateTestStatusApiModel';
+import CreateUserApiModel from './model/CreateUserApiModel';
 import CreateWorkItemApiModel from './model/CreateWorkItemApiModel';
 import CreateWorkItemCommentApiModel from './model/CreateWorkItemCommentApiModel';
 import CreateWorkItemPreviewsApiModel from './model/CreateWorkItemPreviewsApiModel';
@@ -138,7 +145,7 @@ import CustomAttributeValidationResult from './model/CustomAttributeValidationRe
 import DateTimeRangeSelectorModel from './model/DateTimeRangeSelectorModel';
 import DefectApiModel from './model/DefectApiModel';
 import DeletionState from './model/DeletionState';
-import DemoProjectApiResult from './model/DemoProjectApiResult';
+import DetailedProjectApiResult from './model/DetailedProjectApiResult';
 import EnableProjectExternalServiceApiModel from './model/EnableProjectExternalServiceApiModel';
 import ExternalFormAllowedValueModel from './model/ExternalFormAllowedValueModel';
 import ExternalFormCreateModel from './model/ExternalFormCreateModel';
@@ -147,6 +154,9 @@ import ExternalFormLinkModel from './model/ExternalFormLinkModel';
 import ExternalFormModel from './model/ExternalFormModel';
 import ExternalIssueApiField from './model/ExternalIssueApiField';
 import ExternalIssueApiFieldSuggestion from './model/ExternalIssueApiFieldSuggestion';
+import ExternalIssueApiFieldSuggestionGroup from './model/ExternalIssueApiFieldSuggestionGroup';
+import ExternalIssueApiFieldSuggestionGroupedReply from './model/ExternalIssueApiFieldSuggestionGroupedReply';
+import ExternalIssueApiFieldSuggestionIReply from './model/ExternalIssueApiFieldSuggestionIReply';
 import ExternalIssueApiFieldSuggestionReply from './model/ExternalIssueApiFieldSuggestionReply';
 import ExternalIssueApiMetadata from './model/ExternalIssueApiMetadata';
 import ExternalIssueApiPriority from './model/ExternalIssueApiPriority';
@@ -179,14 +189,14 @@ import GetAIServiceModelsApiModel from './model/GetAIServiceModelsApiModel';
 import GetExternalFormApiResult from './model/GetExternalFormApiResult';
 import GetExternalIssueSuggestionsApiModel from './model/GetExternalIssueSuggestionsApiModel';
 import GetShortProjectsApiModel from './model/GetShortProjectsApiModel';
-import GetXlsxTestPointsByTestPlanModel from './model/GetXlsxTestPointsByTestPlanModel';
+import GetXlsxTestPointsByTestPlanApiModel from './model/GetXlsxTestPointsByTestPlanApiModel';
 import GlobalCustomAttributePostModel from './model/GlobalCustomAttributePostModel';
 import GlobalCustomAttributeUpdateModel from './model/GlobalCustomAttributeUpdateModel';
-import GlobalSearchItemResult from './model/GlobalSearchItemResult';
-import GlobalSearchRequest from './model/GlobalSearchRequest';
-import GlobalSearchResponse from './model/GlobalSearchResponse';
+import Group from './model/Group';
+import GroupKey from './model/GroupKey';
 import GuidChangedFieldViewModel from './model/GuidChangedFieldViewModel';
 import GuidExtractionModel from './model/GuidExtractionModel';
+import GuidNullableChangedFieldViewModel from './model/GuidNullableChangedFieldViewModel';
 import IFilter from './model/IFilter';
 import ImageResizeType from './model/ImageResizeType';
 import Inquiry from './model/Inquiry';
@@ -202,7 +212,6 @@ import LabelApiResult from './model/LabelApiResult';
 import LabelShortModel from './model/LabelShortModel';
 import LastTestResultApiResult from './model/LastTestResultApiResult';
 import LastTestResultModel from './model/LastTestResultModel';
-import Link from './model/Link';
 import LinkApiResult from './model/LinkApiResult';
 import LinkCreateApiModel from './model/LinkCreateApiModel';
 import LinkModel from './model/LinkModel';
@@ -250,12 +259,13 @@ import ProjectExtractionModel from './model/ProjectExtractionModel';
 import ProjectFailureCategoryApiResult from './model/ProjectFailureCategoryApiResult';
 import ProjectFailureCategoryGroupItemApiResult from './model/ProjectFailureCategoryGroupItemApiResult';
 import ProjectFailureCategoryGroupItemApiResultReply from './model/ProjectFailureCategoryGroupItemApiResultReply';
-import ProjectModel from './model/ProjectModel';
 import ProjectNameApiResult from './model/ProjectNameApiResult';
 import ProjectSelectModel from './model/ProjectSelectModel';
 import ProjectShortApiResult from './model/ProjectShortApiResult';
+import ProjectShortApiResultGroup from './model/ProjectShortApiResultGroup';
+import ProjectShortApiResultGroupedReply from './model/ProjectShortApiResultGroupedReply';
+import ProjectShortApiResultIReply from './model/ProjectShortApiResultIReply';
 import ProjectShortApiResultReply from './model/ProjectShortApiResultReply';
-import ProjectShortModel from './model/ProjectShortModel';
 import ProjectShortestModel from './model/ProjectShortestModel';
 import ProjectTestPlansFilterModel from './model/ProjectTestPlansFilterModel';
 import ProjectType from './model/ProjectType';
@@ -267,6 +277,8 @@ import RequestTypeApiModel from './model/RequestTypeApiModel';
 import RequestTypeModel from './model/RequestTypeModel';
 import RerunTestResultApiResult from './model/RerunTestResultApiResult';
 import RerunsApiResult from './model/RerunsApiResult';
+import RoleApiModel from './model/RoleApiModel';
+import RoleApiModelApiCollection from './model/RoleApiModelApiCollection';
 import SearchCustomAttributeTemplateGetModel from './model/SearchCustomAttributeTemplateGetModel';
 import SearchExternalIssuesApiModel from './model/SearchExternalIssuesApiModel';
 import SearchTestRunsApiModel from './model/SearchTestRunsApiModel';
@@ -404,6 +416,9 @@ import TestRunTestResultsPartialBulkSetModel from './model/TestRunTestResultsPar
 import TestRunTestResultsSelectModel from './model/TestRunTestResultsSelectModel';
 import TestRunV2ApiResult from './model/TestRunV2ApiResult';
 import TestStatusApiResult from './model/TestStatusApiResult';
+import TestStatusApiResultGroup from './model/TestStatusApiResultGroup';
+import TestStatusApiResultGroupedReply from './model/TestStatusApiResultGroupedReply';
+import TestStatusApiResultIReply from './model/TestStatusApiResultIReply';
 import TestStatusApiResultReply from './model/TestStatusApiResultReply';
 import TestStatusApiType from './model/TestStatusApiType';
 import TestStatusModel from './model/TestStatusModel';
@@ -439,6 +454,7 @@ import UpdateTestStatusApiModel from './model/UpdateTestStatusApiModel';
 import UpdateWorkItemApiModel from './model/UpdateWorkItemApiModel';
 import UpdateWorkItemCommentApiModel from './model/UpdateWorkItemCommentApiModel';
 import UpdateWorkflowApiModel from './model/UpdateWorkflowApiModel';
+import UserApiModel from './model/UserApiModel';
 import UserCustomNameValidationResponse from './model/UserCustomNameValidationResponse';
 import UserNameApiResult from './model/UserNameApiResult';
 import ValidationProblemDetails from './model/ValidationProblemDetails';
@@ -464,7 +480,6 @@ import WorkItemChangedAttributeViewModel from './model/WorkItemChangedAttributeV
 import WorkItemChangedFieldsViewModel from './model/WorkItemChangedFieldsViewModel';
 import WorkItemCommentApiResult from './model/WorkItemCommentApiResult';
 import WorkItemEntityTypeApiModel from './model/WorkItemEntityTypeApiModel';
-import WorkItemEntityTypes from './model/WorkItemEntityTypes';
 import WorkItemExternalMetadataFieldFilterApiModel from './model/WorkItemExternalMetadataFieldFilterApiModel';
 import WorkItemExternalMetadataFieldFilterModel from './model/WorkItemExternalMetadataFieldFilterModel';
 import WorkItemExternalMetadataFilterApiModel from './model/WorkItemExternalMetadataFilterApiModel';
@@ -511,6 +526,7 @@ import WorkItemStateApiModel from './model/WorkItemStateApiModel';
 import WorkItemStates from './model/WorkItemStates';
 import WorkItemStepChangeViewModel from './model/WorkItemStepChangeViewModel';
 import WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel from './model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel';
+import WorkItemTypeModel from './model/WorkItemTypeModel';
 import WorkItemUpdatingFieldsApiModel from './model/WorkItemUpdatingFieldsApiModel';
 import WorkItemUpdatingFieldsApiResult from './model/WorkItemUpdatingFieldsApiResult';
 import WorkItemVersionModel from './model/WorkItemVersionModel';
@@ -518,11 +534,18 @@ import WorkflowApiResult from './model/WorkflowApiResult';
 import WorkflowExistsByNameApiResult from './model/WorkflowExistsByNameApiResult';
 import WorkflowProjectApiResult from './model/WorkflowProjectApiResult';
 import WorkflowProjectApiResultApiCollectionPreview from './model/WorkflowProjectApiResultApiCollectionPreview';
+import WorkflowProjectApiResultGroup from './model/WorkflowProjectApiResultGroup';
+import WorkflowProjectApiResultGroupedReply from './model/WorkflowProjectApiResultGroupedReply';
+import WorkflowProjectApiResultIReply from './model/WorkflowProjectApiResultIReply';
 import WorkflowProjectApiResultReply from './model/WorkflowProjectApiResultReply';
 import WorkflowShortApiResult from './model/WorkflowShortApiResult';
+import WorkflowShortApiResultGroup from './model/WorkflowShortApiResultGroup';
+import WorkflowShortApiResultGroupedReply from './model/WorkflowShortApiResultGroupedReply';
+import WorkflowShortApiResultIReply from './model/WorkflowShortApiResultIReply';
 import WorkflowShortApiResultReply from './model/WorkflowShortApiResultReply';
 import WorkflowStatusApiModel from './model/WorkflowStatusApiModel';
 import WorkflowStatusApiResult from './model/WorkflowStatusApiResult';
+import AIServicesAPIApi from './api/AIServicesAPIApi';
 import AttachmentsApi from './api/AttachmentsApi';
 import AutoTestsApi from './api/AutoTestsApi';
 import BackgroundJobsApi from './api/BackgroundJobsApi';
@@ -530,12 +553,16 @@ import ConfigurationsApi from './api/ConfigurationsApi';
 import CustomAttributeTemplatesApi from './api/CustomAttributeTemplatesApi';
 import CustomAttributesApi from './api/CustomAttributesApi';
 import ExternalIssuesApi from './api/ExternalIssuesApi';
+import ExternalServicesApi from './api/ExternalServicesApi';
+import FailureCategoriesApi from './api/FailureCategoriesApi';
 import NotificationsApi from './api/NotificationsApi';
 import OpenIdConnectionsApi from './api/OpenIdConnectionsApi';
 import ParametersApi from './api/ParametersApi';
 import ProjectAttributeTemplatesApi from './api/ProjectAttributeTemplatesApi';
 import ProjectAttributesApi from './api/ProjectAttributesApi';
 import ProjectConfigurationsApi from './api/ProjectConfigurationsApi';
+import ProjectExternalServicesApi from './api/ProjectExternalServicesApi';
+import ProjectFailureCategoriesApi from './api/ProjectFailureCategoriesApi';
 import ProjectSectionsApi from './api/ProjectSectionsApi';
 import ProjectSettingsApi from './api/ProjectSettingsApi';
 import ProjectTestPlanAttributesApi from './api/ProjectTestPlanAttributesApi';
@@ -543,7 +570,7 @@ import ProjectTestPlanTestPointsApi from './api/ProjectTestPlanTestPointsApi';
 import ProjectTestPlansApi from './api/ProjectTestPlansApi';
 import ProjectWorkItemsApi from './api/ProjectWorkItemsApi';
 import ProjectsApi from './api/ProjectsApi';
-import SearchApi from './api/SearchApi';
+import RolesApi from './api/RolesApi';
 import SectionsApi from './api/SectionsApi';
 import TagsApi from './api/TagsApi';
 import TestPlansApi from './api/TestPlansApi';
@@ -552,6 +579,8 @@ import TestResultsApi from './api/TestResultsApi';
 import TestRunsApi from './api/TestRunsApi';
 import TestStatusesApi from './api/TestStatusesApi';
 import TestSuitesApi from './api/TestSuitesApi';
+import UserRoleAssignmentsApi from './api/UserRoleAssignmentsApi';
+import UserStoragesApi from './api/UserStoragesApi';
 import UsersApi from './api/UsersApi';
 import WebhooksApi from './api/WebhooksApi';
 import WebhooksLogsApi from './api/WebhooksLogsApi';
@@ -589,7 +618,7 @@ import WorkflowsApi from './api/WorkflowsApi';
 * </pre>
 * </p>
 * @module index
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export {
     /**
@@ -603,6 +632,24 @@ export {
      * @property {module:model/AIServiceModelApiResult}
      */
     AIServiceModelApiResult,
+
+    /**
+     * The AIServiceModelApiResultGroup model constructor.
+     * @property {module:model/AIServiceModelApiResultGroup}
+     */
+    AIServiceModelApiResultGroup,
+
+    /**
+     * The AIServiceModelApiResultGroupedReply model constructor.
+     * @property {module:model/AIServiceModelApiResultGroupedReply}
+     */
+    AIServiceModelApiResultGroupedReply,
+
+    /**
+     * The AIServiceModelApiResultIReply model constructor.
+     * @property {module:model/AIServiceModelApiResultIReply}
+     */
+    AIServiceModelApiResultIReply,
 
     /**
      * The AIServiceModelApiResultReply model constructor.
@@ -627,6 +674,12 @@ export {
      * @property {module:model/AssignAttachmentApiModel}
      */
     AssignAttachmentApiModel,
+
+    /**
+     * The AssignAutoTestCaseIdApiModel model constructor.
+     * @property {module:model/AssignAutoTestCaseIdApiModel}
+     */
+    AssignAutoTestCaseIdApiModel,
 
     /**
      * The AssignIterationApiModel model constructor.
@@ -711,6 +764,18 @@ export {
      * @property {module:model/AutoTestBulkDeleteApiResult}
      */
     AutoTestBulkDeleteApiResult,
+
+    /**
+     * The AutoTestCaseApiModel model constructor.
+     * @property {module:model/AutoTestCaseApiModel}
+     */
+    AutoTestCaseApiModel,
+
+    /**
+     * The AutoTestCaseModel model constructor.
+     * @property {module:model/AutoTestCaseModel}
+     */
+    AutoTestCaseModel,
 
     /**
      * The AutoTestChangeViewModel model constructor.
@@ -1187,6 +1252,12 @@ export {
     CreateTestStatusApiModel,
 
     /**
+     * The CreateUserApiModel model constructor.
+     * @property {module:model/CreateUserApiModel}
+     */
+    CreateUserApiModel,
+
+    /**
      * The CreateWorkItemApiModel model constructor.
      * @property {module:model/CreateWorkItemApiModel}
      */
@@ -1349,10 +1420,10 @@ export {
     DeletionState,
 
     /**
-     * The DemoProjectApiResult model constructor.
-     * @property {module:model/DemoProjectApiResult}
+     * The DetailedProjectApiResult model constructor.
+     * @property {module:model/DetailedProjectApiResult}
      */
-    DemoProjectApiResult,
+    DetailedProjectApiResult,
 
     /**
      * The EnableProjectExternalServiceApiModel model constructor.
@@ -1401,6 +1472,24 @@ export {
      * @property {module:model/ExternalIssueApiFieldSuggestion}
      */
     ExternalIssueApiFieldSuggestion,
+
+    /**
+     * The ExternalIssueApiFieldSuggestionGroup model constructor.
+     * @property {module:model/ExternalIssueApiFieldSuggestionGroup}
+     */
+    ExternalIssueApiFieldSuggestionGroup,
+
+    /**
+     * The ExternalIssueApiFieldSuggestionGroupedReply model constructor.
+     * @property {module:model/ExternalIssueApiFieldSuggestionGroupedReply}
+     */
+    ExternalIssueApiFieldSuggestionGroupedReply,
+
+    /**
+     * The ExternalIssueApiFieldSuggestionIReply model constructor.
+     * @property {module:model/ExternalIssueApiFieldSuggestionIReply}
+     */
+    ExternalIssueApiFieldSuggestionIReply,
 
     /**
      * The ExternalIssueApiFieldSuggestionReply model constructor.
@@ -1595,10 +1684,10 @@ export {
     GetShortProjectsApiModel,
 
     /**
-     * The GetXlsxTestPointsByTestPlanModel model constructor.
-     * @property {module:model/GetXlsxTestPointsByTestPlanModel}
+     * The GetXlsxTestPointsByTestPlanApiModel model constructor.
+     * @property {module:model/GetXlsxTestPointsByTestPlanApiModel}
      */
-    GetXlsxTestPointsByTestPlanModel,
+    GetXlsxTestPointsByTestPlanApiModel,
 
     /**
      * The GlobalCustomAttributePostModel model constructor.
@@ -1613,22 +1702,16 @@ export {
     GlobalCustomAttributeUpdateModel,
 
     /**
-     * The GlobalSearchItemResult model constructor.
-     * @property {module:model/GlobalSearchItemResult}
+     * The Group model constructor.
+     * @property {module:model/Group}
      */
-    GlobalSearchItemResult,
+    Group,
 
     /**
-     * The GlobalSearchRequest model constructor.
-     * @property {module:model/GlobalSearchRequest}
+     * The GroupKey model constructor.
+     * @property {module:model/GroupKey}
      */
-    GlobalSearchRequest,
-
-    /**
-     * The GlobalSearchResponse model constructor.
-     * @property {module:model/GlobalSearchResponse}
-     */
-    GlobalSearchResponse,
+    GroupKey,
 
     /**
      * The GuidChangedFieldViewModel model constructor.
@@ -1641,6 +1724,12 @@ export {
      * @property {module:model/GuidExtractionModel}
      */
     GuidExtractionModel,
+
+    /**
+     * The GuidNullableChangedFieldViewModel model constructor.
+     * @property {module:model/GuidNullableChangedFieldViewModel}
+     */
+    GuidNullableChangedFieldViewModel,
 
     /**
      * The IFilter model constructor.
@@ -1731,12 +1820,6 @@ export {
      * @property {module:model/LastTestResultModel}
      */
     LastTestResultModel,
-
-    /**
-     * The Link model constructor.
-     * @property {module:model/Link}
-     */
-    Link,
 
     /**
      * The LinkApiResult model constructor.
@@ -2021,12 +2104,6 @@ export {
     ProjectFailureCategoryGroupItemApiResultReply,
 
     /**
-     * The ProjectModel model constructor.
-     * @property {module:model/ProjectModel}
-     */
-    ProjectModel,
-
-    /**
      * The ProjectNameApiResult model constructor.
      * @property {module:model/ProjectNameApiResult}
      */
@@ -2045,16 +2122,28 @@ export {
     ProjectShortApiResult,
 
     /**
+     * The ProjectShortApiResultGroup model constructor.
+     * @property {module:model/ProjectShortApiResultGroup}
+     */
+    ProjectShortApiResultGroup,
+
+    /**
+     * The ProjectShortApiResultGroupedReply model constructor.
+     * @property {module:model/ProjectShortApiResultGroupedReply}
+     */
+    ProjectShortApiResultGroupedReply,
+
+    /**
+     * The ProjectShortApiResultIReply model constructor.
+     * @property {module:model/ProjectShortApiResultIReply}
+     */
+    ProjectShortApiResultIReply,
+
+    /**
      * The ProjectShortApiResultReply model constructor.
      * @property {module:model/ProjectShortApiResultReply}
      */
     ProjectShortApiResultReply,
-
-    /**
-     * The ProjectShortModel model constructor.
-     * @property {module:model/ProjectShortModel}
-     */
-    ProjectShortModel,
 
     /**
      * The ProjectShortestModel model constructor.
@@ -2121,6 +2210,18 @@ export {
      * @property {module:model/RerunsApiResult}
      */
     RerunsApiResult,
+
+    /**
+     * The RoleApiModel model constructor.
+     * @property {module:model/RoleApiModel}
+     */
+    RoleApiModel,
+
+    /**
+     * The RoleApiModelApiCollection model constructor.
+     * @property {module:model/RoleApiModelApiCollection}
+     */
+    RoleApiModelApiCollection,
 
     /**
      * The SearchCustomAttributeTemplateGetModel model constructor.
@@ -2945,6 +3046,24 @@ export {
     TestStatusApiResult,
 
     /**
+     * The TestStatusApiResultGroup model constructor.
+     * @property {module:model/TestStatusApiResultGroup}
+     */
+    TestStatusApiResultGroup,
+
+    /**
+     * The TestStatusApiResultGroupedReply model constructor.
+     * @property {module:model/TestStatusApiResultGroupedReply}
+     */
+    TestStatusApiResultGroupedReply,
+
+    /**
+     * The TestStatusApiResultIReply model constructor.
+     * @property {module:model/TestStatusApiResultIReply}
+     */
+    TestStatusApiResultIReply,
+
+    /**
      * The TestStatusApiResultReply model constructor.
      * @property {module:model/TestStatusApiResultReply}
      */
@@ -3155,6 +3274,12 @@ export {
     UpdateWorkflowApiModel,
 
     /**
+     * The UserApiModel model constructor.
+     * @property {module:model/UserApiModel}
+     */
+    UserApiModel,
+
+    /**
      * The UserCustomNameValidationResponse model constructor.
      * @property {module:model/UserCustomNameValidationResponse}
      */
@@ -3303,12 +3428,6 @@ export {
      * @property {module:model/WorkItemEntityTypeApiModel}
      */
     WorkItemEntityTypeApiModel,
-
-    /**
-     * The WorkItemEntityTypes model constructor.
-     * @property {module:model/WorkItemEntityTypes}
-     */
-    WorkItemEntityTypes,
 
     /**
      * The WorkItemExternalMetadataFieldFilterApiModel model constructor.
@@ -3587,6 +3706,12 @@ export {
     WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel,
 
     /**
+     * The WorkItemTypeModel model constructor.
+     * @property {module:model/WorkItemTypeModel}
+     */
+    WorkItemTypeModel,
+
+    /**
      * The WorkItemUpdatingFieldsApiModel model constructor.
      * @property {module:model/WorkItemUpdatingFieldsApiModel}
      */
@@ -3629,6 +3754,24 @@ export {
     WorkflowProjectApiResultApiCollectionPreview,
 
     /**
+     * The WorkflowProjectApiResultGroup model constructor.
+     * @property {module:model/WorkflowProjectApiResultGroup}
+     */
+    WorkflowProjectApiResultGroup,
+
+    /**
+     * The WorkflowProjectApiResultGroupedReply model constructor.
+     * @property {module:model/WorkflowProjectApiResultGroupedReply}
+     */
+    WorkflowProjectApiResultGroupedReply,
+
+    /**
+     * The WorkflowProjectApiResultIReply model constructor.
+     * @property {module:model/WorkflowProjectApiResultIReply}
+     */
+    WorkflowProjectApiResultIReply,
+
+    /**
      * The WorkflowProjectApiResultReply model constructor.
      * @property {module:model/WorkflowProjectApiResultReply}
      */
@@ -3639,6 +3782,24 @@ export {
      * @property {module:model/WorkflowShortApiResult}
      */
     WorkflowShortApiResult,
+
+    /**
+     * The WorkflowShortApiResultGroup model constructor.
+     * @property {module:model/WorkflowShortApiResultGroup}
+     */
+    WorkflowShortApiResultGroup,
+
+    /**
+     * The WorkflowShortApiResultGroupedReply model constructor.
+     * @property {module:model/WorkflowShortApiResultGroupedReply}
+     */
+    WorkflowShortApiResultGroupedReply,
+
+    /**
+     * The WorkflowShortApiResultIReply model constructor.
+     * @property {module:model/WorkflowShortApiResultIReply}
+     */
+    WorkflowShortApiResultIReply,
 
     /**
      * The WorkflowShortApiResultReply model constructor.
@@ -3657,6 +3818,12 @@ export {
      * @property {module:model/WorkflowStatusApiResult}
      */
     WorkflowStatusApiResult,
+
+    /**
+    * The AIServicesAPIApi service constructor.
+    * @property {module:api/AIServicesAPIApi}
+    */
+    AIServicesAPIApi,
 
     /**
     * The AttachmentsApi service constructor.
@@ -3701,6 +3868,18 @@ export {
     ExternalIssuesApi,
 
     /**
+    * The ExternalServicesApi service constructor.
+    * @property {module:api/ExternalServicesApi}
+    */
+    ExternalServicesApi,
+
+    /**
+    * The FailureCategoriesApi service constructor.
+    * @property {module:api/FailureCategoriesApi}
+    */
+    FailureCategoriesApi,
+
+    /**
     * The NotificationsApi service constructor.
     * @property {module:api/NotificationsApi}
     */
@@ -3735,6 +3914,18 @@ export {
     * @property {module:api/ProjectConfigurationsApi}
     */
     ProjectConfigurationsApi,
+
+    /**
+    * The ProjectExternalServicesApi service constructor.
+    * @property {module:api/ProjectExternalServicesApi}
+    */
+    ProjectExternalServicesApi,
+
+    /**
+    * The ProjectFailureCategoriesApi service constructor.
+    * @property {module:api/ProjectFailureCategoriesApi}
+    */
+    ProjectFailureCategoriesApi,
 
     /**
     * The ProjectSectionsApi service constructor.
@@ -3779,10 +3970,10 @@ export {
     ProjectsApi,
 
     /**
-    * The SearchApi service constructor.
-    * @property {module:api/SearchApi}
+    * The RolesApi service constructor.
+    * @property {module:api/RolesApi}
     */
-    SearchApi,
+    RolesApi,
 
     /**
     * The SectionsApi service constructor.
@@ -3831,6 +4022,18 @@ export {
     * @property {module:api/TestSuitesApi}
     */
     TestSuitesApi,
+
+    /**
+    * The UserRoleAssignmentsApi service constructor.
+    * @property {module:api/UserRoleAssignmentsApi}
+    */
+    UserRoleAssignmentsApi,
+
+    /**
+    * The UserStoragesApi service constructor.
+    * @property {module:api/UserStoragesApi}
+    */
+    UserStoragesApi,
 
     /**
     * The UsersApi service constructor.

@@ -15,7 +15,7 @@ import ApiClient from '../ApiClient';
 import AttachmentApiResult from './AttachmentApiResult';
 import AutoTest from './AutoTest';
 import AutoTestStepResult from './AutoTestStepResult';
-import Link from './Link';
+import LinkApiResult from './LinkApiResult';
 import StepCommentApiModel from './StepCommentApiModel';
 import StepResultApiModel from './StepResultApiModel';
 import TestPoint from './TestPoint';
@@ -25,7 +25,7 @@ import TestStatusApiResult from './TestStatusApiResult';
 /**
  * The TestResultResponse model module.
  * @module model/TestResultResponse
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class TestResultResponse {
     /**
@@ -103,7 +103,7 @@ class TestResultResponse {
                 obj['comment'] = ApiClient.convertToType(data['comment'], 'String');
             }
             if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], [Link]);
+                obj['links'] = ApiClient.convertToType(data['links'], [LinkApiResult]);
             }
             if (data.hasOwnProperty('stepResults')) {
                 obj['stepResults'] = ApiClient.convertToType(data['stepResults'], [StepResultApiModel]);
@@ -231,7 +231,7 @@ class TestResultResponse {
             }
             // validate the optional field `links` (array)
             for (const item of data['links']) {
-                Link.validateJSON(item);
+                LinkApiResult.validateJSON(item);
             };
         }
         if (data['stepResults']) { // data not null
@@ -392,7 +392,7 @@ TestResultResponse.prototype['status'] = undefined;
 TestResultResponse.prototype['comment'] = undefined;
 
 /**
- * @member {Array.<module:model/Link>} links
+ * @member {Array.<module:model/LinkApiResult>} links
  */
 TestResultResponse.prototype['links'] = undefined;
 

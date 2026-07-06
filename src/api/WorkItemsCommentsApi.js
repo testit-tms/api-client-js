@@ -22,7 +22,7 @@ import WorkItemCommentApiResult from '../model/WorkItemCommentApiResult';
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class WorkItemsCommentsApi {
 
@@ -41,7 +41,7 @@ export default class WorkItemsCommentsApi {
 
     /**
      * Delete WorkItem comment
-     *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
+     *   Use case    User sets comment identifier    User runs method execution    System delete comment    System returns success status code
      * @param {String} commentId Comment internal (guid format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -62,7 +62,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -75,7 +75,7 @@ export default class WorkItemsCommentsApi {
 
     /**
      * Delete WorkItem comment
-     *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
+     *   Use case    User sets comment identifier    User runs method execution    System delete comment    System returns success status code
      * @param {String} commentId Comment internal (guid format) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -89,7 +89,7 @@ export default class WorkItemsCommentsApi {
 
     /**
      * Create WorkItem comment
-     *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
+     *   Use case    User sets comment properties (listed in request parameters)    User runs method execution    System creates comment    System returns comment model (listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateWorkItemCommentApiModel} [createWorkItemCommentApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentApiResult} and HTTP response
@@ -107,7 +107,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemCommentApiResult;
@@ -120,7 +120,7 @@ export default class WorkItemsCommentsApi {
 
     /**
      * Create WorkItem comment
-     *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
+     *   Use case    User sets comment properties (listed in request parameters)    User runs method execution    System creates comment    System returns comment model (listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateWorkItemCommentApiModel} opts.createWorkItemCommentApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemCommentApiResult}
@@ -152,7 +152,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -199,7 +199,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -245,7 +245,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemCommentApiResult];

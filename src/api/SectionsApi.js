@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * Sections service.
 * @module api/SectionsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class SectionsApi {
 
@@ -70,7 +70,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -99,7 +99,7 @@ export default class SectionsApi {
 
     /**
      * Create section
-     *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
+     *   Use case    User sets section properties (listed in request example)    User runs method execution    System creates section property values    System returns section (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPostModel} [sectionPostModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
@@ -117,7 +117,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SectionWithStepsModel;
@@ -130,7 +130,7 @@ export default class SectionsApi {
 
     /**
      * Create section
-     *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
+     *   Use case    User sets section properties (listed in request example)    User runs method execution    System creates section property values    System returns section (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPostModel} opts.sectionPostModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SectionWithStepsModel}
@@ -145,7 +145,7 @@ export default class SectionsApi {
 
     /**
      * Delete section
-     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
+     *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search and delete nested sections of the found section    System search and delete workitems related to the found nested sections    System deletes initial section and related workitem    System returns no content response
      * @param {String} id Section internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -166,7 +166,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -179,7 +179,7 @@ export default class SectionsApi {
 
     /**
      * Delete section
-     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
+     *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search and delete nested sections of the found section    System search and delete workitems related to the found nested sections    System deletes initial section and related workitem    System returns no content response
      * @param {String} id Section internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -193,7 +193,7 @@ export default class SectionsApi {
 
     /**
      * Get section
-     *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
+     *   Use case    User sets section internal (guid format) identifier    User runs method execution    System search section by the section identifier    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns section
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/DeletionState} [isDeleted] 
@@ -218,7 +218,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = SectionWithStepsModel;
@@ -231,7 +231,7 @@ export default class SectionsApi {
 
     /**
      * Get section
-     *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
+     *   Use case    User sets section internal (guid format) identifier    User runs method execution    System search section by the section identifier    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns section
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {module:model/DeletionState} opts.isDeleted 
@@ -247,7 +247,7 @@ export default class SectionsApi {
 
     /**
      * Get section work items
-     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
+     *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search work items related to the section    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns work item collection
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted = false)] Requested section is deleted
@@ -286,7 +286,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];
@@ -299,7 +299,7 @@ export default class SectionsApi {
 
     /**
      * Get section work items
-     *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
+     *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search work items related to the section    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns work item collection
      * @param {String} id Section internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted Requested section is deleted (default to false)
@@ -339,7 +339,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -366,7 +366,7 @@ export default class SectionsApi {
 
     /**
      * Rename section
-     *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
+     *   Use case    User sets section identifier and new name (listed in request example)    User runs method execution    System search section by the identifier    System updates section name using the new name    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionRenameModel} [sectionRenameModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -384,7 +384,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -397,7 +397,7 @@ export default class SectionsApi {
 
     /**
      * Rename section
-     *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
+     *   Use case    User sets section identifier and new name (listed in request example)    User runs method execution    System search section by the identifier    System updates section name using the new name    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionRenameModel} opts.sectionRenameModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -412,7 +412,7 @@ export default class SectionsApi {
 
     /**
      * Update section
-     *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
+     *   Use case    User sets section properties (listed in request example)    User runs method execution    System search section by the identifier    System updates section using the property values    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPutModel} [sectionPutModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -430,7 +430,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -443,7 +443,7 @@ export default class SectionsApi {
 
     /**
      * Update section
-     *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
+     *   Use case    User sets section properties (listed in request example)    User runs method execution    System search section by the identifier    System updates section using the property values    System returns no content response
      * @param {Object} opts Optional parameters
      * @param {module:model/SectionPutModel} opts.sectionPutModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

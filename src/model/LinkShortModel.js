@@ -12,23 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
+import LinkType from './LinkType';
 
 /**
  * The LinkShortModel model module.
  * @module model/LinkShortModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkShortModel {
     /**
      * Constructs a new <code>LinkShortModel</code>.
      * @alias module:model/LinkShortModel
      * @param id {String} 
-     * @param title {String} 
+     * @param type {module:model/LinkType} 
      * @param url {String} 
      */
-    constructor(id, title, url) { 
+    constructor(id, type, url) { 
         
-        LinkShortModel.initialize(this, id, title, url);
+        LinkShortModel.initialize(this, id, type, url);
     }
 
     /**
@@ -36,9 +37,9 @@ class LinkShortModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, title, url) { 
+    static initialize(obj, id, type, url) { 
         obj['id'] = id;
-        obj['title'] = title;
+        obj['type'] = type;
         obj['url'] = url;
     }
 
@@ -60,7 +61,7 @@ class LinkShortModel {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = ApiClient.convertToType(data['type'], LinkType);
             }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
@@ -90,10 +91,6 @@ class LinkShortModel {
             throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
         }
         // ensure the json data is a string
-        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
-            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
-        }
-        // ensure the json data is a string
         if (data['url'] && !(typeof data['url'] === 'string' || data['url'] instanceof String)) {
             throw new Error("Expected the field `url` to be a primitive type in the JSON string but got " + data['url']);
         }
@@ -104,7 +101,7 @@ class LinkShortModel {
 
 }
 
-LinkShortModel.RequiredProperties = ["id", "title", "url"];
+LinkShortModel.RequiredProperties = ["id", "type", "url"];
 
 /**
  * @member {String} id
@@ -117,7 +114,7 @@ LinkShortModel.prototype['id'] = undefined;
 LinkShortModel.prototype['title'] = undefined;
 
 /**
- * @member {String} type
+ * @member {module:model/LinkType} type
  */
 LinkShortModel.prototype['type'] = undefined;
 

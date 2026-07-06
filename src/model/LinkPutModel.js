@@ -17,18 +17,19 @@ import LinkType from './LinkType';
 /**
  * The LinkPutModel model module.
  * @module model/LinkPutModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class LinkPutModel {
     /**
      * Constructs a new <code>LinkPutModel</code>.
      * @alias module:model/LinkPutModel
      * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+     * @param type {module:model/LinkType} Specifies the type of the link.
      * @param hasInfo {Boolean} 
      */
-    constructor(url, hasInfo) { 
+    constructor(url, type, hasInfo) { 
         
-        LinkPutModel.initialize(this, url, hasInfo);
+        LinkPutModel.initialize(this, url, type, hasInfo);
     }
 
     /**
@@ -36,8 +37,9 @@ class LinkPutModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, url, hasInfo) { 
+    static initialize(obj, url, type, hasInfo) { 
         obj['url'] = url;
+        obj['type'] = type;
         obj['hasInfo'] = hasInfo;
     }
 
@@ -109,7 +111,7 @@ class LinkPutModel {
 
 }
 
-LinkPutModel.RequiredProperties = ["url", "hasInfo"];
+LinkPutModel.RequiredProperties = ["url", "type", "hasInfo"];
 
 /**
  * @member {String} id

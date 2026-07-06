@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemParameterKeyModel model module.
  * @module model/WorkItemParameterKeyModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class WorkItemParameterKeyModel {
     /**

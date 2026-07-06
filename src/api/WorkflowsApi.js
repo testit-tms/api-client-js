@@ -22,13 +22,13 @@ import UpdateWorkflowApiModel from '../model/UpdateWorkflowApiModel';
 import ValidationProblemDetails from '../model/ValidationProblemDetails';
 import WorkflowApiResult from '../model/WorkflowApiResult';
 import WorkflowExistsByNameApiResult from '../model/WorkflowExistsByNameApiResult';
-import WorkflowProjectApiResultReply from '../model/WorkflowProjectApiResultReply';
-import WorkflowShortApiResultReply from '../model/WorkflowShortApiResultReply';
+import WorkflowProjectApiResultIReply from '../model/WorkflowProjectApiResultIReply';
+import WorkflowShortApiResultIReply from '../model/WorkflowShortApiResultIReply';
 
 /**
 * Workflows service.
 * @module api/WorkflowsApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class WorkflowsApi {
 
@@ -66,7 +66,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -110,7 +110,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkflowApiResult;
@@ -158,7 +158,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -188,7 +188,7 @@ export default class WorkflowsApi {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchWorkflowProjectsApiModel} [searchWorkflowProjectsApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowProjectApiResultReply} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowProjectApiResultIReply} and HTTP response
      */
     apiV2WorkflowsIdProjectsSearchPostWithHttpInfo(id, opts) {
       opts = opts || {};
@@ -208,10 +208,10 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = WorkflowProjectApiResultReply;
+      let returnType = WorkflowProjectApiResultIReply;
       return this.apiClient.callApi(
         '/api/v2/workflows/{id}/projects/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -223,7 +223,7 @@ export default class WorkflowsApi {
      * @param {String} id 
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchWorkflowProjectsApiModel} opts.searchWorkflowProjectsApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowProjectApiResultReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowProjectApiResultIReply}
      */
     apiV2WorkflowsIdProjectsSearchPost(id, opts) {
       return this.apiV2WorkflowsIdProjectsSearchPostWithHttpInfo(id, opts)
@@ -257,7 +257,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -303,7 +303,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkflowExistsByNameApiResult;
@@ -344,7 +344,7 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkflowApiResult;
@@ -371,7 +371,7 @@ export default class WorkflowsApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchWorkflowsApiModel} [searchWorkflowsApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowShortApiResultReply} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowShortApiResultIReply} and HTTP response
      */
     apiV2WorkflowsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
@@ -386,10 +386,10 @@ export default class WorkflowsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = WorkflowShortApiResultReply;
+      let returnType = WorkflowShortApiResultIReply;
       return this.apiClient.callApi(
         '/api/v2/workflows/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -400,7 +400,7 @@ export default class WorkflowsApi {
     /**
      * @param {Object} opts Optional parameters
      * @param {module:model/SearchWorkflowsApiModel} opts.searchWorkflowsApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowShortApiResultReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowShortApiResultIReply}
      */
     apiV2WorkflowsSearchPost(opts) {
       return this.apiV2WorkflowsSearchPostWithHttpInfo(opts)

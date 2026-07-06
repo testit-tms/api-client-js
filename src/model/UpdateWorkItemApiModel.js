@@ -19,36 +19,28 @@ import TagModel from './TagModel';
 import UpdateLinkApiModel from './UpdateLinkApiModel';
 import UpdateStepApiModel from './UpdateStepApiModel';
 import WorkItemParameterKeyApiModel from './WorkItemParameterKeyApiModel';
-import WorkItemPriorityModel from './WorkItemPriorityModel';
-import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
-import WorkItemStates from './WorkItemStates';
+import WorkItemPriorityApiModel from './WorkItemPriorityApiModel';
+import WorkItemStateApiModel from './WorkItemStateApiModel';
 
 /**
  * The UpdateWorkItemApiModel model module.
  * @module model/UpdateWorkItemApiModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class UpdateWorkItemApiModel {
     /**
      * Constructs a new <code>UpdateWorkItemApiModel</code>.
      * @alias module:model/UpdateWorkItemApiModel
-     * @param id {String} Workitem internal identifier
-     * @param sectionId {String} Internal identifier of section where workitem is located
-     * @param state {module:model/WorkItemStates} 
-     * @param priority {module:model/WorkItemPriorityModel} 
-     * @param steps {Array.<module:model/UpdateStepApiModel>} Collection of workitem steps
-     * @param preconditionSteps {Array.<module:model/UpdateStepApiModel>} Collection of workitem precondtion steps
-     * @param postconditionSteps {Array.<module:model/UpdateStepApiModel>} Collection of workitem postcondition steps
-     * @param duration {Number} Workitem duration in milliseconds
-     * @param attributes {Object.<String, Object>} Key value pair of custom workitem attributes
-     * @param tags {Array.<module:model/TagModel>} Collection of workitem tags
-     * @param links {Array.<module:model/UpdateLinkApiModel>} Collection of workitem links
-     * @param name {String} Workitem name
-     * @param attachments {Array.<module:model/AssignAttachmentApiModel>} 
+     * @param id {String} Unique identifier of the work item
+     * @param sectionId {String} Unique identifier of the section within a project
+     * @param name {String} Name of the work item
+     * @param duration {Number} Duration of the work item in milliseconds
+     * @param state {module:model/WorkItemStateApiModel} Current state of the work item
+     * @param priority {module:model/WorkItemPriorityApiModel} Priority level assigned to the work item
      */
-    constructor(id, sectionId, state, priority, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name, attachments) { 
+    constructor(id, sectionId, name, duration, state, priority) { 
         
-        UpdateWorkItemApiModel.initialize(this, id, sectionId, state, priority, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name, attachments);
+        UpdateWorkItemApiModel.initialize(this, id, sectionId, name, duration, state, priority);
     }
 
     /**
@@ -56,20 +48,13 @@ class UpdateWorkItemApiModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, sectionId, state, priority, steps, preconditionSteps, postconditionSteps, duration, attributes, tags, links, name, attachments) { 
+    static initialize(obj, id, sectionId, name, duration, state, priority) { 
         obj['id'] = id;
         obj['sectionId'] = sectionId;
+        obj['name'] = name;
+        obj['duration'] = duration;
         obj['state'] = state;
         obj['priority'] = priority;
-        obj['steps'] = steps;
-        obj['preconditionSteps'] = preconditionSteps;
-        obj['postconditionSteps'] = postconditionSteps;
-        obj['duration'] = duration;
-        obj['attributes'] = attributes;
-        obj['tags'] = tags;
-        obj['links'] = links;
-        obj['name'] = name;
-        obj['attachments'] = attachments;
     }
 
     /**
@@ -89,29 +74,20 @@ class UpdateWorkItemApiModel {
             if (data.hasOwnProperty('sectionId')) {
                 obj['sectionId'] = ApiClient.convertToType(data['sectionId'], 'String');
             }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], WorkItemStates);
-            }
-            if (data.hasOwnProperty('priority')) {
-                obj['priority'] = ApiClient.convertToType(data['priority'], WorkItemPriorityModel);
-            }
-            if (data.hasOwnProperty('sourceType')) {
-                obj['sourceType'] = ApiClient.convertToType(data['sourceType'], WorkItemSourceTypeModel);
-            }
-            if (data.hasOwnProperty('steps')) {
-                obj['steps'] = ApiClient.convertToType(data['steps'], [UpdateStepApiModel]);
-            }
-            if (data.hasOwnProperty('preconditionSteps')) {
-                obj['preconditionSteps'] = ApiClient.convertToType(data['preconditionSteps'], [UpdateStepApiModel]);
-            }
-            if (data.hasOwnProperty('postconditionSteps')) {
-                obj['postconditionSteps'] = ApiClient.convertToType(data['postconditionSteps'], [UpdateStepApiModel]);
-            }
             if (data.hasOwnProperty('duration')) {
                 obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
+            }
+            if (data.hasOwnProperty('state')) {
+                obj['state'] = ApiClient.convertToType(data['state'], WorkItemStateApiModel);
+            }
+            if (data.hasOwnProperty('priority')) {
+                obj['priority'] = ApiClient.convertToType(data['priority'], WorkItemPriorityApiModel);
             }
             if (data.hasOwnProperty('attributes')) {
                 obj['attributes'] = ApiClient.convertToType(data['attributes'], {'String': Object});
@@ -119,20 +95,26 @@ class UpdateWorkItemApiModel {
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], [TagModel]);
             }
-            if (data.hasOwnProperty('links')) {
-                obj['links'] = ApiClient.convertToType(data['links'], [UpdateLinkApiModel]);
+            if (data.hasOwnProperty('preconditionSteps')) {
+                obj['preconditionSteps'] = ApiClient.convertToType(data['preconditionSteps'], [UpdateStepApiModel]);
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('steps')) {
+                obj['steps'] = ApiClient.convertToType(data['steps'], [UpdateStepApiModel]);
             }
-            if (data.hasOwnProperty('attachments')) {
-                obj['attachments'] = ApiClient.convertToType(data['attachments'], [AssignAttachmentApiModel]);
+            if (data.hasOwnProperty('postconditionSteps')) {
+                obj['postconditionSteps'] = ApiClient.convertToType(data['postconditionSteps'], [UpdateStepApiModel]);
             }
             if (data.hasOwnProperty('iterations')) {
                 obj['iterations'] = ApiClient.convertToType(data['iterations'], [AssignIterationApiModel]);
             }
             if (data.hasOwnProperty('autoTests')) {
                 obj['autoTests'] = ApiClient.convertToType(data['autoTests'], [AutoTestIdModel]);
+            }
+            if (data.hasOwnProperty('attachments')) {
+                obj['attachments'] = ApiClient.convertToType(data['attachments'], [AssignAttachmentApiModel]);
+            }
+            if (data.hasOwnProperty('links')) {
+                obj['links'] = ApiClient.convertToType(data['links'], [UpdateLinkApiModel]);
             }
             if (data.hasOwnProperty('parameters')) {
                 obj['parameters'] = ApiClient.convertToType(data['parameters'], [WorkItemParameterKeyApiModel]);
@@ -162,17 +144,21 @@ class UpdateWorkItemApiModel {
             throw new Error("Expected the field `sectionId` to be a primitive type in the JSON string but got " + data['sectionId']);
         }
         // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
         if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
-        if (data['steps']) { // data not null
+        if (data['tags']) { // data not null
             // ensure the json data is an array
-            if (!Array.isArray(data['steps'])) {
-                throw new Error("Expected the field `steps` to be an array in the JSON data but got " + data['steps']);
+            if (!Array.isArray(data['tags'])) {
+                throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
             }
-            // validate the optional field `steps` (array)
-            for (const item of data['steps']) {
-                UpdateStepApiModel.validateJSON(item);
+            // validate the optional field `tags` (array)
+            for (const item of data['tags']) {
+                TagModel.validateJSON(item);
             };
         }
         if (data['preconditionSteps']) { // data not null
@@ -185,6 +171,16 @@ class UpdateWorkItemApiModel {
                 UpdateStepApiModel.validateJSON(item);
             };
         }
+        if (data['steps']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['steps'])) {
+                throw new Error("Expected the field `steps` to be an array in the JSON data but got " + data['steps']);
+            }
+            // validate the optional field `steps` (array)
+            for (const item of data['steps']) {
+                UpdateStepApiModel.validateJSON(item);
+            };
+        }
         if (data['postconditionSteps']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['postconditionSteps'])) {
@@ -193,40 +189,6 @@ class UpdateWorkItemApiModel {
             // validate the optional field `postconditionSteps` (array)
             for (const item of data['postconditionSteps']) {
                 UpdateStepApiModel.validateJSON(item);
-            };
-        }
-        if (data['tags']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['tags'])) {
-                throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
-            }
-            // validate the optional field `tags` (array)
-            for (const item of data['tags']) {
-                TagModel.validateJSON(item);
-            };
-        }
-        if (data['links']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['links'])) {
-                throw new Error("Expected the field `links` to be an array in the JSON data but got " + data['links']);
-            }
-            // validate the optional field `links` (array)
-            for (const item of data['links']) {
-                UpdateLinkApiModel.validateJSON(item);
-            };
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        if (data['attachments']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['attachments'])) {
-                throw new Error("Expected the field `attachments` to be an array in the JSON data but got " + data['attachments']);
-            }
-            // validate the optional field `attachments` (array)
-            for (const item of data['attachments']) {
-                AssignAttachmentApiModel.validateJSON(item);
             };
         }
         if (data['iterations']) { // data not null
@@ -249,6 +211,26 @@ class UpdateWorkItemApiModel {
                 AutoTestIdModel.validateJSON(item);
             };
         }
+        if (data['attachments']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['attachments'])) {
+                throw new Error("Expected the field `attachments` to be an array in the JSON data but got " + data['attachments']);
+            }
+            // validate the optional field `attachments` (array)
+            for (const item of data['attachments']) {
+                AssignAttachmentApiModel.validateJSON(item);
+            };
+        }
+        if (data['links']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['links'])) {
+                throw new Error("Expected the field `links` to be an array in the JSON data but got " + data['links']);
+            }
+            // validate the optional field `links` (array)
+            for (const item of data['links']) {
+                UpdateLinkApiModel.validateJSON(item);
+            };
+        }
         if (data['parameters']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['parameters'])) {
@@ -266,108 +248,106 @@ class UpdateWorkItemApiModel {
 
 }
 
-UpdateWorkItemApiModel.RequiredProperties = ["id", "sectionId", "state", "priority", "steps", "preconditionSteps", "postconditionSteps", "duration", "attributes", "tags", "links", "name", "attachments"];
+UpdateWorkItemApiModel.RequiredProperties = ["id", "sectionId", "name", "duration", "state", "priority"];
 
 /**
- * Workitem internal identifier
+ * Unique identifier of the work item
  * @member {String} id
  */
 UpdateWorkItemApiModel.prototype['id'] = undefined;
 
 /**
- * Internal identifier of section where workitem is located
+ * Unique identifier of the section within a project
  * @member {String} sectionId
  */
 UpdateWorkItemApiModel.prototype['sectionId'] = undefined;
 
 /**
- * Workitem description
- * @member {String} description
- */
-UpdateWorkItemApiModel.prototype['description'] = undefined;
-
-/**
- * @member {module:model/WorkItemStates} state
- */
-UpdateWorkItemApiModel.prototype['state'] = undefined;
-
-/**
- * @member {module:model/WorkItemPriorityModel} priority
- */
-UpdateWorkItemApiModel.prototype['priority'] = undefined;
-
-/**
- * @member {module:model/WorkItemSourceTypeModel} sourceType
- */
-UpdateWorkItemApiModel.prototype['sourceType'] = undefined;
-
-/**
- * Collection of workitem steps
- * @member {Array.<module:model/UpdateStepApiModel>} steps
- */
-UpdateWorkItemApiModel.prototype['steps'] = undefined;
-
-/**
- * Collection of workitem precondtion steps
- * @member {Array.<module:model/UpdateStepApiModel>} preconditionSteps
- */
-UpdateWorkItemApiModel.prototype['preconditionSteps'] = undefined;
-
-/**
- * Collection of workitem postcondition steps
- * @member {Array.<module:model/UpdateStepApiModel>} postconditionSteps
- */
-UpdateWorkItemApiModel.prototype['postconditionSteps'] = undefined;
-
-/**
- * Workitem duration in milliseconds
- * @member {Number} duration
- */
-UpdateWorkItemApiModel.prototype['duration'] = undefined;
-
-/**
- * Key value pair of custom workitem attributes
- * @member {Object.<String, Object>} attributes
- */
-UpdateWorkItemApiModel.prototype['attributes'] = undefined;
-
-/**
- * Collection of workitem tags
- * @member {Array.<module:model/TagModel>} tags
- */
-UpdateWorkItemApiModel.prototype['tags'] = undefined;
-
-/**
- * Collection of workitem links
- * @member {Array.<module:model/UpdateLinkApiModel>} links
- */
-UpdateWorkItemApiModel.prototype['links'] = undefined;
-
-/**
- * Workitem name
+ * Name of the work item
  * @member {String} name
  */
 UpdateWorkItemApiModel.prototype['name'] = undefined;
 
 /**
- * @member {Array.<module:model/AssignAttachmentApiModel>} attachments
+ * Description of the work item
+ * @member {String} description
  */
-UpdateWorkItemApiModel.prototype['attachments'] = undefined;
+UpdateWorkItemApiModel.prototype['description'] = undefined;
 
 /**
- * Collection of parameter id sets
+ * Duration of the work item in milliseconds
+ * @member {Number} duration
+ */
+UpdateWorkItemApiModel.prototype['duration'] = undefined;
+
+/**
+ * Current state of the work item
+ * @member {module:model/WorkItemStateApiModel} state
+ */
+UpdateWorkItemApiModel.prototype['state'] = undefined;
+
+/**
+ * Priority level assigned to the work item
+ * @member {module:model/WorkItemPriorityApiModel} priority
+ */
+UpdateWorkItemApiModel.prototype['priority'] = undefined;
+
+/**
+ * Set of custom attributes associated with the work item
+ * @member {Object.<String, Object>} attributes
+ */
+UpdateWorkItemApiModel.prototype['attributes'] = undefined;
+
+/**
+ * Set of tags applied to the work item
+ * @member {Array.<module:model/TagModel>} tags
+ */
+UpdateWorkItemApiModel.prototype['tags'] = undefined;
+
+/**
+ * Set of precondition steps that must be executed before the main steps
+ * @member {Array.<module:model/UpdateStepApiModel>} preconditionSteps
+ */
+UpdateWorkItemApiModel.prototype['preconditionSteps'] = undefined;
+
+/**
+ * Set of main steps or actions defined for the work item
+ * @member {Array.<module:model/UpdateStepApiModel>} steps
+ */
+UpdateWorkItemApiModel.prototype['steps'] = undefined;
+
+/**
+ * Set of postcondition steps that are executed after completing the main steps
+ * @member {Array.<module:model/UpdateStepApiModel>} postconditionSteps
+ */
+UpdateWorkItemApiModel.prototype['postconditionSteps'] = undefined;
+
+/**
+ * Set of iterations associated with the work item
  * @member {Array.<module:model/AssignIterationApiModel>} iterations
  */
 UpdateWorkItemApiModel.prototype['iterations'] = undefined;
 
 /**
- * Collection of autotest internal ids
+ * Set of automated tests linked to the work item
  * @member {Array.<module:model/AutoTestIdModel>} autoTests
  */
 UpdateWorkItemApiModel.prototype['autoTests'] = undefined;
 
 /**
- * Set of parameter keys related to the work item
+ * Set of files attached to the work item
+ * @member {Array.<module:model/AssignAttachmentApiModel>} attachments
+ */
+UpdateWorkItemApiModel.prototype['attachments'] = undefined;
+
+/**
+ * Set of links related to the work item
+ * @member {Array.<module:model/UpdateLinkApiModel>} links
+ */
+UpdateWorkItemApiModel.prototype['links'] = undefined;
+
+/**
+ * Set of parameter keys associated with the work item
  * @member {Array.<module:model/WorkItemParameterKeyApiModel>} parameters
  */
 UpdateWorkItemApiModel.prototype['parameters'] = undefined;

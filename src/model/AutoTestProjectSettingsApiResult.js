@@ -17,7 +17,7 @@ import WorkItemUpdatingFieldsApiResult from './WorkItemUpdatingFieldsApiResult';
 /**
  * The AutoTestProjectSettingsApiResult model module.
  * @module model/AutoTestProjectSettingsApiResult
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class AutoTestProjectSettingsApiResult {
     /**
@@ -31,10 +31,14 @@ class AutoTestProjectSettingsApiResult {
      * @param rerunAttemptsCount {Number} Auto rerun attempt count
      * @param workItemUpdatingEnabled {Boolean} Autotest to work item updating enabled
      * @param workItemUpdatingFields {module:model/WorkItemUpdatingFieldsApiResult} Autotest to work item updating fields
+     * @param archiveOutdatedTestRunsEnabled {Boolean} Indicates whether archiving of outdated test runs is enabled for the project.
+     * @param testRunsArchiveLimitEnabled {Boolean} Indicates whether a limit is enforced on the number of archived test runs.
+     * @param testRunsRetentionPeriodDays {Number}  The retention period in days for test runs. After this period,  outdated test runs may be archived based on project settings
+     * @param maxActiveTestRunsCount {Number} Maximum number of active test runs to keep. When this limit is exceeded,  older test runs are automatically archived
      */
-    constructor(projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields) { 
+    constructor(projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields, archiveOutdatedTestRunsEnabled, testRunsArchiveLimitEnabled, testRunsRetentionPeriodDays, maxActiveTestRunsCount) { 
         
-        AutoTestProjectSettingsApiResult.initialize(this, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields);
+        AutoTestProjectSettingsApiResult.initialize(this, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields, archiveOutdatedTestRunsEnabled, testRunsArchiveLimitEnabled, testRunsRetentionPeriodDays, maxActiveTestRunsCount);
     }
 
     /**
@@ -42,7 +46,7 @@ class AutoTestProjectSettingsApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields) { 
+    static initialize(obj, projectId, isFlakyAuto, flakyStabilityPercentage, flakyTestRunCount, rerunEnabled, rerunAttemptsCount, workItemUpdatingEnabled, workItemUpdatingFields, archiveOutdatedTestRunsEnabled, testRunsArchiveLimitEnabled, testRunsRetentionPeriodDays, maxActiveTestRunsCount) { 
         obj['projectId'] = projectId;
         obj['isFlakyAuto'] = isFlakyAuto;
         obj['flakyStabilityPercentage'] = flakyStabilityPercentage;
@@ -51,6 +55,10 @@ class AutoTestProjectSettingsApiResult {
         obj['rerunAttemptsCount'] = rerunAttemptsCount;
         obj['workItemUpdatingEnabled'] = workItemUpdatingEnabled;
         obj['workItemUpdatingFields'] = workItemUpdatingFields;
+        obj['archiveOutdatedTestRunsEnabled'] = archiveOutdatedTestRunsEnabled;
+        obj['testRunsArchiveLimitEnabled'] = testRunsArchiveLimitEnabled;
+        obj['testRunsRetentionPeriodDays'] = testRunsRetentionPeriodDays;
+        obj['maxActiveTestRunsCount'] = maxActiveTestRunsCount;
     }
 
     /**
@@ -88,6 +96,18 @@ class AutoTestProjectSettingsApiResult {
             if (data.hasOwnProperty('workItemUpdatingFields')) {
                 obj['workItemUpdatingFields'] = ApiClient.convertToType(data['workItemUpdatingFields'], WorkItemUpdatingFieldsApiResult);
             }
+            if (data.hasOwnProperty('archiveOutdatedTestRunsEnabled')) {
+                obj['archiveOutdatedTestRunsEnabled'] = ApiClient.convertToType(data['archiveOutdatedTestRunsEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('testRunsArchiveLimitEnabled')) {
+                obj['testRunsArchiveLimitEnabled'] = ApiClient.convertToType(data['testRunsArchiveLimitEnabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('testRunsRetentionPeriodDays')) {
+                obj['testRunsRetentionPeriodDays'] = ApiClient.convertToType(data['testRunsRetentionPeriodDays'], 'Number');
+            }
+            if (data.hasOwnProperty('maxActiveTestRunsCount')) {
+                obj['maxActiveTestRunsCount'] = ApiClient.convertToType(data['maxActiveTestRunsCount'], 'Number');
+            }
         }
         return obj;
     }
@@ -119,7 +139,7 @@ class AutoTestProjectSettingsApiResult {
 
 }
 
-AutoTestProjectSettingsApiResult.RequiredProperties = ["projectId", "isFlakyAuto", "flakyStabilityPercentage", "flakyTestRunCount", "rerunEnabled", "rerunAttemptsCount", "workItemUpdatingEnabled", "workItemUpdatingFields"];
+AutoTestProjectSettingsApiResult.RequiredProperties = ["projectId", "isFlakyAuto", "flakyStabilityPercentage", "flakyTestRunCount", "rerunEnabled", "rerunAttemptsCount", "workItemUpdatingEnabled", "workItemUpdatingFields", "archiveOutdatedTestRunsEnabled", "testRunsArchiveLimitEnabled", "testRunsRetentionPeriodDays", "maxActiveTestRunsCount"];
 
 /**
  * Unique ID of the project.
@@ -168,6 +188,30 @@ AutoTestProjectSettingsApiResult.prototype['workItemUpdatingEnabled'] = undefine
  * @member {module:model/WorkItemUpdatingFieldsApiResult} workItemUpdatingFields
  */
 AutoTestProjectSettingsApiResult.prototype['workItemUpdatingFields'] = undefined;
+
+/**
+ * Indicates whether archiving of outdated test runs is enabled for the project.
+ * @member {Boolean} archiveOutdatedTestRunsEnabled
+ */
+AutoTestProjectSettingsApiResult.prototype['archiveOutdatedTestRunsEnabled'] = undefined;
+
+/**
+ * Indicates whether a limit is enforced on the number of archived test runs.
+ * @member {Boolean} testRunsArchiveLimitEnabled
+ */
+AutoTestProjectSettingsApiResult.prototype['testRunsArchiveLimitEnabled'] = undefined;
+
+/**
+ *  The retention period in days for test runs. After this period,  outdated test runs may be archived based on project settings
+ * @member {Number} testRunsRetentionPeriodDays
+ */
+AutoTestProjectSettingsApiResult.prototype['testRunsRetentionPeriodDays'] = undefined;
+
+/**
+ * Maximum number of active test runs to keep. When this limit is exceeded,  older test runs are automatically archived
+ * @member {Number} maxActiveTestRunsCount
+ */
+AutoTestProjectSettingsApiResult.prototype['maxActiveTestRunsCount'] = undefined;
 
 
 

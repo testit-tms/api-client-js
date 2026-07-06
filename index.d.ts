@@ -1,8 +1,45 @@
+declare module 'testit-api-client/api/AIServicesAPIApi' {
+  /**
+  * AIServicesAPI service.
+  * @module api/AIServicesAPIApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class AIServicesAPIApi {
+      /**
+      * Constructs a new AIServicesAPIApi.
+      * @alias module:api/AIServicesAPIApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * Ask for models with inquiry filter, cached
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {module:model/GetAIServiceModelsApiModel} [getAIServiceModelsApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AIServiceModelApiResultIReply} and HTTP response
+       */
+      apiV2ExternalServicesIdAiModelsPostWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Ask for models with inquiry filter, cached
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {module:model/GetAIServiceModelsApiModel} opts.getAIServiceModelsApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AIServiceModelApiResultIReply}
+       */
+      apiV2ExternalServicesIdAiModelsPost(id: string, opts: {
+          getAIServiceModelsApiModel: any;
+      }): Promise<any>;
+  }
+
+}
 declare module 'testit-api-client/api/AttachmentsApi' {
   /**
   * Attachments service.
   * @module api/AttachmentsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class AttachmentsApi {
       /**
@@ -80,7 +117,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
       apiV2AttachmentsOccupiedFileStorageSizeGet(): Promise<any>;
       /**
        * Upload new attachment file
-       * File size is restricted to 50 MB (52 428 800 bytes)
+       * File size is restricted to 1 GB (1 073 741 824 bytes)
        * @param {Object} opts Optional parameters
        * @param {File} [file]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentModel} and HTTP response
@@ -88,7 +125,7 @@ declare module 'testit-api-client/api/AttachmentsApi' {
       apiV2AttachmentsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Upload new attachment file
-       * File size is restricted to 50 MB (52 428 800 bytes)
+       * File size is restricted to 1 GB (1 073 741 824 bytes)
        * @param {Object} opts Optional parameters
        * @param {File} opts.file
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentModel}
@@ -103,7 +140,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
   /**
   * AutoTests service.
   * @module api/AutoTestsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class AutoTestsApi {
       /**
@@ -133,7 +170,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Set \"Flaky\" status for multiple autotests
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -146,7 +183,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       apiV2AutoTestsFlakyBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Set \"Flaky\" status for multiple autotests
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -184,7 +221,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       apiV2AutoTestsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history for autotest
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets getTestResultHistoryReportQuery (listed in the example)    User runs method execution    System search for test results using filters set by user in getTestResultHistoryReportQuery and id    System returns the enumeration of test results
        * @param {String} id Autotest identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -198,7 +235,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       apiV2AutoTestsIdTestResultsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history for autotest
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets getTestResultHistoryReportQuery (listed in the example)  User runs method execution  System search for test results using filters set by user in getTestResultHistoryReportQuery and id  System returns the enumeration of test results
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets getTestResultHistoryReportQuery (listed in the example)    User runs method execution    System search for test results using filters set by user in getTestResultHistoryReportQuery and id    System returns the enumeration of test results
        * @param {String} id Autotest identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -219,21 +256,21 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Get identifiers of changed linked work items
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
       apiV2AutoTestsIdWorkItemsChangedIdGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get identifiers of changed linked work items
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
        */
       apiV2AutoTestsIdWorkItemsChangedIdGet(id: string): Promise<any>;
       /**
        * Approve changes to work items linked to autotest
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {String} id
        * @param {String} workItemId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -241,7 +278,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       apiV2AutoTestsIdWorkItemsChangedWorkItemIdApprovePostWithHttpInfo(id: string, workItemId: string): Promise<any>;
       /**
        * Approve changes to work items linked to autotest
-       * User permissions for project: - Read only - Execute - Write - Full control
+       * User permissions for project:  - Read only  - Execute  - Write  - Full control
        * @param {String} id
        * @param {String} workItemId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -280,7 +317,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Create autotest
-       *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+       *   This method creates a new autotest.    To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.    Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
        * @param {Object} opts Optional parameters
        * @param {module:model/AutoTestCreateApiModel} [autoTestCreateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
@@ -288,7 +325,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       createAutoTestWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create autotest
-       *  This method creates a new autotest.  To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.  Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
+       *   This method creates a new autotest.    To add an autotest to the test plan, link it to a work item using the `POST /api/v2/autoTests/{autoTestId}/workItems` method.    Use the `POST /api/v2/testRuns/byAutoTests` method to run autotest outside the test plan.
        * @param {Object} opts Optional parameters
        * @param {module:model/AutoTestCreateApiModel} opts.autoTestCreateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
@@ -298,7 +335,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Create multiple autotests
-       *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
+       *   Use case    User sets autotest parameters (listed in the example) and runs method execution    System creates autotest    [Optional] If steps enumeration is set, system creates step items and relates them to autotest    [Optional] If setup enumeration is set, system creates setup items and relates them to autotest    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest    [Optional] If label enumeration is set, system creates labels and relates them to autotest    [Optional] If link enumeration is set, system creates links and relates them to autotest    System returns autotest model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/AutoTestCreateApiModel>} [autoTestCreateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestApiResult>} and HTTP response
@@ -306,7 +343,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       createMultipleWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create multiple autotests
-       *  Use case  User sets autotest parameters (listed in the example) and runs method execution  System creates autotest  [Optional] If steps enumeration is set, system creates step items and relates them to autotest  [Optional] If setup enumeration is set, system creates setup items and relates them to autotest  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest  [Optional] If label enumeration is set, system creates labels and relates them to autotest  [Optional] If link enumeration is set, system creates links and relates them to autotest  System returns autotest model (example listed in response parameters)
+       *   Use case    User sets autotest parameters (listed in the example) and runs method execution    System creates autotest    [Optional] If steps enumeration is set, system creates step items and relates them to autotest    [Optional] If setup enumeration is set, system creates setup items and relates them to autotest    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest    [Optional] If label enumeration is set, system creates labels and relates them to autotest    [Optional] If link enumeration is set, system creates links and relates them to autotest    System returns autotest model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/AutoTestCreateApiModel>} opts.autoTestCreateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestApiResult>}
@@ -314,21 +351,21 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       createMultiple(opts: Object): Promise<any>;
       /**
        * Delete autotest
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier and runs method execution    System finds the autotest by the identifier    System deletes autotest and returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteAutoTestWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete autotest
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier and runs method execution  System finds the autotest by the identifier  System deletes autotest and returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier and runs method execution    System finds the autotest by the identifier    System deletes autotest and returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteAutoTest(id: string): Promise<any>;
       /**
        * Unlink autotest from work item
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    [Optional] User sets workitem internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.    [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.    System returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {String} [workItemId] Work item internal (UUID) or global (integer) identifier
@@ -337,7 +374,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       deleteAutoTestLinkFromWorkItemWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Unlink autotest from work item
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  [Optional] User sets workitem internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it             from autotest.  [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.  System returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    [Optional] User sets workitem internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    [Optional] if workitem id is set by User, System finds the workitem by the workitem identifier and unlinks it              from autotest.    [Optional] Otherwise, if workitem id is not specified, System unlinks all workitems linked to autotest.    System returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {String} opts.workItemId Work item internal (UUID) or global (integer) identifier
@@ -437,64 +474,64 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Get average autotest duration
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System calculates pass average duration and fail average duration of autotest from all related test results    System returns pass average duration and fail average duration for autotest
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestAverageDurationApiResult} and HTTP response
        */
       getAutoTestAverageDurationWithHttpInfo(id: string): Promise<any>;
       /**
        * Get average autotest duration
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System calculates pass average duration and fail average duration of autotest from all related test results  System returns pass average duration and fail average duration for autotest
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System calculates pass average duration and fail average duration of autotest from all related test results    System returns pass average duration and fail average duration for autotest
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestAverageDurationApiResult}
        */
       getAutoTestAverageDuration(id: string): Promise<any>;
       /**
        * Get autotest by internal or global ID
-       *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+       *   Use case    User sets autotest internal or global identifier and runs method execution    System returns autotest, which internal or global identifier equals the identifier value set in the previous action
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AutoTestApiResult} and HTTP response
        */
       getAutoTestByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get autotest by internal or global ID
-       *  Use case  User sets autotest internal or global identifier and runs method execution  System returns autotest, which internal or global identifier equals the identifier value set in the previous action
+       *   Use case    User sets autotest internal or global identifier and runs method execution    System returns autotest, which internal or global identifier equals the identifier value set in the previous action
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AutoTestApiResult}
        */
       getAutoTestById(id: string): Promise<any>;
       /**
        * Get autotest chronology
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search all test results related to autotest (with default limit equal 100)    System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending    System returns test result chronology for autotest
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
        */
       getAutoTestChronologyWithHttpInfo(id: string): Promise<any>;
       /**
        * Get autotest chronology
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search all test results related to autotest (with default limit equal 100)  System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending  System returns test result chronology for autotest
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search all test results related to autotest (with default limit equal 100)    System orders the test results by CompletedOn property descending and then orders by CreatedDate property descending    System returns test result chronology for autotest
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
        */
       getAutoTestChronology(id: string): Promise<any>;
       /**
        * Get completed tests runs for autotests
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search for all test runs related to the autotest    System returns the enumeration of test runs
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestRunByAutoTestApiResult>} and HTTP response
        */
       getTestRunsWithHttpInfo(id: string): Promise<any>;
       /**
        * Get completed tests runs for autotests
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User runs method execution  System search for all test runs related to the autotest  System returns the enumeration of test runs
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User runs method execution    System search for all test runs related to the autotest    System returns the enumeration of test runs
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestRunByAutoTestApiResult>}
        */
       getTestRuns(id: string): Promise<any>;
       /**
        * Get work items linked to autotest
-       *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
-       * @param {String} id Specifies the autotest entity ID.  You can copy it from the address bar in your web browser or use autotest GUID.
+       *   This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:    1. Open the project in GUI.                2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.                3. Select the autotest(s) you want to run using checkboxes.                4. In the toolbar above the test list, click <b>Run autotests</b>.
+       * @param {String} id Specifies the autotest entity ID.    You can copy it from the address bar in your web browser or use autotest GUID.
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted] Specifies that a test is deleted or still relevant.
        * @param {Boolean} [isWorkItemDeleted = false)] OBSOLETE: Use `isDeleted` instead
@@ -503,8 +540,8 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       getWorkItemsLinkedToAutoTestWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get work items linked to autotest
-       *  This method links an autotest to a test case or a checklist.             A manual test case with a linked automated work item is marked in the test management system as an autotest.             You can run it from graphical user interface (GUI). To do that:  1. Open the project in GUI.              2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.              3. Select the autotest(s) you want to run using checkboxes.              4. In the toolbar above the test list, click <b>Run autotests</b>.
-       * @param {String} id Specifies the autotest entity ID.  You can copy it from the address bar in your web browser or use autotest GUID.
+       *   This method links an autotest to a test case or a checklist.              A manual test case with a linked automated work item is marked in the test management system as an autotest.              You can run it from graphical user interface (GUI). To do that:    1. Open the project in GUI.                2. Go to <b>Test plans</b> section and switch to the <b>Execution</b> tab.                3. Select the autotest(s) you want to run using checkboxes.                4. In the toolbar above the test list, click <b>Run autotests</b>.
+       * @param {String} id Specifies the autotest entity ID.    You can copy it from the address bar in your web browser or use autotest GUID.
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted Specifies that a test is deleted or still relevant.
        * @param {Boolean} opts.isWorkItemDeleted OBSOLETE: Use `isDeleted` instead (default to false)
@@ -516,7 +553,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Link autotest with work items
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets work item internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    System finds the work item by the work item identifier    System relates the work item with the autotest and returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemIdApiModel} [workItemIdApiModel]
@@ -525,7 +562,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       linkAutoTestToWorkItemWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Link autotest with work items
-       *  Use case  User sets autotest internal (guid format) or global (integer format) identifier  User sets work item internal (guid format) or global (integer format) identifier  User runs method execution  System finds the autotest by the autotest identifier  System finds the work item by the work item identifier  System relates the work item with the autotest and returns no content response
+       *   Use case    User sets autotest internal (guid format) or global (integer format) identifier    User sets work item internal (guid format) or global (integer format) identifier    User runs method execution    System finds the autotest by the autotest identifier    System finds the work item by the work item identifier    System relates the work item with the autotest and returns no content response
        * @param {String} id Autotest internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemIdApiModel} opts.workItemIdApiModel
@@ -536,7 +573,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Update autotest
-       *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+       *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/AutoTestUpdateApiModel} [autoTestUpdateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -544,7 +581,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       updateAutoTestWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update autotest
-       *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+       *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/AutoTestUpdateApiModel} opts.autoTestUpdateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -554,7 +591,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       }): Promise<any>;
       /**
        * Update multiple autotests
-       *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+       *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/AutoTestUpdateApiModel>} [autoTestUpdateApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -562,7 +599,7 @@ declare module 'testit-api-client/api/AutoTestsApi' {
       updateMultipleWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update multiple autotests
-       *  Use case  User sets autotest updated parameters values (listed in the example) and runs method execution  System finds the autotest by the identifier  System updates autotest parameters  [Optional] If steps enumeration is set, system creates step items, relates them to autotest             and deletes relations with current steps( if exist)  [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest             and deletes relations with current Setup items (if exist)  [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest             and deletes relations with current teardown items (if exist)  [Optional] If label enumeration is set, system creates labels and relates them to autotest             and deletes relations with current Labels (if exist)  [Optional] If link enumeration is set, system creates links and relates them to autotest             and deletes relations with current Links (if exist)  System updates autotest and returns no content response
+       *   Use case    User sets autotest updated parameters values (listed in the example) and runs method execution    System finds the autotest by the identifier    System updates autotest parameters    [Optional] If steps enumeration is set, system creates step items, relates them to autotest              and deletes relations with current steps( if exist)    [Optional] If Setup enumeration is set, system creates setup items and relates them to autotest              and deletes relations with current Setup items (if exist)    [Optional] If teardown enumeration is set, system creates teardown items and relates them to autotest              and deletes relations with current teardown items (if exist)    [Optional] If label enumeration is set, system creates labels and relates them to autotest              and deletes relations with current Labels (if exist)    [Optional] If link enumeration is set, system creates links and relates them to autotest              and deletes relations with current Links (if exist)    System updates autotest and returns no content response
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/AutoTestUpdateApiModel>} opts.autoTestUpdateApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -575,7 +612,7 @@ declare module 'testit-api-client/api/BackgroundJobsApi' {
   /**
   * BackgroundJobs service.
   * @module api/BackgroundJobsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class BackgroundJobsApi {
       /**
@@ -697,7 +734,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
   /**
   * Configurations service.
   * @module api/ConfigurationsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ConfigurationsApi {
       /**
@@ -876,7 +913,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
       }): Promise<any>;
       /**
        * Create Configuration
-       *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
+       *   Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/ConfigurationPostModel} [configurationPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ConfigurationModel} and HTTP response
@@ -884,7 +921,7 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
       createConfigurationWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create Configuration
-       *  Use case  User sets configuration model (listed in the request example)  User runs method execution  System creates configuration  System returns created configuration (listed in the response example)
+       *   Use case    User sets configuration model (listed in the request example)    User runs method execution    System creates configuration    System returns created configuration (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/ConfigurationPostModel} opts.configurationPostModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ConfigurationModel}
@@ -894,14 +931,14 @@ declare module 'testit-api-client/api/ConfigurationsApi' {
       }): Promise<any>;
       /**
        * Get configuration by internal or global ID
-       *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
+       *   Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
        * @param {String} id Configuration internal (guid format) or global (integer format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ConfigurationModel} and HTTP response
        */
       getConfigurationByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get configuration by internal or global ID
-       *  Use case  User sets configuration internal (guid format) or global (integer format) identifier  User runs method execution  System search configuration using the identifier  System returns configuration
+       *   Use case    User sets configuration internal (guid format) or global (integer format) identifier    User runs method execution    System search configuration using the identifier    System returns configuration
        * @param {String} id Configuration internal (guid format) or global (integer format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ConfigurationModel}
        */
@@ -913,7 +950,7 @@ declare module 'testit-api-client/api/CustomAttributesApi' {
   /**
   * CustomAttributes service.
   * @module api/CustomAttributesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class CustomAttributesApi {
       /**
@@ -1038,7 +1075,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
   /**
   * CustomAttributeTemplates service.
   * @module api/CustomAttributeTemplatesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class CustomAttributeTemplatesApi {
       /**
@@ -1066,7 +1103,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       }): Promise<any>;
       /**
        * Exclude CustomAttributes from CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+       *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
        * @param {String} id Attribute template internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
@@ -1075,7 +1112,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       apiV2CustomAttributesTemplatesIdCustomAttributesExcludePostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Exclude CustomAttributes from CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+       *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
        * @param {String} id Attribute template internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
@@ -1086,7 +1123,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       }): Promise<any>;
       /**
        * Include CustomAttributes to CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+       *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
        * @param {String} id Attribute template internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
@@ -1095,7 +1132,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       apiV2CustomAttributesTemplatesIdCustomAttributesIncludePostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Include CustomAttributes to CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+       *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
        * @param {String} id Attribute template internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
@@ -1106,49 +1143,49 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       }): Promise<any>;
       /**
        * Delete CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+       *   Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
        * @param {String} id Attribute template internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2CustomAttributesTemplatesIdDeleteWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete CustomAttributeTemplate
-       *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+       *   Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
        * @param {String} id Attribute template internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2CustomAttributesTemplatesIdDelete(id: string): Promise<any>;
       /**
        * Get CustomAttributeTemplate by ID
-       *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+       *   Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
        * @param {String} id CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
        */
       apiV2CustomAttributesTemplatesIdGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get CustomAttributeTemplate by ID
-       *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+       *   Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
        * @param {String} id CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
        */
       apiV2CustomAttributesTemplatesIdGet(id: string): Promise<any>;
       /**
        * Get CustomAttributeTemplate by name
-       *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+       *   Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
        * @param {String} name CustomAttributeTemplate name for search
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
        */
       apiV2CustomAttributesTemplatesNameGetWithHttpInfo(name: string): Promise<any>;
       /**
        * Get CustomAttributeTemplate by name
-       *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+       *   Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
        * @param {String} name CustomAttributeTemplate name for search
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
        */
       apiV2CustomAttributesTemplatesNameGet(name: string): Promise<any>;
       /**
        * Create CustomAttributeTemplate
-       *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+       *   Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTemplatePostModel} [customAttributeTemplatePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
@@ -1156,7 +1193,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       apiV2CustomAttributesTemplatesPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create CustomAttributeTemplate
-       *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+       *   Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTemplatePostModel} opts.customAttributeTemplatePostModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
@@ -1182,7 +1219,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       }): Promise<any>;
       /**
        * Search CustomAttributeTemplates
-       *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+       *   Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -1195,7 +1232,7 @@ declare module 'testit-api-client/api/CustomAttributeTemplatesApi' {
       apiV2CustomAttributesTemplatesSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search CustomAttributeTemplates
-       *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+       *   Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -1220,7 +1257,7 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
   /**
   * ExternalIssues service.
   * @module api/ExternalIssuesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ExternalIssuesApi {
       /**
@@ -1236,17 +1273,303 @@ declare module 'testit-api-client/api/ExternalIssuesApi' {
        * Returns list of suggestions from available external issues
        * @param {Object} opts Optional parameters
        * @param {module:model/GetExternalIssueSuggestionsApiModel} [getExternalIssueSuggestionsApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionReply} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalIssueApiFieldSuggestionIReply} and HTTP response
        */
       apiV2ExternalIssuesSuggestionsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Returns list of suggestions from available external issues
        * @param {Object} opts Optional parameters
        * @param {module:model/GetExternalIssueSuggestionsApiModel} opts.getExternalIssueSuggestionsApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalIssueApiFieldSuggestionReply}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalIssueApiFieldSuggestionIReply}
        */
       apiV2ExternalIssuesSuggestionsPost(opts: {
           getExternalIssueSuggestionsApiModel: any;
+      }): Promise<any>;
+  }
+
+}
+declare module 'testit-api-client/api/ExternalServicesApi' {
+  /**
+  * ExternalServices service.
+  * @module api/ExternalServicesApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class ExternalServicesApi {
+      /**
+      * Constructs a new ExternalServicesApi.
+      * @alias module:api/ExternalServicesApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * Retrieves the metadata for all available external services
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ExternalServicesMetadataApiResult} and HTTP response
+       */
+      apiV2ExternalServicesMetadataGetWithHttpInfo(): Promise<any>;
+      /**
+       * Retrieves the metadata for all available external services
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ExternalServicesMetadataApiResult}
+       */
+      apiV2ExternalServicesMetadataGet(): Promise<any>;
+  }
+
+}
+declare module 'testit-api-client/api/FailureCategoriesApi' {
+  /**
+  * FailureCategories service.
+  * @module api/FailureCategoriesApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class FailureCategoriesApi {
+      /**
+      * Constructs a new FailureCategoriesApi.
+      * @alias module:api/FailureCategoriesApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} [failureCategoryGroupSearchApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryGroupItemApiResultReply} and HTTP response
+       */
+      apiV2AutotestsFailureCategoriesGroupingSearchPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} opts.failureCategoryGroupSearchApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryGroupItemApiResultReply}
+       */
+      apiV2AutotestsFailureCategoriesGroupingSearchPost(opts: {
+          failureCategoryGroupSearchApiModel: any;
+      }): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2AutotestsFailureCategoriesIdDeleteWithHttpInfo(id: string): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2AutotestsFailureCategoriesIdDelete(id: string): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {Boolean} [isDeleted]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryApiResult} and HTTP response
+       */
+      apiV2AutotestsFailureCategoriesIdGetWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {Boolean} opts.isDeleted
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryApiResult}
+       */
+      apiV2AutotestsFailureCategoriesIdGet(id: string, opts: {
+          isDeleted: boolean;
+      }): Promise<any>;
+      /**
+       * Check failure category with the specified name already exists
+       * @param {String} name
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
+       */
+      apiV2AutotestsFailureCategoriesNameNameExistsGetWithHttpInfo(name: string): Promise<any>;
+      /**
+       * Check failure category with the specified name already exists
+       * @param {String} name
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
+       */
+      apiV2AutotestsFailureCategoriesNameNameExistsGet(name: string): Promise<any>;
+      /**
+       * Create failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateFailureCategoryApiModel} [createFailureCategoryApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryApiResult} and HTTP response
+       */
+      apiV2AutotestsFailureCategoriesPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Create failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateFailureCategoryApiModel} opts.createFailureCategoryApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryApiResult}
+       */
+      apiV2AutotestsFailureCategoriesPost(opts: {
+          createFailureCategoryApiModel: any;
+      }): Promise<any>;
+      /**
+       * Update failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryApiModel} [updateFailureCategoryApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2AutotestsFailureCategoriesPutWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Update failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryApiModel} opts.updateFailureCategoryApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2AutotestsFailureCategoriesPut(opts: {
+          updateFailureCategoryApiModel: any;
+      }): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {Number} [skip] Amount of items to be skipped (offset)
+       * @param {Number} [take] Amount of items to be taken (limit)
+       * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+       * @param {String} [searchField] Property name for searching
+       * @param {String} [searchValue] Value for searching
+       * @param {module:model/AutotestResultReasonFilterModel} [autotestResultReasonFilterModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutotestResultReasonShortGetModel>} and HTTP response
+       */
+      apiV2AutotestsFailureCategoriesSearchPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {Number} opts.skip Amount of items to be skipped (offset)
+       * @param {Number} opts.take Amount of items to be taken (limit)
+       * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+       * @param {String} opts.searchField Property name for searching
+       * @param {String} opts.searchValue Value for searching
+       * @param {module:model/AutotestResultReasonFilterModel} opts.autotestResultReasonFilterModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutotestResultReasonShortGetModel>}
+       */
+      apiV2AutotestsFailureCategoriesSearchPost(opts: {
+          skip: number;
+          take: number;
+          orderBy: string;
+          searchField: string;
+          searchValue: string;
+          autotestResultReasonFilterModel: any;
+      }): Promise<any>;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} [failureCategoryGroupSearchApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryGroupItemApiResultReply} and HTTP response
+       */
+      apiV2AutotestsResultReasonsGroupingSearchPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} opts.failureCategoryGroupSearchApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryGroupItemApiResultReply}
+       */
+      apiV2AutotestsResultReasonsGroupingSearchPost(opts: {
+          failureCategoryGroupSearchApiModel: any;
+      }): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2AutotestsResultReasonsIdDeleteWithHttpInfo(id: string): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2AutotestsResultReasonsIdDelete(id: string): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {Boolean} [isDeleted]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryApiResult} and HTTP response
+       */
+      apiV2AutotestsResultReasonsIdGetWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} id
+       * @param {Object} opts Optional parameters
+       * @param {Boolean} opts.isDeleted
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryApiResult}
+       */
+      apiV2AutotestsResultReasonsIdGet(id: string, opts: {
+          isDeleted: boolean;
+      }): Promise<any>;
+      /**
+       * Check failure category with the specified name already exists
+       * @param {String} name
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
+       */
+      apiV2AutotestsResultReasonsNameNameExistsGetWithHttpInfo(name: string): Promise<any>;
+      /**
+       * Check failure category with the specified name already exists
+       * @param {String} name
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
+       */
+      apiV2AutotestsResultReasonsNameNameExistsGet(name: string): Promise<any>;
+      /**
+       * Create failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateFailureCategoryApiModel} [createFailureCategoryApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/FailureCategoryApiResult} and HTTP response
+       */
+      apiV2AutotestsResultReasonsPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Create failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateFailureCategoryApiModel} opts.createFailureCategoryApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/FailureCategoryApiResult}
+       */
+      apiV2AutotestsResultReasonsPost(opts: {
+          createFailureCategoryApiModel: any;
+      }): Promise<any>;
+      /**
+       * Update failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryApiModel} [updateFailureCategoryApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2AutotestsResultReasonsPutWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Update failure category
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryApiModel} opts.updateFailureCategoryApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2AutotestsResultReasonsPut(opts: {
+          updateFailureCategoryApiModel: any;
+      }): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {Number} [skip] Amount of items to be skipped (offset)
+       * @param {Number} [take] Amount of items to be taken (limit)
+       * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+       * @param {String} [searchField] Property name for searching
+       * @param {String} [searchValue] Value for searching
+       * @param {module:model/AutotestResultReasonFilterModel} [autotestResultReasonFilterModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutotestResultReasonShortGetModel>} and HTTP response
+       */
+      apiV2AutotestsResultReasonsSearchPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {Number} opts.skip Amount of items to be skipped (offset)
+       * @param {Number} opts.take Amount of items to be taken (limit)
+       * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
+       * @param {String} opts.searchField Property name for searching
+       * @param {String} opts.searchValue Value for searching
+       * @param {module:model/AutotestResultReasonFilterModel} opts.autotestResultReasonFilterModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutotestResultReasonShortGetModel>}
+       */
+      apiV2AutotestsResultReasonsSearchPost(opts: {
+          skip: number;
+          take: number;
+          orderBy: string;
+          searchField: string;
+          searchValue: string;
+          autotestResultReasonFilterModel: any;
       }): Promise<any>;
   }
 
@@ -1255,7 +1578,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
   /**
   * Notifications service.
   * @module api/NotificationsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class NotificationsApi {
       /**
@@ -1269,7 +1592,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
       apiClient: any;
       /**
        * Get unread Notifications total in last 7 days
-       *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
+       *   Use case    User runs method execution    System returns unread notifications total (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isRead]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -1277,7 +1600,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
       apiV2NotificationsCountGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get unread Notifications total in last 7 days
-       *  Use case  User runs method execution  System returns unread notifications total (listed in the response example)
+       *   Use case    User runs method execution    System returns unread notifications total (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isRead
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -1287,7 +1610,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
       }): Promise<any>;
       /**
        * Get all Notifications for current User
-       *  Use case  User runs method execution  System returns notifications (listed in the response example)
+       *   Use case    User runs method execution    System returns notifications (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/NotificationTypeModel} [notificationType]
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -1300,7 +1623,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
       apiV2NotificationsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all Notifications for current User
-       *  Use case  User runs method execution  System returns notifications (listed in the response example)
+       *   Use case    User runs method execution    System returns notifications (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/NotificationTypeModel} opts.notificationType
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -1320,33 +1643,33 @@ declare module 'testit-api-client/api/NotificationsApi' {
       }): Promise<any>;
       /**
        * Set Notification as read
-       *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
+       *   Use case    User sets notification internal (guid format) identifier    User runs method execution    System set notification as read
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2NotificationsIdReadPostWithHttpInfo(id: string): Promise<any>;
       /**
        * Set Notification as read
-       *  Use case  User sets notification internal (guid format) identifier  User runs method execution  System set notification as read
+       *   Use case    User sets notification internal (guid format) identifier    User runs method execution    System set notification as read
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2NotificationsIdReadPost(id: string): Promise<any>;
       /**
        * Set all Notifications as read
-       *  Use case  User runs method execution  System set all notifications as read
+       *   Use case    User runs method execution    System set all notifications as read
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2NotificationsReadPostWithHttpInfo(): Promise<any>;
       /**
        * Set all Notifications as read
-       *  Use case  User runs method execution  System set all notifications as read
+       *   Use case    User runs method execution    System set all notifications as read
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2NotificationsReadPost(): Promise<any>;
       /**
        * Search Notifications for current User
-       *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
+       *   Use case    User set filter and runs method execution    System returns notifications (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -1359,7 +1682,7 @@ declare module 'testit-api-client/api/NotificationsApi' {
       apiV2NotificationsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search Notifications for current User
-       *  Use case  User set filter and runs method execution  System returns notifications (listed in the response example)
+       *   Use case    User set filter and runs method execution    System returns notifications (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -1384,7 +1707,7 @@ declare module 'testit-api-client/api/OpenIdConnectionsApi' {
   /**
   * OpenIdConnections service.
   * @module api/OpenIdConnectionsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class OpenIdConnectionsApi {
       /**
@@ -1411,7 +1734,7 @@ declare module 'testit-api-client/api/ParametersApi' {
   /**
   * Parameters service.
   * @module api/ParametersApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ParametersApi {
       /**
@@ -1425,7 +1748,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiClient: any;
       /**
        * Create multiple parameters
-       *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
+       *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System creates parameters    System returns list of parameter model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/CreateParameterApiModel>} [createParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ParameterApiResult>} and HTTP response
@@ -1433,7 +1756,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create multiple parameters
-       *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System creates parameters  System returns list of parameter model (listed in the response example)
+       *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System creates parameters    System returns list of parameter model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/CreateParameterApiModel>} opts.createParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ParameterApiResult>}
@@ -1441,7 +1764,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersBulkPost(opts: Object): Promise<any>;
       /**
        * Update multiple parameters
-       *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
+       *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System updates parameters
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/UpdateParameterApiModel>} [updateParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1449,7 +1772,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersBulkPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update multiple parameters
-       *  Use case  User sets list of parameter model (listed in the request example)  User runs method execution  System updates parameters
+       *   Use case    User sets list of parameter model (listed in the request example)    User runs method execution    System updates parameters
        * @param {Object} opts Optional parameters
        * @param {Array.<module:model/UpdateParameterApiModel>} opts.updateParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1457,7 +1780,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersBulkPut(opts: Object): Promise<any>;
       /**
        * Get parameters as group
-       *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
+       *   Use case    User runs method execution    System search parameters    System returns parameters models as groups (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [parameterKeyIds]
        * @param {String} [name]
@@ -1473,7 +1796,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersGroupsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get parameters as group
-       *  Use case  User runs method execution  System search parameters  System returns parameters models as groups (listed in the response example)
+       *   Use case    User runs method execution    System search parameters    System returns parameters models as groups (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.parameterKeyIds
        * @param {String} opts.name
@@ -1499,35 +1822,35 @@ declare module 'testit-api-client/api/ParametersApi' {
       }): Promise<any>;
       /**
        * Check existence parameter key in system
-       *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
+       *   Use case    User sets name of parameter key    User runs method execution    System search parameter key    System returns the flag for the existence of the parameter key in the system
        * @param {String} name
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
        */
       apiV2ParametersKeyNameNameExistsGetWithHttpInfo(name: string): Promise<any>;
       /**
        * Check existence parameter key in system
-       *  Use case  User sets name of parameter key  User runs method execution  System search parameter key  System returns the flag for the existence of the parameter key in the system
+       *   Use case    User sets name of parameter key    User runs method execution    System search parameter key    System returns the flag for the existence of the parameter key in the system
        * @param {String} name
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
        */
       apiV2ParametersKeyNameNameExistsGet(name: string): Promise<any>;
       /**
        * Get all parameter key values
-       *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
+       *   Use case    User sets parameter key (string format)    User runs method execution    System search parameter values using the key    System returns parameter
        * @param {String} key Parameter key (string format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<String>} and HTTP response
        */
       apiV2ParametersKeyValuesGetWithHttpInfo(key: string): Promise<any>;
       /**
        * Get all parameter key values
-       *  Use case  User sets parameter key (string format)  User runs method execution  System search parameter values using the key  System returns parameter
+       *   Use case    User sets parameter key (string format)    User runs method execution    System search parameter values using the key    System returns parameter
        * @param {String} key Parameter key (string format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<String>}
        */
       apiV2ParametersKeyValuesGet(key: string): Promise<any>;
       /**
        * Get all parameter keys
-       *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
+       *   Use case    User runs method execution    System search all parameter keys    System returns parameter keys
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [projectIds]
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -1540,7 +1863,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       apiV2ParametersKeysGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all parameter keys
-       *  Use case  User runs method execution  System search all parameter keys  System returns parameter keys
+       *   Use case    User runs method execution    System search all parameter keys    System returns parameter keys
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.projectIds
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -1622,7 +1945,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       }): Promise<any>;
       /**
        * Create parameter
-       *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
+       *   Use case    User sets parameter model (listed in the request example)    User runs method execution    System creates parameter    System returns parameter model
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateParameterApiModel} [createParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
@@ -1630,7 +1953,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       createParameterWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create parameter
-       *  Use case  User sets parameter model (listed in the request example)  User runs method execution  System creates parameter  System returns parameter model
+       *   Use case    User sets parameter model (listed in the request example)    User runs method execution    System creates parameter    System returns parameter model
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateParameterApiModel} opts.createParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
@@ -1668,21 +1991,21 @@ declare module 'testit-api-client/api/ParametersApi' {
       deleteByParameterKeyId(keyId: string): Promise<any>;
       /**
        * Delete parameter
-       *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
+       *   Use case    User sets parameter internal (guid format) identifier    System search and delete parameter    System returns deleted parameter
        * @param {String} id Parameter internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteParameterWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete parameter
-       *  Use case  User sets parameter internal (guid format) identifier  System search and delete parameter  System returns deleted parameter
+       *   Use case    User sets parameter internal (guid format) identifier    System search and delete parameter    System returns deleted parameter
        * @param {String} id Parameter internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteParameter(id: string): Promise<any>;
       /**
        * Get all parameters
-       *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
+       *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted parameters    [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted    If User did not set isDeleted field value, System search all parameters    System returns array of all found parameters(listed in response model)
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted] If result must consist of only actual/deleted parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -1695,7 +2018,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       getAllParametersWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all parameters
-       *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted parameters  [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted  If User did not set isDeleted field value, System search all parameters  System returns array of all found parameters(listed in response model)
+       *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted parameters    [Optional] If User sets isDeleted field value as false, System search all parameters which are not deleted    If User did not set isDeleted field value, System search all parameters    System returns array of all found parameters(listed in response model)
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -1715,21 +2038,21 @@ declare module 'testit-api-client/api/ParametersApi' {
       }): Promise<any>;
       /**
        * Get parameter by ID
-       *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
+       *   Use case    User sets parameter internal (guid format) identifier    User runs method execution    System search parameter using the identifier    System returns parameter
        * @param {String} id Parameter internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ParameterApiResult} and HTTP response
        */
       getParameterByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get parameter by ID
-       *  Use case  User sets parameter internal (guid format) identifier  User runs method execution  System search parameter using the identifier  System returns parameter
+       *   Use case    User sets parameter internal (guid format) identifier    User runs method execution    System search parameter using the identifier    System returns parameter
        * @param {String} id Parameter internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ParameterApiResult}
        */
       getParameterById(id: string): Promise<any>;
       /**
        * Update parameter
-       *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
+       *   Use case    User sets parameter updated properties(listed in the request example)    User runs method execution    System updated parameter using updated properties    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateParameterApiModel} [updateParameterApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1737,7 +2060,7 @@ declare module 'testit-api-client/api/ParametersApi' {
       updateParameterWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update parameter
-       *  Use case  User sets parameter updated properties(listed in the request example)  User runs method execution  System updated parameter using updated properties  System returns no content response
+       *   Use case    User sets parameter updated properties(listed in the request example)    User runs method execution    System updated parameter using updated properties    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateParameterApiModel} opts.updateParameterApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1752,7 +2075,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
   /**
   * ProjectAttributes service.
   * @module api/ProjectAttributesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectAttributesApi {
       /**
@@ -1766,7 +2089,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       apiClient: any;
       /**
        * Create project attribute
-       *  Use case  User sets attribute parameters (listed in request example) and runs method execution  System search project  System creates attribute and relates it to the project  System returns project attribute properties (example listed in response parameters)
+       *   Use case    User sets attribute parameters (listed in request example) and runs method execution    System search project    System creates attribute and relates it to the project    System returns project attribute properties (example listed in response parameters)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributePostModel} [customAttributePostModel]
@@ -1775,7 +2098,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       createProjectsAttributeWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Create project attribute
-       *  Use case  User sets attribute parameters (listed in request example) and runs method execution  System search project  System creates attribute and relates it to the project  System returns project attribute properties (example listed in response parameters)
+       *   Use case    User sets attribute parameters (listed in request example) and runs method execution    System search project    System creates attribute and relates it to the project    System returns project attribute properties (example listed in response parameters)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributePostModel} opts.customAttributePostModel
@@ -1786,7 +2109,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       }): Promise<any>;
       /**
        * Delete project attribute
-       *  Use case  User sets project identifier and runs method execution  User sets attribute identifier  User runs method execution  System search project  System search and delete attribute  System returns no content response
+       *   Use case    User sets project identifier and runs method execution    User sets attribute identifier    User runs method execution    System search project    System search and delete attribute    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId Project attribute internal (UUID)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1794,7 +2117,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       deleteProjectsAttributeWithHttpInfo(projectId: string, attributeId: string): Promise<any>;
       /**
        * Delete project attribute
-       *  Use case  User sets project identifier and runs method execution  User sets attribute identifier  User runs method execution  System search project  System search and delete attribute  System returns no content response
+       *   Use case    User sets project identifier and runs method execution    User sets attribute identifier    User runs method execution    System search project    System search and delete attribute    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId Project attribute internal (UUID)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1802,7 +2125,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       deleteProjectsAttribute(projectId: string, attributeId: string): Promise<any>;
       /**
        * Get project attribute
-       *  Use case  User sets project internal or global identifier  User sets project attribute identifier  User runs method execution  System search project  System search project attribute  System returns project attribute (listed in response model)
+       *   Use case    User sets project internal or global identifier    User sets project attribute identifier    User runs method execution    System search project    System search project attribute    System returns project attribute (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId Project attribute internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeModel} and HTTP response
@@ -1810,7 +2133,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       getAttributeByProjectIdWithHttpInfo(projectId: string, attributeId: string): Promise<any>;
       /**
        * Get project attribute
-       *  Use case  User sets project internal or global identifier  User sets project attribute identifier  User runs method execution  System search project  System search project attribute  System returns project attribute (listed in response model)
+       *   Use case    User sets project internal or global identifier    User sets project attribute identifier    User runs method execution    System search project    System search project attribute    System returns project attribute (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId Project attribute internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeModel}
@@ -1818,7 +2141,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       getAttributeByProjectId(projectId: string, attributeId: string): Promise<any>;
       /**
        * Get project attributes
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project  [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all attributes related to project  System returns array of found attributes (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project    [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted    [Optional] If User did not set isDeleted field value, System search all attributes related to project    System returns array of found attributes (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/DeletionState} [isDeleted]
@@ -1827,7 +2150,7 @@ declare module 'testit-api-client/api/ProjectAttributesApi' {
       getAttributesByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project attributes
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project  [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all attributes related to project  System returns array of found attributes (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted attributes related to project    [Optional] If User sets isDeleted field value as false, System search all attributes related to project which are not deleted    [Optional] If User did not set isDeleted field value, System search all attributes related to project    System returns array of found attributes (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/DeletionState} opts.isDeleted
@@ -1894,7 +2217,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
   /**
   * ProjectAttributeTemplates service.
   * @module api/ProjectAttributeTemplatesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectAttributeTemplatesApi {
       /**
@@ -1941,7 +2264,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
       }): Promise<any>;
       /**
        * Delete CustomAttributeTemplate from Project
-       *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+       *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1949,7 +2272,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
       apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDeleteWithHttpInfo(projectId: string, templateId: string): Promise<any>;
       /**
        * Delete CustomAttributeTemplate from Project
-       *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System delete attribute template from project
+       *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System delete attribute template from project
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1957,7 +2280,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
       apiV2ProjectsProjectIdAttributesTemplatesTemplateIdDelete(projectId: string, templateId: string): Promise<any>;
       /**
        * Add CustomAttributeTemplate to Project
-       *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+       *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -1965,7 +2288,7 @@ declare module 'testit-api-client/api/ProjectAttributeTemplatesApi' {
       apiV2ProjectsProjectIdAttributesTemplatesTemplateIdPostWithHttpInfo(projectId: string, templateId: string): Promise<any>;
       /**
        * Add CustomAttributeTemplate to Project
-       *  Use case  User sets project internal or global identifier  User sets attribute template internal identifier  User runs method execution  System add attribute template to project
+       *   Use case    User sets project internal or global identifier    User sets attribute template internal identifier    User runs method execution    System add attribute template to project
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} templateId CustomAttributeTemplate internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -1978,7 +2301,7 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
   /**
   * ProjectConfigurations service.
   * @module api/ProjectConfigurationsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectConfigurationsApi {
       /**
@@ -1992,14 +2315,14 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
       apiClient: any;
       /**
        * Get project configurations
-       *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all configurations related to project  System returns array of found configurations (listed in response model)
+       *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all configurations related to project    System returns array of found configurations (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
        */
       getConfigurationsByProjectIdWithHttpInfo(projectId: string): Promise<any>;
       /**
        * Get project configurations
-       *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all configurations related to project  System returns array of found configurations (listed in response model)
+       *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all configurations related to project    System returns array of found configurations (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
        */
@@ -2007,11 +2330,237 @@ declare module 'testit-api-client/api/ProjectConfigurationsApi' {
   }
 
 }
+declare module 'testit-api-client/api/ProjectExternalServicesApi' {
+  /**
+  * ProjectExternalServices service.
+  * @module api/ProjectExternalServicesApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class ProjectExternalServicesApi {
+      /**
+      * Constructs a new ProjectExternalServicesApi.
+      * @alias module:api/ProjectExternalServicesApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * Disable an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdDeleteWithHttpInfo(id: string, externalServiceId: string): Promise<any>;
+      /**
+       * Disable an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdDelete(id: string, externalServiceId: string): Promise<any>;
+      /**
+       * Retrieves settings of an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectExternalServiceSettingsApiResult} and HTTP response
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdGetWithHttpInfo(id: string, externalServiceId: string): Promise<any>;
+      /**
+       * Retrieves settings of an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectExternalServiceSettingsApiResult}
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdGet(id: string, externalServiceId: string): Promise<any>;
+      /**
+       * Replaces one active external service with another
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/ReplaceProjectExternalServiceApiModel} [replaceProjectExternalServiceApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdPatchWithHttpInfo(id: string, externalServiceId: string, opts: Object): Promise<any>;
+      /**
+       * Replaces one active external service with another
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/ReplaceProjectExternalServiceApiModel} opts.replaceProjectExternalServiceApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdPatch(id: string, externalServiceId: string, opts: {
+          replaceProjectExternalServiceApiModel: any;
+      }): Promise<any>;
+      /**
+       * Enable an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/EnableProjectExternalServiceApiModel} [enableProjectExternalServiceApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdPutWithHttpInfo(id: string, externalServiceId: string, opts: Object): Promise<any>;
+      /**
+       * Enable an external service
+       * @param {String} id Project ID
+       * @param {String} externalServiceId External service ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/EnableProjectExternalServiceApiModel} opts.enableProjectExternalServiceApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsIdExternalServicesExternalServiceIdPut(id: string, externalServiceId: string, opts: {
+          enableProjectExternalServiceApiModel: any;
+      }): Promise<any>;
+      /**
+       * Retrieves information about external services, including their integration status (enabled or not)
+       * @param {String} id Project ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/ApiExternalServiceCategory} [category]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectExternalServicesApiResult} and HTTP response
+       */
+      apiV2ProjectsIdExternalServicesGetWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Retrieves information about external services, including their integration status (enabled or not)
+       * @param {String} id Project ID
+       * @param {Object} opts Optional parameters
+       * @param {module:model/ApiExternalServiceCategory} opts.category
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectExternalServicesApiResult}
+       */
+      apiV2ProjectsIdExternalServicesGet(id: string, opts: {
+          category: any;
+      }): Promise<any>;
+      /**
+       * Searches for external issues using enabled external services in project
+       * @param {String} id Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/SearchExternalIssuesApiModel} [searchExternalIssuesApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ExternalIssueApiResult>} and HTTP response
+       */
+      apiV2ProjectsIdExternalServicesIssuesSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Searches for external issues using enabled external services in project
+       * @param {String} id Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/SearchExternalIssuesApiModel} opts.searchExternalIssuesApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ExternalIssueApiResult>}
+       */
+      apiV2ProjectsIdExternalServicesIssuesSearchPost(id: string, opts: {
+          searchExternalIssuesApiModel: any;
+      }): Promise<any>;
+  }
+
+}
+declare module 'testit-api-client/api/ProjectFailureCategoriesApi' {
+  /**
+  * ProjectFailureCategories service.
+  * @module api/ProjectFailureCategoriesApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class ProjectFailureCategoriesApi {
+      /**
+      * Constructs a new ProjectFailureCategoriesApi.
+      * @alias module:api/ProjectFailureCategoriesApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} [failureCategoryGroupSearchApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectFailureCategoryGroupItemApiResultReply} and HTTP response
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesGroupingSearchPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
+      /**
+       * Get failure categories with support for filtering, sorting and grouping
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/FailureCategoryGroupSearchApiModel} opts.failureCategoryGroupSearchApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectFailureCategoryGroupItemApiResultReply}
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesGroupingSearchPost(projectId: string, opts: {
+          failureCategoryGroupSearchApiModel: any;
+      }): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesIdDeleteWithHttpInfo(projectId: string, id: string): Promise<any>;
+      /**
+       * Delete failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesIdDelete(projectId: string, id: string): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectDetailedFailureCategoryApiResult} and HTTP response
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesIdGetWithHttpInfo(projectId: string, id: string): Promise<any>;
+      /**
+       * Get failure category by ID
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} id
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectDetailedFailureCategoryApiResult}
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesIdGet(projectId: string, id: string): Promise<any>;
+      /**
+       * Create failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateProjectFailureCategoryApiModel} [createProjectFailureCategoryApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectDetailedFailureCategoryApiResult} and HTTP response
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
+      /**
+       * Create failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateProjectFailureCategoryApiModel} opts.createProjectFailureCategoryApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectDetailedFailureCategoryApiResult}
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesPost(projectId: string, opts: {
+          createProjectFailureCategoryApiModel: any;
+      }): Promise<any>;
+      /**
+       * Update failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryProjectApiModel} [updateFailureCategoryProjectApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesPutWithHttpInfo(projectId: string, opts: Object): Promise<any>;
+      /**
+       * Update failure category
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateFailureCategoryProjectApiModel} opts.updateFailureCategoryProjectApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsProjectIdAutotestsFailureCategoriesPut(projectId: string, opts: {
+          updateFailureCategoryProjectApiModel: any;
+      }): Promise<any>;
+  }
+
+}
 declare module 'testit-api-client/api/ProjectsApi' {
   /**
   * Projects service.
   * @module api/ProjectsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectsApi {
       /**
@@ -2025,7 +2574,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiClient: any;
       /**
        * Add global attributes to project
-       *  Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+       *   Use case    User sets project internal or global identifier and attributes identifiers    System search project    System relates global attributes with project    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
@@ -2034,7 +2583,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       addGlobalAttributesToProjectWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add global attributes to project
-       *  Use case  User sets project internal or global identifier and attributes identifiers  System search project  System relates global attributes with project  System returns no content response
+       *   Use case    User sets project internal or global identifier and attributes identifiers    System search project    System relates global attributes with project    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
@@ -2043,14 +2592,6 @@ declare module 'testit-api-client/api/ProjectsApi' {
       addGlobalAttributesToProject(id: string, opts: {
           requestBody: Array<string>;
       }): Promise<any>;
-      /**
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DemoProjectApiResult} and HTTP response
-       */
-      apiV2ProjectsDemoPostWithHttpInfo(): Promise<any>;
-      /**
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DemoProjectApiResult}
-       */
-      apiV2ProjectsDemoPost(): Promise<any>;
       /**
        * Archive project
        * @param {String} id Unique or global ID of the project
@@ -2095,14 +2636,14 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdFavoritePut(id: string): Promise<any>;
       /**
        * Get Project filters
-       *  Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+       *   Use case    User sets project internal or global identifier    User runs method execution    System returns project filters
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/FilterModel>} and HTTP response
        */
       apiV2ProjectsIdFiltersGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get Project filters
-       *  Use case  User sets project internal or global identifier  User runs method execution  System returns project filters
+       *   Use case    User sets project internal or global identifier    User runs method execution    System returns project filters
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/FilterModel>}
        */
@@ -2151,7 +2692,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdRestorePost(id: string): Promise<any>;
       /**
        * Delete attribute from project's test plans
-       *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -2159,7 +2700,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdTestPlansAttributeAttributeIdDeleteWithHttpInfo(id: string, attributeId: string): Promise<any>;
       /**
        * Delete attribute from project's test plans
-       *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -2167,7 +2708,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdTestPlansAttributeAttributeIdDelete(id: string, attributeId: string): Promise<any>;
       /**
        * Update attribute of project's test plans
-       *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel]
@@ -2176,7 +2717,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdTestPlansAttributePutWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Update attribute of project's test plans
-       *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} opts.customAttributeTestPlanProjectRelationPutModel
@@ -2187,7 +2728,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       }): Promise<any>;
       /**
        * Get Project TestRuns full models
-       *  Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+       *   Use case    User sets project internal or global identifier    User sets query params    User runs method execution    System returns project test runs full models
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [includeTestResults]
@@ -2209,7 +2750,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       apiV2ProjectsIdTestRunsFullGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Project TestRuns full models
-       *  Use case  User sets project internal or global identifier  User sets query params  User runs method execution  System returns project test runs full models
+       *   Use case    User sets project internal or global identifier    User sets query params    User runs method execution    System returns project test runs full models
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.includeTestResults
@@ -2295,7 +2836,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} [searchField] Property name for searching
        * @param {String} [searchValue] Value for searching
        * @param {module:model/ProjectsFilterModel} [projectsFilterModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectApiResult>} and HTTP response
        */
       apiV2ProjectsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
@@ -2307,7 +2848,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} opts.searchField Property name for searching
        * @param {String} opts.searchValue Value for searching
        * @param {module:model/ProjectsFilterModel} opts.projectsFilterModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectApiResult>}
        */
       apiV2ProjectsSearchPost(opts: {
           skip: number;
@@ -2319,25 +2860,25 @@ declare module 'testit-api-client/api/ProjectsApi' {
       }): Promise<any>;
       /**
        * Get projects short models
-       *  Use case  User sets query params  User runs method execution  System return projects short models
+       *   Use case    User sets query params    User runs method execution    System return projects short models
        * @param {Object} opts Optional parameters
        * @param {module:model/GetShortProjectsApiModel} [getShortProjectsApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultReply} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultIReply} and HTTP response
        */
       apiV2ProjectsShortsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get projects short models
-       *  Use case  User sets query params  User runs method execution  System return projects short models
+       *   Use case    User sets query params    User runs method execution    System return projects short models
        * @param {Object} opts Optional parameters
        * @param {module:model/GetShortProjectsApiModel} opts.getShortProjectsApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectShortApiResultReply}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectShortApiResultIReply}
        */
       apiV2ProjectsShortsPost(opts: {
           getShortProjectsApiModel: any;
       }): Promise<any>;
       /**
        * Create project
-       *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+       *   Use case    User sets project parameters (listed in request example) and runs method execution    System creates project    System returns project model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateProjectApiModel} [createProjectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectApiResult} and HTTP response
@@ -2345,7 +2886,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       createProjectWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create project
-       *  Use case  User sets project parameters (listed in request example) and runs method execution  System creates project  System returns project model (example listed in response parameters)
+       *   Use case    User sets project parameters (listed in request example) and runs method execution    System creates project    System returns project model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateProjectApiModel} opts.createProjectApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectApiResult}
@@ -2367,7 +2908,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       deleteProjectAutoTests(id: string): Promise<any>;
       /**
        * Get all projects
-       *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+       *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted projects    [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted    If User did not set isDeleted field value, System search all projects    System returns array of all found projects(listed in response model)
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted] If result must consist of only actual/deleted parameters
        * @param {String} [projectName]
@@ -2376,12 +2917,12 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
        * @param {String} [searchField] Property name for searching
        * @param {String} [searchValue] Value for searching
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectApiResult>} and HTTP response
        */
       getAllProjectsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all projects
-       *  Use case  [Optional] User sets isDeleted field value  [Optional] If User sets isDeleted field value as true, System search all deleted projects  [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted  If User did not set isDeleted field value, System search all projects  System returns array of all found projects(listed in response model)
+       *   Use case    [Optional] User sets isDeleted field value    [Optional] If User sets isDeleted field value as true, System search all deleted projects    [Optional] If User sets isDeleted field value as false, System search all projects which are not deleted    If User did not set isDeleted field value, System search all projects    System returns array of all found projects(listed in response model)
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted parameters
        * @param {String} opts.projectName
@@ -2390,7 +2931,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
        * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
        * @param {String} opts.searchField Property name for searching
        * @param {String} opts.searchValue Value for searching
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectApiResult>}
        */
       getAllProjects(opts: {
           isDeleted: boolean;
@@ -2403,35 +2944,35 @@ declare module 'testit-api-client/api/ProjectsApi' {
       }): Promise<any>;
       /**
        * Get namespaces of autotests in project
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all autotest related to the project    System returns array of autotest with namespaces and classnames (listed in response)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestNamespaceApiResult>} and HTTP response
        */
       getAutoTestsNamespacesWithHttpInfo(id: string): Promise<any>;
       /**
        * Get namespaces of autotests in project
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all autotest related to the project  System returns array of autotest with namespaces and classnames (listed in response)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all autotest related to the project    System returns array of autotest with namespaces and classnames (listed in response)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestNamespaceApiResult>}
        */
       getAutoTestsNamespaces(id: string): Promise<any>;
       /**
        * Get project by ID
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System returns project (example listed in response parameters)
        * @param {String} id Project internal (UUID) or global (integer) identifier
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectModel} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DetailedProjectApiResult} and HTTP response
        */
       getProjectByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get project by ID
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System returns project (example listed in response parameters)
        * @param {String} id Project internal (UUID) or global (integer) identifier
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectModel}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DetailedProjectApiResult}
        */
       getProjectById(id: string): Promise<any>;
       /**
        * Get project test plans
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to                      project    [Optional] If User sets isDeleted field value as false, System search all test plans related to project which                      are not deleted    [Optional] If User did not set isDeleted field value, System search all v related to project    System returns array of found test plans (listed in response model)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted] If result must consist of only actual/archived test plans
@@ -2440,7 +2981,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       getTestPlansByProjectIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get project test plans
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to                      project    [Optional] If User sets isDeleted field value as false, System search all test plans related to project which                      are not deleted    [Optional] If User did not set isDeleted field value, System search all v related to project    System returns array of found test plans (listed in response model)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted If result must consist of only actual/archived test plans
@@ -2451,7 +2992,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       }): Promise<any>;
       /**
        * Get project test runs
-       *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+       *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all test runs related to project    System returns array of found test runs (listed in response model)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Boolean} notStarted
        * @param {Boolean} inProgress
@@ -2471,7 +3012,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       getTestRunsByProjectIdWithHttpInfo(id: string, notStarted: boolean, inProgress: boolean, stopped: boolean, completed: boolean, opts: Object): Promise<any>;
       /**
        * Get project test runs
-       *  Use case  User sets project internal or global identifier  User runs method execution  System search project  System search all test runs related to project  System returns array of found test runs (listed in response model)
+       *   Use case    User sets project internal or global identifier    User runs method execution    System search project    System search all test runs related to project    System returns array of found test runs (listed in response model)
        * @param {String} id Project internal (UUID) or global (integer) identifier
        * @param {Boolean} notStarted
        * @param {Boolean} inProgress
@@ -2500,7 +3041,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       }): Promise<any>;
       /**
        * Update project
-       *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+       *   Use case    User sets project parameters (listed in request example) and runs method execution    System updates project    System returns updated project model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateProjectApiModel} [updateProjectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -2508,7 +3049,7 @@ declare module 'testit-api-client/api/ProjectsApi' {
       updateProjectWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update project
-       *  Use case  User sets project parameters (listed in request example) and runs method execution  System updates project  System returns updated project model (example listed in response parameters)
+       *   Use case    User sets project parameters (listed in request example) and runs method execution    System updates project    System returns updated project model (example listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateProjectApiModel} opts.updateProjectApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -2523,7 +3064,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
   /**
   * ProjectSections service.
   * @module api/ProjectSectionsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectSectionsApi {
       /**
@@ -2537,7 +3078,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
       apiClient: any;
       /**
        * Get project sections
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all sections related to the project    System returns array of sections (listed in response)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -2550,7 +3091,7 @@ declare module 'testit-api-client/api/ProjectSectionsApi' {
       getSectionsByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project sections
-       *  Use case  User sets project internal or global identifier and runs method execution  System search project  System search all sections related to the project  System returns array of sections (listed in response)
+       *   Use case    User sets project internal or global identifier and runs method execution    System search project    System search all sections related to the project    System returns array of sections (listed in response)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -2574,7 +3115,7 @@ declare module 'testit-api-client/api/ProjectSettingsApi' {
   /**
   * ProjectSettings service.
   * @module api/ProjectSettingsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectSettingsApi {
       /**
@@ -2623,7 +3164,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
   /**
   * ProjectTestPlanAttributes service.
   * @module api/ProjectTestPlanAttributesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectTestPlanAttributesApi {
       /**
@@ -2637,7 +3178,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       apiClient: any;
       /**
        * Add attributes to project's test plans
-       *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attributes identifiers    User runs method execution    System updates project and add attributes to project for test plans    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
@@ -2646,7 +3187,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       createCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Add attributes to project's test plans
-       *  Use case  User sets project internal or global identifier and attributes identifiers  User runs method execution  System updates project and add attributes to project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attributes identifiers    User runs method execution    System updates project and add attributes to project for test plans    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
@@ -2657,7 +3198,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       }): Promise<any>;
       /**
        * Delete attribute from project's test plans
-       *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -2665,7 +3206,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       deleteCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, attributeId: string): Promise<any>;
       /**
        * Delete attribute from project's test plans
-       *  Use case  User sets project internal or global identifier and attribute identifier  User runs method execution  System updates project and delete attribute from project for test plans  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute identifier    User runs method execution    System updates project and delete attribute from project for test plans    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} attributeId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -2673,14 +3214,14 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       deleteCustomAttributeTestPlanProjectRelations(projectId: string, attributeId: string): Promise<any>;
       /**
        * Get project's test plan attributes
-       *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
+       *   Use case    User runs method execution    System returns project for test plans attributes by project identifier
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
        */
       getCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string): Promise<any>;
       /**
        * Get project's test plan attributes
-       *  Use case  User runs method execution  System returns project for test plans attributes by project identifier
+       *   Use case    User runs method execution    System returns project for test plans attributes by project identifier
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeModel>}
        */
@@ -2720,7 +3261,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       }): Promise<any>;
       /**
        * Update attribute of project's test plans
-       *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} [customAttributeTestPlanProjectRelationPutModel]
@@ -2729,7 +3270,7 @@ declare module 'testit-api-client/api/ProjectTestPlanAttributesApi' {
       updateCustomAttributeTestPlanProjectRelationsWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Update attribute of project's test plans
-       *  Use case  User sets project internal or global identifier and attribute model  User runs method execution  System updates project and project attribute for test plan  System returns no content response
+       *   Use case    User sets project internal or global identifier and attribute model    User runs method execution    System updates project and project attribute for test plan    System returns no content response
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/CustomAttributeTestPlanProjectRelationPutModel} opts.customAttributeTestPlanProjectRelationPutModel
@@ -2745,7 +3286,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
   /**
   * ProjectTestPlans service.
   * @module api/ProjectTestPlansApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectTestPlansApi {
       /**
@@ -2759,7 +3300,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       apiClient: any;
       /**
        * Get TestPlans analytics
-       *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
+       *   Use case    User sets project internal identifier    User sets query params    User runs method execution    System return analytics
        * @param {String} projectId Project internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted]
@@ -2774,7 +3315,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       apiV2ProjectsProjectIdTestPlansAnalyticsGetWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get TestPlans analytics
-       *  Use case  User sets project internal identifier  User sets query params  User runs method execution  System return analytics
+       *   Use case    User sets project internal identifier    User sets query params    User runs method execution    System return analytics
        * @param {String} projectId Project internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted
@@ -2815,7 +3356,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       }): Promise<any>;
       /**
        * Checks if TestPlan exists with the specified name exists for the project
-       *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
+       *   Use case    User sets project internal or global identifier    User runs method execution    System purge delete project workitems
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} name TestPlan name to check
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Boolean} and HTTP response
@@ -2823,7 +3364,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       apiV2ProjectsProjectIdTestPlansNameExistsGetWithHttpInfo(projectId: string, name: string): Promise<any>;
       /**
        * Checks if TestPlan exists with the specified name exists for the project
-       *  Use case  User sets project internal or global identifier  User runs method execution  System purge delete project workitems
+       *   Use case    User sets project internal or global identifier    User runs method execution    System purge delete project workitems
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {String} name TestPlan name to check
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Boolean}
@@ -2867,7 +3408,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       }): Promise<any>;
       /**
        * Get Project TestPlans with analytics
-       *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
+       *   Use case    User sets project internal or global identifier    User sets request body    User runs method execution    System returns project testplans with analytics
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [mustUpdateCache = false)]
@@ -2882,7 +3423,7 @@ declare module 'testit-api-client/api/ProjectTestPlansApi' {
       apiV2ProjectsProjectIdTestPlansSearchPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get Project TestPlans with analytics
-       *  Use case  User sets project internal or global identifier  User sets request body  User runs method execution  System returns project testplans with analytics
+       *   Use case    User sets project internal or global identifier    User sets request body    User runs method execution    System returns project testplans with analytics
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.mustUpdateCache  (default to false)
@@ -2910,7 +3451,7 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
   /**
   * ProjectTestPlanTestPoints service.
   * @module api/ProjectTestPlanTestPointsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectTestPlanTestPointsApi {
       /**
@@ -2922,6 +3463,26 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
       */
       constructor(apiClient?: any);
       apiClient: any;
+      /**
+       * Get test points analytics.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsAnalyticsApiModel} [testPlanTestPointsAnalyticsApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanTestPointsAnalyticsApiResult} and HTTP response
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPostWithHttpInfo(projectId: string, testPlanId: string, opts: Object): Promise<any>;
+      /**
+       * Get test points analytics.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsAnalyticsApiModel} opts.testPlanTestPointsAnalyticsApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanTestPointsAnalyticsApiResult}
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAnalyticsPost(projectId: string, testPlanId: string, opts: {
+          testPlanTestPointsAnalyticsApiModel: any;
+      }): Promise<any>;
       /**
        * Rerun autotests.
        * @param {String} projectId Internal (UUID) or global (integer) identifier
@@ -2962,6 +3523,46 @@ declare module 'testit-api-client/api/ProjectTestPlanTestPointsApi' {
       apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsAutotestsRunPost(projectId: string, testPlanId: string, opts: {
           testPlanTestPointsAutoTestsRunApiModel: any;
       }): Promise<any>;
+      /**
+       * Search test points in test plan.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsApiModel} [testPlanTestPointsApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanTestPointsGroupSearchApiResult} and HTTP response
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPostWithHttpInfo(projectId: string, testPlanId: string, opts: Object): Promise<any>;
+      /**
+       * Search test points in test plan.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsApiModel} opts.testPlanTestPointsApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanTestPointsGroupSearchApiResult}
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsGroupingSearchPost(projectId: string, testPlanId: string, opts: {
+          testPlanTestPointsApiModel: any;
+      }): Promise<any>;
+      /**
+       * Distribute test points between the users.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsSetTestersApiModel} [testPlanTestPointsSetTestersApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPostWithHttpInfo(projectId: string, testPlanId: string, opts: Object): Promise<any>;
+      /**
+       * Distribute test points between the users.
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {String} testPlanId
+       * @param {Object} opts Optional parameters
+       * @param {module:model/TestPlanTestPointsSetTestersApiModel} opts.testPlanTestPointsSetTestersApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsProjectIdTestPlansTestPlanIdTestPointsTestersPost(projectId: string, testPlanId: string, opts: {
+          testPlanTestPointsSetTestersApiModel: any;
+      }): Promise<any>;
   }
 
 }
@@ -2969,7 +3570,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
   /**
   * ProjectWorkItems service.
   * @module api/ProjectWorkItemsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class ProjectWorkItemsApi {
       /**
@@ -2981,6 +3582,38 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
       */
       constructor(apiClient?: any);
       apiClient: any;
+      /**
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateWorkItemPreviewsApiModel} [createWorkItemPreviewsApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2ProjectsProjectIdWorkItemsPreviewsBulkPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
+      /**
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateWorkItemPreviewsApiModel} opts.createWorkItemPreviewsApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2ProjectsProjectIdWorkItemsPreviewsBulkPost(projectId: string, opts: {
+          createWorkItemPreviewsApiModel: any;
+      }): Promise<any>;
+      /**
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/GenerateWorkItemPreviewsApiModel} [generateWorkItemPreviewsApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GenerateWorkItemPreviewsApiResult} and HTTP response
+       */
+      apiV2ProjectsProjectIdWorkItemsPreviewsPostWithHttpInfo(projectId: string, opts: Object): Promise<any>;
+      /**
+       * @param {String} projectId Internal (UUID) or global (integer) identifier
+       * @param {Object} opts Optional parameters
+       * @param {module:model/GenerateWorkItemPreviewsApiModel} opts.generateWorkItemPreviewsApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GenerateWorkItemPreviewsApiResult}
+       */
+      apiV2ProjectsProjectIdWorkItemsPreviewsPost(projectId: string, opts: {
+          generateWorkItemPreviewsApiModel: any;
+      }): Promise<any>;
       /**
        * Search for work items and group results by attribute
        * @param {String} projectId Unique or global ID of the project
@@ -3117,7 +3750,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
       }): Promise<any>;
       /**
        * Get WorkItems Tags
-       *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+       *   Use case    User sets project internal identifier    User runs method execution    System returns work items tags
        * @param {String} projectId Project internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted]
@@ -3126,7 +3759,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
       apiV2ProjectsProjectIdWorkItemsTagsGetWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get WorkItems Tags
-       *  Use case  User sets project internal identifier  User runs method execution  System returns work items tags
+       *   Use case    User sets project internal identifier    User runs method execution    System returns work items tags
        * @param {String} projectId Project internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted
@@ -3137,7 +3770,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
       }): Promise<any>;
       /**
        * Get project work items
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project    [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted    If User did not set isDeleted field value, System search all  workitems related to project    System returns array of found workitems (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted = false)] If result must consist of only actual/deleted work items
@@ -3153,7 +3786,7 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
       getWorkItemsByProjectIdWithHttpInfo(projectId: string, opts: Object): Promise<any>;
       /**
        * Get project work items
-       *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project  [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted  If User did not set isDeleted field value, System search all  workitems related to project  System returns array of found workitems (listed in response model)
+       *   Use case    User sets project internal or global identifier    [Optional] User sets isDeleted field value    User runs method execution    System search project    [Optional] If User sets isDeleted field value as true, System search all deleted workitems related to project    [Optional] If User sets isDeleted field value as false, System search all workitems related to project which are not deleted    If User did not set isDeleted field value, System search all  workitems related to project    System returns array of found workitems (listed in response model)
        * @param {String} projectId Project internal (UUID) or global (integer) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted If result must consist of only actual/deleted work items (default to false)
@@ -3179,16 +3812,16 @@ declare module 'testit-api-client/api/ProjectWorkItemsApi' {
   }
 
 }
-declare module 'testit-api-client/api/SearchApi' {
+declare module 'testit-api-client/api/RolesApi' {
   /**
-  * Search service.
-  * @module api/SearchApi
-  * @version 7.2.6
+  * Roles service.
+  * @module api/RolesApi
+  * @version 7.3.0-TMS-5.8
   */
-  export default class SearchApi {
+  export default class RolesApi {
       /**
-      * Constructs a new SearchApi.
-      * @alias module:api/SearchApi
+      * Constructs a new RolesApi.
+      * @alias module:api/RolesApi
       * @class
       * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
       * default to {@link module:ApiClient#instance} if unspecified.
@@ -3196,19 +3829,13 @@ declare module 'testit-api-client/api/SearchApi' {
       constructor(apiClient?: any);
       apiClient: any;
       /**
-       * @param {Object} opts Optional parameters
-       * @param {module:model/GlobalSearchRequest} [globalSearchRequest]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/GlobalSearchResponse} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RoleApiModelApiCollection} and HTTP response
        */
-      apiV2SearchGlobalSearchPostWithHttpInfo(opts: Object): Promise<any>;
+      apiV2RolesGetWithHttpInfo(): Promise<any>;
       /**
-       * @param {Object} opts Optional parameters
-       * @param {module:model/GlobalSearchRequest} opts.globalSearchRequest
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/GlobalSearchResponse}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RoleApiModelApiCollection}
        */
-      apiV2SearchGlobalSearchPost(opts: {
-          globalSearchRequest: any;
-      }): Promise<any>;
+      apiV2RolesGet(): Promise<any>;
   }
 
 }
@@ -3216,7 +3843,7 @@ declare module 'testit-api-client/api/SectionsApi' {
   /**
   * Sections service.
   * @module api/SectionsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class SectionsApi {
       /**
@@ -3248,7 +3875,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       apiV2SectionsIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Create section
-       *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
+       *   Use case    User sets section properties (listed in request example)    User runs method execution    System creates section property values    System returns section (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionPostModel} [sectionPostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SectionWithStepsModel} and HTTP response
@@ -3256,7 +3883,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       createSectionWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create section
-       *  Use case  User sets section properties (listed in request example)  User runs method execution  System creates section property values  System returns section (listed in response example)
+       *   Use case    User sets section properties (listed in request example)    User runs method execution    System creates section property values    System returns section (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionPostModel} opts.sectionPostModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SectionWithStepsModel}
@@ -3266,21 +3893,21 @@ declare module 'testit-api-client/api/SectionsApi' {
       }): Promise<any>;
       /**
        * Delete section
-       *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
+       *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search and delete nested sections of the found section    System search and delete workitems related to the found nested sections    System deletes initial section and related workitem    System returns no content response
        * @param {String} id Section internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteSectionWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete section
-       *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search and delete nested sections of the found section  System search and delete workitems related to the found nested sections  System deletes initial section and related workitem  System returns no content response
+       *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search and delete nested sections of the found section    System search and delete workitems related to the found nested sections    System deletes initial section and related workitem    System returns no content response
        * @param {String} id Section internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteSection(id: string): Promise<any>;
       /**
        * Get section
-       *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
+       *   Use case    User sets section internal (guid format) identifier    User runs method execution    System search section by the section identifier    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns section
        * @param {String} id Section internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/DeletionState} [isDeleted]
@@ -3289,7 +3916,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       getSectionByIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get section
-       *  Use case  User sets section internal (guid format) identifier  User runs method execution  System search section by the section identifier  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns section
+       *   Use case    User sets section internal (guid format) identifier    User runs method execution    System search section by the section identifier    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns section
        * @param {String} id Section internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/DeletionState} opts.isDeleted
@@ -3300,7 +3927,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       }): Promise<any>;
       /**
        * Get section work items
-       *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
+       *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search work items related to the section    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns work item collection
        * @param {String} id Section internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted = false)] Requested section is deleted
@@ -3316,7 +3943,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       getWorkItemsBySectionIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get section work items
-       *  Use case  User sets section identifier  User runs method execution  System search section by the identifier  System search work items related to the section  [Optional] If isDeleted flag equals false, deleted work items are not being searched.             If true, deleted work items are also being searched, null for all work items.  System returns work item collection
+       *   Use case    User sets section identifier    User runs method execution    System search section by the identifier    System search work items related to the section    [Optional] If isDeleted flag equals false, deleted work items are not being searched.              If true, deleted work items are also being searched, null for all work items.    System returns work item collection
        * @param {String} id Section internal (UUID) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted Requested section is deleted (default to false)
@@ -3357,7 +3984,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       }): Promise<any>;
       /**
        * Rename section
-       *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
+       *   Use case    User sets section identifier and new name (listed in request example)    User runs method execution    System search section by the identifier    System updates section name using the new name    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionRenameModel} [sectionRenameModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3365,7 +3992,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       renameWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Rename section
-       *  Use case  User sets section identifier and new name (listed in request example)  User runs method execution  System search section by the identifier  System updates section name using the new name  System returns no content response
+       *   Use case    User sets section identifier and new name (listed in request example)    User runs method execution    System search section by the identifier    System updates section name using the new name    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionRenameModel} opts.sectionRenameModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3375,7 +4002,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       }): Promise<any>;
       /**
        * Update section
-       *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
+       *   Use case    User sets section properties (listed in request example)    User runs method execution    System search section by the identifier    System updates section using the property values    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionPutModel} [sectionPutModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3383,7 +4010,7 @@ declare module 'testit-api-client/api/SectionsApi' {
       updateSectionWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update section
-       *  Use case  User sets section properties (listed in request example)  User runs method execution  System search section by the identifier  System updates section using the property values  System returns no content response
+       *   Use case    User sets section properties (listed in request example)    User runs method execution    System search section by the identifier    System updates section using the property values    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/SectionPutModel} opts.sectionPutModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3398,7 +4025,7 @@ declare module 'testit-api-client/api/TagsApi' {
   /**
   * Tags service.
   * @module api/TagsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TagsApi {
       /**
@@ -3412,7 +4039,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiClient: any;
       /**
        * Delete tags
-       *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
+       *   Use case    User sets collection of tags internal (guid format) identifiers    System searches and deletes a collection of tags
        * @param {Object} opts Optional parameters
        * @param {module:model/SelectTagsApiModel} [selectTagsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3420,7 +4047,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiV2TagsDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete tags
-       *  Use case  User sets collection of tags internal (guid format) identifiers  System searches and deletes a collection of tags
+       *   Use case    User sets collection of tags internal (guid format) identifiers    System searches and deletes a collection of tags
        * @param {Object} opts Optional parameters
        * @param {module:model/SelectTagsApiModel} opts.selectTagsApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3430,21 +4057,21 @@ declare module 'testit-api-client/api/TagsApi' {
       }): Promise<any>;
       /**
        * Delete tag
-       *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
+       *   Use case    User sets tag internal (guid format) identifier    System search and delete tag
        * @param {String} id Tag internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TagsIdDeleteWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete tag
-       *  Use case  User sets tag internal (guid format) identifier  System search and delete tag
+       *   Use case    User sets tag internal (guid format) identifier    System search and delete tag
        * @param {String} id Tag internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2TagsIdDelete(id: string): Promise<any>;
       /**
        * Create tag
-       *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
+       *   Use case    User sets tag model (listed in the request example)    User runs method execution    System creates tag    System returns tag model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTagApiModel} [createTagApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TagApiResult} and HTTP response
@@ -3452,7 +4079,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiV2TagsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create tag
-       *  Use case  User sets tag model (listed in the request example)  User runs method execution  System creates tag  System returns tag model (listed in the response example)
+       *   Use case    User sets tag model (listed in the request example)    User runs method execution    System creates tag    System returns tag model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTagApiModel} opts.createTagApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TagApiResult}
@@ -3462,7 +4089,7 @@ declare module 'testit-api-client/api/TagsApi' {
       }): Promise<any>;
       /**
        * Update tag
-       *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
+       *   Use case    User sets tag ID and model (listed in the request example)    User runs method execution    System updates tag    System returns tag model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {String} [id]
        * @param {module:model/UpdateTagApiModel} [updateTagApiModel]
@@ -3471,7 +4098,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiV2TagsPutWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update tag
-       *  Use case  User sets tag ID and model (listed in the request example)  User runs method execution  System updates tag  System returns tag model (listed in the response example)
+       *   Use case    User sets tag ID and model (listed in the request example)    User runs method execution    System updates tag    System returns tag model (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {String} opts.id
        * @param {module:model/UpdateTagApiModel} opts.updateTagApiModel
@@ -3483,7 +4110,7 @@ declare module 'testit-api-client/api/TagsApi' {
       }): Promise<any>;
       /**
        * Search tags
-       *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
+       *   Use case    User runs method execution    System returns collection of tags (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -3495,7 +4122,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiV2TagsSearchGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Search tags
-       *  Use case  User runs method execution  System returns collection of tags (listed in the response example)
+       *   Use case    User runs method execution    System returns collection of tags (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -3513,7 +4140,7 @@ declare module 'testit-api-client/api/TagsApi' {
       }): Promise<any>;
       /**
        * Get all Tags that are used in TestPlans
-       *  Use case  User runs method execution  System returns tags (listed in the response example)
+       *   Use case    User runs method execution    System returns tags (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -3525,7 +4152,7 @@ declare module 'testit-api-client/api/TagsApi' {
       apiV2TagsTestPlansTagsGetWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get all Tags that are used in TestPlans
-       *  Use case  User runs method execution  System returns tags (listed in the response example)
+       *   Use case    User runs method execution    System returns tags (listed in the response example)
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -3548,7 +4175,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
   /**
   * TestPlans service.
   * @module api/TestPlansApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestPlansApi {
       /**
@@ -3562,7 +4189,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiClient: any;
       /**
        * Add test-points to TestPlan with sections
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemSelectModel} [workItemSelectModel] Filter object to retrieve work items for test-suite's project
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3570,7 +4197,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
       addTestPointsWithSectionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add test-points to TestPlan with sections
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemSelectModel} opts.workItemSelectModel Filter object to retrieve work items for test-suite's project
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3580,8 +4207,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Add WorkItems to TestPlan with Sections as TestSuites
-       *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3589,8 +4216,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       addWorkItemsWithSectionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Add WorkItems to TestPlan with Sections as TestSuites
-       *  Use case  User sets TestPlan identifier  User sets WorkItem identifiers (listed in request example)  User runs method execution  System added WorkItems and Sections to TestPlan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets TestPlan identifier    User sets WorkItem identifiers (listed in request example)    User runs method execution    System added WorkItems and Sections to TestPlan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3600,15 +4227,15 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Get analytics by TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPointAnalyticResult} and HTTP response
        */
       apiV2TestPlansIdAnalyticsGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get analytics by TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System returns analytics by test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System returns analytics by test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPointAnalyticResult}
        */
       apiV2TestPlansIdAnalyticsGet(id: string): Promise<any>;
@@ -3632,45 +4259,45 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Get TestPlan configurations
-       *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
        */
       apiV2TestPlansIdConfigurationsGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestPlan configurations
-       *  Use case  User sets test plan identifier  User runs method execution  System return test plan configurations
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System return test plan configurations
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
        */
       apiV2TestPlansIdConfigurationsGet(id: string): Promise<any>;
       /**
        * Export TestPoints from TestPlan in xls format
-       *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [timeZoneOffsetInMinutes]
-       * @param {module:model/GetXlsxTestPointsByTestPlanModel} [getXlsxTestPointsByTestPlanModel]
+       * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} [getXlsxTestPointsByTestPlanApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Export TestPoints from TestPlan in xls format
-       *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.timeZoneOffsetInMinutes
-       * @param {module:model/GetXlsxTestPointsByTestPlanModel} opts.getXlsxTestPointsByTestPlanModel
+       * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} opts.getXlsxTestPointsByTestPlanApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2TestPlansIdExportTestPointsXlsxPost(id: string, opts: {
           timeZoneOffsetInMinutes: number;
-          getXlsxTestPointsByTestPlanModel: any;
+          getXlsxTestPointsByTestPlanApiModel: any;
       }): Promise<any>;
       /**
        * Export TestResults history from TestPlan in xls format
-       *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [mustReturnOnlyLastTestResult]
        * @param {Boolean} [includeSteps]
@@ -3681,8 +4308,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdExportTestResultHistoryXlsxPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Export TestResults history from TestPlan in xls format
-       *  Use case  User sets test plan identifier  User sets filter model (listed in request example)  User runs method execution  System return export xlsx file
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter model (listed in request example)    User runs method execution    System return export xlsx file
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.mustReturnOnlyLastTestResult
        * @param {Boolean} opts.includeSteps
@@ -3698,8 +4325,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Get TestPlan history
-       *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System return test plan history
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -3711,8 +4338,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestPlan history
-       *  Use case  User sets test plan identifier  User runs method execution  System return test plan history
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System return test plan history
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -3730,8 +4357,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Get Links of TestPlan
-       *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [skip]
        * @param {Number} [take]
@@ -3741,8 +4368,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdLinksGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Links of TestPlan
-       *  Use case  User sets test plan identifier  User sets pagination filter (listed in request example)  User runs method execution  System returns links of TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets pagination filter (listed in request example)    User runs method execution    System returns links of TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip
        * @param {Number} opts.take
@@ -3774,22 +4401,22 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdPatch(id: string, opts: Object): Promise<any>;
       /**
        * Get summary by TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanSummaryModel} and HTTP response
        */
       apiV2TestPlansIdSummariesGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get summary by TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System returns summary by test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System returns summary by test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanSummaryModel}
        */
       apiV2TestPlansIdSummariesGet(id: string): Promise<any>;
       /**
        * Get TestPoints with last result from TestPlan
-       *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {String} [testerId]
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -3802,8 +4429,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdTestPointsLastResultsGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestPoints with last result from TestPlan
-       *  Use case  User sets test plan identifier  User sets filter (listed in request example)  User runs method execution  System return test points with last result from test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets filter (listed in request example)    User runs method execution    System return test points with last result from test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {String} opts.testerId
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -3823,8 +4450,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Reset TestPoints status of TestPlan
-       *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -3832,8 +4459,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdTestPointsResetPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Reset TestPoints status of TestPlan
-       *  Use case  User sets test plan identifier  User sets test points identifiers  User runs method execution  System reset test points statuses of test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets test points identifiers    User runs method execution    System reset test points statuses of test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -3881,8 +4508,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Get TestRuns of TestPlan
-       *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} [notStarted]
        * @param {Boolean} [inProgress]
@@ -3898,8 +4525,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdTestRunsGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get TestRuns of TestPlan
-       *  Use case  User sets test plan identifier  User sets TestRun status filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets TestRun status filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.notStarted
        * @param {Boolean} opts.inProgress
@@ -3925,8 +4552,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Search TestRuns of TestPlan
-       *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
        * @param {Number} [take] Amount of items to be taken (limit)
@@ -3939,8 +4566,8 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdTestRunsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Search TestRuns of TestPlan
-       *  Use case  User sets test plan identifier  User sets TestRuns filter (listed in request example)  User runs method execution  System returns TestRuns for TestPlan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User sets TestRuns filter (listed in request example)    User runs method execution    System returns TestRuns for TestPlan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
        * @param {Number} opts.take Amount of items to be taken (limit)
@@ -3972,21 +4599,21 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansIdTestRunsTestResultsLastModifiedModifiedDateGet(id: string): Promise<any>;
       /**
        * Send unlock TestPlan notification
-       *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TestPlansIdUnlockRequestPostWithHttpInfo(id: string): Promise<any>;
       /**
        * Send unlock TestPlan notification
-       *  Use case  User sets test plan identifier  User runs method execution  System send unlock test plan notification
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System send unlock test plan notification
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2TestPlansIdUnlockRequestPost(id: string): Promise<any>;
       /**
        * Get TestPlans short models by Project identifiers
-       *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
+       *   Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {Boolean} [isDeleted]
        * @param {Array.<String>} [requestBody]
@@ -3995,7 +4622,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
       apiV2TestPlansShortsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Get TestPlans short models by Project identifiers
-       *  Use case  User sets projects identifiers  User runs method execution  System return test plans short models (listed in response example)
+       *   Use case    User sets projects identifiers    User runs method execution    System return test plans short models (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {Boolean} opts.isDeleted
        * @param {Array.<String>} opts.requestBody
@@ -4007,35 +4634,35 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Clone TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
        */
       cloneWithHttpInfo(id: string): Promise<any>;
       /**
        * Clone TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System clones test plan  System returns test plan (listed in response example)
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System clones test plan    System returns test plan (listed in response example)
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
        */
       clone(id: string): Promise<any>;
       /**
        * Complete TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       completeWithHttpInfo(id: string): Promise<any>;
       /**
        * Complete TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System completes the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System completes the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       complete(id: string): Promise<any>;
       /**
        * Create TestPlan
-       *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
+       *   Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestPlanApiModel} [createTestPlanApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
@@ -4043,7 +4670,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
       createTestPlanWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create TestPlan
-       *  Use case  User sets test plan properties (listed in request example)  User runs method execution  System creates test plan  System returns test plan (listed in response example)
+       *   Use case    User sets test plan properties (listed in request example)    User runs method execution    System creates test plan    System returns test plan (listed in response example)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestPlanApiModel} opts.createTestPlanApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
@@ -4053,57 +4680,57 @@ declare module 'testit-api-client/api/TestPlansApi' {
       }): Promise<any>;
       /**
        * Delete TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteTestPlanWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System delete test plan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System delete test plan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteTestPlan(id: string): Promise<any>;
       /**
        * Get TestPlan by Id
-       *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestPlanModel} and HTTP response
        */
       getTestPlanByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestPlan by Id
-       *  Use case  User sets test plan identifier  User runs method execution  System search  test plan by the identifier  System returns test plan
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System search  test plan by the identifier    System returns test plan
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestPlanModel}
        */
       getTestPlanById(id: string): Promise<any>;
       /**
        * Get TestSuites Tree By Id
-       *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>} and HTTP response
        */
       getTestSuitesByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestSuites Tree By Id
-       *  Use case  User sets test plan identifier  User runs method execution  System finds test suites related to the test plan  System returns test suites as a tree model (listed in response example)
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System finds test suites related to the test plan    System returns test suites as a tree model (listed in response example)
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestSuiteHierarchyApiResult>}
        */
       getTestSuitesById(id: string): Promise<any>;
       /**
        * Pause TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       pauseWithHttpInfo(id: string): Promise<any>;
       /**
        * Pause TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System pauses the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System pauses the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       pause(id: string): Promise<any>;
@@ -4121,35 +4748,35 @@ declare module 'testit-api-client/api/TestPlansApi' {
       purgeTestPlan(id: string): Promise<any>;
       /**
        * Restore TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       restoreTestPlanWithHttpInfo(id: string): Promise<any>;
       /**
        * Restore TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System restores test plan  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System restores test plan    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       restoreTestPlan(id: string): Promise<any>;
       /**
        * Start TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       startWithHttpInfo(id: string): Promise<any>;
       /**
        * Start TestPlan
-       *  Use case  User sets test plan identifier  User runs method execution  System starts the test plan and updates test plan status  System returns no content response
-       * @param {String} id Test plan internal (guid format) or global (int format) identifier
+       *   Use case    User sets test plan identifier    User runs method execution    System starts the test plan and updates test plan status    System returns no content response
+       * @param {String} id Test plan internal (guid format) or global (int  format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       start(id: string): Promise<any>;
       /**
        * Update TestPlan
-       *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
+       *   Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateTestPlanApiModel} [updateTestPlanApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -4157,7 +4784,7 @@ declare module 'testit-api-client/api/TestPlansApi' {
       updateTestPlanWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update TestPlan
-       *  Use case  User sets test plan properties(listed in request example)  User runs method execution  System updates test plan  System returns no content response
+       *   Use case    User sets test plan properties(listed in request example)    User runs method execution    System updates test plan    System returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateTestPlanApiModel} opts.updateTestPlanApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -4172,7 +4799,7 @@ declare module 'testit-api-client/api/TestPointsApi' {
   /**
   * TestPoints service.
   * @module api/TestPointsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestPointsApi {
       /**
@@ -4277,7 +4904,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
   /**
   * TestResults service.
   * @module api/TestResultsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestResultsApi {
       /**
@@ -4372,6 +4999,24 @@ declare module 'testit-api-client/api/TestResultsApi' {
        */
       apiV2TestResultsIdGet(id: string): Promise<any>;
       /**
+       * Patch test result by ID
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Test result unique ID
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} [operation]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2TestResultsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Patch test result by ID
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Test result unique ID
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} opts.operation
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2TestResultsIdPatch(id: string, opts: Object): Promise<any>;
+      /**
        * Edit test result by ID
        * @param {String} id Test result unique ID
        * @param {Object} opts Optional parameters
@@ -4450,7 +5095,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       }): Promise<any>;
       /**
        * Upload and link attachment to TestResult
-       *  Use case  User sets testResultId  User attaches a file  System creates attachment and links it to the test result  System returns attachment identifier
+       *   Use case    User sets testResultId    User attaches a file    System creates attachment and links it to the test result    System returns attachment identifier
        * @param {String} id Test result internal identifier (guid format)
        * @param {Object} opts Optional parameters
        * @param {File} [file] Select file
@@ -4459,7 +5104,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       createAttachmentWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Upload and link attachment to TestResult
-       *  Use case  User sets testResultId  User attaches a file  System creates attachment and links it to the test result  System returns attachment identifier
+       *   Use case    User sets testResultId    User attaches a file    System creates attachment and links it to the test result    System returns attachment identifier
        * @param {String} id Test result internal identifier (guid format)
        * @param {Object} opts Optional parameters
        * @param {File} opts.file Select file
@@ -4470,7 +5115,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       }): Promise<any>;
       /**
        * Remove attachment and unlink from TestResult
-       *  Use case  User sets testResultId and attachmentId  User attaches a file  User runs method execution  System deletes attachment and unlinks it from the test result  System returns attachment identifier
+       *   Use case    User sets testResultId and attachmentId    User attaches a file    User runs method execution    System deletes attachment and unlinks it from the test result    System returns attachment identifier
        * @param {String} id Test result internal identifier (guid format)
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -4478,7 +5123,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       deleteAttachmentWithHttpInfo(id: string, attachmentId: string): Promise<any>;
       /**
        * Remove attachment and unlink from TestResult
-       *  Use case  User sets testResultId and attachmentId  User attaches a file  User runs method execution  System deletes attachment and unlinks it from the test result  System returns attachment identifier
+       *   Use case    User sets testResultId and attachmentId    User attaches a file    User runs method execution    System deletes attachment and unlinks it from the test result    System returns attachment identifier
        * @param {String} id Test result internal identifier (guid format)
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -4486,7 +5131,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       deleteAttachment(id: string, attachmentId: string): Promise<any>;
       /**
        * Get attachment of TestResult
-       *  Use case  User sets attachmentId and testResultId  [Optional] User sets resize configuration  User runs method execution  System search attachments by the attachmentId and the testResultId  [Optional] If resize configuration is set, System resizes the attachment according to the resize                     configuration  [Optional] Otherwise, System does not resize the attachment  System returns attachment as a file
+       *   Use case    User sets attachmentId and testResultId    [Optional] User sets resize configuration    User runs method execution    System search attachments by the attachmentId and the testResultId    [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration    [Optional] Otherwise, System does not resize the attachment    System returns attachment as a file
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @param {String} id Test result internal identifier (guid format)
        * @param {Object} opts Optional parameters
@@ -4500,7 +5145,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       downloadAttachmentWithHttpInfo(attachmentId: string, id: string, opts: Object): Promise<any>;
       /**
        * Get attachment of TestResult
-       *  Use case  User sets attachmentId and testResultId  [Optional] User sets resize configuration  User runs method execution  System search attachments by the attachmentId and the testResultId  [Optional] If resize configuration is set, System resizes the attachment according to the resize                     configuration  [Optional] Otherwise, System does not resize the attachment  System returns attachment as a file
+       *   Use case    User sets attachmentId and testResultId    [Optional] User sets resize configuration    User runs method execution    System search attachments by the attachmentId and the testResultId    [Optional] If resize configuration is set, System resizes the attachment according to the resize                      configuration    [Optional] Otherwise, System does not resize the attachment    System returns attachment as a file
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @param {String} id Test result internal identifier (guid format)
        * @param {Object} opts Optional parameters
@@ -4520,7 +5165,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       }): Promise<any>;
       /**
        * Get Metadata of TestResult's attachment
-       *  Use case  User sets attachmentId and testResultId  User runs method execution  System search attachment by the attachmentId and the testResultId  System returns attachment data
+       *   Use case    User sets attachmentId and testResultId    User runs method execution    System search attachment by the attachmentId and the testResultId    System returns attachment data
        * @param {String} id Test result internal identifier (guid format)
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttachmentApiResult} and HTTP response
@@ -4528,7 +5173,7 @@ declare module 'testit-api-client/api/TestResultsApi' {
       getAttachmentWithHttpInfo(id: string, attachmentId: string): Promise<any>;
       /**
        * Get Metadata of TestResult's attachment
-       *  Use case  User sets attachmentId and testResultId  User runs method execution  System search attachment by the attachmentId and the testResultId  System returns attachment data
+       *   Use case    User sets attachmentId and testResultId    User runs method execution    System search attachment by the attachmentId and the testResultId    System returns attachment data
        * @param {String} id Test result internal identifier (guid format)
        * @param {String} attachmentId Attachment internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttachmentApiResult}
@@ -4536,14 +5181,14 @@ declare module 'testit-api-client/api/TestResultsApi' {
       getAttachment(id: string, attachmentId: string): Promise<any>;
       /**
        * Get all attachments of TestResult
-       *  Use case  User sets testResultId  User runs method execution  System search all attachments of the test result  System returns attachments enumeration
+       *   Use case    User sets testResultId    User runs method execution    System search all attachments of the test result    System returns attachments enumeration
        * @param {String} id Test result internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AttachmentApiResult>} and HTTP response
        */
       getAttachmentsWithHttpInfo(id: string): Promise<any>;
       /**
        * Get all attachments of TestResult
-       *  Use case  User sets testResultId  User runs method execution  System search all attachments of the test result  System returns attachments enumeration
+       *   Use case    User sets testResultId    User runs method execution    System search all attachments of the test result    System returns attachments enumeration
        * @param {String} id Test result internal identifier (guid format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AttachmentApiResult>}
        */
@@ -4555,7 +5200,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
   /**
   * TestRuns service.
   * @module api/TestRunsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestRunsApi {
       /**
@@ -4569,7 +5214,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiClient: any;
       /**
        * Delete multiple test runs
-       *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+       *   Use case    User sets selection parameters of test runs    System search and delete collection of test runs    System returns the number of deleted test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -4577,7 +5222,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiV2TestRunsDeleteWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Delete multiple test runs
-       *  Use case  User sets selection parameters of test runs  System search and delete collection of test runs  System returns the number of deleted test runs
+       *   Use case    User sets selection parameters of test runs    System search and delete collection of test runs    System returns the number of deleted test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -4599,28 +5244,46 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiV2TestRunsIdAutoTestsNamespacesGet(id: string): Promise<any>;
       /**
        * Delete test run
-       *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
+       *   Use case    User sets test run internal (guid format) identifier    System search and delete test run
        * @param {String} id Test run internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TestRunsIdDeleteWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete test run
-       *  Use case  User sets test run internal (guid format) identifier  System search and delete test run
+       *   Use case    User sets test run internal (guid format) identifier    System search and delete test run
        * @param {String} id Test run internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2TestRunsIdDelete(id: string): Promise<any>;
       /**
+       * Patch test run
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Test Run internal identifier (GUID format)
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} [operation]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2TestRunsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Patch test run
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id Test Run internal identifier (GUID format)
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} opts.operation
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2TestRunsIdPatch(id: string, opts: Object): Promise<any>;
+      /**
        * Permanently delete test run from archive
-       *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+       *   Use case    User sets archived test run internal (guid format) identifier    System search and purge archived test run
        * @param {String} id Test run internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TestRunsIdPurgePostWithHttpInfo(id: string): Promise<any>;
       /**
        * Permanently delete test run from archive
-       *  Use case  User sets archived test run internal (guid format) identifier  System search and purge archived test run
+       *   Use case    User sets archived test run internal (guid format) identifier    System search and purge archived test run
        * @param {String} id Test run internal (UUID) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
@@ -4645,14 +5308,14 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Restore test run from the archive
-       *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+       *   Use case    User sets archived test run internal (guid format) identifier    System search and restore test run
        * @param {String} id Unique ID of the test run
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2TestRunsIdRestorePostWithHttpInfo(id: string): Promise<any>;
       /**
        * Restore test run from the archive
-       *  Use case  User sets archived test run internal (guid format) identifier  System search and restore test run
+       *   Use case    User sets archived test run internal (guid format) identifier    System search and restore test run
        * @param {String} id Unique ID of the test run
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
@@ -4719,7 +5382,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiV2TestRunsIdTestResultsLastModifiedModificationDateGet(id: string): Promise<any>;
       /**
        * Permanently delete multiple test runs from archive
-       *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+       *   Use case    User sets selection parameters of archived test runs    System search and delete collection of archived test runs    System returns the number of deleted archived test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -4727,7 +5390,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiV2TestRunsPurgeBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Permanently delete multiple test runs from archive
-       *  Use case  User sets selection parameters of archived test runs  System search and delete collection of archived test runs  System returns the number of deleted archived test runs
+       *   Use case    User sets selection parameters of archived test runs    System search and delete collection of archived test runs    System returns the number of deleted archived test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -4737,7 +5400,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Restore multiple test runs from the archive
-       *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+       *   Use case    User sets selection parameters of archived test runs    System search and restore collection of archived test runs    System returns the number of restored test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} [testRunSelectApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
@@ -4745,7 +5408,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       apiV2TestRunsRestoreBulkPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Restore multiple test runs from the archive
-       *  Use case  User sets selection parameters of archived test runs  System search and restore collection of archived test runs  System returns the number of restored test runs
+       *   Use case    User sets selection parameters of archived test runs    System search and restore collection of archived test runs    System returns the number of restored test runs
        * @param {Object} opts Optional parameters
        * @param {module:model/TestRunSelectApiModel} opts.testRunSelectApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
@@ -4802,21 +5465,21 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Complete TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System completes test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       completeTestRunWithHttpInfo(id: string): Promise<any>;
       /**
        * Complete TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System completes test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System completes test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       completeTestRun(id: string): Promise<any>;
       /**
        * Create test runs based on autotests and configurations
-       * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+       * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} [createTestRunAndFillByAutoTestsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -4824,7 +5487,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       createAndFillByAutoTestsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test runs based on autotests and configurations
-       * This method creates a test run based on an autotest and a configuration. The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is that in this method there is no need to create a test plan and work items (test cases and checklists).
+       * This method creates a test run based on an autotest and a configuration.  The difference between the `POST /api/v2/testRuns/byWorkItems` and `POST /api/v2/testRuns/byConfigurations` methods is  that in this method there is no need to create a test plan and work items (test cases and checklists).
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByAutoTestsApiModel} opts.createTestRunAndFillByAutoTestsApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -4834,7 +5497,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Create test runs picking the needed test points
-       * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
+       * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} [createTestRunAndFillByConfigurationsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -4842,7 +5505,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       createAndFillByConfigurationsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test runs picking the needed test points
-       * This method creates a test run based on a combination of a configuration and a work item(test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated. This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a jagged array within the \"<b>testPointSelectors</b>\" parameter.
+       * This method creates a test run based on a combination of a configuration and a work item(test case or checklist).  Before you create a test run using this method, make sure to create a test plan. Work items must be automated.  This method is different from the `POST /api/v2/testRuns/byWorkItems` method because of the ability to send a  jagged array within the \"<b>testPointSelectors</b>\" parameter.
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByConfigurationsApiModel} opts.createTestRunAndFillByConfigurationsApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -4852,7 +5515,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Create test run based on configurations and work items
-       * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+       * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} [createTestRunAndFillByWorkItemsApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -4860,7 +5523,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       createAndFillByWorkItemsWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create test run based on configurations and work items
-       * This method creates a test run based on a combination of configuration and work item (test case or checklist). Before you create a test run using this method, make sure to create a test plan. Work items must be automated.
+       * This method creates a test run based on a combination of configuration and work item (test case or checklist).  Before you create a test run using this method, make sure to create a test plan.  Work items must be automated.
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateTestRunAndFillByWorkItemsApiModel} opts.createTestRunAndFillByWorkItemsApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -4870,7 +5533,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Create empty TestRun
-       *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+       *   Use case    User sets test run model (listed in the request example)    User runs method execution    System creates test run    System returns test run model
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateEmptyTestRunApiModel} [createEmptyTestRunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
@@ -4878,7 +5541,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       createEmptyWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create empty TestRun
-       *  Use case  User sets test run model (listed in the request example)  User runs method execution  System creates test run  System returns test run model
+       *   Use case    User sets test run model (listed in the request example)    User runs method execution    System creates test run    System returns test run model
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateEmptyTestRunApiModel} opts.createEmptyTestRunApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
@@ -4888,14 +5551,14 @@ declare module 'testit-api-client/api/TestRunsApi' {
       }): Promise<any>;
       /**
        * Get TestRun by Id
-       *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+       *   Use case    User sets test run identifier    User runs method execution    System finds test run    System returns test run
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestRunV2ApiResult} and HTTP response
        */
       getTestRunByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestRun by Id
-       *  Use case  User sets test run identifier  User runs method execution  System finds test run  System returns test run
+       *   Use case    User sets test run identifier    User runs method execution    System finds test run    System returns test run
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestRunV2ApiResult}
        */
@@ -4920,35 +5583,35 @@ declare module 'testit-api-client/api/TestRunsApi' {
       setAutoTestResultsForTestRun(id: string, opts: Object): Promise<any>;
       /**
        * Start TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System starts test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       startTestRunWithHttpInfo(id: string): Promise<any>;
       /**
        * Start TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System starts test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System starts test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       startTestRun(id: string): Promise<any>;
       /**
        * Stop TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System stops test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       stopTestRunWithHttpInfo(id: string): Promise<any>;
       /**
        * Stop TestRun
-       *  Use case  User sets test run identifier  User runs method execution  System stops test run  System returns no content response
+       *   Use case    User sets test run identifier    User runs method execution    System stops test run    System returns no content response
        * @param {String} id Test Run internal identifier (GUID format)
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       stopTestRun(id: string): Promise<any>;
       /**
        * Update empty TestRun
-       *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+       *   Use case    User sets test run properties (listed in the request example)    User runs method execution    System updates test run    System returns returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateEmptyTestRunApiModel} [updateEmptyTestRunApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -4956,7 +5619,7 @@ declare module 'testit-api-client/api/TestRunsApi' {
       updateEmptyWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Update empty TestRun
-       *  Use case  User sets test run properties (listed in the request example)  User runs method execution  System updates test run  System returns returns no content response
+       *   Use case    User sets test run properties (listed in the request example)    User runs method execution    System updates test run    System returns returns no content response
        * @param {Object} opts Optional parameters
        * @param {module:model/UpdateEmptyTestRunApiModel} opts.updateEmptyTestRunApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -4971,7 +5634,7 @@ declare module 'testit-api-client/api/TestStatusesApi' {
   /**
   * TestStatuses service.
   * @module api/TestStatusesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestStatusesApi {
       /**
@@ -5056,13 +5719,13 @@ declare module 'testit-api-client/api/TestStatusesApi' {
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchTestStatusesApiModel} [searchTestStatusesApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResultReply} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestStatusApiResultIReply} and HTTP response
        */
       apiV2TestStatusesSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchTestStatusesApiModel} opts.searchTestStatusesApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestStatusApiResultReply}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestStatusApiResultIReply}
        */
       apiV2TestStatusesSearchPost(opts: {
           searchTestStatusesApiModel: any;
@@ -5074,7 +5737,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
   /**
   * TestSuites service.
   * @module api/TestSuitesApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class TestSuitesApi {
       /**
@@ -5186,77 +5849,77 @@ declare module 'testit-api-client/api/TestSuitesApi' {
       }): Promise<any>;
       /**
        * Delete TestSuite
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System deletes test suite    System returns no content response
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteTestSuiteWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete TestSuite
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System deletes test suite  System returns no content response
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System deletes test suite    System returns no content response
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteTestSuite(id: string): Promise<any>;
       /**
        * Get Configurations By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configurations related to the test points    System returns configurations array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ConfigurationModel>} and HTTP response
        */
       getConfigurationsByTestSuiteIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get Configurations By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configurations related to the test points  System returns configurations array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configurations related to the test points    System returns configurations array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ConfigurationModel>}
        */
       getConfigurationsByTestSuiteId(id: string): Promise<any>;
       /**
        * Get TestPoints By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System returns test points array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestPointByTestSuiteModel>} and HTTP response
        */
       getTestPointsByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestPoints By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System returns test points array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System returns test points array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestPointByTestSuiteModel>}
        */
       getTestPointsById(id: string): Promise<any>;
       /**
        * Get TestResults By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search test results related to the test points    System returns test results array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultV2ShortModel>} and HTTP response
        */
       getTestResultsByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestResults By Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search test results related to the test points  System returns test results array
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search test results related to the test points    System returns test results array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultV2ShortModel>}
        */
       getTestResultsById(id: string): Promise<any>;
       /**
        * Get TestSuite by Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System returns test suite
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TestSuiteApiResult} and HTTP response
        */
       getTestSuiteByIdWithHttpInfo(id: string): Promise<any>;
       /**
        * Get TestSuite by Id
-       *  Use case  User sets test suite identifier  User runs method execution  System search test suite by identifier  System returns test suite
+       *   Use case    User sets test suite identifier    User runs method execution    System search test suite by identifier    System returns test suite
        * @param {String} id Test suite internal (guid format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TestSuiteApiResult}
        */
       getTestSuiteById(id: string): Promise<any>;
       /**
        * Search WorkItems
-       *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
+       *   Use case    User sets test suite identifier    [Optional] User sets filter    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search work items related to the test points    [Optional] User sets filter, system applies filter    System returns work items array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -5270,7 +5933,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
       searchWorkItemsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Search WorkItems
-       *  Use case  User sets test suite identifier  [Optional] User sets filter  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search work items related to the test points  [Optional] User sets filter, system applies filter  System returns work items array
+       *   Use case    User sets test suite identifier    [Optional] User sets filter    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search work items related to the test points    [Optional] User sets filter, system applies filter    System returns work items array
        * @param {String} id Test suite internal (guid format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -5291,7 +5954,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
       }): Promise<any>;
       /**
        * Set Configurations By TestSuite Id
-       *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
+       *   Use case    User sets test suite identifier    User sets collection of configuration identifiers    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configuration    System restores(if exist) or creates test points with listed configuration    System returns no content response
        * @param {String} id Test suite internal (guid format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} [requestBody] Collection of configuration identifiers\"
@@ -5300,7 +5963,7 @@ declare module 'testit-api-client/api/TestSuitesApi' {
       setConfigurationsByTestSuiteIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Set Configurations By TestSuite Id
-       *  Use case  User sets test suite identifier  User sets collection of configuration identifiers  User runs method execution  System search test suite by identifier  System search test points related to the test suite  System search configuration  System restores(if exist) or creates test points with listed configuration  System returns no content response
+       *   Use case    User sets test suite identifier    User sets collection of configuration identifiers    User runs method execution    System search test suite by identifier    System search test points related to the test suite    System search configuration    System restores(if exist) or creates test points with listed configuration    System returns no content response
        * @param {String} id Test suite internal (guid format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {Array.<String>} opts.requestBody Collection of configuration identifiers\"
@@ -5312,11 +5975,54 @@ declare module 'testit-api-client/api/TestSuitesApi' {
   }
 
 }
+declare module 'testit-api-client/api/UserRoleAssignmentsApi' {
+  /**
+  * UserRoleAssignments service.
+  * @module api/UserRoleAssignmentsApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class UserRoleAssignmentsApi {
+      /**
+      * Constructs a new UserRoleAssignmentsApi.
+      * @alias module:api/UserRoleAssignmentsApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * @param {String} userId
+       * @param {String} roleId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2UsersUserIdRolesRoleIdDeleteWithHttpInfo(userId: string, roleId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @param {String} roleId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2UsersUserIdRolesRoleIdDelete(userId: string, roleId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @param {String} roleId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2UsersUserIdRolesRoleIdPostWithHttpInfo(userId: string, roleId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @param {String} roleId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2UsersUserIdRolesRoleIdPost(userId: string, roleId: string): Promise<any>;
+  }
+
+}
 declare module 'testit-api-client/api/UsersApi' {
   /**
   * Users service.
   * @module api/UsersApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class UsersApi {
       /**
@@ -5342,6 +6048,79 @@ declare module 'testit-api-client/api/UsersApi' {
       apiV2UsersExistsGet(opts: {
           userName: string;
       }): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateUserApiModel} [createUserApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserApiModel} and HTTP response
+       */
+      apiV2UsersPostWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * @param {Object} opts Optional parameters
+       * @param {module:model/CreateUserApiModel} opts.createUserApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserApiModel}
+       */
+      apiV2UsersPost(opts: {
+          createUserApiModel: any;
+      }): Promise<any>;
+      /**
+       * @param {String} userId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2UsersUserIdDeleteWithHttpInfo(userId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2UsersUserIdDelete(userId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserApiModel} and HTTP response
+       */
+      apiV2UsersUserIdGetWithHttpInfo(userId: string): Promise<any>;
+      /**
+       * @param {String} userId
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserApiModel}
+       */
+      apiV2UsersUserIdGet(userId: string): Promise<any>;
+  }
+
+}
+declare module 'testit-api-client/api/UserStoragesApi' {
+  /**
+  * UserStorages service.
+  * @module api/UserStoragesApi
+  * @version 7.3.0-TMS-5.8
+  */
+  export default class UserStoragesApi {
+      /**
+      * Constructs a new UserStoragesApi.
+      * @alias module:api/UserStoragesApi
+      * @class
+      * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
+      * default to {@link module:ApiClient#instance} if unspecified.
+      */
+      constructor(apiClient?: any);
+      apiClient: any;
+      /**
+       * @param {String} resource
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2UserStoragesResourceGetWithHttpInfo(resource: string): Promise<any>;
+      /**
+       * @param {String} resource
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2UserStoragesResourceGet(resource: string): Promise<any>;
+      /**
+       * @param {String} resource
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2UserStoragesResourcePostWithHttpInfo(resource: string): Promise<any>;
+      /**
+       * @param {String} resource
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2UserStoragesResourcePost(resource: string): Promise<any>;
   }
 
 }
@@ -5349,7 +6128,7 @@ declare module 'testit-api-client/api/WebhooksApi' {
   /**
   * Webhooks service.
   * @module api/WebhooksApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class WebhooksApi {
       /**
@@ -5536,7 +6315,7 @@ declare module 'testit-api-client/api/WebhooksLogsApi' {
   /**
   * WebhooksLogs service.
   * @module api/WebhooksLogsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class WebhooksLogsApi {
       /**
@@ -5610,7 +6389,7 @@ declare module 'testit-api-client/api/WorkflowsApi' {
   /**
   * Workflows service.
   * @module api/WorkflowsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class WorkflowsApi {
       /**
@@ -5662,14 +6441,14 @@ declare module 'testit-api-client/api/WorkflowsApi' {
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowProjectsApiModel} [searchWorkflowProjectsApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowProjectApiResultReply} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowProjectApiResultIReply} and HTTP response
        */
       apiV2WorkflowsIdProjectsSearchPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowProjectsApiModel} opts.searchWorkflowProjectsApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowProjectApiResultReply}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowProjectApiResultIReply}
        */
       apiV2WorkflowsIdProjectsSearchPost(id: string, opts: {
           searchWorkflowProjectsApiModel: any;
@@ -5717,13 +6496,13 @@ declare module 'testit-api-client/api/WorkflowsApi' {
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowsApiModel} [searchWorkflowsApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowShortApiResultReply} and HTTP response
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkflowShortApiResultIReply} and HTTP response
        */
       apiV2WorkflowsSearchPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * @param {Object} opts Optional parameters
        * @param {module:model/SearchWorkflowsApiModel} opts.searchWorkflowsApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowShortApiResultReply}
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkflowShortApiResultIReply}
        */
       apiV2WorkflowsSearchPost(opts: {
           searchWorkflowsApiModel: any;
@@ -5735,7 +6514,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
   /**
   * WorkItems service.
   * @module api/WorkItemsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class WorkItemsApi {
       /**
@@ -5749,7 +6528,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiClient: any;
       /**
        * Upload and link attachment to WorkItem
-       *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
+       *   Use case    User sets workItemId    User attaches a file    System creates attachment and links it to the work item    System returns attachment identifier
        * @param {String} id Work item internal identifier (guid format)
        * @param {Object} opts Optional parameters
        * @param {File} [file] Select file
@@ -5758,7 +6537,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsIdAttachmentsPostWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Upload and link attachment to WorkItem
-       *  Use case  User sets workItemId  User attaches a file  System creates attachment and links it to the work item  System returns attachment identifier
+       *   Use case    User sets workItemId    User attaches a file    System creates attachment and links it to the work item    System returns attachment identifier
        * @param {String} id Work item internal identifier (guid format)
        * @param {Object} opts Optional parameters
        * @param {File} opts.file Select file
@@ -5769,21 +6548,21 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Transform CheckList to TestCase
-       *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
+       *   Use case    User sets checklist identifier    User runs method execution    System transform CheckList to TestCase
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
        */
       apiV2WorkItemsIdCheckListTransformToTestCasePostWithHttpInfo(id: string): Promise<any>;
       /**
        * Transform CheckList to TestCase
-       *  Use case  User sets checklist identifier  User runs method execution  System transform CheckList to TestCase
+       *   Use case    User sets checklist identifier    User runs method execution    System transform CheckList to TestCase
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
        */
       apiV2WorkItemsIdCheckListTransformToTestCasePost(id: string): Promise<any>;
       /**
        * Get change history of WorkItem
-       *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
+       *   Use case    User sets work item identifier    User runs method execution    System return change history of WorkItem
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -5796,7 +6575,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsIdHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get change history of WorkItem
-       *  Use case  User sets work item identifier  User runs method execution  System return change history of WorkItem
+       *   Use case    User sets work item identifier    User runs method execution    System return change history of WorkItem
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -5815,63 +6594,81 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Delete like from WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System delete like from WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2WorkItemsIdLikeDeleteWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete like from WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System delete like from WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System delete like from WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2WorkItemsIdLikeDelete(id: string): Promise<any>;
       /**
        * Set like to WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System set like to WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2WorkItemsIdLikePostWithHttpInfo(id: string): Promise<any>;
       /**
        * Set like to WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System set like to WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System set like to WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2WorkItemsIdLikePost(id: string): Promise<any>;
       /**
        * Get likes count of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return likes count of WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Number} and HTTP response
        */
       apiV2WorkItemsIdLikesCountGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get likes count of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return likes count of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return likes count of WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Number}
        */
       apiV2WorkItemsIdLikesCountGet(id: string): Promise<any>;
       /**
        * Get likes of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return likes of WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemLikeModel>} and HTTP response
        */
       apiV2WorkItemsIdLikesGetWithHttpInfo(id: string): Promise<any>;
       /**
        * Get likes of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return likes of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return likes of WorkItem
        * @param {String} id
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemLikeModel>}
        */
       apiV2WorkItemsIdLikesGet(id: string): Promise<any>;
       /**
+       * Patch Test Case, Checklist or Shared Step
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} [operation]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2WorkItemsIdPatchWithHttpInfo(id: string, opts: Object): Promise<any>;
+      /**
+       * Patch Test Case, Checklist or Shared Step
+       * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
+       * @param {Object} opts Optional parameters
+       * @param {Array.<module:model/Operation>} opts.operation
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2WorkItemsIdPatch(id: string, opts: Object): Promise<any>;
+      /**
        * Get test results history of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return test results history of WorkItem
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {Date} [from] Take results from this date
@@ -5894,7 +6691,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsIdTestResultsHistoryGetWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get test results history of WorkItem
-       *  Use case  User sets WorkItem identifier  User runs method execution  System return test results history of WorkItem
+       *   Use case    User sets WorkItem identifier    User runs method execution    System return test results history of WorkItem
        * @param {String} id
        * @param {Object} opts Optional parameters
        * @param {Date} opts.from Take results from this date
@@ -5933,7 +6730,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Set WorkItem as actual
-       *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
+       *   Use case    User sets work item identifier    User runs method execution    System set WorkItem as actual
        * @param {String} id
        * @param {String} versionId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemModel} and HTTP response
@@ -5941,7 +6738,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsIdVersionVersionIdActualPostWithHttpInfo(id: string, versionId: string): Promise<any>;
       /**
        * Set WorkItem as actual
-       *  Use case  User sets work item identifier  User runs method execution  System set WorkItem as actual
+       *   Use case    User sets work item identifier    User runs method execution    System set WorkItem as actual
        * @param {String} id
        * @param {String} versionId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemModel}
@@ -5978,7 +6775,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Move WorkItem to another section
-       *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
+       *   Use case    User sets WorkItem identifier    User runs method execution    System move WorkItem to another section
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemMovePostModel} [workItemMovePostModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemShortModel} and HTTP response
@@ -5986,7 +6783,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsMovePostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Move WorkItem to another section
-       *  Use case  User sets WorkItem identifier  User runs method execution  System move WorkItem to another section
+       *   Use case    User sets WorkItem identifier    User runs method execution    System move WorkItem to another section
        * @param {Object} opts Optional parameters
        * @param {module:model/WorkItemMovePostModel} opts.workItemMovePostModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemShortModel}
@@ -6009,6 +6806,24 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        */
       apiV2WorkItemsPost(opts: {
           createWorkItemApiModel: any;
+      }): Promise<any>;
+      /**
+       * Update Test Case, Checklist or Shared Step
+       *   Use case    User sets work item properties (listed in request parameters)    User runs method execution    System updates work item by identifier    System returns updated work item model (listed in response parameters)
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel]
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+       */
+      apiV2WorkItemsPutWithHttpInfo(opts: Object): Promise<any>;
+      /**
+       * Update Test Case, Checklist or Shared Step
+       *   Use case    User sets work item properties (listed in request parameters)    User runs method execution    System updates work item by identifier    System returns updated work item model (listed in response parameters)
+       * @param {Object} opts Optional parameters
+       * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel
+       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+       */
+      apiV2WorkItemsPut(opts: {
+          updateWorkItemApiModel: any;
       }): Promise<any>;
       /**
        * Search for work items
@@ -6043,7 +6858,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Get SharedStep references in sections
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -6057,7 +6872,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsSharedStepIdReferencesSectionsPostWithHttpInfo(sharedStepId: string, opts: Object): Promise<any>;
       /**
        * Get SharedStep references in sections
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -6078,7 +6893,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Get SharedStep references in work items
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @param {Object} opts Optional parameters
        * @param {Number} [skip] Amount of items to be skipped (offset)
@@ -6092,7 +6907,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       apiV2WorkItemsSharedStepIdReferencesWorkItemsPostWithHttpInfo(sharedStepId: string, opts: Object): Promise<any>;
       /**
        * Get SharedStep references in work items
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @param {Object} opts Optional parameters
        * @param {Number} opts.skip Amount of items to be skipped (offset)
@@ -6113,63 +6928,63 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Get SharedStep references
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/SharedStepReferenceModel>} and HTTP response
        */
       apiV2WorkItemsSharedStepsSharedStepIdReferencesGetWithHttpInfo(sharedStepId: string): Promise<any>;
       /**
        * Get SharedStep references
-       *  Use case  User sets SharedStep identifier  User runs method execution  System return SharedStep references
+       *   Use case    User sets SharedStep identifier    User runs method execution    System return SharedStep references
        * @param {String} sharedStepId
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/SharedStepReferenceModel>}
        */
       apiV2WorkItemsSharedStepsSharedStepIdReferencesGet(sharedStepId: string): Promise<any>;
       /**
        * Delete all links AutoTests from WorkItem by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search and delete all autotests, related to found work item    System returns no content response
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteAllWorkItemsFromAutoTestWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete all links AutoTests from WorkItem by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search and delete all autotests, related to found work item  System returns no content response
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search and delete all autotests, related to found work item    System returns no content response
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteAllWorkItemsFromAutoTest(id: string): Promise<any>;
       /**
        * Delete Test Case, Checklist or Shared Step by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System deletes work item    System returns no content response
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       deleteWorkItemWithHttpInfo(id: string): Promise<any>;
       /**
        * Delete Test Case, Checklist or Shared Step by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System deletes work item  System returns no content response
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System deletes work item    System returns no content response
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       deleteWorkItem(id: string): Promise<any>;
       /**
        * Get all AutoTests linked to WorkItem by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search all autotests, related to found work item    System returns list of found autotests
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/AutoTestModel>} and HTTP response
        */
       getAutoTestsForWorkItemWithHttpInfo(id: string): Promise<any>;
       /**
        * Get all AutoTests linked to WorkItem by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search all autotests, related to found work item  System returns list of found autotests
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search all autotests, related to found work item    System returns list of found autotests
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/AutoTestModel>}
        */
       getAutoTestsForWorkItem(id: string): Promise<any>;
       /**
        * Get iterations by work item Id or GlobalId
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {String} [versionId] WorkItem version (guid format) identifier
        * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
@@ -6178,7 +6993,7 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       getIterationsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get iterations by work item Id or GlobalId
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {String} opts.versionId WorkItem version (guid format) identifier
        * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
@@ -6190,8 +7005,8 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Get Test Case, Checklist or Shared Step by Id or GlobalId
-       *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    [Optional] User sets work item version number    User runs method execution    System search work item by identifier    [Optional] if User sets work item version identifier, system search work item version by identifier.    [Optional] if user sets work item version number, system search work item version by number    Otherwise, system search last work item version    System returns work item
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {String} [versionId] WorkItem version (guid format) identifier\"
        * @param {Number} [versionNumber] WorkItem version number (0 is the last version)\"
@@ -6200,8 +7015,8 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       getWorkItemByIdWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get Test Case, Checklist or Shared Step by Id or GlobalId
-       *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  [Optional] User sets work item version number  User runs method execution  System search work item by identifier  [Optional] if User sets work item version identifier, system search work item version by identifier.  [Optional] if user sets work item version number, system search work item version by number  Otherwise, system search last work item version  System returns work item
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    [Optional] User sets work item version number    User runs method execution    System search work item by identifier    [Optional] if User sets work item version identifier, system search work item version by identifier.    [Optional] if user sets work item version number, system search work item version by number    Otherwise, system search last work item version    System returns work item
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
        * @param {String} opts.versionId WorkItem version (guid format) identifier\"
        * @param {Number} opts.versionNumber WorkItem version number (0 is the last version)\"
@@ -6213,35 +7028,35 @@ declare module 'testit-api-client/api/WorkItemsApi' {
       }): Promise<any>;
       /**
        * Get WorkItem chronology by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search test results of all autotests, related to found work item    System sort results by CompletedOn ascending, then by CreatedDate ascending    System returns sorted collection of test results
        * @param {String} id Internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/TestResultChronologyModel>} and HTTP response
        */
       getWorkItemChronologyWithHttpInfo(id: string): Promise<any>;
       /**
        * Get WorkItem chronology by Id or GlobalId
-       *  Use case  User sets work item identifier  User runs method execution  System search work item by identifier  System search test results of all autotests, related to found work item  System sort results by CompletedOn ascending, then by CreatedDate ascending  System returns sorted collection of test results
+       *   Use case    User sets work item identifier    User runs method execution    System search work item by identifier    System search test results of all autotests, related to found work item    System sort results by CompletedOn ascending, then by CreatedDate ascending    System returns sorted collection of test results
        * @param {String} id Internal (UUID) or global (integer) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/TestResultChronologyModel>}
        */
       getWorkItemChronology(id: string): Promise<any>;
       /**
        * Get WorkItem versions
-       *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    User runs method execution    System search work item by identifier    [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item    System returns array of work item version models (listed in response example)
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
-       * @param {String} [workItemVersionId] WorkItem version (guid format) identifier\"
-       * @param {Number} [versionNumber] WorkItem version (integer format) number\"
+       * @param {String} [workItemVersionId] WorkItem version (guid format)  identifier\"
+       * @param {Number} [versionNumber] WorkItem version (integer format)  number\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/WorkItemVersionModel>} and HTTP response
        */
       getWorkItemVersionsWithHttpInfo(id: string, opts: Object): Promise<any>;
       /**
        * Get WorkItem versions
-       *  Use case  User sets work item identifier  [Optional] User sets work item version identifier  User runs method execution  System search work item by identifier  [Optional] If User set work item version identifier, System search work item version by version identifier                     Otherwise, system search all version of work item  System returns array of work item version models (listed in response example)
-       * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+       *   Use case    User sets work item identifier    [Optional] User sets work item version identifier    User runs method execution    System search work item by identifier    [Optional] If User set work item version identifier, System search work item version by version identifier                      Otherwise, system search all version of work item    System returns array of work item version models (listed in response example)
+       * @param {String} id WorkItem internal (guid format) or  global(integer format) identifier\"
        * @param {Object} opts Optional parameters
-       * @param {String} opts.workItemVersionId WorkItem version (guid format) identifier\"
-       * @param {Number} opts.versionNumber WorkItem version (integer format) number\"
+       * @param {String} opts.workItemVersionId WorkItem version (guid format)  identifier\"
+       * @param {Number} opts.versionNumber WorkItem version (integer format)  number\"
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/WorkItemVersionModel>}
        */
       getWorkItemVersions(id: string, opts: {
@@ -6272,24 +7087,6 @@ declare module 'testit-api-client/api/WorkItemsApi' {
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       restoreWorkItem(id: string): Promise<any>;
-      /**
-       * Update Test Case, Checklist or Shared Step
-       *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-       * @param {Object} opts Optional parameters
-       * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel]
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-       */
-      updateWorkItemWithHttpInfo(opts: Object): Promise<any>;
-      /**
-       * Update Test Case, Checklist or Shared Step
-       *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-       * @param {Object} opts Optional parameters
-       * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel
-       * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-       */
-      updateWorkItem(opts: {
-          updateWorkItemApiModel: any;
-      }): Promise<any>;
   }
 
 }
@@ -6297,7 +7094,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
   /**
   * WorkItemsComments service.
   * @module api/WorkItemsCommentsApi
-  * @version 7.2.6
+  * @version 7.3.0-TMS-5.8
   */
   export default class WorkItemsCommentsApi {
       /**
@@ -6311,21 +7108,21 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
       apiClient: any;
       /**
        * Delete WorkItem comment
-       *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
+       *   Use case    User sets comment identifier    User runs method execution    System delete comment    System returns success status code
        * @param {String} commentId Comment internal (guid format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
        */
       apiV2WorkItemsCommentsCommentIdDeleteWithHttpInfo(commentId: string): Promise<any>;
       /**
        * Delete WorkItem comment
-       *  Use case  User sets comment identifier  User runs method execution  System delete comment  System returns success status code
+       *   Use case    User sets comment identifier    User runs method execution    System delete comment    System returns success status code
        * @param {String} commentId Comment internal (guid format) identifier
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}
        */
       apiV2WorkItemsCommentsCommentIdDelete(commentId: string): Promise<any>;
       /**
        * Create WorkItem comment
-       *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
+       *   Use case    User sets comment properties (listed in request parameters)    User runs method execution    System creates comment    System returns comment model (listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateWorkItemCommentApiModel} [createWorkItemCommentApiModel]
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WorkItemCommentApiResult} and HTTP response
@@ -6333,7 +7130,7 @@ declare module 'testit-api-client/api/WorkItemsCommentsApi' {
       apiV2WorkItemsCommentsPostWithHttpInfo(opts: Object): Promise<any>;
       /**
        * Create WorkItem comment
-       *  Use case  User sets comment properties (listed in request parameters)  User runs method execution  System creates comment  System returns comment model (listed in response parameters)
+       *   Use case    User sets comment properties (listed in request parameters)    User runs method execution    System creates comment    System returns comment model (listed in response parameters)
        * @param {Object} opts Optional parameters
        * @param {module:model/CreateWorkItemCommentApiModel} opts.createWorkItemCommentApiModel
        * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WorkItemCommentApiResult}
@@ -6598,10 +7395,14 @@ declare module 'testit-api-client/ApiClient' {
 declare module 'testit-api-client/index' {
   import ApiClient from 'testit-api-client/ApiClient';
   import AIServiceModelApiResult from 'testit-api-client/model/AIServiceModelApiResult';
+  import AIServiceModelApiResultGroup from 'testit-api-client/model/AIServiceModelApiResultGroup';
+  import AIServiceModelApiResultGroupedReply from 'testit-api-client/model/AIServiceModelApiResultGroupedReply';
+  import AIServiceModelApiResultIReply from 'testit-api-client/model/AIServiceModelApiResultIReply';
   import AIServiceModelApiResultReply from 'testit-api-client/model/AIServiceModelApiResultReply';
   import ActionUpdate from 'testit-api-client/model/ActionUpdate';
   import ApiExternalServiceCategory from 'testit-api-client/model/ApiExternalServiceCategory';
   import AssignAttachmentApiModel from 'testit-api-client/model/AssignAttachmentApiModel';
+  import AssignAutoTestCaseIdApiModel from 'testit-api-client/model/AssignAutoTestCaseIdApiModel';
   import AssignIterationApiModel from 'testit-api-client/model/AssignIterationApiModel';
   import AttachmentApiResult from 'testit-api-client/model/AttachmentApiResult';
   import AttachmentChangeViewModel from 'testit-api-client/model/AttachmentChangeViewModel';
@@ -6616,6 +7417,8 @@ declare module 'testit-api-client/index' {
   import AutoTestAverageDurationApiResult from 'testit-api-client/model/AutoTestAverageDurationApiResult';
   import AutoTestBulkDeleteApiModel from 'testit-api-client/model/AutoTestBulkDeleteApiModel';
   import AutoTestBulkDeleteApiResult from 'testit-api-client/model/AutoTestBulkDeleteApiResult';
+  import AutoTestCaseApiModel from 'testit-api-client/model/AutoTestCaseApiModel';
+  import AutoTestCaseModel from 'testit-api-client/model/AutoTestCaseModel';
   import AutoTestChangeViewModel from 'testit-api-client/model/AutoTestChangeViewModel';
   import AutoTestChangeViewModelArrayChangedFieldViewModel from 'testit-api-client/model/AutoTestChangeViewModelArrayChangedFieldViewModel';
   import AutoTestClassCountApiModel from 'testit-api-client/model/AutoTestClassCountApiModel';
@@ -6695,6 +7498,7 @@ declare module 'testit-api-client/index' {
   import CreateTestRunAndFillByConfigurationsApiModel from 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiModel';
   import CreateTestRunAndFillByWorkItemsApiModel from 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel';
   import CreateTestStatusApiModel from 'testit-api-client/model/CreateTestStatusApiModel';
+  import CreateUserApiModel from 'testit-api-client/model/CreateUserApiModel';
   import CreateWorkItemApiModel from 'testit-api-client/model/CreateWorkItemApiModel';
   import CreateWorkItemCommentApiModel from 'testit-api-client/model/CreateWorkItemCommentApiModel';
   import CreateWorkItemPreviewsApiModel from 'testit-api-client/model/CreateWorkItemPreviewsApiModel';
@@ -6722,7 +7526,7 @@ declare module 'testit-api-client/index' {
   import DateTimeRangeSelectorModel from 'testit-api-client/model/DateTimeRangeSelectorModel';
   import DefectApiModel from 'testit-api-client/model/DefectApiModel';
   import DeletionState from 'testit-api-client/model/DeletionState';
-  import DemoProjectApiResult from 'testit-api-client/model/DemoProjectApiResult';
+  import DetailedProjectApiResult from 'testit-api-client/model/DetailedProjectApiResult';
   import EnableProjectExternalServiceApiModel from 'testit-api-client/model/EnableProjectExternalServiceApiModel';
   import ExternalFormAllowedValueModel from 'testit-api-client/model/ExternalFormAllowedValueModel';
   import ExternalFormCreateModel from 'testit-api-client/model/ExternalFormCreateModel';
@@ -6731,6 +7535,9 @@ declare module 'testit-api-client/index' {
   import ExternalFormModel from 'testit-api-client/model/ExternalFormModel';
   import ExternalIssueApiField from 'testit-api-client/model/ExternalIssueApiField';
   import ExternalIssueApiFieldSuggestion from 'testit-api-client/model/ExternalIssueApiFieldSuggestion';
+  import ExternalIssueApiFieldSuggestionGroup from 'testit-api-client/model/ExternalIssueApiFieldSuggestionGroup';
+  import ExternalIssueApiFieldSuggestionGroupedReply from 'testit-api-client/model/ExternalIssueApiFieldSuggestionGroupedReply';
+  import ExternalIssueApiFieldSuggestionIReply from 'testit-api-client/model/ExternalIssueApiFieldSuggestionIReply';
   import ExternalIssueApiFieldSuggestionReply from 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply';
   import ExternalIssueApiMetadata from 'testit-api-client/model/ExternalIssueApiMetadata';
   import ExternalIssueApiPriority from 'testit-api-client/model/ExternalIssueApiPriority';
@@ -6763,14 +7570,14 @@ declare module 'testit-api-client/index' {
   import GetExternalFormApiResult from 'testit-api-client/model/GetExternalFormApiResult';
   import GetExternalIssueSuggestionsApiModel from 'testit-api-client/model/GetExternalIssueSuggestionsApiModel';
   import GetShortProjectsApiModel from 'testit-api-client/model/GetShortProjectsApiModel';
-  import GetXlsxTestPointsByTestPlanModel from 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel';
+  import GetXlsxTestPointsByTestPlanApiModel from 'testit-api-client/model/GetXlsxTestPointsByTestPlanApiModel';
   import GlobalCustomAttributePostModel from 'testit-api-client/model/GlobalCustomAttributePostModel';
   import GlobalCustomAttributeUpdateModel from 'testit-api-client/model/GlobalCustomAttributeUpdateModel';
-  import GlobalSearchItemResult from 'testit-api-client/model/GlobalSearchItemResult';
-  import GlobalSearchRequest from 'testit-api-client/model/GlobalSearchRequest';
-  import GlobalSearchResponse from 'testit-api-client/model/GlobalSearchResponse';
+  import Group from 'testit-api-client/model/Group';
+  import GroupKey from 'testit-api-client/model/GroupKey';
   import GuidChangedFieldViewModel from 'testit-api-client/model/GuidChangedFieldViewModel';
   import GuidExtractionModel from 'testit-api-client/model/GuidExtractionModel';
+  import GuidNullableChangedFieldViewModel from 'testit-api-client/model/GuidNullableChangedFieldViewModel';
   import IFilter from 'testit-api-client/model/IFilter';
   import ImageResizeType from 'testit-api-client/model/ImageResizeType';
   import Inquiry from 'testit-api-client/model/Inquiry';
@@ -6786,7 +7593,6 @@ declare module 'testit-api-client/index' {
   import LabelShortModel from 'testit-api-client/model/LabelShortModel';
   import LastTestResultApiResult from 'testit-api-client/model/LastTestResultApiResult';
   import LastTestResultModel from 'testit-api-client/model/LastTestResultModel';
-  import Link from 'testit-api-client/model/Link';
   import LinkApiResult from 'testit-api-client/model/LinkApiResult';
   import LinkCreateApiModel from 'testit-api-client/model/LinkCreateApiModel';
   import LinkModel from 'testit-api-client/model/LinkModel';
@@ -6834,12 +7640,13 @@ declare module 'testit-api-client/index' {
   import ProjectFailureCategoryApiResult from 'testit-api-client/model/ProjectFailureCategoryApiResult';
   import ProjectFailureCategoryGroupItemApiResult from 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult';
   import ProjectFailureCategoryGroupItemApiResultReply from 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResultReply';
-  import ProjectModel from 'testit-api-client/model/ProjectModel';
   import ProjectNameApiResult from 'testit-api-client/model/ProjectNameApiResult';
   import ProjectSelectModel from 'testit-api-client/model/ProjectSelectModel';
   import ProjectShortApiResult from 'testit-api-client/model/ProjectShortApiResult';
+  import ProjectShortApiResultGroup from 'testit-api-client/model/ProjectShortApiResultGroup';
+  import ProjectShortApiResultGroupedReply from 'testit-api-client/model/ProjectShortApiResultGroupedReply';
+  import ProjectShortApiResultIReply from 'testit-api-client/model/ProjectShortApiResultIReply';
   import ProjectShortApiResultReply from 'testit-api-client/model/ProjectShortApiResultReply';
-  import ProjectShortModel from 'testit-api-client/model/ProjectShortModel';
   import ProjectShortestModel from 'testit-api-client/model/ProjectShortestModel';
   import ProjectTestPlansFilterModel from 'testit-api-client/model/ProjectTestPlansFilterModel';
   import ProjectType from 'testit-api-client/model/ProjectType';
@@ -6851,6 +7658,8 @@ declare module 'testit-api-client/index' {
   import RequestTypeModel from 'testit-api-client/model/RequestTypeModel';
   import RerunTestResultApiResult from 'testit-api-client/model/RerunTestResultApiResult';
   import RerunsApiResult from 'testit-api-client/model/RerunsApiResult';
+  import RoleApiModel from 'testit-api-client/model/RoleApiModel';
+  import RoleApiModelApiCollection from 'testit-api-client/model/RoleApiModelApiCollection';
   import SearchCustomAttributeTemplateGetModel from 'testit-api-client/model/SearchCustomAttributeTemplateGetModel';
   import SearchExternalIssuesApiModel from 'testit-api-client/model/SearchExternalIssuesApiModel';
   import SearchTestRunsApiModel from 'testit-api-client/model/SearchTestRunsApiModel';
@@ -6988,6 +7797,9 @@ declare module 'testit-api-client/index' {
   import TestRunTestResultsSelectModel from 'testit-api-client/model/TestRunTestResultsSelectModel';
   import TestRunV2ApiResult from 'testit-api-client/model/TestRunV2ApiResult';
   import TestStatusApiResult from 'testit-api-client/model/TestStatusApiResult';
+  import TestStatusApiResultGroup from 'testit-api-client/model/TestStatusApiResultGroup';
+  import TestStatusApiResultGroupedReply from 'testit-api-client/model/TestStatusApiResultGroupedReply';
+  import TestStatusApiResultIReply from 'testit-api-client/model/TestStatusApiResultIReply';
   import TestStatusApiResultReply from 'testit-api-client/model/TestStatusApiResultReply';
   import TestStatusApiType from 'testit-api-client/model/TestStatusApiType';
   import TestStatusModel from 'testit-api-client/model/TestStatusModel';
@@ -7023,6 +7835,7 @@ declare module 'testit-api-client/index' {
   import UpdateWorkItemApiModel from 'testit-api-client/model/UpdateWorkItemApiModel';
   import UpdateWorkItemCommentApiModel from 'testit-api-client/model/UpdateWorkItemCommentApiModel';
   import UpdateWorkflowApiModel from 'testit-api-client/model/UpdateWorkflowApiModel';
+  import UserApiModel from 'testit-api-client/model/UserApiModel';
   import UserCustomNameValidationResponse from 'testit-api-client/model/UserCustomNameValidationResponse';
   import UserNameApiResult from 'testit-api-client/model/UserNameApiResult';
   import ValidationProblemDetails from 'testit-api-client/model/ValidationProblemDetails';
@@ -7048,7 +7861,6 @@ declare module 'testit-api-client/index' {
   import WorkItemChangedFieldsViewModel from 'testit-api-client/model/WorkItemChangedFieldsViewModel';
   import WorkItemCommentApiResult from 'testit-api-client/model/WorkItemCommentApiResult';
   import WorkItemEntityTypeApiModel from 'testit-api-client/model/WorkItemEntityTypeApiModel';
-  import WorkItemEntityTypes from 'testit-api-client/model/WorkItemEntityTypes';
   import WorkItemExternalMetadataFieldFilterApiModel from 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel';
   import WorkItemExternalMetadataFieldFilterModel from 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel';
   import WorkItemExternalMetadataFilterApiModel from 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel';
@@ -7095,6 +7907,7 @@ declare module 'testit-api-client/index' {
   import WorkItemStates from 'testit-api-client/model/WorkItemStates';
   import WorkItemStepChangeViewModel from 'testit-api-client/model/WorkItemStepChangeViewModel';
   import WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel from 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel';
+  import WorkItemTypeModel from 'testit-api-client/model/WorkItemTypeModel';
   import WorkItemUpdatingFieldsApiModel from 'testit-api-client/model/WorkItemUpdatingFieldsApiModel';
   import WorkItemUpdatingFieldsApiResult from 'testit-api-client/model/WorkItemUpdatingFieldsApiResult';
   import WorkItemVersionModel from 'testit-api-client/model/WorkItemVersionModel';
@@ -7102,11 +7915,18 @@ declare module 'testit-api-client/index' {
   import WorkflowExistsByNameApiResult from 'testit-api-client/model/WorkflowExistsByNameApiResult';
   import WorkflowProjectApiResult from 'testit-api-client/model/WorkflowProjectApiResult';
   import WorkflowProjectApiResultApiCollectionPreview from 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPreview';
+  import WorkflowProjectApiResultGroup from 'testit-api-client/model/WorkflowProjectApiResultGroup';
+  import WorkflowProjectApiResultGroupedReply from 'testit-api-client/model/WorkflowProjectApiResultGroupedReply';
+  import WorkflowProjectApiResultIReply from 'testit-api-client/model/WorkflowProjectApiResultIReply';
   import WorkflowProjectApiResultReply from 'testit-api-client/model/WorkflowProjectApiResultReply';
   import WorkflowShortApiResult from 'testit-api-client/model/WorkflowShortApiResult';
+  import WorkflowShortApiResultGroup from 'testit-api-client/model/WorkflowShortApiResultGroup';
+  import WorkflowShortApiResultGroupedReply from 'testit-api-client/model/WorkflowShortApiResultGroupedReply';
+  import WorkflowShortApiResultIReply from 'testit-api-client/model/WorkflowShortApiResultIReply';
   import WorkflowShortApiResultReply from 'testit-api-client/model/WorkflowShortApiResultReply';
   import WorkflowStatusApiModel from 'testit-api-client/model/WorkflowStatusApiModel';
   import WorkflowStatusApiResult from 'testit-api-client/model/WorkflowStatusApiResult';
+  import AIServicesAPIApi from 'testit-api-client/api/AIServicesAPIApi';
   import AttachmentsApi from 'testit-api-client/api/AttachmentsApi';
   import AutoTestsApi from 'testit-api-client/api/AutoTestsApi';
   import BackgroundJobsApi from 'testit-api-client/api/BackgroundJobsApi';
@@ -7114,12 +7934,16 @@ declare module 'testit-api-client/index' {
   import CustomAttributeTemplatesApi from 'testit-api-client/api/CustomAttributeTemplatesApi';
   import CustomAttributesApi from 'testit-api-client/api/CustomAttributesApi';
   import ExternalIssuesApi from 'testit-api-client/api/ExternalIssuesApi';
+  import ExternalServicesApi from 'testit-api-client/api/ExternalServicesApi';
+  import FailureCategoriesApi from 'testit-api-client/api/FailureCategoriesApi';
   import NotificationsApi from 'testit-api-client/api/NotificationsApi';
   import OpenIdConnectionsApi from 'testit-api-client/api/OpenIdConnectionsApi';
   import ParametersApi from 'testit-api-client/api/ParametersApi';
   import ProjectAttributeTemplatesApi from 'testit-api-client/api/ProjectAttributeTemplatesApi';
   import ProjectAttributesApi from 'testit-api-client/api/ProjectAttributesApi';
   import ProjectConfigurationsApi from 'testit-api-client/api/ProjectConfigurationsApi';
+  import ProjectExternalServicesApi from 'testit-api-client/api/ProjectExternalServicesApi';
+  import ProjectFailureCategoriesApi from 'testit-api-client/api/ProjectFailureCategoriesApi';
   import ProjectSectionsApi from 'testit-api-client/api/ProjectSectionsApi';
   import ProjectSettingsApi from 'testit-api-client/api/ProjectSettingsApi';
   import ProjectTestPlanAttributesApi from 'testit-api-client/api/ProjectTestPlanAttributesApi';
@@ -7127,7 +7951,7 @@ declare module 'testit-api-client/index' {
   import ProjectTestPlansApi from 'testit-api-client/api/ProjectTestPlansApi';
   import ProjectWorkItemsApi from 'testit-api-client/api/ProjectWorkItemsApi';
   import ProjectsApi from 'testit-api-client/api/ProjectsApi';
-  import SearchApi from 'testit-api-client/api/SearchApi';
+  import RolesApi from 'testit-api-client/api/RolesApi';
   import SectionsApi from 'testit-api-client/api/SectionsApi';
   import TagsApi from 'testit-api-client/api/TagsApi';
   import TestPlansApi from 'testit-api-client/api/TestPlansApi';
@@ -7136,13 +7960,15 @@ declare module 'testit-api-client/index' {
   import TestRunsApi from 'testit-api-client/api/TestRunsApi';
   import TestStatusesApi from 'testit-api-client/api/TestStatusesApi';
   import TestSuitesApi from 'testit-api-client/api/TestSuitesApi';
+  import UserRoleAssignmentsApi from 'testit-api-client/api/UserRoleAssignmentsApi';
+  import UserStoragesApi from 'testit-api-client/api/UserStoragesApi';
   import UsersApi from 'testit-api-client/api/UsersApi';
   import WebhooksApi from 'testit-api-client/api/WebhooksApi';
   import WebhooksLogsApi from 'testit-api-client/api/WebhooksLogsApi';
   import WorkItemsApi from 'testit-api-client/api/WorkItemsApi';
   import WorkItemsCommentsApi from 'testit-api-client/api/WorkItemsCommentsApi';
   import WorkflowsApi from 'testit-api-client/api/WorkflowsApi';
-  export { ApiClient, AIServiceModelApiResult, AIServiceModelApiResultReply, ActionUpdate, ApiExternalServiceCategory, AssignAttachmentApiModel, AssignIterationApiModel, AttachmentApiResult, AttachmentChangeViewModel, AttachmentChangeViewModelArrayChangedFieldViewModel, AttachmentModel, AttachmentPutModel, AttachmentPutModelAutoTestStepResultsModel, AttachmentUpdateRequest, AuditApiResult, AutoTest, AutoTestApiResult, AutoTestAverageDurationApiResult, AutoTestBulkDeleteApiModel, AutoTestBulkDeleteApiResult, AutoTestChangeViewModel, AutoTestChangeViewModelArrayChangedFieldViewModel, AutoTestClassCountApiModel, AutoTestCreateApiModel, AutoTestExtractionApiModel, AutoTestFilterApiModel, AutoTestFilterModel, AutoTestFlakyBulkApiModel, AutoTestIdModel, AutoTestModel, AutoTestModelV2GetModel, AutoTestNamespaceApiResult, AutoTestNamespaceCountApiModel, AutoTestNamespacesCountResponse, AutoTestOutcome, AutoTestProjectSettingsApiModel, AutoTestProjectSettingsApiResult, AutoTestResultHistoryApiResult, AutoTestResultHistorySelectApiModel, AutoTestResultReasonShort, AutoTestResultsForTestRunModel, AutoTestSearchApiModel, AutoTestSearchIncludeApiModel, AutoTestSelectApiModel, AutoTestSelectModel, AutoTestShortApiResult, AutoTestStep, AutoTestStepApiModel, AutoTestStepApiResult, AutoTestStepModel, AutoTestStepResult, AutoTestStepResultUpdateRequest, AutoTestStepResultsApiResult, AutoTestUpdateApiModel, AutoTestWorkItemIdentifierApiResult, AutoTestsExtractionModel, AutotestResultOutcome, AutotestResultReasonFilterModel, AutotestResultReasonShortGetModel, AvailableFailureCategory, AvailableTestResultOutcome, BackgroundJobAttachmentModel, BackgroundJobFilterModel, BackgroundJobGetModel, BackgroundJobState, BackgroundJobType, BooleanChangedFieldViewModel, BooleanNullableChangedFieldViewModel, CollectionFilter, CollectionOperator, CompositeFilter, ConfigurationByParametersModel, ConfigurationExtractionApiModel, ConfigurationExtractionModel, ConfigurationFilterApiModel, ConfigurationFilterModel, ConfigurationModel, ConfigurationPostModel, ConfigurationPutModel, ConfigurationSelectApiModel, ConfigurationSelectModel, ConfigurationShort, ConfigurationShortApiResult, ConfigurationShortModel, CreateDefectApiModel, CreateEmptyTestRunApiModel, CreateFailureCategoryApiModel, CreateFailureClassRegexApiModel, CreateLinkApiModel, CreateParameterApiModel, CreateProjectApiModel, CreateProjectFailureCategoryApiModel, CreateStepApiModel, CreateTagApiModel, CreateTestPlanApiModel, CreateTestRunAndFillByAutoTestsApiModel, CreateTestRunAndFillByConfigurationsApiModel, CreateTestRunAndFillByWorkItemsApiModel, CreateTestStatusApiModel, CreateWorkItemApiModel, CreateWorkItemCommentApiModel, CreateWorkItemPreviewsApiModel, CreateWorkflowApiModel, CustomAttributeApiResult, CustomAttributeChangeModel, CustomAttributeGetModel, CustomAttributeModel, CustomAttributeOptionApiResult, CustomAttributeOptionModel, CustomAttributeOptionPostModel, CustomAttributePostModel, CustomAttributePutModel, CustomAttributeSearchQueryModel, CustomAttributeSearchResponseModel, CustomAttributeTemplateModel, CustomAttributeTemplatePostModel, CustomAttributeTemplatePutModel, CustomAttributeTemplateSearchQueryModel, CustomAttributeTemplateValidationResult, CustomAttributeTestPlanProjectRelationPutModel, CustomAttributeType, CustomAttributeTypesEnum, CustomAttributeValidationResult, DateTimeRangeSelectorModel, DefectApiModel, DeletionState, DemoProjectApiResult, EnableProjectExternalServiceApiModel, ExternalFormAllowedValueModel, ExternalFormCreateModel, ExternalFormFieldModel, ExternalFormLinkModel, ExternalFormModel, ExternalIssueApiField, ExternalIssueApiFieldSuggestion, ExternalIssueApiFieldSuggestionReply, ExternalIssueApiMetadata, ExternalIssueApiPriority, ExternalIssueApiResult, ExternalIssueApiType, ExternalIssueExternalServiceApiResult, ExternalIssueMetadataModel, ExternalIssueModel, ExternalIssuePriorityModel, ExternalIssueTypeModel, ExternalLinkModel, ExternalServiceMetadataApiResult, ExternalServicesMetadataApiResult, FailureCategory, FailureCategoryApiResult, FailureCategoryGroupApiModel, FailureCategoryGroupApiResult, FailureCategoryGroupItemApiResult, FailureCategoryGroupItemApiResultReply, FailureCategoryGroupSearchApiModel, FailureCategoryItemApiResult, FailureCategoryModel, FailureClassRegexApiResult, Filter, FilterModel, FilterOperator, GenerateWorkItemPreviewsApiModel, GenerateWorkItemPreviewsApiResult, GetAIServiceModelsApiModel, GetExternalFormApiResult, GetExternalIssueSuggestionsApiModel, GetShortProjectsApiModel, GetXlsxTestPointsByTestPlanModel, GlobalCustomAttributePostModel, GlobalCustomAttributeUpdateModel, GlobalSearchItemResult, GlobalSearchRequest, GlobalSearchResponse, GuidChangedFieldViewModel, GuidExtractionModel, IFilter, ImageResizeType, Inquiry, Int32ChangedFieldViewModel, Int32RangeSelectorModel, Int64ChangedFieldViewModel, Int64RangeSelectorModel, IterationApiResult, IterationModel, Label, LabelApiModel, LabelApiResult, LabelShortModel, LastTestResultApiResult, LastTestResultModel, Link, LinkApiResult, LinkCreateApiModel, LinkModel, LinkPostModel, LinkPutModel, LinkShortApiResult, LinkShortModel, LinkType, LinkUpdateApiModel, ListSortDirection, LogicalOperator, ManualRerunApiResult, ManualRerunSelectTestResultsApiModel, ManualRerunTestResultApiModel, NamedEntityApiModel, NotificationModel, NotificationQueryFilterModel, NotificationTypeModel, OpenIdConnectionClientShortModel, OpenIdConnectionSettingsShortClientModel, Operation, Order, Page, ParameterApiResult, ParameterGroupApiResult, ParameterGroupsFilterApiModel, ParameterIterationModel, ParameterShortApiResult, ParameterShortModel, ParametersFilterApiModel, PeriodViewModel, PeriodViewModelChangedFieldViewModel, PreviewsIssueLinkApiModel, PreviewsIssueLinkApiResult, ProblemDetails, ProjectApiResult, ProjectAttributesFilterModel, ProjectCustomAttributeTemplateGetModel, ProjectCustomAttributesTemplatesFilterModel, ProjectDetailedFailureCategoryApiResult, ProjectExternalServiceApiResult, ProjectExternalServiceSettingsApiResult, ProjectExternalServicesApiResult, ProjectExtractionModel, ProjectFailureCategoryApiResult, ProjectFailureCategoryGroupItemApiResult, ProjectFailureCategoryGroupItemApiResultReply, ProjectModel, ProjectNameApiResult, ProjectSelectModel, ProjectShortApiResult, ProjectShortApiResultReply, ProjectShortModel, ProjectShortestModel, ProjectTestPlansFilterModel, ProjectType, ProjectTypeModel, ProjectsFilterModel, ReplaceProjectExternalServiceApiModel, RequestType, RequestTypeApiModel, RequestTypeModel, RerunTestResultApiResult, RerunsApiResult, SearchCustomAttributeTemplateGetModel, SearchExternalIssuesApiModel, SearchTestRunsApiModel, SearchTestStatusesApiModel, SearchWebhooksQueryModel, SearchWorkItemLinkUrlsApiResult, SearchWorkflowProjectsApiModel, SearchWorkflowsApiModel, SectionModel, SectionMoveModel, SectionPostModel, SectionPutModel, SectionRenameModel, SectionWithStepsModel, SelectTagsApiModel, SharedStepChangeViewModel, SharedStepModel, SharedStepReferenceModel, SharedStepReferenceSectionModel, SharedStepReferenceSectionsQueryFilterModel, SharedStepReferencesQueryFilterModel, SharedStepResultApiModel, ShortConfiguration, StepCommentApiModel, StepModel, StepPostModel, StepPutModel, StepResultApiModel, StringArrayChangedFieldViewModel, StringChangedFieldViewModel, StringChangedFieldWithDiffsViewModel, StringExtractionModel, TagApiModel, TagApiResult, TagModel, TagShortApiResult, TagsExtractionApiModel, TagsFilterApiModel, TestPlanApiResult, TestPlanChangeModel, TestPlanChangedFieldsViewModel, TestPlanExtractionModel, TestPlanGroupByStatus, TestPlanGroupByStatusCode, TestPlanGroupByStatusType, TestPlanGroupByTester, TestPlanGroupByTesterAndStatus, TestPlanGroupByTesterAndStatusCode, TestPlanLink, TestPlanModel, TestPlanSelectModel, TestPlanShortModel, TestPlanStatus, TestPlanStatusModel, TestPlanSummaryModel, TestPlanTagApiResult, TestPlanTestPointsAnalyticsApiModel, TestPlanTestPointsAnalyticsApiResult, TestPlanTestPointsApiModel, TestPlanTestPointsAutoTestsRerunApiModel, TestPlanTestPointsAutoTestsRunApiModel, TestPlanTestPointsExtractionApiModel, TestPlanTestPointsGroupApiModel, TestPlanTestPointsGroupApiResult, TestPlanTestPointsGroupSearchApiResult, TestPlanTestPointsGroupSearchItemApiResult, TestPlanTestPointsInquiryApiModel, TestPlanTestPointsSearchApiModel, TestPlanTestPointsSearchApiResult, TestPlanTestPointsSearchStatusCountersApiResult, TestPlanTestPointsSectionSearchApiResult, TestPlanTestPointsSetTestersApiModel, TestPlanTestPointsStatusCodeGroupApiResult, TestPlanTestPointsStatusGroupApiResult, TestPlanTestPointsStatusTypeGroupApiResult, TestPlanTestPointsTestSuiteSearchApiResult, TestPlanTestPointsTesterAndStatusGroupApiResult, TestPlanTestPointsTesterAndStatusTypeGroupApiResult, TestPlanTestPointsTesterGroupApiResult, TestPlanTestPointsWorkItemSearchApiResult, TestPlanWithAnalyticModel, TestPlanWithTestSuiteTreeModel, TestPoint, TestPointAnalyticResult, TestPointByTestSuiteModel, TestPointChangeViewModel, TestPointChangeViewModelChangedFieldViewModel, TestPointFilterModel, TestPointFilterRequestModel, TestPointResultApiResult, TestPointSelectModel, TestPointSelector, TestPointShortApiResult, TestPointShortModel, TestPointShortResponseModel, TestPointStatus, TestPointWithLastResultResponseModel, TestPointsExtractionModel, TestResultApiResult, TestResultChangeViewModel, TestResultChangeViewModelChangedFieldViewModel, TestResultChronologyModel, TestResultFailureClassApiResult, TestResultHistoryReportApiResult, TestResultLinkApiResult, TestResultOutcome, TestResultResponse, TestResultShortApiResult, TestResultShortResponse, TestResultStepCommentUpdateRequest, TestResultUpdateV2Request, TestResultV2GetModel, TestResultV2ShortModel, TestResultsExtractionApiModel, TestResultsFilterApiModel, TestResultsLocalFilterModel, TestResultsSelectApiModel, TestResultsStatisticsApiResult, TestResultsStatisticsFailureCategoriesApiResult, TestResultsStatisticsStatusesApiResult, TestRunAnalyticApiResult, TestRunApiResult, TestRunByAutoTestApiResult, TestRunExtractionApiModel, TestRunFilterApiModel, TestRunGroupByFailureClassApiResult, TestRunGroupByStatusApiResult, TestRunGroupByStatusTypeApiResult, TestRunNameApiResult, TestRunSelectApiModel, TestRunShortApiResult, TestRunState, TestRunStatisticsFilterApiModel, TestRunTestResultsPartialBulkSetModel, TestRunTestResultsSelectModel, TestRunV2ApiResult, TestStatusApiResult, TestStatusApiResultReply, TestStatusApiType, TestStatusModel, TestStatusShortApiResult, TestStatusType, TestSuiteApiResult, TestSuiteChangeViewModel, TestSuiteChangeViewModelChangedFieldViewModel, TestSuiteHierarchyApiResult, TestSuiteTestPlanApiModel, TestSuiteType, TestSuiteTypeApiResult, TestSuiteV2GetModel, TestSuiteV2PostModel, TestSuiteV2PutModel, TestSuiteWithChildrenModel, TestSuiteWorkItemsSearchModel, UpdateEmptyTestRunApiModel, UpdateFailureCategoryApiModel, UpdateFailureCategoryProjectApiModel, UpdateFailureClassRegexApiModel, UpdateLinkApiModel, UpdateMultipleAttachmentsApiModel, UpdateMultipleLinksApiModel, UpdateMultipleTagsApiModel, UpdateMultipleTestRunsApiModel, UpdateParameterApiModel, UpdateProjectApiModel, UpdateStepApiModel, UpdateTagApiModel, UpdateTestPlanApiModel, UpdateTestStatusApiModel, UpdateWorkItemApiModel, UpdateWorkItemCommentApiModel, UpdateWorkflowApiModel, UserCustomNameValidationResponse, UserNameApiResult, ValidationProblemDetails, WebHookEventType, WebHookEventTypeModel, WebHookEventTypeRequest, WebHookModel, WebHookPostModel, WebHookTestModel, WebhookBulkUpdateApiModel, WebhookLogApiResult, WebhookResponse, WebhookVariablesType, WebhooksDeleteApiModel, WebhooksDeleteFilterApiModel, WebhooksExtractionApiModel, WebhooksFilterApiModel, WebhooksUpdateApiModel, WebhooksUpdateApiResult, WorkItemApiResult, WorkItemChangeModel, WorkItemChangedAttributeViewModel, WorkItemChangedFieldsViewModel, WorkItemCommentApiResult, WorkItemEntityTypeApiModel, WorkItemEntityTypes, WorkItemExternalMetadataFieldFilterApiModel, WorkItemExternalMetadataFieldFilterModel, WorkItemExternalMetadataFilterApiModel, WorkItemExternalMetadataFilterModel, WorkItemExtractionApiModel, WorkItemExtractionModel, WorkItemFilterApiModel, WorkItemFilterModel, WorkItemGroupGetModel, WorkItemGroupModel, WorkItemGroupType, WorkItemIdApiModel, WorkItemIndexApiResult, WorkItemLikeModel, WorkItemLinkChangeViewModel, WorkItemLinkChangeViewModelArrayChangedFieldViewModel, WorkItemLinkExtractionApiModel, WorkItemLinkFilterApiModel, WorkItemLinkFilterModel, WorkItemLinkUrlApiModel, WorkItemLinkUrlApiResult, WorkItemLinkUrlFilterApiModel, WorkItemLocalFilterModel, WorkItemLocalSelectModel, WorkItemModel, WorkItemMovePostModel, WorkItemParameterKeyApiModel, WorkItemParameterKeyApiResult, WorkItemParameterKeyModel, WorkItemPreviewApiModel, WorkItemPreviewStepApiModel, WorkItemPriority, WorkItemPriorityApiModel, WorkItemPriorityModel, WorkItemSearchQueryModel, WorkItemSelectApiModel, WorkItemSelectModel, WorkItemShortApiResult, WorkItemShortModel, WorkItemSourceTypeApiModel, WorkItemSourceTypeModel, WorkItemState, WorkItemStateApiModel, WorkItemStates, WorkItemStepChangeViewModel, WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel, WorkItemUpdatingFieldsApiModel, WorkItemUpdatingFieldsApiResult, WorkItemVersionModel, WorkflowApiResult, WorkflowExistsByNameApiResult, WorkflowProjectApiResult, WorkflowProjectApiResultApiCollectionPreview, WorkflowProjectApiResultReply, WorkflowShortApiResult, WorkflowShortApiResultReply, WorkflowStatusApiModel, WorkflowStatusApiResult, AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, ExternalIssuesApi, NotificationsApi, OpenIdConnectionsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlanTestPointsApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, SearchApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestStatusesApi, TestSuitesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi, WorkflowsApi };
+  export { ApiClient, AIServiceModelApiResult, AIServiceModelApiResultGroup, AIServiceModelApiResultGroupedReply, AIServiceModelApiResultIReply, AIServiceModelApiResultReply, ActionUpdate, ApiExternalServiceCategory, AssignAttachmentApiModel, AssignAutoTestCaseIdApiModel, AssignIterationApiModel, AttachmentApiResult, AttachmentChangeViewModel, AttachmentChangeViewModelArrayChangedFieldViewModel, AttachmentModel, AttachmentPutModel, AttachmentPutModelAutoTestStepResultsModel, AttachmentUpdateRequest, AuditApiResult, AutoTest, AutoTestApiResult, AutoTestAverageDurationApiResult, AutoTestBulkDeleteApiModel, AutoTestBulkDeleteApiResult, AutoTestCaseApiModel, AutoTestCaseModel, AutoTestChangeViewModel, AutoTestChangeViewModelArrayChangedFieldViewModel, AutoTestClassCountApiModel, AutoTestCreateApiModel, AutoTestExtractionApiModel, AutoTestFilterApiModel, AutoTestFilterModel, AutoTestFlakyBulkApiModel, AutoTestIdModel, AutoTestModel, AutoTestModelV2GetModel, AutoTestNamespaceApiResult, AutoTestNamespaceCountApiModel, AutoTestNamespacesCountResponse, AutoTestOutcome, AutoTestProjectSettingsApiModel, AutoTestProjectSettingsApiResult, AutoTestResultHistoryApiResult, AutoTestResultHistorySelectApiModel, AutoTestResultReasonShort, AutoTestResultsForTestRunModel, AutoTestSearchApiModel, AutoTestSearchIncludeApiModel, AutoTestSelectApiModel, AutoTestSelectModel, AutoTestShortApiResult, AutoTestStep, AutoTestStepApiModel, AutoTestStepApiResult, AutoTestStepModel, AutoTestStepResult, AutoTestStepResultUpdateRequest, AutoTestStepResultsApiResult, AutoTestUpdateApiModel, AutoTestWorkItemIdentifierApiResult, AutoTestsExtractionModel, AutotestResultOutcome, AutotestResultReasonFilterModel, AutotestResultReasonShortGetModel, AvailableFailureCategory, AvailableTestResultOutcome, BackgroundJobAttachmentModel, BackgroundJobFilterModel, BackgroundJobGetModel, BackgroundJobState, BackgroundJobType, BooleanChangedFieldViewModel, BooleanNullableChangedFieldViewModel, CollectionFilter, CollectionOperator, CompositeFilter, ConfigurationByParametersModel, ConfigurationExtractionApiModel, ConfigurationExtractionModel, ConfigurationFilterApiModel, ConfigurationFilterModel, ConfigurationModel, ConfigurationPostModel, ConfigurationPutModel, ConfigurationSelectApiModel, ConfigurationSelectModel, ConfigurationShort, ConfigurationShortApiResult, ConfigurationShortModel, CreateDefectApiModel, CreateEmptyTestRunApiModel, CreateFailureCategoryApiModel, CreateFailureClassRegexApiModel, CreateLinkApiModel, CreateParameterApiModel, CreateProjectApiModel, CreateProjectFailureCategoryApiModel, CreateStepApiModel, CreateTagApiModel, CreateTestPlanApiModel, CreateTestRunAndFillByAutoTestsApiModel, CreateTestRunAndFillByConfigurationsApiModel, CreateTestRunAndFillByWorkItemsApiModel, CreateTestStatusApiModel, CreateUserApiModel, CreateWorkItemApiModel, CreateWorkItemCommentApiModel, CreateWorkItemPreviewsApiModel, CreateWorkflowApiModel, CustomAttributeApiResult, CustomAttributeChangeModel, CustomAttributeGetModel, CustomAttributeModel, CustomAttributeOptionApiResult, CustomAttributeOptionModel, CustomAttributeOptionPostModel, CustomAttributePostModel, CustomAttributePutModel, CustomAttributeSearchQueryModel, CustomAttributeSearchResponseModel, CustomAttributeTemplateModel, CustomAttributeTemplatePostModel, CustomAttributeTemplatePutModel, CustomAttributeTemplateSearchQueryModel, CustomAttributeTemplateValidationResult, CustomAttributeTestPlanProjectRelationPutModel, CustomAttributeType, CustomAttributeTypesEnum, CustomAttributeValidationResult, DateTimeRangeSelectorModel, DefectApiModel, DeletionState, DetailedProjectApiResult, EnableProjectExternalServiceApiModel, ExternalFormAllowedValueModel, ExternalFormCreateModel, ExternalFormFieldModel, ExternalFormLinkModel, ExternalFormModel, ExternalIssueApiField, ExternalIssueApiFieldSuggestion, ExternalIssueApiFieldSuggestionGroup, ExternalIssueApiFieldSuggestionGroupedReply, ExternalIssueApiFieldSuggestionIReply, ExternalIssueApiFieldSuggestionReply, ExternalIssueApiMetadata, ExternalIssueApiPriority, ExternalIssueApiResult, ExternalIssueApiType, ExternalIssueExternalServiceApiResult, ExternalIssueMetadataModel, ExternalIssueModel, ExternalIssuePriorityModel, ExternalIssueTypeModel, ExternalLinkModel, ExternalServiceMetadataApiResult, ExternalServicesMetadataApiResult, FailureCategory, FailureCategoryApiResult, FailureCategoryGroupApiModel, FailureCategoryGroupApiResult, FailureCategoryGroupItemApiResult, FailureCategoryGroupItemApiResultReply, FailureCategoryGroupSearchApiModel, FailureCategoryItemApiResult, FailureCategoryModel, FailureClassRegexApiResult, Filter, FilterModel, FilterOperator, GenerateWorkItemPreviewsApiModel, GenerateWorkItemPreviewsApiResult, GetAIServiceModelsApiModel, GetExternalFormApiResult, GetExternalIssueSuggestionsApiModel, GetShortProjectsApiModel, GetXlsxTestPointsByTestPlanApiModel, GlobalCustomAttributePostModel, GlobalCustomAttributeUpdateModel, Group, GroupKey, GuidChangedFieldViewModel, GuidExtractionModel, GuidNullableChangedFieldViewModel, IFilter, ImageResizeType, Inquiry, Int32ChangedFieldViewModel, Int32RangeSelectorModel, Int64ChangedFieldViewModel, Int64RangeSelectorModel, IterationApiResult, IterationModel, Label, LabelApiModel, LabelApiResult, LabelShortModel, LastTestResultApiResult, LastTestResultModel, LinkApiResult, LinkCreateApiModel, LinkModel, LinkPostModel, LinkPutModel, LinkShortApiResult, LinkShortModel, LinkType, LinkUpdateApiModel, ListSortDirection, LogicalOperator, ManualRerunApiResult, ManualRerunSelectTestResultsApiModel, ManualRerunTestResultApiModel, NamedEntityApiModel, NotificationModel, NotificationQueryFilterModel, NotificationTypeModel, OpenIdConnectionClientShortModel, OpenIdConnectionSettingsShortClientModel, Operation, Order, Page, ParameterApiResult, ParameterGroupApiResult, ParameterGroupsFilterApiModel, ParameterIterationModel, ParameterShortApiResult, ParameterShortModel, ParametersFilterApiModel, PeriodViewModel, PeriodViewModelChangedFieldViewModel, PreviewsIssueLinkApiModel, PreviewsIssueLinkApiResult, ProblemDetails, ProjectApiResult, ProjectAttributesFilterModel, ProjectCustomAttributeTemplateGetModel, ProjectCustomAttributesTemplatesFilterModel, ProjectDetailedFailureCategoryApiResult, ProjectExternalServiceApiResult, ProjectExternalServiceSettingsApiResult, ProjectExternalServicesApiResult, ProjectExtractionModel, ProjectFailureCategoryApiResult, ProjectFailureCategoryGroupItemApiResult, ProjectFailureCategoryGroupItemApiResultReply, ProjectNameApiResult, ProjectSelectModel, ProjectShortApiResult, ProjectShortApiResultGroup, ProjectShortApiResultGroupedReply, ProjectShortApiResultIReply, ProjectShortApiResultReply, ProjectShortestModel, ProjectTestPlansFilterModel, ProjectType, ProjectTypeModel, ProjectsFilterModel, ReplaceProjectExternalServiceApiModel, RequestType, RequestTypeApiModel, RequestTypeModel, RerunTestResultApiResult, RerunsApiResult, RoleApiModel, RoleApiModelApiCollection, SearchCustomAttributeTemplateGetModel, SearchExternalIssuesApiModel, SearchTestRunsApiModel, SearchTestStatusesApiModel, SearchWebhooksQueryModel, SearchWorkItemLinkUrlsApiResult, SearchWorkflowProjectsApiModel, SearchWorkflowsApiModel, SectionModel, SectionMoveModel, SectionPostModel, SectionPutModel, SectionRenameModel, SectionWithStepsModel, SelectTagsApiModel, SharedStepChangeViewModel, SharedStepModel, SharedStepReferenceModel, SharedStepReferenceSectionModel, SharedStepReferenceSectionsQueryFilterModel, SharedStepReferencesQueryFilterModel, SharedStepResultApiModel, ShortConfiguration, StepCommentApiModel, StepModel, StepPostModel, StepPutModel, StepResultApiModel, StringArrayChangedFieldViewModel, StringChangedFieldViewModel, StringChangedFieldWithDiffsViewModel, StringExtractionModel, TagApiModel, TagApiResult, TagModel, TagShortApiResult, TagsExtractionApiModel, TagsFilterApiModel, TestPlanApiResult, TestPlanChangeModel, TestPlanChangedFieldsViewModel, TestPlanExtractionModel, TestPlanGroupByStatus, TestPlanGroupByStatusCode, TestPlanGroupByStatusType, TestPlanGroupByTester, TestPlanGroupByTesterAndStatus, TestPlanGroupByTesterAndStatusCode, TestPlanLink, TestPlanModel, TestPlanSelectModel, TestPlanShortModel, TestPlanStatus, TestPlanStatusModel, TestPlanSummaryModel, TestPlanTagApiResult, TestPlanTestPointsAnalyticsApiModel, TestPlanTestPointsAnalyticsApiResult, TestPlanTestPointsApiModel, TestPlanTestPointsAutoTestsRerunApiModel, TestPlanTestPointsAutoTestsRunApiModel, TestPlanTestPointsExtractionApiModel, TestPlanTestPointsGroupApiModel, TestPlanTestPointsGroupApiResult, TestPlanTestPointsGroupSearchApiResult, TestPlanTestPointsGroupSearchItemApiResult, TestPlanTestPointsInquiryApiModel, TestPlanTestPointsSearchApiModel, TestPlanTestPointsSearchApiResult, TestPlanTestPointsSearchStatusCountersApiResult, TestPlanTestPointsSectionSearchApiResult, TestPlanTestPointsSetTestersApiModel, TestPlanTestPointsStatusCodeGroupApiResult, TestPlanTestPointsStatusGroupApiResult, TestPlanTestPointsStatusTypeGroupApiResult, TestPlanTestPointsTestSuiteSearchApiResult, TestPlanTestPointsTesterAndStatusGroupApiResult, TestPlanTestPointsTesterAndStatusTypeGroupApiResult, TestPlanTestPointsTesterGroupApiResult, TestPlanTestPointsWorkItemSearchApiResult, TestPlanWithAnalyticModel, TestPlanWithTestSuiteTreeModel, TestPoint, TestPointAnalyticResult, TestPointByTestSuiteModel, TestPointChangeViewModel, TestPointChangeViewModelChangedFieldViewModel, TestPointFilterModel, TestPointFilterRequestModel, TestPointResultApiResult, TestPointSelectModel, TestPointSelector, TestPointShortApiResult, TestPointShortModel, TestPointShortResponseModel, TestPointStatus, TestPointWithLastResultResponseModel, TestPointsExtractionModel, TestResultApiResult, TestResultChangeViewModel, TestResultChangeViewModelChangedFieldViewModel, TestResultChronologyModel, TestResultFailureClassApiResult, TestResultHistoryReportApiResult, TestResultLinkApiResult, TestResultOutcome, TestResultResponse, TestResultShortApiResult, TestResultShortResponse, TestResultStepCommentUpdateRequest, TestResultUpdateV2Request, TestResultV2GetModel, TestResultV2ShortModel, TestResultsExtractionApiModel, TestResultsFilterApiModel, TestResultsLocalFilterModel, TestResultsSelectApiModel, TestResultsStatisticsApiResult, TestResultsStatisticsFailureCategoriesApiResult, TestResultsStatisticsStatusesApiResult, TestRunAnalyticApiResult, TestRunApiResult, TestRunByAutoTestApiResult, TestRunExtractionApiModel, TestRunFilterApiModel, TestRunGroupByFailureClassApiResult, TestRunGroupByStatusApiResult, TestRunGroupByStatusTypeApiResult, TestRunNameApiResult, TestRunSelectApiModel, TestRunShortApiResult, TestRunState, TestRunStatisticsFilterApiModel, TestRunTestResultsPartialBulkSetModel, TestRunTestResultsSelectModel, TestRunV2ApiResult, TestStatusApiResult, TestStatusApiResultGroup, TestStatusApiResultGroupedReply, TestStatusApiResultIReply, TestStatusApiResultReply, TestStatusApiType, TestStatusModel, TestStatusShortApiResult, TestStatusType, TestSuiteApiResult, TestSuiteChangeViewModel, TestSuiteChangeViewModelChangedFieldViewModel, TestSuiteHierarchyApiResult, TestSuiteTestPlanApiModel, TestSuiteType, TestSuiteTypeApiResult, TestSuiteV2GetModel, TestSuiteV2PostModel, TestSuiteV2PutModel, TestSuiteWithChildrenModel, TestSuiteWorkItemsSearchModel, UpdateEmptyTestRunApiModel, UpdateFailureCategoryApiModel, UpdateFailureCategoryProjectApiModel, UpdateFailureClassRegexApiModel, UpdateLinkApiModel, UpdateMultipleAttachmentsApiModel, UpdateMultipleLinksApiModel, UpdateMultipleTagsApiModel, UpdateMultipleTestRunsApiModel, UpdateParameterApiModel, UpdateProjectApiModel, UpdateStepApiModel, UpdateTagApiModel, UpdateTestPlanApiModel, UpdateTestStatusApiModel, UpdateWorkItemApiModel, UpdateWorkItemCommentApiModel, UpdateWorkflowApiModel, UserApiModel, UserCustomNameValidationResponse, UserNameApiResult, ValidationProblemDetails, WebHookEventType, WebHookEventTypeModel, WebHookEventTypeRequest, WebHookModel, WebHookPostModel, WebHookTestModel, WebhookBulkUpdateApiModel, WebhookLogApiResult, WebhookResponse, WebhookVariablesType, WebhooksDeleteApiModel, WebhooksDeleteFilterApiModel, WebhooksExtractionApiModel, WebhooksFilterApiModel, WebhooksUpdateApiModel, WebhooksUpdateApiResult, WorkItemApiResult, WorkItemChangeModel, WorkItemChangedAttributeViewModel, WorkItemChangedFieldsViewModel, WorkItemCommentApiResult, WorkItemEntityTypeApiModel, WorkItemExternalMetadataFieldFilterApiModel, WorkItemExternalMetadataFieldFilterModel, WorkItemExternalMetadataFilterApiModel, WorkItemExternalMetadataFilterModel, WorkItemExtractionApiModel, WorkItemExtractionModel, WorkItemFilterApiModel, WorkItemFilterModel, WorkItemGroupGetModel, WorkItemGroupModel, WorkItemGroupType, WorkItemIdApiModel, WorkItemIndexApiResult, WorkItemLikeModel, WorkItemLinkChangeViewModel, WorkItemLinkChangeViewModelArrayChangedFieldViewModel, WorkItemLinkExtractionApiModel, WorkItemLinkFilterApiModel, WorkItemLinkFilterModel, WorkItemLinkUrlApiModel, WorkItemLinkUrlApiResult, WorkItemLinkUrlFilterApiModel, WorkItemLocalFilterModel, WorkItemLocalSelectModel, WorkItemModel, WorkItemMovePostModel, WorkItemParameterKeyApiModel, WorkItemParameterKeyApiResult, WorkItemParameterKeyModel, WorkItemPreviewApiModel, WorkItemPreviewStepApiModel, WorkItemPriority, WorkItemPriorityApiModel, WorkItemPriorityModel, WorkItemSearchQueryModel, WorkItemSelectApiModel, WorkItemSelectModel, WorkItemShortApiResult, WorkItemShortModel, WorkItemSourceTypeApiModel, WorkItemSourceTypeModel, WorkItemState, WorkItemStateApiModel, WorkItemStates, WorkItemStepChangeViewModel, WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel, WorkItemTypeModel, WorkItemUpdatingFieldsApiModel, WorkItemUpdatingFieldsApiResult, WorkItemVersionModel, WorkflowApiResult, WorkflowExistsByNameApiResult, WorkflowProjectApiResult, WorkflowProjectApiResultApiCollectionPreview, WorkflowProjectApiResultGroup, WorkflowProjectApiResultGroupedReply, WorkflowProjectApiResultIReply, WorkflowProjectApiResultReply, WorkflowShortApiResult, WorkflowShortApiResultGroup, WorkflowShortApiResultGroupedReply, WorkflowShortApiResultIReply, WorkflowShortApiResultReply, WorkflowStatusApiModel, WorkflowStatusApiResult, AIServicesAPIApi, AttachmentsApi, AutoTestsApi, BackgroundJobsApi, ConfigurationsApi, CustomAttributeTemplatesApi, CustomAttributesApi, ExternalIssuesApi, ExternalServicesApi, FailureCategoriesApi, NotificationsApi, OpenIdConnectionsApi, ParametersApi, ProjectAttributeTemplatesApi, ProjectAttributesApi, ProjectConfigurationsApi, ProjectExternalServicesApi, ProjectFailureCategoriesApi, ProjectSectionsApi, ProjectSettingsApi, ProjectTestPlanAttributesApi, ProjectTestPlanTestPointsApi, ProjectTestPlansApi, ProjectWorkItemsApi, ProjectsApi, RolesApi, SectionsApi, TagsApi, TestPlansApi, TestPointsApi, TestResultsApi, TestRunsApi, TestStatusesApi, TestSuitesApi, UserRoleAssignmentsApi, UserStoragesApi, UsersApi, WebhooksApi, WebhooksLogsApi, WorkItemsApi, WorkItemsCommentsApi, WorkflowsApi };
 
 }
 declare module 'testit-api-client/model/ActionUpdate' {
@@ -7189,7 +8015,7 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
   /**
    * The AIServiceModelApiResult model module.
    * @module model/AIServiceModelApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AIServiceModelApiResult {
       /**
@@ -7227,12 +8053,153 @@ declare module 'testit-api-client/model/AIServiceModelApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/AIServiceModelApiResultGroup' {
+  export default AIServiceModelApiResultGroup;
+  /**
+   * The AIServiceModelApiResultGroup model module.
+   * @module model/AIServiceModelApiResultGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class AIServiceModelApiResultGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>AIServiceModelApiResultGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AIServiceModelApiResultGroup} obj Optional instance to populate.
+       * @return {module:model/AIServiceModelApiResultGroup} The populated <code>AIServiceModelApiResultGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>AIServiceModelApiResultGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AIServiceModelApiResultGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>AIServiceModelApiResultGroup</code>.
+       * @alias module:model/AIServiceModelApiResultGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/AIServiceModelApiResult>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace AIServiceModelApiResultGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/AIServiceModelApiResultGroupedReply' {
+  export default AIServiceModelApiResultGroupedReply;
+  /**
+   * The AIServiceModelApiResultGroupedReply model module.
+   * @module model/AIServiceModelApiResultGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class AIServiceModelApiResultGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>AIServiceModelApiResultGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AIServiceModelApiResultGroupedReply} obj Optional instance to populate.
+       * @return {module:model/AIServiceModelApiResultGroupedReply} The populated <code>AIServiceModelApiResultGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>AIServiceModelApiResultGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AIServiceModelApiResultGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>AIServiceModelApiResultGroupedReply</code>.
+       * @alias module:model/AIServiceModelApiResultGroupedReply
+       * @param groups {Array.<module:model/AIServiceModelApiResultGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace AIServiceModelApiResultGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/AIServiceModelApiResultIReply' {
+  export default AIServiceModelApiResultIReply;
+  /**
+   * The AIServiceModelApiResultIReply model module.
+   * @module model/AIServiceModelApiResultIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class AIServiceModelApiResultIReply {
+      /**
+       * Constructs a <code>AIServiceModelApiResultIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AIServiceModelApiResultIReply} obj Optional instance to populate.
+       * @return {module:model/AIServiceModelApiResultIReply} The populated <code>AIServiceModelApiResultIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of AIServiceModelApiResultIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/AIServiceModelApiResultIReply} An instance of AIServiceModelApiResultIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>AIServiceModelApiResultIReply</code>.
+       * @alias module:model/AIServiceModelApiResultIReply
+       * @param {(module:model/AIServiceModelApiResultGroupedReply|module:model/AIServiceModelApiResultReply)} instance The actual instance to initialize AIServiceModelApiResultIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>AIServiceModelApiResultGroupedReply</code>, <code>AIServiceModelApiResultReply</code>.
+       * @return {(module:model/AIServiceModelApiResultGroupedReply|module:model/AIServiceModelApiResultReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>AIServiceModelApiResultGroupedReply</code>, <code>AIServiceModelApiResultReply</code>.
+       * @param {(module:model/AIServiceModelApiResultGroupedReply|module:model/AIServiceModelApiResultReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace AIServiceModelApiResultIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/AIServiceModelApiResultReply' {
   export default AIServiceModelApiResultReply;
   /**
    * The AIServiceModelApiResultReply model module.
    * @module model/AIServiceModelApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AIServiceModelApiResultReply {
       /**
@@ -7304,7 +8271,7 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   /**
    * The AssignAttachmentApiModel model module.
    * @module model/AssignAttachmentApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AssignAttachmentApiModel {
       /**
@@ -7340,12 +8307,53 @@ declare module 'testit-api-client/model/AssignAttachmentApiModel' {
   }
 
 }
+declare module 'testit-api-client/model/AssignAutoTestCaseIdApiModel' {
+  export default AssignAutoTestCaseIdApiModel;
+  /**
+   * The AssignAutoTestCaseIdApiModel model module.
+   * @module model/AssignAutoTestCaseIdApiModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class AssignAutoTestCaseIdApiModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, id: any): void;
+      /**
+       * Constructs a <code>AssignAutoTestCaseIdApiModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AssignAutoTestCaseIdApiModel} obj Optional instance to populate.
+       * @return {module:model/AssignAutoTestCaseIdApiModel} The populated <code>AssignAutoTestCaseIdApiModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>AssignAutoTestCaseIdApiModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AssignAutoTestCaseIdApiModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>AssignAutoTestCaseIdApiModel</code>.
+       * @alias module:model/AssignAutoTestCaseIdApiModel
+       * @param id {String} Unique ID of the automated test case
+       */
+      constructor(id: string);
+      id: any;
+  }
+  namespace AssignAutoTestCaseIdApiModel {
+      let RequiredProperties: string[];
+  }
+
+}
 declare module 'testit-api-client/model/AssignIterationApiModel' {
   export default AssignIterationApiModel;
   /**
    * The AssignIterationApiModel model module.
    * @module model/AssignIterationApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AssignIterationApiModel {
       /**
@@ -7388,7 +8396,7 @@ declare module 'testit-api-client/model/AttachmentApiResult' {
   /**
    * The AttachmentApiResult model module.
    * @module model/AttachmentApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentApiResult {
       /**
@@ -7443,7 +8451,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModel' {
   /**
    * The AttachmentChangeViewModel model module.
    * @module model/AttachmentChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentChangeViewModel {
       /**
@@ -7488,7 +8496,7 @@ declare module 'testit-api-client/model/AttachmentChangeViewModelArrayChangedFie
   /**
    * The AttachmentChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AttachmentChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -7521,7 +8529,7 @@ declare module 'testit-api-client/model/AttachmentModel' {
   /**
    * The AttachmentModel model module.
    * @module model/AttachmentModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentModel {
       /**
@@ -7576,7 +8584,7 @@ declare module 'testit-api-client/model/AttachmentPutModel' {
   /**
    * The AttachmentPutModel model module.
    * @module model/AttachmentPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentPutModel {
       /**
@@ -7617,7 +8625,7 @@ declare module 'testit-api-client/model/AttachmentPutModelAutoTestStepResultsMod
   /**
    * The AttachmentPutModelAutoTestStepResultsModel model module.
    * @module model/AttachmentPutModelAutoTestStepResultsModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentPutModelAutoTestStepResultsModel {
       /**
@@ -7658,7 +8666,7 @@ declare module 'testit-api-client/model/AttachmentUpdateRequest' {
   /**
    * The AttachmentUpdateRequest model module.
    * @module model/AttachmentUpdateRequest
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AttachmentUpdateRequest {
       /**
@@ -7699,7 +8707,7 @@ declare module 'testit-api-client/model/AuditApiResult' {
   /**
    * The AuditApiResult model module.
    * @module model/AuditApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AuditApiResult {
       /**
@@ -7743,7 +8751,7 @@ declare module 'testit-api-client/model/AutoTest' {
   /**
    * The AutoTest model module.
    * @module model/AutoTest
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTest {
       /**
@@ -7819,7 +8827,7 @@ declare module 'testit-api-client/model/AutoTestApiResult' {
   /**
    * The AutoTestApiResult model module.
    * @module model/AutoTestApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestApiResult {
       /**
@@ -7897,7 +8905,7 @@ declare module 'testit-api-client/model/AutoTestAverageDurationApiResult' {
   /**
    * The AutoTestAverageDurationApiResult model module.
    * @module model/AutoTestAverageDurationApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestAverageDurationApiResult {
       /**
@@ -7940,7 +8948,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiModel' {
   /**
    * The AutoTestBulkDeleteApiModel model module.
    * @module model/AutoTestBulkDeleteApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestBulkDeleteApiModel {
       /**
@@ -7981,7 +8989,7 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   /**
    * The AutoTestBulkDeleteApiResult model module.
    * @module model/AutoTestBulkDeleteApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestBulkDeleteApiResult {
       /**
@@ -8019,12 +9027,94 @@ declare module 'testit-api-client/model/AutoTestBulkDeleteApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/AutoTestCaseApiModel' {
+  export default AutoTestCaseApiModel;
+  /**
+   * The AutoTestCaseApiModel model module.
+   * @module model/AutoTestCaseApiModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class AutoTestCaseApiModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, id: any): void;
+      /**
+       * Constructs a <code>AutoTestCaseApiModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AutoTestCaseApiModel} obj Optional instance to populate.
+       * @return {module:model/AutoTestCaseApiModel} The populated <code>AutoTestCaseApiModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>AutoTestCaseApiModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestCaseApiModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>AutoTestCaseApiModel</code>.
+       * @alias module:model/AutoTestCaseApiModel
+       * @param id {String} Unique identifier of the automated test case
+       */
+      constructor(id: string);
+      id: any;
+  }
+  namespace AutoTestCaseApiModel {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/AutoTestCaseModel' {
+  export default AutoTestCaseModel;
+  /**
+   * The AutoTestCaseModel model module.
+   * @module model/AutoTestCaseModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class AutoTestCaseModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, id: any): void;
+      /**
+       * Constructs a <code>AutoTestCaseModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/AutoTestCaseModel} obj Optional instance to populate.
+       * @return {module:model/AutoTestCaseModel} The populated <code>AutoTestCaseModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>AutoTestCaseModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AutoTestCaseModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>AutoTestCaseModel</code>.
+       * @alias module:model/AutoTestCaseModel
+       * @param id {String}
+       */
+      constructor(id: string);
+      id: any;
+  }
+  namespace AutoTestCaseModel {
+      let RequiredProperties: string[];
+  }
+
+}
 declare module 'testit-api-client/model/AutoTestChangeViewModel' {
   export default AutoTestChangeViewModel;
   /**
    * The AutoTestChangeViewModel model module.
    * @module model/AutoTestChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestChangeViewModel {
       /**
@@ -8071,7 +9161,7 @@ declare module 'testit-api-client/model/AutoTestChangeViewModelArrayChangedField
   /**
    * The AutoTestChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/AutoTestChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -8104,7 +9194,7 @@ declare module 'testit-api-client/model/AutoTestClassCountApiModel' {
   /**
    * The AutoTestClassCountApiModel model module.
    * @module model/AutoTestClassCountApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestClassCountApiModel {
       /**
@@ -8146,7 +9236,7 @@ declare module 'testit-api-client/model/AutoTestCreateApiModel' {
   /**
    * The AutoTestCreateApiModel model module.
    * @module model/AutoTestCreateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestCreateApiModel {
       /**
@@ -8207,7 +9297,7 @@ declare module 'testit-api-client/model/AutoTestExtractionApiModel' {
   /**
    * The AutoTestExtractionApiModel model module.
    * @module model/AutoTestExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestExtractionApiModel {
       /**
@@ -8239,7 +9329,7 @@ declare module 'testit-api-client/model/AutoTestFilterApiModel' {
   /**
    * The AutoTestFilterApiModel model module.
    * @module model/AutoTestFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestFilterApiModel {
       /**
@@ -8292,7 +9382,7 @@ declare module 'testit-api-client/model/AutoTestFilterModel' {
   /**
    * The AutoTestFilterModel model module.
    * @module model/AutoTestFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestFilterModel {
       /**
@@ -8345,7 +9435,7 @@ declare module 'testit-api-client/model/AutoTestFlakyBulkApiModel' {
   /**
    * The AutoTestFlakyBulkApiModel model module.
    * @module model/AutoTestFlakyBulkApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestFlakyBulkApiModel {
       /**
@@ -8388,7 +9478,7 @@ declare module 'testit-api-client/model/AutoTestIdModel' {
   /**
    * The AutoTestIdModel model module.
    * @module model/AutoTestIdModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestIdModel {
       /**
@@ -8429,7 +9519,7 @@ declare module 'testit-api-client/model/AutoTestModel' {
   /**
    * The AutoTestModel model module.
    * @module model/AutoTestModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestModel {
       /**
@@ -8506,7 +9596,7 @@ declare module 'testit-api-client/model/AutoTestModelV2GetModel' {
   /**
    * The AutoTestModelV2GetModel model module.
    * @module model/AutoTestModelV2GetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestModelV2GetModel {
       /**
@@ -8570,7 +9660,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceApiResult' {
   /**
    * The AutoTestNamespaceApiResult model module.
    * @module model/AutoTestNamespaceApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestNamespaceApiResult {
       /**
@@ -8612,7 +9702,7 @@ declare module 'testit-api-client/model/AutoTestNamespaceCountApiModel' {
   /**
    * The AutoTestNamespaceCountApiModel model module.
    * @module model/AutoTestNamespaceCountApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestNamespaceCountApiModel {
       /**
@@ -8656,7 +9746,7 @@ declare module 'testit-api-client/model/AutoTestNamespacesCountResponse' {
   /**
    * The AutoTestNamespacesCountResponse model module.
    * @module model/AutoTestNamespacesCountResponse
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestNamespacesCountResponse {
       /**
@@ -8736,7 +9826,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
   /**
    * The AutoTestProjectSettingsApiModel model module.
    * @module model/AutoTestProjectSettingsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestProjectSettingsApiModel {
       /**
@@ -8744,7 +9834,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, rerunEnabled: any, rerunAttemptsCount: any, workItemUpdatingFields: any): void;
+      static initialize(obj: any, rerunEnabled: any, rerunAttemptsCount: any, workItemUpdatingFields: any, archiveOutdatedTestRunsEnabled: any, testRunsArchiveLimitEnabled: any): void;
       /**
        * Constructs a <code>AutoTestProjectSettingsApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -8765,8 +9855,10 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
        * @param rerunEnabled {Boolean} Auto rerun enabled
        * @param rerunAttemptsCount {Number} Auto rerun attempt count
        * @param workItemUpdatingFields {module:model/WorkItemUpdatingFieldsApiModel} Autotest to work item updating fields
+       * @param archiveOutdatedTestRunsEnabled {Boolean} Indicates whether archiving of outdated test runs is enabled for the project.
+       * @param testRunsArchiveLimitEnabled {Boolean} Indicates whether a limit is enforced on the number of archived test runs.
        */
-      constructor(rerunEnabled: boolean, rerunAttemptsCount: number, workItemUpdatingFields: any);
+      constructor(rerunEnabled: boolean, rerunAttemptsCount: number, workItemUpdatingFields: any, archiveOutdatedTestRunsEnabled: boolean, testRunsArchiveLimitEnabled: boolean);
       isFlakyAuto: boolean;
       flakyStabilityPercentage: number;
       flakyTestRunCount: number;
@@ -8774,6 +9866,10 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiModel' {
       rerunAttemptsCount: any;
       workItemUpdatingEnabled: boolean;
       workItemUpdatingFields: any;
+      archiveOutdatedTestRunsEnabled: any;
+      testRunsArchiveLimitEnabled: any;
+      testRunsRetentionPeriodDays: number;
+      maxActiveTestRunsCount: number;
   }
   namespace AutoTestProjectSettingsApiModel {
       let RequiredProperties: string[];
@@ -8785,7 +9881,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
   /**
    * The AutoTestProjectSettingsApiResult model module.
    * @module model/AutoTestProjectSettingsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestProjectSettingsApiResult {
       /**
@@ -8793,7 +9889,7 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, projectId: any, isFlakyAuto: any, flakyStabilityPercentage: any, flakyTestRunCount: any, rerunEnabled: any, rerunAttemptsCount: any, workItemUpdatingEnabled: any, workItemUpdatingFields: any): void;
+      static initialize(obj: any, projectId: any, isFlakyAuto: any, flakyStabilityPercentage: any, flakyTestRunCount: any, rerunEnabled: any, rerunAttemptsCount: any, workItemUpdatingEnabled: any, workItemUpdatingFields: any, archiveOutdatedTestRunsEnabled: any, testRunsArchiveLimitEnabled: any, testRunsRetentionPeriodDays: any, maxActiveTestRunsCount: any): void;
       /**
        * Constructs a <code>AutoTestProjectSettingsApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -8819,8 +9915,12 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
        * @param rerunAttemptsCount {Number} Auto rerun attempt count
        * @param workItemUpdatingEnabled {Boolean} Autotest to work item updating enabled
        * @param workItemUpdatingFields {module:model/WorkItemUpdatingFieldsApiResult} Autotest to work item updating fields
+       * @param archiveOutdatedTestRunsEnabled {Boolean} Indicates whether archiving of outdated test runs is enabled for the project.
+       * @param testRunsArchiveLimitEnabled {Boolean} Indicates whether a limit is enforced on the number of archived test runs.
+       * @param testRunsRetentionPeriodDays {Number}  The retention period in days for test runs. After this period,  outdated test runs may be archived based on project settings
+       * @param maxActiveTestRunsCount {Number} Maximum number of active test runs to keep. When this limit is exceeded,  older test runs are automatically archived
        */
-      constructor(projectId: string, isFlakyAuto: boolean, flakyStabilityPercentage: number, flakyTestRunCount: number, rerunEnabled: boolean, rerunAttemptsCount: number, workItemUpdatingEnabled: boolean, workItemUpdatingFields: any);
+      constructor(projectId: string, isFlakyAuto: boolean, flakyStabilityPercentage: number, flakyTestRunCount: number, rerunEnabled: boolean, rerunAttemptsCount: number, workItemUpdatingEnabled: boolean, workItemUpdatingFields: any, archiveOutdatedTestRunsEnabled: boolean, testRunsArchiveLimitEnabled: boolean, testRunsRetentionPeriodDays: number, maxActiveTestRunsCount: number);
       projectId: any;
       isFlakyAuto: any;
       flakyStabilityPercentage: any;
@@ -8829,6 +9929,10 @@ declare module 'testit-api-client/model/AutoTestProjectSettingsApiResult' {
       rerunAttemptsCount: any;
       workItemUpdatingEnabled: any;
       workItemUpdatingFields: any;
+      archiveOutdatedTestRunsEnabled: any;
+      testRunsArchiveLimitEnabled: any;
+      testRunsRetentionPeriodDays: any;
+      maxActiveTestRunsCount: any;
   }
   namespace AutoTestProjectSettingsApiResult {
       let RequiredProperties: string[];
@@ -8840,7 +9944,7 @@ declare module 'testit-api-client/model/AutoTestResultHistoryApiResult' {
   /**
    * The AutoTestResultHistoryApiResult model module.
    * @module model/AutoTestResultHistoryApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestResultHistoryApiResult {
       /**
@@ -8908,7 +10012,7 @@ declare module 'testit-api-client/model/AutoTestResultHistorySelectApiModel' {
   /**
    * The AutoTestResultHistorySelectApiModel model module.
    * @module model/AutoTestResultHistorySelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestResultHistorySelectApiModel {
       /**
@@ -8991,7 +10095,7 @@ declare module 'testit-api-client/model/AutotestResultReasonFilterModel' {
   /**
    * The AutotestResultReasonFilterModel model module.
    * @module model/AutotestResultReasonFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutotestResultReasonFilterModel {
       /**
@@ -9026,7 +10130,7 @@ declare module 'testit-api-client/model/AutoTestResultReasonShort' {
   /**
    * The AutoTestResultReasonShort model module.
    * @module model/AutoTestResultReasonShort
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestResultReasonShort {
       /**
@@ -9069,7 +10173,7 @@ declare module 'testit-api-client/model/AutotestResultReasonShortGetModel' {
   /**
    * The AutotestResultReasonShortGetModel model module.
    * @module model/AutotestResultReasonShortGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutotestResultReasonShortGetModel {
       /**
@@ -9125,7 +10229,7 @@ declare module 'testit-api-client/model/AutoTestResultsForTestRunModel' {
   /**
    * The AutoTestResultsForTestRunModel model module.
    * @module model/AutoTestResultsForTestRunModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestResultsForTestRunModel {
       /**
@@ -9184,7 +10288,7 @@ declare module 'testit-api-client/model/AutoTestSearchApiModel' {
   /**
    * The AutoTestSearchApiModel model module.
    * @module model/AutoTestSearchApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestSearchApiModel {
       /**
@@ -9217,7 +10321,7 @@ declare module 'testit-api-client/model/AutoTestSearchIncludeApiModel' {
   /**
    * The AutoTestSearchIncludeApiModel model module.
    * @module model/AutoTestSearchIncludeApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestSearchIncludeApiModel {
       /**
@@ -9251,7 +10355,7 @@ declare module 'testit-api-client/model/AutoTestSelectApiModel' {
   /**
    * The AutoTestSelectApiModel model module.
    * @module model/AutoTestSelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestSelectApiModel {
       /**
@@ -9284,7 +10388,7 @@ declare module 'testit-api-client/model/AutoTestSelectModel' {
   /**
    * The AutoTestSelectModel model module.
    * @module model/AutoTestSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestSelectModel {
       /**
@@ -9326,7 +10430,7 @@ declare module 'testit-api-client/model/AutoTestsExtractionModel' {
   /**
    * The AutoTestsExtractionModel model module.
    * @module model/AutoTestsExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestsExtractionModel {
       /**
@@ -9358,7 +10462,7 @@ declare module 'testit-api-client/model/AutoTestShortApiResult' {
   /**
    * The AutoTestShortApiResult model module.
    * @module model/AutoTestShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestShortApiResult {
       /**
@@ -9407,7 +10511,7 @@ declare module 'testit-api-client/model/AutoTestStep' {
   /**
    * The AutoTestStep model module.
    * @module model/AutoTestStep
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStep {
       /**
@@ -9450,7 +10554,7 @@ declare module 'testit-api-client/model/AutoTestStepApiModel' {
   /**
    * The AutoTestStepApiModel model module.
    * @module model/AutoTestStepApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepApiModel {
       /**
@@ -9493,7 +10597,7 @@ declare module 'testit-api-client/model/AutoTestStepApiResult' {
   /**
    * The AutoTestStepApiResult model module.
    * @module model/AutoTestStepApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepApiResult {
       /**
@@ -9536,7 +10640,7 @@ declare module 'testit-api-client/model/AutoTestStepModel' {
   /**
    * The AutoTestStepModel model module.
    * @module model/AutoTestStepModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepModel {
       /**
@@ -9579,7 +10683,7 @@ declare module 'testit-api-client/model/AutoTestStepResult' {
   /**
    * The AutoTestStepResult model module.
    * @module model/AutoTestStepResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepResult {
       /**
@@ -9620,7 +10724,7 @@ declare module 'testit-api-client/model/AutoTestStepResultsApiResult' {
   /**
    * The AutoTestStepResultsApiResult model module.
    * @module model/AutoTestStepResultsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepResultsApiResult {
       /**
@@ -9661,7 +10765,7 @@ declare module 'testit-api-client/model/AutoTestStepResultUpdateRequest' {
   /**
    * The AutoTestStepResultUpdateRequest model module.
    * @module model/AutoTestStepResultUpdateRequest
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestStepResultUpdateRequest {
       /**
@@ -9702,7 +10806,7 @@ declare module 'testit-api-client/model/AutoTestUpdateApiModel' {
   /**
    * The AutoTestUpdateApiModel model module.
    * @module model/AutoTestUpdateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestUpdateApiModel {
       /**
@@ -9762,7 +10866,7 @@ declare module 'testit-api-client/model/AutoTestWorkItemIdentifierApiResult' {
   /**
    * The AutoTestWorkItemIdentifierApiResult model module.
    * @module model/AutoTestWorkItemIdentifierApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class AutoTestWorkItemIdentifierApiResult {
       /**
@@ -9883,7 +10987,7 @@ declare module 'testit-api-client/model/BackgroundJobAttachmentModel' {
   /**
    * The BackgroundJobAttachmentModel model module.
    * @module model/BackgroundJobAttachmentModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class BackgroundJobAttachmentModel {
       /**
@@ -9930,7 +11034,7 @@ declare module 'testit-api-client/model/BackgroundJobFilterModel' {
   /**
    * The BackgroundJobFilterModel model module.
    * @module model/BackgroundJobFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class BackgroundJobFilterModel {
       /**
@@ -9966,7 +11070,7 @@ declare module 'testit-api-client/model/BackgroundJobGetModel' {
   /**
    * The BackgroundJobGetModel model module.
    * @module model/BackgroundJobGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class BackgroundJobGetModel {
       /**
@@ -10182,7 +11286,7 @@ declare module 'testit-api-client/model/BooleanChangedFieldViewModel' {
   /**
    * The BooleanChangedFieldViewModel model module.
    * @module model/BooleanChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class BooleanChangedFieldViewModel {
       /**
@@ -10225,7 +11329,7 @@ declare module 'testit-api-client/model/BooleanNullableChangedFieldViewModel' {
   /**
    * The BooleanNullableChangedFieldViewModel model module.
    * @module model/BooleanNullableChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class BooleanNullableChangedFieldViewModel {
       /**
@@ -10258,7 +11362,7 @@ declare module 'testit-api-client/model/CollectionFilter' {
   /**
    * The CollectionFilter model module.
    * @module model/CollectionFilter
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CollectionFilter {
       /**
@@ -10332,7 +11436,7 @@ declare module 'testit-api-client/model/CompositeFilter' {
   /**
    * The CompositeFilter model module.
    * @module model/CompositeFilter
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CompositeFilter {
       /**
@@ -10375,7 +11479,7 @@ declare module 'testit-api-client/model/ConfigurationByParametersModel' {
   /**
    * The ConfigurationByParametersModel model module.
    * @module model/ConfigurationByParametersModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationByParametersModel {
       /**
@@ -10418,7 +11522,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionApiModel' {
   /**
    * The ConfigurationExtractionApiModel model module.
    * @module model/ConfigurationExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationExtractionApiModel {
       /**
@@ -10451,7 +11555,7 @@ declare module 'testit-api-client/model/ConfigurationExtractionModel' {
   /**
    * The ConfigurationExtractionModel model module.
    * @module model/ConfigurationExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationExtractionModel {
       /**
@@ -10484,7 +11588,7 @@ declare module 'testit-api-client/model/ConfigurationFilterApiModel' {
   /**
    * The ConfigurationFilterApiModel model module.
    * @module model/ConfigurationFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationFilterApiModel {
       /**
@@ -10519,7 +11623,7 @@ declare module 'testit-api-client/model/ConfigurationFilterModel' {
   /**
    * The ConfigurationFilterModel model module.
    * @module model/ConfigurationFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationFilterModel {
       /**
@@ -10554,7 +11658,7 @@ declare module 'testit-api-client/model/ConfigurationModel' {
   /**
    * The ConfigurationModel model module.
    * @module model/ConfigurationModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationModel {
       /**
@@ -10612,7 +11716,7 @@ declare module 'testit-api-client/model/ConfigurationPostModel' {
   /**
    * The ConfigurationPostModel model module.
    * @module model/ConfigurationPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationPostModel {
       /**
@@ -10660,7 +11764,7 @@ declare module 'testit-api-client/model/ConfigurationPutModel' {
   /**
    * The ConfigurationPutModel model module.
    * @module model/ConfigurationPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationPutModel {
       /**
@@ -10710,7 +11814,7 @@ declare module 'testit-api-client/model/ConfigurationSelectApiModel' {
   /**
    * The ConfigurationSelectApiModel model module.
    * @module model/ConfigurationSelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationSelectApiModel {
       /**
@@ -10743,7 +11847,7 @@ declare module 'testit-api-client/model/ConfigurationSelectModel' {
   /**
    * The ConfigurationSelectModel model module.
    * @module model/ConfigurationSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationSelectModel {
       /**
@@ -10776,7 +11880,7 @@ declare module 'testit-api-client/model/ConfigurationShort' {
   /**
    * The ConfigurationShort model module.
    * @module model/ConfigurationShort
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationShort {
       /**
@@ -10819,7 +11923,7 @@ declare module 'testit-api-client/model/ConfigurationShortApiResult' {
   /**
    * The ConfigurationShortApiResult model module.
    * @module model/ConfigurationShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationShortApiResult {
       /**
@@ -10862,7 +11966,7 @@ declare module 'testit-api-client/model/ConfigurationShortModel' {
   /**
    * The ConfigurationShortModel model module.
    * @module model/ConfigurationShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ConfigurationShortModel {
       /**
@@ -10905,7 +12009,7 @@ declare module 'testit-api-client/model/CreateDefectApiModel' {
   /**
    * The CreateDefectApiModel model module.
    * @module model/CreateDefectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateDefectApiModel {
       /**
@@ -10948,7 +12052,7 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
   /**
    * The CreateEmptyTestRunApiModel model module.
    * @module model/CreateEmptyTestRunApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateEmptyTestRunApiModel {
       /**
@@ -10974,7 +12078,7 @@ declare module 'testit-api-client/model/CreateEmptyTestRunApiModel' {
       /**
        * Constructs a new <code>CreateEmptyTestRunApiModel</code>.
        * @alias module:model/CreateEmptyTestRunApiModel
-       * @param projectId {String} Project unique identifier              This property is to link test run with a project
+       * @param projectId {String} Project unique identifier                This property is to link test run with a project
        */
       constructor(projectId: string);
       projectId: any;
@@ -10995,7 +12099,7 @@ declare module 'testit-api-client/model/CreateFailureCategoryApiModel' {
   /**
    * The CreateFailureCategoryApiModel model module.
    * @module model/CreateFailureCategoryApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateFailureCategoryApiModel {
       /**
@@ -11040,7 +12144,7 @@ declare module 'testit-api-client/model/CreateFailureClassRegexApiModel' {
   /**
    * The CreateFailureClassRegexApiModel model module.
    * @module model/CreateFailureClassRegexApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateFailureClassRegexApiModel {
       /**
@@ -11081,7 +12185,7 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
   /**
    * The CreateLinkApiModel model module.
    * @module model/CreateLinkApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateLinkApiModel {
       /**
@@ -11089,7 +12193,7 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>CreateLinkApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -11108,9 +12212,10 @@ declare module 'testit-api-client/model/CreateLinkApiModel' {
        * Constructs a new <code>CreateLinkApiModel</code>.
        * @alias module:model/CreateLinkApiModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       title: any;
       url: any;
       description: any;
@@ -11127,7 +12232,7 @@ declare module 'testit-api-client/model/CreateParameterApiModel' {
   /**
    * The CreateParameterApiModel model module.
    * @module model/CreateParameterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateParameterApiModel {
       /**
@@ -11171,7 +12276,7 @@ declare module 'testit-api-client/model/CreateProjectApiModel' {
   /**
    * The CreateProjectApiModel model module.
    * @module model/CreateProjectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateProjectApiModel {
       /**
@@ -11215,7 +12320,7 @@ declare module 'testit-api-client/model/CreateProjectFailureCategoryApiModel' {
   /**
    * The CreateProjectFailureCategoryApiModel model module.
    * @module model/CreateProjectFailureCategoryApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateProjectFailureCategoryApiModel {
       /**
@@ -11259,7 +12364,7 @@ declare module 'testit-api-client/model/CreateStepApiModel' {
   /**
    * The CreateStepApiModel model module.
    * @module model/CreateStepApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateStepApiModel {
       /**
@@ -11295,7 +12400,7 @@ declare module 'testit-api-client/model/CreateTagApiModel' {
   /**
    * The CreateTagApiModel model module.
    * @module model/CreateTagApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTagApiModel {
       /**
@@ -11336,7 +12441,7 @@ declare module 'testit-api-client/model/CreateTestPlanApiModel' {
   /**
    * The CreateTestPlanApiModel model module.
    * @module model/CreateTestPlanApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTestPlanApiModel {
       /**
@@ -11389,7 +12494,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByAutoTestsApiModel'
   /**
    * The CreateTestRunAndFillByAutoTestsApiModel model module.
    * @module model/CreateTestRunAndFillByAutoTestsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTestRunAndFillByAutoTestsApiModel {
       /**
@@ -11440,7 +12545,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByConfigurationsApiM
   /**
    * The CreateTestRunAndFillByConfigurationsApiModel model module.
    * @module model/CreateTestRunAndFillByConfigurationsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTestRunAndFillByConfigurationsApiModel {
       /**
@@ -11491,7 +12596,7 @@ declare module 'testit-api-client/model/CreateTestRunAndFillByWorkItemsApiModel'
   /**
    * The CreateTestRunAndFillByWorkItemsApiModel model module.
    * @module model/CreateTestRunAndFillByWorkItemsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTestRunAndFillByWorkItemsApiModel {
       /**
@@ -11544,7 +12649,7 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   /**
    * The CreateTestStatusApiModel model module.
    * @module model/CreateTestStatusApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateTestStatusApiModel {
       /**
@@ -11585,12 +12690,64 @@ declare module 'testit-api-client/model/CreateTestStatusApiModel' {
   }
 
 }
+declare module 'testit-api-client/model/CreateUserApiModel' {
+  export default CreateUserApiModel;
+  /**
+   * The CreateUserApiModel model module.
+   * @module model/CreateUserApiModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class CreateUserApiModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, userName: any, firstName: any, lastName: any, displayName: any, email: any): void;
+      /**
+       * Constructs a <code>CreateUserApiModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/CreateUserApiModel} obj Optional instance to populate.
+       * @return {module:model/CreateUserApiModel} The populated <code>CreateUserApiModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>CreateUserApiModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreateUserApiModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>CreateUserApiModel</code>.
+       * @alias module:model/CreateUserApiModel
+       * @param userName {String}
+       * @param firstName {String}
+       * @param lastName {String}
+       * @param displayName {String}
+       * @param email {String}
+       */
+      constructor(userName: string, firstName: string, lastName: string, displayName: string, email: string);
+      userName: any;
+      firstName: any;
+      lastName: any;
+      displayName: any;
+      password: any;
+      email: any;
+      providerId: any;
+      externalId: any;
+  }
+  namespace CreateUserApiModel {
+      let RequiredProperties: string[];
+  }
+
+}
 declare module 'testit-api-client/model/CreateWorkflowApiModel' {
   export default CreateWorkflowApiModel;
   /**
    * The CreateWorkflowApiModel model module.
    * @module model/CreateWorkflowApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateWorkflowApiModel {
       /**
@@ -11635,7 +12792,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
   /**
    * The CreateWorkItemApiModel model module.
    * @module model/CreateWorkItemApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateWorkItemApiModel {
       /**
@@ -11643,7 +12800,7 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, projectId: any, name: any, entityTypeName: any, duration: any, state: any, priority: any, attributes: any, tags: any, preconditionSteps: any, steps: any, postconditionSteps: any, links: any): void;
+      static initialize(obj: any, projectId: any, name: any, entityTypeName: any, duration: any, state: any, priority: any): void;
       /**
        * Constructs a <code>CreateWorkItemApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -11665,16 +12822,10 @@ declare module 'testit-api-client/model/CreateWorkItemApiModel' {
        * @param name {String} Name of the work item
        * @param entityTypeName {module:model/WorkItemEntityTypeApiModel} Type of entity associated with this work item
        * @param duration {Number} Duration of the work item in milliseconds
-       * @param state {module:model/WorkItemStateApiModel} State of the work item
-       * @param priority {module:model/WorkItemPriorityApiModel} Priority level of the work item
-       * @param attributes {Object.<String, Object>} Set of custom attributes associated with the work item
-       * @param tags {Array.<module:model/TagModel>} Set of tags applied to the work item
-       * @param preconditionSteps {Array.<module:model/CreateStepApiModel>} Set of precondition steps that need to be executed before starting the main steps
-       * @param steps {Array.<module:model/CreateStepApiModel>} Main steps or actions defined for the work item
-       * @param postconditionSteps {Array.<module:model/CreateStepApiModel>} Set of postcondition steps that are executed after completing the main steps
-       * @param links {Array.<module:model/CreateLinkApiModel>} Set of links related to the work item
+       * @param state {module:model/WorkItemStateApiModel} Current state of the work item
+       * @param priority {module:model/WorkItemPriorityApiModel} Priority level assigned to the work item
        */
-      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any, attributes: any, tags: Array<any>, preconditionSteps: Array<any>, steps: Array<any>, postconditionSteps: Array<any>, links: Array<any>);
+      constructor(projectId: string, name: string, entityTypeName: any, duration: number, state: any, priority: any);
       projectId: any;
       sectionId: any;
       name: any;
@@ -11704,7 +12855,7 @@ declare module 'testit-api-client/model/CreateWorkItemCommentApiModel' {
   /**
    * The CreateWorkItemCommentApiModel model module.
    * @module model/CreateWorkItemCommentApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateWorkItemCommentApiModel {
       /**
@@ -11747,7 +12898,7 @@ declare module 'testit-api-client/model/CreateWorkItemPreviewsApiModel' {
   /**
    * The CreateWorkItemPreviewsApiModel model module.
    * @module model/CreateWorkItemPreviewsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CreateWorkItemPreviewsApiModel {
       /**
@@ -11792,7 +12943,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
   /**
    * The CustomAttributeApiResult model module.
    * @module model/CustomAttributeApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeApiResult {
       /**
@@ -11800,7 +12951,7 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, options: any, type: any, isDeleted: any, name: any, isEnabled: any, isRequired: any, isGlobal: any): void;
+      static initialize(obj: any, id: any, options: any, type: any, isDeleted: any, name: any, isEnabled: any, isRequired: any, isGlobal: any, isSystem: any, targets: any): void;
       /**
        * Constructs a <code>CustomAttributeApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -11819,15 +12970,17 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
        * Constructs a new <code>CustomAttributeApiResult</code>.
        * @alias module:model/CustomAttributeApiResult
        * @param id {String} Unique ID of the attribute
-       * @param options {Array.<module:model/CustomAttributeOptionApiResult>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+       * @param options {Array.<module:model/CustomAttributeOptionApiResult>} Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
        * @param type {module:model/CustomAttributeType} Type of the attribute
        * @param isDeleted {Boolean} Indicates if the attribute is deleted
        * @param name {String} Name of the attribute
        * @param isEnabled {Boolean} Indicates if the attribute is enabled
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
+       * @param isSystem {Boolean} Indicates if the attribute is system
+       * @param targets {Array.<String>} Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
        */
-      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean, isSystem: boolean, targets: Array<string>);
       id: any;
       options: any;
       type: any;
@@ -11836,6 +12989,8 @@ declare module 'testit-api-client/model/CustomAttributeApiResult' {
       isEnabled: any;
       isRequired: any;
       isGlobal: any;
+      isSystem: any;
+      targets: any;
   }
   namespace CustomAttributeApiResult {
       let RequiredProperties: string[];
@@ -11847,7 +13002,7 @@ declare module 'testit-api-client/model/CustomAttributeChangeModel' {
   /**
    * The CustomAttributeChangeModel model module.
    * @module model/CustomAttributeChangeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeChangeModel {
       /**
@@ -11883,7 +13038,7 @@ declare module 'testit-api-client/model/CustomAttributeGetModel' {
   /**
    * The CustomAttributeGetModel model module.
    * @module model/CustomAttributeGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeGetModel {
       /**
@@ -11938,7 +13093,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
   /**
    * The CustomAttributeModel model module.
    * @module model/CustomAttributeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeModel {
       /**
@@ -11946,7 +13101,7 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, options: any, type: any, isDeleted: any, name: any, isEnabled: any, isRequired: any, isGlobal: any): void;
+      static initialize(obj: any, id: any, targets: any, options: any, type: any, isDeleted: any, isSystem: any, name: any, isEnabled: any, isRequired: any, isGlobal: any): void;
       /**
        * Constructs a <code>CustomAttributeModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -11965,19 +13120,23 @@ declare module 'testit-api-client/model/CustomAttributeModel' {
        * Constructs a new <code>CustomAttributeModel</code>.
        * @alias module:model/CustomAttributeModel
        * @param id {String} Unique ID of the attribute
-       * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+       * @param targets {Array.<String>} Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+       * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
        * @param type {module:model/CustomAttributeTypesEnum} Type of the attribute
        * @param isDeleted {Boolean} Indicates if the attribute is deleted
+       * @param isSystem {Boolean} Indicates if the attribute is system
        * @param name {String} Name of the attribute
        * @param isEnabled {Boolean} Indicates if the attribute is enabled
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(id: string, targets: Array<string>, options: Array<any>, type: any, isDeleted: boolean, isSystem: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       id: any;
+      targets: any;
       options: any;
       type: any;
       isDeleted: any;
+      isSystem: any;
       name: any;
       isEnabled: any;
       isRequired: any;
@@ -11993,7 +13152,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionApiResult' {
   /**
    * The CustomAttributeOptionApiResult model module.
    * @module model/CustomAttributeOptionApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeOptionApiResult {
       /**
@@ -12039,7 +13198,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionModel' {
   /**
    * The CustomAttributeOptionModel model module.
    * @module model/CustomAttributeOptionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeOptionModel {
       /**
@@ -12085,7 +13244,7 @@ declare module 'testit-api-client/model/CustomAttributeOptionPostModel' {
   /**
    * The CustomAttributeOptionPostModel model module.
    * @module model/CustomAttributeOptionPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeOptionPostModel {
       /**
@@ -12127,7 +13286,7 @@ declare module 'testit-api-client/model/CustomAttributePostModel' {
   /**
    * The CustomAttributePostModel model module.
    * @module model/CustomAttributePostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributePostModel {
       /**
@@ -12177,7 +13336,7 @@ declare module 'testit-api-client/model/CustomAttributePutModel' {
   /**
    * The CustomAttributePutModel model module.
    * @module model/CustomAttributePutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributePutModel {
       /**
@@ -12231,7 +13390,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchQueryModel' {
   /**
    * The CustomAttributeSearchQueryModel model module.
    * @module model/CustomAttributeSearchQueryModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeSearchQueryModel {
       /**
@@ -12268,7 +13427,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
   /**
    * The CustomAttributeSearchResponseModel model module.
    * @module model/CustomAttributeSearchResponseModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeSearchResponseModel {
       /**
@@ -12276,7 +13435,7 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, workItemUsage: any, testPlanUsage: any, id: any, options: any, type: any, isDeleted: any, name: any, isEnabled: any, isRequired: any, isGlobal: any): void;
+      static initialize(obj: any, workItemUsage: any, testPlanUsage: any, id: any, targets: any, options: any, type: any, isDeleted: any, isSystem: any, name: any, isEnabled: any, isRequired: any, isGlobal: any): void;
       /**
        * Constructs a <code>CustomAttributeSearchResponseModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -12297,21 +13456,25 @@ declare module 'testit-api-client/model/CustomAttributeSearchResponseModel' {
        * @param workItemUsage {Array.<module:model/ProjectShortestModel>}
        * @param testPlanUsage {Array.<module:model/ProjectShortestModel>}
        * @param id {String} Unique ID of the attribute
-       * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
+       * @param targets {Array.<String>} Collection of the attribute targets      Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+       * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options      Available for attributes of type `options` and `multiple options` only
        * @param type {module:model/CustomAttributeTypesEnum} Type of the attribute
        * @param isDeleted {Boolean} Indicates if the attribute is deleted
+       * @param isSystem {Boolean} Indicates if the attribute is system
        * @param name {String} Name of the attribute
        * @param isEnabled {Boolean} Indicates if the attribute is enabled
        * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
        * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
        */
-      constructor(workItemUsage: Array<any>, testPlanUsage: Array<any>, id: string, options: Array<any>, type: any, isDeleted: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
+      constructor(workItemUsage: Array<any>, testPlanUsage: Array<any>, id: string, targets: Array<string>, options: Array<any>, type: any, isDeleted: boolean, isSystem: boolean, name: string, isEnabled: boolean, isRequired: boolean, isGlobal: boolean);
       workItemUsage: any;
       testPlanUsage: any;
       id: any;
+      targets: any;
       options: any;
       type: any;
       isDeleted: any;
+      isSystem: any;
       name: any;
       isEnabled: any;
       isRequired: any;
@@ -12327,7 +13490,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateModel' {
   /**
    * The CustomAttributeTemplateModel model module.
    * @module model/CustomAttributeTemplateModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTemplateModel {
       /**
@@ -12372,7 +13535,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePostModel' {
   /**
    * The CustomAttributeTemplatePostModel model module.
    * @module model/CustomAttributeTemplatePostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTemplatePostModel {
       /**
@@ -12414,7 +13577,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplatePutModel' {
   /**
    * The CustomAttributeTemplatePutModel model module.
    * @module model/CustomAttributeTemplatePutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTemplatePutModel {
       /**
@@ -12458,7 +13621,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateSearchQueryModel'
   /**
    * The CustomAttributeTemplateSearchQueryModel model module.
    * @module model/CustomAttributeTemplateSearchQueryModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTemplateSearchQueryModel {
       /**
@@ -12493,7 +13656,7 @@ declare module 'testit-api-client/model/CustomAttributeTemplateValidationResult'
   /**
    * The CustomAttributeTemplateValidationResult model module.
    * @module model/CustomAttributeTemplateValidationResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTemplateValidationResult {
       /**
@@ -12534,7 +13697,7 @@ declare module 'testit-api-client/model/CustomAttributeTestPlanProjectRelationPu
   /**
    * The CustomAttributeTestPlanProjectRelationPutModel model module.
    * @module model/CustomAttributeTestPlanProjectRelationPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeTestPlanProjectRelationPutModel {
       /**
@@ -12677,7 +13840,7 @@ declare module 'testit-api-client/model/CustomAttributeValidationResult' {
   /**
    * The CustomAttributeValidationResult model module.
    * @module model/CustomAttributeValidationResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class CustomAttributeValidationResult {
       /**
@@ -12718,7 +13881,7 @@ declare module 'testit-api-client/model/DateTimeRangeSelectorModel' {
   /**
    * The DateTimeRangeSelectorModel model module.
    * @module model/DateTimeRangeSelectorModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class DateTimeRangeSelectorModel {
       /**
@@ -12751,7 +13914,7 @@ declare module 'testit-api-client/model/DefectApiModel' {
   /**
    * The DefectApiModel model module.
    * @module model/DefectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class DefectApiModel {
       /**
@@ -12821,43 +13984,70 @@ declare module 'testit-api-client/model/DeletionState' {
    */
 
 }
-declare module 'testit-api-client/model/DemoProjectApiResult' {
-  export default DemoProjectApiResult;
+declare module 'testit-api-client/model/DetailedProjectApiResult' {
+  export default DetailedProjectApiResult;
   /**
-   * The DemoProjectApiResult model module.
-   * @module model/DemoProjectApiResult
-   * @version 7.2.6
+   * The DetailedProjectApiResult model module.
+   * @module model/DetailedProjectApiResult
+   * @version 7.3.0-TMS-5.8
    */
-  class DemoProjectApiResult {
+  class DetailedProjectApiResult {
       /**
        * Initializes the fields of this object.
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, jobId: any): void;
+      static initialize(obj: any, id: any, name: any, isFavorite: any, workItemsCount: any, isDeleted: any, createdDate: any, createdById: any, globalId: any, type: any, workflowId: any): void;
       /**
-       * Constructs a <code>DemoProjectApiResult</code> from a plain JavaScript object, optionally creating a new instance.
+       * Constructs a <code>DetailedProjectApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/DemoProjectApiResult} obj Optional instance to populate.
-       * @return {module:model/DemoProjectApiResult} The populated <code>DemoProjectApiResult</code> instance.
+       * @param {module:model/DetailedProjectApiResult} obj Optional instance to populate.
+       * @return {module:model/DetailedProjectApiResult} The populated <code>DetailedProjectApiResult</code> instance.
        */
       static constructFromObject(data: Object, obj: any): any;
       /**
-       * Validates the JSON data with respect to <code>DemoProjectApiResult</code>.
+       * Validates the JSON data with respect to <code>DetailedProjectApiResult</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DemoProjectApiResult</code>.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DetailedProjectApiResult</code>.
        */
       static validateJSON(data: Object): boolean;
       /**
-       * Constructs a new <code>DemoProjectApiResult</code>.
-       * @alias module:model/DemoProjectApiResult
-       * @param jobId {String} Job ID
+       * Constructs a new <code>DetailedProjectApiResult</code>.
+       * @alias module:model/DetailedProjectApiResult
+       * @param id {String} Unique ID of the project
+       * @param name {String} Name of the project
+       * @param isFavorite {Boolean} Indicates if the project is marked as favorite
+       * @param workItemsCount {Number} Number of work items in the project
+       * @param isDeleted {Boolean} Indicates if the project is deleted
+       * @param createdDate {Date} Creation date of the project
+       * @param createdById {String} Unique ID of the project creator
+       * @param globalId {Number} Global ID of the project
+       * @param type {module:model/ProjectType} Type of the project
+       * @param workflowId {String} ID of the workflow used in project
        */
-      constructor(jobId: string);
-      jobId: any;
+      constructor(id: string, name: string, isFavorite: boolean, workItemsCount: number, isDeleted: boolean, createdDate: Date, createdById: string, globalId: number, type: any, workflowId: string);
+      attributesScheme: any;
+      testPlansAttributesScheme: any;
+      id: any;
+      description: any;
+      name: any;
+      isFavorite: any;
+      workItemsCount: any;
+      testCasesCount: any;
+      sharedStepsCount: any;
+      checkListsCount: any;
+      autoTestsCount: any;
+      isDeleted: any;
+      createdDate: any;
+      modifiedDate: any;
+      createdById: any;
+      modifiedById: any;
+      globalId: any;
+      type: any;
+      workflowId: any;
   }
-  namespace DemoProjectApiResult {
+  namespace DetailedProjectApiResult {
       let RequiredProperties: string[];
   }
 
@@ -12867,7 +14057,7 @@ declare module 'testit-api-client/model/EnableProjectExternalServiceApiModel' {
   /**
    * The EnableProjectExternalServiceApiModel model module.
    * @module model/EnableProjectExternalServiceApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class EnableProjectExternalServiceApiModel {
       /**
@@ -12908,7 +14098,7 @@ declare module 'testit-api-client/model/ExternalFormAllowedValueModel' {
   /**
    * The ExternalFormAllowedValueModel model module.
    * @module model/ExternalFormAllowedValueModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalFormAllowedValueModel {
       /**
@@ -12952,7 +14142,7 @@ declare module 'testit-api-client/model/ExternalFormCreateModel' {
   /**
    * The ExternalFormCreateModel model module.
    * @module model/ExternalFormCreateModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalFormCreateModel {
       /**
@@ -12999,7 +14189,7 @@ declare module 'testit-api-client/model/ExternalFormFieldModel' {
   /**
    * The ExternalFormFieldModel model module.
    * @module model/ExternalFormFieldModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalFormFieldModel {
       /**
@@ -13053,7 +14243,7 @@ declare module 'testit-api-client/model/ExternalFormLinkModel' {
   /**
    * The ExternalFormLinkModel model module.
    * @module model/ExternalFormLinkModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalFormLinkModel {
       /**
@@ -13096,7 +14286,7 @@ declare module 'testit-api-client/model/ExternalFormModel' {
   /**
    * The ExternalFormModel model module.
    * @module model/ExternalFormModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalFormModel {
       /**
@@ -13183,7 +14373,7 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   /**
    * The ExternalIssueApiFieldSuggestion model module.
    * @module model/ExternalIssueApiFieldSuggestion
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiFieldSuggestion {
       /**
@@ -13221,12 +14411,153 @@ declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestion' {
   }
 
 }
+declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionGroup' {
+  export default ExternalIssueApiFieldSuggestionGroup;
+  /**
+   * The ExternalIssueApiFieldSuggestionGroup model module.
+   * @module model/ExternalIssueApiFieldSuggestionGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class ExternalIssueApiFieldSuggestionGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>ExternalIssueApiFieldSuggestionGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ExternalIssueApiFieldSuggestionGroup} obj Optional instance to populate.
+       * @return {module:model/ExternalIssueApiFieldSuggestionGroup} The populated <code>ExternalIssueApiFieldSuggestionGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>ExternalIssueApiFieldSuggestionGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiFieldSuggestionGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>ExternalIssueApiFieldSuggestionGroup</code>.
+       * @alias module:model/ExternalIssueApiFieldSuggestionGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/ExternalIssueApiFieldSuggestion>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace ExternalIssueApiFieldSuggestionGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionGroupedReply' {
+  export default ExternalIssueApiFieldSuggestionGroupedReply;
+  /**
+   * The ExternalIssueApiFieldSuggestionGroupedReply model module.
+   * @module model/ExternalIssueApiFieldSuggestionGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class ExternalIssueApiFieldSuggestionGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>ExternalIssueApiFieldSuggestionGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ExternalIssueApiFieldSuggestionGroupedReply} obj Optional instance to populate.
+       * @return {module:model/ExternalIssueApiFieldSuggestionGroupedReply} The populated <code>ExternalIssueApiFieldSuggestionGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>ExternalIssueApiFieldSuggestionGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ExternalIssueApiFieldSuggestionGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>ExternalIssueApiFieldSuggestionGroupedReply</code>.
+       * @alias module:model/ExternalIssueApiFieldSuggestionGroupedReply
+       * @param groups {Array.<module:model/ExternalIssueApiFieldSuggestionGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace ExternalIssueApiFieldSuggestionGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionIReply' {
+  export default ExternalIssueApiFieldSuggestionIReply;
+  /**
+   * The ExternalIssueApiFieldSuggestionIReply model module.
+   * @module model/ExternalIssueApiFieldSuggestionIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class ExternalIssueApiFieldSuggestionIReply {
+      /**
+       * Constructs a <code>ExternalIssueApiFieldSuggestionIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ExternalIssueApiFieldSuggestionIReply} obj Optional instance to populate.
+       * @return {module:model/ExternalIssueApiFieldSuggestionIReply} The populated <code>ExternalIssueApiFieldSuggestionIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of ExternalIssueApiFieldSuggestionIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/ExternalIssueApiFieldSuggestionIReply} An instance of ExternalIssueApiFieldSuggestionIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>ExternalIssueApiFieldSuggestionIReply</code>.
+       * @alias module:model/ExternalIssueApiFieldSuggestionIReply
+       * @param {(module:model/ExternalIssueApiFieldSuggestionGroupedReply|module:model/ExternalIssueApiFieldSuggestionReply)} instance The actual instance to initialize ExternalIssueApiFieldSuggestionIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>ExternalIssueApiFieldSuggestionGroupedReply</code>, <code>ExternalIssueApiFieldSuggestionReply</code>.
+       * @return {(module:model/ExternalIssueApiFieldSuggestionGroupedReply|module:model/ExternalIssueApiFieldSuggestionReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>ExternalIssueApiFieldSuggestionGroupedReply</code>, <code>ExternalIssueApiFieldSuggestionReply</code>.
+       * @param {(module:model/ExternalIssueApiFieldSuggestionGroupedReply|module:model/ExternalIssueApiFieldSuggestionReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace ExternalIssueApiFieldSuggestionIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/ExternalIssueApiFieldSuggestionReply' {
   export default ExternalIssueApiFieldSuggestionReply;
   /**
    * The ExternalIssueApiFieldSuggestionReply model module.
    * @module model/ExternalIssueApiFieldSuggestionReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiFieldSuggestionReply {
       /**
@@ -13269,7 +14600,7 @@ declare module 'testit-api-client/model/ExternalIssueApiMetadata' {
   /**
    * The ExternalIssueApiMetadata model module.
    * @module model/ExternalIssueApiMetadata
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiMetadata {
       /**
@@ -13318,7 +14649,7 @@ declare module 'testit-api-client/model/ExternalIssueApiPriority' {
   /**
    * The ExternalIssueApiPriority model module.
    * @module model/ExternalIssueApiPriority
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiPriority {
       /**
@@ -13360,7 +14691,7 @@ declare module 'testit-api-client/model/ExternalIssueApiResult' {
   /**
    * The ExternalIssueApiResult model module.
    * @module model/ExternalIssueApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiResult {
       /**
@@ -13407,7 +14738,7 @@ declare module 'testit-api-client/model/ExternalIssueApiType' {
   /**
    * The ExternalIssueApiType model module.
    * @module model/ExternalIssueApiType
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueApiType {
       /**
@@ -13449,7 +14780,7 @@ declare module 'testit-api-client/model/ExternalIssueExternalServiceApiResult' {
   /**
    * The ExternalIssueExternalServiceApiResult model module.
    * @module model/ExternalIssueExternalServiceApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueExternalServiceApiResult {
       /**
@@ -13492,7 +14823,7 @@ declare module 'testit-api-client/model/ExternalIssueMetadataModel' {
   /**
    * The ExternalIssueMetadataModel model module.
    * @module model/ExternalIssueMetadataModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueMetadataModel {
       /**
@@ -13541,7 +14872,7 @@ declare module 'testit-api-client/model/ExternalIssueModel' {
   /**
    * The ExternalIssueModel model module.
    * @module model/ExternalIssueModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueModel {
       /**
@@ -13588,7 +14919,7 @@ declare module 'testit-api-client/model/ExternalIssuePriorityModel' {
   /**
    * The ExternalIssuePriorityModel model module.
    * @module model/ExternalIssuePriorityModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssuePriorityModel {
       /**
@@ -13630,7 +14961,7 @@ declare module 'testit-api-client/model/ExternalIssueTypeModel' {
   /**
    * The ExternalIssueTypeModel model module.
    * @module model/ExternalIssueTypeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalIssueTypeModel {
       /**
@@ -13672,7 +15003,7 @@ declare module 'testit-api-client/model/ExternalLinkModel' {
   /**
    * The ExternalLinkModel model module.
    * @module model/ExternalLinkModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalLinkModel {
       /**
@@ -13711,7 +15042,7 @@ declare module 'testit-api-client/model/ExternalServiceMetadataApiResult' {
   /**
    * The ExternalServiceMetadataApiResult model module.
    * @module model/ExternalServiceMetadataApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalServiceMetadataApiResult {
       /**
@@ -13758,7 +15089,7 @@ declare module 'testit-api-client/model/ExternalServicesMetadataApiResult' {
   /**
    * The ExternalServicesMetadataApiResult model module.
    * @module model/ExternalServicesMetadataApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ExternalServicesMetadataApiResult {
       /**
@@ -13843,7 +15174,7 @@ declare module 'testit-api-client/model/FailureCategoryApiResult' {
   /**
    * The FailureCategoryApiResult model module.
    * @module model/FailureCategoryApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryApiResult {
       /**
@@ -13899,7 +15230,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiModel' {
   /**
    * The FailureCategoryGroupApiModel model module.
    * @module model/FailureCategoryGroupApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryGroupApiModel {
       /**
@@ -13941,7 +15272,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupApiResult' {
   /**
    * The FailureCategoryGroupApiResult model module.
    * @module model/FailureCategoryGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryGroupApiResult {
       /**
@@ -13984,7 +15315,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResult' {
   /**
    * The FailureCategoryGroupItemApiResult model module.
    * @module model/FailureCategoryGroupItemApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryGroupItemApiResult {
       /**
@@ -14026,7 +15357,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupItemApiResultReply' 
   /**
    * The FailureCategoryGroupItemApiResultReply model module.
    * @module model/FailureCategoryGroupItemApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryGroupItemApiResultReply {
       /**
@@ -14069,7 +15400,7 @@ declare module 'testit-api-client/model/FailureCategoryGroupSearchApiModel' {
   /**
    * The FailureCategoryGroupSearchApiModel model module.
    * @module model/FailureCategoryGroupSearchApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryGroupSearchApiModel {
       /**
@@ -14111,7 +15442,7 @@ declare module 'testit-api-client/model/FailureCategoryItemApiResult' {
   /**
    * The FailureCategoryItemApiResult model module.
    * @module model/FailureCategoryItemApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureCategoryItemApiResult {
       /**
@@ -14213,7 +15544,7 @@ declare module 'testit-api-client/model/FailureClassRegexApiResult' {
   /**
    * The FailureClassRegexApiResult model module.
    * @module model/FailureClassRegexApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FailureClassRegexApiResult {
       /**
@@ -14260,7 +15591,7 @@ declare module 'testit-api-client/model/Filter' {
   /**
    * The Filter model module.
    * @module model/Filter
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Filter {
       /**
@@ -14304,7 +15635,7 @@ declare module 'testit-api-client/model/FilterModel' {
   /**
    * The FilterModel model module.
    * @module model/FilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class FilterModel {
       /**
@@ -14428,7 +15759,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
   /**
    * The GenerateWorkItemPreviewsApiModel model module.
    * @module model/GenerateWorkItemPreviewsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GenerateWorkItemPreviewsApiModel {
       /**
@@ -14460,7 +15791,6 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiModel' {
        */
       constructor(externalServiceId: string, temperature: number, previewLimit: number);
       externalServiceId: any;
-      taskKey: any;
       issueKey: any;
       userContext: any;
       temperature: any;
@@ -14476,7 +15806,7 @@ declare module 'testit-api-client/model/GenerateWorkItemPreviewsApiResult' {
   /**
    * The GenerateWorkItemPreviewsApiResult model module.
    * @module model/GenerateWorkItemPreviewsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GenerateWorkItemPreviewsApiResult {
       /**
@@ -14518,7 +15848,7 @@ declare module 'testit-api-client/model/GetAIServiceModelsApiModel' {
   /**
    * The GetAIServiceModelsApiModel model module.
    * @module model/GetAIServiceModelsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GetAIServiceModelsApiModel {
       /**
@@ -14550,7 +15880,7 @@ declare module 'testit-api-client/model/GetExternalFormApiResult' {
   /**
    * The GetExternalFormApiResult model module.
    * @module model/GetExternalFormApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GetExternalFormApiResult {
       /**
@@ -14593,7 +15923,7 @@ declare module 'testit-api-client/model/GetExternalIssueSuggestionsApiModel' {
   /**
    * The GetExternalIssueSuggestionsApiModel model module.
    * @module model/GetExternalIssueSuggestionsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GetExternalIssueSuggestionsApiModel {
       /**
@@ -14636,7 +15966,7 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
   /**
    * The GetShortProjectsApiModel model module.
    * @module model/GetShortProjectsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GetShortProjectsApiModel {
       /**
@@ -14665,37 +15995,37 @@ declare module 'testit-api-client/model/GetShortProjectsApiModel' {
   }
 
 }
-declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
-  export default GetXlsxTestPointsByTestPlanModel;
+declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanApiModel' {
+  export default GetXlsxTestPointsByTestPlanApiModel;
   /**
-   * The GetXlsxTestPointsByTestPlanModel model module.
-   * @module model/GetXlsxTestPointsByTestPlanModel
-   * @version 7.2.6
+   * The GetXlsxTestPointsByTestPlanApiModel model module.
+   * @module model/GetXlsxTestPointsByTestPlanApiModel
+   * @version 7.3.0-TMS-5.8
    */
-  class GetXlsxTestPointsByTestPlanModel {
+  class GetXlsxTestPointsByTestPlanApiModel {
       /**
        * Initializes the fields of this object.
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, includeName: any, includeSection: any, includePriority: any, includeSourceType: any, includeAutomated: any, includeStatus: any, includeDuration: any, includeCreationDate: any, includeAuthor: any, includeModificationDate: any, includeModifiedBy: any, includeTags: any, includeIterations: any): void;
+      static initialize(obj: any, includeName: any, includeSection: any, includePriority: any, includeSourceType: any, includeAutomated: any, includeStatus: any, includeDuration: any, includeCreationDate: any, includeAuthor: any, includeModificationDate: any, includeModifiedBy: any, includeTags: any, includeIterations: any, order: any): void;
       /**
-       * Constructs a <code>GetXlsxTestPointsByTestPlanModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Constructs a <code>GetXlsxTestPointsByTestPlanApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/GetXlsxTestPointsByTestPlanModel} obj Optional instance to populate.
-       * @return {module:model/GetXlsxTestPointsByTestPlanModel} The populated <code>GetXlsxTestPointsByTestPlanModel</code> instance.
+       * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} obj Optional instance to populate.
+       * @return {module:model/GetXlsxTestPointsByTestPlanApiModel} The populated <code>GetXlsxTestPointsByTestPlanApiModel</code> instance.
        */
       static constructFromObject(data: Object, obj: any): any;
       /**
-       * Validates the JSON data with respect to <code>GetXlsxTestPointsByTestPlanModel</code>.
+       * Validates the JSON data with respect to <code>GetXlsxTestPointsByTestPlanApiModel</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetXlsxTestPointsByTestPlanModel</code>.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GetXlsxTestPointsByTestPlanApiModel</code>.
        */
       static validateJSON(data: Object): boolean;
       /**
-       * Constructs a new <code>GetXlsxTestPointsByTestPlanModel</code>.
-       * @alias module:model/GetXlsxTestPointsByTestPlanModel
+       * Constructs a new <code>GetXlsxTestPointsByTestPlanApiModel</code>.
+       * @alias module:model/GetXlsxTestPointsByTestPlanApiModel
        * @param includeName {Boolean}
        * @param includeSection {Boolean}
        * @param includePriority {Boolean}
@@ -14709,8 +16039,9 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
        * @param includeModifiedBy {Boolean}
        * @param includeTags {Boolean}
        * @param includeIterations {Boolean}
+       * @param order {Array.<module:model/Order>}
        */
-      constructor(includeName: boolean, includeSection: boolean, includePriority: boolean, includeSourceType: boolean, includeAutomated: boolean, includeStatus: boolean, includeDuration: boolean, includeCreationDate: boolean, includeAuthor: boolean, includeModificationDate: boolean, includeModifiedBy: boolean, includeTags: boolean, includeIterations: boolean);
+      constructor(includeName: boolean, includeSection: boolean, includePriority: boolean, includeSourceType: boolean, includeAutomated: boolean, includeStatus: boolean, includeDuration: boolean, includeCreationDate: boolean, includeAuthor: boolean, includeModificationDate: boolean, includeModifiedBy: boolean, includeTags: boolean, includeIterations: boolean, order: Array<any>);
       includeName: any;
       includeSection: any;
       includePriority: any;
@@ -14725,9 +16056,11 @@ declare module 'testit-api-client/model/GetXlsxTestPointsByTestPlanModel' {
       includeTags: any;
       includeIterations: any;
       customAttributesIds: any;
+      filter: any;
+      order: any;
       configurationIds: any;
   }
-  namespace GetXlsxTestPointsByTestPlanModel {
+  namespace GetXlsxTestPointsByTestPlanApiModel {
       let RequiredProperties: string[];
   }
 
@@ -14737,7 +16070,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributePostModel' {
   /**
    * The GlobalCustomAttributePostModel model module.
    * @module model/GlobalCustomAttributePostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GlobalCustomAttributePostModel {
       /**
@@ -14783,7 +16116,7 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   /**
    * The GlobalCustomAttributeUpdateModel model module.
    * @module model/GlobalCustomAttributeUpdateModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GlobalCustomAttributeUpdateModel {
       /**
@@ -14822,141 +16155,86 @@ declare module 'testit-api-client/model/GlobalCustomAttributeUpdateModel' {
   }
 
 }
-declare module 'testit-api-client/model/GlobalSearchItemResult' {
-  export default GlobalSearchItemResult;
+declare module 'testit-api-client/model/Group' {
+  export default Group;
   /**
-   * The GlobalSearchItemResult model module.
-   * @module model/GlobalSearchItemResult
-   * @version 7.2.6
+   * The Group model module.
+   * @module model/Group
+   * @version 7.3.0-TMS-5.8
    */
-  class GlobalSearchItemResult {
+  class Group {
       /**
        * Initializes the fields of this object.
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, resourceType: any, resourceId: any, name: any, projectGlobalId: any): void;
+      static initialize(obj: any, field: any): void;
       /**
-       * Constructs a <code>GlobalSearchItemResult</code> from a plain JavaScript object, optionally creating a new instance.
+       * Constructs a <code>Group</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/GlobalSearchItemResult} obj Optional instance to populate.
-       * @return {module:model/GlobalSearchItemResult} The populated <code>GlobalSearchItemResult</code> instance.
+       * @param {module:model/Group} obj Optional instance to populate.
+       * @return {module:model/Group} The populated <code>Group</code> instance.
        */
       static constructFromObject(data: Object, obj: any): any;
       /**
-       * Validates the JSON data with respect to <code>GlobalSearchItemResult</code>.
+       * Validates the JSON data with respect to <code>Group</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchItemResult</code>.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Group</code>.
        */
       static validateJSON(data: Object): boolean;
       /**
-       * Constructs a new <code>GlobalSearchItemResult</code>.
-       * @alias module:model/GlobalSearchItemResult
-       * @param resourceType {String}
-       * @param resourceId {String}
-       * @param name {String}
-       * @param projectGlobalId {Number}
+       * Constructs a new <code>Group</code>.
+       * @alias module:model/Group
+       * @param field {String}
        */
-      constructor(resourceType: string, resourceId: string, name: string, projectGlobalId: number);
-      resourceType: any;
-      resourceId: any;
-      globalId: any;
-      name: any;
-      projectGlobalId: any;
+      constructor(field: string);
+      field: any;
+      displayField: any;
   }
-  namespace GlobalSearchItemResult {
+  namespace Group {
       let RequiredProperties: string[];
   }
 
 }
-declare module 'testit-api-client/model/GlobalSearchRequest' {
-  export default GlobalSearchRequest;
+declare module 'testit-api-client/model/GroupKey' {
+  export default GroupKey;
   /**
-   * The GlobalSearchRequest model module.
-   * @module model/GlobalSearchRequest
-   * @version 7.2.6
+   * The GroupKey model module.
+   * @module model/GroupKey
+   * @version 7.3.0-TMS-5.8
    */
-  class GlobalSearchRequest {
+  class GroupKey {
       /**
        * Initializes the fields of this object.
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, query: any, take: any, skip: any): void;
+      static initialize(obj: any, value: any): void;
       /**
-       * Constructs a <code>GlobalSearchRequest</code> from a plain JavaScript object, optionally creating a new instance.
+       * Constructs a <code>GroupKey</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/GlobalSearchRequest} obj Optional instance to populate.
-       * @return {module:model/GlobalSearchRequest} The populated <code>GlobalSearchRequest</code> instance.
+       * @param {module:model/GroupKey} obj Optional instance to populate.
+       * @return {module:model/GroupKey} The populated <code>GroupKey</code> instance.
        */
       static constructFromObject(data: Object, obj: any): any;
       /**
-       * Validates the JSON data with respect to <code>GlobalSearchRequest</code>.
+       * Validates the JSON data with respect to <code>GroupKey</code>.
        * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchRequest</code>.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GroupKey</code>.
        */
       static validateJSON(data: Object): boolean;
       /**
-       * Constructs a new <code>GlobalSearchRequest</code>.
-       * @alias module:model/GlobalSearchRequest
-       * @param query {String}
-       * @param take {Number}
-       * @param skip {Number}
+       * Constructs a new <code>GroupKey</code>.
+       * @alias module:model/GroupKey
+       * @param value {String}
        */
-      constructor(query: string, take: number, skip: number);
-      query: any;
-      resourceType: any;
-      take: any;
-      skip: any;
+      constructor(value: string);
+      value: any;
+      displayValue: any;
   }
-  namespace GlobalSearchRequest {
-      let RequiredProperties: string[];
-  }
-
-}
-declare module 'testit-api-client/model/GlobalSearchResponse' {
-  export default GlobalSearchResponse;
-  /**
-   * The GlobalSearchResponse model module.
-   * @module model/GlobalSearchResponse
-   * @version 7.2.6
-   */
-  class GlobalSearchResponse {
-      /**
-       * Initializes the fields of this object.
-       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-       * Only for internal use.
-       */
-      static initialize(obj: any, results: any, moreResultsAvailable: any, availableResourceTypes: any): void;
-      /**
-       * Constructs a <code>GlobalSearchResponse</code> from a plain JavaScript object, optionally creating a new instance.
-       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/GlobalSearchResponse} obj Optional instance to populate.
-       * @return {module:model/GlobalSearchResponse} The populated <code>GlobalSearchResponse</code> instance.
-       */
-      static constructFromObject(data: Object, obj: any): any;
-      /**
-       * Validates the JSON data with respect to <code>GlobalSearchResponse</code>.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GlobalSearchResponse</code>.
-       */
-      static validateJSON(data: Object): boolean;
-      /**
-       * Constructs a new <code>GlobalSearchResponse</code>.
-       * @alias module:model/GlobalSearchResponse
-       * @param results {Array.<module:model/GlobalSearchItemResult>}
-       * @param moreResultsAvailable {Boolean}
-       * @param availableResourceTypes {Array.<String>}
-       */
-      constructor(results: Array<any>, moreResultsAvailable: boolean, availableResourceTypes: Array<string>);
-      results: any;
-      moreResultsAvailable: any;
-      availableResourceTypes: any;
-  }
-  namespace GlobalSearchResponse {
+  namespace GroupKey {
       let RequiredProperties: string[];
   }
 
@@ -14966,7 +16244,7 @@ declare module 'testit-api-client/model/GuidChangedFieldViewModel' {
   /**
    * The GuidChangedFieldViewModel model module.
    * @module model/GuidChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GuidChangedFieldViewModel {
       /**
@@ -15009,7 +16287,7 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
   /**
    * The GuidExtractionModel model module.
    * @module model/GuidExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class GuidExtractionModel {
       /**
@@ -15037,12 +16315,45 @@ declare module 'testit-api-client/model/GuidExtractionModel' {
   }
 
 }
+declare module 'testit-api-client/model/GuidNullableChangedFieldViewModel' {
+  export default GuidNullableChangedFieldViewModel;
+  /**
+   * The GuidNullableChangedFieldViewModel model module.
+   * @module model/GuidNullableChangedFieldViewModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class GuidNullableChangedFieldViewModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any): void;
+      /**
+       * Constructs a <code>GuidNullableChangedFieldViewModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/GuidNullableChangedFieldViewModel} obj Optional instance to populate.
+       * @return {module:model/GuidNullableChangedFieldViewModel} The populated <code>GuidNullableChangedFieldViewModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>GuidNullableChangedFieldViewModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GuidNullableChangedFieldViewModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      oldValue: any;
+      newValue: any;
+  }
+
+}
 declare module 'testit-api-client/model/IFilter' {
   export default IFilter;
   /**
    * The IFilter model module.
    * @module model/IFilter
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class IFilter {
       /**
@@ -15126,7 +16437,7 @@ declare module 'testit-api-client/model/Inquiry' {
   /**
    * The Inquiry model module.
    * @module model/Inquiry
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Inquiry {
       /**
@@ -15155,6 +16466,7 @@ declare module 'testit-api-client/model/Inquiry' {
        * @param order {Array.<module:model/Order>}
        */
       constructor(order: Array<any>);
+      group: any;
       filter: any;
       order: any;
       page: any;
@@ -15169,7 +16481,7 @@ declare module 'testit-api-client/model/Int32ChangedFieldViewModel' {
   /**
    * The Int32ChangedFieldViewModel model module.
    * @module model/Int32ChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Int32ChangedFieldViewModel {
       /**
@@ -15212,7 +16524,7 @@ declare module 'testit-api-client/model/Int32RangeSelectorModel' {
   /**
    * The Int32RangeSelectorModel model module.
    * @module model/Int32RangeSelectorModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Int32RangeSelectorModel {
       /**
@@ -15245,7 +16557,7 @@ declare module 'testit-api-client/model/Int64ChangedFieldViewModel' {
   /**
    * The Int64ChangedFieldViewModel model module.
    * @module model/Int64ChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Int64ChangedFieldViewModel {
       /**
@@ -15288,7 +16600,7 @@ declare module 'testit-api-client/model/Int64RangeSelectorModel' {
   /**
    * The Int64RangeSelectorModel model module.
    * @module model/Int64RangeSelectorModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Int64RangeSelectorModel {
       /**
@@ -15321,7 +16633,7 @@ declare module 'testit-api-client/model/IterationApiResult' {
   /**
    * The IterationApiResult model module.
    * @module model/IterationApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class IterationApiResult {
       /**
@@ -15363,7 +16675,7 @@ declare module 'testit-api-client/model/IterationModel' {
   /**
    * The IterationModel model module.
    * @module model/IterationModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class IterationModel {
       /**
@@ -15405,7 +16717,7 @@ declare module 'testit-api-client/model/Label' {
   /**
    * The Label model module.
    * @module model/Label
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Label {
       /**
@@ -15448,7 +16760,7 @@ declare module 'testit-api-client/model/LabelApiModel' {
   /**
    * The LabelApiModel model module.
    * @module model/LabelApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LabelApiModel {
       /**
@@ -15489,7 +16801,7 @@ declare module 'testit-api-client/model/LabelApiResult' {
   /**
    * The LabelApiResult model module.
    * @module model/LabelApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LabelApiResult {
       /**
@@ -15532,7 +16844,7 @@ declare module 'testit-api-client/model/LabelShortModel' {
   /**
    * The LabelShortModel model module.
    * @module model/LabelShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LabelShortModel {
       /**
@@ -15575,7 +16887,7 @@ declare module 'testit-api-client/model/LastTestResultApiResult' {
   /**
    * The LastTestResultApiResult model module.
    * @module model/LastTestResultApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LastTestResultApiResult {
       /**
@@ -15625,7 +16937,7 @@ declare module 'testit-api-client/model/LastTestResultModel' {
   /**
    * The LastTestResultModel model module.
    * @module model/LastTestResultModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LastTestResultModel {
       /**
@@ -15669,59 +16981,12 @@ declare module 'testit-api-client/model/LastTestResultModel' {
   }
 
 }
-declare module 'testit-api-client/model/Link' {
-  export default Link;
-  /**
-   * The Link model module.
-   * @module model/Link
-   * @version 7.2.6
-   */
-  class Link {
-      /**
-       * Initializes the fields of this object.
-       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-       * Only for internal use.
-       */
-      static initialize(obj: any, url: any, hasInfo: any): void;
-      /**
-       * Constructs a <code>Link</code> from a plain JavaScript object, optionally creating a new instance.
-       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/Link} obj Optional instance to populate.
-       * @return {module:model/Link} The populated <code>Link</code> instance.
-       */
-      static constructFromObject(data: Object, obj: any): any;
-      /**
-       * Validates the JSON data with respect to <code>Link</code>.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Link</code>.
-       */
-      static validateJSON(data: Object): boolean;
-      /**
-       * Constructs a new <code>Link</code>.
-       * @alias module:model/Link
-       * @param url {String} Address can be specified without protocol, but necessarily with the domain.
-       * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
-       */
-      constructor(url: string, hasInfo: boolean);
-      id: any;
-      title: any;
-      url: any;
-      description: any;
-      type: any;
-      hasInfo: any;
-  }
-  namespace Link {
-      let RequiredProperties: string[];
-  }
-
-}
 declare module 'testit-api-client/model/LinkApiResult' {
   export default LinkApiResult;
   /**
    * The LinkApiResult model module.
    * @module model/LinkApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkApiResult {
       /**
@@ -15729,7 +16994,7 @@ declare module 'testit-api-client/model/LinkApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15748,9 +17013,10 @@ declare module 'testit-api-client/model/LinkApiResult' {
        * Constructs a new <code>LinkApiResult</code>.
        * @alias module:model/LinkApiResult
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -15768,7 +17034,7 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
   /**
    * The LinkCreateApiModel model module.
    * @module model/LinkCreateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkCreateApiModel {
       /**
@@ -15776,7 +17042,7 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkCreateApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15795,9 +17061,10 @@ declare module 'testit-api-client/model/LinkCreateApiModel' {
        * Constructs a new <code>LinkCreateApiModel</code>.
        * @alias module:model/LinkCreateApiModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated external service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       title: any;
       url: any;
       description: any;
@@ -15814,7 +17081,7 @@ declare module 'testit-api-client/model/LinkModel' {
   /**
    * The LinkModel model module.
    * @module model/LinkModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkModel {
       /**
@@ -15822,7 +17089,7 @@ declare module 'testit-api-client/model/LinkModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15841,9 +17108,10 @@ declare module 'testit-api-client/model/LinkModel' {
        * Constructs a new <code>LinkModel</code>.
        * @alias module:model/LinkModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean}
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -15861,7 +17129,7 @@ declare module 'testit-api-client/model/LinkPostModel' {
   /**
    * The LinkPostModel model module.
    * @module model/LinkPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkPostModel {
       /**
@@ -15869,7 +17137,7 @@ declare module 'testit-api-client/model/LinkPostModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkPostModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15888,9 +17156,10 @@ declare module 'testit-api-client/model/LinkPostModel' {
        * Constructs a new <code>LinkPostModel</code>.
        * @alias module:model/LinkPostModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean}
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       title: any;
       url: any;
       description: any;
@@ -15907,7 +17176,7 @@ declare module 'testit-api-client/model/LinkPutModel' {
   /**
    * The LinkPutModel model module.
    * @module model/LinkPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkPutModel {
       /**
@@ -15915,7 +17184,7 @@ declare module 'testit-api-client/model/LinkPutModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkPutModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15934,9 +17203,10 @@ declare module 'testit-api-client/model/LinkPutModel' {
        * Constructs a new <code>LinkPutModel</code>.
        * @alias module:model/LinkPutModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean}
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -15954,7 +17224,7 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
   /**
    * The LinkShortApiResult model module.
    * @module model/LinkShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkShortApiResult {
       /**
@@ -15962,7 +17232,7 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, title: any, url: any, type: any): void;
+      static initialize(obj: any, id: any, url: any): void;
       /**
        * Constructs a <code>LinkShortApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -15981,11 +17251,9 @@ declare module 'testit-api-client/model/LinkShortApiResult' {
        * Constructs a new <code>LinkShortApiResult</code>.
        * @alias module:model/LinkShortApiResult
        * @param id {String}
-       * @param title {String}
        * @param url {String}
-       * @param type {String}
        */
-      constructor(id: string, title: string, url: string, type: string);
+      constructor(id: string, url: string);
       id: any;
       title: any;
       url: any;
@@ -16001,7 +17269,7 @@ declare module 'testit-api-client/model/LinkShortModel' {
   /**
    * The LinkShortModel model module.
    * @module model/LinkShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkShortModel {
       /**
@@ -16009,7 +17277,7 @@ declare module 'testit-api-client/model/LinkShortModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, title: any, url: any): void;
+      static initialize(obj: any, id: any, type: any, url: any): void;
       /**
        * Constructs a <code>LinkShortModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -16028,10 +17296,10 @@ declare module 'testit-api-client/model/LinkShortModel' {
        * Constructs a new <code>LinkShortModel</code>.
        * @alias module:model/LinkShortModel
        * @param id {String}
-       * @param title {String}
+       * @param type {module:model/LinkType}
        * @param url {String}
        */
-      constructor(id: string, title: string, url: string);
+      constructor(id: string, type: any, url: string);
       id: any;
       title: any;
       type: any;
@@ -16096,7 +17364,7 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
   /**
    * The LinkUpdateApiModel model module.
    * @module model/LinkUpdateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class LinkUpdateApiModel {
       /**
@@ -16104,7 +17372,7 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>LinkUpdateApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -16123,9 +17391,10 @@ declare module 'testit-api-client/model/LinkUpdateApiModel' {
        * Constructs a new <code>LinkUpdateApiModel</code>.
        * @alias module:model/LinkUpdateApiModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated external service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -16201,7 +17470,7 @@ declare module 'testit-api-client/model/ManualRerunApiResult' {
   /**
    * The ManualRerunApiResult model module.
    * @module model/ManualRerunApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ManualRerunApiResult {
       /**
@@ -16242,7 +17511,7 @@ declare module 'testit-api-client/model/ManualRerunSelectTestResultsApiModel' {
   /**
    * The ManualRerunSelectTestResultsApiModel model module.
    * @module model/ManualRerunSelectTestResultsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ManualRerunSelectTestResultsApiModel {
       /**
@@ -16276,7 +17545,7 @@ declare module 'testit-api-client/model/ManualRerunTestResultApiModel' {
   /**
    * The ManualRerunTestResultApiModel model module.
    * @module model/ManualRerunTestResultApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ManualRerunTestResultApiModel {
       /**
@@ -16308,7 +17577,7 @@ declare module 'testit-api-client/model/NamedEntityApiModel' {
   /**
    * The NamedEntityApiModel model module.
    * @module model/NamedEntityApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class NamedEntityApiModel {
       /**
@@ -16351,7 +17620,7 @@ declare module 'testit-api-client/model/NotificationModel' {
   /**
    * The NotificationModel model module.
    * @module model/NotificationModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class NotificationModel {
       /**
@@ -16413,7 +17682,7 @@ declare module 'testit-api-client/model/NotificationQueryFilterModel' {
   /**
    * The NotificationQueryFilterModel model module.
    * @module model/NotificationQueryFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class NotificationQueryFilterModel {
       /**
@@ -16486,7 +17755,7 @@ declare module 'testit-api-client/model/OpenIdConnectionClientShortModel' {
   /**
    * The OpenIdConnectionClientShortModel model module.
    * @module model/OpenIdConnectionClientShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class OpenIdConnectionClientShortModel {
       /**
@@ -16531,7 +17800,7 @@ declare module 'testit-api-client/model/OpenIdConnectionSettingsShortClientModel
   /**
    * The OpenIdConnectionSettingsShortClientModel model module.
    * @module model/OpenIdConnectionSettingsShortClientModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class OpenIdConnectionSettingsShortClientModel {
       /**
@@ -16564,7 +17833,7 @@ declare module 'testit-api-client/model/Operation' {
   /**
    * The Operation model module.
    * @module model/Operation
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Operation {
       /**
@@ -16599,7 +17868,7 @@ declare module 'testit-api-client/model/Order' {
   /**
    * The Order model module.
    * @module model/Order
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Order {
       /**
@@ -16642,7 +17911,7 @@ declare module 'testit-api-client/model/Page' {
   /**
    * The Page model module.
    * @module model/Page
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class Page {
       /**
@@ -16685,7 +17954,7 @@ declare module 'testit-api-client/model/ParameterApiResult' {
   /**
    * The ParameterApiResult model module.
    * @module model/ParameterApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterApiResult {
       /**
@@ -16742,7 +18011,7 @@ declare module 'testit-api-client/model/ParameterGroupApiResult' {
   /**
    * The ParameterGroupApiResult model module.
    * @module model/ParameterGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterGroupApiResult {
       /**
@@ -16789,7 +18058,7 @@ declare module 'testit-api-client/model/ParameterGroupsFilterApiModel' {
   /**
    * The ParameterGroupsFilterApiModel model module.
    * @module model/ParameterGroupsFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterGroupsFilterApiModel {
       /**
@@ -16824,7 +18093,7 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
   /**
    * The ParameterIterationModel model module.
    * @module model/ParameterIterationModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterIterationModel {
       /**
@@ -16854,6 +18123,7 @@ declare module 'testit-api-client/model/ParameterIterationModel' {
        */
       constructor(id: string);
       id: any;
+      sharedStepId: any;
   }
   namespace ParameterIterationModel {
       let RequiredProperties: string[];
@@ -16865,7 +18135,7 @@ declare module 'testit-api-client/model/ParametersFilterApiModel' {
   /**
    * The ParametersFilterApiModel model module.
    * @module model/ParametersFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParametersFilterApiModel {
       /**
@@ -16899,7 +18169,7 @@ declare module 'testit-api-client/model/ParameterShortApiResult' {
   /**
    * The ParameterShortApiResult model module.
    * @module model/ParameterShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterShortApiResult {
       /**
@@ -16946,7 +18216,7 @@ declare module 'testit-api-client/model/ParameterShortModel' {
   /**
    * The ParameterShortModel model module.
    * @module model/ParameterShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ParameterShortModel {
       /**
@@ -16980,6 +18250,7 @@ declare module 'testit-api-client/model/ParameterShortModel' {
        */
       constructor(id: string, parameterKeyId: string, value: string, name: string, projectIds: Array<string>);
       id: any;
+      sharedStepId: any;
       parameterKeyId: any;
       value: any;
       name: any;
@@ -16995,7 +18266,7 @@ declare module 'testit-api-client/model/PeriodViewModel' {
   /**
    * The PeriodViewModel model module.
    * @module model/PeriodViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class PeriodViewModel {
       /**
@@ -17028,7 +18299,7 @@ declare module 'testit-api-client/model/PeriodViewModelChangedFieldViewModel' {
   /**
    * The PeriodViewModelChangedFieldViewModel model module.
    * @module model/PeriodViewModelChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class PeriodViewModelChangedFieldViewModel {
       /**
@@ -17061,7 +18332,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiModel' {
   /**
    * The PreviewsIssueLinkApiModel model module.
    * @module model/PreviewsIssueLinkApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class PreviewsIssueLinkApiModel {
       /**
@@ -17104,7 +18375,7 @@ declare module 'testit-api-client/model/PreviewsIssueLinkApiResult' {
   /**
    * The PreviewsIssueLinkApiResult model module.
    * @module model/PreviewsIssueLinkApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class PreviewsIssueLinkApiResult {
       /**
@@ -17147,7 +18418,7 @@ declare module 'testit-api-client/model/ProblemDetails' {
   /**
    * The ProblemDetails model module.
    * @module model/ProblemDetails
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProblemDetails {
       /**
@@ -17183,7 +18454,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
   /**
    * The ProjectApiResult model module.
    * @module model/ProjectApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectApiResult {
       /**
@@ -17191,7 +18462,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, name: any, isFavorite: any, isDeleted: any, createdDate: any, createdById: any, globalId: any, type: any, workflowId: any): void;
+      static initialize(obj: any, id: any, name: any, isFavorite: any, workItemsCount: any, isDeleted: any, createdDate: any, createdById: any, globalId: any, type: any, workflowId: any): void;
       /**
        * Constructs a <code>ProjectApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -17212,6 +18483,7 @@ declare module 'testit-api-client/model/ProjectApiResult' {
        * @param id {String} Unique ID of the project
        * @param name {String} Name of the project
        * @param isFavorite {Boolean} Indicates if the project is marked as favorite
+       * @param workItemsCount {Number} Number of work items in the project
        * @param isDeleted {Boolean} Indicates if the project is deleted
        * @param createdDate {Date} Creation date of the project
        * @param createdById {String} Unique ID of the project creator
@@ -17219,13 +18491,12 @@ declare module 'testit-api-client/model/ProjectApiResult' {
        * @param type {module:model/ProjectType} Type of the project
        * @param workflowId {String} ID of the workflow used in project
        */
-      constructor(id: string, name: string, isFavorite: boolean, isDeleted: boolean, createdDate: Date, createdById: string, globalId: number, type: any, workflowId: string);
+      constructor(id: string, name: string, isFavorite: boolean, workItemsCount: number, isDeleted: boolean, createdDate: Date, createdById: string, globalId: number, type: any, workflowId: string);
       id: any;
       description: any;
       name: any;
       isFavorite: any;
-      attributesScheme: any;
-      testPlansAttributesScheme: any;
+      workItemsCount: any;
       testCasesCount: any;
       sharedStepsCount: any;
       checkListsCount: any;
@@ -17237,7 +18508,6 @@ declare module 'testit-api-client/model/ProjectApiResult' {
       modifiedById: any;
       globalId: any;
       type: any;
-      isFlakyAuto: any;
       workflowId: any;
   }
   namespace ProjectApiResult {
@@ -17250,7 +18520,7 @@ declare module 'testit-api-client/model/ProjectAttributesFilterModel' {
   /**
    * The ProjectAttributesFilterModel model module.
    * @module model/ProjectAttributesFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectAttributesFilterModel {
       /**
@@ -17296,7 +18566,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributesTemplatesFilterMo
   /**
    * The ProjectCustomAttributesTemplatesFilterModel model module.
    * @module model/ProjectCustomAttributesTemplatesFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectCustomAttributesTemplatesFilterModel {
       /**
@@ -17329,7 +18599,7 @@ declare module 'testit-api-client/model/ProjectCustomAttributeTemplateGetModel' 
   /**
    * The ProjectCustomAttributeTemplateGetModel model module.
    * @module model/ProjectCustomAttributeTemplateGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectCustomAttributeTemplateGetModel {
       /**
@@ -17376,7 +18646,7 @@ declare module 'testit-api-client/model/ProjectDetailedFailureCategoryApiResult'
   /**
    * The ProjectDetailedFailureCategoryApiResult model module.
    * @module model/ProjectDetailedFailureCategoryApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectDetailedFailureCategoryApiResult {
       /**
@@ -17432,7 +18702,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceApiResult' {
   /**
    * The ProjectExternalServiceApiResult model module.
    * @module model/ProjectExternalServiceApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectExternalServiceApiResult {
       /**
@@ -17479,7 +18749,7 @@ declare module 'testit-api-client/model/ProjectExternalServicesApiResult' {
   /**
    * The ProjectExternalServicesApiResult model module.
    * @module model/ProjectExternalServicesApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectExternalServicesApiResult {
       /**
@@ -17520,7 +18790,7 @@ declare module 'testit-api-client/model/ProjectExternalServiceSettingsApiResult'
   /**
    * The ProjectExternalServiceSettingsApiResult model module.
    * @module model/ProjectExternalServiceSettingsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectExternalServiceSettingsApiResult {
       /**
@@ -17552,7 +18822,7 @@ declare module 'testit-api-client/model/ProjectExtractionModel' {
   /**
    * The ProjectExtractionModel model module.
    * @module model/ProjectExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectExtractionModel {
       /**
@@ -17584,7 +18854,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryApiResult' {
   /**
    * The ProjectFailureCategoryApiResult model module.
    * @module model/ProjectFailureCategoryApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectFailureCategoryApiResult {
       /**
@@ -17640,7 +18910,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResult model module.
    * @module model/ProjectFailureCategoryGroupItemApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectFailureCategoryGroupItemApiResult {
       /**
@@ -17682,7 +18952,7 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   /**
    * The ProjectFailureCategoryGroupItemApiResultReply model module.
    * @module model/ProjectFailureCategoryGroupItemApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectFailureCategoryGroupItemApiResultReply {
       /**
@@ -17720,78 +18990,12 @@ declare module 'testit-api-client/model/ProjectFailureCategoryGroupItemApiResult
   }
 
 }
-declare module 'testit-api-client/model/ProjectModel' {
-  export default ProjectModel;
-  /**
-   * The ProjectModel model module.
-   * @module model/ProjectModel
-   * @version 7.2.6
-   */
-  class ProjectModel {
-      /**
-       * Initializes the fields of this object.
-       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-       * Only for internal use.
-       */
-      static initialize(obj: any, id: any, name: any, isFavorite: any, isDeleted: any, createdDate: any, createdById: any, globalId: any, type: any, workflowId: any): void;
-      /**
-       * Constructs a <code>ProjectModel</code> from a plain JavaScript object, optionally creating a new instance.
-       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/ProjectModel} obj Optional instance to populate.
-       * @return {module:model/ProjectModel} The populated <code>ProjectModel</code> instance.
-       */
-      static constructFromObject(data: Object, obj: any): any;
-      /**
-       * Validates the JSON data with respect to <code>ProjectModel</code>.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectModel</code>.
-       */
-      static validateJSON(data: Object): boolean;
-      /**
-       * Constructs a new <code>ProjectModel</code>.
-       * @alias module:model/ProjectModel
-       * @param id {String} Unique ID of the project
-       * @param name {String} Name of the project
-       * @param isFavorite {Boolean} Indicates if the project is marked as favorite
-       * @param isDeleted {Boolean} Indicates if the project is deleted
-       * @param createdDate {Date} Creation date of the project
-       * @param createdById {String} Unique ID of the project creator
-       * @param globalId {Number} Global ID of the project
-       * @param type {module:model/ProjectTypeModel} Type of the project
-       * @param workflowId {String} Identifier of current workflow
-       */
-      constructor(id: string, name: string, isFavorite: boolean, isDeleted: boolean, createdDate: Date, createdById: string, globalId: number, type: any, workflowId: string);
-      id: any;
-      description: any;
-      name: any;
-      isFavorite: any;
-      attributesScheme: any;
-      testPlansAttributesScheme: any;
-      testCasesCount: any;
-      sharedStepsCount: any;
-      checkListsCount: any;
-      autoTestsCount: any;
-      isDeleted: any;
-      createdDate: any;
-      modifiedDate: any;
-      createdById: any;
-      modifiedById: any;
-      globalId: any;
-      type: any;
-      workflowId: any;
-  }
-  namespace ProjectModel {
-      let RequiredProperties: string[];
-  }
-
-}
 declare module 'testit-api-client/model/ProjectNameApiResult' {
   export default ProjectNameApiResult;
   /**
    * The ProjectNameApiResult model module.
    * @module model/ProjectNameApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectNameApiResult {
       /**
@@ -17834,7 +19038,7 @@ declare module 'testit-api-client/model/ProjectSelectModel' {
   /**
    * The ProjectSelectModel model module.
    * @module model/ProjectSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectSelectModel {
       /**
@@ -17867,7 +19071,7 @@ declare module 'testit-api-client/model/ProjectsFilterModel' {
   /**
    * The ProjectsFilterModel model module.
    * @module model/ProjectsFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectsFilterModel {
       /**
@@ -17909,7 +19113,7 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
   /**
    * The ProjectShortApiResult model module.
    * @module model/ProjectShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectShortApiResult {
       /**
@@ -17955,12 +19159,153 @@ declare module 'testit-api-client/model/ProjectShortApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/ProjectShortApiResultGroup' {
+  export default ProjectShortApiResultGroup;
+  /**
+   * The ProjectShortApiResultGroup model module.
+   * @module model/ProjectShortApiResultGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class ProjectShortApiResultGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>ProjectShortApiResultGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ProjectShortApiResultGroup} obj Optional instance to populate.
+       * @return {module:model/ProjectShortApiResultGroup} The populated <code>ProjectShortApiResultGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>ProjectShortApiResultGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortApiResultGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>ProjectShortApiResultGroup</code>.
+       * @alias module:model/ProjectShortApiResultGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/ProjectShortApiResult>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace ProjectShortApiResultGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/ProjectShortApiResultGroupedReply' {
+  export default ProjectShortApiResultGroupedReply;
+  /**
+   * The ProjectShortApiResultGroupedReply model module.
+   * @module model/ProjectShortApiResultGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class ProjectShortApiResultGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>ProjectShortApiResultGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ProjectShortApiResultGroupedReply} obj Optional instance to populate.
+       * @return {module:model/ProjectShortApiResultGroupedReply} The populated <code>ProjectShortApiResultGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>ProjectShortApiResultGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortApiResultGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>ProjectShortApiResultGroupedReply</code>.
+       * @alias module:model/ProjectShortApiResultGroupedReply
+       * @param groups {Array.<module:model/ProjectShortApiResultGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace ProjectShortApiResultGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/ProjectShortApiResultIReply' {
+  export default ProjectShortApiResultIReply;
+  /**
+   * The ProjectShortApiResultIReply model module.
+   * @module model/ProjectShortApiResultIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class ProjectShortApiResultIReply {
+      /**
+       * Constructs a <code>ProjectShortApiResultIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/ProjectShortApiResultIReply} obj Optional instance to populate.
+       * @return {module:model/ProjectShortApiResultIReply} The populated <code>ProjectShortApiResultIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of ProjectShortApiResultIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/ProjectShortApiResultIReply} An instance of ProjectShortApiResultIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>ProjectShortApiResultIReply</code>.
+       * @alias module:model/ProjectShortApiResultIReply
+       * @param {(module:model/ProjectShortApiResultGroupedReply|module:model/ProjectShortApiResultReply)} instance The actual instance to initialize ProjectShortApiResultIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>ProjectShortApiResultGroupedReply</code>, <code>ProjectShortApiResultReply</code>.
+       * @return {(module:model/ProjectShortApiResultGroupedReply|module:model/ProjectShortApiResultReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>ProjectShortApiResultGroupedReply</code>, <code>ProjectShortApiResultReply</code>.
+       * @param {(module:model/ProjectShortApiResultGroupedReply|module:model/ProjectShortApiResultReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace ProjectShortApiResultIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/ProjectShortApiResultReply' {
   export default ProjectShortApiResultReply;
   /**
    * The ProjectShortApiResultReply model module.
    * @module model/ProjectShortApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectShortApiResultReply {
       /**
@@ -18003,7 +19348,7 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
   /**
    * The ProjectShortestModel model module.
    * @module model/ProjectShortestModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectShortestModel {
       /**
@@ -18047,76 +19392,12 @@ declare module 'testit-api-client/model/ProjectShortestModel' {
   }
 
 }
-declare module 'testit-api-client/model/ProjectShortModel' {
-  export default ProjectShortModel;
-  /**
-   * The ProjectShortModel model module.
-   * @module model/ProjectShortModel
-   * @version 7.2.6
-   */
-  class ProjectShortModel {
-      /**
-       * Initializes the fields of this object.
-       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-       * Only for internal use.
-       */
-      static initialize(obj: any, id: any, name: any, isFavorite: any, isDeleted: any, createdDate: any, createdById: any, globalId: any, type: any, workflowId: any): void;
-      /**
-       * Constructs a <code>ProjectShortModel</code> from a plain JavaScript object, optionally creating a new instance.
-       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @param {module:model/ProjectShortModel} obj Optional instance to populate.
-       * @return {module:model/ProjectShortModel} The populated <code>ProjectShortModel</code> instance.
-       */
-      static constructFromObject(data: Object, obj: any): any;
-      /**
-       * Validates the JSON data with respect to <code>ProjectShortModel</code>.
-       * @param {Object} data The plain JavaScript object bearing properties of interest.
-       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectShortModel</code>.
-       */
-      static validateJSON(data: Object): boolean;
-      /**
-       * Constructs a new <code>ProjectShortModel</code>.
-       * @alias module:model/ProjectShortModel
-       * @param id {String} Unique ID of the project
-       * @param name {String} Name of the project
-       * @param isFavorite {Boolean} Indicates if the project is marked as favorite
-       * @param isDeleted {Boolean} Indicates if the project is deleted
-       * @param createdDate {Date} Creation date of the project
-       * @param createdById {String} Unique ID of the project creator
-       * @param globalId {Number} Global ID of the project
-       * @param type {module:model/ProjectTypeModel} Type of the project
-       * @param workflowId {String}
-       */
-      constructor(id: string, name: string, isFavorite: boolean, isDeleted: boolean, createdDate: Date, createdById: string, globalId: number, type: any, workflowId: string);
-      id: any;
-      description: any;
-      name: any;
-      isFavorite: any;
-      testCasesCount: any;
-      sharedStepsCount: any;
-      checkListsCount: any;
-      autoTestsCount: any;
-      isDeleted: any;
-      createdDate: any;
-      modifiedDate: any;
-      createdById: any;
-      modifiedById: any;
-      globalId: any;
-      type: any;
-      workflowId: any;
-  }
-  namespace ProjectShortModel {
-      let RequiredProperties: string[];
-  }
-
-}
 declare module 'testit-api-client/model/ProjectTestPlansFilterModel' {
   export default ProjectTestPlansFilterModel;
   /**
    * The ProjectTestPlansFilterModel model module.
    * @module model/ProjectTestPlansFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ProjectTestPlansFilterModel {
       /**
@@ -18222,7 +19503,7 @@ declare module 'testit-api-client/model/ReplaceProjectExternalServiceApiModel' {
   /**
    * The ReplaceProjectExternalServiceApiModel model module.
    * @module model/ReplaceProjectExternalServiceApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ReplaceProjectExternalServiceApiModel {
       /**
@@ -18367,7 +19648,7 @@ declare module 'testit-api-client/model/RerunsApiResult' {
   /**
    * The RerunsApiResult model module.
    * @module model/RerunsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class RerunsApiResult {
       /**
@@ -18410,7 +19691,7 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
   /**
    * The RerunTestResultApiResult model module.
    * @module model/RerunTestResultApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class RerunTestResultApiResult {
       /**
@@ -18452,12 +19733,100 @@ declare module 'testit-api-client/model/RerunTestResultApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/RoleApiModel' {
+  export default RoleApiModel;
+  /**
+   * The RoleApiModel model module.
+   * @module model/RoleApiModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class RoleApiModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, id: any, name: any, isSystem: any): void;
+      /**
+       * Constructs a <code>RoleApiModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/RoleApiModel} obj Optional instance to populate.
+       * @return {module:model/RoleApiModel} The populated <code>RoleApiModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>RoleApiModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RoleApiModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>RoleApiModel</code>.
+       * @alias module:model/RoleApiModel
+       * @param id {String}
+       * @param name {String}
+       * @param isSystem {Boolean}
+       */
+      constructor(id: string, name: string, isSystem: boolean);
+      id: any;
+      name: any;
+      isSystem: any;
+  }
+  namespace RoleApiModel {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/RoleApiModelApiCollection' {
+  export default RoleApiModelApiCollection;
+  /**
+   * The RoleApiModelApiCollection model module.
+   * @module model/RoleApiModelApiCollection
+   * @version 7.3.0-TMS-5.8
+   */
+  class RoleApiModelApiCollection {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>RoleApiModelApiCollection</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/RoleApiModelApiCollection} obj Optional instance to populate.
+       * @return {module:model/RoleApiModelApiCollection} The populated <code>RoleApiModelApiCollection</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>RoleApiModelApiCollection</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RoleApiModelApiCollection</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>RoleApiModelApiCollection</code>.
+       * @alias module:model/RoleApiModelApiCollection
+       * @param data {Array.<module:model/RoleApiModel>} Items
+       * @param totalCount {Number} Total count
+       */
+      constructor(data: Array<any>, totalCount: number);
+      data: any;
+      totalCount: any;
+  }
+  namespace RoleApiModelApiCollection {
+      let RequiredProperties: string[];
+  }
+
+}
 declare module 'testit-api-client/model/SearchCustomAttributeTemplateGetModel' {
   export default SearchCustomAttributeTemplateGetModel;
   /**
    * The SearchCustomAttributeTemplateGetModel model module.
    * @module model/SearchCustomAttributeTemplateGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchCustomAttributeTemplateGetModel {
       /**
@@ -18506,7 +19875,7 @@ declare module 'testit-api-client/model/SearchExternalIssuesApiModel' {
   /**
    * The SearchExternalIssuesApiModel model module.
    * @module model/SearchExternalIssuesApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchExternalIssuesApiModel {
       /**
@@ -18547,7 +19916,7 @@ declare module 'testit-api-client/model/SearchTestRunsApiModel' {
   /**
    * The SearchTestRunsApiModel model module.
    * @module model/SearchTestRunsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchTestRunsApiModel {
       /**
@@ -18587,7 +19956,7 @@ declare module 'testit-api-client/model/SearchTestStatusesApiModel' {
   /**
    * The SearchTestStatusesApiModel model module.
    * @module model/SearchTestStatusesApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchTestStatusesApiModel {
       /**
@@ -18619,7 +19988,7 @@ declare module 'testit-api-client/model/SearchWebhooksQueryModel' {
   /**
    * The SearchWebhooksQueryModel model module.
    * @module model/SearchWebhooksQueryModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchWebhooksQueryModel {
       /**
@@ -18655,7 +20024,7 @@ declare module 'testit-api-client/model/SearchWorkflowProjectsApiModel' {
   /**
    * The SearchWorkflowProjectsApiModel model module.
    * @module model/SearchWorkflowProjectsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchWorkflowProjectsApiModel {
       /**
@@ -18687,7 +20056,7 @@ declare module 'testit-api-client/model/SearchWorkflowsApiModel' {
   /**
    * The SearchWorkflowsApiModel model module.
    * @module model/SearchWorkflowsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchWorkflowsApiModel {
       /**
@@ -18719,7 +20088,7 @@ declare module 'testit-api-client/model/SearchWorkItemLinkUrlsApiResult' {
   /**
    * The SearchWorkItemLinkUrlsApiResult model module.
    * @module model/SearchWorkItemLinkUrlsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SearchWorkItemLinkUrlsApiResult {
       /**
@@ -18760,7 +20129,7 @@ declare module 'testit-api-client/model/SectionModel' {
   /**
    * The SectionModel model module.
    * @module model/SectionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionModel {
       /**
@@ -18813,7 +20182,7 @@ declare module 'testit-api-client/model/SectionMoveModel' {
   /**
    * The SectionMoveModel model module.
    * @module model/SectionMoveModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionMoveModel {
       /**
@@ -18859,7 +20228,7 @@ declare module 'testit-api-client/model/SectionPostModel' {
   /**
    * The SectionPostModel model module.
    * @module model/SectionPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionPostModel {
       /**
@@ -18907,7 +20276,7 @@ declare module 'testit-api-client/model/SectionPutModel' {
   /**
    * The SectionPutModel model module.
    * @module model/SectionPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionPutModel {
       /**
@@ -18957,7 +20326,7 @@ declare module 'testit-api-client/model/SectionRenameModel' {
   /**
    * The SectionRenameModel model module.
    * @module model/SectionRenameModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionRenameModel {
       /**
@@ -19000,7 +20369,7 @@ declare module 'testit-api-client/model/SectionWithStepsModel' {
   /**
    * The SectionWithStepsModel model module.
    * @module model/SectionWithStepsModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SectionWithStepsModel {
       /**
@@ -19056,7 +20425,7 @@ declare module 'testit-api-client/model/SelectTagsApiModel' {
   /**
    * The SelectTagsApiModel model module.
    * @module model/SelectTagsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SelectTagsApiModel {
       /**
@@ -19089,7 +20458,7 @@ declare module 'testit-api-client/model/SharedStepChangeViewModel' {
   /**
    * The SharedStepChangeViewModel model module.
    * @module model/SharedStepChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepChangeViewModel {
       /**
@@ -19136,7 +20505,7 @@ declare module 'testit-api-client/model/SharedStepModel' {
   /**
    * The SharedStepModel model module.
    * @module model/SharedStepModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepModel {
       /**
@@ -19185,7 +20554,7 @@ declare module 'testit-api-client/model/SharedStepReferenceModel' {
   /**
    * The SharedStepReferenceModel model module.
    * @module model/SharedStepReferenceModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepReferenceModel {
       /**
@@ -19258,7 +20627,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionModel' {
   /**
    * The SharedStepReferenceSectionModel model module.
    * @module model/SharedStepReferenceSectionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepReferenceSectionModel {
       /**
@@ -19312,7 +20681,7 @@ declare module 'testit-api-client/model/SharedStepReferenceSectionsQueryFilterMo
   /**
    * The SharedStepReferenceSectionsQueryFilterModel model module.
    * @module model/SharedStepReferenceSectionsQueryFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepReferenceSectionsQueryFilterModel {
       /**
@@ -19348,7 +20717,7 @@ declare module 'testit-api-client/model/SharedStepReferencesQueryFilterModel' {
   /**
    * The SharedStepReferencesQueryFilterModel model module.
    * @module model/SharedStepReferencesQueryFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepReferencesQueryFilterModel {
       /**
@@ -19391,7 +20760,7 @@ declare module 'testit-api-client/model/SharedStepResultApiModel' {
   /**
    * The SharedStepResultApiModel model module.
    * @module model/SharedStepResultApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class SharedStepResultApiModel {
       /**
@@ -19434,7 +20803,7 @@ declare module 'testit-api-client/model/ShortConfiguration' {
   /**
    * The ShortConfiguration model module.
    * @module model/ShortConfiguration
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ShortConfiguration {
       /**
@@ -19477,7 +20846,7 @@ declare module 'testit-api-client/model/StepCommentApiModel' {
   /**
    * The StepCommentApiModel model module.
    * @module model/StepCommentApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StepCommentApiModel {
       /**
@@ -19532,7 +20901,7 @@ declare module 'testit-api-client/model/StepModel' {
   /**
    * The StepModel model module.
    * @module model/StepModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StepModel {
       /**
@@ -19579,7 +20948,7 @@ declare module 'testit-api-client/model/StepPostModel' {
   /**
    * The StepPostModel model module.
    * @module model/StepPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StepPostModel {
       /**
@@ -19615,7 +20984,7 @@ declare module 'testit-api-client/model/StepPutModel' {
   /**
    * The StepPutModel model module.
    * @module model/StepPutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StepPutModel {
       /**
@@ -19661,7 +21030,7 @@ declare module 'testit-api-client/model/StepResultApiModel' {
   /**
    * The StepResultApiModel model module.
    * @module model/StepResultApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StepResultApiModel {
       /**
@@ -19707,7 +21076,7 @@ declare module 'testit-api-client/model/StringArrayChangedFieldViewModel' {
   /**
    * The StringArrayChangedFieldViewModel model module.
    * @module model/StringArrayChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StringArrayChangedFieldViewModel {
       /**
@@ -19740,7 +21109,7 @@ declare module 'testit-api-client/model/StringChangedFieldViewModel' {
   /**
    * The StringChangedFieldViewModel model module.
    * @module model/StringChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StringChangedFieldViewModel {
       /**
@@ -19773,7 +21142,7 @@ declare module 'testit-api-client/model/StringChangedFieldWithDiffsViewModel' {
   /**
    * The StringChangedFieldWithDiffsViewModel model module.
    * @module model/StringChangedFieldWithDiffsViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StringChangedFieldWithDiffsViewModel {
       /**
@@ -19807,7 +21176,7 @@ declare module 'testit-api-client/model/StringExtractionModel' {
   /**
    * The StringExtractionModel model module.
    * @module model/StringExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class StringExtractionModel {
       /**
@@ -19840,7 +21209,7 @@ declare module 'testit-api-client/model/TagApiModel' {
   /**
    * The TagApiModel model module.
    * @module model/TagApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagApiModel {
       /**
@@ -19881,7 +21250,7 @@ declare module 'testit-api-client/model/TagApiResult' {
   /**
    * The TagApiResult model module.
    * @module model/TagApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagApiResult {
       /**
@@ -19930,7 +21299,7 @@ declare module 'testit-api-client/model/TagModel' {
   /**
    * The TagModel model module.
    * @module model/TagModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagModel {
       /**
@@ -19971,7 +21340,7 @@ declare module 'testit-api-client/model/TagsExtractionApiModel' {
   /**
    * The TagsExtractionApiModel model module.
    * @module model/TagsExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagsExtractionApiModel {
       /**
@@ -20003,7 +21372,7 @@ declare module 'testit-api-client/model/TagsFilterApiModel' {
   /**
    * The TagsFilterApiModel model module.
    * @module model/TagsFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagsFilterApiModel {
       /**
@@ -20037,7 +21406,7 @@ declare module 'testit-api-client/model/TagShortApiResult' {
   /**
    * The TagShortApiResult model module.
    * @module model/TagShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TagShortApiResult {
       /**
@@ -20078,7 +21447,7 @@ declare module 'testit-api-client/model/TestPlanApiResult' {
   /**
    * The TestPlanApiResult model module.
    * @module model/TestPlanApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanApiResult {
       /**
@@ -20147,7 +21516,7 @@ declare module 'testit-api-client/model/TestPlanChangedFieldsViewModel' {
   /**
    * The TestPlanChangedFieldsViewModel model module.
    * @module model/TestPlanChangedFieldsViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanChangedFieldsViewModel {
       /**
@@ -20191,7 +21560,7 @@ declare module 'testit-api-client/model/TestPlanChangeModel' {
   /**
    * The TestPlanChangeModel model module.
    * @module model/TestPlanChangeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanChangeModel {
       /**
@@ -20239,7 +21608,7 @@ declare module 'testit-api-client/model/TestPlanExtractionModel' {
   /**
    * The TestPlanExtractionModel model module.
    * @module model/TestPlanExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanExtractionModel {
       /**
@@ -20271,7 +21640,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatus' {
   /**
    * The TestPlanGroupByStatus model module.
    * @module model/TestPlanGroupByStatus
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByStatus {
       /**
@@ -20314,7 +21683,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusCode' {
   /**
    * The TestPlanGroupByStatusCode model module.
    * @module model/TestPlanGroupByStatusCode
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByStatusCode {
       /**
@@ -20357,7 +21726,7 @@ declare module 'testit-api-client/model/TestPlanGroupByStatusType' {
   /**
    * The TestPlanGroupByStatusType model module.
    * @module model/TestPlanGroupByStatusType
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByStatusType {
       /**
@@ -20400,7 +21769,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTester' {
   /**
    * The TestPlanGroupByTester model module.
    * @module model/TestPlanGroupByTester
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByTester {
       /**
@@ -20442,7 +21811,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatus' {
   /**
    * The TestPlanGroupByTesterAndStatus model module.
    * @module model/TestPlanGroupByTesterAndStatus
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByTesterAndStatus {
       /**
@@ -20486,7 +21855,7 @@ declare module 'testit-api-client/model/TestPlanGroupByTesterAndStatusCode' {
   /**
    * The TestPlanGroupByTesterAndStatusCode model module.
    * @module model/TestPlanGroupByTesterAndStatusCode
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanGroupByTesterAndStatusCode {
       /**
@@ -20530,7 +21899,7 @@ declare module 'testit-api-client/model/TestPlanLink' {
   /**
    * The TestPlanLink model module.
    * @module model/TestPlanLink
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanLink {
       /**
@@ -20568,7 +21937,7 @@ declare module 'testit-api-client/model/TestPlanModel' {
   /**
    * The TestPlanModel model module.
    * @module model/TestPlanModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanModel {
       /**
@@ -20637,7 +22006,7 @@ declare module 'testit-api-client/model/TestPlanSelectModel' {
   /**
    * The TestPlanSelectModel model module.
    * @module model/TestPlanSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanSelectModel {
       /**
@@ -20679,7 +22048,7 @@ declare module 'testit-api-client/model/TestPlanShortModel' {
   /**
    * The TestPlanShortModel model module.
    * @module model/TestPlanShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanShortModel {
       /**
@@ -20802,7 +22171,7 @@ declare module 'testit-api-client/model/TestPlanSummaryModel' {
   /**
    * The TestPlanSummaryModel model module.
    * @module model/TestPlanSummaryModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanSummaryModel {
       /**
@@ -20854,7 +22223,7 @@ declare module 'testit-api-client/model/TestPlanTagApiResult' {
   /**
    * The TestPlanTagApiResult model module.
    * @module model/TestPlanTagApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTagApiResult {
       /**
@@ -20895,7 +22264,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiModel' {
   /**
    * The TestPlanTestPointsAnalyticsApiModel model module.
    * @module model/TestPlanTestPointsAnalyticsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsAnalyticsApiModel {
       /**
@@ -20928,7 +22297,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAnalyticsApiResult' {
   /**
    * The TestPlanTestPointsAnalyticsApiResult model module.
    * @module model/TestPlanTestPointsAnalyticsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsAnalyticsApiResult {
       /**
@@ -20979,7 +22348,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsApiModel' {
   /**
    * The TestPlanTestPointsApiModel model module.
    * @module model/TestPlanTestPointsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsApiModel {
       /**
@@ -21013,7 +22382,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRerunApiModel
   /**
    * The TestPlanTestPointsAutoTestsRerunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRerunApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsAutoTestsRerunApiModel {
       /**
@@ -21047,7 +22416,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsAutoTestsRunApiModel' 
   /**
    * The TestPlanTestPointsAutoTestsRunApiModel model module.
    * @module model/TestPlanTestPointsAutoTestsRunApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsAutoTestsRunApiModel {
       /**
@@ -21094,7 +22463,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsExtractionApiModel' {
   /**
    * The TestPlanTestPointsExtractionApiModel model module.
    * @module model/TestPlanTestPointsExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsExtractionApiModel {
       /**
@@ -21126,7 +22495,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiModel' {
   /**
    * The TestPlanTestPointsGroupApiModel model module.
    * @module model/TestPlanTestPointsGroupApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsGroupApiModel {
       /**
@@ -21168,7 +22537,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupApiResult' {
   /**
    * The TestPlanTestPointsGroupApiResult model module.
    * @module model/TestPlanTestPointsGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsGroupApiResult {
       /**
@@ -21213,7 +22582,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchApiResult' 
   /**
    * The TestPlanTestPointsGroupSearchApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsGroupSearchApiResult {
       /**
@@ -21258,7 +22627,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsGroupSearchItemApiResu
   /**
    * The TestPlanTestPointsGroupSearchItemApiResult model module.
    * @module model/TestPlanTestPointsGroupSearchItemApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsGroupSearchItemApiResult {
       /**
@@ -21301,7 +22670,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsInquiryApiModel' {
   /**
    * The TestPlanTestPointsInquiryApiModel model module.
    * @module model/TestPlanTestPointsInquiryApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsInquiryApiModel {
       /**
@@ -21343,7 +22712,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiModel' {
   /**
    * The TestPlanTestPointsSearchApiModel model module.
    * @module model/TestPlanTestPointsSearchApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsSearchApiModel {
       /**
@@ -21397,7 +22766,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchApiResult' {
   /**
    * The TestPlanTestPointsSearchApiResult model module.
    * @module model/TestPlanTestPointsSearchApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsSearchApiResult {
       /**
@@ -21457,7 +22826,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSearchStatusCountersAp
   /**
    * The TestPlanTestPointsSearchStatusCountersApiResult model module.
    * @module model/TestPlanTestPointsSearchStatusCountersApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsSearchStatusCountersApiResult {
       /**
@@ -21504,7 +22873,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSectionSearchApiResult
   /**
    * The TestPlanTestPointsSectionSearchApiResult model module.
    * @module model/TestPlanTestPointsSectionSearchApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsSectionSearchApiResult {
       /**
@@ -21548,7 +22917,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsSetTestersApiModel' {
   /**
    * The TestPlanTestPointsSetTestersApiModel model module.
    * @module model/TestPlanTestPointsSetTestersApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsSetTestersApiModel {
       /**
@@ -21591,7 +22960,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusCodeGroupApiResu
   /**
    * The TestPlanTestPointsStatusCodeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusCodeGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsStatusCodeGroupApiResult {
       /**
@@ -21636,7 +23005,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusGroupApiResult' 
   /**
    * The TestPlanTestPointsStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsStatusGroupApiResult {
       /**
@@ -21679,7 +23048,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsStatusTypeGroupApiResu
   /**
    * The TestPlanTestPointsStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsStatusTypeGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsStatusTypeGroupApiResult {
       /**
@@ -21722,7 +23091,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusGroupAp
   /**
    * The TestPlanTestPointsTesterAndStatusGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsTesterAndStatusGroupApiResult {
       /**
@@ -21767,7 +23136,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterAndStatusTypeGro
   /**
    * The TestPlanTestPointsTesterAndStatusTypeGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterAndStatusTypeGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsTesterAndStatusTypeGroupApiResult {
       /**
@@ -21812,7 +23181,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTesterGroupApiResult' 
   /**
    * The TestPlanTestPointsTesterGroupApiResult model module.
    * @module model/TestPlanTestPointsTesterGroupApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsTesterGroupApiResult {
       /**
@@ -21855,7 +23224,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsTestSuiteSearchApiResu
   /**
    * The TestPlanTestPointsTestSuiteSearchApiResult model module.
    * @module model/TestPlanTestPointsTestSuiteSearchApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsTestSuiteSearchApiResult {
       /**
@@ -21898,7 +23267,7 @@ declare module 'testit-api-client/model/TestPlanTestPointsWorkItemSearchApiResul
   /**
    * The TestPlanTestPointsWorkItemSearchApiResult model module.
    * @module model/TestPlanTestPointsWorkItemSearchApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanTestPointsWorkItemSearchApiResult {
       /**
@@ -21967,7 +23336,7 @@ declare module 'testit-api-client/model/TestPlanWithAnalyticModel' {
   /**
    * The TestPlanWithAnalyticModel model module.
    * @module model/TestPlanWithAnalyticModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanWithAnalyticModel {
       /**
@@ -22038,7 +23407,7 @@ declare module 'testit-api-client/model/TestPlanWithTestSuiteTreeModel' {
   /**
    * The TestPlanWithTestSuiteTreeModel model module.
    * @module model/TestPlanWithTestSuiteTreeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPlanWithTestSuiteTreeModel {
       /**
@@ -22109,7 +23478,7 @@ declare module 'testit-api-client/model/TestPoint' {
   /**
    * The TestPoint model module.
    * @module model/TestPoint
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPoint {
       /**
@@ -22162,7 +23531,7 @@ declare module 'testit-api-client/model/TestPointAnalyticResult' {
   /**
    * The TestPointAnalyticResult model module.
    * @module model/TestPointAnalyticResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointAnalyticResult {
       /**
@@ -22215,7 +23584,7 @@ declare module 'testit-api-client/model/TestPointByTestSuiteModel' {
   /**
    * The TestPointByTestSuiteModel model module.
    * @module model/TestPointByTestSuiteModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointByTestSuiteModel {
       /**
@@ -22264,7 +23633,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModel' {
   /**
    * The TestPointChangeViewModel model module.
    * @module model/TestPointChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointChangeViewModel {
       /**
@@ -22308,7 +23677,7 @@ declare module 'testit-api-client/model/TestPointChangeViewModelChangedFieldView
   /**
    * The TestPointChangeViewModelChangedFieldViewModel model module.
    * @module model/TestPointChangeViewModelChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointChangeViewModelChangedFieldViewModel {
       /**
@@ -22341,7 +23710,7 @@ declare module 'testit-api-client/model/TestPointFilterModel' {
   /**
    * The TestPointFilterModel model module.
    * @module model/TestPointFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointFilterModel {
       /**
@@ -22397,7 +23766,7 @@ declare module 'testit-api-client/model/TestPointFilterRequestModel' {
   /**
    * The TestPointFilterRequestModel model module.
    * @module model/TestPointFilterRequestModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointFilterRequestModel {
       /**
@@ -22453,7 +23822,7 @@ declare module 'testit-api-client/model/TestPointResultApiResult' {
   /**
    * The TestPointResultApiResult model module.
    * @module model/TestPointResultApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointResultApiResult {
       /**
@@ -22500,7 +23869,7 @@ declare module 'testit-api-client/model/TestPointSelectModel' {
   /**
    * The TestPointSelectModel model module.
    * @module model/TestPointSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointSelectModel {
       /**
@@ -22533,7 +23902,7 @@ declare module 'testit-api-client/model/TestPointSelector' {
   /**
    * The TestPointSelector model module.
    * @module model/TestPointSelector
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointSelector {
       /**
@@ -22576,7 +23945,7 @@ declare module 'testit-api-client/model/TestPointsExtractionModel' {
   /**
    * The TestPointsExtractionModel model module.
    * @module model/TestPointsExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointsExtractionModel {
       /**
@@ -22608,7 +23977,7 @@ declare module 'testit-api-client/model/TestPointShortApiResult' {
   /**
    * The TestPointShortApiResult model module.
    * @module model/TestPointShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointShortApiResult {
       /**
@@ -22663,7 +24032,7 @@ declare module 'testit-api-client/model/TestPointShortModel' {
   /**
    * The TestPointShortModel model module.
    * @module model/TestPointShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointShortModel {
       /**
@@ -22714,7 +24083,7 @@ declare module 'testit-api-client/model/TestPointShortResponseModel' {
   /**
    * The TestPointShortResponseModel model module.
    * @module model/TestPointShortResponseModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointShortResponseModel {
       /**
@@ -22863,7 +24232,7 @@ declare module 'testit-api-client/model/TestPointWithLastResultResponseModel' {
   /**
    * The TestPointWithLastResultResponseModel model module.
    * @module model/TestPointWithLastResultResponseModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestPointWithLastResultResponseModel {
       /**
@@ -22937,7 +24306,7 @@ declare module 'testit-api-client/model/TestResultApiResult' {
   /**
    * The TestResultApiResult model module.
    * @module model/TestResultApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultApiResult {
       /**
@@ -23020,7 +24389,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModel' {
   /**
    * The TestResultChangeViewModel model module.
    * @module model/TestResultChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultChangeViewModel {
       /**
@@ -23061,7 +24430,7 @@ declare module 'testit-api-client/model/TestResultChangeViewModelChangedFieldVie
   /**
    * The TestResultChangeViewModelChangedFieldViewModel model module.
    * @module model/TestResultChangeViewModelChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultChangeViewModelChangedFieldViewModel {
       /**
@@ -23094,7 +24463,7 @@ declare module 'testit-api-client/model/TestResultChronologyModel' {
   /**
    * The TestResultChronologyModel model module.
    * @module model/TestResultChronologyModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultChronologyModel {
       /**
@@ -23136,7 +24505,7 @@ declare module 'testit-api-client/model/TestResultFailureClassApiResult' {
   /**
    * The TestResultFailureClassApiResult model module.
    * @module model/TestResultFailureClassApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultFailureClassApiResult {
       /**
@@ -23177,7 +24546,7 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
   /**
    * The TestResultHistoryReportApiResult model module.
    * @module model/TestResultHistoryReportApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultHistoryReportApiResult {
       /**
@@ -23205,7 +24574,7 @@ declare module 'testit-api-client/model/TestResultHistoryReportApiResult' {
        * @alias module:model/TestResultHistoryReportApiResult
        * @param id {String} Internal test result identifier
        * @param createdDate {Date} Test result creation date
-       * @param userId {String} Internal identifier of user who stopped test run related to the test result or user who created the test result              If test run was stopped, this property equals identifier of user who stopped it. Otherwise, the property equals identifier of user who created the test result
+       * @param userId {String} Internal identifier of user who stopped test run related to the test result or user who created the test result                If test run was stopped, this property equals identifier of user who stopped it.  Otherwise, the property equals identifier of user who created the test result
        * @param isAutomated {Boolean} Boolean flag defines if test point related to the test result is automated or not
        * @param status {module:model/TestStatusApiResult} Status from test result with max modified date or from first created test result
        * @param createdById {String} Unique identifier of user who created first test result in the test run
@@ -23250,7 +24619,7 @@ declare module 'testit-api-client/model/TestResultLinkApiResult' {
   /**
    * The TestResultLinkApiResult model module.
    * @module model/TestResultLinkApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultLinkApiResult {
       /**
@@ -23258,7 +24627,7 @@ declare module 'testit-api-client/model/TestResultLinkApiResult' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>TestResultLinkApiResult</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -23277,9 +24646,10 @@ declare module 'testit-api-client/model/TestResultLinkApiResult' {
        * Constructs a new <code>TestResultLinkApiResult</code>.
        * @alias module:model/TestResultLinkApiResult
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -23342,7 +24712,7 @@ declare module 'testit-api-client/model/TestResultResponse' {
   /**
    * The TestResultResponse model module.
    * @module model/TestResultResponse
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultResponse {
       /**
@@ -23423,7 +24793,7 @@ declare module 'testit-api-client/model/TestResultsExtractionApiModel' {
   /**
    * The TestResultsExtractionApiModel model module.
    * @module model/TestResultsExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsExtractionApiModel {
       /**
@@ -23455,7 +24825,7 @@ declare module 'testit-api-client/model/TestResultsFilterApiModel' {
   /**
    * The TestResultsFilterApiModel model module.
    * @module model/TestResultsFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsFilterApiModel {
       /**
@@ -23504,7 +24874,7 @@ declare module 'testit-api-client/model/TestResultShortApiResult' {
   /**
    * The TestResultShortApiResult model module.
    * @module model/TestResultShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultShortApiResult {
       /**
@@ -23558,7 +24928,7 @@ declare module 'testit-api-client/model/TestResultShortResponse' {
   /**
    * The TestResultShortResponse model module.
    * @module model/TestResultShortResponse
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultShortResponse {
       /**
@@ -23632,7 +25002,7 @@ declare module 'testit-api-client/model/TestResultsLocalFilterModel' {
   /**
    * The TestResultsLocalFilterModel model module.
    * @module model/TestResultsLocalFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsLocalFilterModel {
       /**
@@ -23669,7 +25039,7 @@ declare module 'testit-api-client/model/TestResultsSelectApiModel' {
   /**
    * The TestResultsSelectApiModel model module.
    * @module model/TestResultsSelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsSelectApiModel {
       /**
@@ -23712,7 +25082,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsApiResult' {
   /**
    * The TestResultsStatisticsApiResult model module.
    * @module model/TestResultsStatisticsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsStatisticsApiResult {
       /**
@@ -23755,7 +25125,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsFailureCategoriesAp
   /**
    * The TestResultsStatisticsFailureCategoriesApiResult model module.
    * @module model/TestResultsStatisticsFailureCategoriesApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsStatisticsFailureCategoriesApiResult {
       /**
@@ -23800,7 +25170,7 @@ declare module 'testit-api-client/model/TestResultsStatisticsStatusesApiResult' 
   /**
    * The TestResultsStatisticsStatusesApiResult model module.
    * @module model/TestResultsStatisticsStatusesApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultsStatisticsStatusesApiResult {
       /**
@@ -23853,7 +25223,7 @@ declare module 'testit-api-client/model/TestResultStepCommentUpdateRequest' {
   /**
    * The TestResultStepCommentUpdateRequest model module.
    * @module model/TestResultStepCommentUpdateRequest
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultStepCommentUpdateRequest {
       /**
@@ -23901,7 +25271,7 @@ declare module 'testit-api-client/model/TestResultUpdateV2Request' {
   /**
    * The TestResultUpdateV2Request model module.
    * @module model/TestResultUpdateV2Request
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultUpdateV2Request {
       /**
@@ -23947,7 +25317,7 @@ declare module 'testit-api-client/model/TestResultV2GetModel' {
   /**
    * The TestResultV2GetModel model module.
    * @module model/TestResultV2GetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultV2GetModel {
       /**
@@ -24012,7 +25382,7 @@ declare module 'testit-api-client/model/TestResultV2ShortModel' {
   /**
    * The TestResultV2ShortModel model module.
    * @module model/TestResultV2ShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestResultV2ShortModel {
       /**
@@ -24075,7 +25445,7 @@ declare module 'testit-api-client/model/TestRunAnalyticApiResult' {
   /**
    * The TestRunAnalyticApiResult model module.
    * @module model/TestRunAnalyticApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunAnalyticApiResult {
       /**
@@ -24120,7 +25490,7 @@ declare module 'testit-api-client/model/TestRunApiResult' {
   /**
    * The TestRunApiResult model module.
    * @module model/TestRunApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunApiResult {
       /**
@@ -24201,7 +25571,7 @@ declare module 'testit-api-client/model/TestRunByAutoTestApiResult' {
   /**
    * The TestRunByAutoTestApiResult model module.
    * @module model/TestRunByAutoTestApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunByAutoTestApiResult {
       /**
@@ -24253,7 +25623,7 @@ declare module 'testit-api-client/model/TestRunExtractionApiModel' {
   /**
    * The TestRunExtractionApiModel model module.
    * @module model/TestRunExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunExtractionApiModel {
       /**
@@ -24285,7 +25655,7 @@ declare module 'testit-api-client/model/TestRunFilterApiModel' {
   /**
    * The TestRunFilterApiModel model module.
    * @module model/TestRunFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunFilterApiModel {
       /**
@@ -24333,7 +25703,7 @@ declare module 'testit-api-client/model/TestRunGroupByFailureClassApiResult' {
   /**
    * The TestRunGroupByFailureClassApiResult model module.
    * @module model/TestRunGroupByFailureClassApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunGroupByFailureClassApiResult {
       /**
@@ -24376,7 +25746,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusApiResult' {
   /**
    * The TestRunGroupByStatusApiResult model module.
    * @module model/TestRunGroupByStatusApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunGroupByStatusApiResult {
       /**
@@ -24419,7 +25789,7 @@ declare module 'testit-api-client/model/TestRunGroupByStatusTypeApiResult' {
   /**
    * The TestRunGroupByStatusTypeApiResult model module.
    * @module model/TestRunGroupByStatusTypeApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunGroupByStatusTypeApiResult {
       /**
@@ -24462,7 +25832,7 @@ declare module 'testit-api-client/model/TestRunNameApiResult' {
   /**
    * The TestRunNameApiResult model module.
    * @module model/TestRunNameApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunNameApiResult {
       /**
@@ -24505,7 +25875,7 @@ declare module 'testit-api-client/model/TestRunSelectApiModel' {
   /**
    * The TestRunSelectApiModel model module.
    * @module model/TestRunSelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunSelectApiModel {
       /**
@@ -24549,7 +25919,7 @@ declare module 'testit-api-client/model/TestRunShortApiResult' {
   /**
    * The TestRunShortApiResult model module.
    * @module model/TestRunShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunShortApiResult {
       /**
@@ -24652,7 +26022,7 @@ declare module 'testit-api-client/model/TestRunStatisticsFilterApiModel' {
   /**
    * The TestRunStatisticsFilterApiModel model module.
    * @module model/TestRunStatisticsFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunStatisticsFilterApiModel {
       /**
@@ -24689,7 +26059,7 @@ declare module 'testit-api-client/model/TestRunTestResultsPartialBulkSetModel' {
   /**
    * The TestRunTestResultsPartialBulkSetModel model module.
    * @module model/TestRunTestResultsPartialBulkSetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunTestResultsPartialBulkSetModel {
       /**
@@ -24725,7 +26095,7 @@ declare module 'testit-api-client/model/TestRunTestResultsSelectModel' {
   /**
    * The TestRunTestResultsSelectModel model module.
    * @module model/TestRunTestResultsSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunTestResultsSelectModel {
       /**
@@ -24758,7 +26128,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
   /**
    * The TestRunV2ApiResult model module.
    * @module model/TestRunV2ApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestRunV2ApiResult {
       /**
@@ -24788,7 +26158,7 @@ declare module 'testit-api-client/model/TestRunV2ApiResult' {
        * @param name {String} Test run name
        * @param stateName {module:model/TestRunState} Test run state
        * @param status {module:model/TestStatusApiResult} Test run status
-       * @param projectId {String} Project unique identifier              This property is used to link test run with project.
+       * @param projectId {String} Project unique identifier                This property is used to link test run with project.
        * @param createdDate {Date} Date and time of test run creation
        * @param createdById {String} Unique identifier of user who created test run
        * @param attachments {Array.<module:model/AttachmentApiResult>} Collection of attachments related to the test run
@@ -24831,7 +26201,7 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
   /**
    * The TestStatusApiResult model module.
    * @module model/TestStatusApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestStatusApiResult {
       /**
@@ -24876,12 +26246,153 @@ declare module 'testit-api-client/model/TestStatusApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/TestStatusApiResultGroup' {
+  export default TestStatusApiResultGroup;
+  /**
+   * The TestStatusApiResultGroup model module.
+   * @module model/TestStatusApiResultGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class TestStatusApiResultGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>TestStatusApiResultGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/TestStatusApiResultGroup} obj Optional instance to populate.
+       * @return {module:model/TestStatusApiResultGroup} The populated <code>TestStatusApiResultGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>TestStatusApiResultGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusApiResultGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>TestStatusApiResultGroup</code>.
+       * @alias module:model/TestStatusApiResultGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/TestStatusApiResult>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace TestStatusApiResultGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/TestStatusApiResultGroupedReply' {
+  export default TestStatusApiResultGroupedReply;
+  /**
+   * The TestStatusApiResultGroupedReply model module.
+   * @module model/TestStatusApiResultGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class TestStatusApiResultGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>TestStatusApiResultGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/TestStatusApiResultGroupedReply} obj Optional instance to populate.
+       * @return {module:model/TestStatusApiResultGroupedReply} The populated <code>TestStatusApiResultGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>TestStatusApiResultGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>TestStatusApiResultGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>TestStatusApiResultGroupedReply</code>.
+       * @alias module:model/TestStatusApiResultGroupedReply
+       * @param groups {Array.<module:model/TestStatusApiResultGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace TestStatusApiResultGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/TestStatusApiResultIReply' {
+  export default TestStatusApiResultIReply;
+  /**
+   * The TestStatusApiResultIReply model module.
+   * @module model/TestStatusApiResultIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class TestStatusApiResultIReply {
+      /**
+       * Constructs a <code>TestStatusApiResultIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/TestStatusApiResultIReply} obj Optional instance to populate.
+       * @return {module:model/TestStatusApiResultIReply} The populated <code>TestStatusApiResultIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of TestStatusApiResultIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/TestStatusApiResultIReply} An instance of TestStatusApiResultIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>TestStatusApiResultIReply</code>.
+       * @alias module:model/TestStatusApiResultIReply
+       * @param {(module:model/TestStatusApiResultGroupedReply|module:model/TestStatusApiResultReply)} instance The actual instance to initialize TestStatusApiResultIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>TestStatusApiResultGroupedReply</code>, <code>TestStatusApiResultReply</code>.
+       * @return {(module:model/TestStatusApiResultGroupedReply|module:model/TestStatusApiResultReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>TestStatusApiResultGroupedReply</code>, <code>TestStatusApiResultReply</code>.
+       * @param {(module:model/TestStatusApiResultGroupedReply|module:model/TestStatusApiResultReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace TestStatusApiResultIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/TestStatusApiResultReply' {
   export default TestStatusApiResultReply;
   /**
    * The TestStatusApiResultReply model module.
    * @module model/TestStatusApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestStatusApiResultReply {
       /**
@@ -24968,7 +26479,7 @@ declare module 'testit-api-client/model/TestStatusModel' {
   /**
    * The TestStatusModel model module.
    * @module model/TestStatusModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestStatusModel {
       /**
@@ -25018,7 +26529,7 @@ declare module 'testit-api-client/model/TestStatusShortApiResult' {
   /**
    * The TestStatusShortApiResult model module.
    * @module model/TestStatusShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestStatusShortApiResult {
       /**
@@ -25109,7 +26620,7 @@ declare module 'testit-api-client/model/TestSuiteApiResult' {
   /**
    * The TestSuiteApiResult model module.
    * @module model/TestSuiteApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteApiResult {
       /**
@@ -25164,7 +26675,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModel' {
   /**
    * The TestSuiteChangeViewModel model module.
    * @module model/TestSuiteChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteChangeViewModel {
       /**
@@ -25210,7 +26721,7 @@ declare module 'testit-api-client/model/TestSuiteChangeViewModelChangedFieldView
   /**
    * The TestSuiteChangeViewModelChangedFieldViewModel model module.
    * @module model/TestSuiteChangeViewModelChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteChangeViewModelChangedFieldViewModel {
       /**
@@ -25243,7 +26754,7 @@ declare module 'testit-api-client/model/TestSuiteHierarchyApiResult' {
   /**
    * The TestSuiteHierarchyApiResult model module.
    * @module model/TestSuiteHierarchyApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteHierarchyApiResult {
       /**
@@ -25299,7 +26810,7 @@ declare module 'testit-api-client/model/TestSuiteTestPlanApiModel' {
   /**
    * The TestSuiteTestPlanApiModel model module.
    * @module model/TestSuiteTestPlanApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteTestPlanApiModel {
       /**
@@ -25413,7 +26924,7 @@ declare module 'testit-api-client/model/TestSuiteV2GetModel' {
   /**
    * The TestSuiteV2GetModel model module.
    * @module model/TestSuiteV2GetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteV2GetModel {
       /**
@@ -25463,7 +26974,7 @@ declare module 'testit-api-client/model/TestSuiteV2PostModel' {
   /**
    * The TestSuiteV2PostModel model module.
    * @module model/TestSuiteV2PostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteV2PostModel {
       /**
@@ -25510,7 +27021,7 @@ declare module 'testit-api-client/model/TestSuiteV2PutModel' {
   /**
    * The TestSuiteV2PutModel model module.
    * @module model/TestSuiteV2PutModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteV2PutModel {
       /**
@@ -25557,7 +27068,7 @@ declare module 'testit-api-client/model/TestSuiteWithChildrenModel' {
   /**
    * The TestSuiteWithChildrenModel model module.
    * @module model/TestSuiteWithChildrenModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteWithChildrenModel {
       /**
@@ -25607,7 +27118,7 @@ declare module 'testit-api-client/model/TestSuiteWorkItemsSearchModel' {
   /**
    * The TestSuiteWorkItemsSearchModel model module.
    * @module model/TestSuiteWorkItemsSearchModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class TestSuiteWorkItemsSearchModel {
       /**
@@ -25667,7 +27178,7 @@ declare module 'testit-api-client/model/UpdateEmptyTestRunApiModel' {
   /**
    * The UpdateEmptyTestRunApiModel model module.
    * @module model/UpdateEmptyTestRunApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateEmptyTestRunApiModel {
       /**
@@ -25715,7 +27226,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryApiModel' {
   /**
    * The UpdateFailureCategoryApiModel model module.
    * @module model/UpdateFailureCategoryApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateFailureCategoryApiModel {
       /**
@@ -25762,7 +27273,7 @@ declare module 'testit-api-client/model/UpdateFailureCategoryProjectApiModel' {
   /**
    * The UpdateFailureCategoryProjectApiModel model module.
    * @module model/UpdateFailureCategoryProjectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateFailureCategoryProjectApiModel {
       /**
@@ -25808,7 +27319,7 @@ declare module 'testit-api-client/model/UpdateFailureClassRegexApiModel' {
   /**
    * The UpdateFailureClassRegexApiModel model module.
    * @module model/UpdateFailureClassRegexApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateFailureClassRegexApiModel {
       /**
@@ -25851,7 +27362,7 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
   /**
    * The UpdateLinkApiModel model module.
    * @module model/UpdateLinkApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateLinkApiModel {
       /**
@@ -25859,7 +27370,7 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, url: any, hasInfo: any): void;
+      static initialize(obj: any, url: any, type: any, hasInfo: any): void;
       /**
        * Constructs a <code>UpdateLinkApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -25878,9 +27389,10 @@ declare module 'testit-api-client/model/UpdateLinkApiModel' {
        * Constructs a new <code>UpdateLinkApiModel</code>.
        * @alias module:model/UpdateLinkApiModel
        * @param url {String} Address can be specified without protocol, but necessarily with the domain.
+       * @param type {module:model/LinkType} Specifies the type of the link.
        * @param hasInfo {Boolean} Flag defines if link relates to integrated jira service
        */
-      constructor(url: string, hasInfo: boolean);
+      constructor(url: string, type: any, hasInfo: boolean);
       id: any;
       title: any;
       url: any;
@@ -25898,7 +27410,7 @@ declare module 'testit-api-client/model/UpdateMultipleAttachmentsApiModel' {
   /**
    * The UpdateMultipleAttachmentsApiModel model module.
    * @module model/UpdateMultipleAttachmentsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateMultipleAttachmentsApiModel {
       /**
@@ -25940,7 +27452,7 @@ declare module 'testit-api-client/model/UpdateMultipleLinksApiModel' {
   /**
    * The UpdateMultipleLinksApiModel model module.
    * @module model/UpdateMultipleLinksApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateMultipleLinksApiModel {
       /**
@@ -25982,7 +27494,7 @@ declare module 'testit-api-client/model/UpdateMultipleTagsApiModel' {
   /**
    * The UpdateMultipleTagsApiModel model module.
    * @module model/UpdateMultipleTagsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateMultipleTagsApiModel {
       /**
@@ -26024,7 +27536,7 @@ declare module 'testit-api-client/model/UpdateMultipleTestRunsApiModel' {
   /**
    * The UpdateMultipleTestRunsApiModel model module.
    * @module model/UpdateMultipleTestRunsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateMultipleTestRunsApiModel {
       /**
@@ -26069,7 +27581,7 @@ declare module 'testit-api-client/model/UpdateParameterApiModel' {
   /**
    * The UpdateParameterApiModel model module.
    * @module model/UpdateParameterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateParameterApiModel {
       /**
@@ -26115,7 +27627,7 @@ declare module 'testit-api-client/model/UpdateProjectApiModel' {
   /**
    * The UpdateProjectApiModel model module.
    * @module model/UpdateProjectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateProjectApiModel {
       /**
@@ -26161,7 +27673,7 @@ declare module 'testit-api-client/model/UpdateStepApiModel' {
   /**
    * The UpdateStepApiModel model module.
    * @module model/UpdateStepApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateStepApiModel {
       /**
@@ -26207,7 +27719,7 @@ declare module 'testit-api-client/model/UpdateTagApiModel' {
   /**
    * The UpdateTagApiModel model module.
    * @module model/UpdateTagApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateTagApiModel {
       /**
@@ -26248,7 +27760,7 @@ declare module 'testit-api-client/model/UpdateTestPlanApiModel' {
   /**
    * The UpdateTestPlanApiModel model module.
    * @module model/UpdateTestPlanApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateTestPlanApiModel {
       /**
@@ -26302,7 +27814,7 @@ declare module 'testit-api-client/model/UpdateTestStatusApiModel' {
   /**
    * The UpdateTestStatusApiModel model module.
    * @module model/UpdateTestStatusApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateTestStatusApiModel {
       /**
@@ -26344,7 +27856,7 @@ declare module 'testit-api-client/model/UpdateWorkflowApiModel' {
   /**
    * The UpdateWorkflowApiModel model module.
    * @module model/UpdateWorkflowApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateWorkflowApiModel {
       /**
@@ -26391,7 +27903,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
   /**
    * The UpdateWorkItemApiModel model module.
    * @module model/UpdateWorkItemApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateWorkItemApiModel {
       /**
@@ -26399,7 +27911,7 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, id: any, sectionId: any, state: any, priority: any, steps: any, preconditionSteps: any, postconditionSteps: any, duration: any, attributes: any, tags: any, links: any, name: any, attachments: any): void;
+      static initialize(obj: any, id: any, sectionId: any, name: any, duration: any, state: any, priority: any): void;
       /**
        * Constructs a <code>UpdateWorkItemApiModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -26417,38 +27929,30 @@ declare module 'testit-api-client/model/UpdateWorkItemApiModel' {
       /**
        * Constructs a new <code>UpdateWorkItemApiModel</code>.
        * @alias module:model/UpdateWorkItemApiModel
-       * @param id {String} Workitem internal identifier
-       * @param sectionId {String} Internal identifier of section where workitem is located
-       * @param state {module:model/WorkItemStates}
-       * @param priority {module:model/WorkItemPriorityModel}
-       * @param steps {Array.<module:model/UpdateStepApiModel>} Collection of workitem steps
-       * @param preconditionSteps {Array.<module:model/UpdateStepApiModel>} Collection of workitem precondtion steps
-       * @param postconditionSteps {Array.<module:model/UpdateStepApiModel>} Collection of workitem postcondition steps
-       * @param duration {Number} Workitem duration in milliseconds
-       * @param attributes {Object.<String, Object>} Key value pair of custom workitem attributes
-       * @param tags {Array.<module:model/TagModel>} Collection of workitem tags
-       * @param links {Array.<module:model/UpdateLinkApiModel>} Collection of workitem links
-       * @param name {String} Workitem name
-       * @param attachments {Array.<module:model/AssignAttachmentApiModel>}
+       * @param id {String} Unique identifier of the work item
+       * @param sectionId {String} Unique identifier of the section within a project
+       * @param name {String} Name of the work item
+       * @param duration {Number} Duration of the work item in milliseconds
+       * @param state {module:model/WorkItemStateApiModel} Current state of the work item
+       * @param priority {module:model/WorkItemPriorityApiModel} Priority level assigned to the work item
        */
-      constructor(id: string, sectionId: string, state: any, priority: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string, attachments: Array<any>);
+      constructor(id: string, sectionId: string, name: string, duration: number, state: any, priority: any);
       id: any;
       sectionId: any;
+      name: any;
       description: any;
+      duration: any;
       state: any;
       priority: any;
-      sourceType: any;
-      steps: any;
-      preconditionSteps: any;
-      postconditionSteps: any;
-      duration: any;
       attributes: any;
       tags: any;
-      links: any;
-      name: any;
-      attachments: any;
+      preconditionSteps: any;
+      steps: any;
+      postconditionSteps: any;
       iterations: any;
       autoTests: any;
+      attachments: any;
+      links: any;
       parameters: any;
   }
   namespace UpdateWorkItemApiModel {
@@ -26461,7 +27965,7 @@ declare module 'testit-api-client/model/UpdateWorkItemCommentApiModel' {
   /**
    * The UpdateWorkItemCommentApiModel model module.
    * @module model/UpdateWorkItemCommentApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UpdateWorkItemCommentApiModel {
       /**
@@ -26499,12 +28003,64 @@ declare module 'testit-api-client/model/UpdateWorkItemCommentApiModel' {
   }
 
 }
+declare module 'testit-api-client/model/UserApiModel' {
+  export default UserApiModel;
+  /**
+   * The UserApiModel model module.
+   * @module model/UserApiModel
+   * @version 7.3.0-TMS-5.8
+   */
+  class UserApiModel {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, id: any, userName: any, firstName: any, lastName: any, displayName: any, email: any): void;
+      /**
+       * Constructs a <code>UserApiModel</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/UserApiModel} obj Optional instance to populate.
+       * @return {module:model/UserApiModel} The populated <code>UserApiModel</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>UserApiModel</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>UserApiModel</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>UserApiModel</code>.
+       * @alias module:model/UserApiModel
+       * @param id {String}
+       * @param userName {String}
+       * @param firstName {String}
+       * @param lastName {String}
+       * @param displayName {String}
+       * @param email {String}
+       */
+      constructor(id: string, userName: string, firstName: string, lastName: string, displayName: string, email: string);
+      id: any;
+      userName: any;
+      firstName: any;
+      lastName: any;
+      displayName: any;
+      email: any;
+      providerId: any;
+  }
+  namespace UserApiModel {
+      let RequiredProperties: string[];
+  }
+
+}
 declare module 'testit-api-client/model/UserCustomNameValidationResponse' {
   export default UserCustomNameValidationResponse;
   /**
    * The UserCustomNameValidationResponse model module.
    * @module model/UserCustomNameValidationResponse
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UserCustomNameValidationResponse {
       /**
@@ -26545,7 +28101,7 @@ declare module 'testit-api-client/model/UserNameApiResult' {
   /**
    * The UserNameApiResult model module.
    * @module model/UserNameApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class UserNameApiResult {
       /**
@@ -26587,7 +28143,7 @@ declare module 'testit-api-client/model/ValidationProblemDetails' {
   /**
    * The ValidationProblemDetails model module.
    * @module model/ValidationProblemDetails
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class ValidationProblemDetails {
       /**
@@ -26634,7 +28190,7 @@ declare module 'testit-api-client/model/WebhookBulkUpdateApiModel' {
   /**
    * The WebhookBulkUpdateApiModel model module.
    * @module model/WebhookBulkUpdateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhookBulkUpdateApiModel {
       /**
@@ -26987,7 +28543,7 @@ declare module 'testit-api-client/model/WebhookLogApiResult' {
   /**
    * The WebhookLogApiResult model module.
    * @module model/WebhookLogApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhookLogApiResult {
       /**
@@ -27053,7 +28609,7 @@ declare module 'testit-api-client/model/WebHookModel' {
   /**
    * The WebHookModel model module.
    * @module model/WebHookModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebHookModel {
       /**
@@ -27127,7 +28683,7 @@ declare module 'testit-api-client/model/WebHookPostModel' {
   /**
    * The WebHookPostModel model module.
    * @module model/WebHookPostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebHookPostModel {
       /**
@@ -27192,7 +28748,7 @@ declare module 'testit-api-client/model/WebhookResponse' {
   /**
    * The WebhookResponse model module.
    * @module model/WebhookResponse
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhookResponse {
       /**
@@ -27241,7 +28797,7 @@ declare module 'testit-api-client/model/WebhooksDeleteApiModel' {
   /**
    * The WebhooksDeleteApiModel model module.
    * @module model/WebhooksDeleteApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksDeleteApiModel {
       /**
@@ -27284,7 +28840,7 @@ declare module 'testit-api-client/model/WebhooksDeleteFilterApiModel' {
   /**
    * The WebhooksDeleteFilterApiModel model module.
    * @module model/WebhooksDeleteFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksDeleteFilterApiModel {
       /**
@@ -27320,7 +28876,7 @@ declare module 'testit-api-client/model/WebhooksExtractionApiModel' {
   /**
    * The WebhooksExtractionApiModel model module.
    * @module model/WebhooksExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksExtractionApiModel {
       /**
@@ -27352,7 +28908,7 @@ declare module 'testit-api-client/model/WebhooksFilterApiModel' {
   /**
    * The WebhooksFilterApiModel model module.
    * @module model/WebhooksFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksFilterApiModel {
       /**
@@ -27387,7 +28943,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiModel' {
   /**
    * The WebhooksUpdateApiModel model module.
    * @module model/WebhooksUpdateApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksUpdateApiModel {
       /**
@@ -27432,7 +28988,7 @@ declare module 'testit-api-client/model/WebhooksUpdateApiResult' {
   /**
    * The WebhooksUpdateApiResult model module.
    * @module model/WebhooksUpdateApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebhooksUpdateApiResult {
       /**
@@ -27473,7 +29029,7 @@ declare module 'testit-api-client/model/WebHookTestModel' {
   /**
    * The WebHookTestModel model module.
    * @module model/WebHookTestModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WebHookTestModel {
       /**
@@ -27550,7 +29106,7 @@ declare module 'testit-api-client/model/WorkflowApiResult' {
   /**
    * The WorkflowApiResult model module.
    * @module model/WorkflowApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowApiResult {
       /**
@@ -27609,7 +29165,7 @@ declare module 'testit-api-client/model/WorkflowExistsByNameApiResult' {
   /**
    * The WorkflowExistsByNameApiResult model module.
    * @module model/WorkflowExistsByNameApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowExistsByNameApiResult {
       /**
@@ -27650,7 +29206,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResult' {
   /**
    * The WorkflowProjectApiResult model module.
    * @module model/WorkflowProjectApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowProjectApiResult {
       /**
@@ -27691,7 +29247,7 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
   /**
    * The WorkflowProjectApiResultApiCollectionPreview model module.
    * @module model/WorkflowProjectApiResultApiCollectionPreview
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowProjectApiResultApiCollectionPreview {
       /**
@@ -27729,12 +29285,153 @@ declare module 'testit-api-client/model/WorkflowProjectApiResultApiCollectionPre
   }
 
 }
+declare module 'testit-api-client/model/WorkflowProjectApiResultGroup' {
+  export default WorkflowProjectApiResultGroup;
+  /**
+   * The WorkflowProjectApiResultGroup model module.
+   * @module model/WorkflowProjectApiResultGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowProjectApiResultGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>WorkflowProjectApiResultGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowProjectApiResultGroup} obj Optional instance to populate.
+       * @return {module:model/WorkflowProjectApiResultGroup} The populated <code>WorkflowProjectApiResultGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>WorkflowProjectApiResultGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowProjectApiResultGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>WorkflowProjectApiResultGroup</code>.
+       * @alias module:model/WorkflowProjectApiResultGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/WorkflowProjectApiResult>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace WorkflowProjectApiResultGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/WorkflowProjectApiResultGroupedReply' {
+  export default WorkflowProjectApiResultGroupedReply;
+  /**
+   * The WorkflowProjectApiResultGroupedReply model module.
+   * @module model/WorkflowProjectApiResultGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowProjectApiResultGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>WorkflowProjectApiResultGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowProjectApiResultGroupedReply} obj Optional instance to populate.
+       * @return {module:model/WorkflowProjectApiResultGroupedReply} The populated <code>WorkflowProjectApiResultGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>WorkflowProjectApiResultGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowProjectApiResultGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>WorkflowProjectApiResultGroupedReply</code>.
+       * @alias module:model/WorkflowProjectApiResultGroupedReply
+       * @param groups {Array.<module:model/WorkflowProjectApiResultGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace WorkflowProjectApiResultGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/WorkflowProjectApiResultIReply' {
+  export default WorkflowProjectApiResultIReply;
+  /**
+   * The WorkflowProjectApiResultIReply model module.
+   * @module model/WorkflowProjectApiResultIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowProjectApiResultIReply {
+      /**
+       * Constructs a <code>WorkflowProjectApiResultIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowProjectApiResultIReply} obj Optional instance to populate.
+       * @return {module:model/WorkflowProjectApiResultIReply} The populated <code>WorkflowProjectApiResultIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of WorkflowProjectApiResultIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/WorkflowProjectApiResultIReply} An instance of WorkflowProjectApiResultIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>WorkflowProjectApiResultIReply</code>.
+       * @alias module:model/WorkflowProjectApiResultIReply
+       * @param {(module:model/WorkflowProjectApiResultGroupedReply|module:model/WorkflowProjectApiResultReply)} instance The actual instance to initialize WorkflowProjectApiResultIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>WorkflowProjectApiResultGroupedReply</code>, <code>WorkflowProjectApiResultReply</code>.
+       * @return {(module:model/WorkflowProjectApiResultGroupedReply|module:model/WorkflowProjectApiResultReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>WorkflowProjectApiResultGroupedReply</code>, <code>WorkflowProjectApiResultReply</code>.
+       * @param {(module:model/WorkflowProjectApiResultGroupedReply|module:model/WorkflowProjectApiResultReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace WorkflowProjectApiResultIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/WorkflowProjectApiResultReply' {
   export default WorkflowProjectApiResultReply;
   /**
    * The WorkflowProjectApiResultReply model module.
    * @module model/WorkflowProjectApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowProjectApiResultReply {
       /**
@@ -27777,7 +29474,7 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
   /**
    * The WorkflowShortApiResult model module.
    * @module model/WorkflowShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowShortApiResult {
       /**
@@ -27829,12 +29526,153 @@ declare module 'testit-api-client/model/WorkflowShortApiResult' {
   }
 
 }
+declare module 'testit-api-client/model/WorkflowShortApiResultGroup' {
+  export default WorkflowShortApiResultGroup;
+  /**
+   * The WorkflowShortApiResultGroup model module.
+   * @module model/WorkflowShortApiResultGroup
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowShortApiResultGroup {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, key: any, data: any, totalCount: any): void;
+      /**
+       * Constructs a <code>WorkflowShortApiResultGroup</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowShortApiResultGroup} obj Optional instance to populate.
+       * @return {module:model/WorkflowShortApiResultGroup} The populated <code>WorkflowShortApiResultGroup</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>WorkflowShortApiResultGroup</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowShortApiResultGroup</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>WorkflowShortApiResultGroup</code>.
+       * @alias module:model/WorkflowShortApiResultGroup
+       * @param key {module:model/GroupKey}
+       * @param data {Array.<module:model/WorkflowShortApiResult>}
+       * @param totalCount {Number}
+       */
+      constructor(key: any, data: Array<any>, totalCount: number);
+      key: any;
+      data: any;
+      totalCount: any;
+  }
+  namespace WorkflowShortApiResultGroup {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/WorkflowShortApiResultGroupedReply' {
+  export default WorkflowShortApiResultGroupedReply;
+  /**
+   * The WorkflowShortApiResultGroupedReply model module.
+   * @module model/WorkflowShortApiResultGroupedReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowShortApiResultGroupedReply {
+      /**
+       * Initializes the fields of this object.
+       * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+       * Only for internal use.
+       */
+      static initialize(obj: any, groups: any, totalCount: any): void;
+      /**
+       * Constructs a <code>WorkflowShortApiResultGroupedReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowShortApiResultGroupedReply} obj Optional instance to populate.
+       * @return {module:model/WorkflowShortApiResultGroupedReply} The populated <code>WorkflowShortApiResultGroupedReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Validates the JSON data with respect to <code>WorkflowShortApiResultGroupedReply</code>.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @return {boolean} to indicate whether the JSON data is valid with respect to <code>WorkflowShortApiResultGroupedReply</code>.
+       */
+      static validateJSON(data: Object): boolean;
+      /**
+       * Constructs a new <code>WorkflowShortApiResultGroupedReply</code>.
+       * @alias module:model/WorkflowShortApiResultGroupedReply
+       * @param groups {Array.<module:model/WorkflowShortApiResultGroup>}
+       * @param totalCount {Number}
+       */
+      constructor(groups: Array<any>, totalCount: number);
+      groups: any;
+      totalCount: any;
+  }
+  namespace WorkflowShortApiResultGroupedReply {
+      let RequiredProperties: string[];
+  }
+
+}
+declare module 'testit-api-client/model/WorkflowShortApiResultIReply' {
+  export default WorkflowShortApiResultIReply;
+  /**
+   * The WorkflowShortApiResultIReply model module.
+   * @module model/WorkflowShortApiResultIReply
+   * @version 7.3.0-TMS-5.8
+   */
+  class WorkflowShortApiResultIReply {
+      /**
+       * Constructs a <code>WorkflowShortApiResultIReply</code> from a plain JavaScript object, optionally creating a new instance.
+       * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+       * @param {Object} data The plain JavaScript object bearing properties of interest.
+       * @param {module:model/WorkflowShortApiResultIReply} obj Optional instance to populate.
+       * @return {module:model/WorkflowShortApiResultIReply} The populated <code>WorkflowShortApiResultIReply</code> instance.
+       */
+      static constructFromObject(data: Object, obj: any): any;
+      /**
+       * Create an instance of WorkflowShortApiResultIReply from a JSON string.
+       * @param {string} json_string JSON string.
+       * @return {module:model/WorkflowShortApiResultIReply} An instance of WorkflowShortApiResultIReply.
+       */
+      static fromJSON: (json_string: string) => any;
+      /**
+       * Constructs a new <code>WorkflowShortApiResultIReply</code>.
+       * @alias module:model/WorkflowShortApiResultIReply
+       * @param {(module:model/WorkflowShortApiResultGroupedReply|module:model/WorkflowShortApiResultReply)} instance The actual instance to initialize WorkflowShortApiResultIReply.
+       */
+      constructor(instance?: null);
+      actualInstance: any;
+      /**
+       * Gets the actual instance, which can be <code>WorkflowShortApiResultGroupedReply</code>, <code>WorkflowShortApiResultReply</code>.
+       * @return {(module:model/WorkflowShortApiResultGroupedReply|module:model/WorkflowShortApiResultReply)} The actual instance.
+       */
+      getActualInstance(): (module: any) => any;
+      /**
+       * Sets the actual instance, which can be <code>WorkflowShortApiResultGroupedReply</code>, <code>WorkflowShortApiResultReply</code>.
+       * @param {(module:model/WorkflowShortApiResultGroupedReply|module:model/WorkflowShortApiResultReply)} obj The actual instance.
+       */
+      setActualInstance(obj: any): void;
+      /**
+       * Returns the JSON representation of the actual instance.
+       * @return {string}
+       */
+      toJSON: () => string;
+      totalCount: any;
+      data: any;
+      groups: any;
+  }
+  namespace WorkflowShortApiResultIReply {
+      let OneOf: string[];
+  }
+
+}
 declare module 'testit-api-client/model/WorkflowShortApiResultReply' {
   export default WorkflowShortApiResultReply;
   /**
    * The WorkflowShortApiResultReply model module.
    * @module model/WorkflowShortApiResultReply
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowShortApiResultReply {
       /**
@@ -27877,7 +29715,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiModel' {
   /**
    * The WorkflowStatusApiModel model module.
    * @module model/WorkflowStatusApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowStatusApiModel {
       /**
@@ -27920,7 +29758,7 @@ declare module 'testit-api-client/model/WorkflowStatusApiResult' {
   /**
    * The WorkflowStatusApiResult model module.
    * @module model/WorkflowStatusApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkflowStatusApiResult {
       /**
@@ -27973,7 +29811,7 @@ declare module 'testit-api-client/model/WorkItemApiResult' {
   /**
    * The WorkItemApiResult model module.
    * @module model/WorkItemApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemApiResult {
       /**
@@ -28075,7 +29913,7 @@ declare module 'testit-api-client/model/WorkItemChangedAttributeViewModel' {
   /**
    * The WorkItemChangedAttributeViewModel model module.
    * @module model/WorkItemChangedAttributeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemChangedAttributeViewModel {
       /**
@@ -28124,7 +29962,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
   /**
    * The WorkItemChangedFieldsViewModel model module.
    * @module model/WorkItemChangedFieldsViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemChangedFieldsViewModel {
       /**
@@ -28132,7 +29970,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, isDeleted: any, projectId: any, isAutomated: any, sectionId: any, state: any, priority: any, duration: any, attributes: any, steps: any, preconditionSteps: any, postconditionSteps: any, autoTests: any, attachments: any, tags: any, links: any, globalId: any, versionNumber: any, entityTypeName: any): void;
+      static initialize(obj: any, isDeleted: any, projectId: any, isAutomated: any, sectionId: any, state: any, priority: any, duration: any, attributes: any, steps: any, preconditionSteps: any, postconditionSteps: any, autoTests: any, attachments: any, tags: any, links: any, globalId: any, versionNumber: any, entityTypeName: any, parentId: any): void;
       /**
        * Constructs a <code>WorkItemChangedFieldsViewModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -28168,8 +30006,9 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
        * @param globalId {module:model/Int64ChangedFieldViewModel}
        * @param versionNumber {module:model/Int32ChangedFieldViewModel}
        * @param entityTypeName {module:model/StringChangedFieldViewModel}
+       * @param parentId {module:model/GuidNullableChangedFieldViewModel}
        */
-      constructor(isDeleted: any, projectId: any, isAutomated: any, sectionId: any, state: any, priority: any, duration: any, attributes: any, steps: any, preconditionSteps: any, postconditionSteps: any, autoTests: any, attachments: any, tags: any, links: any, globalId: any, versionNumber: any, entityTypeName: any);
+      constructor(isDeleted: any, projectId: any, isAutomated: any, sectionId: any, state: any, priority: any, duration: any, attributes: any, steps: any, preconditionSteps: any, postconditionSteps: any, autoTests: any, attachments: any, tags: any, links: any, globalId: any, versionNumber: any, entityTypeName: any, parentId: any);
       name: any;
       isDeleted: any;
       projectId: any;
@@ -28190,6 +30029,7 @@ declare module 'testit-api-client/model/WorkItemChangedFieldsViewModel' {
       globalId: any;
       versionNumber: any;
       entityTypeName: any;
+      parentId: any;
   }
   namespace WorkItemChangedFieldsViewModel {
       let RequiredProperties: string[];
@@ -28201,7 +30041,7 @@ declare module 'testit-api-client/model/WorkItemChangeModel' {
   /**
    * The WorkItemChangeModel model module.
    * @module model/WorkItemChangeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemChangeModel {
       /**
@@ -28256,7 +30096,7 @@ declare module 'testit-api-client/model/WorkItemCommentApiResult' {
   /**
    * The WorkItemCommentApiResult model module.
    * @module model/WorkItemCommentApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemCommentApiResult {
       /**
@@ -28336,46 +30176,12 @@ declare module 'testit-api-client/model/WorkItemEntityTypeApiModel' {
    */
 
 }
-declare module 'testit-api-client/model/WorkItemEntityTypes' {
-  /**
-  * Enum class WorkItemEntityTypes.
-  * @enum {}
-  * @readonly
-  */
-  export default class WorkItemEntityTypes {
-      /**
-      * Returns a <code>WorkItemEntityTypes</code> enum value from a Javascript object name.
-      * @param {Object} data The plain JavaScript object containing the name of the enum value.
-      * @return {module:model/WorkItemEntityTypes} The enum <code>WorkItemEntityTypes</code> value.
-      */
-      static constructFromObject(object: any): any;
-      /**
-       * value: "TestCases"
-       * @const
-       */
-      TestCases: string;
-      /**
-       * value: "CheckLists"
-       * @const
-       */
-      CheckLists: string;
-      /**
-       * value: "SharedSteps"
-       * @const
-       */
-      SharedSteps: string;
-  }
-  /**
-   * *
-   */
-
-}
 declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterApiModel' {
   export default WorkItemExternalMetadataFieldFilterApiModel;
   /**
    * The WorkItemExternalMetadataFieldFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExternalMetadataFieldFilterApiModel {
       /**
@@ -28418,7 +30224,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFieldFilterModel
   /**
    * The WorkItemExternalMetadataFieldFilterModel model module.
    * @module model/WorkItemExternalMetadataFieldFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExternalMetadataFieldFilterModel {
       /**
@@ -28461,7 +30267,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterApiModel' 
   /**
    * The WorkItemExternalMetadataFilterApiModel model module.
    * @module model/WorkItemExternalMetadataFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExternalMetadataFilterApiModel {
       /**
@@ -28497,7 +30303,7 @@ declare module 'testit-api-client/model/WorkItemExternalMetadataFilterModel' {
   /**
    * The WorkItemExternalMetadataFilterModel model module.
    * @module model/WorkItemExternalMetadataFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExternalMetadataFilterModel {
       /**
@@ -28533,7 +30339,7 @@ declare module 'testit-api-client/model/WorkItemExtractionApiModel' {
   /**
    * The WorkItemExtractionApiModel model module.
    * @module model/WorkItemExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExtractionApiModel {
       /**
@@ -28567,7 +30373,7 @@ declare module 'testit-api-client/model/WorkItemExtractionModel' {
   /**
    * The WorkItemExtractionModel model module.
    * @module model/WorkItemExtractionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemExtractionModel {
       /**
@@ -28601,7 +30407,7 @@ declare module 'testit-api-client/model/WorkItemFilterApiModel' {
   /**
    * The WorkItemFilterApiModel model module.
    * @module model/WorkItemFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemFilterApiModel {
       /**
@@ -28659,7 +30465,7 @@ declare module 'testit-api-client/model/WorkItemFilterModel' {
   /**
    * The WorkItemFilterModel model module.
    * @module model/WorkItemFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemFilterModel {
       /**
@@ -28717,7 +30523,7 @@ declare module 'testit-api-client/model/WorkItemGroupGetModel' {
   /**
    * The WorkItemGroupGetModel model module.
    * @module model/WorkItemGroupGetModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemGroupGetModel {
       /**
@@ -28760,7 +30566,7 @@ declare module 'testit-api-client/model/WorkItemGroupModel' {
   /**
    * The WorkItemGroupModel model module.
    * @module model/WorkItemGroupModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemGroupModel {
       /**
@@ -28858,7 +30664,7 @@ declare module 'testit-api-client/model/WorkItemIdApiModel' {
   /**
    * The WorkItemIdApiModel model module.
    * @module model/WorkItemIdApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemIdApiModel {
       /**
@@ -28899,7 +30705,7 @@ declare module 'testit-api-client/model/WorkItemIndexApiResult' {
   /**
    * The WorkItemIndexApiResult model module.
    * @module model/WorkItemIndexApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemIndexApiResult {
       /**
@@ -28942,7 +30748,7 @@ declare module 'testit-api-client/model/WorkItemLikeModel' {
   /**
    * The WorkItemLikeModel model module.
    * @module model/WorkItemLikeModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLikeModel {
       /**
@@ -28993,7 +30799,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModel' {
   /**
    * The WorkItemLinkChangeViewModel model module.
    * @module model/WorkItemLinkChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkChangeViewModel {
       /**
@@ -29044,7 +30850,7 @@ declare module 'testit-api-client/model/WorkItemLinkChangeViewModelArrayChangedF
   /**
    * The WorkItemLinkChangeViewModelArrayChangedFieldViewModel model module.
    * @module model/WorkItemLinkChangeViewModelArrayChangedFieldViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkChangeViewModelArrayChangedFieldViewModel {
       /**
@@ -29077,7 +30883,7 @@ declare module 'testit-api-client/model/WorkItemLinkExtractionApiModel' {
   /**
    * The WorkItemLinkExtractionApiModel model module.
    * @module model/WorkItemLinkExtractionApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkExtractionApiModel {
       /**
@@ -29111,7 +30917,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterApiModel' {
   /**
    * The WorkItemLinkFilterApiModel model module.
    * @module model/WorkItemLinkFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkFilterApiModel {
       /**
@@ -29146,7 +30952,7 @@ declare module 'testit-api-client/model/WorkItemLinkFilterModel' {
   /**
    * The WorkItemLinkFilterModel model module.
    * @module model/WorkItemLinkFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkFilterModel {
       /**
@@ -29181,7 +30987,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiModel' {
   /**
    * The WorkItemLinkUrlApiModel model module.
    * @module model/WorkItemLinkUrlApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkUrlApiModel {
       /**
@@ -29224,7 +31030,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlApiResult' {
   /**
    * The WorkItemLinkUrlApiResult model module.
    * @module model/WorkItemLinkUrlApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkUrlApiResult {
       /**
@@ -29265,7 +31071,7 @@ declare module 'testit-api-client/model/WorkItemLinkUrlFilterApiModel' {
   /**
    * The WorkItemLinkUrlFilterApiModel model module.
    * @module model/WorkItemLinkUrlFilterApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLinkUrlFilterApiModel {
       /**
@@ -29298,7 +31104,7 @@ declare module 'testit-api-client/model/WorkItemLocalFilterModel' {
   /**
    * The WorkItemLocalFilterModel model module.
    * @module model/WorkItemLocalFilterModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLocalFilterModel {
       /**
@@ -29352,7 +31158,7 @@ declare module 'testit-api-client/model/WorkItemLocalSelectModel' {
   /**
    * The WorkItemLocalSelectModel model module.
    * @module model/WorkItemLocalSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemLocalSelectModel {
       /**
@@ -29385,7 +31191,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
   /**
    * The WorkItemModel model module.
    * @module model/WorkItemModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemModel {
       /**
@@ -29393,7 +31199,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
        * Only for internal use.
        */
-      static initialize(obj: any, versionId: any, medianDuration: any, isDeleted: any, projectId: any, entityTypeName: any, isAutomated: any, versionNumber: any, createdDate: any, createdById: any, globalId: any, externalIssues: any, parameters: any, id: any, sectionId: any, state: any, priority: any, sourceType: any, steps: any, preconditionSteps: any, postconditionSteps: any, duration: any, attributes: any, tags: any, links: any, name: any): void;
+      static initialize(obj: any, versionId: any, medianDuration: any, isDeleted: any, projectId: any, entityTypeName: any, isAutomated: any, versionNumber: any, externalIssues: any, parameters: any, createdDate: any, createdById: any, globalId: any, id: any, sectionId: any, state: any, priority: any, sourceType: any, steps: any, preconditionSteps: any, postconditionSteps: any, duration: any, attributes: any, tags: any, links: any, name: any): void;
       /**
        * Constructs a <code>WorkItemModel</code> from a plain JavaScript object, optionally creating a new instance.
        * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -29415,14 +31221,14 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * @param medianDuration {Number} used for getting a median duration of all autotests related to this workitem
        * @param isDeleted {Boolean}
        * @param projectId {String}
-       * @param entityTypeName {module:model/WorkItemEntityTypes}
+       * @param entityTypeName {module:model/WorkItemTypeModel}
        * @param isAutomated {Boolean}
        * @param versionNumber {Number} used for define chronology of workitem state in each version
+       * @param externalIssues {Array.<module:model/ExternalIssueModel>}
+       * @param parameters {Array.<module:model/WorkItemParameterKeyModel>}
        * @param createdDate {Date}
        * @param createdById {String}
        * @param globalId {Number}
-       * @param externalIssues {Array.<module:model/ExternalIssueModel>}
-       * @param parameters {Array.<module:model/WorkItemParameterKeyModel>}
        * @param id {String}
        * @param sectionId {String}
        * @param state {module:model/WorkItemStates}
@@ -29437,7 +31243,7 @@ declare module 'testit-api-client/model/WorkItemModel' {
        * @param links {Array.<module:model/LinkModel>}
        * @param name {String}
        */
-      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, createdDate: Date, createdById: string, globalId: number, externalIssues: Array<any>, parameters: Array<any>, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string);
+      constructor(versionId: string, medianDuration: number, isDeleted: boolean, projectId: string, entityTypeName: any, isAutomated: boolean, versionNumber: number, externalIssues: Array<any>, parameters: Array<any>, createdDate: Date, createdById: string, globalId: number, id: string, sectionId: string, state: any, priority: any, sourceType: any, steps: Array<any>, preconditionSteps: Array<any>, postconditionSteps: Array<any>, duration: number, attributes: any, tags: Array<any>, links: Array<any>, name: string);
       versionId: any;
       medianDuration: any;
       isDeleted: any;
@@ -29450,13 +31256,13 @@ declare module 'testit-api-client/model/WorkItemModel' {
       sectionPostconditionSteps: any;
       versionNumber: any;
       iterations: any;
+      externalIssues: any;
+      parameters: any;
       createdDate: any;
       modifiedDate: any;
       createdById: any;
       modifiedById: any;
       globalId: any;
-      externalIssues: any;
-      parameters: any;
       id: any;
       sectionId: any;
       description: any;
@@ -29482,7 +31288,7 @@ declare module 'testit-api-client/model/WorkItemMovePostModel' {
   /**
    * The WorkItemMovePostModel model module.
    * @module model/WorkItemMovePostModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemMovePostModel {
       /**
@@ -29527,7 +31333,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiModel' {
   /**
    * The WorkItemParameterKeyApiModel model module.
    * @module model/WorkItemParameterKeyApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemParameterKeyApiModel {
       /**
@@ -29568,7 +31374,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyApiResult' {
   /**
    * The WorkItemParameterKeyApiResult model module.
    * @module model/WorkItemParameterKeyApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemParameterKeyApiResult {
       /**
@@ -29609,7 +31415,7 @@ declare module 'testit-api-client/model/WorkItemParameterKeyModel' {
   /**
    * The WorkItemParameterKeyModel model module.
    * @module model/WorkItemParameterKeyModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemParameterKeyModel {
       /**
@@ -29650,7 +31456,7 @@ declare module 'testit-api-client/model/WorkItemPreviewApiModel' {
   /**
    * The WorkItemPreviewApiModel model module.
    * @module model/WorkItemPreviewApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemPreviewApiModel {
       /**
@@ -29695,7 +31501,7 @@ declare module 'testit-api-client/model/WorkItemPreviewStepApiModel' {
   /**
    * The WorkItemPreviewStepApiModel model module.
    * @module model/WorkItemPreviewStepApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemPreviewStepApiModel {
       /**
@@ -29872,7 +31678,7 @@ declare module 'testit-api-client/model/WorkItemSearchQueryModel' {
   /**
    * The WorkItemSearchQueryModel model module.
    * @module model/WorkItemSearchQueryModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemSearchQueryModel {
       /**
@@ -29927,7 +31733,7 @@ declare module 'testit-api-client/model/WorkItemSelectApiModel' {
   /**
    * The WorkItemSelectApiModel model module.
    * @module model/WorkItemSelectApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemSelectApiModel {
       /**
@@ -29969,7 +31775,7 @@ declare module 'testit-api-client/model/WorkItemSelectModel' {
   /**
    * The WorkItemSelectModel model module.
    * @module model/WorkItemSelectModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemSelectModel {
       /**
@@ -30012,7 +31818,7 @@ declare module 'testit-api-client/model/WorkItemShortApiResult' {
   /**
    * The WorkItemShortApiResult model module.
    * @module model/WorkItemShortApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemShortApiResult {
       /**
@@ -30093,7 +31899,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
   /**
    * The WorkItemShortModel model module.
    * @module model/WorkItemShortModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemShortModel {
       /**
@@ -30123,7 +31929,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
        * @param versionId {String} Work Item version identifier
        * @param versionNumber {Number} Work Item version number
        * @param name {String} Work Item name
-       * @param entityTypeName {String} Work Item type. Possible values: CheckLists, SharedSteps, TestCases
+       * @param entityTypeName {module:model/WorkItemTypeModel} Work Item type. Possible values: CheckLists, SharedSteps, TestCases
        * @param projectId {String} Project unique identifier
        * @param sectionId {String} Identifier of Section where Work Item is located
        * @param sectionName {String} Section name of Work Item
@@ -30138,7 +31944,7 @@ declare module 'testit-api-client/model/WorkItemShortModel' {
        * @param iterations {Array.<module:model/IterationModel>} Set of iterations related to Work Item
        * @param links {Array.<module:model/LinkShortModel>} Set of links related to Work Item
        */
-      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: string, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
+      constructor(id: string, versionId: string, versionNumber: number, name: string, entityTypeName: any, projectId: string, sectionId: string, sectionName: string, isAutomated: boolean, globalId: number, duration: number, createdById: string, state: any, priority: any, sourceType: any, isDeleted: boolean, iterations: Array<any>, links: Array<any>);
       id: any;
       versionId: any;
       versionNumber: any;
@@ -30334,7 +32140,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModel' {
   /**
    * The WorkItemStepChangeViewModel model module.
    * @module model/WorkItemStepChangeViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemStepChangeViewModel {
       /**
@@ -30386,7 +32192,7 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
   /**
    * The WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel model module.
    * @module model/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel {
       /**
@@ -30415,12 +32221,46 @@ declare module 'testit-api-client/model/WorkItemStepChangeViewModelArrayChangedF
   }
 
 }
+declare module 'testit-api-client/model/WorkItemTypeModel' {
+  /**
+  * Enum class WorkItemTypeModel.
+  * @enum {}
+  * @readonly
+  */
+  export default class WorkItemTypeModel {
+      /**
+      * Returns a <code>WorkItemTypeModel</code> enum value from a Javascript object name.
+      * @param {Object} data The plain JavaScript object containing the name of the enum value.
+      * @return {module:model/WorkItemTypeModel} The enum <code>WorkItemTypeModel</code> value.
+      */
+      static constructFromObject(object: any): any;
+      /**
+       * value: "TestCases"
+       * @const
+       */
+      TestCases: string;
+      /**
+       * value: "CheckLists"
+       * @const
+       */
+      CheckLists: string;
+      /**
+       * value: "SharedSteps"
+       * @const
+       */
+      SharedSteps: string;
+  }
+  /**
+   * *
+   */
+
+}
 declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiModel' {
   export default WorkItemUpdatingFieldsApiModel;
   /**
    * The WorkItemUpdatingFieldsApiModel model module.
    * @module model/WorkItemUpdatingFieldsApiModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemUpdatingFieldsApiModel {
       /**
@@ -30458,7 +32298,7 @@ declare module 'testit-api-client/model/WorkItemUpdatingFieldsApiResult' {
   /**
    * The WorkItemUpdatingFieldsApiResult model module.
    * @module model/WorkItemUpdatingFieldsApiResult
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemUpdatingFieldsApiResult {
       /**
@@ -30511,7 +32351,7 @@ declare module 'testit-api-client/model/WorkItemVersionModel' {
   /**
    * The WorkItemVersionModel model module.
    * @module model/WorkItemVersionModel
-   * @version 7.2.6
+   * @version 7.3.0-TMS-5.8
    */
   class WorkItemVersionModel {
       /**

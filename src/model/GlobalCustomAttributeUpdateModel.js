@@ -17,7 +17,7 @@ import CustomAttributeOptionModel from './CustomAttributeOptionModel';
 /**
  * The GlobalCustomAttributeUpdateModel model module.
  * @module model/GlobalCustomAttributeUpdateModel
- * @version 7.2.6
+ * @version 7.3.0-TMS-5.8
  */
 class GlobalCustomAttributeUpdateModel {
     /**
@@ -108,7 +108,7 @@ GlobalCustomAttributeUpdateModel.RequiredProperties = ["name"];
 GlobalCustomAttributeUpdateModel.prototype['name'] = undefined;
 
 /**
- * Collection of attribute options   Available for attributes of type `options` and `multiple options` only
+ * Collection of attribute options      Available for attributes of type `options` and `multiple options` only
  * @member {Array.<module:model/CustomAttributeOptionModel>} options
  */
 GlobalCustomAttributeUpdateModel.prototype['options'] = undefined;

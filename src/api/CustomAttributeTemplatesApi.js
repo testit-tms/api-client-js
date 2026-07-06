@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * CustomAttributeTemplates service.
 * @module api/CustomAttributeTemplatesApi
-* @version 7.2.6
+* @version 7.3.0-TMS-5.8
 */
 export default class CustomAttributeTemplatesApi {
 
@@ -61,7 +61,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateValidationResult;
@@ -87,7 +87,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Exclude CustomAttributes from CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
@@ -111,7 +111,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -124,7 +124,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Exclude CustomAttributes from CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System delete attributes from attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System delete attributes from attributes tempalte
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody 
@@ -140,7 +140,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Include CustomAttributes to CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} [requestBody] 
@@ -164,7 +164,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -177,7 +177,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Include CustomAttributes to CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User sets attribute internal identifiers  User runs method execution  System add attributes to attributes tempalte
+     *   Use case    User sets attribute template internal identifier    User sets attribute internal identifiers    User runs method execution    System add attributes to attributes tempalte
      * @param {String} id Attribute template internal (UUID) identifier
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.requestBody 
@@ -193,7 +193,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Delete CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
      * @param {String} id Attribute template internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
@@ -214,7 +214,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -227,7 +227,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Delete CustomAttributeTemplate
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System search and delete attribute template  System returns no content response
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System search and delete attribute template    System returns no content response
      * @param {String} id Attribute template internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
@@ -241,7 +241,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Get CustomAttributeTemplate by ID
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
      * @param {String} id CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
      */
@@ -262,7 +262,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -275,7 +275,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Get CustomAttributeTemplate by ID
-     *  Use case  User sets attribute template internal identifier  User runs method execution  System return attribute template (listed in response example)
+     *   Use case    User sets attribute template internal identifier    User runs method execution    System return attribute template (listed in response example)
      * @param {String} id CustomAttributeTemplate internal (UUID) identifier
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
      */
@@ -289,7 +289,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Get CustomAttributeTemplate by name
-     *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+     *   Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
      * @param {String} name CustomAttributeTemplate name for search
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
      */
@@ -310,7 +310,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -323,7 +323,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Get CustomAttributeTemplate by name
-     *  Use case  User sets attribute template name  User runs method execution  System search and return list of attribute templates (listed in response example)
+     *   Use case    User sets attribute template name    User runs method execution    System search and return list of attribute templates (listed in response example)
      * @param {String} name CustomAttributeTemplate name for search
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
      */
@@ -337,7 +337,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Create CustomAttributeTemplate
-     *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+     *   Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTemplatePostModel} [customAttributeTemplatePostModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CustomAttributeTemplateModel} and HTTP response
@@ -355,7 +355,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -368,7 +368,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Create CustomAttributeTemplate
-     *  Use case  User sets attribute template parameters (listed in request example)  User runs method execution  System creates attribute template  System returns attribute template model (example listed in response parameters)
+     *   Use case    User sets attribute template parameters (listed in request example)    User runs method execution    System creates attribute template    System returns attribute template model (example listed in response parameters)
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomAttributeTemplatePostModel} opts.customAttributeTemplatePostModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CustomAttributeTemplateModel}
@@ -400,7 +400,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -427,7 +427,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Search CustomAttributeTemplates
-     *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+     *   Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {Number} [skip] Amount of items to be skipped (offset)
      * @param {Number} [take] Amount of items to be taken (limit)
@@ -455,7 +455,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Cookies'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SearchCustomAttributeTemplateGetModel];
@@ -468,7 +468,7 @@ export default class CustomAttributeTemplatesApi {
 
     /**
      * Search CustomAttributeTemplates
-     *  Use case  User sets search params model (listed in request example)  User runs method execution  System return attribute templates (listed in response example)
+     *   Use case    User sets search params model (listed in request example)    User runs method execution    System return attribute templates (listed in response example)
      * @param {Object} opts Optional parameters
      * @param {Number} opts.skip Amount of items to be skipped (offset)
      * @param {Number} opts.take Amount of items to be taken (limit)
