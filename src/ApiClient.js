@@ -16,7 +16,7 @@ import superagent from "superagent";
 
 /**
 * @module ApiClient
-* @version ^7.0.0
+* @version 7.3.0-TMS-5.8
 */
 
 /**
@@ -45,7 +45,8 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
-            'Bearer or PrivateToken': {type: 'apiKey', 'in': 'header', name: 'Authorization'},
+            'PrivateToken': {type: 'apiKey', 'in': 'header', name: 'Authorization'},
+            'Cookies': {type: 'apiKey', 'in': 'query', name: 'session'}
         }
 
 	/**
@@ -54,7 +55,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/^7.0.0/Javascript'
+            'User-Agent': 'OpenAPI-Generator/7.3.0-TMS-5.8/Javascript'
         };
 
         /**
