@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TestPointShortModel model module.
  * @module model/TestPointShortModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class TestPointShortModel {
     /**

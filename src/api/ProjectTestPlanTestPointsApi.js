@@ -22,7 +22,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectTestPlanTestPoints service.
 * @module api/ProjectTestPlanTestPointsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectTestPlanTestPointsApi {
 
@@ -70,7 +70,7 @@ export default class ProjectTestPlanTestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -128,7 +128,7 @@ export default class ProjectTestPlanTestPointsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunNameApiResult;

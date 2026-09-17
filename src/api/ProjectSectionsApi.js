@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectSections service.
 * @module api/ProjectSectionsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectSectionsApi {
 
@@ -72,7 +72,7 @@ export default class ProjectSectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [SectionModel];

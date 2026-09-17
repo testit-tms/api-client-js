@@ -21,6 +21,7 @@ import CreateTestRunAndFillByConfigurationsApiModel from '../model/CreateTestRun
 import CreateTestRunAndFillByWorkItemsApiModel from '../model/CreateTestRunAndFillByWorkItemsApiModel';
 import ManualRerunApiResult from '../model/ManualRerunApiResult';
 import ManualRerunSelectTestResultsApiModel from '../model/ManualRerunSelectTestResultsApiModel';
+import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import TestPointResultApiResult from '../model/TestPointResultApiResult';
 import TestResultsStatisticsApiResult from '../model/TestResultsStatisticsApiResult';
@@ -37,7 +38,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestRuns service.
 * @module api/TestRunsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class TestRunsApi {
 
@@ -74,7 +75,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -122,7 +123,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AutoTestNamespacesCountResponse;
@@ -169,7 +170,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -188,6 +189,59 @@ export default class TestRunsApi {
      */
     apiV2TestRunsIdDelete(id) {
       return this.apiV2TestRunsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Patch test run
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} [operation] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2TestRunsIdPatchWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['operation'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiV2TestRunsIdPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Identity.Application'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/testRuns/{id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Patch test run
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test Run internal identifier (GUID format)
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2TestRunsIdPatch(id, opts) {
+      return this.apiV2TestRunsIdPatchWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -217,7 +271,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -267,7 +321,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ManualRerunApiResult;
@@ -316,7 +370,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -366,7 +420,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestResultsStatisticsApiResult;
@@ -414,7 +468,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointResultApiResult];
@@ -463,7 +517,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -511,7 +565,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Date';
@@ -555,7 +609,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -601,7 +655,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -656,7 +710,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestRunShortApiResult];
@@ -705,7 +759,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -753,7 +807,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -798,7 +852,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -844,7 +898,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -890,7 +944,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -936,7 +990,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -985,7 +1039,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestRunV2ApiResult;
@@ -1036,7 +1090,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -1086,7 +1140,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1134,7 +1188,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1179,7 +1233,7 @@ export default class TestRunsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

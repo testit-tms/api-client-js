@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Users service.
 * @module api/UsersApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class UsersApi {
 
@@ -56,7 +56,7 @@ export default class UsersApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = UserCustomNameValidationResponse;

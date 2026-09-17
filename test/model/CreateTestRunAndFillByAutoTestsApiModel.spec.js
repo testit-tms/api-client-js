@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property option (base name: "option")', function() {
+      // uncomment below and update the code to test the property option
+      //var instance = new TestitApiClient.CreateTestRunAndFillByAutoTestsApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

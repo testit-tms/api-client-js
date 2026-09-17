@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemLinkChangeViewModel model module.
  * @module model/WorkItemLinkChangeViewModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WorkItemLinkChangeViewModel {
     /**

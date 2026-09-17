@@ -66,8 +66,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
+      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property duration (base name: "duration")', function() {
+      // uncomment below and update the code to test the property duration
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
       //expect(instance).to.be();
     });
@@ -84,36 +96,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property sourceType (base name: "sourceType")', function() {
-      // uncomment below and update the code to test the property sourceType
-      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property steps (base name: "steps")', function() {
-      // uncomment below and update the code to test the property steps
-      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property preconditionSteps (base name: "preconditionSteps")', function() {
-      // uncomment below and update the code to test the property preconditionSteps
-      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property postconditionSteps (base name: "postconditionSteps")', function() {
-      // uncomment below and update the code to test the property postconditionSteps
-      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property duration (base name: "duration")', function() {
-      // uncomment below and update the code to test the property duration
-      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
-      //expect(instance).to.be();
-    });
-
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
@@ -126,20 +108,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property links (base name: "links")', function() {
-      // uncomment below and update the code to test the property links
+    it('should have the property preconditionSteps (base name: "preconditionSteps")', function() {
+      // uncomment below and update the code to test the property preconditionSteps
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property steps (base name: "steps")', function() {
+      // uncomment below and update the code to test the property steps
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
       //expect(instance).to.be();
     });
 
-    it('should have the property attachments (base name: "attachments")', function() {
-      // uncomment below and update the code to test the property attachments
+    it('should have the property postconditionSteps (base name: "postconditionSteps")', function() {
+      // uncomment below and update the code to test the property postconditionSteps
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
       //expect(instance).to.be();
     });
@@ -152,6 +134,18 @@
 
     it('should have the property autoTests (base name: "autoTests")', function() {
       // uncomment below and update the code to test the property autoTests
+      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property attachments (base name: "attachments")', function() {
+      // uncomment below and update the code to test the property attachments
+      //var instance = new TestitApiClient.UpdateWorkItemApiModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
       //var instance = new TestitApiClient.UpdateWorkItemApiModel();
       //expect(instance).to.be();
     });

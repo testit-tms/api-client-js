@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **lastTestResultOutcome** | **String** |  | [optional] 
 **lastTestResultStatus** | [**TestStatusApiResult**](TestStatusApiResult.md) |  | [optional] 
 **stabilityPercentage** | **Number** |  | [optional] 
+**layer** | [**LayerApiResult**](LayerApiResult.md) | Model of auto test layer for use in responses. | [optional] 
 **links** | [**[LinkApiResult]**](LinkApiResult.md) |  | [optional] 
 **labels** | [**[LabelApiResult]**](LabelApiResult.md) |  | [optional] 
 **tags** | **[String]** |  | [optional] 

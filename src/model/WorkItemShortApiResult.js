@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import IterationApiResult from './IterationApiResult';
 import LinkShortApiResult from './LinkShortApiResult';
+import WorkItemLayerApiResult from './WorkItemLayerApiResult';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
@@ -21,7 +22,7 @@ import WorkItemStates from './WorkItemStates';
 /**
  * The WorkItemShortApiResult model module.
  * @module model/WorkItemShortApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WorkItemShortApiResult {
     /**
@@ -160,6 +161,9 @@ class WorkItemShortApiResult {
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [LinkShortApiResult]);
             }
+            if (data.hasOwnProperty('layer')) {
+                obj['layer'] = ApiClient.convertToType(data['layer'], WorkItemLayerApiResult);
+            }
         }
         return obj;
     }
@@ -235,6 +239,10 @@ class WorkItemShortApiResult {
             for (const item of data['links']) {
                 LinkShortApiResult.validateJSON(item);
             };
+        }
+        // validate the optional field `layer`
+        if (data['layer']) { // data not null
+          WorkItemLayerApiResult.validateJSON(data['layer']);
         }
 
         return true;
@@ -388,6 +396,12 @@ WorkItemShortApiResult.prototype['iterations'] = undefined;
  * @member {Array.<module:model/LinkShortApiResult>} links
  */
 WorkItemShortApiResult.prototype['links'] = undefined;
+
+/**
+ * Test pyramid layer of Work Item
+ * @member {module:model/WorkItemLayerApiResult} layer
+ */
+WorkItemShortApiResult.prototype['layer'] = undefined;
 
 
 

@@ -17,7 +17,7 @@ import Inquiry from './Inquiry';
 /**
  * The GetShortProjectsApiModel model module.
  * @module model/GetShortProjectsApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class GetShortProjectsApiModel {
     /**

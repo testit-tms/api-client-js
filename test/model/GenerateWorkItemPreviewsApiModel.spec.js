@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property taskKey (base name: "taskKey")', function() {
-      // uncomment below and update the code to test the property taskKey
-      //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();
-      //expect(instance).to.be();
-    });
-
     it('should have the property issueKey (base name: "issueKey")', function() {
       // uncomment below and update the code to test the property issueKey
       //var instance = new TestitApiClient.GenerateWorkItemPreviewsApiModel();

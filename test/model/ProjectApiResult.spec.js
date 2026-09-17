@@ -78,14 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property attributesScheme (base name: "attributesScheme")', function() {
-      // uncomment below and update the code to test the property attributesScheme
-      //var instance = new TestitApiClient.ProjectApiResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property testPlansAttributesScheme (base name: "testPlansAttributesScheme")', function() {
-      // uncomment below and update the code to test the property testPlansAttributesScheme
+    it('should have the property workItemsCount (base name: "workItemsCount")', function() {
+      // uncomment below and update the code to test the property workItemsCount
       //var instance = new TestitApiClient.ProjectApiResult();
       //expect(instance).to.be();
     });
@@ -152,12 +146,6 @@
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new TestitApiClient.ProjectApiResult();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property isFlakyAuto (base name: "isFlakyAuto")', function() {
-      // uncomment below and update the code to test the property isFlakyAuto
       //var instance = new TestitApiClient.ProjectApiResult();
       //expect(instance).to.be();
     });

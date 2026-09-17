@@ -17,7 +17,7 @@ import GuidExtractionModel from './GuidExtractionModel';
 /**
  * The ProjectExtractionModel model module.
  * @module model/ProjectExtractionModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class ProjectExtractionModel {
     /**

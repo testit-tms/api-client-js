@@ -18,6 +18,7 @@ import CreateDefectApiModel from '../model/CreateDefectApiModel';
 import DefectApiModel from '../model/DefectApiModel';
 import GetExternalFormApiResult from '../model/GetExternalFormApiResult';
 import ImageResizeType from '../model/ImageResizeType';
+import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import RerunsApiResult from '../model/RerunsApiResult';
 import TestResultResponse from '../model/TestResultResponse';
@@ -31,7 +32,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * TestResults service.
 * @module api/TestResultsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class TestResultsApi {
 
@@ -72,7 +73,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = GetExternalFormApiResult;
@@ -121,7 +122,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = DefectApiModel;
@@ -168,7 +169,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestResultResponse;
@@ -220,7 +221,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -267,7 +268,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AttachmentApiResult];
@@ -313,7 +314,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestResultResponse;
@@ -331,6 +332,59 @@ export default class TestResultsApi {
      */
     apiV2TestResultsIdGet(id) {
       return this.apiV2TestResultsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Patch test result by ID
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test result unique ID
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} [operation] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2TestResultsIdPatchWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['operation'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiV2TestResultsIdPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Identity.Application'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/testResults/{id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Patch test result by ID
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id Test result unique ID
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2TestResultsIdPatch(id, opts) {
+      return this.apiV2TestResultsIdPatchWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -362,7 +416,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -410,7 +464,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = RerunsApiResult;
@@ -463,7 +517,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestResultShortResponse];
@@ -512,7 +566,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestResultsStatisticsApiResult;
@@ -564,7 +618,7 @@ export default class TestResultsApi {
         'file': opts['file']
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -620,7 +674,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -687,7 +741,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -748,7 +802,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AttachmentApiResult;
@@ -797,7 +851,7 @@ export default class TestResultsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AttachmentApiResult];

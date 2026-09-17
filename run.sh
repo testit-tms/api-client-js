@@ -2,7 +2,7 @@
 # npm install @openapitools/openapi-generator-cli -g
 
 FILE_NAME="cloud-swagger.json"
-NEW_VERSION="7.2.6"
+NEW_VERSION="7.2.7"
 GENERATOR="openapi-generator-cli-7.18.0.jar"
 INDEX_DTS_PATH=index.d.ts
 
@@ -56,9 +56,9 @@ cp -r new/README.MD README-NEW.MD
 ./update-docs.sh
 
 # stable on 5.9.3
-npm i -g typescript
+npm i -g typescript@5.9.3
 # stable on 1.3.13
-npm i -g npm-dts
+npm i -g npm-dts@1.3.13
 npm-dts generate -L debug
 
 

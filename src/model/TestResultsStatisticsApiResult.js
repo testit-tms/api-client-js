@@ -18,7 +18,7 @@ import TestResultsStatisticsStatusesApiResult from './TestResultsStatisticsStatu
 /**
  * The TestResultsStatisticsApiResult model module.
  * @module model/TestResultsStatisticsApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class TestResultsStatisticsApiResult {
     /**

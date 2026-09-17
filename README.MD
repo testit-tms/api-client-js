@@ -105,6 +105,11 @@ Class | Method | HTTP request | Description
 *TestitApiClient.BackgroundJobsApi* | [**apiV2BackgroundJobsIdGet**](docs/BackgroundJobsApi.md#apiV2BackgroundJobsIdGet) | **GET** /api/v2/backgroundJobs/{id} | Get background job by ID
 *TestitApiClient.BackgroundJobsApi* | [**apiV2BackgroundJobsIdStatusGet**](docs/BackgroundJobsApi.md#apiV2BackgroundJobsIdStatusGet) | **GET** /api/v2/backgroundJobs/{id}/status | Get background job status by job ID
 *TestitApiClient.BackgroundJobsApi* | [**apiV2BackgroundJobsSearchPost**](docs/BackgroundJobsApi.md#apiV2BackgroundJobsSearchPost) | **POST** /api/v2/backgroundJobs/search | Search for user background jobs
+*TestitApiClient.ConfigurationParametersApi* | [**apiV2ConfigurationParametersConfigurationParameterIdDelete**](docs/ConfigurationParametersApi.md#apiV2ConfigurationParametersConfigurationParameterIdDelete) | **DELETE** /api/v2/configuration-parameters/{configurationParameterId} | Deletes configuration parameter
+*TestitApiClient.ConfigurationParametersApi* | [**apiV2ConfigurationParametersConfigurationParameterIdGet**](docs/ConfigurationParametersApi.md#apiV2ConfigurationParametersConfigurationParameterIdGet) | **GET** /api/v2/configuration-parameters/{configurationParameterId} | Gets configuration parameter by its identifier
+*TestitApiClient.ConfigurationParametersApi* | [**apiV2ConfigurationParametersConfigurationParameterIdPut**](docs/ConfigurationParametersApi.md#apiV2ConfigurationParametersConfigurationParameterIdPut) | **PUT** /api/v2/configuration-parameters/{configurationParameterId} | Updates configuration parameter
+*TestitApiClient.ConfigurationParametersApi* | [**apiV2ConfigurationParametersPost**](docs/ConfigurationParametersApi.md#apiV2ConfigurationParametersPost) | **POST** /api/v2/configuration-parameters | Creates new configuration parameter
+*TestitApiClient.ConfigurationParametersApi* | [**apiV2ConfigurationParametersSearchPost**](docs/ConfigurationParametersApi.md#apiV2ConfigurationParametersSearchPost) | **POST** /api/v2/configuration-parameters/search | Searches for configuration parameters
 *TestitApiClient.ConfigurationsApi* | [**apiV2ConfigurationsCreateByParametersPost**](docs/ConfigurationsApi.md#apiV2ConfigurationsCreateByParametersPost) | **POST** /api/v2/configurations/createByParameters | Create configurations by parameters
 *TestitApiClient.ConfigurationsApi* | [**apiV2ConfigurationsDeleteBulkPost**](docs/ConfigurationsApi.md#apiV2ConfigurationsDeleteBulkPost) | **POST** /api/v2/configurations/delete/bulk | Delete multiple configurations
 *TestitApiClient.ConfigurationsApi* | [**apiV2ConfigurationsIdDelete**](docs/ConfigurationsApi.md#apiV2ConfigurationsIdDelete) | **DELETE** /api/v2/configurations/{id} | Delete configuration
@@ -211,7 +216,6 @@ Class | Method | HTTP request | Description
 *TestitApiClient.ProjectsApi* | [**getTestPlansByProjectId**](docs/ProjectsApi.md#getTestPlansByProjectId) | **GET** /api/v2/projects/{id}/testPlans | Get project test plans
 *TestitApiClient.ProjectsApi* | [**getTestRunsByProjectId**](docs/ProjectsApi.md#getTestRunsByProjectId) | **GET** /api/v2/projects/{id}/testRuns | Get project test runs
 *TestitApiClient.ProjectsApi* | [**updateProject**](docs/ProjectsApi.md#updateProject) | **PUT** /api/v2/projects | Update project
-*TestitApiClient.SearchApi* | [**apiV2SearchGlobalSearchPost**](docs/SearchApi.md#apiV2SearchGlobalSearchPost) | **POST** /api/v2/search/globalSearch | 
 *TestitApiClient.SectionsApi* | [**apiV2SectionsIdPatch**](docs/SectionsApi.md#apiV2SectionsIdPatch) | **PATCH** /api/v2/sections/{id} | Patch section
 *TestitApiClient.SectionsApi* | [**createSection**](docs/SectionsApi.md#createSection) | **POST** /api/v2/sections | Create section
 *TestitApiClient.SectionsApi* | [**deleteSection**](docs/SectionsApi.md#deleteSection) | **DELETE** /api/v2/sections/{id} | Delete section
@@ -267,6 +271,7 @@ Class | Method | HTTP request | Description
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdAttachmentsAttachmentIdPut**](docs/TestResultsApi.md#apiV2TestResultsIdAttachmentsAttachmentIdPut) | **PUT** /api/v2/testResults/{id}/attachments/{attachmentId} | Attach file to the test result
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdAttachmentsInfoGet**](docs/TestResultsApi.md#apiV2TestResultsIdAttachmentsInfoGet) | **GET** /api/v2/testResults/{id}/attachments/info | Get test result attachments meta-information
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdGet**](docs/TestResultsApi.md#apiV2TestResultsIdGet) | **GET** /api/v2/testResults/{id} | Get test result by ID
+*TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdPatch**](docs/TestResultsApi.md#apiV2TestResultsIdPatch) | **PATCH** /api/v2/testResults/{id} | Patch test result by ID
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdPut**](docs/TestResultsApi.md#apiV2TestResultsIdPut) | **PUT** /api/v2/testResults/{id} | Edit test result by ID
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsIdRerunsGet**](docs/TestResultsApi.md#apiV2TestResultsIdRerunsGet) | **GET** /api/v2/testResults/{id}/reruns | Get reruns
 *TestitApiClient.TestResultsApi* | [**apiV2TestResultsSearchPost**](docs/TestResultsApi.md#apiV2TestResultsSearchPost) | **POST** /api/v2/testResults/search | Search for test results
@@ -279,6 +284,7 @@ Class | Method | HTTP request | Description
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsDelete**](docs/TestRunsApi.md#apiV2TestRunsDelete) | **DELETE** /api/v2/testRuns | Delete multiple test runs
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdAutoTestsNamespacesGet**](docs/TestRunsApi.md#apiV2TestRunsIdAutoTestsNamespacesGet) | **GET** /api/v2/testRuns/{id}/autoTestsNamespaces | Get autotest classes and namespaces in test run
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdDelete**](docs/TestRunsApi.md#apiV2TestRunsIdDelete) | **DELETE** /api/v2/testRuns/{id} | Delete test run
+*TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdPatch**](docs/TestRunsApi.md#apiV2TestRunsIdPatch) | **PATCH** /api/v2/testRuns/{id} | Patch test run
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdPurgePost**](docs/TestRunsApi.md#apiV2TestRunsIdPurgePost) | **POST** /api/v2/testRuns/{id}/purge | Permanently delete test run from archive
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdRerunsPost**](docs/TestRunsApi.md#apiV2TestRunsIdRerunsPost) | **POST** /api/v2/testRuns/{id}/reruns | Manual autotests rerun in test run
 *TestitApiClient.TestRunsApi* | [**apiV2TestRunsIdRestorePost**](docs/TestRunsApi.md#apiV2TestRunsIdRestorePost) | **POST** /api/v2/testRuns/{id}/restore | Restore test run from the archive
@@ -341,11 +347,13 @@ Class | Method | HTTP request | Description
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdLikePost**](docs/WorkItemsApi.md#apiV2WorkItemsIdLikePost) | **POST** /api/v2/workItems/{id}/like | Set like to WorkItem
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdLikesCountGet**](docs/WorkItemsApi.md#apiV2WorkItemsIdLikesCountGet) | **GET** /api/v2/workItems/{id}/likes/count | Get likes count of WorkItem
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdLikesGet**](docs/WorkItemsApi.md#apiV2WorkItemsIdLikesGet) | **GET** /api/v2/workItems/{id}/likes | Get likes of WorkItem
+*TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdPatch**](docs/WorkItemsApi.md#apiV2WorkItemsIdPatch) | **PATCH** /api/v2/workItems/{id} | Patch Test Case, Checklist or Shared Step
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdTestResultsHistoryGet**](docs/WorkItemsApi.md#apiV2WorkItemsIdTestResultsHistoryGet) | **GET** /api/v2/workItems/{id}/testResults/history | Get test results history of WorkItem
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsIdVersionVersionIdActualPost**](docs/WorkItemsApi.md#apiV2WorkItemsIdVersionVersionIdActualPost) | **POST** /api/v2/workItems/{id}/version/{versionId}/actual | Set WorkItem as actual
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsLinksUrlsSearchPost**](docs/WorkItemsApi.md#apiV2WorkItemsLinksUrlsSearchPost) | **POST** /api/v2/workItems/links/urls/search | 
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsMovePost**](docs/WorkItemsApi.md#apiV2WorkItemsMovePost) | **POST** /api/v2/workItems/move | Move WorkItem to another section
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsPost**](docs/WorkItemsApi.md#apiV2WorkItemsPost) | **POST** /api/v2/workItems | Creates work item
+*TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsPut**](docs/WorkItemsApi.md#apiV2WorkItemsPut) | **PUT** /api/v2/workItems | Update Test Case, Checklist or Shared Step
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsSearchPost**](docs/WorkItemsApi.md#apiV2WorkItemsSearchPost) | **POST** /api/v2/workItems/search | Search for work items
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsSharedStepIdReferencesSectionsPost**](docs/WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesSectionsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/sections | Get SharedStep references in sections
 *TestitApiClient.WorkItemsApi* | [**apiV2WorkItemsSharedStepIdReferencesWorkItemsPost**](docs/WorkItemsApi.md#apiV2WorkItemsSharedStepIdReferencesWorkItemsPost) | **POST** /api/v2/workItems/{sharedStepId}/references/workItems | Get SharedStep references in work items
@@ -359,7 +367,6 @@ Class | Method | HTTP request | Description
 *TestitApiClient.WorkItemsApi* | [**getWorkItemVersions**](docs/WorkItemsApi.md#getWorkItemVersions) | **GET** /api/v2/workItems/{id}/versions | Get WorkItem versions
 *TestitApiClient.WorkItemsApi* | [**purgeWorkItem**](docs/WorkItemsApi.md#purgeWorkItem) | **POST** /api/v2/workItems/{id}/purge | Permanently delete test case, checklist or shared steps from archive
 *TestitApiClient.WorkItemsApi* | [**restoreWorkItem**](docs/WorkItemsApi.md#restoreWorkItem) | **POST** /api/v2/workItems/{id}/restore | Restore test case, checklist or shared steps from archive
-*TestitApiClient.WorkItemsApi* | [**updateWorkItem**](docs/WorkItemsApi.md#updateWorkItem) | **PUT** /api/v2/workItems | Update Test Case, Checklist or Shared Step
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsCommentsCommentIdDelete**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsCommentsCommentIdDelete) | **DELETE** /api/v2/workItems/comments/{commentId} | Delete WorkItem comment
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsCommentsPost**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsCommentsPost) | **POST** /api/v2/workItems/comments | Create WorkItem comment
 *TestitApiClient.WorkItemsCommentsApi* | [**apiV2WorkItemsCommentsPut**](docs/WorkItemsCommentsApi.md#apiV2WorkItemsCommentsPut) | **PUT** /api/v2/workItems/comments | Update work item comment
@@ -378,10 +385,15 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [TestitApiClient.AIServiceModelApiResult](docs/AIServiceModelApiResult.md)
+ - [TestitApiClient.AIServiceModelApiResultCountReply](docs/AIServiceModelApiResultCountReply.md)
+ - [TestitApiClient.AIServiceModelApiResultGroup](docs/AIServiceModelApiResultGroup.md)
+ - [TestitApiClient.AIServiceModelApiResultGroupedReply](docs/AIServiceModelApiResultGroupedReply.md)
+ - [TestitApiClient.AIServiceModelApiResultIReply](docs/AIServiceModelApiResultIReply.md)
  - [TestitApiClient.AIServiceModelApiResultReply](docs/AIServiceModelApiResultReply.md)
  - [TestitApiClient.ActionUpdate](docs/ActionUpdate.md)
  - [TestitApiClient.ApiExternalServiceCategory](docs/ApiExternalServiceCategory.md)
  - [TestitApiClient.AssignAttachmentApiModel](docs/AssignAttachmentApiModel.md)
+ - [TestitApiClient.AssignAutoTestCaseIdApiModel](docs/AssignAutoTestCaseIdApiModel.md)
  - [TestitApiClient.AssignIterationApiModel](docs/AssignIterationApiModel.md)
  - [TestitApiClient.AttachmentApiResult](docs/AttachmentApiResult.md)
  - [TestitApiClient.AttachmentChangeViewModel](docs/AttachmentChangeViewModel.md)
@@ -396,6 +408,8 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.AutoTestAverageDurationApiResult](docs/AutoTestAverageDurationApiResult.md)
  - [TestitApiClient.AutoTestBulkDeleteApiModel](docs/AutoTestBulkDeleteApiModel.md)
  - [TestitApiClient.AutoTestBulkDeleteApiResult](docs/AutoTestBulkDeleteApiResult.md)
+ - [TestitApiClient.AutoTestCaseApiModel](docs/AutoTestCaseApiModel.md)
+ - [TestitApiClient.AutoTestCaseResult](docs/AutoTestCaseResult.md)
  - [TestitApiClient.AutoTestChangeViewModel](docs/AutoTestChangeViewModel.md)
  - [TestitApiClient.AutoTestChangeViewModelArrayChangedFieldViewModel](docs/AutoTestChangeViewModelArrayChangedFieldViewModel.md)
  - [TestitApiClient.AutoTestClassCountApiModel](docs/AutoTestClassCountApiModel.md)
@@ -453,6 +467,18 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.ConfigurationFilterApiModel](docs/ConfigurationFilterApiModel.md)
  - [TestitApiClient.ConfigurationFilterModel](docs/ConfigurationFilterModel.md)
  - [TestitApiClient.ConfigurationModel](docs/ConfigurationModel.md)
+ - [TestitApiClient.ConfigurationParameterApiModel](docs/ConfigurationParameterApiModel.md)
+ - [TestitApiClient.ConfigurationParameterApiResult](docs/ConfigurationParameterApiResult.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResult](docs/ConfigurationParameterPreviewApiResult.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResultCountReply](docs/ConfigurationParameterPreviewApiResultCountReply.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResultGroup](docs/ConfigurationParameterPreviewApiResultGroup.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResultGroupedReply](docs/ConfigurationParameterPreviewApiResultGroupedReply.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResultIReply](docs/ConfigurationParameterPreviewApiResultIReply.md)
+ - [TestitApiClient.ConfigurationParameterPreviewApiResultReply](docs/ConfigurationParameterPreviewApiResultReply.md)
+ - [TestitApiClient.ConfigurationParameterProjectApiModel](docs/ConfigurationParameterProjectApiModel.md)
+ - [TestitApiClient.ConfigurationParameterValueApiModel](docs/ConfigurationParameterValueApiModel.md)
+ - [TestitApiClient.ConfigurationParameterValueApiResult](docs/ConfigurationParameterValueApiResult.md)
+ - [TestitApiClient.ConfigurationParameterValueApiResultApiCollectionPreview](docs/ConfigurationParameterValueApiResultApiCollectionPreview.md)
  - [TestitApiClient.ConfigurationPostModel](docs/ConfigurationPostModel.md)
  - [TestitApiClient.ConfigurationPutModel](docs/ConfigurationPutModel.md)
  - [TestitApiClient.ConfigurationSelectApiModel](docs/ConfigurationSelectApiModel.md)
@@ -471,6 +497,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.CreateStepApiModel](docs/CreateStepApiModel.md)
  - [TestitApiClient.CreateTagApiModel](docs/CreateTagApiModel.md)
  - [TestitApiClient.CreateTestPlanApiModel](docs/CreateTestPlanApiModel.md)
+ - [TestitApiClient.CreateTestRunAndFillByAutoTestCasesApiModel](docs/CreateTestRunAndFillByAutoTestCasesApiModel.md)
  - [TestitApiClient.CreateTestRunAndFillByAutoTestsApiModel](docs/CreateTestRunAndFillByAutoTestsApiModel.md)
  - [TestitApiClient.CreateTestRunAndFillByConfigurationsApiModel](docs/CreateTestRunAndFillByConfigurationsApiModel.md)
  - [TestitApiClient.CreateTestRunAndFillByWorkItemsApiModel](docs/CreateTestRunAndFillByWorkItemsApiModel.md)
@@ -481,7 +508,6 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.CreateWorkflowApiModel](docs/CreateWorkflowApiModel.md)
  - [TestitApiClient.CustomAttributeApiResult](docs/CustomAttributeApiResult.md)
  - [TestitApiClient.CustomAttributeChangeModel](docs/CustomAttributeChangeModel.md)
- - [TestitApiClient.CustomAttributeGetModel](docs/CustomAttributeGetModel.md)
  - [TestitApiClient.CustomAttributeModel](docs/CustomAttributeModel.md)
  - [TestitApiClient.CustomAttributeOptionApiResult](docs/CustomAttributeOptionApiResult.md)
  - [TestitApiClient.CustomAttributeOptionModel](docs/CustomAttributeOptionModel.md)
@@ -503,6 +529,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.DefectApiModel](docs/DefectApiModel.md)
  - [TestitApiClient.DeletionState](docs/DeletionState.md)
  - [TestitApiClient.DemoProjectApiResult](docs/DemoProjectApiResult.md)
+ - [TestitApiClient.DetailedProjectApiResult](docs/DetailedProjectApiResult.md)
  - [TestitApiClient.EnableProjectExternalServiceApiModel](docs/EnableProjectExternalServiceApiModel.md)
  - [TestitApiClient.ExternalFormAllowedValueModel](docs/ExternalFormAllowedValueModel.md)
  - [TestitApiClient.ExternalFormCreateModel](docs/ExternalFormCreateModel.md)
@@ -511,6 +538,10 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.ExternalFormModel](docs/ExternalFormModel.md)
  - [TestitApiClient.ExternalIssueApiField](docs/ExternalIssueApiField.md)
  - [TestitApiClient.ExternalIssueApiFieldSuggestion](docs/ExternalIssueApiFieldSuggestion.md)
+ - [TestitApiClient.ExternalIssueApiFieldSuggestionCountReply](docs/ExternalIssueApiFieldSuggestionCountReply.md)
+ - [TestitApiClient.ExternalIssueApiFieldSuggestionGroup](docs/ExternalIssueApiFieldSuggestionGroup.md)
+ - [TestitApiClient.ExternalIssueApiFieldSuggestionGroupedReply](docs/ExternalIssueApiFieldSuggestionGroupedReply.md)
+ - [TestitApiClient.ExternalIssueApiFieldSuggestionIReply](docs/ExternalIssueApiFieldSuggestionIReply.md)
  - [TestitApiClient.ExternalIssueApiFieldSuggestionReply](docs/ExternalIssueApiFieldSuggestionReply.md)
  - [TestitApiClient.ExternalIssueApiMetadata](docs/ExternalIssueApiMetadata.md)
  - [TestitApiClient.ExternalIssueApiPriority](docs/ExternalIssueApiPriority.md)
@@ -534,6 +565,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.FailureCategoryItemApiResult](docs/FailureCategoryItemApiResult.md)
  - [TestitApiClient.FailureCategoryModel](docs/FailureCategoryModel.md)
  - [TestitApiClient.FailureClassRegexApiResult](docs/FailureClassRegexApiResult.md)
+ - [TestitApiClient.FieldFilter](docs/FieldFilter.md)
  - [TestitApiClient.Filter](docs/Filter.md)
  - [TestitApiClient.FilterModel](docs/FilterModel.md)
  - [TestitApiClient.FilterOperator](docs/FilterOperator.md)
@@ -543,14 +575,14 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.GetExternalFormApiResult](docs/GetExternalFormApiResult.md)
  - [TestitApiClient.GetExternalIssueSuggestionsApiModel](docs/GetExternalIssueSuggestionsApiModel.md)
  - [TestitApiClient.GetShortProjectsApiModel](docs/GetShortProjectsApiModel.md)
- - [TestitApiClient.GetXlsxTestPointsByTestPlanModel](docs/GetXlsxTestPointsByTestPlanModel.md)
+ - [TestitApiClient.GetXlsxTestPointsByTestPlanApiModel](docs/GetXlsxTestPointsByTestPlanApiModel.md)
  - [TestitApiClient.GlobalCustomAttributePostModel](docs/GlobalCustomAttributePostModel.md)
  - [TestitApiClient.GlobalCustomAttributeUpdateModel](docs/GlobalCustomAttributeUpdateModel.md)
- - [TestitApiClient.GlobalSearchItemResult](docs/GlobalSearchItemResult.md)
- - [TestitApiClient.GlobalSearchRequest](docs/GlobalSearchRequest.md)
- - [TestitApiClient.GlobalSearchResponse](docs/GlobalSearchResponse.md)
+ - [TestitApiClient.Group](docs/Group.md)
+ - [TestitApiClient.GroupKey](docs/GroupKey.md)
  - [TestitApiClient.GuidChangedFieldViewModel](docs/GuidChangedFieldViewModel.md)
  - [TestitApiClient.GuidExtractionModel](docs/GuidExtractionModel.md)
+ - [TestitApiClient.GuidNullableChangedFieldViewModel](docs/GuidNullableChangedFieldViewModel.md)
  - [TestitApiClient.IFilter](docs/IFilter.md)
  - [TestitApiClient.ImageResizeType](docs/ImageResizeType.md)
  - [TestitApiClient.Inquiry](docs/Inquiry.md)
@@ -560,13 +592,17 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.Int64RangeSelectorModel](docs/Int64RangeSelectorModel.md)
  - [TestitApiClient.IterationApiResult](docs/IterationApiResult.md)
  - [TestitApiClient.IterationModel](docs/IterationModel.md)
+ - [TestitApiClient.JsonElement](docs/JsonElement.md)
+ - [TestitApiClient.JsonValueKind](docs/JsonValueKind.md)
  - [TestitApiClient.Label](docs/Label.md)
  - [TestitApiClient.LabelApiModel](docs/LabelApiModel.md)
  - [TestitApiClient.LabelApiResult](docs/LabelApiResult.md)
  - [TestitApiClient.LabelShortModel](docs/LabelShortModel.md)
  - [TestitApiClient.LastTestResultApiResult](docs/LastTestResultApiResult.md)
  - [TestitApiClient.LastTestResultModel](docs/LastTestResultModel.md)
- - [TestitApiClient.Link](docs/Link.md)
+ - [TestitApiClient.LayerApiModel](docs/LayerApiModel.md)
+ - [TestitApiClient.LayerApiResult](docs/LayerApiResult.md)
+ - [TestitApiClient.LayerSource](docs/LayerSource.md)
  - [TestitApiClient.LinkApiResult](docs/LinkApiResult.md)
  - [TestitApiClient.LinkCreateApiModel](docs/LinkCreateApiModel.md)
  - [TestitApiClient.LinkModel](docs/LinkModel.md)
@@ -581,6 +617,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.ManualRerunApiResult](docs/ManualRerunApiResult.md)
  - [TestitApiClient.ManualRerunSelectTestResultsApiModel](docs/ManualRerunSelectTestResultsApiModel.md)
  - [TestitApiClient.ManualRerunTestResultApiModel](docs/ManualRerunTestResultApiModel.md)
+ - [TestitApiClient.Mode](docs/Mode.md)
  - [TestitApiClient.NamedEntityApiModel](docs/NamedEntityApiModel.md)
  - [TestitApiClient.NotificationModel](docs/NotificationModel.md)
  - [TestitApiClient.NotificationQueryFilterModel](docs/NotificationQueryFilterModel.md)
@@ -614,12 +651,15 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.ProjectFailureCategoryApiResult](docs/ProjectFailureCategoryApiResult.md)
  - [TestitApiClient.ProjectFailureCategoryGroupItemApiResult](docs/ProjectFailureCategoryGroupItemApiResult.md)
  - [TestitApiClient.ProjectFailureCategoryGroupItemApiResultReply](docs/ProjectFailureCategoryGroupItemApiResultReply.md)
- - [TestitApiClient.ProjectModel](docs/ProjectModel.md)
  - [TestitApiClient.ProjectNameApiResult](docs/ProjectNameApiResult.md)
+ - [TestitApiClient.ProjectNameApiResultApiCollectionPreview](docs/ProjectNameApiResultApiCollectionPreview.md)
  - [TestitApiClient.ProjectSelectModel](docs/ProjectSelectModel.md)
  - [TestitApiClient.ProjectShortApiResult](docs/ProjectShortApiResult.md)
+ - [TestitApiClient.ProjectShortApiResultCountReply](docs/ProjectShortApiResultCountReply.md)
+ - [TestitApiClient.ProjectShortApiResultGroup](docs/ProjectShortApiResultGroup.md)
+ - [TestitApiClient.ProjectShortApiResultGroupedReply](docs/ProjectShortApiResultGroupedReply.md)
+ - [TestitApiClient.ProjectShortApiResultIReply](docs/ProjectShortApiResultIReply.md)
  - [TestitApiClient.ProjectShortApiResultReply](docs/ProjectShortApiResultReply.md)
- - [TestitApiClient.ProjectShortModel](docs/ProjectShortModel.md)
  - [TestitApiClient.ProjectShortestModel](docs/ProjectShortestModel.md)
  - [TestitApiClient.ProjectTestPlansFilterModel](docs/ProjectTestPlansFilterModel.md)
  - [TestitApiClient.ProjectType](docs/ProjectType.md)
@@ -631,6 +671,9 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.RequestTypeModel](docs/RequestTypeModel.md)
  - [TestitApiClient.RerunTestResultApiResult](docs/RerunTestResultApiResult.md)
  - [TestitApiClient.RerunsApiResult](docs/RerunsApiResult.md)
+ - [TestitApiClient.ScheduleAutoTestsReportImportApiModel](docs/ScheduleAutoTestsReportImportApiModel.md)
+ - [TestitApiClient.ScheduleAutoTestsReportImportsApiModel](docs/ScheduleAutoTestsReportImportsApiModel.md)
+ - [TestitApiClient.SearchConfigurationParametersApiModel](docs/SearchConfigurationParametersApiModel.md)
  - [TestitApiClient.SearchCustomAttributeTemplateGetModel](docs/SearchCustomAttributeTemplateGetModel.md)
  - [TestitApiClient.SearchExternalIssuesApiModel](docs/SearchExternalIssuesApiModel.md)
  - [TestitApiClient.SearchTestRunsApiModel](docs/SearchTestRunsApiModel.md)
@@ -759,6 +802,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.TestRunGroupByFailureClassApiResult](docs/TestRunGroupByFailureClassApiResult.md)
  - [TestitApiClient.TestRunGroupByStatusApiResult](docs/TestRunGroupByStatusApiResult.md)
  - [TestitApiClient.TestRunGroupByStatusTypeApiResult](docs/TestRunGroupByStatusTypeApiResult.md)
+ - [TestitApiClient.TestRunLaunchOptionApiModel](docs/TestRunLaunchOptionApiModel.md)
  - [TestitApiClient.TestRunNameApiResult](docs/TestRunNameApiResult.md)
  - [TestitApiClient.TestRunSelectApiModel](docs/TestRunSelectApiModel.md)
  - [TestitApiClient.TestRunShortApiResult](docs/TestRunShortApiResult.md)
@@ -768,6 +812,10 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.TestRunTestResultsSelectModel](docs/TestRunTestResultsSelectModel.md)
  - [TestitApiClient.TestRunV2ApiResult](docs/TestRunV2ApiResult.md)
  - [TestitApiClient.TestStatusApiResult](docs/TestStatusApiResult.md)
+ - [TestitApiClient.TestStatusApiResultCountReply](docs/TestStatusApiResultCountReply.md)
+ - [TestitApiClient.TestStatusApiResultGroup](docs/TestStatusApiResultGroup.md)
+ - [TestitApiClient.TestStatusApiResultGroupedReply](docs/TestStatusApiResultGroupedReply.md)
+ - [TestitApiClient.TestStatusApiResultIReply](docs/TestStatusApiResultIReply.md)
  - [TestitApiClient.TestStatusApiResultReply](docs/TestStatusApiResultReply.md)
  - [TestitApiClient.TestStatusApiType](docs/TestStatusApiType.md)
  - [TestitApiClient.TestStatusModel](docs/TestStatusModel.md)
@@ -828,7 +876,6 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkItemChangedFieldsViewModel](docs/WorkItemChangedFieldsViewModel.md)
  - [TestitApiClient.WorkItemCommentApiResult](docs/WorkItemCommentApiResult.md)
  - [TestitApiClient.WorkItemEntityTypeApiModel](docs/WorkItemEntityTypeApiModel.md)
- - [TestitApiClient.WorkItemEntityTypes](docs/WorkItemEntityTypes.md)
  - [TestitApiClient.WorkItemExternalMetadataFieldFilterApiModel](docs/WorkItemExternalMetadataFieldFilterApiModel.md)
  - [TestitApiClient.WorkItemExternalMetadataFieldFilterModel](docs/WorkItemExternalMetadataFieldFilterModel.md)
  - [TestitApiClient.WorkItemExternalMetadataFilterApiModel](docs/WorkItemExternalMetadataFilterApiModel.md)
@@ -842,6 +889,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkItemGroupType](docs/WorkItemGroupType.md)
  - [TestitApiClient.WorkItemIdApiModel](docs/WorkItemIdApiModel.md)
  - [TestitApiClient.WorkItemIndexApiResult](docs/WorkItemIndexApiResult.md)
+ - [TestitApiClient.WorkItemLayerApiResult](docs/WorkItemLayerApiResult.md)
  - [TestitApiClient.WorkItemLikeModel](docs/WorkItemLikeModel.md)
  - [TestitApiClient.WorkItemLinkChangeViewModel](docs/WorkItemLinkChangeViewModel.md)
  - [TestitApiClient.WorkItemLinkChangeViewModelArrayChangedFieldViewModel](docs/WorkItemLinkChangeViewModelArrayChangedFieldViewModel.md)
@@ -875,6 +923,7 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkItemStates](docs/WorkItemStates.md)
  - [TestitApiClient.WorkItemStepChangeViewModel](docs/WorkItemStepChangeViewModel.md)
  - [TestitApiClient.WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel](docs/WorkItemStepChangeViewModelArrayChangedFieldWithDiffsViewModel.md)
+ - [TestitApiClient.WorkItemTypeModel](docs/WorkItemTypeModel.md)
  - [TestitApiClient.WorkItemUpdatingFieldsApiModel](docs/WorkItemUpdatingFieldsApiModel.md)
  - [TestitApiClient.WorkItemUpdatingFieldsApiResult](docs/WorkItemUpdatingFieldsApiResult.md)
  - [TestitApiClient.WorkItemVersionModel](docs/WorkItemVersionModel.md)
@@ -882,8 +931,16 @@ Class | Method | HTTP request | Description
  - [TestitApiClient.WorkflowExistsByNameApiResult](docs/WorkflowExistsByNameApiResult.md)
  - [TestitApiClient.WorkflowProjectApiResult](docs/WorkflowProjectApiResult.md)
  - [TestitApiClient.WorkflowProjectApiResultApiCollectionPreview](docs/WorkflowProjectApiResultApiCollectionPreview.md)
+ - [TestitApiClient.WorkflowProjectApiResultCountReply](docs/WorkflowProjectApiResultCountReply.md)
+ - [TestitApiClient.WorkflowProjectApiResultGroup](docs/WorkflowProjectApiResultGroup.md)
+ - [TestitApiClient.WorkflowProjectApiResultGroupedReply](docs/WorkflowProjectApiResultGroupedReply.md)
+ - [TestitApiClient.WorkflowProjectApiResultIReply](docs/WorkflowProjectApiResultIReply.md)
  - [TestitApiClient.WorkflowProjectApiResultReply](docs/WorkflowProjectApiResultReply.md)
  - [TestitApiClient.WorkflowShortApiResult](docs/WorkflowShortApiResult.md)
+ - [TestitApiClient.WorkflowShortApiResultCountReply](docs/WorkflowShortApiResultCountReply.md)
+ - [TestitApiClient.WorkflowShortApiResultGroup](docs/WorkflowShortApiResultGroup.md)
+ - [TestitApiClient.WorkflowShortApiResultGroupedReply](docs/WorkflowShortApiResultGroupedReply.md)
+ - [TestitApiClient.WorkflowShortApiResultIReply](docs/WorkflowShortApiResultIReply.md)
  - [TestitApiClient.WorkflowShortApiResultReply](docs/WorkflowShortApiResultReply.md)
  - [TestitApiClient.WorkflowStatusApiModel](docs/WorkflowStatusApiModel.md)
  - [TestitApiClient.WorkflowStatusApiResult](docs/WorkflowStatusApiResult.md)
@@ -893,10 +950,17 @@ Class | Method | HTTP request | Description
 
 
 Authentication schemes defined for the API:
-### Bearer or PrivateToken
+### PrivateToken
 
 
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+### Identity.Application
+
+
+- **Type**: API key
+- **API key parameter name**: backoffice
+- **Location**: 
 

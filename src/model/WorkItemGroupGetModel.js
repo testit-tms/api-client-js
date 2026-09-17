@@ -18,7 +18,7 @@ import WorkItemLocalSelectModel from './WorkItemLocalSelectModel';
 /**
  * The WorkItemGroupGetModel model module.
  * @module model/WorkItemGroupGetModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WorkItemGroupGetModel {
     /**

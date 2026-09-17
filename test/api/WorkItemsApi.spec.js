@@ -118,6 +118,16 @@
         done();
       });
     });
+    describe('apiV2WorkItemsIdPatch', function() {
+      it('should call apiV2WorkItemsIdPatch successfully', function(done) {
+        //uncomment below and update the code to test apiV2WorkItemsIdPatch
+        //instance.apiV2WorkItemsIdPatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('apiV2WorkItemsIdTestResultsHistoryGet', function() {
       it('should call apiV2WorkItemsIdTestResultsHistoryGet successfully', function(done) {
         //uncomment below and update the code to test apiV2WorkItemsIdTestResultsHistoryGet
@@ -162,6 +172,16 @@
       it('should call apiV2WorkItemsPost successfully', function(done) {
         //uncomment below and update the code to test apiV2WorkItemsPost
         //instance.apiV2WorkItemsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('apiV2WorkItemsPut', function() {
+      it('should call apiV2WorkItemsPut successfully', function(done) {
+        //uncomment below and update the code to test apiV2WorkItemsPut
+        //instance.apiV2WorkItemsPut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -292,16 +312,6 @@
       it('should call restoreWorkItem successfully', function(done) {
         //uncomment below and update the code to test restoreWorkItem
         //instance.restoreWorkItem(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('updateWorkItem', function() {
-      it('should call updateWorkItem successfully', function(done) {
-        //uncomment below and update the code to test updateWorkItem
-        //instance.updateWorkItem(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

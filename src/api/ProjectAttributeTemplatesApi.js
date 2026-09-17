@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributeTemplates service.
 * @module api/ProjectAttributeTemplatesApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectAttributeTemplatesApi {
 
@@ -73,7 +73,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [ProjectCustomAttributeTemplateGetModel];
@@ -133,7 +133,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -188,7 +188,7 @@ export default class ProjectAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;

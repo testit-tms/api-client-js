@@ -23,7 +23,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Tags service.
 * @module api/TagsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class TagsApi {
 
@@ -60,7 +60,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -109,7 +109,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -154,7 +154,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = TagApiResult;
@@ -202,7 +202,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['application/json'];
       let returnType = TagApiResult;
@@ -258,7 +258,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagApiResult];
@@ -317,7 +317,7 @@ export default class TagsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagApiResult];

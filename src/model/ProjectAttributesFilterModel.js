@@ -17,7 +17,7 @@ import CustomAttributeTypesEnum from './CustomAttributeTypesEnum';
 /**
  * The ProjectAttributesFilterModel model module.
  * @module model/ProjectAttributesFilterModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class ProjectAttributesFilterModel {
     /**

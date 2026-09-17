@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import ConfigurationModel from '../model/ConfigurationModel';
 import CreateTestPlanApiModel from '../model/CreateTestPlanApiModel';
-import GetXlsxTestPointsByTestPlanModel from '../model/GetXlsxTestPointsByTestPlanModel';
+import GetXlsxTestPointsByTestPlanApiModel from '../model/GetXlsxTestPointsByTestPlanApiModel';
 import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import SearchTestRunsApiModel from '../model/SearchTestRunsApiModel';
@@ -37,7 +37,7 @@ import WorkItemSelectModel from '../model/WorkItemSelectModel';
 /**
 * TestPlans service.
 * @module api/TestPlansApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class TestPlansApi {
 
@@ -79,7 +79,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -131,7 +131,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -181,7 +181,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPointAnalyticResult;
@@ -232,7 +232,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanWithTestSuiteTreeModel;
@@ -281,7 +281,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ConfigurationModel];
@@ -312,12 +312,12 @@ export default class TestPlansApi {
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} [timeZoneOffsetInMinutes] 
-     * @param {module:model/GetXlsxTestPointsByTestPlanModel} [getXlsxTestPointsByTestPlanModel] 
+     * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} [getXlsxTestPointsByTestPlanApiModel] 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
     apiV2TestPlansIdExportTestPointsXlsxPostWithHttpInfo(id, opts) {
       opts = opts || {};
-      let postBody = opts['getXlsxTestPointsByTestPlanModel'];
+      let postBody = opts['getXlsxTestPointsByTestPlanApiModel'];
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling apiV2TestPlansIdExportTestPointsXlsxPost");
@@ -334,7 +334,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -351,7 +351,7 @@ export default class TestPlansApi {
      * @param {String} id Test plan internal (guid format) or global (int format) identifier
      * @param {Object} opts Optional parameters
      * @param {Number} opts.timeZoneOffsetInMinutes 
-     * @param {module:model/GetXlsxTestPointsByTestPlanModel} opts.getXlsxTestPointsByTestPlanModel 
+     * @param {module:model/GetXlsxTestPointsByTestPlanApiModel} opts.getXlsxTestPointsByTestPlanApiModel 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
     apiV2TestPlansIdExportTestPointsXlsxPost(id, opts) {
@@ -395,7 +395,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -460,7 +460,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanChangeModel];
@@ -522,7 +522,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanLink];
@@ -577,7 +577,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -627,7 +627,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanSummaryModel;
@@ -689,7 +689,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointWithLastResultResponseModel];
@@ -747,7 +747,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -799,7 +799,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -856,7 +856,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -926,7 +926,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -997,7 +997,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -1051,7 +1051,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1098,7 +1098,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1145,7 +1145,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [TestPlanShortModel];
@@ -1195,7 +1195,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1243,7 +1243,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1288,7 +1288,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1337,7 +1337,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1385,7 +1385,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestPlanModel;
@@ -1433,7 +1433,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestSuiteHierarchyApiResult];
@@ -1481,7 +1481,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1528,7 +1528,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1575,7 +1575,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1623,7 +1623,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1668,7 +1668,7 @@ export default class TestPlansApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

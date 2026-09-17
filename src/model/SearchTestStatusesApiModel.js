@@ -17,7 +17,7 @@ import Inquiry from './Inquiry';
 /**
  * The SearchTestStatusesApiModel model module.
  * @module model/SearchTestStatusesApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class SearchTestStatusesApiModel {
     /**

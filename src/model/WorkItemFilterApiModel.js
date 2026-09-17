@@ -15,17 +15,17 @@ import ApiClient from '../ApiClient';
 import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import Int32RangeSelectorModel from './Int32RangeSelectorModel';
 import Int64RangeSelectorModel from './Int64RangeSelectorModel';
-import WorkItemEntityTypes from './WorkItemEntityTypes';
 import WorkItemExternalMetadataFilterApiModel from './WorkItemExternalMetadataFilterApiModel';
 import WorkItemLinkFilterApiModel from './WorkItemLinkFilterApiModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemSourceTypeModel from './WorkItemSourceTypeModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The WorkItemFilterApiModel model module.
  * @module model/WorkItemFilterApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WorkItemFilterApiModel {
     /**
@@ -102,7 +102,7 @@ class WorkItemFilterApiModel {
                 obj['sourceTypes'] = ApiClient.convertToType(data['sourceTypes'], [WorkItemSourceTypeModel]);
             }
             if (data.hasOwnProperty('types')) {
-                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemEntityTypes]);
+                obj['types'] = ApiClient.convertToType(data['types'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], DateTimeRangeSelectorModel);
@@ -136,6 +136,9 @@ class WorkItemFilterApiModel {
             }
             if (data.hasOwnProperty('externalMetadata')) {
                 obj['externalMetadata'] = ApiClient.convertToType(data['externalMetadata'], WorkItemExternalMetadataFilterApiModel);
+            }
+            if (data.hasOwnProperty('layers')) {
+                obj['layers'] = ApiClient.convertToType(data['layers'], ['String']);
             }
         }
         return obj;
@@ -243,6 +246,10 @@ class WorkItemFilterApiModel {
         if (data['externalMetadata']) { // data not null
           WorkItemExternalMetadataFilterApiModel.validateJSON(data['externalMetadata']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['layers'])) {
+            throw new Error("Expected the field `layers` to be an array in the JSON data but got " + data['layers']);
+        }
 
         return true;
     }
@@ -344,7 +351,7 @@ WorkItemFilterApiModel.prototype['sourceTypes'] = undefined;
 
 /**
  * Collection of types of work item
- * @member {Array.<module:model/WorkItemEntityTypes>} types
+ * @member {Array.<module:model/WorkItemTypeModel>} types
  */
 WorkItemFilterApiModel.prototype['types'] = undefined;
 
@@ -413,6 +420,12 @@ WorkItemFilterApiModel.prototype['links'] = undefined;
  * @member {module:model/WorkItemExternalMetadataFilterApiModel} externalMetadata
  */
 WorkItemFilterApiModel.prototype['externalMetadata'] = undefined;
+
+/**
+ * Specifies auto test case layers to search for
+ * @member {Array.<String>} layers
+ */
+WorkItemFilterApiModel.prototype['layers'] = undefined;
 
 
 

@@ -18,7 +18,7 @@ import TagApiModel from './TagApiModel';
 /**
  * The UpdateMultipleTagsApiModel model module.
  * @module model/UpdateMultipleTagsApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class UpdateMultipleTagsApiModel {
     /**

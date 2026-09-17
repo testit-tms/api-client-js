@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import DateTimeRangeSelectorModel from './DateTimeRangeSelectorModel';
 import WorkItemPriorityModel from './WorkItemPriorityModel';
 import WorkItemStates from './WorkItemStates';
+import WorkItemTypeModel from './WorkItemTypeModel';
 
 /**
  * The SharedStepReferencesQueryFilterModel model module.
  * @module model/SharedStepReferencesQueryFilterModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class SharedStepReferencesQueryFilterModel {
     /**
@@ -72,7 +73,7 @@ class SharedStepReferencesQueryFilterModel {
                 obj['priorities'] = ApiClient.convertToType(data['priorities'], [WorkItemPriorityModel]);
             }
             if (data.hasOwnProperty('entityTypes')) {
-                obj['entityTypes'] = ApiClient.convertToType(data['entityTypes'], ['String']);
+                obj['entityTypes'] = ApiClient.convertToType(data['entityTypes'], [WorkItemTypeModel]);
             }
             if (data.hasOwnProperty('createdDate')) {
                 obj['createdDate'] = ApiClient.convertToType(data['createdDate'], DateTimeRangeSelectorModel);
@@ -193,7 +194,7 @@ SharedStepReferencesQueryFilterModel.prototype['priorities'] = undefined;
 
 /**
  * Collection of types of work item  Allowed values: `TestCases`, `CheckLists`, `SharedSteps`
- * @member {Array.<String>} entityTypes
+ * @member {Array.<module:model/WorkItemTypeModel>} entityTypes
  */
 SharedStepReferencesQueryFilterModel.prototype['entityTypes'] = undefined;
 

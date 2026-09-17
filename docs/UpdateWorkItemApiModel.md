@@ -4,23 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | Workitem internal identifier | 
-**sectionId** | **String** | Internal identifier of section where workitem is located | 
-**description** | **String** | Workitem description | [optional] 
-**state** | [**WorkItemStates**](WorkItemStates.md) |  | 
-**priority** | [**WorkItemPriorityModel**](WorkItemPriorityModel.md) |  | 
-**sourceType** | [**WorkItemSourceTypeModel**](WorkItemSourceTypeModel.md) |  | [optional] 
-**steps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Collection of workitem steps | 
-**preconditionSteps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Collection of workitem precondtion steps | 
-**postconditionSteps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Collection of workitem postcondition steps | 
-**duration** | **Number** | Workitem duration in milliseconds | 
-**attributes** | **{String: Object}** | Key value pair of custom workitem attributes | 
-**tags** | [**[TagModel]**](TagModel.md) | Collection of workitem tags | 
-**links** | [**[UpdateLinkApiModel]**](UpdateLinkApiModel.md) | Collection of workitem links | 
-**name** | **String** | Workitem name | 
-**attachments** | [**[AssignAttachmentApiModel]**](AssignAttachmentApiModel.md) |  | 
-**iterations** | [**[AssignIterationApiModel]**](AssignIterationApiModel.md) | Collection of parameter id sets | [optional] 
-**autoTests** | [**[AutoTestIdModel]**](AutoTestIdModel.md) | Collection of autotest internal ids | [optional] 
-**parameters** | [**[WorkItemParameterKeyApiModel]**](WorkItemParameterKeyApiModel.md) | Set of parameter keys related to the work item | [optional] 
+**id** | **String** | Unique identifier of the work item | 
+**sectionId** | **String** | Unique identifier of the section within a project | 
+**name** | **String** | Name of the work item | 
+**description** | **String** | Description of the work item | [optional] 
+**duration** | **Number** | Duration of the work item in milliseconds | 
+**state** | [**WorkItemStateApiModel**](WorkItemStateApiModel.md) | Current state of the work item | 
+**priority** | [**WorkItemPriorityApiModel**](WorkItemPriorityApiModel.md) | Priority level assigned to the work item | 
+**attributes** | **{String: Object}** | Set of custom attributes associated with the work item | [optional] 
+**tags** | [**[TagModel]**](TagModel.md) | Set of tags applied to the work item | [optional] 
+**preconditionSteps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Set of precondition steps that must be executed before the main steps | [optional] 
+**steps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Set of main steps or actions defined for the work item | [optional] 
+**postconditionSteps** | [**[UpdateStepApiModel]**](UpdateStepApiModel.md) | Set of postcondition steps that are executed after completing the main steps | [optional] 
+**iterations** | [**[AssignIterationApiModel]**](AssignIterationApiModel.md) | Set of iterations associated with the work item | [optional] 
+**autoTests** | [**[AutoTestIdModel]**](AutoTestIdModel.md) | Set of automated tests linked to the work item | [optional] 
+**attachments** | [**[AssignAttachmentApiModel]**](AssignAttachmentApiModel.md) | Set of files attached to the work item | [optional] 
+**links** | [**[UpdateLinkApiModel]**](UpdateLinkApiModel.md) | Set of links related to the work item | [optional] 
+**parameters** | [**[WorkItemParameterKeyApiModel]**](WorkItemParameterKeyApiModel.md) | Set of parameter keys associated with the work item | [optional] 
 
 

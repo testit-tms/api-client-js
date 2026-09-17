@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WorkItemExternalMetadataFieldFilterApiModel model module.
  * @module model/WorkItemExternalMetadataFieldFilterApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WorkItemExternalMetadataFieldFilterApiModel {
     /**

@@ -20,7 +20,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * OpenIdConnections service.
 * @module api/OpenIdConnectionsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class OpenIdConnectionsApi {
 
@@ -52,7 +52,7 @@ export default class OpenIdConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [OpenIdConnectionClientShortModel];

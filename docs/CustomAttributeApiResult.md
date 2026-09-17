@@ -11,6 +11,9 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the attribute | 
 **isEnabled** | **Boolean** | Indicates if the attribute is enabled | 
 **isRequired** | **Boolean** | Indicates if the attribute value is mandatory to specify | 
+**isReadOnly** | **Boolean** | Indicates if the attribute value is read-only | 
 **isGlobal** | **Boolean** | Indicates if the attribute is available across all projects | 
+**isSystem** | **Boolean** | Indicates if the attribute is system | 
+**targets** | **[String]** | Collection of the attribute targets   Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans) | 
 
 

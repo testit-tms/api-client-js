@@ -174,6 +174,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property parentId (base name: "parentId")', function() {
+      // uncomment below and update the code to test the property parentId
+      //var instance = new TestitApiClient.WorkItemChangedFieldsViewModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

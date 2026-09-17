@@ -152,6 +152,13 @@ export default class BackgroundJobType {
         "DeleteSection" = "DeleteSection";
 
     
+        /**
+         * value: "ImportAutoTestsReport"
+         * @const
+         */
+        "ImportAutoTestsReport" = "ImportAutoTestsReport";
+
+    
 
     /**
     * Returns a <code>BackgroundJobType</code> enum value from a Javascript object name.

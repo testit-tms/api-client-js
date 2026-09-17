@@ -18,7 +18,7 @@ import StepPutModel from './StepPutModel';
 /**
  * The SectionPutModel model module.
  * @module model/SectionPutModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class SectionPutModel {
     /**
@@ -26,12 +26,11 @@ class SectionPutModel {
      * @alias module:model/SectionPutModel
      * @param id {String} 
      * @param name {String} 
-     * @param projectId {String} 
      * @param attachments {Array.<module:model/AttachmentPutModel>} 
      */
-    constructor(id, name, projectId, attachments) { 
+    constructor(id, name, attachments) { 
         
-        SectionPutModel.initialize(this, id, name, projectId, attachments);
+        SectionPutModel.initialize(this, id, name, attachments);
     }
 
     /**
@@ -39,10 +38,9 @@ class SectionPutModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, name, projectId, attachments) { 
+    static initialize(obj, id, name, attachments) { 
         obj['id'] = id;
         obj['name'] = name;
-        obj['projectId'] = projectId;
         obj['attachments'] = attachments;
     }
 
@@ -62,9 +60,6 @@ class SectionPutModel {
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('projectId')) {
-                obj['projectId'] = ApiClient.convertToType(data['projectId'], 'String');
             }
             if (data.hasOwnProperty('parentId')) {
                 obj['parentId'] = ApiClient.convertToType(data['parentId'], 'String');
@@ -101,10 +96,6 @@ class SectionPutModel {
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['projectId'] && !(typeof data['projectId'] === 'string' || data['projectId'] instanceof String)) {
-            throw new Error("Expected the field `projectId` to be a primitive type in the JSON string but got " + data['projectId']);
         }
         // ensure the json data is a string
         if (data['parentId'] && !(typeof data['parentId'] === 'string' || data['parentId'] instanceof String)) {
@@ -147,7 +138,7 @@ class SectionPutModel {
 
 }
 
-SectionPutModel.RequiredProperties = ["id", "name", "projectId", "attachments"];
+SectionPutModel.RequiredProperties = ["id", "name", "attachments"];
 
 /**
  * @member {String} id
@@ -158,11 +149,6 @@ SectionPutModel.prototype['id'] = undefined;
  * @member {String} name
  */
 SectionPutModel.prototype['name'] = undefined;
-
-/**
- * @member {String} projectId
- */
-SectionPutModel.prototype['projectId'] = undefined;
 
 /**
  * @member {String} parentId

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The GuidExtractionModel model module.
  * @module model/GuidExtractionModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class GuidExtractionModel {
     /**
