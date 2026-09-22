@@ -19,7 +19,7 @@ import ProjectShortestModel from './ProjectShortestModel';
 /**
  * The CustomAttributeSearchResponseModel model module.
  * @module model/CustomAttributeSearchResponseModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class CustomAttributeSearchResponseModel {
     /**
@@ -27,18 +27,21 @@ class CustomAttributeSearchResponseModel {
      * @alias module:model/CustomAttributeSearchResponseModel
      * @param workItemUsage {Array.<module:model/ProjectShortestModel>} 
      * @param testPlanUsage {Array.<module:model/ProjectShortestModel>} 
-     * @param id {String} Unique ID of the attribute
-     * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
-     * @param type {module:model/CustomAttributeTypesEnum} Type of the attribute
-     * @param isDeleted {Boolean} Indicates if the attribute is deleted
+     * @param id {String} Unique ID of the attribute.
+     * @param type {module:model/CustomAttributeTypesEnum} Type of the attribute.
+     * @param options {Array.<module:model/CustomAttributeOptionModel>} Collection of the attribute options.
+     * @param targets {Array.<String>} Collection of the attribute targets.   Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans).
+     * @param isReadOnly {Boolean} Indicates if the attribute is read-only.
+     * @param isDeleted {Boolean} Indicates if the attribute is deleted.
+     * @param isSystem {Boolean} Indicates if the attribute is system.
      * @param name {String} Name of the attribute
      * @param isEnabled {Boolean} Indicates if the attribute is enabled
      * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
      * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
      */
-    constructor(workItemUsage, testPlanUsage, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    constructor(workItemUsage, testPlanUsage, id, type, options, targets, isReadOnly, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal) { 
         
-        CustomAttributeSearchResponseModel.initialize(this, workItemUsage, testPlanUsage, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal);
+        CustomAttributeSearchResponseModel.initialize(this, workItemUsage, testPlanUsage, id, type, options, targets, isReadOnly, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal);
     }
 
     /**
@@ -46,13 +49,16 @@ class CustomAttributeSearchResponseModel {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, workItemUsage, testPlanUsage, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    static initialize(obj, workItemUsage, testPlanUsage, id, type, options, targets, isReadOnly, isDeleted, isSystem, name, isEnabled, isRequired, isGlobal) { 
         obj['workItemUsage'] = workItemUsage;
         obj['testPlanUsage'] = testPlanUsage;
         obj['id'] = id;
-        obj['options'] = options;
         obj['type'] = type;
+        obj['options'] = options;
+        obj['targets'] = targets;
+        obj['isReadOnly'] = isReadOnly;
         obj['isDeleted'] = isDeleted;
+        obj['isSystem'] = isSystem;
         obj['name'] = name;
         obj['isEnabled'] = isEnabled;
         obj['isRequired'] = isRequired;
@@ -79,14 +85,26 @@ class CustomAttributeSearchResponseModel {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('options')) {
-                obj['options'] = ApiClient.convertToType(data['options'], [CustomAttributeOptionModel]);
+            if (data.hasOwnProperty('code')) {
+                obj['code'] = ApiClient.convertToType(data['code'], 'String');
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], CustomAttributeTypesEnum);
             }
+            if (data.hasOwnProperty('options')) {
+                obj['options'] = ApiClient.convertToType(data['options'], [CustomAttributeOptionModel]);
+            }
+            if (data.hasOwnProperty('targets')) {
+                obj['targets'] = ApiClient.convertToType(data['targets'], ['String']);
+            }
+            if (data.hasOwnProperty('isReadOnly')) {
+                obj['isReadOnly'] = ApiClient.convertToType(data['isReadOnly'], 'Boolean');
+            }
             if (data.hasOwnProperty('isDeleted')) {
                 obj['isDeleted'] = ApiClient.convertToType(data['isDeleted'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isSystem')) {
+                obj['isSystem'] = ApiClient.convertToType(data['isSystem'], 'Boolean');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -140,6 +158,10 @@ class CustomAttributeSearchResponseModel {
         if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
             throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
         }
+        // ensure the json data is a string
+        if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
+            throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
+        }
         if (data['options']) { // data not null
             // ensure the json data is an array
             if (!Array.isArray(data['options'])) {
@@ -149,6 +171,10 @@ class CustomAttributeSearchResponseModel {
             for (const item of data['options']) {
                 CustomAttributeOptionModel.validateJSON(item);
             };
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['targets'])) {
+            throw new Error("Expected the field `targets` to be an array in the JSON data but got " + data['targets']);
         }
         // ensure the json data is a string
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
@@ -161,7 +187,7 @@ class CustomAttributeSearchResponseModel {
 
 }
 
-CustomAttributeSearchResponseModel.RequiredProperties = ["workItemUsage", "testPlanUsage", "id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isGlobal"];
+CustomAttributeSearchResponseModel.RequiredProperties = ["workItemUsage", "testPlanUsage", "id", "type", "options", "targets", "isReadOnly", "isDeleted", "isSystem", "name", "isEnabled", "isRequired", "isGlobal"];
 
 /**
  * @member {Array.<module:model/ProjectShortestModel>} workItemUsage
@@ -174,28 +200,52 @@ CustomAttributeSearchResponseModel.prototype['workItemUsage'] = undefined;
 CustomAttributeSearchResponseModel.prototype['testPlanUsage'] = undefined;
 
 /**
- * Unique ID of the attribute
+ * Unique ID of the attribute.
  * @member {String} id
  */
 CustomAttributeSearchResponseModel.prototype['id'] = undefined;
 
 /**
- * Collection of the attribute options   Available for attributes of type `options` and `multiple options` only
- * @member {Array.<module:model/CustomAttributeOptionModel>} options
+ * Optional code identifier for the attribute.
+ * @member {String} code
  */
-CustomAttributeSearchResponseModel.prototype['options'] = undefined;
+CustomAttributeSearchResponseModel.prototype['code'] = undefined;
 
 /**
- * Type of the attribute
+ * Type of the attribute.
  * @member {module:model/CustomAttributeTypesEnum} type
  */
 CustomAttributeSearchResponseModel.prototype['type'] = undefined;
 
 /**
- * Indicates if the attribute is deleted
+ * Collection of the attribute options.
+ * @member {Array.<module:model/CustomAttributeOptionModel>} options
+ */
+CustomAttributeSearchResponseModel.prototype['options'] = undefined;
+
+/**
+ * Collection of the attribute targets.   Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans).
+ * @member {Array.<String>} targets
+ */
+CustomAttributeSearchResponseModel.prototype['targets'] = undefined;
+
+/**
+ * Indicates if the attribute is read-only.
+ * @member {Boolean} isReadOnly
+ */
+CustomAttributeSearchResponseModel.prototype['isReadOnly'] = undefined;
+
+/**
+ * Indicates if the attribute is deleted.
  * @member {Boolean} isDeleted
  */
 CustomAttributeSearchResponseModel.prototype['isDeleted'] = undefined;
+
+/**
+ * Indicates if the attribute is system.
+ * @member {Boolean} isSystem
+ */
+CustomAttributeSearchResponseModel.prototype['isSystem'] = undefined;
 
 /**
  * Name of the attribute

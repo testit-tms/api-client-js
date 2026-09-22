@@ -24,11 +24,16 @@ Search for work items and group results by attribute
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Unique or global ID of the project
@@ -67,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -86,11 +91,16 @@ Search for work items and extract IDs only
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Unique or global ID of the project
@@ -129,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -148,11 +158,16 @@ Search for work items
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Unique or global ID of the project
@@ -191,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -210,11 +225,16 @@ Get work item index (position) in a collection by its id.
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Internal (UUID) or global (integer) identifier
@@ -255,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -276,11 +296,16 @@ Get WorkItems Tags
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) identifier
@@ -309,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -330,11 +355,16 @@ Get project work items
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.ProjectWorkItemsApi();
 let projectId = "projectId_example"; // String | Project internal (UUID) or global (integer) identifier
@@ -377,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 

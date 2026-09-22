@@ -17,16 +17,15 @@ import AutoTestNamespaceApiResult from '../model/AutoTestNamespaceApiResult';
 import CreateProjectApiModel from '../model/CreateProjectApiModel';
 import CustomAttributeTestPlanProjectRelationPutModel from '../model/CustomAttributeTestPlanProjectRelationPutModel';
 import DemoProjectApiResult from '../model/DemoProjectApiResult';
+import DetailedProjectApiResult from '../model/DetailedProjectApiResult';
 import FailureCategoryApiResult from '../model/FailureCategoryApiResult';
 import FilterModel from '../model/FilterModel';
 import GetShortProjectsApiModel from '../model/GetShortProjectsApiModel';
 import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import ProjectApiResult from '../model/ProjectApiResult';
-import ProjectModel from '../model/ProjectModel';
 import ProjectSelectModel from '../model/ProjectSelectModel';
-import ProjectShortApiResultReply from '../model/ProjectShortApiResultReply';
-import ProjectShortModel from '../model/ProjectShortModel';
+import ProjectShortApiResultIReply from '../model/ProjectShortApiResultIReply';
 import ProjectsFilterModel from '../model/ProjectsFilterModel';
 import TestPlanModel from '../model/TestPlanModel';
 import TestRunApiResult from '../model/TestRunApiResult';
@@ -37,7 +36,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Projects service.
 * @module api/ProjectsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectsApi {
 
@@ -80,7 +79,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -122,7 +121,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = DemoProjectApiResult;
@@ -166,7 +165,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -216,7 +215,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [FailureCategoryApiResult];
@@ -264,7 +263,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -311,7 +310,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [FilterModel];
@@ -362,7 +361,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -411,7 +410,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -457,7 +456,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -510,7 +509,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -562,7 +561,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -642,7 +641,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunApiResult];
@@ -703,7 +702,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Boolean';
@@ -745,7 +744,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -789,7 +788,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -823,7 +822,7 @@ export default class ProjectsApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectsFilterModel} [projectsFilterModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectApiResult>} and HTTP response
      */
     apiV2ProjectsSearchPostWithHttpInfo(opts) {
       opts = opts || {};
@@ -843,10 +842,10 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [ProjectShortModel];
+      let returnType = [ProjectApiResult];
       return this.apiClient.callApi(
         '/api/v2/projects/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -863,7 +862,7 @@ export default class ProjectsApi {
      * @param {String} opts.searchField Property name for searching
      * @param {String} opts.searchValue Value for searching
      * @param {module:model/ProjectsFilterModel} opts.projectsFilterModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectApiResult>}
      */
     apiV2ProjectsSearchPost(opts) {
       return this.apiV2ProjectsSearchPostWithHttpInfo(opts)
@@ -878,7 +877,7 @@ export default class ProjectsApi {
      *  Use case  User sets query params  User runs method execution  System return projects short models
      * @param {Object} opts Optional parameters
      * @param {module:model/GetShortProjectsApiModel} [getShortProjectsApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultReply} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectShortApiResultIReply} and HTTP response
      */
     apiV2ProjectsShortsPostWithHttpInfo(opts) {
       opts = opts || {};
@@ -893,10 +892,10 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ProjectShortApiResultReply;
+      let returnType = ProjectShortApiResultIReply;
       return this.apiClient.callApi(
         '/api/v2/projects/shorts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -909,7 +908,7 @@ export default class ProjectsApi {
      *  Use case  User sets query params  User runs method execution  System return projects short models
      * @param {Object} opts Optional parameters
      * @param {module:model/GetShortProjectsApiModel} opts.getShortProjectsApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectShortApiResultReply}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectShortApiResultIReply}
      */
     apiV2ProjectsShortsPost(opts) {
       return this.apiV2ProjectsShortsPostWithHttpInfo(opts)
@@ -939,7 +938,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ProjectApiResult;
@@ -987,7 +986,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1022,7 +1021,7 @@ export default class ProjectsApi {
      * @param {String} [orderBy] SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectShortModel>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/ProjectApiResult>} and HTTP response
      */
     getAllProjectsWithHttpInfo(opts) {
       opts = opts || {};
@@ -1044,10 +1043,10 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ProjectShortModel];
+      let returnType = [ProjectApiResult];
       return this.apiClient.callApi(
         '/api/v2/projects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1066,7 +1065,7 @@ export default class ProjectsApi {
      * @param {String} opts.orderBy SQL-like  ORDER BY statement (column1 ASC|DESC , column2 ASC|DESC)
      * @param {String} opts.searchField Property name for searching
      * @param {String} opts.searchValue Value for searching
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectShortModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/ProjectApiResult>}
      */
     getAllProjects(opts) {
       return this.getAllProjectsWithHttpInfo(opts)
@@ -1099,7 +1098,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AutoTestNamespaceApiResult];
@@ -1128,7 +1127,7 @@ export default class ProjectsApi {
      * Get project by ID
      *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ProjectModel} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DetailedProjectApiResult} and HTTP response
      */
     getProjectByIdWithHttpInfo(id) {
       let postBody = null;
@@ -1147,10 +1146,10 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ProjectModel;
+      let returnType = DetailedProjectApiResult;
       return this.apiClient.callApi(
         '/api/v2/projects/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -1162,7 +1161,7 @@ export default class ProjectsApi {
      * Get project by ID
      *  Use case  User sets project internal or global identifier and runs method execution  System search project  System returns project (example listed in response parameters)
      * @param {String} id Project internal (UUID) or global (integer) identifier
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ProjectModel}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DetailedProjectApiResult}
      */
     getProjectById(id) {
       return this.getProjectByIdWithHttpInfo(id)
@@ -1174,7 +1173,7 @@ export default class ProjectsApi {
 
     /**
      * Get project test plans
-     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to                     project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which                     are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} [isDeleted] If result must consist of only actual/archived test plans
@@ -1199,7 +1198,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPlanModel];
@@ -1212,7 +1211,7 @@ export default class ProjectsApi {
 
     /**
      * Get project test plans
-     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
+     *  Use case  User sets project internal or global identifier  [Optional] User sets isDeleted field value  User runs method execution  System search project  [Optional] If User sets isDeleted field value as true, System search all deleted test plans related to                     project  [Optional] If User sets isDeleted field value as false, System search all test plans related to project which                     are not deleted  [Optional] If User did not set isDeleted field value, System search all v related to project  System returns array of found test plans (listed in response model)
      * @param {String} id Project internal (UUID) or global (integer) identifier
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.isDeleted If result must consist of only actual/archived test plans
@@ -1291,7 +1290,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestRunV2ApiResult];
@@ -1349,7 +1348,7 @@ export default class ProjectsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

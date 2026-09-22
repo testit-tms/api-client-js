@@ -19,7 +19,7 @@ import WebhooksFilterApiModel from './WebhooksFilterApiModel';
 /**
  * The WebhooksUpdateApiModel model module.
  * @module model/WebhooksUpdateApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WebhooksUpdateApiModel {
     /**

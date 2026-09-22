@@ -14,11 +14,12 @@
 import ApiClient from '../ApiClient';
 import AssignAttachmentApiModel from './AssignAttachmentApiModel';
 import CreateLinkApiModel from './CreateLinkApiModel';
+import TestRunLaunchOptionApiModel from './TestRunLaunchOptionApiModel';
 
 /**
  * The CreateTestRunAndFillByAutoTestsApiModel model module.
  * @module model/CreateTestRunAndFillByAutoTestsApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class CreateTestRunAndFillByAutoTestsApiModel {
     /**
@@ -81,6 +82,9 @@ class CreateTestRunAndFillByAutoTestsApiModel {
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
+            }
+            if (data.hasOwnProperty('option')) {
+                obj['option'] = ApiClient.convertToType(data['option'], TestRunLaunchOptionApiModel);
             }
         }
         return obj;
@@ -146,6 +150,10 @@ class CreateTestRunAndFillByAutoTestsApiModel {
         if (!Array.isArray(data['tags'])) {
             throw new Error("Expected the field `tags` to be an array in the JSON data but got " + data['tags']);
         }
+        // validate the optional field `option`
+        if (data['option']) { // data not null
+          TestRunLaunchOptionApiModel.validateJSON(data['option']);
+        }
 
         return true;
     }
@@ -208,6 +216,12 @@ CreateTestRunAndFillByAutoTestsApiModel.prototype['links'] = undefined;
  * @member {Array.<String>} tags
  */
 CreateTestRunAndFillByAutoTestsApiModel.prototype['tags'] = undefined;
+
+/**
+ * Test run launching options.
+ * @member {module:model/TestRunLaunchOptionApiModel} option
+ */
+CreateTestRunAndFillByAutoTestsApiModel.prototype['option'] = undefined;
 
 
 

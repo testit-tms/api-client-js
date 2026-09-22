@@ -30,7 +30,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * TestSuites service.
 * @module api/TestSuitesApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class TestSuitesApi {
 
@@ -72,7 +72,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -124,7 +124,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -173,7 +173,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -222,7 +222,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -267,7 +267,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = TestSuiteV2GetModel;
@@ -311,7 +311,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -359,7 +359,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -407,7 +407,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [ConfigurationModel];
@@ -455,7 +455,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestPointByTestSuiteModel];
@@ -503,7 +503,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultV2ShortModel];
@@ -551,7 +551,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = TestSuiteApiResult;
@@ -612,7 +612,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];
@@ -670,7 +670,7 @@ export default class TestSuitesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

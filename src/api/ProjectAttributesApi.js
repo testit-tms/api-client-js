@@ -13,7 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import CustomAttributeGetModel from '../model/CustomAttributeGetModel';
 import CustomAttributeModel from '../model/CustomAttributeModel';
 import CustomAttributePostModel from '../model/CustomAttributePostModel';
 import CustomAttributePutModel from '../model/CustomAttributePutModel';
@@ -25,7 +24,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * ProjectAttributes service.
 * @module api/ProjectAttributesApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectAttributesApi {
 
@@ -68,7 +67,7 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = CustomAttributeModel;
@@ -124,7 +123,7 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -179,7 +178,7 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeModel;
@@ -232,7 +231,7 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [CustomAttributeModel];
@@ -269,7 +268,7 @@ export default class ProjectAttributesApi {
      * @param {String} [searchField] Property name for searching
      * @param {String} [searchValue] Value for searching
      * @param {module:model/ProjectAttributesFilterModel} [projectAttributesFilterModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeGetModel>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CustomAttributeModel>} and HTTP response
      */
     searchAttributesInProjectWithHttpInfo(projectId, opts) {
       opts = opts || {};
@@ -294,10 +293,10 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [CustomAttributeGetModel];
+      let returnType = [CustomAttributeModel];
       return this.apiClient.callApi(
         '/api/v2/projects/{projectId}/attributes/search', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -315,7 +314,7 @@ export default class ProjectAttributesApi {
      * @param {String} opts.searchField Property name for searching
      * @param {String} opts.searchValue Value for searching
      * @param {module:model/ProjectAttributesFilterModel} opts.projectAttributesFilterModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeGetModel>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CustomAttributeModel>}
      */
     searchAttributesInProject(projectId, opts) {
       return this.searchAttributesInProjectWithHttpInfo(projectId, opts)
@@ -350,7 +349,7 @@ export default class ProjectAttributesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

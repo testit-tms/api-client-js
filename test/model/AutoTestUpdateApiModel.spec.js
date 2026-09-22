@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property resetLayer (base name: "resetLayer")', function() {
+      // uncomment below and update the code to test the property resetLayer
+      //var instance = new TestitApiClient.AutoTestUpdateApiModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property steps (base name: "steps")', function() {
       // uncomment below and update the code to test the property steps
       //var instance = new TestitApiClient.AutoTestUpdateApiModel();

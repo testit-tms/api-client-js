@@ -21,7 +21,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * Attachments service.
 * @module api/AttachmentsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class AttachmentsApi {
 
@@ -60,7 +60,7 @@ export default class AttachmentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -118,7 +118,7 @@ export default class AttachmentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -170,7 +170,7 @@ export default class AttachmentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AttachmentModel;
@@ -210,7 +210,7 @@ export default class AttachmentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -254,7 +254,7 @@ export default class AttachmentsApi {
         'file': opts['file']
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = AttachmentModel;

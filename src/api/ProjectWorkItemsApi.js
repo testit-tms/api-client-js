@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * ProjectWorkItems service.
 * @module api/ProjectWorkItemsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class ProjectWorkItemsApi {
 
@@ -79,7 +79,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemGroupModel];
@@ -145,7 +145,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ['String'];
@@ -211,7 +211,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortApiResult];
@@ -283,7 +283,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemIndexApiResult;
@@ -342,7 +342,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TagShortApiResult];
@@ -410,7 +410,7 @@ export default class ProjectWorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];

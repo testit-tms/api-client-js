@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **tags** | **[String]** | Collection of tags to assign to the test run | [optional] 
 **configurationIds** | **[String]** | Specifies the configuration GUIDs, from which test points are created. You can specify several GUIDs. | 
 **workItemIds** | **[String]** | Specifies the work item GUIDs, from which test points are created. You can specify several GUIDs. | 
+**option** | [**TestRunLaunchOptionApiModel**](TestRunLaunchOptionApiModel.md) | Test run launching options. | [optional] 
 
 

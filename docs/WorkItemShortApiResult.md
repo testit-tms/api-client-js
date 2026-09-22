@@ -28,5 +28,6 @@ Name | Type | Description | Notes
 **tagNames** | **[String]** | Array of tag names of Work Item | [optional] 
 **iterations** | [**[IterationApiResult]**](IterationApiResult.md) | Set of iterations related to Work Item | 
 **links** | [**[LinkShortApiResult]**](LinkShortApiResult.md) | Set of links related to Work Item | 
+**layer** | [**WorkItemLayerApiResult**](WorkItemLayerApiResult.md) | Test pyramid layer of Work Item | [optional] 
 
 

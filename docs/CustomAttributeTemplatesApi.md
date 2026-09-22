@@ -27,11 +27,16 @@ Method | HTTP request | Description
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
@@ -58,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -79,11 +84,16 @@ Exclude CustomAttributes from CustomAttributeTemplate
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | Attribute template internal (UUID) identifier
@@ -112,7 +122,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -133,11 +143,16 @@ Include CustomAttributes to CustomAttributeTemplate
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | Attribute template internal (UUID) identifier
@@ -166,7 +181,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -187,11 +202,16 @@ Delete CustomAttributeTemplate
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | Attribute template internal (UUID) identifier
@@ -216,7 +236,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -237,11 +257,16 @@ Get CustomAttributeTemplate by ID
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let id = "id_example"; // String | CustomAttributeTemplate internal (UUID) identifier
@@ -266,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -287,11 +312,16 @@ Get CustomAttributeTemplate by name
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let name = "name_example"; // String | CustomAttributeTemplate name for search
@@ -316,7 +346,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -337,11 +367,16 @@ Create CustomAttributeTemplate
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
@@ -368,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -387,11 +422,16 @@ Update custom attributes template
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
@@ -418,7 +458,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -439,11 +479,16 @@ Search CustomAttributeTemplates
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.CustomAttributeTemplatesApi();
 let opts = {
@@ -480,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 

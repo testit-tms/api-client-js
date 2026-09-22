@@ -25,11 +25,16 @@ Get unread Notifications total in last 7 days
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 let opts = {
@@ -56,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -77,11 +82,16 @@ Get all Notifications for current User
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 let opts = {
@@ -118,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -139,11 +149,16 @@ Set Notification as read
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 let id = "id_example"; // String | 
@@ -168,7 +183,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -189,11 +204,16 @@ Set all Notifications as read
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 apiInstance.apiV2NotificationsReadPost().then(() => {
@@ -214,7 +234,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -235,11 +255,16 @@ Search Notifications for current User
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.NotificationsApi();
 let opts = {
@@ -276,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 

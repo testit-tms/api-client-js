@@ -18,7 +18,7 @@ import CustomAttributeType from './CustomAttributeType';
 /**
  * The CustomAttributeApiResult model module.
  * @module model/CustomAttributeApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class CustomAttributeApiResult {
     /**
@@ -31,11 +31,14 @@ class CustomAttributeApiResult {
      * @param name {String} Name of the attribute
      * @param isEnabled {Boolean} Indicates if the attribute is enabled
      * @param isRequired {Boolean} Indicates if the attribute value is mandatory to specify
+     * @param isReadOnly {Boolean} Indicates if the attribute value is read-only
      * @param isGlobal {Boolean} Indicates if the attribute is available across all projects
+     * @param isSystem {Boolean} Indicates if the attribute is system
+     * @param targets {Array.<String>} Collection of the attribute targets   Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
      */
-    constructor(id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    constructor(id, options, type, isDeleted, name, isEnabled, isRequired, isReadOnly, isGlobal, isSystem, targets) { 
         
-        CustomAttributeApiResult.initialize(this, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal);
+        CustomAttributeApiResult.initialize(this, id, options, type, isDeleted, name, isEnabled, isRequired, isReadOnly, isGlobal, isSystem, targets);
     }
 
     /**
@@ -43,7 +46,7 @@ class CustomAttributeApiResult {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, options, type, isDeleted, name, isEnabled, isRequired, isGlobal) { 
+    static initialize(obj, id, options, type, isDeleted, name, isEnabled, isRequired, isReadOnly, isGlobal, isSystem, targets) { 
         obj['id'] = id;
         obj['options'] = options;
         obj['type'] = type;
@@ -51,7 +54,10 @@ class CustomAttributeApiResult {
         obj['name'] = name;
         obj['isEnabled'] = isEnabled;
         obj['isRequired'] = isRequired;
+        obj['isReadOnly'] = isReadOnly;
         obj['isGlobal'] = isGlobal;
+        obj['isSystem'] = isSystem;
+        obj['targets'] = targets;
     }
 
     /**
@@ -86,8 +92,17 @@ class CustomAttributeApiResult {
             if (data.hasOwnProperty('isRequired')) {
                 obj['isRequired'] = ApiClient.convertToType(data['isRequired'], 'Boolean');
             }
+            if (data.hasOwnProperty('isReadOnly')) {
+                obj['isReadOnly'] = ApiClient.convertToType(data['isReadOnly'], 'Boolean');
+            }
             if (data.hasOwnProperty('isGlobal')) {
                 obj['isGlobal'] = ApiClient.convertToType(data['isGlobal'], 'Boolean');
+            }
+            if (data.hasOwnProperty('isSystem')) {
+                obj['isSystem'] = ApiClient.convertToType(data['isSystem'], 'Boolean');
+            }
+            if (data.hasOwnProperty('targets')) {
+                obj['targets'] = ApiClient.convertToType(data['targets'], ['String']);
             }
         }
         return obj;
@@ -123,6 +138,10 @@ class CustomAttributeApiResult {
         if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
             throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
         }
+        // ensure the json data is an array
+        if (!Array.isArray(data['targets'])) {
+            throw new Error("Expected the field `targets` to be an array in the JSON data but got " + data['targets']);
+        }
 
         return true;
     }
@@ -130,7 +149,7 @@ class CustomAttributeApiResult {
 
 }
 
-CustomAttributeApiResult.RequiredProperties = ["id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isGlobal"];
+CustomAttributeApiResult.RequiredProperties = ["id", "options", "type", "isDeleted", "name", "isEnabled", "isRequired", "isReadOnly", "isGlobal", "isSystem", "targets"];
 
 /**
  * Unique ID of the attribute
@@ -175,10 +194,28 @@ CustomAttributeApiResult.prototype['isEnabled'] = undefined;
 CustomAttributeApiResult.prototype['isRequired'] = undefined;
 
 /**
+ * Indicates if the attribute value is read-only
+ * @member {Boolean} isReadOnly
+ */
+CustomAttributeApiResult.prototype['isReadOnly'] = undefined;
+
+/**
  * Indicates if the attribute is available across all projects
  * @member {Boolean} isGlobal
  */
 CustomAttributeApiResult.prototype['isGlobal'] = undefined;
+
+/**
+ * Indicates if the attribute is system
+ * @member {Boolean} isSystem
+ */
+CustomAttributeApiResult.prototype['isSystem'] = undefined;
+
+/**
+ * Collection of the attribute targets   Defines where the attribute can be used (e.g., TestCases, AutoTestCases, TestPlans)
+ * @member {Array.<String>} targets
+ */
+CustomAttributeApiResult.prototype['targets'] = undefined;
 
 
 

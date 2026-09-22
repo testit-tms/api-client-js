@@ -14,11 +14,12 @@
 import ApiClient from '../ApiClient';
 import AssignAttachmentApiModel from './AssignAttachmentApiModel';
 import CreateLinkApiModel from './CreateLinkApiModel';
+import TestRunLaunchOptionApiModel from './TestRunLaunchOptionApiModel';
 
 /**
  * The CreateTestRunAndFillByWorkItemsApiModel model module.
  * @module model/CreateTestRunAndFillByWorkItemsApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class CreateTestRunAndFillByWorkItemsApiModel {
     /**
@@ -86,6 +87,9 @@ class CreateTestRunAndFillByWorkItemsApiModel {
             }
             if (data.hasOwnProperty('workItemIds')) {
                 obj['workItemIds'] = ApiClient.convertToType(data['workItemIds'], ['String']);
+            }
+            if (data.hasOwnProperty('option')) {
+                obj['option'] = ApiClient.convertToType(data['option'], TestRunLaunchOptionApiModel);
             }
         }
         return obj;
@@ -155,6 +159,10 @@ class CreateTestRunAndFillByWorkItemsApiModel {
         if (!Array.isArray(data['workItemIds'])) {
             throw new Error("Expected the field `workItemIds` to be an array in the JSON data but got " + data['workItemIds']);
         }
+        // validate the optional field `option`
+        if (data['option']) { // data not null
+          TestRunLaunchOptionApiModel.validateJSON(data['option']);
+        }
 
         return true;
     }
@@ -223,6 +231,12 @@ CreateTestRunAndFillByWorkItemsApiModel.prototype['configurationIds'] = undefine
  * @member {Array.<String>} workItemIds
  */
 CreateTestRunAndFillByWorkItemsApiModel.prototype['workItemIds'] = undefined;
+
+/**
+ * Test run launching options.
+ * @member {module:model/TestRunLaunchOptionApiModel} option
+ */
+CreateTestRunAndFillByWorkItemsApiModel.prototype['option'] = undefined;
 
 
 

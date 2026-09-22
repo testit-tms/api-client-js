@@ -15,11 +15,12 @@ import ApiClient from '../ApiClient';
 import AssignAttachmentApiModel from './AssignAttachmentApiModel';
 import CreateLinkApiModel from './CreateLinkApiModel';
 import TestPointSelector from './TestPointSelector';
+import TestRunLaunchOptionApiModel from './TestRunLaunchOptionApiModel';
 
 /**
  * The CreateTestRunAndFillByConfigurationsApiModel model module.
  * @module model/CreateTestRunAndFillByConfigurationsApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class CreateTestRunAndFillByConfigurationsApiModel {
     /**
@@ -82,6 +83,9 @@ class CreateTestRunAndFillByConfigurationsApiModel {
             }
             if (data.hasOwnProperty('testPointSelectors')) {
                 obj['testPointSelectors'] = ApiClient.convertToType(data['testPointSelectors'], [TestPointSelector]);
+            }
+            if (data.hasOwnProperty('option')) {
+                obj['option'] = ApiClient.convertToType(data['option'], TestRunLaunchOptionApiModel);
             }
         }
         return obj;
@@ -153,6 +157,10 @@ class CreateTestRunAndFillByConfigurationsApiModel {
                 TestPointSelector.validateJSON(item);
             };
         }
+        // validate the optional field `option`
+        if (data['option']) { // data not null
+          TestRunLaunchOptionApiModel.validateJSON(data['option']);
+        }
 
         return true;
     }
@@ -215,6 +223,12 @@ CreateTestRunAndFillByConfigurationsApiModel.prototype['tags'] = undefined;
  * @member {Array.<module:model/TestPointSelector>} testPointSelectors
  */
 CreateTestRunAndFillByConfigurationsApiModel.prototype['testPointSelectors'] = undefined;
+
+/**
+ * Test run launching options.
+ * @member {module:model/TestRunLaunchOptionApiModel} option
+ */
+CreateTestRunAndFillByConfigurationsApiModel.prototype['option'] = undefined;
 
 
 

@@ -198,6 +198,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property layer (base name: "layer")', function() {
+      // uncomment below and update the code to test the property layer
+      //var instance = new TestitApiClient.WorkItemShortApiResult();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -13,22 +13,24 @@
 
 import ApiClient from '../ApiClient';
 import FilterOperator from './FilterOperator';
+import JsonElement from './JsonElement';
 
 /**
  * The Filter model module.
  * @module model/Filter
- * @version 7.2.6
+ * @version 7.2.7
  */
 class Filter {
     /**
      * Constructs a new <code>Filter</code>.
      * @alias module:model/Filter
      * @param operator {module:model/FilterOperator} 
+     * @param value {module:model/JsonElement} 
      * @param field {String} 
      */
-    constructor(operator, field) { 
+    constructor(operator, value, field) { 
         
-        Filter.initialize(this, operator, field);
+        Filter.initialize(this, operator, value, field);
     }
 
     /**
@@ -36,8 +38,9 @@ class Filter {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, operator, field) { 
+    static initialize(obj, operator, value, field) { 
         obj['operator'] = operator;
+        obj['value'] = value;
         obj['field'] = field;
     }
 
@@ -56,7 +59,7 @@ class Filter {
                 obj['operator'] = ApiClient.convertToType(data['operator'], FilterOperator);
             }
             if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'String');
+                obj['value'] = ApiClient.convertToType(data['value'], JsonElement);
             }
             if (data.hasOwnProperty('field')) {
                 obj['field'] = ApiClient.convertToType(data['field'], 'String');
@@ -77,9 +80,9 @@ class Filter {
                 throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
             }
         }
-        // ensure the json data is a string
-        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
-            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
+        // validate the optional field `value`
+        if (data['value']) { // data not null
+          JsonElement.validateJSON(data['value']);
         }
         // ensure the json data is a string
         if (data['field'] && !(typeof data['field'] === 'string' || data['field'] instanceof String)) {
@@ -92,7 +95,7 @@ class Filter {
 
 }
 
-Filter.RequiredProperties = ["operator", "field"];
+Filter.RequiredProperties = ["operator", "value", "field"];
 
 /**
  * @member {module:model/FilterOperator} operator
@@ -100,7 +103,7 @@ Filter.RequiredProperties = ["operator", "field"];
 Filter.prototype['operator'] = undefined;
 
 /**
- * @member {String} value
+ * @member {module:model/JsonElement} value
  */
 Filter.prototype['value'] = undefined;
 

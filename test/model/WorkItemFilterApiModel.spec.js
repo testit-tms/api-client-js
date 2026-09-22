@@ -216,6 +216,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property layers (base name: "layers")', function() {
+      // uncomment below and update the code to test the property layers
+      //var instance = new TestitApiClient.WorkItemFilterApiModel();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

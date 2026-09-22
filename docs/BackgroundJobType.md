@@ -41,4 +41,6 @@
 
 * `DeleteSection` (value: `"DeleteSection"`)
 
+* `ImportAutoTestsReport` (value: `"ImportAutoTestsReport"`)
+
 

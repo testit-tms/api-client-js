@@ -18,7 +18,7 @@ import WebHookEventTypeModel from './WebHookEventTypeModel';
 /**
  * The WebHookPostModel model module.
  * @module model/WebHookPostModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class WebHookPostModel {
     /**

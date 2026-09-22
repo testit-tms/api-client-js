@@ -72,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property options (base name: "options")', function() {
-      // uncomment below and update the code to test the property options
+    it('should have the property code (base name: "code")', function() {
+      // uncomment below and update the code to test the property code
       //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
       //expect(instance).to.be();
     });
@@ -84,8 +84,32 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property options (base name: "options")', function() {
+      // uncomment below and update the code to test the property options
+      //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property targets (base name: "targets")', function() {
+      // uncomment below and update the code to test the property targets
+      //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isReadOnly (base name: "isReadOnly")', function() {
+      // uncomment below and update the code to test the property isReadOnly
+      //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
+      //expect(instance).to.be();
+    });
+
     it('should have the property isDeleted (base name: "isDeleted")', function() {
       // uncomment below and update the code to test the property isDeleted
+      //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isSystem (base name: "isSystem")', function() {
+      // uncomment below and update the code to test the property isSystem
       //var instance = new TestitApiClient.CustomAttributeSearchResponseModel();
       //expect(instance).to.be();
     });

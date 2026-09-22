@@ -27,7 +27,7 @@ import WorkItemShortModel from '../model/WorkItemShortModel';
 /**
 * Sections service.
 * @module api/SectionsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class SectionsApi {
 
@@ -70,7 +70,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -117,7 +117,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SectionWithStepsModel;
@@ -166,7 +166,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -218,7 +218,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = SectionWithStepsModel;
@@ -286,7 +286,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortModel];
@@ -339,7 +339,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -384,7 +384,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -430,7 +430,7 @@ export default class SectionsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;

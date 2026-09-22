@@ -31,11 +31,16 @@ Add test-points to test suite
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "1ed608bf-8ac9-4ffd-b91e-ebdbbdce6132"; // String | Test suite internal identifier
@@ -64,7 +69,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -85,11 +90,16 @@ See &lt;a href&#x3D;\&quot;https://www.rfc-editor.org/rfc/rfc6902\&quot; target&
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "id_example"; // String | Test Suite internal (UUID) identifier
@@ -118,7 +128,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -137,11 +147,16 @@ Refresh test suite. Only dynamic test suites are supported by this method
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "id_example"; // String | Test Suite internal (UUID) identifier
@@ -166,7 +181,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -185,11 +200,16 @@ Set work items for test suite
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "id_example"; // String | Unique ID of the test suite
@@ -218,7 +238,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -237,11 +257,16 @@ Create test suite
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let opts = {
@@ -268,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -287,11 +312,16 @@ Edit test suite
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let opts = {
@@ -318,7 +348,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -339,11 +369,16 @@ Delete TestSuite
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -368,7 +403,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -389,11 +424,16 @@ Get Configurations By Id
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -418,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -439,11 +479,16 @@ Get TestPoints By Id
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -468,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -489,11 +534,16 @@ Get TestResults By Id
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -518,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -539,11 +589,16 @@ Get TestSuite by Id
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -568,7 +623,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -589,11 +644,16 @@ Search WorkItems
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -632,7 +692,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 
@@ -653,11 +713,16 @@ Set Configurations By TestSuite Id
 ```javascript
 import TestitApiClient from 'testit-api-client';
 let defaultClient = TestitApiClient.ApiClient.instance;
-// Configure API key authorization: Bearer or PrivateToken
-let Bearer or PrivateToken = defaultClient.authentications['Bearer or PrivateToken'];
-Bearer or PrivateToken.apiKey = 'YOUR API KEY';
+// Configure API key authorization: PrivateToken
+let PrivateToken = defaultClient.authentications['PrivateToken'];
+PrivateToken.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//Bearer or PrivateToken.apiKeyPrefix = 'Token';
+//PrivateToken.apiKeyPrefix = 'Token';
+// Configure API key authorization: Identity.Application
+let Identity.Application = defaultClient.authentications['Identity.Application'];
+Identity.Application.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//Identity.Application.apiKeyPrefix = 'Token';
 
 let apiInstance = new TestitApiClient.TestSuitesApi();
 let id = "3fa85f64-5717-4562-b3fc-2c963f66afa6"; // String | Test suite internal (guid format) identifier\"
@@ -686,7 +751,7 @@ null (empty response body)
 
 ### Authorization
 
-[Bearer or PrivateToken](../README.md#Bearer or PrivateToken)
+[PrivateToken](../README.md#PrivateToken), [Identity.Application](../README.md#Identity.Application)
 
 ### HTTP request headers
 

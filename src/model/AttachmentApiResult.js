@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AttachmentApiResult model module.
  * @module model/AttachmentApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class AttachmentApiResult {
     /**

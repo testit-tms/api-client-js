@@ -3,24 +3,28 @@
 ## Enum
 
 
-* `EQUAL` (value: `"="`)
+* `EqualTo` (value: `"EqualTo"`)
 
-* `NOT_EQUAL` (value: `"!="`)
+* `NotEqualTo` (value: `"NotEqualTo"`)
 
-* `TILDE` (value: `"~"`)
+* `Contains` (value: `"Contains"`)
 
-* `!~` (value: `"!~"`)
+* `NotContains` (value: `"NotContains"`)
 
-* `LESS_THAN` (value: `"<"`)
+* `LessThan` (value: `"LessThan"`)
 
-* `LESS_THAN_OR_EQUAL_TO` (value: `"<="`)
+* `LessThanOrEqualTo` (value: `"LessThanOrEqualTo"`)
 
-* `GREATER_THAN` (value: `">"`)
+* `GreaterThan` (value: `"GreaterThan"`)
 
-* `GREATER_THAN_OR_EQUAL_TO` (value: `">="`)
+* `GreaterThanOrEqualTo` (value: `"GreaterThanOrEqualTo"`)
 
-* `STAR` (value: `"*"`)
+* `Empty` (value: `"Empty"`)
 
-* `!*` (value: `"!*"`)
+* `NotEmpty` (value: `"NotEmpty"`)
+
+* `In` (value: `"In"`)
+
+* `NotIn` (value: `"NotIn"`)
 
 

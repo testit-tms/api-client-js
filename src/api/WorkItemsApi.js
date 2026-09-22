@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import AutoTestModel from '../model/AutoTestModel';
 import CreateWorkItemApiModel from '../model/CreateWorkItemApiModel';
 import IterationModel from '../model/IterationModel';
+import Operation from '../model/Operation';
 import ProblemDetails from '../model/ProblemDetails';
 import SearchWorkItemLinkUrlsApiResult from '../model/SearchWorkItemLinkUrlsApiResult';
 import SharedStepReferenceModel from '../model/SharedStepReferenceModel';
@@ -40,7 +41,7 @@ import WorkItemVersionModel from '../model/WorkItemVersionModel';
 /**
 * WorkItems service.
 * @module api/WorkItemsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class WorkItemsApi {
 
@@ -84,7 +85,7 @@ export default class WorkItemsApi {
         'file': opts['file']
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['multipart/form-data'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -134,7 +135,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemModel;
@@ -194,7 +195,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemChangeModel];
@@ -248,7 +249,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -296,7 +297,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -344,7 +345,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -392,7 +393,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemLikeModel];
@@ -411,6 +412,59 @@ export default class WorkItemsApi {
      */
     apiV2WorkItemsIdLikesGet(id) {
       return this.apiV2WorkItemsIdLikesGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Patch Test Case, Checklist or Shared Step
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} [operation] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2WorkItemsIdPatchWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['operation'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling apiV2WorkItemsIdPatch");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Identity.Application'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/workItems/{id}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Patch Test Case, Checklist or Shared Step
+     * See <a href=\"https://www.rfc-editor.org/rfc/rfc6902\" target=\"_blank\">RFC 6902: JavaScript Object Notation (JSON) Patch</a> for details
+     * @param {String} id WorkItem internal (guid format) or global(integer format) identifier\"
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/Operation>} opts.operation 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2WorkItemsIdPatch(id, opts) {
+      return this.apiV2WorkItemsIdPatchWithHttpInfo(id, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -472,7 +526,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultHistoryReportApiResult];
@@ -542,7 +596,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemModel;
@@ -596,7 +650,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = SearchWorkItemLinkUrlsApiResult;
@@ -645,7 +699,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemShortModel;
@@ -690,7 +744,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemApiResult;
@@ -709,6 +763,52 @@ export default class WorkItemsApi {
      */
     apiV2WorkItemsPost(opts) {
       return this.apiV2WorkItemsPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Update Test Case, Checklist or Shared Step
+     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel] 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    apiV2WorkItemsPutWithHttpInfo(opts) {
+      opts = opts || {};
+      let postBody = opts['updateWorkItemApiModel'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['PrivateToken', 'Identity.Application'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/v2/workItems', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Update Test Case, Checklist or Shared Step
+     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    apiV2WorkItemsPut(opts) {
+      return this.apiV2WorkItemsPutWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -744,7 +844,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [WorkItemShortApiResult];
@@ -810,7 +910,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceSectionModel];
@@ -878,7 +978,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceModel];
@@ -933,7 +1033,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [SharedStepReferenceModel];
@@ -981,7 +1081,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1029,7 +1129,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1077,7 +1177,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [AutoTestModel];
@@ -1130,7 +1230,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [IterationModel];
@@ -1186,7 +1286,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = WorkItemApiResult;
@@ -1237,7 +1337,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [TestResultChronologyModel];
@@ -1291,7 +1391,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemVersionModel];
@@ -1341,7 +1441,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1387,7 +1487,7 @@ export default class WorkItemsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -1405,52 +1505,6 @@ export default class WorkItemsApi {
      */
     restoreWorkItem(id) {
       return this.restoreWorkItemWithHttpInfo(id)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Update Test Case, Checklist or Shared Step
-     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateWorkItemApiModel} [updateWorkItemApiModel] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-    updateWorkItemWithHttpInfo(opts) {
-      opts = opts || {};
-      let postBody = opts['updateWorkItemApiModel'];
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['Bearer or PrivateToken'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/api/v2/workItems', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Update Test Case, Checklist or Shared Step
-     *  Use case  User sets work item properties (listed in request parameters)  User runs method execution  System updates work item by identifier  System returns updated work item model (listed in response parameters)
-     * @param {Object} opts Optional parameters
-     * @param {module:model/UpdateWorkItemApiModel} opts.updateWorkItemApiModel 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-    updateWorkItem(opts) {
-      return this.updateWorkItemWithHttpInfo(opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

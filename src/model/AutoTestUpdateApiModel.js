@@ -19,7 +19,7 @@ import LinkUpdateApiModel from './LinkUpdateApiModel';
 /**
  * The AutoTestUpdateApiModel model module.
  * @module model/AutoTestUpdateApiModel
- * @version 7.2.6
+ * @version 7.2.7
  */
 class AutoTestUpdateApiModel {
     /**
@@ -85,6 +85,9 @@ class AutoTestUpdateApiModel {
             }
             if (data.hasOwnProperty('isFlaky')) {
                 obj['isFlaky'] = ApiClient.convertToType(data['isFlaky'], 'Boolean');
+            }
+            if (data.hasOwnProperty('resetLayer')) {
+                obj['resetLayer'] = ApiClient.convertToType(data['resetLayer'], 'Boolean');
             }
             if (data.hasOwnProperty('steps')) {
                 obj['steps'] = ApiClient.convertToType(data['steps'], [AutoTestStepApiModel]);
@@ -292,6 +295,12 @@ AutoTestUpdateApiModel.prototype['description'] = undefined;
  * @member {Boolean} isFlaky
  */
 AutoTestUpdateApiModel.prototype['isFlaky'] = undefined;
+
+/**
+ * Indicates if the autotest layer should be reset.
+ * @member {Boolean} resetLayer
+ */
+AutoTestUpdateApiModel.prototype['resetLayer'] = undefined;
 
 /**
  * Collection of the autotest steps

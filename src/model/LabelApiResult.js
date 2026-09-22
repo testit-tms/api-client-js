@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LabelApiResult model module.
  * @module model/LabelApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class LabelApiResult {
     /**

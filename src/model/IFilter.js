@@ -16,11 +16,12 @@ import CollectionFilter from './CollectionFilter';
 import CollectionOperator from './CollectionOperator';
 import CompositeFilter from './CompositeFilter';
 import Filter from './Filter';
+import JsonElement from './JsonElement';
 
 /**
  * The IFilter model module.
  * @module model/IFilter
- * @version 7.2.6
+ * @version 7.2.7
  */
 class IFilter {
     /**
@@ -150,7 +151,7 @@ IFilter.prototype['filters'] = undefined;
 IFilter.prototype['operator'] = undefined;
 
 /**
- * @member {String} value
+ * @member {module:model/JsonElement} value
  */
 IFilter.prototype['value'] = undefined;
 

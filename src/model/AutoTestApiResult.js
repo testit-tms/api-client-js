@@ -15,13 +15,14 @@ import ApiClient from '../ApiClient';
 import AutoTestStepApiResult from './AutoTestStepApiResult';
 import ConfigurationShortApiResult from './ConfigurationShortApiResult';
 import LabelApiResult from './LabelApiResult';
+import LayerApiResult from './LayerApiResult';
 import LinkApiResult from './LinkApiResult';
 import TestStatusApiResult from './TestStatusApiResult';
 
 /**
  * The AutoTestApiResult model module.
  * @module model/AutoTestApiResult
- * @version 7.2.6
+ * @version 7.2.7
  */
 class AutoTestApiResult {
     /**
@@ -151,6 +152,9 @@ class AutoTestApiResult {
             if (data.hasOwnProperty('stabilityPercentage')) {
                 obj['stabilityPercentage'] = ApiClient.convertToType(data['stabilityPercentage'], 'Number');
             }
+            if (data.hasOwnProperty('layer')) {
+                obj['layer'] = ApiClient.convertToType(data['layer'], LayerApiResult);
+            }
             if (data.hasOwnProperty('links')) {
                 obj['links'] = ApiClient.convertToType(data['links'], [LinkApiResult]);
             }
@@ -273,6 +277,10 @@ class AutoTestApiResult {
         // validate the optional field `lastTestResultStatus`
         if (data['lastTestResultStatus']) { // data not null
           TestStatusApiResult.validateJSON(data['lastTestResultStatus']);
+        }
+        // validate the optional field `layer`
+        if (data['layer']) { // data not null
+          LayerApiResult.validateJSON(data['layer']);
         }
         if (data['links']) { // data not null
             // ensure the json data is an array
@@ -441,6 +449,12 @@ AutoTestApiResult.prototype['lastTestResultStatus'] = undefined;
  * @member {Number} stabilityPercentage
  */
 AutoTestApiResult.prototype['stabilityPercentage'] = undefined;
+
+/**
+ * Model of auto test layer for use in responses.
+ * @member {module:model/LayerApiResult} layer
+ */
+AutoTestApiResult.prototype['layer'] = undefined;
 
 /**
  * @member {Array.<module:model/LinkApiResult>} links

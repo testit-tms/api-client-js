@@ -108,6 +108,16 @@
         done();
       });
     });
+    describe('apiV2TestResultsIdPatch', function() {
+      it('should call apiV2TestResultsIdPatch successfully', function(done) {
+        //uncomment below and update the code to test apiV2TestResultsIdPatch
+        //instance.apiV2TestResultsIdPatch(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('apiV2TestResultsIdPut', function() {
       it('should call apiV2TestResultsIdPut successfully', function(done) {
         //uncomment below and update the code to test apiV2TestResultsIdPut

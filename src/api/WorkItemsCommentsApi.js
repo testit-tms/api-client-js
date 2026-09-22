@@ -22,7 +22,7 @@ import WorkItemCommentApiResult from '../model/WorkItemCommentApiResult';
 /**
 * WorkItemsComments service.
 * @module api/WorkItemsCommentsApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class WorkItemsCommentsApi {
 
@@ -62,7 +62,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -107,7 +107,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = WorkItemCommentApiResult;
@@ -152,7 +152,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -199,7 +199,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = 'Number';
@@ -245,7 +245,7 @@ export default class WorkItemsCommentsApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [WorkItemCommentApiResult];

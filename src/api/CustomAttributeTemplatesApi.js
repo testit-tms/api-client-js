@@ -25,7 +25,7 @@ import ValidationProblemDetails from '../model/ValidationProblemDetails';
 /**
 * CustomAttributeTemplates service.
 * @module api/CustomAttributeTemplatesApi
-* @version 7.2.6
+* @version 7.2.7
 */
 export default class CustomAttributeTemplatesApi {
 
@@ -61,7 +61,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateValidationResult;
@@ -111,7 +111,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -164,7 +164,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -214,7 +214,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = null;
@@ -262,7 +262,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -310,7 +310,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -355,7 +355,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = CustomAttributeTemplateModel;
@@ -400,7 +400,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = null;
@@ -455,7 +455,7 @@ export default class CustomAttributeTemplatesApi {
       let formParams = {
       };
 
-      let authNames = ['Bearer or PrivateToken'];
+      let authNames = ['PrivateToken', 'Identity.Application'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = [SearchCustomAttributeTemplateGetModel];

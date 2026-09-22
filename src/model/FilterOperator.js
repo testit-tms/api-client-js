@@ -20,73 +20,87 @@ import ApiClient from '../ApiClient';
 export default class FilterOperator {
     
         /**
-         * value: "="
+         * value: "EqualTo"
          * @const
          */
-        "EQUAL" = "=";
+        "EqualTo" = "EqualTo";
 
     
         /**
-         * value: "!="
+         * value: "NotEqualTo"
          * @const
          */
-        "NOT_EQUAL" = "!=";
+        "NotEqualTo" = "NotEqualTo";
 
     
         /**
-         * value: "~"
+         * value: "Contains"
          * @const
          */
-        "TILDE" = "~";
+        "Contains" = "Contains";
 
     
         /**
-         * value: "!~"
+         * value: "NotContains"
          * @const
          */
-        "!~" = "!~";
+        "NotContains" = "NotContains";
 
     
         /**
-         * value: "<"
+         * value: "LessThan"
          * @const
          */
-        "LESS_THAN" = "<";
+        "LessThan" = "LessThan";
 
     
         /**
-         * value: "<="
+         * value: "LessThanOrEqualTo"
          * @const
          */
-        "LESS_THAN_OR_EQUAL_TO" = "<=";
+        "LessThanOrEqualTo" = "LessThanOrEqualTo";
 
     
         /**
-         * value: ">"
+         * value: "GreaterThan"
          * @const
          */
-        "GREATER_THAN" = ">";
+        "GreaterThan" = "GreaterThan";
 
     
         /**
-         * value: ">="
+         * value: "GreaterThanOrEqualTo"
          * @const
          */
-        "GREATER_THAN_OR_EQUAL_TO" = ">=";
+        "GreaterThanOrEqualTo" = "GreaterThanOrEqualTo";
 
     
         /**
-         * value: "*"
+         * value: "Empty"
          * @const
          */
-        "STAR" = "*";
+        "Empty" = "Empty";
 
     
         /**
-         * value: "!*"
+         * value: "NotEmpty"
          * @const
          */
-        "!*" = "!*";
+        "NotEmpty" = "NotEmpty";
+
+    
+        /**
+         * value: "In"
+         * @const
+         */
+        "In" = "In";
+
+    
+        /**
+         * value: "NotIn"
+         * @const
+         */
+        "NotIn" = "NotIn";
 
     
 

@@ -216,6 +216,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property layer (base name: "layer")', function() {
+      // uncomment below and update the code to test the property layer
+      //var instance = new TestitApiClient.AutoTestApiResult();
+      //expect(instance).to.be();
+    });
+
     it('should have the property links (base name: "links")', function() {
       // uncomment below and update the code to test the property links
       //var instance = new TestitApiClient.AutoTestApiResult();
